@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  2 AUG 2014 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  3 AUG 2014 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,48 +604,82 @@ LaTeX Info: Redefining \addtolength on input line 76.
 )
 \c@@todonotes@numberoftodonotes=\count133
 )
-\c@thm=\count134
-\c@conjecture=\count135
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.4)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 
-(./unimodality_paper.aux)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen201
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen202
+\pgfdecoratedremainingdistance=\dimen203
+\pgfdecoratedinputsegmentcompleteddistance=\dimen204
+\pgfdecoratedinputsegmentremainingdistance=\dimen205
+\pgf@decorate@distancetomove=\dimen206
+\pgf@decorate@repeatstate=\count134
+\pgfdecorationsegmentamplitude=\dimen207
+\pgfdecorationsegmentlength=\dimen208
+)
+\tikz@lib@dec@box=\box44
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+\c@thm=\count135
+\c@conjecture=\count136
+ (./unimodality_paper.aux
+
+LaTeX Warning: Label `eq:level_expansion' multiply defined.
+
+)
 \openout1 = `unimodality_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Try loading font information for U+msa on input line 113.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 113.
+LaTeX Font Info:    Try loading font information for U+msb on input line 124.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 113.
+Package xypdf Info: Line width: 0.39998pt on input line 124.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen201
-\scratchbox=\box44
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\scratchcounter=\count137
+\scratchdimen=\dimen209
+\scratchbox=\box45
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen202
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen210
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -697,35 +731,39 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 1.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-Underfull \vbox (badness 2951) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@tdo=\write6
 \openout6 = `unimodality_paper.tdo'.
 
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
  [2]
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
 [3]
 
-LaTeX Warning: Reference `sec:cover_transitive_group_actions' on page 4 undefin
-ed on input line 170.
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
 
 
 LaTeX Warning: Marginpar on page 4 moved.
 
 [4]
-Overfull \hbox (6.5034pt too wide) in paragraph at lines 205--206
+
+LaTeX Warning: Reference `sec:cover_transitive_group_actions' on page 5 undefin
+ed on input line 178.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+[5]
+Overfull \hbox (6.5034pt too wide) in paragraph at lines 213--214
 []\OT1/cmr/m/it/10 Definition \OT1/cmr/m/n/10 3.0.8\OT1/cmr/m/it/10 . []\OT1/cm
 r/m/n/10 A map $\OML/cmm/m/it/10 U [] [] V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\O
 T1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/
@@ -734,13 +772,13 @@ T1/cmr/m/n/10 if $\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V\OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 )) =
  []
 
-
-Overfull \hbox (30.83315pt too wide) in paragraph at lines 262--262
+[6]
+Overfull \hbox (30.83315pt too wide) in paragraph at lines 303--303
 [][] 
  []
 
-[5]
-Overfull \hbox (5.72379pt too wide) in paragraph at lines 278--279
+
+Overfull \hbox (5.72379pt too wide) in paragraph at lines 318--319
 \OMS/cmsy/m/n/10 j\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P=G\OT1/cm
 r/m/n/10 )\OMS/cmsy/m/n/10 j[] ^^T j\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 P\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G\OMS/cmsy/m/n/10 j[]$\OT1/cmr/m/it
@@ -750,54 +788,46 @@ m/it/10 P\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G\OMS/cmsy/m/n/10 j[]$\OT1/cmr/m/it
  []
 
 
-LaTeX Warning: Marginpar on page 6 moved.
+LaTeX Warning: Marginpar on page 7 moved.
+
+[7]
+
+LaTeX Warning: Reference `dihedral001' on page 8 undefined on input line 330.
 
 
-LaTeX Warning: Reference `dihedral001' on page 6 undefined on input line 290.
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
+ [8]
 
-Underfull \vbox (badness 1609) has occurred while \output is active []
+LaTeX Warning: Marginpar on page 9 moved.
 
- [6]
-[7] [8]
+[9] [10]
 
-LaTeX Warning: Reference `dihedral001' on page 9 undefined on input line 433.
+LaTeX Warning: Reference `dihedral001' on page 11 undefined on input line 500.
 
-[9]
+[11]
 
-LaTeX Warning: Reference `dihedral001' on page 10 undefined on input line 440.
+LaTeX Warning: Reference `dihedral001' on page 12 undefined on input line 506.
 
-[10] [11]
-
-LaTeX Warning: Marginpar on page 12 moved.
-
-[12]
-Overfull \hbox (38.62068pt too wide) in paragraph at lines 601--603
-[]\OT1/cmr/bx/n/10 Theorem 7.1.6. []\OT1/cmr/m/n/10 [[], The-o-rem 1.1] \OT1/cm
+[12] [13] [14]
+Overfull \hbox (38.62068pt too wide) in paragraph at lines 663--665
+[]\OT1/cmr/bx/n/10 Theorem 7.1.3. []\OT1/cmr/m/n/10 [[], The-o-rem 1.1] \OT1/cm
 r/m/it/10 The se-quence $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 l; m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  l; m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m
 /it/10 l; m; r\OT1/cmr/m/n/10 )$
  []
 
-[13]
-
-LaTeX Warning: Marginpar on page 14 moved.
-
-[14]
-Overfull \hbox (1.6168pt too wide) in paragraph at lines 681--682
+[15] [16]
+Overfull \hbox (1.6168pt too wide) in paragraph at lines 745--746
 []\OT1/cmr/m/it/10 Notation \OT1/cmr/m/n/10 7.2.13\OT1/cmr/m/it/10 . []\OT1/cmr
 /m/n/10 For $\OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[] [] a[
 ]\OT1/cmr/m/n/10 )$ a par-ti-tion, de-note $\OML/cmm/m/it/10 ^^Q\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 ^^U; r\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 :$ 
  []
 
-[15]
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-Overfull \hbox (1.02388pt too wide) in paragraph at lines 788--789
+[17]
+Overfull \hbox (1.02388pt too wide) in paragraph at lines 852--853
 []\OT1/cmr/bx/n/10 Corollary 7.3.2. []\OT1/cmr/m/it/10 The se-quence $\OML/cmm/
 m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)\OML/cmm/m
 /it/10 ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)\OML/cmm/
@@ -805,8 +835,8 @@ m/it/10 ; [] ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)$ \
 OT1/cmr/m/it/10 is the rank
  []
 
-[16] [17] [18] [19]
-Overfull \hbox (25.36638pt too wide) detected at line 934
+[18] [19] [20] [21]
+Overfull \hbox (25.36638pt too wide) detected at line 998
 \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 l; m\OT1/cmr/m/n/10 ] = \
 OML/cmm/m/it/10 ^^T\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/c
 mm/m/it/10 ; [] ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; m \OMS/cmsy/m/n/10 ^^A \O
@@ -816,19 +846,12 @@ ML/cmm/m/it/10 l \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 t; \OT1/cmr/m/n/10 0\OML
 /10 :
  []
 
-[20]
+[22] [23]
 
-LaTeX Warning: Marginpar on page 21 moved.
-
-
-LaTeX Warning: Marginpar on page 21 moved.
-
-[21]
-
-LaTeX Warning: Citation `stack' on page 22 undefined on input line 1021.
+LaTeX Warning: Citation `stack' on page 24 undefined on input line 1085.
 
 
-Overfull \hbox (22.26273pt too wide) in paragraph at lines 1026--1027
+Overfull \hbox (22.26273pt too wide) in paragraph at lines 1090--1091
 []\OT1/cmr/bx/n/10 Corollary 10.0.10. []\OT1/cmr/m/it/10 Any abelian group $\OM
 L/cmm/m/it/10 A$ \OT1/cmr/m/it/10 which acts tran-si-tively on $\OT1/cmr/m/n/10
  [\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ]$ \OT1/cmr/m/it/10 has $\OMS/cmsy/m/n/10 j
@@ -836,63 +859,115 @@ L/cmm/m/it/10 A$ \OT1/cmr/m/it/10 which acts tran-si-tively on $\OT1/cmr/m/n/10
 /it/10 =A\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 =
  []
 
-[22] [23]
+[24]
 
-LaTeX Warning: Reference `cyclic004' on page 24 undefined on input line 1115.
+LaTeX Warning: Marginpar on page 25 moved.
 
-[24] [25]
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+[25]
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+LaTeX Warning: Reference `cyclic004' on page 26 undefined on input line 1181.
+
+[26] [27]
+
+LaTeX Warning: Marginpar on page 28 moved.
+
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1155.
+(amsmath)                 on input line 1221.
 
-[26]
+[28]
 
-LaTeX Warning: Reference `cor:equivalent_edge_quotient_commuting' on page 27 un
-defined on input line 1187.
+LaTeX Warning: Reference `cor:equivalent_edge_quotient_commuting' on page 29 un
+defined on input line 1253.
 
 
-Overfull \hbox (2.95793pt too wide) in paragraph at lines 1197--1199
+Overfull \hbox (2.95793pt too wide) in paragraph at lines 1263--1265
 []\OT1/cmr/m/n/10 Consider an el-e-ment $\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 \U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 B[]\OT1/cmr/m/n/10 )$ where $\OML/cmm/m/it/10 x \U/msb/m/n/10 l \OML
 /cmm/m/it/10 y$ \OT1/cmr/m/n/10 and its sta-bi-lizer $[] []$,
  []
 
-[27] [28]
+[29] [30]
 
-LaTeX Warning: Reference `defn:lefchetz' on page 29 undefined on input line 127
-1.
+LaTeX Warning: Reference `defn:lefchetz' on page 31 undefined on input line 133
+7.
 
-[29]
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
- [30]
+[31] [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-Overfull \hbox (69.03601pt too wide) in paragraph at lines 1401--1401
+ [33]
+Overfull \hbox (69.03601pt too wide) in paragraph at lines 1467--1467
 [] 
  []
 
-[32] [33] [34]
+[34] [35] [36]
 
-LaTeX Warning: Reference `gbn_decomposition' on page 35 undefined on input line
- 1523.
+LaTeX Warning: Reference `gbn_decomposition' on page 37 undefined on input line
+ 1589.
 
-(./unimodality_paper.bbl) [35] (./unimodality_paper.aux)
+
+Overfull \hbox (102.16972pt too wide) in paragraph at lines 1630--1701
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 5519) has occurred while \output is active []
+
+ [37]
+[38]
+Overfull \hbox (47.6334pt too wide) in paragraph at lines 1795--1796
+[][] 
+ []
+
+
+Underfull \vbox (badness 2884) has occurred while \output is active []
+
+ [39]
+(./unimodality_paper.bbl) [40] (./unimodality_paper.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16445 strings out of 493108
- 302030 string characters out of 6134853
- 425992 words of memory out of 5000000
- 19396 multiletter control sequences out of 15000+600000
- 12693 words of font info for 53 fonts, out of 8000000 for 9000
+ 17713 strings out of 493108
+ 336528 string characters out of 6134853
+ 470629 words of memory out of 5000000
+ 20641 multiletter control sequences out of 15000+600000
+ 13698 words of font info for 58 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 62i,16n,80p,3249b,873s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,80p,3249b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -912,15 +987,16 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (35 pages, 463517 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on unimodality_paper.pdf (40 pages, 488506 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
