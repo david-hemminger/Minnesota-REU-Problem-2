@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%
+%   AMS packages    %
+%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdf]{beamer}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{amssymb}
+%\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ex}[thm]{Exercise}
+%\newtheorem{conjecture}{Conjecture}
+%\newtheorem*{conjecture*}{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{eg}[thm]{Example}
+
+%\newtheorem{counterexample}[thm]{Counterexample}
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{claim}[thm]{Claim}
+%\newtheorem{note}[thm]{Notation}
+%\newtheorem{warning}[thm]{Warning}
+%\newtheorem{variant}[thm]{Variant}
+%\newtheorem{question}[thm]{Question}
+%\newtheorem{construction}[thm]{Construction}
+%\newtheorem{terminology}[thm]{Terminology}
+%\newtheorem{convention}[thm]{Convention}
+
+\newcommand\nc{\newcommand}
+\nc\on{\operatorname}
+\nc\renc{\renewcommand}
+\newcommand\ssec{\subsection}
+\newcommand\sssec{\subsubsection}
+\newcommand\bO{{\mathbf O}}
+\newcommand\CC{{\mathcal C}}
+\newcommand\BN{{\mathbb N}}
+\newcommand\BC{{\mathbb C}}
+\newcommand\BF{{\mathbb F}}
+\newcommand\BR{{\mathbb R}}
+\newcommand\BQ{{\mathbb Q}}
+\newcommand\BBZ{{\mathbb Z}}
+\newcommand\uR{\underline{R}}
+\newcommand\uZ{\underline{\BBZ}}
+\newcommand\CF{{\mathcal F}}
+\newcommand\uCF{\underline{{\mathcal F}}}
+\newcommand\BZ{{\mathbb Z}}
+\newcommand\BA{{\mathbb A}}
+\newcommand\BP{{\mathbb P}}
+\newcommand\fa{{\mathfrak a}}
+\newcommand\fp{{\mathfrak p}}
+\newcommand\fq{{\mathfrak q}}
+\newcommand\fm{{\mathfrak m}}
+\newcommand\pt{\mathrm{pt}}
+\newcommand\rk{\operatorname{rk}}
+\newcommand{\so}{\Rightarrow}
+\newcommand{\upo}{\mathring}
+\newcommand{\ra}{\rightarrow}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\minus}{\backslash}
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+\renewcommand{\v}{\mathbf}
+\newcommand{\gr}[1]{\langle {#1} \rangle}
+\newcommand{\dstyle}{\displaystyle}
+\nc{\bd}{\mathbf{d}}
+\nc{\Hom}{\on{Hom}}
+\nc{\End}{\on{End}}
+\nc{\Spec}{\on{Spec}}
+\nc{\Reg}{\on{Reg}}
+\nc{\Specm}{\on{Specm}}
+\nc\ol{\overline}
+\nc\wt{\widetilde}
+\nc{\one}{{\mathbf{1}}}
+\renc{\mod}{\on{-mod}}
+\newcommand{\id}{\mathrm{id}}
+\nc{\ul}{\underline}
+\nc{\uHom}{\ul\Hom}
+\nc{\tHom}{\ul\uHom}
+\nc{\wh}{\widehat}
+\nc{\Vect}{\on{Vect}}
+\nc{\Res}{\on{Res}}
+\nc{\Ind}{\on{Ind}}
+
+
+
+\newcommand\fbn{\mathcal H}
+\newcommand \edgequot{\text{edge-quotient bijective }}
+
+\def\Stab{\operatorname{Stab}}
+\def\Fix{\operatorname{Fix}}
+\newcommand\im{\text{Im}}
+
+
+\AtBeginSection[]{
+	\begin{frame}{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\mode<presentation>{}
+\usetheme{Copenhagen}
+\usecolortheme{seahorse}
+
+%Title slide info goes here
+\title{Peckness of Edge Posets}
+\author{David Hemminger, Aaron Landesman, Zijian Yao}
+
+\begin{document}
+
+%Title Frame
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+\section{Introduction}
+
+\subsection{Cool Subsection 1}
+%Regular Frame
+\begin{frame}{Title of Frame}
+Latex goes here.  Can do "animation" of bulletpoints like so:
+
+\begin{itemize}
+\item point 1
+\pause
+\item point 2
+\pause
+\item point 3
+\end{itemize}
+\end{frame}
+
+
+\subsection{Cool Subsection 2}
+%Environments in Beamer
+\begin{frame}{Environments in Beamer}
+Environments in Beamer are nice!
+\begin{thm}
+Cool theorem!
+\end{thm}
+\end{frame}
+
+\section{Main Result}
+
+\begin{frame}{Main Result}
+Cool result!
+\end{frame}
+
+
+\end{document}
