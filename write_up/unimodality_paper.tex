@@ -110,13 +110,23 @@
 
 \title{Unimodality Paper}
 \author{David Hemminger, Aaron Landesman, Zijian Yao}
+
+\address{DH}
+\email{}
+
+\address{AL}
+\email{}
+
+\address{Zijian Yao, Department of Mathematics, Brown University}
+\email{zijian$\_$yao@brown.edu}
+
 \usepackage{amsmath}
 \begin{document}
 
 \listoftodos
+\newpage
 
 \maketitle
-
 \section{Things without homes}
 
 \section{Introduction}\label{sec:introduction}
@@ -124,7 +134,7 @@ Let $P$ be a finite graded poset of rank $n$.  It is natural to study the struct
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal{F}^r(P)$ are $x\otimes y$ (here the $\otimes$ symbol is purely formal), where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ by $x\otimes y \lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ to be the transitive closure of $\lessdot_{\mathcal{F}}$, i.e. $x\otimes y \le_{\mathcal{F}} x^\prime\otimes y^\prime$ \todo{I very strongly think we should notate this as $\mathcal F^r(P)$ as it seems quite confusing to remove the dependence on $r,P$ and it's still quite short} if there exists a chain
+For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal{F}^r(P)$ are $x\otimes y$ (here the $\otimes$ symbol is purely formal), where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ by $x\otimes y \lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ to be the transitive closure of $\lessdot_{\mathcal{F}}$, i.e. $x\otimes y \le_{\mathcal{F}} x^\prime\otimes y^\prime$ \todo{I think we should notate this as $\mathcal F^r(P)$ as it seems quite confusing to remove the dependence on $r,P$ and it's still quite short} if there exists a chain
 
 $$x\otimes y\lessdot_{\mathcal{F}} x_1\otimes y_1\lessdot_{\mathcal{F}}\ldots\lessdot_{\mathcal{F}} x_{r-1}\otimes y_{r-1}\lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$$
 
@@ -133,7 +143,7 @@ $$x\otimes y\lessdot_{\mathcal{F}} x_1\otimes y_1\lessdot_{\mathcal{F}}\ldots\le
 Let $Q$ be a finited graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{F}^r(f)\colon \mathcal{F}^r(P)\rightarrow \mathcal{F}^r(Q)$ by $\mathcal{F}^r(f)(x\otimes y) = f(x)\otimes f(y)$.
 \end{defn}
 
-We will show that $\mathcal{F}^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $x\otimes y\in \mathcal{F}^1(P).$  We observe that when $P$ has a nice structure, $\mathcal{F}^r(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  It is well-know than if $G$ is a group of rank-preserving \todo{I think we should either say both order preserving and rank preserving or neither of them. I prefer neither, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+We will show that $\mathcal{F}^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $x\otimes y\in \mathcal{F}^1(P).$  We observe that when $P$ has a nice structure, $\mathcal{F}^r(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  It is well-know than if $G$ is a group of rank-preserving \todo{Perhaps consider saying either (both order preserving and rank preserving) or (neither of them). I prefer ommiting both, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal{F}^r(B_n/G)$ is Peck.
@@ -144,7 +154,7 @@ We prove this conjecture holds in the case $r=1$ whenever the group action of $G
 
 \begin{defn}
 \label{defn:cover_transitive}
-A group action of $G$ on $P$ is \textit{cover transitive} if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in G$ such that $g\cdot x = y$ and $g\cdot z = z$.\todo{for consiceness, can we say $g\in \Stab(z)$ with $g\cdot x =y$ throughout the paper?}
+A group action of $G$ on $P$ is \textit{cover transitive} if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in G$ such that $g\cdot x = y$ and $g\cdot z = z$.\todo{for consiceness, would it make sense to say $g\in \Stab(z)$ with $g\cdot x =y$ throughout the paper?}
 \end{defn}
 
 \begin{thm}\label{thm:cover_transitive_implies_Peck}
@@ -152,7 +162,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G
 \end{thm}
 
 
-A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I think $``|''$ is slightly more standard so I propose using this convention. I'm ok with using ``:'' though if you feel strongly, David.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
+A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
 \begin{prop}\label{prop:cover_transitive_building_blocks}
 Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ and $B_{2p}$, respectively are cover transitive.
@@ -254,6 +264,9 @@ Suppose now that $A\le_\mathcal{F} B\le_\mathcal{F} A$, and take $f\colon A\righ
 \begin{lem}
 The poset $\mathcal{F}^1(P)$ is graded, with $\rk{x\otimes y} = \rk{x}$ for all $x\otimes y\in \mathcal{F}^r(P)$, where $\rk{x}$ is the rank of $x$ in $P$.
 \end{lem}
+\begin{proof}
+\todo[inline]{prove this}
+\end{proof}
 
 \begin{counterexample}
 It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transitive closure of $\lessdot_{\mathcal F}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal F^1(P)$ and on the right hand side is the poset obtained from the relation $x\otimes y \leq a\otimes b$ if $x \leq a, y \leq b.$
@@ -288,9 +301,6 @@ It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transiti
 
 Here, it is clear that $\mathcal F^1(P)$ is a graded poset, with $rk(x\otimes y) = rk(x),$ but, the hasse diagram on the right represents a poset which does not have a grading.
 \end{counterexample}
-\begin{proof}
-\todo[inline]{prove this}
-\end{proof}
 
 We also have that the action of $G$ on $P$ induces an action on $\mathcal{F}^r(P)$ as follows.  
 
@@ -1101,7 +1111,7 @@ We will bound $|\mathcal F^1(B_n/C_n)|_{i}$ by  $|\mathcal F^1 (B_n)/C_n|_{i}$ t
 \end{note}
 
 
-The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $Gx \otimes Gy \in [\mathcal F^1(B_n)/C_n]_{i}$ \todo{I think you should write $(P)_i$ instead of $[P]_i$ for the ith rank of $P$ above I used the notation $[f(x,y)]_x^a$ for the coefficient of $x^a$ in $f(x,y),$ and we have also been using parentheses above for this. Again, this is something that appears several times in this and the next section, and if you agree, you should make sure to change it everywhere.} where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
+The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $Gx \otimes Gy \in [\mathcal F^1(B_n)/C_n]_{i}$ \todo{Perhaps consider writing $(P)_i$ instead of $[P]_i$ for the ith rank of $P.$ Above I used the notation $[f(x,y)]_x^a$ for the coefficient of $x^a$ in $f(x,y),$ and we have also been using parentheses above for this. Again, this is something that appears several times in this and the next section, and if you agree, you should make sure to change it everywhere.} where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
 
 
 \begin{note}
@@ -1118,12 +1128,12 @@ Let $G = C_n$ where $n$ is a prime, then $q_i - p_i = (n-1)/2$ for $ 1 \le i \le
 
 \begin{proof} \todo{Elise: very minor note, but if you are setting $G=C_n$, try to be consistent and only use $G$ throughout the proof.  It's clearer}
 Let $G = C_n$ where $n$ is a prime. We consider the action of $G$ on $B_n$. 
- Note that $n$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $n$-cycle in its cycle decomposition. Now suppose $x\otimes y \in A_i$ \todo{what is $A_i.$ I think you may mean $\mathcal F^1(B_n)_i?$}  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_n$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Let $Gx\otimes Gy$  be an element in $[\mathcal F^1(B_n/G)]_i$\todo{again, change brackets to parentheses, although I'll stop pointing this out}, i.e., an edge class in the necklace poset, with representative $x\otimes y$. We abuse notation by writing $Gx \otimes Gy$ in place of $Gx\otimes Gy \cap \mathcal F^1(B_n) \subset \mathcal F^1(B_n)$. We view $G(x \otimes y)$ as a subset of $\mathcal F^1 (B_n)$, namely $G(x \otimes y) = \{gx \otimes g y : g \in G \}$. Clearly $G(x \otimes y) \subset Gx \otimes Gy$ as subsets of $\mathcal F^1 (B_n)$. It is also clear that the number of distinct $\sigma \in G$ such that $\sigma x < y$ is precisely the number of $G$-orbits in $Gx\otimes Gy$. In particular, if the only $\sigma $ such that $\sigma x < y$ is identity, then $Gx \otimes Gy=G(x \otimes y)$ as subsets of $\mathcal F^1 (B_n)$. 
+ Note that $n$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $n$-cycle in its cycle decomposition. Now suppose $x\otimes y \in A_i$ \todo{what is $A_i.$ I think you may mean $\mathcal F^1(B_n)_i?$}  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_n$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Let $Gx\otimes Gy$  be an element in $[\mathcal F^1(B_n/G)]_i$\todo{again, consider changing brackets to parentheses, although I'll stop pointing this out}, i.e., an edge class in the necklace poset, with representative $x\otimes y$. We abuse notation by writing $Gx \otimes Gy$ in place of $Gx\otimes Gy \cap \mathcal F^1(B_n) \subset \mathcal F^1(B_n)$. We view $G(x \otimes y)$ as a subset of $\mathcal F^1 (B_n)$, namely $G(x \otimes y) = \{gx \otimes g y : g \in G \}$. Clearly $G(x \otimes y) \subset Gx \otimes Gy$ as subsets of $\mathcal F^1 (B_n)$. It is also clear that the number of distinct $\sigma \in G$ such that $\sigma x < y$ is precisely the number of $G$-orbits in $Gx\otimes Gy$. In particular, if the only $\sigma $ such that $\sigma x < y$ is identity, then $Gx \otimes Gy=G(x \otimes y)$ as subsets of $\mathcal F^1 (B_n)$. 
 
-Note that $q_i$ is the number of the disjoint subsets $G(x \otimes y)$ in $\mathcal F^1 (B_n)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x \otimes y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$, and we claim that for $i\neq 1,n-1$, this number is $(n-1)/2$. \todo{You also need to say that there are at most 2 $G$ orbits in the same $G\times G$ orbit (which is nonobvious, and very special to the cyclic group.) I think you really need to put this paragraph after the next paragraph.}
+Note that $q_i$ is the number of the disjoint subsets $G(x \otimes y)$ in $\mathcal F^1 (B_n)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x \otimes y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$, and we claim that for $i\neq 1,n-1$, this number is $(n-1)/2$. \todo{Probably it would be best to put the lemma later saying there are at most two $G(x\otimes y)$ in the same $Gx\otimes Gy.$ If you don't want to do this, you might have to say that there are at most 2 $G$ orbits in the same $G\times G$ orbit (which is nonobvious, and very special to the cyclic group.) I think you really need to put this paragraph after the next paragraph.}
 
 
-First consider $\sigma = \sigma_0$ and $x \otimes y $ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. \todo{I think i.e. actually makes things more confusing, rather than clearer, and I would remove it} It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, i.e., $y = \{1, 2, ..., i+1\}$ and $x = \{1, 2, ..., i \}$ (up to rotational equivalence by actions of $G$). 
+First consider $\sigma = \sigma_0$ and $x \otimes y $ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. \todo{I think (i.e...) actually makes things more confusing, rather than clearer. Consider removing the clause after i.e.?} It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, i.e., $y = \{1, 2, ..., i+1\}$ and $x = \{1, 2, ..., i \}$ (up to rotational equivalence by actions of $G$). 
 
 %Similarly we consider $\sigma = \sigma_0^2$ and $x \otimes y $ where $x \lessdot y$ and $\sigma x \lessdot y$,  i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $2$-click rotation, then the remaining $i$ filled beads are in $\sigma y$. Now we again trace back from an arbitrarily assigned ``last'' filled bead in $y$, say at position $P$, then at position $P - 2, P -4, ... $ (reduce mod $n$ whenever necessary) there need to be a filled bead by assumption. In this case, there is again only one possibility of $G (x \otimes y)$, namely the $G$-orbits of $y = \{1, 3, ... 2i +1\}$  and $x = \{1, 3, ..., 2i -1\}$.
 
@@ -1139,7 +1149,7 @@ By the Proposition and the symmetry of $p_i$, we only need to show $p_0 \le p_1$
 \end{proof}
 
 A similar method can be used to bound $q_i - p_i$ for $n$ not necessarily prime.  Our next goal in the section is to show that:
-\todo{It seems like there is never a proof of this lemma, although presumably you mean to put it right above ~\ref{cor:cyclic_unimodal}. I think it's rather confusing to state this lemma in its precise form here, and why it implies unimodality, since it seems to be the same as ~\ref{cor:cyclic_unimodal}. I would recommend removing this lemma here, and you should just say the goal in this section is to prove ~\ref{cor:cyclic_unimodal}.}
+\todo{It seems like there is never a proof of this lemma, although presumably you mean to put it right above ~\ref{cor:cyclic_unimodal}. It might also be a little confusing to state this lemma in its precise form here, and why it implies unimodality, since it seems to be the same as ~\ref{cor:cyclic_unimodal}. Consider removing this lemma here, and saying the goal in this section is to prove ~\ref{cor:cyclic_unimodal}.}
 
 \begin{lem}{\label{lem:cyclicgeneral}}
 
@@ -1155,7 +1165,7 @@ $$p_{i+1} - p_{i} = (q_{i+1} - \lambda_{i+1}) - (q_i - \lambda_i) = (q_{i+1} - q
 Let  $\sigma \in G.$ we call each subset $s \subset x \in B_n$ that is fixed by $\sigma$ a \textit{full cycle} (under the action of $\sigma$), and $x \setminus \left(\cup_{\text{full cycles } s} s\right)$ is called a \textit{tail cycle} (under the action of $\sigma$).  
 \end{defn}
 
-\todo{I think you should put this lemma above ~\ref{lem:cyclicprime} because then you don't have to say there are at most two special orbits in the same orbit in that proof.}
+\todo{Perhaps put this lemma above ~\ref{lem:cyclicprime} because then you don't have to say there are at most two special orbits in the same orbit in that proof.}
 \begin{lem}{\label{lem:cyclic_bound_r}}
 Let $G = C_n$, $n$ not necessarily prime. Assume that $\sigma_0^r x \lessdot y$ for some $x \otimes y$, where $x \lessdot y$ and $r < n/2$. Also assume that there is no $g \in G$ such that $g x = \sigma_0^r (x)$ and $gy = y$. Then $r$ is the only integer $1 \le r < n/2$ such that $\sigma_0^r (x) \lessdot y$. 
 \end{lem}
@@ -1178,10 +1188,10 @@ then $$q_i - p_i = \#\{G{(x \otimes y)} : \exists \: \, \sigma_0^r x \lessdot y 
 
 \begin{defn}
 Fix $r < n/2$ to be an integer and let $ G({x\otimes y)}$ be an $G$-orbit of edges. We call $G(x \otimes y)$ a {\it special orbit} if  $ \sigma_0^r x \lessdot y, \, \, \text{ but  there does not exist } g \in C_n \text{ such that } g x = \sigma_0 ^r x,  \text{ and }g y = y$. 
-\todo{special is really indescriptive. Maybe you could say a double orbit, or something like that?}
+\todo{Consider using a word other than special? Maybe you could say a double orbit, or something like that?}
 \end{defn}
 
-\todo{Zijian, since this proof is rather long and confusing, and you are really trying to count certain sets, I would break this up into a couple lemmas. First I might say that $\lambda_{i+1} - \lambda_i$ is bounded by the number of elements $y$ with tail cycles with respect to some $\sigma_0^r$ so that $y \lessdot y'$ with $y' \in Stab(\sigma_0^r).$ Then, I would give the bound in the statement of this lemma regardin the size of this set.}
+\todo{Perhaps consider breaking this proof into a couple lemmas. First I might say that $\lambda_{i+1} - \lambda_i$ is bounded by the number of elements $y$ with tail cycles with respect to some $\sigma_0^r$ so that $y \lessdot y'$ with $y' \in Stab(\sigma_0^r).$ Then, I would give the bound in the statement of this lemma regardin the size of this set.}
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
 Let $G =C_n$ and let $\lambda_i$, $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q \left(\frac{(i+1)}{k},\frac{n}{k}\right) $$ 
@@ -1198,14 +1208,14 @@ This holds regardless of $i$.
 
 Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes elements of the form $\{s, s+r, s+2r, ..., \}$ for any starting point $s$, which are proper subsets of $[n]$. For $y \in B_n,$ one may write $y$ as the union of full cycles and at most one tail cycle under the action of $\sigma_0^r$. Now, if $y \in B_n$ has no tail cycles under the action of $\sigma_0^r$ then $\sigma_0^rx \otimes \sigma_0^ry= \sigma_0^rx \otimes y \in G(x\otimes y).$ This means that if $G(x\otimes y)\in q_i - p_i =|\{G{(x \otimes y)} : \exists \: \, \sigma_0^t x \lessdot y \text{ where } t < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^t x, g y = y \}|,$ then it must be $\sigma_0^s x \lessdot y$ with $s \neq r, s < n/2.$
 
-So, $p_i - q_i$ is equal to the number of $G(x\otimes y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$. \todo{It does not make sense to say an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?} Note that the difference only occurs \todo{Elise: does this mean $\lambda_{i+1} - \lambda_{i}\neq 0$?} when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x \otimes y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x' \otimes y')}$ where $|y'| = i+2$ is also a special orbit, thus does contribute $1$ when we count $\lambda_{i+1}$. \todo{make this word contribute clearer, again you are trying to say it lies in a certain set} In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such special orbit does not contribute to $\lambda_{i+1} - \lambda_{i}$. \todo{Again, this doesn't make sense} Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be a special orbit anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. \todo{What does this mean? It sounds like you're thinking of $\lambda_i$ as a variable, which changes size as you look at different $G$ orbits.} If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$. \todo{How can you choose to ignore a scenario? What does that mean?}
+So, $p_i - q_i$ is equal to the number of $G(x\otimes y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$. \todo{I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?} Note that the difference only occurs \todo{Elise: does this mean $\lambda_{i+1} - \lambda_{i}\neq 0$?} when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x \otimes y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x' \otimes y')}$ where $|y'| = i+2$ is also a special orbit, thus does contribute $1$ when we count $\lambda_{i+1}$. \todo{what does ``contribute'' mean? Are you are trying to say it lies in a certain set?} In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such special orbit does not contribute to $\lambda_{i+1} - \lambda_{i}$. \todo{Again, I don't understand} Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be a special orbit anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. \todo{What does this mean? It sounds like you're thinking of $\lambda_i$ as a variable, which changes size as you look at different $G$ orbits.} If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$. \todo{How can you choose to ignore a scenario? What does that mean?}
 
-Now return to the situation where $G{(x \otimes y)}$ is not a special orbit, but there exists $s \in [n]$ so that $G{(y \otimes y \cup s)}$ is a special orbit, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such special orbits, since the $x$ part will be $d$-rotationally symmetric. \todo{Can you make this sentence more precise? I don't understand what the ``x'' part is, what a ``family'' of such special orbits is, etc.} We claim that, this \todo{what is this, can you write it precisely as a set?} is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{what index is this sum over?} This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. \todo{what does it mean to insert a tail cycle, and what is a block of elements?}
+Now return to the situation where $G{(x \otimes y)}$ is not a special orbit, but there exists $s \in [n]$ so that $G{(y \otimes y \cup s)}$ is a special orbit, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such special orbits, since the $x$ part will be $d$-rotationally symmetric. \todo{Can you make this sentence more precise? I don't understand what the ``x'' part is, what a ``family'' of such special orbits is, etc.} We claim that, this \todo{what is this? can you write it precisely as a set?} is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{what index is this sum over?} This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. \todo{what does it mean to insert a tail cycle, and what is a block of elements?}
 
 We can introduce $k = n/d$  and rewrite the sum as 
 $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$ \todo{with repect to which group element?} has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
  
-Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can potentially obtain a better bound  \todo{Elise: of what?  Be precise.} if we need to. \todo{Aaron:I think this sentence should be removed, or at the very least inserted after the proof as a remark}
+Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can potentially obtain a better bound  \todo{Elise: of what?  Be precise.} if we need to. \todo{Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}
 \end{proof}
 \todo{Maybe call this a proposition or theorem instead of corollary? It doesn't really follow immediately from other things, and it's the main result we're showing}
 \begin{cor}{\label{cor:cyclic_unimodal}} 
@@ -1292,7 +1302,7 @@ In this section we consider a $q$-analog of the Boolean algebra and prove Lemma 
 
 Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$, \todo{Why do you introduce $V_n(q)$ in place of $\BF_q^n?$ It seems like they're equally long. Would you be ok with just using $\BF_q^n$ everywhere? Is the reason you introduce this because you don't like that $\BF_q^n$ has a basis?} graded naturally by dimensions. 
 
-Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces an order preserving and rank preserving action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. \todo{The action of $\BF_{q^n}$ is not very clearly explained. I would copy what Vic said in the email he sent us almost verbatim.}
+Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces an order preserving and rank preserving action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. \todo{Would you be able to more clearly explain the action of $\BF_{q^n}$? I would copy what Vic said in the email he sent us almost verbatim.}
 
 The following Lemma is a standard result:
 
