@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  3 AUG 2014 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  3 AUG 2014 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,112 +731,90 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 1.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3460) has occurred while \output is active []
 
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@tdo=\write6
 \openout6 = `unimodality_paper.tdo'.
 
-
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
  [2]
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
 [3]
 
-LaTeX Warning: Marginpar on page 4 moved.
+LaTeX Warning: Reference `sec:cover_transitive_group_actions' on page 4 undefin
+ed on input line 176.
 
 
 LaTeX Warning: Marginpar on page 4 moved.
 
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-[4]
-
-LaTeX Warning: Reference `sec:cover_transitive_group_actions' on page 5 undefin
-ed on input line 178.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-[5]
-Overfull \hbox (6.5034pt too wide) in paragraph at lines 213--214
-[]\OT1/cmr/m/it/10 Definition \OT1/cmr/m/n/10 3.0.8\OT1/cmr/m/it/10 . []\OT1/cm
-r/m/n/10 A map $\OML/cmm/m/it/10 U [] [] V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\O
-T1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 P\OT1/cmr/m/n/10 )$ is an \OT1/cmr/m/it/10 order-raising op-er-a-tor \O
-T1/cmr/m/n/10 if $\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V\OT1/cmr
-/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 )) =
+[4] [5]
+Overfull \hbox (11.8917pt too wide) in paragraph at lines 307--308
+[]\OT1/cmr/bx/n/10 Lemma 3.4. []\OT1/cmr/m/it/10 If $\OML/cmm/m/it/10 f [] [] P
+ \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 Q$ \OT1/cmr/m/it/10 is mor-phism of finite
+d or-dered posets, then $\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\O
+T1/cmr/m/n/10 ) [] [] \U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/
+cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
  []
 
 [6]
-Overfull \hbox (30.83315pt too wide) in paragraph at lines 303--303
-[][] 
+
+LaTeX Warning: Reference `dihedral001' on page 7 undefined on input line 350.
+
+
+LaTeX Warning: Reference `thm:quotients_of_Peck_posets' on page 7 undefined on 
+input line 377.
+
+[7] [8] [9]
+
+LaTeX Warning: Reference `dihedral001' on page 10 undefined on input line 551.
+
+[10]
+
+LaTeX Warning: Reference `dihedral001' on page 11 undefined on input line 557.
+
+[11] [12] [13]
+Overfull \hbox (29.67628pt too wide) in paragraph at lines 714--716
+[]\OT1/cmr/bx/n/10 Theorem 6.4. []\OT1/cmr/m/n/10 [[], The-o-rem 1.1] \OT1/cmr/
+m/it/10 The se-quence $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l;
+ m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l
+; m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 l; m; r\OT1/cmr/m/n/10 )$
  []
 
-
-Overfull \hbox (5.72379pt too wide) in paragraph at lines 318--319
-\OMS/cmsy/m/n/10 j\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P=G\OT1/cm
-r/m/n/10 )\OMS/cmsy/m/n/10 j[] ^^T j\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 P\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G\OMS/cmsy/m/n/10 j[]$\OT1/cmr/m/it
-/10 . Fur-ther-more there ex-ists a poset sur-jec-tion $\OML/cmm/m/it/10 q [] [
-] \U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 )\OML/cmm
-/m/it/10 =G \OMS/cmsy/m/n/10 !
+[14]
+Overfull \hbox (3.05954pt too wide) in paragraph at lines 775--776
+[]\OT1/cmr/bx/n/10 Proposition 6.14. []\OT1/cmr/m/it/10 If $\OML/cmm/m/it/10 y$
+ \OT1/cmr/m/it/10 is a Young Di-a-gram so that $\OML/cmm/m/it/10 part\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 comp\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 a[] [] a[]$\OT1/cmr/
+m/it/10 ,
  []
 
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-[7]
-
-LaTeX Warning: Reference `dihedral001' on page 8 undefined on input line 330.
-
-
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [8]
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-[9] [10]
-
-LaTeX Warning: Reference `dihedral001' on page 11 undefined on input line 500.
-
-[11]
-
-LaTeX Warning: Reference `dihedral001' on page 12 undefined on input line 506.
-
-[12] [13] [14]
-Overfull \hbox (38.62068pt too wide) in paragraph at lines 663--665
-[]\OT1/cmr/bx/n/10 Theorem 7.1.3. []\OT1/cmr/m/n/10 [[], The-o-rem 1.1] \OT1/cm
-r/m/it/10 The se-quence $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
-l; m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- l; m; r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 l; m; r\OT1/cmr/m/n/10 )$
+[15] [16] [17]
+Overfull \hbox (29.31337pt too wide) in paragraph at lines 955--956
+[]\OT1/cmr/m/it/10 Notation \OT1/cmr/m/n/10 7.7\OT1/cmr/m/it/10 . []\OT1/cmr/m/
+n/10 Let $[\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; [] ; x[]\OT
+1/cmr/m/n/10 )][]$ de-note the co-ef-fi-cient of $\OML/cmm/m/it/10 x[] [] x[]$ 
+\OT1/cmr/m/n/10 in $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; []
+ ; x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;$
  []
 
-[15] [16]
-Overfull \hbox (1.6168pt too wide) in paragraph at lines 745--746
-[]\OT1/cmr/m/it/10 Notation \OT1/cmr/m/n/10 7.2.13\OT1/cmr/m/it/10 . []\OT1/cmr
-/m/n/10 For $\OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[] [] a[
-]\OT1/cmr/m/n/10 )$ a par-ti-tion, de-note $\OML/cmm/m/it/10 ^^Q\OT1/cmr/m/n/10
- (\OML/cmm/m/it/10 ^^U; r\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 :$ 
- []
-
-[17]
-Overfull \hbox (1.02388pt too wide) in paragraph at lines 852--853
-[]\OT1/cmr/bx/n/10 Corollary 7.3.2. []\OT1/cmr/m/it/10 The se-quence $\OML/cmm/
-m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)\OML/cmm/m
-/it/10 ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)\OML/cmm/
-m/it/10 ; [] ; p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; m; \OT1/cmr/m/n/10 1)$ \
-OT1/cmr/m/it/10 is the rank
- []
-
-[18] [19] [20] [21]
-Overfull \hbox (25.36638pt too wide) detected at line 998
+[18] [19] [20]
+Overfull \hbox (25.36638pt too wide) detected at line 1049
 \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 l; m\OT1/cmr/m/n/10 ] = \
 OML/cmm/m/it/10 ^^T\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/c
 mm/m/it/10 ; [] ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; m \OMS/cmsy/m/n/10 ^^A \O
@@ -846,18 +824,43 @@ ML/cmm/m/it/10 l \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 t; \OT1/cmr/m/n/10 0\OML
 /10 :
  []
 
-[22] [23]
+[21] [22]
 
-LaTeX Warning: Citation `stack' on page 24 undefined on input line 1085.
+LaTeX Warning: Citation `stack' on page 23 undefined on input line 1136.
 
 
-Overfull \hbox (22.26273pt too wide) in paragraph at lines 1090--1091
-[]\OT1/cmr/bx/n/10 Corollary 10.0.10. []\OT1/cmr/m/it/10 Any abelian group $\OM
-L/cmm/m/it/10 A$ \OT1/cmr/m/it/10 which acts tran-si-tively on $\OT1/cmr/m/n/10
- [\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ]$ \OT1/cmr/m/it/10 has $\OMS/cmsy/m/n/10 j
-\U/eus/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m
-/it/10 =A\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 =
+Overfull \hbox (1.81839pt too wide) in paragraph at lines 1141--1142
+[]\OT1/cmr/bx/n/10 Corollary 9.6. []\OT1/cmr/m/it/10 Any abelian group $\OML/cm
+m/m/it/10 A$ \OT1/cmr/m/it/10 which acts tran-si-tively on $\OT1/cmr/m/n/10 [\O
+ML/cmm/m/it/10 n\OT1/cmr/m/n/10 ]$ \OT1/cmr/m/it/10 has $\OMS/cmsy/m/n/10 j\U/e
+us/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/
+10 =A\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 =
  []
+
+[23]
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
 
 [24]
 
@@ -867,92 +870,73 @@ LaTeX Warning: Marginpar on page 25 moved.
 LaTeX Warning: Marginpar on page 25 moved.
 
 
-LaTeX Warning: Marginpar on page 25 moved.
+LaTeX Warning: Reference `cyclic004' on page 25 undefined on input line 1232.
 
+[25] [26]
 
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-[25]
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Reference `cyclic004' on page 26 undefined on input line 1181.
-
-[26] [27]
-
-LaTeX Warning: Marginpar on page 28 moved.
+LaTeX Warning: Marginpar on page 27 moved.
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1221.
+(amsmath)                 on input line 1272.
 
-[28]
+[27]
 
-LaTeX Warning: Reference `cor:equivalent_edge_quotient_commuting' on page 29 un
-defined on input line 1253.
+LaTeX Warning: Reference `cor:equivalent_edge_quotient_commuting' on page 28 un
+defined on input line 1304.
 
 
-Overfull \hbox (2.95793pt too wide) in paragraph at lines 1263--1265
+Overfull \hbox (2.95793pt too wide) in paragraph at lines 1314--1316
 []\OT1/cmr/m/n/10 Consider an el-e-ment $\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 \U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 B[]\OT1/cmr/m/n/10 )$ where $\OML/cmm/m/it/10 x \U/msb/m/n/10 l \OML
 /cmm/m/it/10 y$ \OT1/cmr/m/n/10 and its sta-bi-lizer $[] []$,
  []
 
-[29] [30]
+[28] [29]
 
-LaTeX Warning: Reference `defn:lefchetz' on page 31 undefined on input line 133
-7.
+LaTeX Warning: Reference `defn:lefchetz' on page 30 undefined on input line 138
+8.
 
-[31] [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
-Overfull \hbox (69.03601pt too wide) in paragraph at lines 1467--1467
+Overfull \hbox (26.93282pt too wide) in paragraph at lines 1388--1389
+[]\OT1/cmr/m/it/10 Notation \OT1/cmr/m/n/10 13.1\OT1/cmr/m/it/10 . []\OT1/cmr/m
+/n/10 For this sec-tion, we will use $\OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = \U
+/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 )[]\OML/cmm/m
+/it/10 ;$ \OT1/cmr/m/n/10 where $\U/eus/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 U\OT1/cmr/m/n/10 )[] :
+ []
+
+[30] [31] [32]
+Overfull \hbox (69.03601pt too wide) in paragraph at lines 1518--1518
 [] 
  []
 
-[34] [35] [36]
+[33] [34] [35]
 
-LaTeX Warning: Reference `gbn_decomposition' on page 37 undefined on input line
- 1589.
+LaTeX Warning: Reference `gbn_decomposition' on page 36 undefined on input line
+ 1640.
 
 
-Overfull \hbox (102.16972pt too wide) in paragraph at lines 1630--1701
+Overfull \hbox (102.16972pt too wide) in paragraph at lines 1681--1752
 [][] [] 
  []
 
 
 Underfull \vbox (badness 5519) has occurred while \output is active []
 
- [37]
-[38]
-Overfull \hbox (47.6334pt too wide) in paragraph at lines 1795--1796
+ [36]
+[37]
+Overfull \hbox (47.6334pt too wide) in paragraph at lines 1846--1847
 [][] 
  []
 
 
 Underfull \vbox (badness 2884) has occurred while \output is active []
 
- [39]
-(./unimodality_paper.bbl) [40] (./unimodality_paper.aux)
+ [38]
+(./unimodality_paper.bbl) [39] (./unimodality_paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -961,10 +945,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17713 strings out of 493108
- 336528 string characters out of 6134853
- 470629 words of memory out of 5000000
- 20641 multiletter control sequences out of 15000+600000
+ 17705 strings out of 493108
+ 336304 string characters out of 6134853
+ 445697 words of memory out of 5000000
+ 20633 multiletter control sequences out of 15000+600000
  13698 words of font info for 58 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  62i,16n,80p,3249b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -989,14 +973,15 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (40 pages, 488506 bytes).
+mf-dist/fonts/type1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on unimodality_paper.pdf (39 pages, 489906 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

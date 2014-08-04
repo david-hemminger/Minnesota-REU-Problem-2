@@ -16,7 +16,7 @@
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
 
-\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
@@ -128,20 +128,18 @@
 
 \maketitle
 
-\section{Things without homes}
-
 \section{Introduction}\label{sec:introduction}
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal{F}^r$ on the category finite graded posets with rank-preserving morphisms as follows
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal{F}^r(P)$ are $x\otimes y$ (here the $\otimes$ symbol is purely formal), where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ by $x\otimes y \lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ to be the transitive closure of $\lessdot_{\mathcal{F}}$, i.e. $x\otimes y \le_{\mathcal{F}} x^\prime\otimes y^\prime$ \todo{I very strongly think we should notate this as $\mathcal F^r(P)$ as it seems quite confusing to remove the dependence on $r,P$ and it's still quite short} if there exists a chain
+For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal{F}^r(P)$ are $x\otimes y$ (here the $\otimes$ symbol is purely formal), where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ by $x\otimes y \lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ to be the transitive closure of $\lessdot_{\mathcal{F}}$, i.e. $x\otimes y \le_{\mathcal{F}} x^\prime\otimes y^\prime$ \todo{I very strongly think we should notate this as $\mathcal F^r(P)$ as it seems quite confusing to remove the dependence on $r,P$ and it's still quite short.  - Why?  If we know that our poset is $\mathcal{F}^r(P)$ (and it should always be clear that this is the poset we're talking about), then there isn't any ambiguity.  Furthermore, $\le_{\mathcal{F}^r(P)}$ is extremely cumbersome.} if there exists a chain
 
 $$x\otimes y\lessdot_{\mathcal{F}} x_1\otimes y_1\lessdot_{\mathcal{F}}\ldots\lessdot_{\mathcal{F}} x_{r-1}\otimes y_{r-1}\lessdot_{\mathcal{F}} x^\prime\otimes y^\prime$$
 
 \todo{Since people know what the transitive closure is, are we sure we want to use the valuable space in the introduction explicitly defining it?}
 
-Let $Q$ be a finited graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{F}^r(f)\colon \mathcal{F}^r(P)\rightarrow \mathcal{F}^r(Q)$ by $\mathcal{F}^r(f)(x\otimes y) = f(x)\otimes f(y)$.
+Define a rank function $\rk_{\mathcal{F}}$ on $\mathcal{F}^r(P)$ by $\rk(x\otimes y) = \rk_P(x)$.  Let $Q$ be a finited graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{F}^r(f)\colon \mathcal{F}^r(P)\rightarrow \mathcal{F}^r(Q)$ by $\mathcal{F}^r(f)(x\otimes y) = f(x)\otimes f(y)$.
 \end{defn}
 
 We will show that $\mathcal{F}^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $x\otimes y\in \mathcal{F}^1(P).$  We observe that when $P$ has a nice structure, $\mathcal{F}^r(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  It is well-know than if $G$ is a group of rank-preserving \todo{I think we should either say both order preserving and rank preserving or neither of them. I prefer neither, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
@@ -240,31 +238,35 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 \section{The Functor of Edges}
 \label{sec:functor_of_edges}
 
-%\todo{maybe it's worth using the notation $x\otimes y$ in this part as well, since it's almost exclusively used later in the paper?}
-%Let $P$ be a finite graded poset, and let $G$ be a group acting on $P$ such that every $g\in G$ is a poset automorphism of $P$.  We say that a subset $A\subseteq P$ is a \textit{boolean subalgebra of size $r$} if there exist $x,y\in P$ such that $A = \{w\colon x\le w\le y\}$ and if the subposet of $P$ induced by $A$ is isomorphic to $B_r$\todo{Elise:", the boolean algebra of size r"}.  Since the bottom and top elements $x,y\in A$ uniquely define $A$, we will frequently write $x\otimes y$ in place of $A$ throughout the paper.
+In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal{F}^r$ as described in Definition \ref{defn:functor_of_edges} is a well-defined functor and prove some useful properties of $\mathcal{F}^r$.  Section \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+
+\ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
+First we prove Proposition \ref{prop:F_well_defined}, which states that $\mathcal{F}^r$ is a well-defined functor.  We break the proof of Proposition \ref{prop:F_well_defined} into Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} which follow below.  After showing that $\mathcal{F}^r$ is well-defined we then define a natural $G$ action on $\mathcal{F}^r(P)$ and define a surjection $\mathcal{F}^r(P)/G\rightarrow \mathcal{F}^r(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
 
 
 
-%\begin{defn}
-%Let $\mathcal{F}^r(P)$ be the set of all boolean subalgebras of $P$ of size $r$ with the relation $A\le_{\mathcal{F}} B$ if there exists a poset isomorphism $f\colon A\rightarrow B$ such that for all $x\in A$, $x \le_P f(x)$ in $P$.
-%\end{defn}
-
-
-\begin{lem}
-\label{lem:f_partial_order}
+\begin{lem}\label{lem:f_partial_order}
 The relation $\le_{\mathcal{F}}$ defines a partial order on $\mathcal{F}^r(P)$.
 \end{lem}
 
 \begin{proof}
-It is clear that $A\le_\mathcal{F} A$ for all $A\in\mathcal{F}^r(P)$.  Furthermore if $A\le_\mathcal{F} B$ and $B\le_\mathcal{F} C$ for some $A,B,C\in \mathcal{F}^r(P)$ then there exist isomorphisms $f\colon A\rightarrow B$ and $g\colon B\rightarrow A$ such that $x\le_P f(x)$ and $y\le_P g(y)$ for all $x\in A$, $y\in B$.  Then $g\circ f\colon A\rightarrow C$ is an isomorphism, and by the transitivity of the order relation on $P$, $x\le_P f(x)\le_P g(f(x))$ implies that $x\le_P g(f(x))$, so the relation on $\mathcal{F}^r(P)$ is transitive.
-
-Suppose now that $A\le_\mathcal{F} B\le_\mathcal{F} A$, and take $f\colon A\rightarrow B$ and $g\colon B\rightarrow A$ as above.  Assume for the sake of contradiction that $x_0 \ne g(f(x_0))$ for some $x_0$ in $A$.  Since $g\circ f$ is bijective, there exists some $x_1\in A$ such that $g(f(x_1)) = x_0$.  By assumption $x_1\ne x_0$, so we have that $x_1 < x_0$, and hence by induction there exists an infinite chain $x_0 > x_1 > x_2 > \ldots$, which contradicts the finiteness of $P$.  Thus $x = g(f(x))$ for all $x\in A$, so $x\le_P f(x)\le_P g(f(x)) = x$, and hence $x = f(x)$ by antisymmetry of the relation on $P$, so $A = B$.  Thus $\le_\mathcal{F}$ defines a partial order on $\mathcal{F}^r(P)$.
+We have that $x\otimes y\le_{\mathcal{F}} x\otimes y$ and that $\le_{\mathcal{F}}$ is transitive by definition.  It remains to be shown that $\le_{\mathcal{F}}$ is antisymmetric.  Suppose $x\otimes y\le_{\mathcal{F}} x^\prime\otimes y^\prime$ and $x^\prime\otimes y^\prime\le_{\mathcal{F}} x\otimes y$.  Then $x\le_P x^\prime \le_P x$ and $y\le_P y^\prime \le_P y$, so $x = x^\prime$ and $y=y^\prime$ by antisymmetry of $\le_P$, hence $x\otimes y = x^\prime\otimes y^\prime$.
 \end{proof}
 
 
-\begin{lem}
-The poset $\mathcal{F}^1(P)$ is graded, with $\rk{x\otimes y} = \rk{x}$ for all $x\otimes y\in \mathcal{F}^r(P)$, where $\rk{x}$ is the rank of $x$ in $P$.
+\begin{lem}\label{lem:FP_graded_poset}
+For $P$ a graded poset, the object $\mathcal{F}^r(P)$ is a graded poset.
 \end{lem}
+
+\begin{proof}
+To show $\mathcal{F}^r(P)$ is graded, we must show $x\otimes y <_{\mathcal{F}} x^\prime \otimes y^\prime \implies rk(x\otimes y)<rk(x^\prime \otimes y^\prime)$ and $x\otimes y \lessdot_{\mathcal{F}} x^\prime \otimes y^\prime \implies rk(x\otimes y)+1 = rk(x^\prime \otimes y^\prime)$.  Both of these facts follow immediately from the definition of $\lessdot_{\mathcal{F}}$ and the definition $\rk_{\mathcal{F}}(x\otimes y) = \rk_P(x)$.
+\todo{I don't think the details of the proof need to be included here, but I've left them here commented out in case we change our minds.}
+
+%First, if $x\otimes y <_{\mathcal{F}} a \otimes b$ then by definition of $<_{\mathcal{F}}$, we must have $x < x^\prime,$ and hence 
+%$$rk_{\mathcal{F}}(x\otimes y) = rk_P(x)<rk_P(x^\prime) = rk_{\mathcal{F}}(x^\prime\otimes y^\prime).$$
+%Second, if $x\otimes y \lessdot_{\mathcal H} x^\prime \otimes y^\prime$ then $x \lessdot_P x^\prime,$ so $rk(x)+1 = rk(x^\prime)$ and then $$rk_{\mathcal{F}}(x\otimes y)+1 = rk_P(x) +1=rk_P(x^\prime)= rk_{\mathcal{F}}(x^\prime\otimes y^\prime).$$
+\end{proof}
+
 
 \begin{counterexample}
 It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transitive closure of $\lessdot_{\mathcal F}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal F^1(P)$ and on the right hand side is the poset obtained from the relation $x\otimes y \leq a\otimes b$ if $x \leq a, y \leq b.$
@@ -299,50 +301,103 @@ It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transiti
 
 Here, it is clear that $\mathcal F^1(P)$ is a graded poset, with $rk(x\otimes y) = rk(x),$ but, the hasse diagram on the right represents a poset which does not have a grading.
 \end{counterexample}
-\begin{proof}
-\todo[inline]{prove this}
-\end{proof}
 
-We also have that the action of $G$ on $P$ induces an action on $\mathcal{F}^r(P)$ as follows.  
 
-\begin{lem}\label{lem:G_action_on_FP}
-The function defined by $g\cdot A = \{g\cdot a \colon a\in A\}$ for all $g\in G$, $A\in \mathcal{F}^r(P)$ is a well-defined group action of $G$ on $\mathcal{F}^r(P)$.
-\end{lem}  
+\begin{lem}\label{lem:Ff_poset_morphism}
+If $f\colon P\rightarrow Q$ is morphism of finited ordered posets, then $\mathcal{F}^r(f)\colon \mathcal{F}^r(P)\rightarrow \mathcal{F}^r(Q)$ is a morphism of finited ordered posets.
+\end{lem}
 
 \begin{proof}
-Since $g$ is an automorphism of $P$, $g\cdot A$ must also be isomorphic to $B_r$, that is $g\cdot A\in \mathcal{F}^r(P)$.  Suppose $A\le B$, and let $f\colon A\rightarrow B$ be an isomorphism satisfying $x\le f(x)$ for all $x\in A$.  Then $g\circ f\circ g^{-1}\colon g\cdot A \rightarrow g\cdot B$ is an isomorphism, and we have that $g^{-1}\cdot x \le f(g^{-1}\cdot x)$ by the definition of $f$.  Acting by $g$ on the left and using the fact that $g$ is order-preserving gives that $x\le g\cdot f(g^{-1}\cdot x)$, hence $g\cdot A\le g\cdot B$.  It follows that $g$ is an automorphism of $\mathcal{F}^r(P)$.
+$\mathcal{F}^r(f)$ is rank-preserving since for all $x\otimes y\in \mathcal{F}^r(P)$ we have $\rk_{\mathcal{F}}(x\otimes y) = \rk_P(x) = \rk_P(f(x)) = \rk_{\mathcal{F}}(\mathcal{F}^r(f)(x\otimes y))$.  Suppose $x\otimes y\le_{\mathcal{F}} x^\prime \otimes y^\prime$.  Then $x\le_P x^\prime$, $y\le_P y^\prime$, and since $f$ is order-presevering, it follows that $f(x)\le_P f(x^\prime)$, $f(y)\le_P f(y^\prime)$, hence $\mathcal{F}^r(f)(x\otimes y) \le_{\mathcal{F}} \mathcal{F}^r(f)(x^\prime \otimes y^\prime)$.  Thus $\mathcal{F}^r(f)$ is order preserving and hence a morphism of finite ordered posets.
 \end{proof}
 
-
-\begin{prop}\label{prop:surjection_between_F_quotients}
-For any group $G$ acting on $P$ and $0\le i\le \rk(P)$, we have $|\mathcal{F}^r(P/G)|_i \le |\mathcal{F}^r(P)/G|_i$. Furthermore there exists a poset surjection $q\colon \mathcal{F}^1(P)/G\rightarrow \mathcal{F}^1(P/G)$ defined by $q(G(x\otimes y)) = Gx\otimes Gy$, with $q$ being a bijection if and only if the action of $G$ on $P$ is cover transitive.\todo{maybe seperate out the cover transitive bit, and put it in the cover transitive section? I think it seems a bit out of place here}\todo{Can't we define cover transitive not only for $\mathcal F^1$, but also for $\mathcal F^r$? Wouldn't this theorem still hold exactly as stated for $\mathcal F^r$ with our new definition?}
+\begin{prop}\label{prop:F_well_defined}
+The map $\mathcal{F}^r(P)$ is an endofunctor on the category of finite graded posets $\mathcal{P}$.
 \end{prop}
 
 \begin{proof}
-Let $Gx\otimes Gy\in \mathcal{F}^r(P/G)$.  Since the orbits between $Gx$ and $Gy$ form a boolean algebra of size $r$, it is possible to pick a set of representatives from the orbits in $Gx\otimes Gy$ such that the representatives form a boolean subalgebra $x\otimes y$ of size $r$ in $P$.  Then $x\otimes y\in \mathcal{F}^r(P)$ and the orbit $G(x\otimes y)$ is in $\mathcal{F}^r(P)/G$.  Furthermore, if $Gy^\prime\otimes Gx^\prime \ne Gy\otimes Gx$, then any boolean subalgebra $x^\prime\otimes y^\prime$ given by representatives from orbits lying between $Gx^\prime$ and $Gy^\prime$ will not be an element of $G(x\otimes y)$, since $(Gx,Gy)\ne (Gx^\prime,Gy^\prime)$.  Thus a choice of representatives from each boolean subalgebra of size $r$ in $\mathcal{F}^r(P/G)$ gives a rank-preserving injection $\mathcal{F}^r(P/G)\rightarrow \mathcal{F}^r(P)/G$ and hence $|\mathcal{F}^r(P/G)|_i \le |\mathcal{F}^r(P)/G|_i$.
+By Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} we have that $\mathcal{F}^r$ takes elements in $\mathcal{P}$ to elements in $\mathcal{P}$ and morphisms of $\mathcal{P}$ to morphisms of $\mathcal{P}$.  Furthermore it is clear that $\mathcal{F}^r(\id_P) = \id_{\mathcal{F}^r(P)}$, so it remains to be shown that for finited graded posets $P, Q,$ and $R$ with morphisms $f\colon P\rightarrow Q$ and $g\colon Q\rightarrow R$ that $\mathcal{F}^r(g\circ f) = \mathcal{F}^r(g)\circ\mathcal{F}^r(f)$.  This is clear, however, as for all $x\otimes y\in \mathcal{F}^r(P)$ we have $\mathcal{F}^r(g\circ f)(x\otimes y) = g(f(x))\otimes g(f(y)) = \left(\mathcal{F}^r(g)\circ\mathcal{F}^r(f)\right)(x\otimes y)$.
+\end{proof}
 
-Now consider the case when $r = 1$.  A boolean subalgebra of size 1 simply corresponds to an edge between adjacent ranks defined by a covering relation $x\lessdot y$ for some $x,y\in P$.  Then for every edge $x\otimes y\in \mathcal{F}^1(P)$, the orbit $Gx\otimes Gy$ is an element of $\mathcal{F}(P/G)$, so we get a map $q\colon \mathcal{F}^r(P)/G \rightarrow \mathcal{F}^1(P/G)$ by defining $q(G(x\otimes y)) = Gx\otimes Gy$.\todo{Elise:"which is clearly surjective"}  Note that this map is well defined because if $x^\prime\otimes y^\prime = g(x\otimes y) = g\cdot x\otimes g\cdot y$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Furthermore, we have that $G(x\otimes y) \le G(w\otimes z)$ if and only if there exist some $x_0\otimes y_0\in G(x\otimes y)$, $w_0\otimes z_0\in G(w\otimes z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  If this is the case, then we also have that $Gx\otimes Gy \le Gw\otimes Gz$ by definition.
 
-Finally, note that $q$ is a bijection exactly when there do not exist multiple\todo{Elise: maybe "distinct" instead of "multiple" would be clearer }orbits $G(x\otimes y) \ne G(x^\prime\otimes y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $x\otimes y, x^\prime\otimes y^\prime\in \mathcal{F}^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $g\cdot x^\prime \otimes y\in G(x^\prime\otimes y^\prime)$, so $G(x\otimes y) = G(x^\prime \otimes y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is cover transitive.
+
+Given a group action of $G$ on $P$, we can easily define a natural group action of $G$ on $\mathcal{F}^r(P)$ using Proposition \ref{prop:F_well_defined}.  For all $g\in G$ we have that $g$ is an automorphism of $P$, so it follows that $\mathcal{F}^r(g)$ is an automorphism of $\mathcal{F}^r(P)$.  Since $\mathcal{F}^r$ is a functor this gives a well-defined group action.
+
+\begin{defn}\label{defn:G_action_on_FP}
+Define a group action of $G$ on $\mathcal{F}^r(P)$ by defining $g\cdot (x\otimes y) = \mathcal{F}^r(g)(x\otimes y) = (g\cdot x)\otimes (g\cdot y)$.
+\end{defn}
+
+Using Definition \ref{defn:G_action_on_FP} we have a well-defined quotient poset $\mathcal{F}^r(P)/G$.  It is then natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal{F}^r$, that is, whether $\mathcal{F}^r(P/G) \cong \mathcal{F}^r(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal{F}^r(P)/G\rightarrow \mathcal{F}^r(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is cover transitive.
+
+
+\begin{prop}\label{prop:surjection_between_F_quotients}
+%For any group $G$ acting on $P$ and $0\le i\le \rk(P)$, we have $|\mathcal{F}^r(P/G)|_i \le |\mathcal{F}^r(P)/G|_i$.
+The map $q\colon \mathcal{F}^r(P)/G\rightarrow \mathcal{F}^r(P/G)$ defined by $q(G(x\otimes y)) = Gx\otimes Gy$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is cover transitive.
+\end{prop}
+
+\begin{proof}
+%Let $Gx\otimes Gy\in \mathcal{F}^r(P/G)$.  Since the orbits between $Gx$ and $Gy$ form a boolean algebra of size $r$, it is possible to pick a set of representatives from the orbits in $Gx\otimes Gy$ such that the representatives form a boolean subalgebra $x\otimes y$ of size $r$ in $P$.  Then $x\otimes y\in \mathcal{F}^r(P)$ and the orbit $G(x\otimes y)$ is in $\mathcal{F}^r(P)/G$.  Furthermore, if $Gy^\prime\otimes Gx^\prime \ne Gy\otimes Gx$, then any boolean subalgebra $x^\prime\otimes y^\prime$ given by representatives from orbits lying between $Gx^\prime$ and $Gy^\prime$ will not be an element of $G(x\otimes y)$, since $(Gx,Gy)\ne (Gx^\prime,Gy^\prime)$.  Thus a choice of representatives from each boolean subalgebra of size $r$ in $\mathcal{F}^r(P/G)$ gives a rank-preserving injection $\mathcal{F}^r(P/G)\rightarrow \mathcal{F}^r(P)/G$ and hence $|\mathcal{F}^r(P/G)|_i \le |\mathcal{F}^r(P)/G|_i$.
+
+%Now consider the case when $r = 1$.  A boolean subalgebra of size 1 simply corresponds to an edge between adjacent ranks defined by a covering relation $x\lessdot y$ for some $x,y\in P$.  Then for every edge $x\otimes y\in \mathcal{F}^1(P)$, the orbit $Gx\otimes Gy$ is an element of $\mathcal{F}(P/G)$, so we get a map $q\colon \mathcal{F}^r(P)/G \rightarrow \mathcal{F}^1(P/G)$ by defining $q(G(x\otimes y)) = Gx\otimes Gy$. 
+
+
+First we show that $q$ is a surjective morphism.  Note that $q$ is well defined because if $x^\prime\otimes y^\prime = g(x\otimes y) = g\cdot x\otimes g\cdot y$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Clearly $q$ is rank-preserving and surjective, so it suffices to show that $q$ is order-preserving.  Suppose that $G(x\otimes y) \le G(w\otimes z)$.  Then there exist some $x_0\otimes y_0\in G(x\otimes y)$, $w_0\otimes z_0\in G(w\otimes z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  We then have that $Gx\otimes Gy \le Gw\otimes Gz$ by definition, hence $q$ is order-preserving.
+
+Next, note that $q$ is a bijection exactly when there do not exist distinct orbits $G(x\otimes y) \ne G(x^\prime\otimes y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $x\otimes y, x^\prime\otimes y^\prime\in \mathcal{F}^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $g\cdot x^\prime \otimes y\in G(x^\prime\otimes y^\prime)$, so $G(x\otimes y) = G(x^\prime \otimes y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is cover transitive.
 \end{proof}
 
 \begin{counterexample}
-In the previous theorem, we stated that $q$ is a bijection if and only if the action of $G$ on $P$ is cover transitive. However, it is {\it not} true that if the action of $G$ on $P$ is cover transitive, then $q$ is an isomorphism. A counterexample is provided as follows. Take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{dihedral001} that this action is cover transitive. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $x \otimes y,a \otimes b \in \mathcal F(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $Gx \otimes Gy <_{\mathcal F^1(B_{10}/G} Ga \otimes Gb.$ However, it is not true that $G(x\otimes y)<_{\mathcal F^1(B_{10})/G} G(a\otimes b).$
+In the previous Proposition, we stated that $q$ is a bijection if and only if the action of $G$ on $P$ is cover transitive. However, it is {\it not} true that if the action of $G$ on $P$ is cover transitive, then $q$ is an isomorphism. A counterexample is provided as follows. Take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{dihedral001} that this action is cover transitive. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $x \otimes y,a \otimes b \in \mathcal F(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $Gx \otimes Gy <_{\mathcal F^1(B_{10}/G} Ga \otimes Gb.$ However, it is not true that $G(x\otimes y)<_{\mathcal F^1(B_{10})/G} G(a\otimes b).$
 \end{counterexample}
 
-\section{The Poset $\mathcal{H}^r(P)$}
-In this discussion we discuss a modified version of $\mathcal{F}^r(P)$, which we will denote $\mathcal{H}^r(P)$. The main point of introducing this object is to give a simple, noncomputational proof that $\mathcal F^r(B_n)/G$ is Peck. 
 
-At least for the case $r=1$ there is an alternative proof of this fact. It is actually shown in Section ~\ref{sec:unitary_peck_f} that $\mathcal F^1(B_n)$ is unitary Peck, for $n>2,$ so, by Theorem \ref{thm:quotients_of_unitary_peck_posets}, $\mathcal F^1(B_n)/G$ is Peck. However, the proof of this is extremely messy and computational.
+
+\ssec{Proof of Theorem \ref{thm:cover_transitive_implies_Peck}}\label{ssec:proof_of_cover_transitive_implies_Peck}
+
+In this section we prove Theorem \ref{thm:cover_transitive_implies_Peck}, which we recall here:
+
+\todo{if there's a better way of fixing the numbering for this theorem I'd love to know}
+\newtheorem*{cover_transitive_implies_Peck}{Theorem \ref{thm:cover_transitive_implies_Peck}}
+\begin{cover_transitive_implies_Peck}
+If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G)$ is Peck.
+\end{cover_transitive_implies_Peck}
+
+
+The proof is largely motivated by the following Lemma.
+
+\begin{lem}\label{lem:bijection_peck_implication}
+If $f:P\rightarrow Q$ is a bijection and $P$ is Peck then $Q$ is Peck.
+\end{lem}
+\begin{proof}
+Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
+
+%Let $rk(P) = rk(Q) = n.$ Since $P$ is Peck, there exists an order raising map $U_i:P_i\rightarrow P_{i+1}$ such that $U_{n-i-1} \cdots U_i:P_i \rightarrow P_{n-i}$ is an isomorphism. Then, define $f(U)_i:P_i\rightarrow P_{i+1}$ by $f(U)_i(x) = f(U_i(f^{-1}(x))).$ This map is well defined because $f$ is a bijection. This map is order raising because $y > x \implies f(y) > f(x),$ by definition of morphisms of posets. It follows that since $U_{n-i-1} \cdots U_i$ is an isomorphism, $f(U)_{n-i-1} \cdots f(U)_i$ is as well, because the vector spaces $V(P_i) \cong V(Q_i)$ since $f$ is a bijection. Therefore, $Q$ is Peck.
+\end{proof}
+
+By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal{F}^r(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal{F}^r(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_Peck_posets}.  While this is the most direct path, we unfortunately do not have a proof that $\mathcal{F}^r(B_n)$ is unitary Peck for $r>1$.  We prove that $\mathcal{F}^1(B_n)$ is unitary Peck in Section \ref{sec:unitary_peck_f}, but unfortunately the proof is messy and computational.
+
+
+%At least for the case $r=1$ there is an alternative proof of this fact. It is actually shown in Section ~\ref{sec:unitary_peck_f} that $\mathcal F^1(B_n)$ is unitary Peck, for $n>2,$ so, by Theorem \ref{thm:quotients_of_unitary_peck_posets}, $\mathcal F^1(B_n)/G$ is Peck. However, the proof of this is extremely messy and computational.
+
+Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal{F}^r(B_n)$ is unitary Peck we will instead define for all $r,n$ a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ can be easily seen to be unitary Peck and such that there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal{F}^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
+
 
 \todo{are we obligated to check whether $\mathcal F^r(B_n)$ is unitary Peck? Maybe we should at least put it as a question.}
 
-We now define the object $\mathcal H^r(P),$ whose elements are the same as those of $\mathcal{H}^r(P),$ but we define a different partial order on $\mathcal{H}^r(P)$.
-
 \begin{defn}
 \label{defn:h_map}
-For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. If $(x,y) \in P\times P,x <y,rk_P(x) + r = rk_P(y),$ then $x \otimes y \in \mathcal H^r(P).$ We declare $x\otimes y \lessdot_{\mathcal H} x' \otimes y'$ if $x \lessdot x',y\lessdot y'$ and $x' \not < y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ Define $rk_{\mathcal H^r(P)}(x\otimes y) = rk_P(x).$
+For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $x \otimes y \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $x\otimes y \lessdot_{\mathcal H} x^\prime \otimes y^\prime$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not < y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x\otimes y) = rk_P(x).$
 \end{defn}
+
+
+\section{The Poset $\mathcal{H}^r(P)$}
+%In this discussion we discuss a modified version of $\mathcal{F}^r(P)$, which we will denote $\mathcal{H}^r(P)$. The main point of introducing this object is to give a simple, noncomputational proof that $\mathcal F^r(B_n)/G$ is Peck. 
+
+
+
+%We now define the object $\mathcal H^r(P),$ whose elements are the same as those of $\mathcal{H}^r(P),$ but we define a different partial order on $\mathcal{H}^r(P)$.
+
+
 
 \begin{warning}
 While $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal P \rightarrow \mathcal Q,$ we would quickly run into troubles. For example, suppose we took $f$ mapping a diamond $P$ (leftmost below) to a chain of length three $Q$ (second leftmost) Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects. 
@@ -376,16 +431,18 @@ While $\mathcal F^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
 However, it is still true that $\mathcal H^r(P)$ can be viewed as a graded poset with $rk_{\mathcal H^r(P)}(x\otimes y) = rk_P(x).$
 \end{warning}
 
-\todo{David, the proof of this lemma is the same as one that we need for $\mathcal F$ section, so you can probably put this proof there, and feel free to replace this proof by "similarly to the proof for F..."}
+
 \begin{lem}\label{lem:HP_order}
 For $P$ a graded poset, the object $\mathcal{H}^r(P)$, as defined in Definition ~\ref{defn:h_map} is a graded poset.
 \end{lem}
 \begin{proof}
-To show $\mathcal H^r(P)$ is graded, we must show $x\otimes y <_{\mathcal H} a \otimes b \implies rk(x\otimes y)<rk(a \otimes b)$ and $x\otimes y \lessdot_{\mathcal H} a \otimes b \implies rk(x\otimes y)+1 = rk(a \otimes b).$ 
+This follows immediately from the fact that $\mathcal{F}^r(P)$ is graded and Remark \ref{rem:order_containment}.
 
-First, if $x\otimes y <_{\mathcal H} a \otimes b$ then by definition of $<_{\mathcal H},$ in Definition ~\ref{defn:h_map}, we must have $x < a,$ and hence 
-$$rk_{\mathcal H^r(P)}(x\otimes y) = rk_P(x)<rk_P(a) = rk_{\mathcal H^r(P)}(a\otimes b).$$
-Second, if $x\otimes y \lessdot_{\mathcal H} a \otimes b$ then $x \lessdot_P a,$ so $rk(x)+1 = rk(a)$ and then $$rk_{\mathcal H^r(P)}(x\otimes y)+1 = rk_P(x) +1=rk_P(a)= rk_{\mathcal H^r(P)}(a\otimes b).$$
+%To show $\mathcal H^r(P)$ is graded, we must show $x\otimes y <_{\mathcal H} a \otimes b \implies rk(x\otimes y)<rk(a \otimes b)$ and $x\otimes y \lessdot_{\mathcal H} a \otimes b \implies rk(x\otimes y)+1 = rk(a \otimes b).$ 
+
+%First, if $x\otimes y <_{\mathcal H} a \otimes b$ then by definition of $<_{\mathcal H},$ in Definition ~\ref{defn:h_map}, we must have $x < a,$ and hence 
+%$$rk_{\mathcal H^r(P)}(x\otimes y) = rk_P(x)<rk_P(a) = rk_{\mathcal H^r(P)}(a\otimes b).$$
+%Second, if $x\otimes y \lessdot_{\mathcal H} a \otimes b$ then $x \lessdot_P a,$ so $rk(x)+1 = rk(a)$ and then $$rk_{\mathcal H^r(P)}(x\otimes y)+1 = rk_P(x) +1=rk_P(a)= rk_{\mathcal H^r(P)}(a\otimes b).$$
 \end{proof}
 
 \begin{rem}\label{rem:order_containment}
@@ -437,13 +494,7 @@ $\mathcal{H}^r(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
 This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quotients_of_unitary_peck_posets}
 \end{proof}
 
-\begin{lem}
-\label{lem:bijection_peck_implication}
-If $f:P\rightarrow Q$ is a bijection and $P$ is Peck then $Q$ is Peck.
-\end{lem}
-\begin{proof}
-Let $rk(P) = rk(Q) = n.$ Since $P$ is Peck, there exists an order raising map $U_i:P_i\rightarrow P_{i+1}$ such that $U_{n-i-1} \cdots U_i:P_i \rightarrow P_{n-i}$ is an isomorphism. Then, define $f(U)_i:P_i\rightarrow P_{i+1}$ by $f(U)_i(x) = f(U_i(f^{-1}(x))).$ This map is well defined because $f$ is a bijection. This map is order raising because $y > x \implies f(y) > f(x),$ by definition of morphisms of posets. It follows that since $U_{n-i-1} \cdots U_i$ is an isomorphism, $f(U)_{n-i-1} \cdots f(U)_i$ is as well, because the vector spaces $V(P_i) \cong V(Q_i)$ since $f$ is a bijection. Therefore, $Q$ is Peck.
-\end{proof}
+
 
 \begin{lem}
 \label{bijection_h_f}
