@@ -522,9 +522,73 @@ An action $\phi:G\times P \rightarrow P$ is cover transitive if and only if when
 Using Proposition ~\ref{prop:surjection_between_F_quotients}, $G$ is cover transitive if and only if the map $q$ defined in Proposition ~\ref{prop:surjection_between_F_quotients} is a bijection. However, $q$ is a bijection if and only if there do not exist distinct orbits $G(x\otimes y) \neq G(x'\otimes y')$ with $x' \in Gx,y'\in Gy.$ Fix $x \otimes y,x'\otimes y' \in \mathcal F^1(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $x' \otimes g\cdot y \in G(x'\otimes y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $x' \otimes g\cdot y \in G(x'\otimes y')$ is equivalent to $G(x'\otimes y') = G(x\otimes y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ Then, taking $a = x,b = y,c = gy',h = g',$ the existence of such a $h=g'\in G$ is equivalent to the statement that whenever $a<c,b<c, a \in Gb,$ there exists $h \in \Stab(c)$ with $ha = b,$ as we wanted to show.
 \end{proof}
 
+\ssec{Preservation Under Semidirect Products}
+\label{ssec:semidirect_product_preservation}
+Recall Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, as stated in the introduction. This Proposition essentially says the cover transitive property is preserved under semidirect products. We shall use this to obtain simple proofs that cover transitive actions are also preserved under direct products and wreath products.
 
+\begin{proof}
+\todo{David, can you fill this in please?}
+[Proof of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}]
+\end{proof}
+
+\todo{I'm not sure if this proof can really be shortened, other than saying the first paragraph is obvious. I wonder if it's better to just use the other proof, or if this is better because it gives an illustration of the thoerem.}
+\begin{thm}
+\label{thm:direct_product_preservation}
+For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two cover transitive actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also cover transitive.
+\end{thm}
+\begin{proof}
+First, by definition of cover transitive, if either $G$ or $H$ acts trivially, it is clear the action of $G\times H$ is cover transitive. To see this, suppose $G$ acts trivially, the case of $H$ acting trivially is similar. Then, if $(x,y) \lessdot (a,b),(r,s)\lessdot (a,b),(x,y) \in G\times H(r,s),$ then $x \in Gr$ so $x = r.$ If $b = y = s,$ then $(e,e) \in Stab(x,y)$ and $(e,e)(x,y) = (r,s).$ Otherwise, it must be that $x = r = a,$ and then $y \lessdot b,s \lessdot b,y \in Hs,$ and so by cover transitivity of $G,$ there exists $g \in G$ so that $(e,g)(x,y) = (r,s)$ and $(e,g) \in Stab(a,b).$
+
+Next, Observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H).$ Since $G$ acts cover transitively on $P,$ by the above paragraph, $G\times \{e\}$ acts cover transitively on $P \times Q.$ Also, since $H$ acts cover transitively on $Q,$ it follows that $\{e\}\times H$ acts cover transitively on $(P/G) \times Q.$ Therefore, the actions of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} and so the action of $G\times H$ is cover transitive.
+\end{proof}
+
+Next, we use Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} to prove in Theorem ~\ref{thm:wreath_preservation} that the cover transitive property is preserved under wreath products with the symmetric group. First, we need some definitions of wreath product.
+
+\begin{defn}
+For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
+\begin{align*}
+((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
+\end{align*}
+where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
+\end{defn}
+
+In other words, $G\wr H$ can be viewed as a certain semidirect product of $G^l \rtimes H.$
+
+\begin{note}
+\label{note:wreath_action}
+For any group $G$ with a given action $\psi:G\times P \rightarrow P,$ we obtain an induced action of $G \wr H,$ $\phi:G \wr H \times P^l \rightarrow P^l$ defined by 
+$$((g_1,\ldots, g_l),h)(a_1,\ldots, a_l) = (g_{h^{-1}(1)}\cdot a_{h^{-1}(1)},\ldots,g_{h^{-1}(l)} \cdot a_{h^{-1}(l)}).$$
+\end{note}
+
+\begin{rem}
+Heuristically, one may think of the above action as obtained by first having $G$ act separately on the $l$ distinct copies of $P,$ and then letting $H$ act by permuting the copies.
+\end{rem}
+
+\begin{lem}
+\label{lem:symmetric_group_product_action}
+For $P$ a poset, the action $\phi:S_l \times P^l \rightarrow P^l,\sigma \cdot(x_1,\ldots, x_l) = (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is cover transitive.
+\end{lem}
+\begin{proof}
+For $a \in P^l$ notate $a = (a_1,\ldots, a_l).$ Suppose $x,y,z \in P^l$ with $x\lessdot z,y\lessdot z,$ and $x \in S_ly.$ This means there is a unique $i$ such that $x_i \lessdot z_i,x_k = z_k$ for $k \neq i.$ Additionally, there is a unique $j$ for which $y_j \lessdot z_j,y_k =z_k$ for $k \neq j.$ Since $x \in S_ly,$ we obtain the equality of multisets $\{x_1,\ldots, x_l\}=\{y_1,\ldots,y_l\}.$ But for $k \neq i,j,x_k = z_k = y_k$, we also obtain equality of sets $\{x_i,x_j\} = \{y_i,y_j\}.$ Since $rk(y_j) \lessdot rk(x_j),$ we obtain $y_j = x_i,y_i = x_j.$ Then, taking the transposition. $\sigma \in S_l = (ij),$ it follows $\sigma \in Stab(z)$ and $\sigma \cdot x = y.$
+\end{proof}
+
+\begin{thm}
+\label{thm:wreath_preservation}
+If $\psi:G\times P \rightarrow P$ is cover transitive, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action defined in Notation ~\ref{note:wreath_action} is also cover transitive.
+\end{thm}
+\begin{proof}
+First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since $G$ acts cover transitively on $P,$ using Theorem ~\ref{thm:direct_product_preservation}, we obtain $G^l$ acts cover transitively on $P^l,$ by the action $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action of $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is cover transitive by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} and so $\phi$ is cover transitive.
+\end{proof}
+
+
+\todo{remove commented out old proofs of wreath products and direct products? The old proof of direct product might actually be simpler than this one though, what do you think?}
+
+\iffalse
 \ssec{Preservation Under Direct Products}
 \label{ssec:direct_product_preservation}
+
+
+
 
 \begin{thm}
 \label{thm:direct_product_preservation}
@@ -576,6 +640,7 @@ Since $\sigma \delta a_j = b_i,$ both $a_i \subset b_i,\sigma \delta b_j \subset
 
 Finally, define $g \in G^n$ with $g_j = \delta,g_i = \sigma\delta^{-1}\epsilon$ and for $k \neq i,j,g_k = \id.$ Then, by construction, $(g,\sigma) \in \Stab (c)$ and $(g,\sigma)a = b.$ Therefore, $\phi$ is cover transitive.
 \end{proof}
+\fi
 
 \ssec{An application to rooted trees.}
 \label{ssec:rooted_trees}
@@ -796,7 +861,9 @@ Fix an orbit $Gy$ and its corresponding Young Diagram $\overline{y},$ with $part
 |\mathcal F^r(B_n/G)|_i = \sum_{\lambda \in P_i(l,m)} \binom{\nu(\lambda)} r.
 \end{align*}
 \end{proof}
+
 \fi
+
 \ssec{Ensuing Conclusions}
 We now reap the fruits of our labor in order to draw some nice results.
 
