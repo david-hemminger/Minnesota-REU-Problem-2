@@ -174,7 +174,12 @@
 
 \maketitle
 
+\todo{Change F to E}
+\todo{Change cover transitive to common cover transitive and CCT}
+\todo{Relegate functoriality to a remark}
+
 \section{Introduction}\label{sec:introduction}
+
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal{F}^r$ on the category finite graded posets with rank-preserving morphisms as follows
 
 \begin{defn}
@@ -211,7 +216,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G
 \end{thm}
 
 
-A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly. - I also prefer ``|'', but was under the impression that ``:'' was more standard.  Since this probably varies from subfield to subfield we should probably just ask Vic} for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
+A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
 \begin{prop}\label{prop:cover_transitive_building_blocks}
 Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ and $B_{2p}$, respectively are cover transitive.
@@ -320,6 +325,77 @@ To show $\mathcal{F}^r(P)$ is graded, we must show $x\otimes y <_{\mathcal{F}} x
 
 \begin{eg}
 It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transitive closure of $\lessdot_{\mathcal F}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal F^1(P)$ and on the right hand side is the poset obtained from the relation $x\otimes y \leq a\otimes b$ if $x \leq a, y \leq b.$
+
+\[
+\raisebox{1mm}{
+\begin{tikzpicture}[scale=.7] at (0,0)
+  \node (0) at (0,0) {$0$};
+  \node (1) at (-1,2) {$1$};
+  \node (2) at (1,2) {$2$};
+  \node (3) at (0,4) {$3$};
+  \node (4) at (2,4) {$4$};
+  \node (5) at (0,6) {$5$};
+  \node (6) at (2,6) {$6$};
+  \node (7) at (1,8) {$7$};
+  \draw (0)--(1);
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (2)--(3);
+  \draw (2)--(4);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(7);
+  \node (8) at (0,-2) {$P$};
+\end{tikzpicture}
+}
+\begin{tikzpicture}[scale = .7]
+  \node (0) at (0,1) {$(0,1)$};
+  \node (1) at (2,1) {$(0,2)$};
+  \node (2) at (0,3) {$(1,3)$};
+  \node (3) at (2,3) {$(2,3)$};
+  \node (4) at (4,3) {$(2,4)$};
+  \node (5) at (1,5) {$(3,5)$};
+  \node (6) at (5,5) {$(4,6)$};
+  \node (7) at (1,7) {$(5,7)$};
+  \node (8) at (5,7) {$(6,7)$};
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (1)--(4);
+  \draw (2)--(5);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(8);
+  \node (9) at (0,-2) {$\mathcal E^1(P)$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale = .7]
+  \node (0) at (0,1) {$(0,1)$};
+  \node (1) at (2,1) {$(0,2)$};
+  \node (2) at (0,3) {$(1,3)$};
+  \node (3) at (2,3) {$(2,3)$};
+  \node (4) at (4,3) {$(2,4)$};
+  \node (5) at (1,5) {$(3,5)$};
+  \node (6) at (5,5) {$(4,6)$};
+  \node (7) at (1,7) {$(5,7)$};
+  \node (8) at (5,7) {$(6,7)$};
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (1)--(4);
+  \draw (2)--(5);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(8);
+  \draw (4)--(7);
+  \draw (3)--(8);
+  \node (9) at (0,-2.5) {$\text{Wrong Definition of } \mathcal E^1(P)$};
+\end{tikzpicture}
+\]
+
+
+
+\iffalse
 \newline
 \begin{tikzpicture}[scale=.7]
   \node (one) at (90:2cm) {$6$};
@@ -349,7 +425,7 @@ It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transiti
   \node (d) at (0:2cm) {$3\otimes 5$};
   \draw (zero) -- (a) -- (b) -- (c)--(d)--(one) -- (zero);
 \end{tikzpicture}
-
+\fi
 Here, it is clear that $\mathcal F^1(P)$ is a graded poset, with $rk(x\otimes y) = rk(x),$ but, the hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
 
@@ -419,7 +495,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G
 The proof is largely motivated by the following Lemma.
 
 \begin{lem}\label{lem:bijection_peck_implication}
-If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
+If $f:P\rightarrow Q$ is a bijection and $P$ is Peck then $Q$ is Peck.
 \end{lem}
 \begin{proof}
 Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
