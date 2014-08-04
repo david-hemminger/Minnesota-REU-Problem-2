@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%
 %   AMS packages    %
 %%%%%%%%%%%%%%%%%%%%%
-\documentclass{amsart}
+\documentclass[10 pt]{amsart}
+
 \usepackage{amsmath}
 \usepackage{amsxtra}
 \usepackage{amscd}
@@ -12,16 +13,62 @@
 \usepackage[all]{xy}
 \usepackage{graphicx}
 \usepackage{comment}
-\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{latexsym,amsmath,amscd,amssymb,epsfig,verbatim}
+\usepackage[margin=1in,letterpaper,portrait]{geometry}
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
-\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usetikzlibrary{matrix,calc, arrows,decorations.pathmorphing}
+
+\addtolength{\oddsidemargin}{.5 in}
+	\addtolength{\evensidemargin}{.4 in}
+	\addtolength{\textwidth}{-1 in}
+
+	\addtolength{\topmargin}{0 in}
+	\addtolength{\textheight}{0 in}
+
+\RequirePackage{color}
+\definecolor{myred}{rgb}{0.75,0,0}
+\definecolor{mygreen}{rgb}{0,0.5,0}
+\definecolor{myblue}{rgb}{0,0,0.65}
+
+\RequirePackage{ifpdf}
+\ifpdf
+  \IfFileExists{pdfsync.sty}{\RequirePackage{pdfsync}}{}
+  \RequirePackage[pdftex,
+   colorlinks = true,
+   urlcolor = myblue, % \href{...}{...} external (URL)
+   citecolor = mygreen, % \cite{...}
+   linkcolor = myred, % \ref{...} and \pageref{...}
+   pagebackref,
+%   pdfpagemode=None,
+   bookmarksopen=true]{hyperref}
+\else
+  \RequirePackage[hypertex]{hyperref}
+\fi
+
+
+\theoremstyle{plain}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{example}[theorem]{Example}
+  \newtheorem{examples}[theorem]{Examples}
+  \newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+  \newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
 
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{ex}[thm]{Exercise}
-\newtheorem{conjecture}{Conjecture}
 \newtheorem*{conjecture*}{Conjecture}
 
 \theoremstyle{remark}
@@ -34,7 +81,6 @@
 \newtheorem{note}[thm]{Notation}
 \newtheorem{warning}[thm]{Warning}
 \newtheorem{variant}[thm]{Variant}
-\newtheorem{question}[thm]{Question}
 \newtheorem{construction}[thm]{Construction}
 \newtheorem{terminology}[thm]{Terminology}
 \newtheorem{convention}[thm]{Convention}
@@ -146,7 +192,11 @@ $$x\otimes y\lessdot_{\mathcal{F}} x_1\otimes y_1\lessdot_{\mathcal{F}}\ldots\le
 Let $Q$ be a finited graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{F}^r(f)\colon \mathcal{F}^r(P)\rightarrow \mathcal{F}^r(Q)$ by $\mathcal{F}^r(f)(x\otimes y) = f(x)\otimes f(y)$.
 \end{defn}
 
-We will show that $\mathcal{F}^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $x\otimes y\in \mathcal{F}^1(P).$  We observe that when $P$ has a nice structure, $\mathcal{F}^r(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  It is well-know than if $G$ is a group of rank-preserving \todo{Perhaps consider saying either (both order preserving and rank preserving) or (neither of them). I prefer ommiting both, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+We will show that $\mathcal{F}^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $x\otimes y\in \mathcal{F}^1(P).$  
+We observe that when $P$ has a nice structure, $\mathcal{F}^r(P)$ commonly has a nice structure as well.  
+In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  
+It is well-know than if $G$ is a group of rank-preserving \todo{Perhaps consider saying either (both order preserving and rank preserving) or (neither of them). 
+I prefer ommiting both, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal{F}^r(B_n/G)$ is Peck.
