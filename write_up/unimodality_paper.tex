@@ -129,10 +129,6 @@
 \maketitle
 
 \section{Introduction}\label{sec:introduction}
-Here's a dumb edit to test weird merge conflicts.
-
-
-
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal{F}^r$ on the category finite graded posets with rank-preserving morphisms as follows
 
 \begin{defn}
@@ -165,7 +161,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G
 \end{thm}
 
 
-A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
+A large number of group actions on $B_n$ have the cover transitive property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are cover transitive, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly. - I also prefer ``|'', but was under the impression that ``:'' was more standard.  Since this probably varies from subfield to subfield we should probably just ask Vic} for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
 \begin{prop}\label{prop:cover_transitive_building_blocks}
 Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ and $B_{2p}$, respectively are cover transitive.
@@ -370,7 +366,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{F}^1(B_n/G
 The proof is largely motivated by the following Lemma.
 
 \begin{lem}\label{lem:bijection_peck_implication}
-If $f:P\rightarrow Q$ is a bijection and $P$ is Peck then $Q$ is Peck.
+If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 \end{lem}
 \begin{proof}
 Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
