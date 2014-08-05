@@ -174,7 +174,6 @@
 
 \maketitle
 
-\todo{Change cover transitive to common cover transitive and CCT}
 \todo{Relegate functoriality to a remark}
 
 \section{Introduction}\label{sec:introduction}
@@ -183,7 +182,7 @@ Let $P$ be a finite graded poset of rank $n$.  It is natural to study the struct
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}$, i.e. $(x, y) \le_{\mathcal E} (x^\prime, y^\prime)$ \todo{I think we should notate this as $\mathcal E^r(P)$ as it seems quite confusing to remove the dependence on $r,P$ and it's still quite short} if there exists a chain
+For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}$, i.e. $(x, y) \le_{\mathcal E} (x^\prime, y^\prime)$ if there exists a chain
 
 $$(x, y)\lessdot_{\mathcal E} (x_1, y_1)\lessdot_{\mathcal E}\ldots\lessdot_{\mathcal E} (x_{r-1}, y_{r-1})\lessdot_{\mathcal E} (x^\prime, y^\prime)$$
 
@@ -460,7 +459,7 @@ Using Notation \ref{note:G_action_on_FP}, we have a well-defined quotient poset 
 
 \begin{prop}\label{prop:surjection_between_F_quotients}
 %For any group $G$ acting on $P$ and $0\le i\le \rk(P)$, we have $|\mathcal E^r(P/G)|_i \le |\mathcal E^r(P)/G|_i$.
-The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is CCT.
+The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a surjective morphism.
 \end{prop}
 
 \begin{proof}
@@ -470,8 +469,28 @@ The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$ defined by $q(G
 
 
 First we show that $q$ is a surjective morphism.  Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cdot x, g\cdot y)$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Clearly $q$ is rank-preserving and surjective, so it suffices to show that $q$ is order-preserving.  Suppose that $G(x, y) \le G(w, z)$.  Then there exist some $(x_0, y_0)\in G(x, y)$, $(w_0, z_0)\in G(w, z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  We then have that $(Gx, Gy) \le (Gw, Gz)$ by definition, hence $q$ is order-preserving.
+\end{proof}
 
-Next, note that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
+\begin{lem}
+\label{lem:cover_transitive_equivalence}
+Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
+\begin{enumerate}
+	\item The action of $G$ on $P$ is CCT.
+	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
+\end{enumerate}
+\end{lem}
+\begin{proof}
+First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijections exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
+
+Next, we shall show $(2) \iff (3)$. It is quite analogous to the proof of $(1) \iff (3)$, but we shall include the argument for completeness. 
+First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x, y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E^1(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ So, $g' \in Stab(x),g'y = (gy'),$ which is what was claimed in property $(2)$.
+
+Next, we check $(3) \iff (4)$by Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since an injective map is a bijection if and only if it is a surjection, it follows that $(3) \iff (4).$
+
+Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E^1(P)/G)_i$ surjectively onto $(\mathcal E^1(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinatlity.
 \end{proof}
 
 \begin{counterexample}
@@ -688,19 +707,9 @@ Developing less trivial examples will take a bit more work, but it will be shown
 If an action $\phi:G \times P \rightarrow P$ is CCT, and $\mathcal E^1(P)$ is Peck, then $\mathcal E^1(P/G)$ is Peck.
 \end{thm}
 \begin{proof}
-By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G).$ Additionally, by the same Proposition ~\ref{prop:surjection_between_F_quotients}, if $\phi$ is CCT, $q$ is a bijection. Finally, by Lemma ~\ref{lem:bijection_peck_implication}, since $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G)$ is a bijection and $\mathcal E^1(P)/G$ is Peck, it follows that $\mathcal E^1(P/G)$ is Peck.
+By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G).$ Additionally, by Lemma ~\ref{prop:surjection_between_F_quotients}, if $\phi$ is CCT, $q$ is a bijection. Finally, by Lemma ~\ref{lem:bijection_peck_implication}, since $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G)$ is a bijection and $\mathcal E^1(P)/G$ is Peck, it follows that $\mathcal E^1(P/G)$ is Peck.
 \end{proof}
 
-In addition to the equivalent characterization of CCT actions as a bijection of posets, given in Proposition ~\ref{prop:surjection_between_F_quotients}, there is one more equivalent characterization of CCT actions, which is worth noting.
-
-\todo{maybe write this as one of three equivalent conditions, together with q being a bijection}\todo{Consider removing the following lemma}
-\begin{lem}
-\label{lem:upper_cover_transitive}
-An action $\phi:G\times P \rightarrow P$ is CCT if and only if whenever $a<c,b<c, a \in Gb,$ there exists $h \in \Stab(c)$ with $ha = b.$
-\end{lem}
-\begin{proof}
-Using Proposition ~\ref{prop:surjection_between_F_quotients}, $G$ is CCT if and only if the map $q$ defined in Proposition ~\ref{prop:surjection_between_F_quotients} is a bijection. However, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x, y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E^1(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ Then, taking $a = x,b = y,c = gy',h = g',$ the existence of such a $h=g'\in G$ is equivalent to the statement that whenever $a<c,b<c, a \in Gb,$ there exists $h \in \Stab(c)$ with $ha = b,$ as we wanted to show.
-\end{proof}
 
 \ssec{Preservation Under Semidirect Products}
 \label{ssec:semidirect_product_preservation}
