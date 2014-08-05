@@ -13,7 +13,9 @@
 \usepackage{graphicx}
 \usepackage{comment}
 \usepackage{amssymb}
-%\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepackage{latexsym,amsmath,amscd,amssymb,epsfig,verbatim}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,shapes}
 
 \newtheorem{thm}{Theorem}
 \newtheorem{cor}[thm]{Corollary}
@@ -211,6 +213,84 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 \item Define $\rk_{\mathcal{E}}(x,y) = \rk_P(x)$.
 \end{itemize}
 \end{defn}
+\end{frame}
+
+\begin{frame}
+\begin{eg}
+It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transitive closure of $\lessdot_{\mathcal F}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal F^1(P)$ and on the right hand side is the poset obtained from the relation $x\otimes y \leq a\otimes b$ if $x \leq a, y \leq b.$
+
+\iffalse
+\[
+\raisebox{1mm}{
+\begin{tikzpicture}[scale=.7] at (0,0)
+  \node (0) at (0,0) {$0$};
+  \node (1) at (-1,2) {$1$};
+  \node (2) at (1,2) {$2$};
+  \node (3) at (0,4) {$3$};
+  \node (4) at (2,4) {$4$};
+  \node (5) at (0,6) {$5$};
+  \node (6) at (2,6) {$6$};
+  \node (7) at (1,8) {$7$};
+  \draw (0)--(1);
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (2)--(3);
+  \draw (2)--(4);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(7);
+  \node (8) at (0,-2) {$P$};
+\end{tikzpicture}
+}
+\begin{tikzpicture}[scale = .7]
+  \node (0) at (0,1) {$(0,1)$};
+  \node (1) at (2,1) {$(0,2)$};
+  \node (2) at (0,3) {$(1,3)$};
+  \node (3) at (2,3) {$(2,3)$};
+  \node (4) at (4,3) {$(2,4)$};
+  \node (5) at (1,5) {$(3,5)$};
+  \node (6) at (5,5) {$(4,6)$};
+  \node (7) at (1,7) {$(5,7)$};
+  \node (8) at (5,7) {$(6,7)$};
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (1)--(4);
+  \draw (2)--(5);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(8);
+  \node (9) at (0,-2) {$\mathcal E^1(P)$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale = .7]
+  \node (0) at (0,1) {$(0,1)$};
+  \node (1) at (2,1) {$(0,2)$};
+  \node (2) at (0,3) {$(1,3)$};
+  \node (3) at (2,3) {$(2,3)$};
+  \node (4) at (4,3) {$(2,4)$};
+  \node (5) at (1,5) {$(3,5)$};
+  \node (6) at (5,5) {$(4,6)$};
+  \node (7) at (1,7) {$(5,7)$};
+  \node (8) at (5,7) {$(6,7)$};
+  \draw (0)--(2);
+  \draw (1)--(3);
+  \draw (1)--(4);
+  \draw (2)--(5);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(7);
+  \draw (6)--(8);
+  \draw (4)--(7);
+  \draw (3)--(8);
+  \node (9) at (0,-2.5) {$\text{Wrong Definition of } \mathcal E^1(P)$};
+\end{tikzpicture}
+\]
+\fi
+
+Here, it is clear that $\mathcal F^1(P)$ is a graded poset, with $rk(x\otimes y) = rk(x),$ but, the hasse diagram on the right represents a poset which does not have a grading.
+\end{eg}
+
 \end{frame}
 
 \begin{frame}{A Conjecture on the Peckness of Edge Posets}
