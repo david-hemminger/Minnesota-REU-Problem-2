@@ -125,6 +125,75 @@
 \end{frame}
 
 
+\section{Background}
+
+\begin{frame}{Basic Definitions}
+\begin{defn}
+Let $P$ be a finite graded poset of rank $n$, that is:
+\begin{itemize}
+\item Elements of $P$ are a disjoint union of $P_0,P_1,\ldots,P_n$, called the \textit{ranks}
+
+\item If $x\in P_i$ and $x\lessdot y$, then $y\in P_{i+1}$
+
+\item Define $\rk(x) = k$, where $x\in P_k$.
+\end{itemize}
+\end{defn}
+
+\begin{defn}
+A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if $x\le_P y \implies f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
+\end{defn}
+\end{frame}
+
+\begin{frame}{Peck Posets}
+
+\begin{defn}
+Write $p_i = |P_i|$.  P is
+
+\begin{itemize}
+
+\item \textit{Rank-symmetric} if $p_i = p_{n-i}$ for all $1\le i\le n$
+
+\item \textit{Rank-unimodal} if for some $0\le k\le n$ we have
+$$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
+
+\item \textit{$k$-Sperner} if no disjoint union of $k$ antichains (sets of pairwise incomparable elements) in $P$ is larger than the disjoint union of the largest $k$ ranks of $P$
+
+\item \textit{Strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
+
+\item \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
+\end{itemize}
+\end{defn}
+\end{frame}
+
+
+
+\begin{frame}
+
+\begin{defn}
+Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x |x\in P\}$ and $\{x |x\in P_i\}$
+\end{defn}
+
+\begin{lem}[Stanley, 1980]
+$P$ is Peck if and only if there exists an linear transformation $U\colon V(P)\rightarrow V(P)$ such that
+\begin{itemize}
+\item For every basis element $x\in P$, 
+$$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
+
+\item  For all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
+\end{itemize}
+\end{lem}
+\end{frame}
+
+\begin{frame}
+\begin{defn}
+If the Lefschetz map defined by
+
+$$L(x) = \sum_{y\gtrdot x} y$$
+
+satisfies the second condition in the previous lemma, then $P$ is \textit{unitary Peck}.
+\end{defn}
+\end{frame}
+
 \section{The Edge Poset and a Conjecture}
 
 \begin{frame}{Definition of the Edge Poset}
@@ -156,8 +225,8 @@ Let $G\subseteq \Aut(B_n)$.  Then $\mathcal{E}(B_n/G)$ is Peck.
 \end{frame}
 
 \section{Main Result}
-\subsection{Main Result}
-\begin{frame}{Statement of Theorem}
+\subsection{Statement of Theorem}
+\begin{frame}{Main Result}
 \begin{defn}
 A group action of $G$ on $P$ is \textit{cover transitive} if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
 \end{defn}
@@ -184,13 +253,48 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 \end{frame}
 
 \begin{frame}
-It then suffices to show that $\mathcal{E}(P)/G$ is Peck.  The following theorem will be useful.
-
 \begin{thm}[Stanley, 1984]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
+
+It then suffices to show that $\mathcal{E}(B_n)$ is unitary Peck.  Unfortunately while this is true, the only proof that we know is long and computational.  Instead we outline a nicer --albeit less direct-- proof.
+
 \end{frame}
 
+
+\begin{frame}{Definition of $\mathcal{H}(P)$}
+\begin{defn}
+For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follows.
+\begin{itemize}
+\item Elements are pairs $(x,y)\in P\times P$ such that $x\lessdot y$
+
+\item Define $(x,y) \lessdot_{\mathcal H} (x^\prime,y^\prime)$ if $x \lessdot_P x^\prime,y\lessdot_P y^\prime$ \textbf{and} $\mathbf{y \ne x^\prime}$
+
+\item Define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$
+
+\item Define $rk_{\mathcal H}(x,y) = rk_P(x).$
+\end{itemize}
+\end{defn}
+
+\end{frame}
+
+\begin{frame}{$\mathcal{H}(B_n)$ is unitary Peck}
+add figure
+\end{frame}
+
+\begin{frame}
+\begin{defn}
+As before, for $G$ acting on $P$, define $g\cdot (x,y) = (g\cdot x,g\cdot y)$.
+\end{defn}
+
+\begin{rem}
+Since $\mathcal{E}(P)$ and $\mathcal{H}(P)$ have the same elements and $(x,y)\le_{\mathcal{H}} (x^\prime,y^\prime) \implies (x,y)\le_{\mathcal{E}} (x^\prime,y^\prime)$, there is a natural bijective morphism $\mathcal{H}(P)/G\rightarrow \mathcal{E}(P)/G$.
+\end{rem}
+
+\begin{proof}[Proof of Main Result]
+$\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \mathcal{E}(B_n)/G$ Peck $\implies \mathcal{E}(B_n/G)$ Peck.
+\end{proof}
+\end{frame}
 
 
 
