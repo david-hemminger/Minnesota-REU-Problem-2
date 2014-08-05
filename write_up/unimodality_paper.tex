@@ -216,6 +216,7 @@ If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
 
 A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
+\todo{Rephrase so that it has two assertions (in two sentences):  first, that $S_n$ acts cover-transitively for all n, and second, that for p prime, $D_{2p} and D_{4p}$ are cover-transitive inside $S_{2p}, S_{4p}$.}
 \begin{prop}\label{prop:cover_transitive_building_blocks}
 Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ and $B_{2p}$, respectively are CCT.
 \end{prop}
@@ -322,6 +323,7 @@ To show $\mathcal E^r(P)$ is graded, we must show $(x, y) <_{\mathcal E} (x^\pri
 
 
 \begin{eg}
+\todo{Move to introduction}
 It is quite crucial we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal E^1(P)$ and on the right hand side is the poset obtained from the relation $(x, y) \leq (a, b)$ if $x \leq a, y \leq b.$
 
 \[
@@ -483,7 +485,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \end{enumerate}
 \end{lem}
 \begin{proof}
-First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijections exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
+First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
 
 Next, we shall show $(2) \iff (3)$. It is quite analogous to the proof of $(1) \iff (3)$, but we shall include the argument for completeness. 
 First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x, y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E^1(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ So, $g' \in Stab(x),g'y = (gy'),$ which is what was claimed in property $(2)$.
@@ -513,7 +515,7 @@ If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
 The proof is largely motivated by the following Lemma.
 
 \begin{lem}\label{lem:bijection_peck_implication}
-If $f:P\rightarrow Q$ is a bijection and $P$ is Peck then $Q$ is Peck.
+If $f:P\rightarrow Q$ is a bijection (but not necessarily an isomorphism) and $P$ is Peck then $Q$ is Peck.
 \end{lem}
 \begin{proof}
 Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
@@ -690,7 +692,7 @@ This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quot
 
 \begin{lem}
 \label{bijection_h_f}
-The map $f:\mathcal H^r(P) \rightarrow \mathcal E^r(P),G(x, y) \mapsto G(x, y)$ is a bijection.
+The map $f:\mathcal H^r(P) \rightarrow \mathcal E^r(P),G(x, y) \mapsto G(x, y)$ is a bijection (but never an isomorphism for $n-r > 1$.).
 \end{lem}
 \begin{proof}
 The elements of $\mathcal H^r(P),\mathcal E^r(P)$ are precisely the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank preserving, to show $f$ is a morphism, it suffices to show $f$ is order preserving. This is immediate from Remark ~\ref{rem:order_containment}
