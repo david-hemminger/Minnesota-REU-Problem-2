@@ -270,13 +270,27 @@ def full_size(grp):
 
 #boolean_matrix(5,1)
 
-grp = bq.Grp([(1,0,2,3,4,5,6,7),(0,1,3,2,4,5,6,7),(0,1,2,3,5,4,6,7),(0,1,2,3,4,5,7,6),(2,3,0,1,4,5,6,7),(0,1,2,3,6,7,4,5),(4,5,6,7,0,1,2,3)])
+#cube:
+#grp = bq.Grp([(3,0,1,2,7,4,5,6),(4,5,1,0,7,6,2,3),(4,0,3,7,5,1,2,6),(1,0,3,2,5,4,7,6)])
+#rotations_cube:
+#grp = bq.Grp([(3,0,1,2,7,4,5,6),(4,5,1,0,7,6,2,3),(4,0,3,7,5,1,2,6)])
+#rotations_octahedron:
+#grp = bq.Grp([(0,4,1,2,3,5),(4,1,0,3,5,2),(3,0,2,5,4,1)])
+#octahedron:
+#grp = bq.Grp([(0,4,1,2,3,5),(4,1,0,3,5,2),(3,0,2,5,4,1),(0,3,2,1,4,5)])
+#graph 5:
+#grp = bq.Grp([(0,4,5,6,1,2,3,7,8,9),(1,0,2,3,4,7,8,5,6,9),(0,2,1,3,5,4,6,7,9,8),(0,1,3,2,4,6,5,8,7,9)])
+#graph 4:
+grp = bq.Grp([(0,3,4,1,2,5),(1,0,2,3,5,4),(0,2,1,4,3,5)])
 
-poset  = Poset_quot(grp)
-for i in xrange(poset.rank+1):
+print len(grp.group_set)
+print gen_p_lst(grp)[0]
+print gen_q_lst(grp)    
+'''for i in xrange(poset.rank+1):
     print poset.vertices[i]
-for i in xrange(poset.rank+1):
+for i in xrange(poset.rank):
     print poset.edges[i]
+'''
 
 '''
 for i in range(3,10):
