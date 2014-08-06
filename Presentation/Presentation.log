@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  3 AUG 2014 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.20)  5 AUG 2014 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,145 +723,203 @@ Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xy.sty
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
-catcodes, docmode,
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyrecat.tex)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyidioms.tex)
-
- Xy-pic version 3.8.9 <2013/10/06>
- Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
- Xy-pic is free software: see the User's Guide for details.
-
-Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen191
-\Y@c=\dimen192
-\U@c=\dimen193
-\D@c=\dimen194
-\L@c=\dimen195
-\R@c=\dimen196
-\Edge@c=\toks44
-\X@p=\dimen197
-\Y@p=\dimen198
-\U@p=\dimen199
-\D@p=\dimen200
-\L@p=\dimen201
-\R@p=\dimen202
-\Edge@p=\toks45
-\X@origin=\dimen203
-\Y@origin=\dimen204
-\X@xbase=\dimen205
-\Y@xbase=\dimen206
-\X@ybase=\dimen207
-\Y@ybase=\dimen208
-\X@min=\dimen209
-\Y@min=\dimen210
-\X@max=\dimen211
-\Y@max=\dimen212
-\lastobjectbox@=\box53
-\zerodotbox@=\box54
-\almostz@=\dimen213
- direction,
-\d@X=\dimen214
-\d@Y=\dimen215
-\K@=\count153
-\KK@=\count154
-\Direction=\count155
-\K@dXdY=\dimen216
-\K@dYdX=\dimen217
-\xyread@=\read2
-\xywrite@=\write5
-\csp@=\count156
-\quotPTK@=\dimen218
-
-utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks46
-\connectobjectbox@@=\box55
- objects,
-\styletoks@=\toks47
- decorations;
-kernel objects: directionals, circles, text; options; algorithms: directions,
-edges, connections;  Xy-pic loaded)
-Package: xy 2013/10/06 Xy-pic version 3.8.9
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyall.tex
- Xy-pic option: All features v.3.8
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xycurve.tex
- Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count157
-\crvpts@=\toks48
-\splinebox@=\box56
-\splineval@=\dimen219
-\splinedepth@=\dimen220
-\splinetol@=\dimen221
-\splinelength@=\dimen222
- circles,
-\L@=\dimen223
- loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyframe.tex
- Xy-pic option: Frame and Bracket extension v.3.14 loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xycmtip.tex
- Xy-pic option: Computer Modern tip extension v.3.7
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xytips.tex
- Xy-pic option: More Tips extension v.3.11 loaded) loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyline.tex
- Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen224
- loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyrotate.tex
- Xy-pic option: Rotate and Scale extension v.3.8 loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xycolor.tex
- Xy-pic option: Colour extension v.3.11 loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xymatrix.tex
- Xy-pic option: Matrix feature v.3.14
-\Row=\count158
-\Col=\count159
-\queue@=\toks49
-\queue@@=\toks50
-\qcount@=\count160
-\qcount@@=\count161
-\matrixsize@=\count162
- loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xyarrow.tex
- Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xygraph.tex
- Xy-pic option: Graph feature v.3.11 loaded) loaded)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf.tex
- Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-co.tex loaded)
-Xy-pic pdf driver: `curve' extension support
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded)
-Xy-pic pdf driver: `frame' extension support
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-fr.tex loaded)
-Xy-pic pdf driver: `line' extension support
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded)
-Xy-pic pdf driver: `rotate' extension support
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded)
-loaded)) (/usr/local/texlive/2014/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write6
+(/usr/local/texlive/2014/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write5
 
 Excluding comment 'comment')
-\c@thm=\count163
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen191
+\epsfysize=\dimen192
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks44
+\verbatim@line=\toks45
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeCo
-penhagen.sty
-Package: beamerthemeCopenhagen 2010/06/17  (rcs-revision d02a7cf4d8ae)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box53
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen193
+\pgf@nodesepend=\dimen194
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen195
+\pgffor@skip=\dimen196
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count153
+\pgfplotmarksize=\dimen197
+)
+\tikz@lastx=\dimen198
+\tikz@lasty=\dimen199
+\tikz@lastxsaved=\dimen200
+\tikz@lastysaved=\dimen201
+\tikzleveldistance=\dimen202
+\tikzsiblingdistance=\dimen203
+\tikz@figbox=\box54
+\tikz@figbox@bg=\box55
+\tikz@tempbox=\box56
+\tikz@tempbox@bg=\box57
+\tikztreelevel=\count154
+\tikznumberofchildren=\count155
+\tikznumberofcurrentchild=\count156
+\tikz@fig@count=\count157
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count158
+\pgfmatrixcurrentcolumn=\count159
+\pgf@matrix@numberofcolumns=\count160
+)
+\tikz@expandcount=\count161
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen204
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.5)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.0 (rcs-revision 1.6)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.0 (rcs-revision 1.2)
+\pgfnodepartlowerbox=\box58
+\pgfnodeparttwobox=\box59
+\pgfnodepartthreebox=\box60
+\pgfnodepartfourbox=\box61
+\pgfnodeparttwentybox=\box62
+\pgfnodepartnineteenbox=\box63
+\pgfnodeparteighteenbox=\box64
+\pgfnodepartseventeenbox=\box65
+\pgfnodepartsixteenbox=\box66
+\pgfnodepartfifteenbox=\box67
+\pgfnodepartfourteenbox=\box68
+\pgfnodepartthirteenbox=\box69
+\pgfnodeparttwelvebox=\box70
+\pgfnodepartelevenbox=\box71
+\pgfnodeparttenbox=\box72
+\pgfnodepartninebox=\box73
+\pgfnodeparteightbox=\box74
+\pgfnodepartsevenbox=\box75
+\pgfnodepartsixbox=\box76
+\pgfnodepartfivebox=\box77
+)))
+\c@thm=\count162
+\c@conjecture=\count163
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeFr
+ankfurt.sty
+Package: beamerthemeFrankfurt 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
-emesplit.sty
-Package: beamerouterthemesplit 2012/10/16  (rcs-revision 51a8c72084af)
+emesmoothbars.sty
+Package: beamerouterthemesmoothbars 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
 emerounded.sty
 Package: beamerinnerthemerounded 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
-emewhale.sty
-Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emeorchid.sty
 Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
+emewhale.sty
+Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emeseahorse.sty
@@ -869,20 +927,20 @@ Package: beamercolorthemeseahorse 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ) (./Presentation.aux)
 \openout1 = `Presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -921,16 +979,16 @@ LaTeX Font Info:    ... okay on input line 119.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count164
-\scratchdimen=\dimen225
-\scratchbox=\box57
+\scratchdimen=\dimen205
+\scratchbox=\box78
 \nofMPsegments=\count165
 \nofMParguments=\count166
-\everyMPshowfont=\toks51
+\everyMPshowfont=\toks48
 \MPscratchCnt=\count167
-\MPscratchDim=\dimen226
+\MPscratchDim=\dimen206
 \MPnumerator=\count168
 \makeMPintoPDFobject=\count169
-\everyMPtoPDFconversion=\toks52
+\everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -947,8 +1005,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 119.
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring OFF on input line 116.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -958,66 +1016,66 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count170
 )
-LaTeX Info: Redefining \ref on input line 119.
-LaTeX Info: Redefining \pageref on input line 119.
-LaTeX Info: Redefining \nameref on input line 119.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
 
 (./Presentation.out) (./Presentation.out)
-\@outlinefile=\write7
-\openout7 = `Presentation.out'.
+\@outlinefile=\write6
+\openout6 = `Presentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 119.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 116.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 119.
-\symnumbers=\mathgroup6
-\sympureletters=\mathgroup7
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 116.
+\symnumbers=\mathgroup7
+\sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 119.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 119.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 119.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 119.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 119.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 119.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 119.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 119.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 119.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 119.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 119.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 119.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 116.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 119.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 116.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 119.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 119.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 119.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 119.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 119.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 119.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 119.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 116.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 116.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-19.
+16.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-119.
+116.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 119.
+ut line 116.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -1043,29 +1101,34 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 119.
-LaTeX Font Info:    Try loading font information for U+msa on input line 119.
+LaTeX Info: Redefining \includegraphics on input line 116.
+
+(./Presentation.nav)
+LaTeX Font Info:    Try loading font information for U+msa on input line 121.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 119.
+LaTeX Font Info:    Try loading font information for U+msb on input line 121.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Try loading font information for U+lasy on input line 121.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 119.
+line 121.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Package xypdf Info: Line width: 0.43799pt on input line 119.
- (./Presentation.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 124.
+(Font)              size <5> substituted on input line 121.
 
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1082,49 +1145,105 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 ] (./Presentation.toc) [7
 
-] [8
+]
+LaTeX Font Info:    Try loading font information for U+eus on input line 238.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+) [8
 
 ]
-\tf@nav=\write8
-\openout8 = `Presentation.nav'.
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+ [9
 
-\tf@toc=\write9
-\openout9 = `Presentation.toc'.
+]
+[10
 
-\tf@snm=\write10
-\openout10 = `Presentation.snm'.
+] (./Presentation.toc) [11
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
+] [12
 
-(./Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+]
+Overfull \hbox (3.35342pt too wide) in paragraph at lines 465--465
+ [] 
+ []
+
+[18
+
+] [19
+
+] (./Presentation.bbl) [20
+
+ </usr/local/texlive/2014/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
+>]
+\tf@nav=\write7
+\openout7 = `Presentation.nav'.
+
+\tf@toc=\write8
+\openout8 = `Presentation.toc'.
+
+\tf@snm=\write9
+\openout9 = `Presentation.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
+ (./Presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 539.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: DC5F056FFDE8FF56AF9A559F0D82486C;225.
+(rerunfilecheck)             Checksum: FE54AF5EAA1EC5FBD7A604F45E3E6CA2;149.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
  ) 
 Here is how much of TeX's memory you used:
- 19586 strings out of 493108
- 359757 string characters out of 6134853
- 472028 words of memory out of 5000000
- 22542 multiletter control sequences out of 15000+600000
- 12195 words of font info for 48 fonts, out of 8000000 for 9000
+ 22473 strings out of 493108
+ 468225 string characters out of 6134853
+ 572024 words of memory out of 5000000
+ 25334 multiletter control sequences out of 15000+600000
+ 22349 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,65p,3244b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
-Output written on Presentation.pdf (8 pages, 60796 bytes).
+ 56i,20n,67p,412b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Presentation.pdf (20 pages, 206493 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 21 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1045 PDF objects out of 1200 (max. 8388607)
+ 959 compressed objects within 10 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
