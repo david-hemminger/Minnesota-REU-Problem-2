@@ -504,9 +504,11 @@ First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x
 %Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E^1(P)/G)_i$ surjectively onto $(\mathcal E^1(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinatlity.
 \end{proof}
 
+
 \begin{rem}
-While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{lem:dihedral_prime} that this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E^1(B_{10}/G)} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E^1(B_{10})/G} G(a,b).$
+While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{lem:dihedral_prime} that this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E^1(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
 \end{rem}
+
 
 
 
@@ -527,23 +529,23 @@ The proof is largely motivated by the following Lemma.
 If $f:P\rightarrow Q$ is a bijection (but not necessarily an isomorphism) and $P$ is Peck then $Q$ is Peck.
 \end{lem}
 \begin{proof}
-Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
+Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism, it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
 
 %Let $rk(P) = rk(Q) = n.$ Since $P$ is Peck, there exists an order raising map $U_i:P_i\rightarrow P_{i+1}$ such that $U_{n-i-1} \cdots U_i:P_i \rightarrow P_{n-i}$ is an isomorphism. Then, define $f(U)_i:P_i\rightarrow P_{i+1}$ by $f(U)_i(x) = f(U_i(f^{-1}(x))).$ This map is well defined because $f$ is a bijection. This map is order raising because $y > x \implies f(y) > f(x),$ by definition of morphisms of posets. It follows that since $U_{n-i-1} \cdots U_i$ is an isomorphism, $f(U)_{n-i-1} \cdots f(U)_i$ is as well, because the vector spaces $V(P_i) \cong V(Q_i)$ since $f$ is a bijection. Therefore, $Q$ is Peck.
 \end{proof}
 
-By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E^r(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E^r(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_Peck_posets}.  While this is the most direct path, we unfortunately do not have a proof that $\mathcal E^r(B_n)$ is unitary Peck for $r>1$.  We prove that $\mathcal E^1(B_n)$ is unitary Peck in Section \ref{sec:unitary_peck_f}, but unfortunately the proof is messy and computational.
+By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E^r(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E^r(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_unitary_Peck_posets}.  While this is the most direct path, we unfortunately do not have a proof that $\mathcal E^r(B_n)$ is unitary Peck for $r>1$.  We prove that $\mathcal E^1(B_n)$ is unitary Peck in Section \ref{sec:unitary_peck_f}, but unfortunately the proof is messy and computational.
 
 
 %At least for the case $r=1$ there is an alternative proof of this fact. It is actually shown in Section ~\ref{sec:unitary_peck_f} that $\mathcal E^1(B_n)$ is unitary Peck, for $n>2,$ so, by Theorem \ref{thm:quotients_of_unitary_peck_posets}, $\mathcal E^1(B_n)/G$ is Peck. However, the proof of this is extremely messy and computational.
 
-Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck we will instead define for all $r,n$ a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ can be easily seen to be unitary Peck and such that there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
+Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, for all $r,n,$ we define a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck. Furthermore, there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
 
 \todo{are we obligated to check whether $\mathcal E^r(B_n)$ is unitary Peck? Maybe we should at least put it as a question.}
 \begin{defn}
 \label{defn:h_map}
-For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not < y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
+For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
 \end{defn}
 
 
@@ -780,9 +782,14 @@ By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection
 \label{ssec:semidirect_product_preservation}
 Recall Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We shall use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
 
+\newtheorem*{prop:semidirect_product_cover_transitive_actions}{Proposition \ref{prop:semidirect_product_cover_transitive_actions}}
+\begin{prop:semidirect_product_cover_transitive_actions}
+Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
+\end{prop:semidirect_product_cover_transitive_actions}
+
 \begin{proof}
 \todo{David, can you fill this in please?}
-[Proof of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}]
+
 \end{proof}
 
 \begin{thm}
@@ -991,9 +998,9 @@ It is well know that the group of linear automorphisms of the n-octahedron is th
 Later in Lemma ~\ref{lem:dihedral_prime}, we shall also see that the action of the dihedral group on a regular $n$-gon, for $n = p,2p,$ is cover transitive. This is the group of linear automorphisms of the regular $n$-gon. Hence, gives yet another example of automorphisms of the linear automorphism group of  polytopes being CCT.
 \end{rem}
 
-\sssec{Cover Transitive Action of $\BZ_2^k$}
+\sssec{Regular Cover Transitive Actions of $\BZ_2^k$}
 
-It turns out that any action of $\BBZ_2^k$ on $B_n$ is CCT:
+In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defines an action on $B_n$ is CCT. In particular, this implies that the regular action of $\BBZ_2^k,$ that is the action of $\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h$ is a CCT action. However, it turns out that this is the only class of groups for which the regular action is CCT.
 
 \begin{lem}
 \label{lem:order_2_CCT}
@@ -1005,6 +1012,31 @@ First, observe that all elements $g \in G$ have order 2. Suppose $x \lessdot z, 
 Let $a$ be the unique element such that $a \in y, a \notin x.$ In order to show $g \in Stab(z),$ it suffices to show that $ga \in x.$ Let $b = g^{-1}a.$ We know $b \in x.$ However, since $g$ has order 2, it must be that $ga = g^2 b = b \in x.$ Hence, $g \in Stab(z),$ and $\phi$ is CCT.
 \end{proof}
 
+\begin{cor}
+\label{cor:regular_order_2_CCT}
+Let $\BBZ_2^k$ act on itself by the regular action $\psi:\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h.$ By identifying $\BBZ_2^k \cong [2^k]$ as sets, we obtain an induced action $\phi:\BBZ_2^k \times B_{2^k} \rightarrow B_{2^k}$ which is cover transitive.
+\end{cor}
+\begin{proof}
+By Lemma ~\ref{lem:order_2_CCT}, any embedding of $\BBZ_2^k \rightarrow S_n$ defines a CCT action on $B_n.$ So, this particular embedding defines a CCT action.
+\end{proof}
+
+\begin{prop}
+\label{prop:regular_action_CCT}
+Let $G$ be a finite group, acting on itself by the left regular action, $\psi:G\times G \rightarrow G,(g,h)\mapsto g\cdot h$, with $|G| = n.$ By identifying $G \cong [n]$ as sets, $\psi$ this induces an action $\phi:G\times B_n \rightarrow B_n.$ Then, $\phi$ is cover transitive if and only if $G \cong \BBZ_2^k$ for some $k.$
+\end{prop}
+\begin{proof}
+First, if $G\cong \BBZ_2^k,$ then by Corollary ~\ref{cor:regular_order_2_CCT}, we know the action $\phi:G\times B_{2^k} \rightarrow B_{2^k}$ is indeed CCT.
+
+Note that $G \cong \BBZ_2^k \iff \forall g \in G,g^2 = e.$ The forward implication is obvious. 
+
+To see the converse, first note that if $\forall g \in G, g^2 = e,$ then $G$ is abelian because $aba^{-1}b^{-1} = abab = (ab)^2 = e.$ Then, if $G$ is an abelian group, all of whose elements have order two, the structure theorem of finite abelian groups tells us $G \cong \BBZ_2^k.$
+
+So, Suppose $G \not \cong \BBZ_2^k.$ Then, there exists $g \in G,g^2 \neq e.$ Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}.$ So, to show the induced action $\phi: G \times B_n \rightarrow B_n$ is not cover transitive, it suffices to show there is no $h \in G,h \in Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}.$  If $h \in Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g.$ Since the regular action is simply transitive, either $h = e$ or $h = g.$ If $h = e,$ then we would have $h\{e\} = g,$ which would imply $g = e,$ contradicting the assumption that $g^2 \neq e.$ On the other hand, if $h = g,$ since $h \in Stab(\{e \cup g\})$ it must be that $h\cdot g = e.$ Then, $g^2 = g\cdot g = h\cdot g = e,$ contradicting the assumption $g^2 \neq e.$ Therefore, there does not exist such an $h$ and the regular action is not CCT.
+\end{proof}
+
+\begin{rem}
+One nice way of restating the above results is that for $G$ an abstract group, there exists some $n$ and some embedding $G \subset S_n$ such that the induced action of $G$ on $B_n$ is not CCT if and only if $G \not \cong Z_2^k$ for some $k.$ If $G\cong Z_2^k,$ we have seen this holds in Lemma ~\ref{lem:order_2_CCT}. If $G \not \cong Z_2^k,$ then by Proposition ~\ref{prop:regular_action_CCT}, the regular action of $G$ on $B_{|G|}$ defines an action which is not CCT.
+\end{rem}
 \iffalse
 \begin{prop}
 Let $G$ be the group of linear automorphisms of the cube, embedded in $\BR^n,$ whose vertices are located at the points $(\pm 1, \ldots, \pm 1).$ Then, the action of $G$ on the cube induces an action of $G$ on the $2^n$ vertices of the octahdron, and hence on $B_{2^n}.$ This induced action on $B_{2^n}$ is CCT. 
