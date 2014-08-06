@@ -487,7 +487,15 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 \nocite{algebraic_stanley}
 \bibliography{References}
 \bibliographystyle{alpha}
+\end{frame}
 
+
+\begin{frame}{Acknowledgements}
+\begin{enumerate}
+\item Thanks to Dr. Victor Reiner and Elise DelMas for mentoring and TAing this project.
+\item Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting this REU.
+\item This research was supported by the RTG grant NSF/DMS-1148634.
+\end{enumerate}
 \end{frame}
 
 
