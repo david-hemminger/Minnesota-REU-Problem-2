@@ -86,7 +86,7 @@
 }
 
 \mode<presentation>{}
-\usetheme{Copenhagen}
+\usetheme{PaloAlto}
 \usecolortheme{seahorse}
 
 %%%%%%%%%%%%   Title slide info  %%%%%%%%%%%%%
@@ -197,75 +197,6 @@ satisfies the second condition in the previous lemma, then $P$ is \textit{unitar
 
 
 
-\section{Background}
-
-\begin{frame}{Basic Definitions}
-\begin{defn}
-Let $P$ be a finite graded poset of rank $n$, that is:
-\begin{itemize}
-\item Elements of $P$ are a disjoint union of $P_0,P_1,\ldots,P_n$, called the \textit{ranks}
-
-\item If $x\in P_i$ and $x\lessdot y$, then $y\in P_{i+1}$
-
-\item Define $\rk(x) = k$, where $x\in P_k$.
-\end{itemize}
-\end{defn}
-
-\begin{defn}
-A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if $x\le_P y \implies f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
-\end{defn}
-\end{frame}
-
-\begin{frame}{Peck Posets}
-
-\begin{defn}
-Write $p_i = |P_i|$.  P is
-
-\begin{itemize}
-
-\item \textit{Rank-symmetric} if $p_i = p_{n-i}$ for all $1\le i\le n$
-
-\item \textit{Rank-unimodal} if for some $0\le k\le n$ we have
-$$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
-
-\item \textit{$k$-Sperner} if no disjoint union of $k$ antichains (sets of pairwise incomparable elements) in $P$ is larger than the disjoint union of the largest $k$ ranks of $P$
-
-\item \textit{Strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
-
-\item \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
-\end{itemize}
-\end{defn}
-\end{frame}
-
-
-
-\begin{frame}
-
-\begin{defn}
-Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x |x\in P\}$ and $\{x |x\in P_i\}$
-\end{defn}
-
-\begin{lem}[Stanley, 1980]
-$P$ is Peck if and only if there exists an linear transformation $U\colon V(P)\rightarrow V(P)$ such that
-\begin{itemize}
-\item For every basis element $x\in P$, 
-$$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
-
-\item  For all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
-\end{itemize}
-\end{lem}
-\end{frame}
-
-\begin{frame}
-\begin{defn}
-If the Lefschetz map defined by
-
-$$L(x) = \sum_{y\gtrdot x} y$$
-
-satisfies the second condition in the previous lemma, then $P$ is \textit{unitary Peck}.
-\end{defn}
-\end{frame}
-
 \section{The Edge Poset and a Conjecture}
 
 \begin{frame}{Definition of the Edge Poset}
@@ -294,7 +225,6 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 \begin{frame}
 \begin{eg}
 It is quite crucial we declare the relation $\leq_\mathcal F$ to be the transitive closure of $\lessdot_{\mathcal F}.$ An example of something that can go wrong is as follows. On the left hand side is the hasse diagram of a poset $P$ in the middle is the poset $\mathcal F^1(P)$ and on the right hand side is the poset obtained from the relation $x\otimes y \leq a\otimes b$ if $x \leq a, y \leq b.$
-
 
 Here, it is clear that $\mathcal F^1(P)$ is a graded poset, with $rk(x\otimes y) = rk(x),$ but, the hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
@@ -468,16 +398,12 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 
 
 
-
-
 \begin{frame}
 \begin{thm}[Stanley, 1984]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
 It then suffices to show that $\mathcal{E}(B_n)$ is unitary Peck.  Unfortunately while this is true, the only proof that we know is long and computational.  Instead we outline a nicer --albeit less direct-- proof.
-
 \end{frame}
-
 
 
 
@@ -487,7 +413,6 @@ It then suffices to show that $\mathcal{E}(B_n)$ is unitary Peck.  Unfortunately
 
 \begin{frame}{Definition of $\mathcal{H}(P)$}
 \begin{defn}
-
 For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follows.
 \begin{itemize}
 \item Elements are pairs $(x,y)\in P\times P$ such that $x\lessdot y$
@@ -497,7 +422,6 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 \item Define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$
 
 \item Define $rk_{\mathcal H}(x,y) = rk_P(x).$
-
 \end{itemize}
 \end{defn}
 \end{frame}
@@ -509,9 +433,16 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 
 
+
 \begin{frame}{$\mathcal{H}(B_n)$ is unitary Peck}
-add figure
+add figure   %%% Which figure?
 \end{frame}
+
+
+
+
+
+
 
 \begin{frame}
 \begin{defn}
@@ -532,6 +463,97 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
+\section{Cover Transitive Actions}
+
+\begin{frame}{CCT actions}
+\begin{lem}
+\label{lem:cover_transitive_equivalence}
+Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
+\begin{enumerate}
+	\item The action of $G$ on $P$ is CCT.
+	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
+\end{enumerate}
+\end{lem}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Some examples of CCT actions}
+
+\end{frame}
+
+
+
+
+\begin{frame}{The direct product}
+\begin{thm}
+\label{thm:direct_product_preservation}
+For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
+\end{thm}
+\end{frame}
+
+
+
+
+
+\begin{frame}{The semi-direct product}
+\begin{prop}\label{prop:semidirect_product_cover_transitive_actions}
+Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that $H$ acts CC transitively on $P$ and $K$ acts CC transitively on $P/H$.  Then $G$ acts CC transitively on $P$.
+\end{prop}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{The wreath product}
+\begin{defn}
+For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
+\begin{align*}
+((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
+\end{align*}
+where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
+\end{defn}
+\end{frame}
+
+
+
+\begin{frame}{The wreath product}
+\begin{thm}
+\label{thm:wreath_preservation}
+If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action is also CCT.
+\end{thm}
+\end{frame}
+
+
+
+\begin{frame}{The automorphism of rooted trees}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Automorphism of rooted trees}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
+
+\end{frame}
 
 
 
@@ -539,40 +561,20 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
+\section{Non CCT actions}
+\begin{frame}{Unimodality of ranks of certain edge posets}
+
+
+\end{frame}
 
 
 
 
 
+\section{Some aspects of a $q$-analog}
+\begin{frame}{The $q$ analog of the problem}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{frame}
 
 
 
