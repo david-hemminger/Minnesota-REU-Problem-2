@@ -294,6 +294,7 @@ print len(grp.group_set)
 print map(len,Poset_quot.edgify(Poset_quot(grp)).edges)
 print gen_p_lst(grp)[0]
 print gen_q_lst(grp)    
+
 '''for i in xrange(poset.rank+1):
     print poset.vertices[i]
 for i in xrange(poset.rank):
