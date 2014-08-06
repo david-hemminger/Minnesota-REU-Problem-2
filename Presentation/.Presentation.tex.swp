@@ -78,21 +78,40 @@
 \def\Fix{\operatorname{Fix}}
 \newcommand\im{\text{Im}}
 
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
 
 \AtBeginSection[]{
-	\begin{frame}{Table of Contents}
+	\begin{frame}{Outline of Talk}
 		\tableofcontents[currentsection]
 	\end{frame}
 }
 
 \mode<presentation>{}
-\usetheme{Singapore}
+\usetheme{Frankfurt}
 \usecolortheme{seahorse}
 
 %%%%%%%%%%%%   Title slide info  %%%%%%%%%%%%%
 \title{Peckness of Edge Posets}
-\author{David Hemminger, Aaron Landesman, Zijian Yao}
-
+\author{David Hemminger\inst{1}, Aaron Landesman\inst{2}, Zijian Yao\inst{3}}
+ 
+\institute[VFU] % (optional)
+{
+  \inst{1}
+  Duke University
+,
+  \inst{2}
+  Harvard University
+  ,
+  \inst{3}
+  Brown University
+}
 \begin{document}
 
 %%%%%%%%%%%%  Title Frame  %%%%%%%%%%%%%%%%
@@ -197,7 +216,8 @@ satisfies the second condition in the previous lemma, then $P$ is \textit{unitar
 %%%%%%%%%%%%%%%%%%%%   Edge Poset Section   %%%%%%%%%%%%%%%%%%%
 
 
-\section{The Edge Poset Construction and a Conjecture}
+\section{Edge Poset Construction}
+\subsection{}
 
 \begin{frame}{Definition of the Edge Poset}
 \begin{defn}
@@ -225,7 +245,7 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 
 
 
-\begin{frame}
+\begin{frame}{Basic Example}
 \begin{center}
 \begin{tikzpicture}[scale=.5] at (0,0)
   \node (0) at (0,0) {$0$};
@@ -283,7 +303,7 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 
 
 
-\begin{frame}{A Conjecture on the Peckness of Edge Posets}
+\begin{frame}{Conjecture on the Peckness of Edge Posets}
 \begin{defn}
 The \textit{boolean algebra of rank $n$} is the poset whose elements are subsets of $[n]$ with order given by containment, i.e. for $x,y\in B_n$, $x\le y$ if $x\subseteq y$.
 \end{defn}
@@ -303,7 +323,7 @@ Let $G\subseteq \Aut(B_n)$.  Then $\mathcal{E}(B_n/G)$ is Peck.
 %%%%%%%%%%%%%%%%%%%%   Main Result Section   %%%%%%%%%%%%%%%%%%%
 
 \section{Main Result}
-\subsection{Statement of Theorem}
+\subsection{}
 
 \begin{frame}{Main Result}
 \begin{defn}
@@ -320,7 +340,7 @@ If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{E}(B_n/G)$
 
 
 
-\subsection{Outline of Proof}
+
 
 \begin{frame}
 \begin{defn}
@@ -348,7 +368,7 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 \begin{thm}[Stanley, 1984]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
-It then suffices to show that $\mathcal{E}(B_n)$ is unitary Peck.  Unfortunately while this is true, the only proof that we know is long and computational.  Instead we outline a nicer --albeit less direct-- proof.
+It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our proof for this is complicated.  Instead we construct a unitary Peck poset $\mathcal{H}(B_n)$ such that there is a bijective morphism $\mathcal{H}(B_n)/G\rightarrow \mathcal{E}(B_n)/G$.
 
 \end{frame}
 
@@ -381,7 +401,9 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 
 \begin{frame}{The Boolean Algebra $B_3$}
-\begin{center}
+
+\begin{figure}
+\centering
 \begin{tikzpicture}[scale = 1.7]
   \node (0) at (0,0) {$\emptyset$};
   \node (1) at (-1,1) {$\{1\}$};
@@ -405,7 +427,7 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
   \draw (6)--(7);
   \node (9) at (0,-.5) {$B_3$};
 \end{tikzpicture}
-\end{center}
+\end{figure}
 \end{frame}
 
 
@@ -414,9 +436,11 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 
 \begin{frame}{$\mathcal{H}(B_3)$ is unitary Peck}
-
-
+\Wider{
+\begin{figure}
+\centering
 \begin{tikzpicture}[scale = 1]
+\tikzstyle{every node}=[font=\small]
   \node (0) at (0,0) {$(\emptyset,\{1\})$};
   \node (1) at (4,0) {$(\emptyset,\{2\})$};
   \node (2) at (8,0) {$(\emptyset,\{3\})$};
@@ -434,6 +458,8 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
   \draw (2)--(4)--(9)--(6)--(2);
   \node (9) at (4,-1) {$\mathcal H(B_3)$};
 \end{tikzpicture}
+\end{figure}
+}
 
 \end{frame}
 
