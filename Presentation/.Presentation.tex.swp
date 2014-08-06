@@ -112,6 +112,7 @@
   \inst{3}
   Brown University
 }
+
 \begin{document}
 
 %%%%%%%%%%%%  Title Frame  %%%%%%%%%%%%%%%%
@@ -481,7 +482,13 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
+\begin{frame}{References}
+\nocite{quotients_stanley}
+\nocite{algebraic_stanley}
+\bibliography{References}
+\bibliographystyle{alpha}
 
+\end{frame}
 
 
 
