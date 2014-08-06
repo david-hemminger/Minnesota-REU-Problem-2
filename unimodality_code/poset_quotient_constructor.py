@@ -272,6 +272,12 @@ def full_size(grp):
 
 #cube:
 #grp = bq.Grp([(3,0,1,2,7,4,5,6),(4,5,1,0,7,6,2,3),(4,0,3,7,5,1,2,6),(1,0,3,2,5,4,7,6)])
+#square
+#grp = bq.Grp([(1,0,3,2),(2,3,0,1),(0,3,2,1)])
+#z2,3
+grp = bq.Grp([(1,0,3,2,5,4,7,6),(2,3,0,1,6,7,4,5),(4,5,6,7,0,1,2,3)])
+#z2,2
+#grp = bq.Grp([(1,0,3,2),(2,3,0,1)])
 #rotations_cube:
 #grp = bq.Grp([(3,0,1,2,7,4,5,6),(4,5,1,0,7,6,2,3),(4,0,3,7,5,1,2,6)])
 #rotations_octahedron:
@@ -281,9 +287,11 @@ def full_size(grp):
 #graph 5:
 #grp = bq.Grp([(0,4,5,6,1,2,3,7,8,9),(1,0,2,3,4,7,8,5,6,9),(0,2,1,3,5,4,6,7,9,8),(0,1,3,2,4,6,5,8,7,9)])
 #graph 4:
-grp = bq.Grp([(8,0,1,2,3,4,5,6,7),(8,7,6,5,4,3,2,1,0)])
+#dihedral 9:
+#grp = bq.Grp([(8,0,1,2,3,4,5,6,7),(8,7,6,5,4,3,2,1,0)])
 
 print len(grp.group_set)
+print map(len,Poset_quot.edgify(Poset_quot(grp)).edges)
 print gen_p_lst(grp)[0]
 print gen_q_lst(grp)    
 '''for i in xrange(poset.rank+1):
