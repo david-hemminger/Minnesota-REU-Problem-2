@@ -367,6 +367,7 @@ It is quite crucial we declare the relation $\leq_\mathcal E$ to be the transiti
   \draw (4)--(6);
   \draw (5)--(7);
   \draw (6)--(8);
+  \draw (0)--(3);
   \node (9) at (0,-2) {$\mathcal E^1(P)$};
 \end{tikzpicture}
 \begin{tikzpicture}[scale = .7]
@@ -389,6 +390,7 @@ It is quite crucial we declare the relation $\leq_\mathcal E$ to be the transiti
   \draw (6)--(8);
   \draw (4)--(7);
   \draw (3)--(8);
+  \draw (0)--(3);
   \node (9) at (0,-2.5) {$\text{Wrong Definition of } \mathcal E^1(P)$};
 \end{tikzpicture}
 \]
@@ -479,8 +481,8 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \begin{enumerate}
 	\item The action of $G$ on $P$ is CCT.
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
-	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
-	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+	\item The map $q\colon \mathcal E^1(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+	\item The map $q\colon \mathcal E^1(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
 	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
 \end{enumerate}
 \end{lem}
@@ -768,7 +770,6 @@ Recall Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, as s
 [Proof of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}]
 \end{proof}
 
-\todo{I'm not sure if this proof can really be shortened, other than saying the first paragraph is obvious. I wonder if it's better to just use the other proof, or if this is better because it gives an illustration of the thoerem.}
 \begin{thm}
 \label{thm:direct_product_preservation}
 For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
@@ -1284,6 +1285,15 @@ This section is an application of Polya theory, and is moderately tangential to 
 \begin{note}
 Let $P_{[t]}[l,m]$ denote the set of partitions of the set $[t]$ into at most $l$ sets, such that each set in the partition has size at most $m.$ Let $P[l,m] = \cup_{t \in \BN} P_{[t]}[l,m]$ be the set of all partitions into at most $l$ sets such that each set in the partition has size at most $m.$ Denote $p_{[t]}[l,m] = |P_{[t]}[l,m]|,$ and $p[l,m] = |P[l,m]|.$
 \end{note}
+
+\begin{rem}
+It is fairly simple to see that $p_{[t]}[l,m],p[l,m]$ satisfy the recursive formulas
+$$p_{[t]}[l,m] = \sum_{k=1}^l p_{[t-k]}[l-1,m].$$
+$$p[l,m] = \sum_{k=1}^l p[l-1,m].$$
+These can be reached by considering the number of elements in the first row.
+It is also straightforward to relate these statistics to the number set partitions of $[m\cdot l]$ that fit inside a $m$ times $l$ box, but just multiplying by an appropriate binomial coefficient.
+\todo{make this more precise}
+\end{rem}
 
 \begin{prop}
 \label{prop:box_partition_by_size}
