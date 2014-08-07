@@ -16,6 +16,10 @@
 \usepackage{latexsym,amsmath,amscd,amssymb,epsfig,verbatim}
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes}
+\usepackage{tikz-qtree}
+\tikzset{level distance=50pt,
+    sibling distance=7pt,
+    every tree node/.style={align=center},}
 
 \newtheorem{thm}{Theorem}
 \newtheorem{cor}[thm]{Corollary}
@@ -131,7 +135,7 @@
 \begin{frame}{Basic Definitions}
 
 \begin{defn}
-Let $P$ be a finite graded poset of rank $n$, that is:
+Let $P$ be a finite graded poset of rank $n$. That is:
 \begin{itemize}
 \item Elements of $P$ are a disjoint union of $P_0,P_1,\ldots,P_n$, called the \textit{ranks}
 \item If $x\in P_i$ and $x\lessdot y$, then $y\in P_{i+1}$
@@ -224,7 +228,7 @@ satisfies the second condition in the previous lemma, then $P$ is \textit{unitar
 \begin{frame}{Definition of the Edge Poset}
 \begin{defn}
 \label{defn:functor_of_edges}
-For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the finite graded poset defined as follows. 
+For $P$ a finite graded poset, its \textit{edge poset} $\mathcal{E}(P)$ is the finite graded poset defined as follows. 
 \begin{itemize}
 
 \item Elements of $\mathcal{E}(P)$ are ordered pairs $(x,y)\in P\times P$ where $x\lessdot y$
@@ -346,7 +350,7 @@ If a group action of $G$ on $B_n$ is CCT, then $\mathcal{E}(B_n/G)$ is Peck.
 
 \begin{frame}
 \begin{defn}
-Given a group action of $G$ on $P$, we define a group action of $G$ on $\mathcal{E}(P)$ by letting $g\cdot (x,y) = (g\cdot x,g\cdot y)$ for all $g\in G$.
+Given a group action of $G$ on $P$, define a group action of $G$ on $\mathcal{E}(P)$ by letting $g\cdot (x,y) = (g\cdot x,g\cdot y)$ for all $g\in G$.
 \end{defn}
 \pause
 \begin{prop}
@@ -370,7 +374,7 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 \begin{thm}[Stanley, 1984; Harper, 1984; Pouzet and Rosenberg, 1986]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
-It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our proof for this is complicated.  Instead we construct a unitary Peck poset $\mathcal{H}(B_n)$ such that there is a bijective morphism $\mathcal{H}(B_n)/G\rightarrow \mathcal{E}(B_n)/G$.
+It suffices to show that $\mathcal{E}(B_n)$ is unitary Peck. Our proof of this is complicated. Instead, we construct a unitary Peck poset $\mathcal{H}(B_n)$ such that there is a bijective morphism $\mathcal{H}(B_n)/G\rightarrow \mathcal{E}(B_n)/G$.
 
 \end{frame}
 
@@ -472,7 +476,7 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 \begin{frame}
 \begin{defn}
-As before, for $G$ acting on $P$, define $g\cdot (x,y) = (g\cdot x,g\cdot y)$.
+As before, for $G$ acting on $\mathcal H(P)$, define $g\cdot (x,y) = (g\cdot x,g\cdot y)$.
 \end{defn}
 
 \begin{rem}
@@ -521,25 +525,9 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \pause
 \item The group $D_{2n}$ acting on $B_{n}$ when $n = p$ or $n = 2p$, and $p$ is a prime;
 \pause
-\item The elementary $2$-group $(\mathbb Z /2 \mathbb Z)^k$ with any action on $P$.
+\item The elementary $2$-group $(\mathbb Z /2 \mathbb Z)^k$ with any action on $B_n$ induced by an action on $[n]$.
 \end{enumerate}
 \end{block}
-\end{frame}
-
-
-
-
-
-\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
-Add pictures.
-\end{frame}
-
-
-
-
-
-\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
-Add pictures.
 \end{frame}
 
 
@@ -559,7 +547,7 @@ For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions,
 
 \begin{frame}{The semi-direct product}
 \begin{prop}\label{prop:semidirect_product_cover_transitive_actions}
-Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that $H$ acts CC transitively on $P$ and $K$ acts CC transitively on $P/H$.  Then $G$ acts CC transitively on $P$.
+Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ on $P$ is CCT and the action of $K$ on $P/H$ is CCT.  Then the action of $G$ on $P$ is CCT.
 \end{prop}
 \end{frame}
 
@@ -589,15 +577,9 @@ The poset $\mathcal E (B_n/S_m \wr S_l)$ is rank symmetric and rank unimodal. (F
 
 
 \begin{frame}{The automorphism of rooted trees}
-Add pictures
-\end{frame}
-
-
-
-
-
-\begin{frame}{Automorphism of rooted trees}
-Add pictures
+\begin{center}
+\Tree [.root [.$\bullet$  1 2 ] [.$\bullet$  3 4 ] [.$\bullet$  [.$\bullet$  5 6 7 ] [.$\bullet$  8 9 10 ] ] [.$\bullet$  11  12 ] ]
+\end{center}
 \end{frame}
 
 
@@ -606,10 +588,23 @@ Add pictures
 
 \begin{frame}{Automorphism of rooted trees}
 \begin{prop}
-Let $P$ be a rooted tree with root vertex labeled $r$. Then, if let $\{A_1,\ldots,A_m\}$ denote the set of isomorphism classes of $\{D(x)|x\lessdot r\}.$ For $T \in A_j,$ denote $G_j = Aut(T).$ Then, 
+Let $P$ be a rooted tree. Then, 
 $$Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr S_{i_m}),$$
-In particular, $Aut(P)$ can be expressed as a sequence of direct products and wreath products of symmetric groups.
 \end{prop}
+\pause
+\begin{cor}
+Let $P$ be a rooted tree with leaves $L(P)$, and let $n = |L(P)|$, then the action of $Aut(P)$ on $B_n$  induced  from the action of $Aut(P)$ on $L(P)$  is CCT. 
+\end{cor}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Rooted trees and the wreath product}
+\begin{center}
+\Tree [.root [.$\bullet$  1 2 3 4 ]  [.$\bullet$  5 6 7 8 ]  [.$\bullet$  9 10 11 12 ]  ]
+\end{center}
 \end{frame}
 
 
@@ -630,13 +625,13 @@ In particular, $Aut(P)$ can be expressed as a sequence of direct products and wr
 Let $C_n$ be the cyclic group which acts naturally on $B_n$, then size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/C_n$ is $$|\mathcal E (B_n)/C_n|_{i} = \binom{n-1}{i}.$$
 \end{lem}
 \pause
+\begin{lem}
+Let $C_p$ be the cyclic group with prime order $p$, then  $$|(\mathcal E (B_p)/C_p)_i| - |\mathcal E(B_p/C_p)_i| = \frac{p-1}{2}.$$
+\end{lem}
+\pause
 \begin{prop}
 The poset $\mathcal E (B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{prop}
-\pause
-\begin{lem}
-Let $C_p$ be the cyclic group with prime order $p$, then  $$|\mathcal E (B_n)/C_n|_{i} - |\mathcal E(B_n/C_n)|_i = \frac{p-1}{2}.$$
-\end{lem}
 \end{frame}
 
 
@@ -647,7 +642,7 @@ Let $C_p$ be the cyclic group with prime order $p$, then  $$|\mathcal E (B_n)/C_
 \begin{frame}{Unimodality of ranks of certain edge posets}
 \begin{lem}
 Let $D_{2n}$ be the dihedral group of size $2n$ which acts naturally on $B_n$, then size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/D_{2n}$ is
-$$|\mathcal E (B_n)/D_{2n}|_{i}  = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
+$$|\mathcal E (B_n)/D_{2n}|_{i}  = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
 \end{lem}
 \pause
 \begin{prop}
@@ -658,13 +653,43 @@ The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
 
 
 
+
+%%%%%%%%%%%%%%%%   q - analog and higher r   %%%%%%%%%%%%%%%%%%
+
+\section{Final remarks}
+\subsection{}
+
 \begin{frame}{The $q$ analog of the problem}
-
+\begin{block}{The $q$-Boolean algebra}
+Let $B_n(q)$ be the poset of all $\mathbb F_q$-subspaces of $V_n(q) := (\mathbb F_q)^n$, and $G < Gln(\mathbb F_q)$. We consider $\mathcal E (B_n(q))/G$ and $\mathcal E(B_n(q)/G)$.
+\end{block}
+\pause
+\begin{lem} 
+Let $q$ be a prime,  then $$ |\mathcal F^1 \big(B_n(q)\big)/C_n(q)|_{i} = {n-1 \choose i}_q.$$
+\end{lem}
+\pause
+\begin{block}{Questions}
+ Is $\mathcal E \big(B_n(q) /G\big)$ Peck? or more weakly, is it rank unimodal?
+\end{block}
 \end{frame}
 
-\begin{frame}{Possible Generalizations of $\mathcal{E}$}
 
+
+
+
+
+\begin{frame}{Some Generalizations of $\mathcal{E}$ and Remarks}
+
+\begin{block}{$\mathcal E^r(P)$}
+Similarly we can define the $\mathcal E^r (P)$ on a graded poset $P$. The elements of $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  
+\end{block}
+\pause
+\begin{block}{Other generalizations}
+$\mathcal H^r(P)$; \quad  $\mathcal E^{\vec{r}} (P)$; \quad $\mathcal H^{\vec{r}} (P). $
+\end{block}
 \end{frame}
+
+
 
 
 
@@ -680,7 +705,7 @@ The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
 
 \begin{frame}{Acknowledgements}
 \begin{enumerate}
-\item Thanks to Dr. Vic Reiner and Elise DelMas for mentoring and TAing this project.
+\item Thanks to Dr. Vic Reiner and Elise DelMas for mentoring and TAing this project. We also want to thank Ka Yu Tam for helpful comments. 
 \item The work for this project took place at the Minnesota at Twin Cities REU.  Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting the REU.
 \item This research was supported by the RTG grant NSF/DMS-1148634.
 \end{enumerate}
@@ -719,7 +744,6 @@ The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
 
 
 \end{document}
-
 
 
 
