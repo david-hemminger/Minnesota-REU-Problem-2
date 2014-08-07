@@ -2,3 +2,5 @@
 \beamer@sectionintoc {1}{Background}{2}{0}{1}
 \beamer@sectionintoc {2}{Edge Poset Construction}{7}{0}{2}
 \beamer@sectionintoc {3}{Main Result}{11}{0}{3}
+\beamer@sectionintoc {4}{CCT Actions}{20}{0}{4}
+\beamer@sectionintoc {5}{Non-CCT actions}{36}{0}{5}
