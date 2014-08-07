@@ -328,11 +328,11 @@ Let $G\subseteq \Aut(B_n)$.  Then $\mathcal{E}(B_n/G)$ is Peck.
 
 \begin{frame}{Main Result}
 \begin{defn}
-A group action of $G$ on $P$ is \textit{cover transitive} if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
+A group action of $G$ on $P$ is \textit{common cover transitive} (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
 \end{defn}
 
 \begin{thm}[Hemminger, Landesman, and Yao 2014]
-If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{E}(B_n/G)$ is Peck.
+If a group action of $G$ on $B_n$ is CCT, then $\mathcal{E}(B_n/G)$ is Peck.
 \end{thm}
 \end{frame}
 
@@ -349,7 +349,7 @@ Given a group action of $G$ on $P$, we define a group action of $G$ on $\mathcal
 \end{defn}
 \pause
 \begin{prop}
-The map $q\colon \mathcal{E}(P)/G\rightarrow \mathcal{E}(P/G)$ defined by $q(G(x,y)) = (Gx,Gy)$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is cover transitive.
+The map $q\colon \mathcal{E}(P)/G\rightarrow \mathcal{E}(P/G)$ defined by $q(G(x,y)) = (Gx,Gy)$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is CCT.
 \end{prop}
 
 \begin{lem}
@@ -487,11 +487,7 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
-
-
-
 \section{Common Cover Transitive Actions}
-
 \begin{frame}{CCT actions}
 \begin{lem}
 \label{lem:cover_transitive_equivalence}
@@ -503,7 +499,6 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
 \end{enumerate}
 \end{lem}
-
 \end{frame}
 
 
@@ -614,7 +609,9 @@ In particular, $Aut(P)$ can be expressed as a sequence of direct products and wr
 
 
 
+
 \section{Some non-CCT actions}
+
 \begin{frame}{Unimodality of ranks of certain edge posets}
 \begin{lem}
 Let $C_n$ be the cyclic group which acts naturally on $B_n$, then size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/C_n$ is $$|\mathcal E (B_n)/C_n|_{i} = \binom{n-1}{i}.$$
@@ -660,8 +657,8 @@ The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
 
 \begin{frame}{Acknowledgements}
 \begin{enumerate}
-\item Thanks to Dr. Victor Reiner and Elise DelMas for mentoring and TAing this project.
-\item Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting this REU.
+\item Thanks to Dr. Vic Reiner and Elise DelMas for mentoring and TAing this project.
+\item The work for this project took place at the Minnesota at Twin Cities REU.  Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting the REU.
 \item This research was supported by the RTG grant NSF/DMS-1148634.
 \end{enumerate}
 \end{frame}

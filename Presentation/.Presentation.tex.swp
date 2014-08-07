@@ -217,6 +217,7 @@ satisfies the second condition in the previous lemma, then $P$ is \textit{unitar
 %%%%%%%%%%%%%%%%%%%%   Edge Poset Section   %%%%%%%%%%%%%%%%%%%
 
 
+
 \section{Edge Poset Construction}
 \subsection{}
 
@@ -236,6 +237,7 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 \end{itemize}
 \end{defn}
 \end{frame}
+
 
 
 
@@ -328,11 +330,11 @@ Let $G\subseteq \Aut(B_n)$.  Then $\mathcal{E}(B_n/G)$ is Peck.
 
 \begin{frame}{Main Result}
 \begin{defn}
-A group action of $G$ on $P$ is \textit{cover transitive} if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
+A group action of $G$ on $P$ is \textit{common cover transitive} (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
 \end{defn}
 
 \begin{thm}[Hemminger, Landesman, and Yao 2014]
-If a group action of $G$ on $B_n$ is cover transitive, then $\mathcal{E}(B_n/G)$ is Peck.
+If a group action of $G$ on $B_n$ is CCT, then $\mathcal{E}(B_n/G)$ is Peck.
 \end{thm}
 \end{frame}
 
@@ -349,7 +351,7 @@ Given a group action of $G$ on $P$, we define a group action of $G$ on $\mathcal
 \end{defn}
 \pause
 \begin{prop}
-The map $q\colon \mathcal{E}(P)/G\rightarrow \mathcal{E}(P/G)$ defined by $q(G(x,y)) = (Gx,Gy)$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is cover transitive.
+The map $q\colon \mathcal{E}(P)/G\rightarrow \mathcal{E}(P/G)$ defined by $q(G(x,y)) = (Gx,Gy)$ is a surjective morphism.  Furthermore, $q$ is also injective if and only if the action of $G$ on $P$ is CCT.
 \end{prop}
 
 \begin{lem}
@@ -363,16 +365,13 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 
 
 
-
-
 \begin{frame}
 \begin{thm}[Stanley, 1984]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
+
 It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our proof for this is complicated.  Instead we construct a unitary Peck poset $\mathcal{H}(B_n)$ such that there is a bijective morphism $\mathcal{H}(B_n)/G\rightarrow \mathcal{E}(B_n)/G$.
-
 \end{frame}
-
 
 
 
@@ -382,7 +381,6 @@ It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our p
 
 \begin{frame}{Definition of $\mathcal{H}(P)$}
 \begin{defn}
-
 For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follows.
 \begin{itemize}
 \item Elements are pairs $(x,y)\in P\times P$ such that $x\lessdot y$
@@ -392,7 +390,6 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 \item Define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$
 
 \item Define $rk_{\mathcal H}(x,y) = rk_P(x).$
-
 \end{itemize}
 \end{defn}
 \end{frame}
@@ -436,6 +433,7 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 
 
+
 \begin{frame}{$\mathcal{H}(B_3)$ is unitary Peck}
 \Wider{
 \begin{figure}
@@ -464,6 +462,12 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 \end{frame}
 
+
+
+
+
+
+
 \begin{frame}
 \begin{defn}
 As before, for $G$ acting on $P$, define $g\cdot (x,y) = (g\cdot x,g\cdot y)$.
@@ -482,6 +486,130 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%   CCT Actions Section   %%%%%%%%%%%%%%%%%%%
+
+\section{CCT actions}
+\subsection{}
+\begin{frame}{CCT actions}
+\begin{lem}
+\label{lem:cover_transitive_equivalence}
+Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
+\begin{enumerate}
+	\item The action of $G$ on $P$ is CCT.
+	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
+\end{enumerate}
+\end{lem}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Some examples of CCT actions}
+
+\end{frame}
+
+
+
+
+\begin{frame}{The direct product}
+\begin{thm}
+\label{thm:direct_product_preservation}
+For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
+\end{thm}
+\end{frame}
+
+
+
+
+
+\begin{frame}{The semi-direct product}
+\begin{prop}\label{prop:semidirect_product_cover_transitive_actions}
+Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that $H$ acts CC transitively on $P$ and $K$ acts CC transitively on $P/H$.  Then $G$ acts CC transitively on $P$.
+\end{prop}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{The wreath product}
+\begin{defn}
+For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
+\begin{align*}
+((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
+\end{align*}
+where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
+\end{defn}
+\end{frame}
+
+
+
+\begin{frame}{The wreath product}
+\begin{thm}
+\label{thm:wreath_preservation}
+If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action is also CCT.
+\end{thm}
+\end{frame}
+
+
+
+\begin{frame}{The automorphism of rooted trees}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Automorphism of rooted trees}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
+
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%   Non CCT Actions Section   %%%%%%%%%%%%%%%%%%%
+
+\section{Non CCT actions}
+\subsection{}
+\begin{frame}{Unimodality of ranks of certain edge posets}
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%   q-analog Section   %%%%%%%%%%%%%%%%%%%
+
+\section{A $q$-analog}
+\subsection{}
+\begin{frame}{The $q$ analog of the problem}
+
+\end{frame}
+
+
+
+
+
 \begin{frame}{References}
 \nocite{quotients_stanley}
 \nocite{algebraic_stanley}
@@ -490,57 +618,15 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 \end{frame}
 
 
+
+
 \begin{frame}{Acknowledgements}
 \begin{enumerate}
-\item Thanks to Dr. Victor Reiner and Elise DelMas for mentoring and TAing this project.
-\item Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting this REU.
+\item Thanks to Dr. Vic Reiner and Elise DelMas for mentoring and TAing this project.
+\item The work for this project took place at the Minnesota at Twin Cities REU.  Thanks to Dr. Gregg Musiker and the University of Minnesota School of Mathematics for coordinating and hosting the REU.
 \item This research was supported by the RTG grant NSF/DMS-1148634.
 \end{enumerate}
 \end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
