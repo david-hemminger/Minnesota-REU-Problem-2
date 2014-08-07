@@ -1004,7 +1004,7 @@ In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defin
 
 \begin{lem}
 \label{lem:order_2_CCT}
-Let $n,k$ be arbitrary. Let $G = \BBZ_2^k$ and pick any order preserving, rank preserving action $\phi:G\times B_n \rightarrow B_n.$ Then $\phi$ is CCT.
+Let $n,k$ be arbitrary. Let $G = \BBZ_2^k$ and pick any order preserving, rank preserving action $\phi:G\times [n] \rightarrow [n].$ Then the induced action $\phi:G \times B_n \rightarrow B_n$ is CCT.
 \end{lem}
 \begin{proof}
 First, observe that all elements $g \in G$ have order 2. Suppose $x \lessdot z, y \lessdot z, x = gy.$ We will show $g \in Stab(z).$ By definition, this would imply that $\phi$ is common cover transitive. 
@@ -1688,7 +1688,7 @@ Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to 
 
 \begin{lem}{\label{dihedral002}}
  We have an explicit formula for $q_i = [\mathcal E^1 (B_n)/D_{2n}]_i$\todo{Elise: earlier you were using $|*|$ for rank size}
-$$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
+$$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
 \end{lem}
 
 \begin{proof}
