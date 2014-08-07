@@ -217,7 +217,6 @@ satisfies the second condition in the previous lemma, then $P$ is \textit{unitar
 %%%%%%%%%%%%%%%%%%%%   Edge Poset Section   %%%%%%%%%%%%%%%%%%%
 
 
-
 \section{Edge Poset Construction}
 \subsection{}
 
@@ -237,7 +236,6 @@ For $P$ a finite graded poset, it's \textit{edge poset} $\mathcal{E}(P)$ is the 
 \end{itemize}
 \end{defn}
 \end{frame}
-
 
 
 
@@ -365,13 +363,16 @@ If $f:P\rightarrow Q$ is a bijective morphism and $P$ is Peck then $Q$ is Peck.
 
 
 
+
+
 \begin{frame}
 \begin{thm}[Stanley, 1984]
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
-
 It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our proof for this is complicated.  Instead we construct a unitary Peck poset $\mathcal{H}(B_n)$ such that there is a bijective morphism $\mathcal{H}(B_n)/G\rightarrow \mathcal{E}(B_n)/G$.
+
 \end{frame}
+
 
 
 
@@ -381,6 +382,7 @@ It would then suffice to show that $\mathcal{E}(B_n)$ is unitary Peck, but our p
 
 \begin{frame}{Definition of $\mathcal{H}(P)$}
 \begin{defn}
+
 For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follows.
 \begin{itemize}
 \item Elements are pairs $(x,y)\in P\times P$ such that $x\lessdot y$
@@ -390,6 +392,7 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 \item Define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$
 
 \item Define $rk_{\mathcal H}(x,y) = rk_P(x).$
+
 \end{itemize}
 \end{defn}
 \end{frame}
@@ -433,7 +436,6 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 
 
-
 \begin{frame}{$\mathcal{H}(B_3)$ is unitary Peck}
 \Wider{
 \begin{figure}
@@ -462,12 +464,6 @@ For $P$ a finite graded poset, define the graded poset $\mathcal H(P)$ as follow
 
 \end{frame}
 
-
-
-
-
-
-
 \begin{frame}
 \begin{defn}
 As before, for $G$ acting on $P$, define $g\cdot (x,y) = (g\cdot x,g\cdot y)$.
@@ -488,19 +484,18 @@ $\mathcal{H}(B_n)$ unitary Peck $\implies \mathcal{H}(B_n)/G$ Peck $\implies \ma
 
 
 
-%%%%%%%%%%%%%%%%%%%%   CCT Actions Section   %%%%%%%%%%%%%%%%%%%
 
-\section{CCT actions}
-\subsection{}
+
+
+\section{Common Cover Transitive Actions}
 \begin{frame}{CCT actions}
 \begin{lem}
 \label{lem:cover_transitive_equivalence}
 Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \begin{enumerate}
 	\item The action of $G$ on $P$ is CCT.
-	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
-	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
-	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+	\item Whenever $w \lessdot x,w \lessdot y,$ and $x \in Gy,$ there exists some $g \in Stab(w)$ with $gx = y.$
+	\item The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, z)) = (Gx,Gz)$ is a bijective morphism (but not necessarily an isomorphism).
 	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
 \end{enumerate}
 \end{lem}
@@ -511,17 +506,44 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 
 
 \begin{frame}{Some examples of CCT actions}
-
+\begin{block}{The building blocks}
+\begin{enumerate}
+\item The trivial group;
+\pause
+\item The group $S_n$ acting on $B_n$;
+\pause
+\item The group $D_{2n}$ acting on $B_{n}$ when $n = p$ or $n = 2p$, and $p$ is a prime;
+\pause
+\item The elementary $2$-group $(\mathbb Z /2 \mathbb Z)^k$ with any action on $P$.
+\end{enumerate}
+\end{block}
 \end{frame}
 
 
 
 
+
+\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
+Add pictures.
+\end{frame}
+
+
+
+
+
+\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
+Add pictures.
+\end{frame}
+
+
+
+
+
 \begin{frame}{The direct product}
-\begin{thm}
+\begin{lem}
 \label{thm:direct_product_preservation}
 For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
-\end{thm}
+\end{lem}
 \end{frame}
 
 
@@ -538,30 +560,29 @@ Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such th
 
 
 
-
 \begin{frame}{The wreath product}
-\begin{defn}
-For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
-\begin{align*}
-((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
-\end{align*}
-where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
-\end{defn}
-\end{frame}
-
-
-
-\begin{frame}{The wreath product}
-\begin{thm}
+\begin{cor}
 \label{thm:wreath_preservation}
 If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action is also CCT.
-\end{thm}
+\end{cor}
+\pause
+\begin{cor}
+The action $S_m \wr S_l \times B_{n} \rightarrow B_{n}$ is CCT, where $n =ml$.
+\end{cor}
+\pause
+\begin{rem}
+The this recover one special of results obtained by Pak \& Panova: 
+
+The poset $\mathcal E (B_n/S_m \wr S_l)$ is rank symmetric and rank unimodal. (Furthermore, it is Peck!)
+\end{rem}
 \end{frame}
+
+
 
 
 
 \begin{frame}{The automorphism of rooted trees}
-
+Add pictures
 \end{frame}
 
 
@@ -569,7 +590,19 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 
 
 \begin{frame}{Automorphism of rooted trees}
+Add pictures
+\end{frame}
 
+
+
+
+
+\begin{frame}{Automorphism of rooted trees}
+\begin{prop}
+Let $P$ be a rooted tree with root vertex labeled $r$. Then, if let $\{A_1,\ldots,A_m\}$ denote the set of isomorphism classes of $\{D(x)|x\lessdot r\}.$ For $T \in A_j,$ denote $G_j = Aut(T).$ Then, 
+$$Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr S_{i_m}),$$
+In particular, $Aut(P)$ can be expressed as a sequence of direct products and wreath products of symmetric groups.
+\end{prop}
 \end{frame}
 
 
@@ -577,34 +610,38 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 
 
 
-\begin{frame}{The Dihedral group $D_{2p}$ and $D_{4p}$}
+\section{Some non-CCT actions}
 
-\end{frame}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%   Non CCT Actions Section   %%%%%%%%%%%%%%%%%%%
-
-\section{Non CCT actions}
-\subsection{}
 \begin{frame}{Unimodality of ranks of certain edge posets}
-
-
+\begin{lem}
+Let $C_n$ be the cyclic group which acts naturally on $B_n$, then size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/C_n$ is $$|\mathcal E (B_n)/C_n|_{i} = \binom{n-1}{i}.$$
+\end{lem}
+\pause
+\begin{prop}
+The poset $\mathcal E (B_n/C_n)$ is rank symmetric and rank unimodal.
+\end{prop}
+\pause
+\begin{lem}
+Let $C_p$ be the cyclic group with prime order $p$, then  $$|\mathcal E (B_n)/C_n|_{i} - |\mathcal E(B_n/C_n)|_i = \frac{p-1}{2}.$$
+\end{lem}
 \end{frame}
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%   q-analog Section   %%%%%%%%%%%%%%%%%%%
 
-\section{A $q$-analog}
-\subsection{}
-\begin{frame}{The $q$ analog of the problem}
-
+\section{Some non-CCT actions}
+\begin{frame}{Unimodality of ranks of certain edge posets}
+\begin{lem}
+Let $D_{2n}$ be the dihedral group of size $2n$ which acts naturally on $B_n$, then size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/D_{2n}$ is
+$$|\mathcal E (B_n)/D_{2n}|_{i}  = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
+\end{lem}
+\pause
+\begin{prop}
+The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
+\end{prop}
 \end{frame}
+
 
 
 
@@ -618,8 +655,6 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 \end{frame}
 
 
-
-
 \begin{frame}{Acknowledgements}
 \begin{enumerate}
 \item Thanks to Dr. Vic Reiner and Elise DelMas for mentoring and TAing this project.
@@ -630,8 +665,56 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 
 
 
-\end{document}
 
+
+\begin{frame}{The $q$ analog of the problem}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
 
 
 
