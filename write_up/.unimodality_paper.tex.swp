@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%
 %   AMS packages    %
 %%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[10 pt]{amsart}
 
 \usepackage{amsmath}
@@ -49,41 +50,31 @@
 
 
 \theoremstyle{plain}
-  \newtheorem{theorem}{Theorem}[section]
-  \newtheorem{proposition}[theorem]{Proposition}
-  \newtheorem{lemma}[theorem]{Lemma}
-  \newtheorem{corollary}[theorem]{Corollary}
-  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{thm}{Theorem}[section]
+  
+  \newtheorem{thmx}{Theorem}[section]
+  \renewcommand{\thethmx}{\Alph{thmx}}
+  \newtheorem{theorem}[thmx]{Theorem}
+
+  \newtheorem{prop}[thm]{Proposition}
+  \newtheorem{lem}[thm]{Lemma}
+  \newtheorem{cor}[thm]{Corollary}
+  \newtheorem{conjecture}[thm]{Conjecture}
 \theoremstyle{definition}
-  \newtheorem{definition}[theorem]{Definition}
-  \newtheorem{example}[theorem]{Example}
-  \newtheorem{examples}[theorem]{Examples}
-  \newtheorem{question}[theorem]{Question}
+  \newtheorem{defn}[thm]{Definition}
+  \newtheorem{eg}[thm]{Example}
+  \newtheorem{ex}[thm]{Exercise}
+  \newtheorem{question}[thm]{Question}
+  \newtheorem{counterexample}[thm]{Counterexample}
+  \newtheorem{note}[thm]{Notation}
+  \newtheorem{convention}[thm]{Convention}
 \theoremstyle{remark}
-  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{rem}[thm]{Remark}
 
 \numberwithin{equation}{section}
 
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{ex}[thm]{Exercise}
+
 \newtheorem*{conjecture*}{Conjecture}
-
-\theoremstyle{remark}
-\newtheorem{rem}[thm]{Remark}
-\newtheorem{eg}[thm]{Example}
-
-\newtheorem{counterexample}[thm]{Counterexample}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{claim}[thm]{Claim}
-\newtheorem{note}[thm]{Notation}
-\newtheorem{warning}[thm]{Warning}
-\newtheorem{variant}[thm]{Variant}
-\newtheorem{construction}[thm]{Construction}
-\newtheorem{terminology}[thm]{Terminology}
-\newtheorem{convention}[thm]{Convention}
 
 \newcommand\nc{\newcommand}
 \nc\on{\operatorname}
@@ -326,9 +317,9 @@ We prove this conjecture holds in the case $r=1$ whenever the group action of $G
 A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in Stab(z)$ such that $g\cdot x = y.$
 \end{defn}
 
-\begin{thm}\label{thm:cover_transitive_implies_Peck}
+\begin{theorem}\label{thm:cover_transitive_implies_Peck}
 If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
-\end{thm}
+\end{theorem}
 
 
 A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
@@ -338,9 +329,9 @@ A large number of group actions on $B_n$ have the CCT property.  In order to con
 Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ and $B_{2p}$, respectively are CCT.
 \end{prop}
 
-\begin{prop}\label{prop:semidirect_product_cover_transitive_actions}
+\begin{theorem}\label{prop:semidirect_product_cover_transitive_actions}
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
-\end{prop}
+\end{theorem}
 
 
 \todo[inline]{Please note:  This paragraph does NOT currently reflect reality.  I thought for a while about how we should structure the paper, and this is roughly how I think it should look.}
@@ -517,11 +508,14 @@ While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {
 In this section we prove Theorem \ref{thm:cover_transitive_implies_Peck}, which we recall here:
 
 \todo{if there's a better way of fixing the numbering for this theorem I'd love to know}
-\newtheorem*{cover_transitive_implies_Peck}{Theorem \ref{thm:cover_transitive_implies_Peck}}
-\begin{cover_transitive_implies_Peck}
-If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
-\end{cover_transitive_implies_Peck}
+%	\addtocounter{thmx}{-1}
 
+\begin{theorem}
+%\newtheorem*{cover_transitive_implies_Peck}{Theorem \ref{thm:cover_transitive_implies_Peck}}
+%\begin{cover_transitive_implies_Peck}
+If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
+%\end{cover_transitive_implies_Peck}
+\end{theorem}
 
 The proof is largely motivated by the following Lemma.
 
@@ -781,11 +775,15 @@ By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection
 \ssec{Preservation Under Semidirect Products}
 \label{ssec:semidirect_product_preservation}
 Recall Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We shall use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
+wreath products.
 
-\newtheorem*{prop:semidirect_product_cover_transitive_actions}{Proposition \ref{prop:semidirect_product_cover_transitive_actions}}
-\begin{prop:semidirect_product_cover_transitive_actions}
+% before stating the Theorem once more, 
+% decrease the corresponding counter to get the same label
+\addtocounter{thmx}{1}
+
+\begin{theorem}\label{prop:semidirect_product_cover_transitive_actions}
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
-\end{prop:semidirect_product_cover_transitive_actions}
+\end{theorem}
 
 \begin{proof}
 \todo{David, can you fill this in please?}
