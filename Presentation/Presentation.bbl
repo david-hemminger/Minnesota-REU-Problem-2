@@ -1,5 +1,10 @@
 \begin{thebibliography}{Sta13}
 
+\bibitem[IP13]{pak}
+Greta~Panova Igor~Pak.
+\newblock Unimodality via kronecker products.
+\newblock {\em Journal of Algebraic Combinatorics}, page To appear, 2013.
+
 \bibitem[Sta84]{quotients_stanley}
 Richard~P. Stanley.
 \newblock Quotients of peck posets.

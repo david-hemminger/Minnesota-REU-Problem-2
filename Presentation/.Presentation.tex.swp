@@ -129,6 +129,8 @@
 
 
 \begin{frame}{Basic Definitions}
+%%%%%%%ADD BETTER CITATION OF STANLEY'S THEOREM
+
 \begin{defn}
 Let $P$ be a finite graded poset of rank $n$, that is:
 \begin{itemize}
@@ -182,7 +184,7 @@ $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
 Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x |x\in P\}$ and $\{x |x\in P_i\}$
 \end{defn}
 
-\begin{lem}[Stanley, 1980]
+\begin{lem}[Stanley, 19802]
 $P$ is Peck if and only if there exists an linear transformation $U\colon V(P)\rightarrow V(P)$ such that
 \begin{itemize}
 \item For every basis element $x\in P$, 
@@ -671,6 +673,7 @@ The poset $\mathcal E (B_n/D_{2n})$ is rank symmetric and rank unimodal.
 \begin{frame}{References}
 \nocite{quotients_stanley}
 \nocite{algebraic_stanley}
+\nocite{pak}
 \bibliography{References}
 \bibliographystyle{alpha}
 \end{frame}
