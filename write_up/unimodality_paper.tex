@@ -152,7 +152,7 @@
 \address{Aaron Landesman, Harvard University}
 \email{aaronlandesman@gmail.com}
 
-\address{Zijian Yao, Department of Mathematics, Brown University}
+\address{Zijian Yao, Brown University}
 \email{zijian$\_$yao@brown.edu}
 
 \usepackage{amsmath}
@@ -165,6 +165,13 @@
 
 \todo{Relegate functoriality to a remark}
 \todo{David, I did some fancy footwork, which I don't really understand, in order to turn the theorems we repeat into theorems A and B, although I haven't changed proposition to theorem for Theorem B in case you don't like it. This allows us to repeat theorems without a problem though.}
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
+
 \section{Introduction}\label{sec:introduction}
 
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal E^r$ on the category finite graded posets with rank-preserving morphisms as follows
@@ -340,6 +347,7 @@ The paper is organized as follows.  In Section \ref{sec:background} we cover the
 
 
 
+%%%%%%%%%%%%%%%%%  Background   %%%%%%%%%%%%%%%%%%
 \section{Background}\label{sec:background}
 In this section we review morphisms of graded posets, Peck posets, and a useful theorem about quotients of Posets. 
 
@@ -394,6 +402,10 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 \end{thm}
 
 
+
+
+
+%%%%%%%%%%%%%%%%% The Edge Functor  %%%%%%%%%%%%%%%%%%
 
 \section{The Functor of Edges}
 \label{sec:functor_of_edges}
@@ -536,6 +548,11 @@ For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Le
 \end{defn}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%% The H poset   %%%%%%%%%%%%%%%%%%
 \section{The Poset $\mathcal{H}^r(P)$}
 %In this discussion we discuss a modified version of $\mathcal E^r(P)$, which we will denote $\mathcal{H}^r(P)$. The main point of introducing this object is to give a simple, noncomputational proof that $\mathcal E^r(B_n)/G$ is Peck. 
 
@@ -746,6 +763,12 @@ The poset $\mathcal H^{r_1,\ldots, r_k}(B_n)$ is isomorphic to the multinomial c
 Once again, the proof of the above three statements is analogous to those of ~\ref{prop:computing_HBn}, Corollary ~\ref{cor:HBn_unitary_peck}, and Corollary ~\ref{cor:quotients_of_HBn_peck}. The reason there are multinomial coefficients here instead of binomial coefficients, is that an element $(x_1, x_2, \cdots, x_{k+1})$ lies in the copy of $B_{n -\sum_{i=1}^k r_i}$ determined by the ordered tuple of subsets $(x_2 \setminus x_1,x_3 \setminus x_2, \ldots, x_{k+1} \setminus x_k).$ The first consists of $r_1$ elements, the next of $r_2$ elements, up through the last which consists of $r_k$ elements. Since the total number of ways to choose $r_1,\ldots, r_k$ in $k$ distinct groups is $\binom n {r_1,r_2,\ldots, r_k},$ there are exactly this many disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$
 \end{proof}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
 In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{dihedral001} that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
@@ -1034,6 +1057,12 @@ First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2
 \end{proof}
 \fi
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Wreath Product  S_m with S_l %%%%%%%%%%%%%%%%%%
 \section{Wreath Product of two Symmetric Groups}
 
 In this section,we prove a result similar to that of \cite[Theorem 1.1]{pak}. We shall construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. It shall give an alternate proof of Theorem 1.1 in the case that $r = 1.$
@@ -1256,6 +1285,12 @@ The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the ran
 First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E^1(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E^1(B_{l\cdot m})/G$, hence symmetric and unimodal.
 \end{proof}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Polya Theory  %%%%%%%%%%%%%%%%%%
 \section{An Application to Polya Theory}
 \label{sec:polya}
 In this section, we use the generalized notion of $\mathcal H^{\vec r}(B_n)$ to obtain the unimodality of the coefficients a certain class of polynomials from Polya Theory, which will turn out to be the rank generating function of $\mathcal H^{\vec r}(B_n)/G.$ The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
@@ -1343,6 +1378,12 @@ Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1),$ defined in the statement of the The
 Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Corollary 7.16]{algebraic_stanley}.
 \end{rem}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%  More Wreath Product   %%%%%%%%%%%%%%%%%%
 \section{Further Identities for the Wreath Product}
 In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
 First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to the $t$th Bell number, using $\mathcal E^{\vec r}(B_n)/G,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
@@ -1442,6 +1483,12 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 \end{proof}
 \todo{Perhaps also put in the recursive relations which the $P[l,m]$ satisfy}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Groups of order $n.$}
 
 In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $|\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}$ Any such action can be described by identifying $[n] \cong G,$ and then having $G$ act on itself by the left multiplication. We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
@@ -1509,6 +1556,10 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%  Cyclic  %%%%%%%%%%%%%%%%%%
 \section{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
@@ -1647,6 +1698,13 @@ Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =
 
 \end{proof}
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Dihedral  %%%%%%%%%%%%%%%%%%
 \section{Quotient by the Dihedral Group}
 \label{sec:dihedral}
 
@@ -1703,6 +1761,13 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 \end{proof}
 
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
 \section{A $q$-analog}
 \label{sec:q_analog}
 
@@ -1753,6 +1818,12 @@ In general, for $G \in Gl_n(\BF_q)$ acting on $B_n(q)$, we want to ask the follo
 
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Unitary Peckness of E^1(B_n) %%%%%%%%%%%%%%%%%%
 \section{The object $\mathcal E^1(B_n).$}
 \label{sec:unitary_peck_f}
 In this section, we explicitly compute the raising operators corresponding to both $\mathcal H^1(B_n),\mathcal E^1(B_n)$ and explictly show that $\mathcal E^1(B_n)$ is unitary Peck by showing certain raising maps are invertible.
