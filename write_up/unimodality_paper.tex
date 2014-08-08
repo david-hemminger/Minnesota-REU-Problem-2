@@ -152,7 +152,7 @@
 \address{Aaron Landesman, Harvard University}
 \email{aaronlandesman@gmail.com}
 
-\address{Zijian Yao, Department of Mathematics, Brown University}
+\address{Zijian Yao, Brown University}
 \email{zijian$\_$yao@brown.edu}
 
 \usepackage{amsmath}
@@ -164,6 +164,9 @@
 \maketitle
 
 \todo{Relegate functoriality to a remark}
+
+%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
+
 \section{Introduction}\label{sec:introduction}
 
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal E^r$ on the category finite graded posets with rank-preserving morphisms as follows
@@ -339,6 +342,7 @@ The paper is organized as follows.  In Section \ref{sec:background} we cover the
 
 
 
+%%%%%%%%%%%%%%%%%  Background   %%%%%%%%%%%%%%%%%%
 \section{Background}\label{sec:background}
 In this section we review morphisms of graded posets, Peck posets, and a useful theorem about quotients of Posets. 
 
@@ -393,6 +397,10 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 \end{thm}
 
 
+
+
+
+%%%%%%%%%%%%%%%%% The Edge Functor  %%%%%%%%%%%%%%%%%%
 
 \section{The Functor of Edges}
 \label{sec:functor_of_edges}
@@ -525,14 +533,19 @@ By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjecti
 
 Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, for all $r,n,$ we define a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck. Furthermore, there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
-
 \todo{Put as a question whether $\mathcal E^r(B_n)$ is unitary Peck?}
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
+
 \end{defn}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%% The H poset   %%%%%%%%%%%%%%%%%%
 \section{The Poset $\mathcal{H}^r(P)$}
 %In this discussion we discuss a modified version of $\mathcal E^r(P)$, which we will denote $\mathcal{H}^r(P)$. The main point of introducing this object is to give a simple, noncomputational proof that $\mathcal E^r(B_n)/G$ is Peck. 
 
@@ -743,6 +756,12 @@ The poset $\mathcal H^{r_1,\ldots, r_k}(B_n)$ is isomorphic to the multinomial c
 Once again, the proof of the above three statements is analogous to those of ~\ref{prop:computing_HBn}, Corollary ~\ref{cor:HBn_unitary_peck}, and Corollary ~\ref{cor:quotients_of_HBn_peck}. The reason there are multinomial coefficients here instead of binomial coefficients, is that an element $(x_1, x_2, \cdots, x_{k+1})$ lies in the copy of $B_{n -\sum_{i=1}^k r_i}$ determined by the ordered tuple of subsets $(x_2 \setminus x_1,x_3 \setminus x_2, \ldots, x_{k+1} \setminus x_k).$ The first consists of $r_1$ elements, the next of $r_2$ elements, up through the last which consists of $r_k$ elements. Since the total number of ways to choose $r_1,\ldots, r_k$ in $k$ distinct groups is $\binom n {r_1,r_2,\ldots, r_k},$ there are exactly this many disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$
 \end{proof}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
 In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{dihedral001} that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
@@ -1035,6 +1054,12 @@ First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2
 \end{proof}
 \fi
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Wreath Product  S_m with S_l %%%%%%%%%%%%%%%%%%
 \section{Wreath Product of two Symmetric Groups}
 
 In this section,we prove a result similar to that of \cite[Theorem 1.1]{pak}. We shall construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. It shall give an alternate proof of Theorem 1.1 in the case that $r = 1.$
@@ -1257,6 +1282,13 @@ The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the ran
 First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E^1(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E^1(B_{l\cdot m})/G$, hence symmetric and unimodal.
 \end{proof}
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Polya Theory  %%%%%%%%%%%%%%%%%%
+
 \section{Relations to Polya Theory}
 \label{sec:polya}
 In this section, we use the generalized notion of $\mathcal E^{\vec r}(B_n)$ to obtain the unimodality of the coefficients a certain class of polynomials from Polya Theory, which will turn out to be the rank generating function of $\mathcal E^{\vec r}(B_n)/G.$ The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
@@ -1344,8 +1376,10 @@ Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1),$ defined in the statement of the The
 Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Corollary 7.16]{algebraic_stanley}.
 \end{rem}
 
-\ssec{Further Identities for the Wreath Product}
-In this subsection, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
+
+%%%%%%%%%%%%%%%%%  More Wreath Product   %%%%%%%%%%%%%%%%%%
+\section{Further Identities for the Wreath Product}
+In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
 First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to the $t$th Bell number, using $\mathcal E^{\vec r}(B_n)/G,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
 
 \begin{note}
@@ -1440,6 +1474,8 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 &= \frac {1}{l!(m!)^l}\sum_{\pi \in G}\sum_{t = 0}^{l\cdot m} f(|\Fix(\pi)|).
 \end{align*}
 \end{proof}
+
+%%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Groups of order $n.$}
 
 In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $|\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}.$ The most important example of such an action is the left multiplication action $\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$ Then, by identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
@@ -1507,6 +1543,10 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%  Cyclic  %%%%%%%%%%%%%%%%%%
 \section{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
@@ -1646,23 +1686,29 @@ Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =
 \end{proof}
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Dihedral  %%%%%%%%%%%%%%%%%%
 \section{Quotient by the Dihedral Group}
 \label{sec:dihedral}
 
 In this section, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal.
 
 
-\begin{note} In this section, we fix an arbitrary $n$ again, and set $$q_i = |\mathcal E^1 (B_n)/D_{2n}|_{i}, \quad p_i = |\mathcal E^1(B_n/D_{2n})|_{i}. $$ 
+\begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E^1 (B_n)/D_{2n}, \quad P = \mathcal E^1(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E^1 (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E^1(B_n/D_{2n}) \big)_i|. $$ 
 \end{note}
-\todo{Once again consider first calling these posets P,Q}
 
 
 \begin{lem}{\label{lem:dihedral_prime}}
-Let $G = D_{2n}$ or $G = D_{4n}$ where $n$ is prime , and $p_i, q_i$ as defined above. Then $p_i = q_i$. In other words, the action of $D_{2n}$ (respectively $D_{4n}$) on $B_n$ (respectively $B_{2n}$ is CCT. 
+Let $G = D_{2p}$ or $G = D_{4p}$ where $p$ is prime , and $p_i, q_i$ as defined above. Then $p_i = q_i$. In other words, the action of $D_{2p}$ (respectively $D_{4p}$) on $B_p$ (respectively $B_{2p} $) is CCT. 
 \end{lem}
 
 \begin{proof}
-The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E^1(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. \todo{here, you just repeated the definition of CCT. You should either say it is not hard to see it is CCT, but it seems like that's really not proving anything. You really need to comment on the 2 cycles and p-cycles being irrelevant.} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
+The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E^1(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
+\todo{Currently working on this section} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
 
 \begin{rem}
@@ -1671,22 +1717,20 @@ Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to 
 
 
 \begin{lem}{\label{dihedral002}}
- We have an explicit formula for $q_i = [\mathcal E^1 (B_n)/D_{2n}]_i$\todo{Elise: earlier you were using $|*|$ for rank size}
-$$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
+ We have an explicit formula for $q_i = |\big(\mathcal E^1 (B_n)/D_{2n} \big)_i|$:
+ $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
 \end{lem}
 
 \begin{proof}
-Consider an element $(x , y( \in \mathcal E^1(B_n)$ where $x \lessdot y$. Note that any element $\tau $ that fixes both $x$ and $y$ has to fix the difference $y\minus x$, which is a one-element set. Since $G = D_{2n}$, %the only elements that fixes $y \minus $ are the reflection about the symmetry line through the element $y\minus x$ and the identity. So 
-we know that $1\leq |\Stab (x , y)| \leq 2$.  %From the Orbit-Stabilizer Theorem, we know that each stabilizer corresponds to an orbit under the $G$-action. 
+Consider an element $(x , y( \in \mathcal E^1(B_n)$ where $x \lessdot y$. Note that any element $\tau $ that fixes both $x$ and $y$ has to fix the difference $y\minus x$, which is a one-element set. Since $G = D_{2n}$, 
+we know that $1\leq |\Stab (x , y)| \leq 2$.   
 Let $\mu_1$ be the number of $G$-orbits with the trivial stabilizer and $\mu_2$ be the number of $G$-orbits with the stabilizer of size $2$, which contains the identity and a reflection. By the Orbit-Stabilizer Theorem, each orbit with the trivial stabilizer is of size $|D_{2n}| /1 = 2n $, while all other orbit is of size $|D_{2n}|/2 = n$.  Therefore $$\mu_1 \cdot 2n + \mu_2 \cdot n = |\{(x, y)\}| = {n \choose {i+1}}  \cdot {{i+1} \choose 1} = n {n-1 \choose i }.$$
 
-Our goal is to calculate $q_i = \mu_1 + \mu_2$,
-%Our previous equation implies: $$ q_i = \mu_1 + \mu_2= \frac{1}{2} \Big[ (2 \mu_1 + \mu_2) + \mu_2   \Big] = \frac{1}{2} \Big[ {n -1 \choose i } + \mu_2   \Big].$$
-so it remains to calculate $\mu_2$, which counts the number of $G$-orbits such that the reflection also fixes $x$. Without loss of generality, we may assume that $y\minus x = \{1\}$. %$\mu_2$ is precisely the number of ways to insert the rest of $i$ elements into the cycle such that they are symmetric about the line through $1$ and the position $(n+1)/2$.  
+Our goal is to calculate $q_i = \mu_1 + \mu_2$, so it remains to calculate $\mu_2$, which counts the number of $G$-orbits such that the reflection also fixes $x$. Without loss of generality, we may assume that $y\minus x = \{1\}$. 
 We break into cases:
 \begin{enumerate}
 \item If $n$ is odd and $i+1$ is even, then it is clear that no reflections fix $x$ for any $x$, so $\mu_2=0$. 
-\item For all other cases, there are precisely $\lceil n/2 -1\rceil$ places to insert $\lceil (i+1)/2 - 1 \rceil$ elements of $[n]$ to form $x$. %Note that $1$ of the elements might have to go to the position $(n+1)/2$ when $n$ is even, the ways to insert $x$ is determined by the positions of the rest $\lceil (i+1)/2 - 1 \rceil$ elements (because of the required symmetry). 
+\item For all other cases, there are precisely $\lceil n/2 -1\rceil$ places to insert $\lceil (i+1)/2 - 1 \rceil$ elements of $[n]$ to form $x$. 
 \end{enumerate}
 This gives the desired formula $\dstyle \mu_2 =  \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}   $. Therefore, 
 $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}    \Big)$$
@@ -1704,18 +1748,24 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 \end{proof}
 
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
 \section{A $q$-analog}
 \label{sec:q_analog}
 
 In this section we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
 
-Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$, \todo{Why do you introduce $V_n(q)$ in place of $\BF_q^n?$ It seems like they're equally long. Would you be ok with just using $\BF_q^n$ everywhere? Is the reason you introduce this because you don't like that $\BF_q^n$ has a basis?} graded naturally by dimensions. 
+Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
 
-Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces an order preserving and rank preserving action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. \todo{Would you be able to more clearly explain the action of $\BF_{q^n}$? I would copy what Vic said in the email he sent us almost verbatim.}
+Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces an order preserving and rank preserving action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
 
-The following Lemma is a standard result:
+The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
 
-\todo{Cite a reference}
 \begin{lem}
 \label{q:number_subspaces}
 The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace in $V_n(q)$, is ${n \choose i}_q$
@@ -1730,23 +1780,17 @@ Define the graded poset $T = \mathcal E^1 \big(B_n(q)\big)/C_n(q)$ and let $t_i 
 For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E^1 \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
 \end{lem}
 \begin{proof}
-
-We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$, it is clear that $\tau^{q^i-1} a = a.$ This equation implies that $\tau^{q^i-1} - 1 = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}-1} - 1 \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}-1} - 1 \in\BF_q[X].$  
-Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$. 
-Letting $ord(\tau)$ be the order of $\tau,$ we obtain that $ord(\tau)|q^{i+1}-1,ord(\tau)|q^i -1.$ 
-Therefore, $ord(\tau)|(q^{i+1}-1)-(q^i-1) = q^i(q-1)$. 
-However, we know $q \not \mid ord(\tau)$ because $\tau \in C_n(q)$ and so $ord(\tau)|q^n-1.$ This implies $ord(\tau)|q-1.$ This implies $\tau \in \BF_q^\times.$
-
+We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
 \end{proof}
 
 \begin{lem} 
 \label{lem:cyclic_q_analog_ranks}
-Let $q$ be a prime,  then $$ |\mathcal E^1 \big(B_n(q)\big)/C_n(q)|_{i} = {n-1 \choose i}_q.$$
+Let $q$ be a prime,  then $$ |\big( \mathcal E^1 \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
 \end{lem}
 
 \begin{proof}
 
-Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in F^1 (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in F^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E^1 ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
+Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E^1 (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E^1 ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
 
 Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
 \end{proof}
@@ -1760,6 +1804,13 @@ In general, for $G \in Gl_n(\BF_q)$ acting on $B_n(q)$, we want to ask the follo
 
 
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%% Unitary Peckness of E^1(B_n) %%%%%%%%%%%%%%%%%%
 \section{The object $\mathcal E^1(B_n).$}
 \label{sec:unitary_peck_f}
 In this section, we explicitly compute the raising operators corresponding to both $\mathcal H^1(B_n),\mathcal E^1(B_n)$ and explictly show that $\mathcal E^1(B_n)$ is unitary Peck by showing certain raising maps are invertible.
