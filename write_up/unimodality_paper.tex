@@ -164,7 +164,8 @@
 \maketitle
 
 \todo{Relegate functoriality to a remark}
-
+\todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
+\todo{Include a section for generalizations of E and include redfield polya generalization}
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}\label{sec:introduction}
@@ -395,9 +396,6 @@ Let $G\subseteq \operatorname{Aut}(P)$, and define the \textit{quotient poset} $
 \label{thm:quotients_of_unitary_peck_posets}
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
-
-
-
 
 
 %%%%%%%%%%%%%%%%% The Edge Functor  %%%%%%%%%%%%%%%%%%
@@ -772,7 +770,7 @@ Before continuing with the description of cover transitive, it is worth noting t
 
 \begin{eg}
 \label{eg:trivial_edgequot}
-Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B_n,\psi:G\times B_n\rightarrow B_n$ where $G$ is arbitrary, $\phi$ is the permutation action and $\psi$ is the trivial action. In the former case, $\mathcal E^1(B_n/S_l)$ is simply a chain with $n-1$ points, and so is $\mathcal E^1(B_n)/S_l,$ since all $(x, y)$ are identified under the $S_l$ action. In the latter case, since $G$ acts trivially by $\phi,$ both  $\mathcal E^1(B_n/G) \cong \mathcal E^1(B_n)$ and $\mathcal E^1(B_n)/G \cong \mathcal E^1(B_n).$ So again, $\psi$ is CCT.
+Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B_n,\psi:G\times B_n\rightarrow B_n$ where $G$ is arbitrary, $\phi$ is the action induced by $S_n$ permuting the elements of $[n]$, and $\psi$ is the trivial action. In the former case, $\mathcal E^1(B_n/S_l)$ is simply a chain with $n-1$ points, and so is $\mathcal E^1(B_n)/S_l,$ since all $(x, y)$ are identified under the $S_l$ action. In the latter case, since $G$ acts trivially by $\phi,$ both  $\mathcal E^1(B_n/G) \cong \mathcal E^1(B_n)$ and $\mathcal E^1(B_n)/G \cong \mathcal E^1(B_n).$ So again, $\psi$ is CCT.
 
 Developing less trivial examples will take a bit more work, but it will be shown in Lemma ~\ref{dihedral001} that Dihedral groups of order $2p$ and $4p$, for $p$ prime, are CCT.
 \end{eg}
@@ -815,7 +813,7 @@ For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \w
 \begin{align*}
 ((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
 \end{align*}
-where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
+where $h \in H$ acts on $[l]$ by the restricting of the action of $S_l$ on $[l]$ by all permutations to $H.$
 \end{defn}
 
 In other words, $G\wr H$ can be viewed as a certain semidirect product of $G^l \rtimes H.$
@@ -845,80 +843,6 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 \begin{proof}
 First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since the action of $G$ on $P$ is CCT, using Theorem ~\ref{thm:direct_product_preservation}, we obtain the action of $G^l$ on $P^l$ is CCT, by the action $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action of $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} and so $\phi$ is CCT.
 \end{proof}
-
-
-\todo{remove commented out old proofs of wreath products and direct products? The old proof of direct product might actually be simpler than this one though, what do you think?}
-
-\iffalse
-\ssec{Preservation Under Direct Products}
-\label{ssec:direct_product_preservation}
-
-
-
-
-\begin{thm}
-\label{thm:direct_product_preservation}
-For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
-\end{thm}
-\begin{proof}
-For every element $x\in P\times Q$ write $x = (x_G,x_H)$, where $x_G \in P, x_H \in Q.$. Suppose $a < c$, $b < c$ for some $a,b,c\in P\times Q$ such that there exists some $(g,h)\in G\times H$ with $(g,h)\cdot a = b$. Then $a_G < c_G$, $b_G < c_G$, and $g\cdot a_G = b_G$, so there exists some $g^\prime \in G$ such that $g^\prime\cdot c_G = c_G$ and $g^\prime\cdot a_G = b_G$ since $\phi$ is CCT.  Similarly there exists some $h^\prime \in H$ such that $h^\prime \cdot c_H = c_H$ and $h^\prime a_H = b_H$.  Then $(g^\prime,h^\prime)\cdot c = c$ and $(g^\prime,h^\prime)\cdot a = b$, so $\phi\times \psi$ is CCT as desired.
-\end{proof}
-\ssec{Preservation Under Wreath Products.}
-\label{ssec:wreath_preservation}
-
-Next, we turn our attention to proving that if $\psi:G \times P \rightarrow P$ is CCT, we can naturally construct an action $\phi:(G\wr S_l)\times P^l \rightarrow P^l$ is also CCT. This is shown in Theorem ~\ref{thm:wreath_preservation}
-
-\begin{defn}
-For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
-\begin{align*}
-((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
-\end{align*}
-where $h \in H$ acts on $[l]$ by the restriction of the permutation action of $S_l$ to $H.$
-\end{defn}
-
-In other words, $G\wr H$ can be viewed as a certain semidirect product of $G^l \rtimes H.$
-
-\begin{note}
-\label{note:wreath_action}
-For any group $G$ with a given action $\psi:G\times P \rightarrow P,$ we obtain an induced action of $G \wr H,$ $\phi:G \wr H \times P^l \rightarrow P^l$ defined by 
-$$((g_1,\ldots, g_l),h)(a_1,\ldots, a_l) = (g_{h^{-1}(1)}\cdot a_{h^{-1}(1)},\ldots,g_{h^{-1}(l)} \cdot a_{h^{-1}(l)}).$$
-\end{note}
-
-\begin{rem}
-Heuristically, one may think of the above action as obtained by first having $G$ act separately on the $l$ distinct copies of $P,$ and then letting $H$ act by permuting the copies.
-\end{rem}
-
-\begin{thm}
-\label{thm:wreath_preservation}
-If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action defined in Notation ~\ref{note:wreath_action} is also CCT.
-\end{thm}
-\begin{proof}
-
-Notate an element $y = (y_1,\ldots, y_l)$ where $y_i$ lies in copy $i$ of $P,$ inside $P^l.$ Suppose we have $(a, c) \in \mathcal E^1(P^l)$ and $b \in Ga,b < c.$ The aim is to show there exists $(g,h) \in \Stab_{G\wr S_l}(c)$ with $(g,h)a = b.$ 
-
-Since $a \lessdot c, b \lessdot c$ there must be a unique $i \in [l]$ with $a_i \lessdot c_i,$ and for all other $k,k\neq i,a_k = b_k.$ Similarly, there is a unique $j \in [l]$ with $b_j \lessdot c_j$ and for all other $k,k\neq j,b_k = c_k.$ We may assume $i \neq j$  because if $i = j,$ then since $G$ is CCT, we can find $g' \in G$ with $g'(a_i) = b_i,g' \in \Stab(c_i).$ Then, taking $g \in G^n$ so that $g_i = g'$ and $g_k = \id$ for $k \neq i,$ then $(g,\id)a = b,(g,\id) \in \Stab(b),$ as desired.
-
-Next, because $a \in (G\wr S_l)b,$ it must be that the multisets $\{(G \wr S_l)a_1,\ldots, (G \wr S_l)a_l\}=\{(G \wr S_l)b_1,\ldots, (G \wr S_l)b_l\}$ are equal. However, we know that for all $k \neq i,j$ $a_k = b_k$. Therefore, there is an equality of multisets $\{(G \wr S_l)a_i,(G \wr S_l)a_j\} = \{(G \wr S_l)b_i,(G \wr S_l)b_j\}.$ However, since $a_i \lessdot c_i = b_i$ and $a_j = c_j \gtrdot b_j,$ and since the $G\wr S_l$ action is rank preserving, it follows that $(G \wr S_l)b_j=(G \wr S_l)a_i, (G \wr S_l)a_j = (G \wr S_l)b_i.$
-
-Define $\sigma \in S_l$ to be the permutation switching only $(i,j)$ and keeping all other elements fixed. Then, since $(G \wr S_l)a_j = (G \wr S_l)b_i,$ we may write $b_i = \sigma\delta a_j.$ 
-Note that $\sigma \delta b_i = \delta \sigma b_i,$ where we view $\delta$ as an element of two different copies of $G$ inside $G \wr S_l.$ Then,
-Since $\sigma \delta a_j = b_i,$ both $a_i \subset b_i,\sigma \delta b_j \subset b_i$ and additionally $\delta\sigma b_j = \sigma\delta b_j \in Ga_i.$ Therefore, since $G$ is CCT, there exists $\epsilon \in \Stab(c)$ with $\epsilon(\delta\sigma b_j) = a_i.$
-
-Finally, define $g \in G^n$ with $g_j = \delta,g_i = \sigma\delta^{-1}\epsilon$ and for $k \neq i,j,g_k = \id.$ Then, by construction, $(g,\sigma) \in \Stab (c)$ and $(g,\sigma)a = b.$ Therefore, $\phi$ is CCT.
-\end{proof}
-
-
-\begin{lem}
-\label{lem:order_2_CCT}
-Let $n,k$ be arbitrary. Let $G = \BBZ_2^k$ and pick any order preserving, rank preserving action $\phi:G\times B_n \rightarrow B_n.$ Then $\phi$ is CCT.
-\end{lem}
-\begin{proof}
-First, observe that all elements $g \in G$ have order 2. Suppose $x \lessdot z, y \lessdot z, x = gy.$ We will show $g \in Stab(z).$ By definition, this would imply that $\phi$ is common cover transitive. 
-
-Let $a$ be the unique element such that $a \in y, a \notin x.$ In order to show $g \in Stab(z),$ it suffices to show that $ga \in x.$ Let $b = g^{-1}a.$ We know $b \in x.$ However, since $g$ has order 2, it must be that $ga = g^2 b = b \in x.$ Hence, $g \in Stab(z),$ and $\phi$ is CCT.
-\end{proof}
-
-\fi
 
 \ssec{An application to rooted trees.}
 \label{ssec:rooted_trees}
@@ -973,13 +897,13 @@ Since each $G_j$ is a sequence of direct products and wreath products with symme
 For $P$ the automorphism group of a rooted tree, $Aut(P)$ is CCT.
 \end{cor}
 \begin{proof}
-First, the permutation action $\phi:S_n \times B_n \rightarrow B_n$, is clearly CCT, as was noted in Example ~\ref{eg:trivial_edgequot}. By Theorem ~\ref{thm:wreath_preservation}, wreath products with symmetric groups preserve the CCT property, and by Theorem ~\ref{thm:direct_product_preservation} the direct product of two CCT groups is again CCT. Therefore, by Proposition ~\ref{prop:automorphism_trees}, all groups of the form $Aut(P)$ are built up from these operations, and so $Aut(P)$ is also CCT.
+First, the action of $S_n$ on $[n]$ by all permutations induces $\phi:S_n \times B_n \rightarrow B_n$, which is clearly CCT, as was noted in Example ~\ref{eg:trivial_edgequot}. By Theorem ~\ref{thm:wreath_preservation}, wreath products with symmetric groups preserve the CCT property, and by Theorem ~\ref{thm:direct_product_preservation} the direct product of two CCT groups is again CCT. Therefore, by Proposition ~\ref{prop:automorphism_trees}, all groups of the form $Aut(P)$ are built up from these operations, and so $Aut(P)$ is also CCT.
 \end{proof}
 
 \ssec{Further Cover Transitive Actions}
 
 \sssec{Automorphisms of Polytopes}
-We describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism group of simplices, octahedrons are common cover transitive, although both of these are fairly straightforward.
+We describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism group of simplices, and octahedrons are common cover transitive, although both of these are fairly straightforward.
 
 \begin{defn}
 Let $M$ be a polytope, with a particular embedding in $R^n.$ The {\it group of linear automorphisms of M} is the subgroup of $GL_n$ whose elements are $\{g \in GL_n|g \cdot M = M\}.$
@@ -989,7 +913,7 @@ Let $M$ be a polytope, with a particular embedding in $R^n.$ The {\it group of l
 Let $G$ be the group linear automorphisms on the $n-1$ simplex, $\Delta,$ whose vertices lie at the standard basis vectors in $\BR^n.$ The action of $G$ on the $n$-simplex induces an action on $[n],$ given by identifying $[n]$ with the $n$ vertices of the $n-1$ simplex. Hence, it induces an action on $B_n.$ This induced action on $B_n$ is CCT.
 \end{prop}
 \begin{proof}
-The group of linear automorphisms in this case induces the permutation action of $S_n$ on $B_n,$ because any permutation matrix defines a linear map on $\BR^n.$ However, we know the action of $S_n$ on $B_n$ is CCT from Example ~\ref{eg:trivial_edgequot}
+The group of linear automorphisms in this case induces the usual action of $S_n$ on $B_n,$ because any permutation matrix defines a linear map on $\BR^n.$ However, we know the action of $S_n$ on $B_n$ is CCT from Example ~\ref{eg:trivial_edgequot}
 \end{proof}
 
 \begin{prop}
@@ -1195,74 +1119,8 @@ Then, summing this over all Young Diagrams $y,$ gives that
 
 \end{proof}
 
-
-
-\todo{the following commented out section was based on the old definition of $\mathcal E^r$. Should we remove it?}
-
-\iffalse
-
-\ssec{The poset $\mathcal E(B_n/G).$} Now that we understand $\mathcal E(B_n/G),$ we turn our attention to understanding $\mathcal E(B_n/G).$ Then, we look at how the two relate, and draw some interesting consequences. But first, we have to characterize representative elements of $\mathcal E(B_n/G),$ and the size of its ranks.
-
-\begin{lem}
-\label{lem:pairs_in_edge_poset}
-Let $x,y \in (B_n)_i$ with $part(y)= a_1^{b_1}\cdots a_s^{b_s}.$ Then, for two orbits $Gx,Gy,$ with $|x|+1=|y|,$ we have that $(Gx, Gy) \in \mathcal E^r(B_n/G)$ if and only if there exist distinct indices $i_1,\ldots, i_r$ such that $|x\cap y_{i_t}|+1 = |y_{i_t}|$ for $1 \leq t \leq r,$ and otherwise  $|x\cap y_{i_t}|= |y_{i_t}|.$
-\end{lem}
-\begin{proof}
-By definition, $(Gx, Gy)\in \mathcal E^r(B_n/G)_i$ if and only if the set of orbits $Gz$ with $Gx \leq Gz \leq Gy$ is isomorphic to the hypercube $B_r.$ Choosing representatives $\overline{x},\overline{y}$ which are Young Diagrams for $Gx,Gy,$ we now wish to describe the Young Diagrams $\overline{z}$ with $\overline{x} \subset \overline{z} \subset \overline{y}.$ If $(\overline{y}\setminus \overline{x}) \cap \overline{y}_i \leq 1$ for all $i,$ then such $z$ are precisely given by choosing any subset of $S \subset \{i_1,\ldots, i_r\}$, and taking $\overline{z} = S \cup x.$ Clearly such $z$ form a hypercube $B_r.$
-
-Conversely, if there is some $i$ for which $(\overline{y}\setminus \overline{x}) \cap y_i > 1,$ we will show there are strictly fewer than $2^r$ Young Diagrams $\overline{z}$ with $\overline{x}\subset \overline{z} \subset \overline{y}.$ In particular, this will imply the set of elements between then cannot be isomorphic to $B_r.$ There are clearly at most $2^r$ such intermediate diagrams, as described above, given by choosing any subset of $S \subset \{i_1,\ldots, i_r\}$, and taking $\overline{z} = S \cup x.$ Therefore, it suffices to show there are two subsets $S_1,S_2$ with $\overline{x}\cup S_1 \in G(\overline{x}\cup S_2).$ To produce these two subsets, suppose $a,b \in (\overline{y}\setminus \overline{x}) \cap \overline{y}_i$ for some $i$. There exists such an $i$ with $a \neq b$ by assumption. Then, taking $S_1 = \{a\},S_2=\{b\}$ gives us that $\overline{x}\cup S_1 \in G(\overline{x}\cup S_2)$ because we can take $g \in \Stab(y_i)$ so that $S_1 = gS_2.$
-\end{proof}
-
-\begin{thm}
-\label{thm:edge_of_quotiented_wreath}
-The size $|\mathcal E^r(B_n/G)|_i = \sum_{\lambda \in P_i(l,m)} \binom{\nu(\lambda)} r.$
-\end{thm}
-\begin{proof}
-Fix an orbit $Gy$ and its corresponding Young Diagram $\overline{y},$ with $part(y) = a_1^{b_1}\cdots a_s^{b_s}.$ Of course, here $s = \nu(part(y)).$ Then, by Lemma ~\ref{lem:pairs_in_edge_poset}, any element $(Gx, Gy) \in \mathcal E^r(B_n/G)$ must have that $|x| +r = |y|$ and $|(y \setminus x)\cap y_i| \leq 1.$ The number of such elements is precisely the number of ways of choosing $r$ distinct part sizes from $y.$ In particular there are $\binom{\nu(part(y))} r$ such elements $(\overline{x},\overline{y}).$ Therefore, summing this over all Young Diagrams $y$ yields
-\begin{align*}
-|\mathcal E^r(B_n/G)|_i = \sum_{\lambda \in P_i(l,m)} \binom{\nu(\lambda)} r.
-\end{align*}
-\end{proof}
-
-\fi
-
 \ssec{Ensuing Conclusions}
 We now reap the fruits of our labor in order to draw some nice results.
-
-\iffalse
-I think we will not need the following, thanks to some work in above sections.
-\begin{lem}
-\label{lem:wreath_1_isom}
-There is an isomorphism of vector spaces $$V(F^1(B_{l\cdot m}/G))_i \cong V(\mathcal E^1(B_{l\cdot m})/G)_i$$ for all $i.$
-\end{lem}
-\begin{proof}
-By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection $V(\mathcal E^r(B_{l\cdot m}/G)_i \rightarrow V(F^r(B_{l\cdot m})/G)_i$ for all $i.$ Hence, in order to prove these posets are isomorphic, it suffices to show they have the same dimension. However, by the proof of Theorem ~\ref{thm:quotiented_edge_wreath} shows that in the case $r = 1,\eta(\lambda,1)$ is equal to the number of Young Diagrams $x$ of size $i-1$ contained in $y.$ This is clearly equal to $\nu(\lambda)$ since such young diagrams $x$ are exactly those given by removing a corner of $y.$ Therefore, $\eta(\lambda,1) = \nu(\lambda).$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,1) = \sum_{\lambda \in P_i(l,m)} \binom{\nu(\lambda)} r.$
-
-Finally, using this observation, together with both of Theorem ~\ref{thm:quotiented_edge_wreath}, and Theorem ~\ref{thm:quotiented_edge_wreath}, 
-\begin{align*}
-|\mathcal E^r(B_{l\cdot m})/G|_i =\sum_{\lambda \in P_i(l,m)} \eta(\lambda,1) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = |F^r(B_{l\cdot m}/G)|_i.
-\end{align*}
-Hence,  $\dim V(\mathcal E^r(B_{l\cdot m}/G))_i = \dim V(F^r(B_{l\cdot m})/G)_i,$ so in particular, the surjection from Proposition ~\ref{prop:surjection_between_F_quotients} is an isomorphism.
-\end{proof}
-
-\begin{cor}
-\label{cor:peck_wreath_1}
-The poset $\mathcal E^1(B_{l\cdot m}/G)$ is Peck.
-\end{cor}
-\begin{proof}
-Since $G = S_m \wr S_l,$ and the permutation action of $S_m$ on $B_m$ is CCT, by ...
-\end{proof}
-
-This result was based on the old definition of $\mathcal E^r.$
-
-\begin{cor}
-The poset $\mathcal E^r(B_{l\cdot m}/G)$ is symmetric and unimodal for all $r.$
-\end{cor}
-\begin{proof}
-By Theorem ~\ref{thm:pak_thm}, the sequence $p_r(l,m,r), p_{r+1}(l,m,r),\ldots, p_{l\cdot m}(l,m,r)$ is unimodal and symmetric, and by Theorem ~\ref{thm:edge_of_quotiented_wreath}, $|\mathcal E^r(B_n/G)_i| = p_i(m,l,r).$
-\end{proof}
-
-\fi
 
 \begin{cor}
 \label{cor:unimodal_wreath_r_sequence}
@@ -1291,14 +1149,14 @@ First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unit
 
 \section{Relations to Polya Theory}
 \label{sec:polya}
-In this section, we use the generalized notion of $\mathcal E^{\vec r}(B_n)$ to obtain the unimodality of the coefficients a certain class of polynomials from Polya Theory, which will turn out to be the rank generating function of $\mathcal E^{\vec r}(B_n)/G.$ The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
+In this section, we obtain summation formulas for the ranks of $\mathcal E^{\vec r}(B_n)/G.$ These formulas are given by certain polynomials in polya theory. In particular, we obtain polynomials from polya theory which are the rank generating functions of $\mathcal E^{\vec r}(B_n)/G,$ which implies that these polynomials have symmetric, unimodal coefficients. The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
 
 \ssec{A Brief Review of Polya Theory}
 
 We shall follow the treatment from \cite[Chapter 7]{algebraic_stanley}. First, we build up some definitions to state Polya's Theorem.
 
 \begin{defn}
-Let $G \subset S_n$ act on $[n]$ by the restriction of the permutation action. For $\pi \in G,$ the action of $\pi$ on $[n]$ can be written in cycle notation so that there are $c_i$ cycles of length $i.$ Define the {\it cycle indicator} of $\pi$ to be the monomial $Z_\pi(z_1,\ldots, z_n) = z_1^{c_1}z_2^{c_2}\cdots z_n^{c_n}.$
+Let $G \subset S_n$ act on $[n]$ by the restriction of the action of $S_n$ on $[n]$ by all permutations. For $\pi \in G,$ the action of $\pi$ on $[n]$ can be written in cycle notation so that there are $c_i$ cycles of length $i.$ Define the {\it cycle indicator} of $\pi$ to be the monomial $Z_\pi(z_1,\ldots, z_n) = z_1^{c_1}z_2^{c_2}\cdots z_n^{c_n}.$
 \end{defn}
 
 \begin{defn}
@@ -1312,9 +1170,9 @@ A {\it coloring} of a set $S$ by the colors $R = \{r_1,\ldots, r_k\}$ is a map $
 \begin{note}
 For $A,B$ sets, let $A^B = Hom_{\text{sets}}(B,A).$ Let $G \subset S_n$ act on $B_n.$ Then, $G$ acts on $R^{B_n} = Hom_{\text{sets}}(B_n,R)$ by $g \cdot f(S) = f(g\cdot S)$ where $g \in G,S \in B_n, f \in R^{B_n}.$ Then, let $R^{B_n}/G$ denote the quotient of $R^{B_n}$ by the action of $G$ defined above.
 
-For $f \in R^{S},$ say $color(f) = (i_1,\ldots, i_k)$ if $|\{s \in S|f(s) = j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $color(f) = color(h),$ so the map $color$ descends to a map on $G$ orbits.
+Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S|f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
 
-Define $\kappa(i_1,\ldots, i_k) = |\{Gf \in R^{B_n}/G \text{ such that } color(f) = (i_1,\ldots, i_k) \}|.$
+Define $\kappa(i_1,\ldots, i_k) = |\{Gf \in R^{B_n}/G \text{ such that } c(f) = (i_1,\ldots, i_k) \}|.$
 
 Finally, let $F_G(r_1,\ldots, r_k) = \sum_{i_1,\ldots, i_k} \kappa(i_1,\ldots, i_k)r_1^{i_1} \cdots r_k^{i_k}.$
 \end{note}
@@ -1326,13 +1184,13 @@ The above notation may seem extremely cumbersome. It is simply a formal way of s
 \begin{thm}
 \label{thm:polya}
 (Polya's Theorem)
-Let $G \subset S_n$ act on $B_n.$ With $F_G,Z_G$ as defined above, the following equality holds.
-$$\mathcal E_G(r_1,\ldots, r_k) = Z_G\left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n\right).$$
+ Let $G \subset S_n$ act on $B_n.$ With $F_G,Z_G$ as defined above, the following equality holds.
+$$F_G(r_1,\ldots, r_k) = Z_G\left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n\right).$$
 \end{thm}
 
 
 \ssec{A Rank Generating Function}
-
+Next, we produce rank generatings functions for $\mathcal E^{i_2,\ldots,i_{k-1}}(B_n)/G.$ The reason for starting at $i_2$ and ending at $i_{k-1}$ is that we shall include additional numbers $i_1$ and $i_k$ to be colored by the first color and the $k$th color. Given an element $x_2,\ldots,x_k \in \mathcal E^{i_2,\ldots, i_{k-1}},$ the first color will be used to color the elements in $x_2$ and the $k$th color will be used to color the elements in $[n]\setminus x_k.$
 
 \begin{note}
 Let $[f(x_1,\ldots, x_k)]_{x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}}$ denote the coefficient of $x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}$ in $f(x_1,\ldots, x_k),$ which may itself be a polynomial.
@@ -1342,12 +1200,12 @@ Let $[f(x_1,\ldots, x_k)]_{x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}}$ denote the coeffi
 \label{lem:polya_faces_equivlence}
 The number $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ Consequently, 
 
-$$\left[Z_G \left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n \right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
+$$\left[Z_G \left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{lem}
 \begin{proof}
-Define a map $m:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1} \rightarrow \{f \in R^{B_n}|color(f) =(i_1,\ldots, i_k)\}$ as follows. For $(x_2,\ldots, x_{k}) \in \mathcal E^{r_2,\ldots, r_{k-1}}(B_n),$ let $m(x_2,\ldots, x_{k}) = f,$ where 
+Define a map $m:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1} \rightarrow \{f \in R^{B_n}|c(f) =(i_1,\ldots, i_k)\}$ as follows. For $(x_2,\ldots, x_{k}) \in \mathcal E^{r_2,\ldots, r_{k-1}}(B_n),$ let $m(x_2,\ldots, x_{k}) = f,$ where 
 $$f(t) = \begin{cases} r_1 &\text{ if } t\in x_2\\
-r_i &\text{ if } t \in x_{i+1}\setminus x_i\\
+r_j &\text{ if } t \in x_{j+1}\setminus x_j\\
 r_k &\text{ if } t \notin x_k
 \end{cases}.$$
 Observe that $m$ is infact a bijection, as we can easily define an inverse map by sending a coloring $f$ to $(x_2,\ldots, x_{k}),$ where $x_j$ is the set of all elements $t \in [n]$ for which $f(t) = r_l,l<j,$ for all $j \in [k-1].$ 
@@ -1356,14 +1214,14 @@ $$g(x_1,\ldots, x_{k-1}) = g(y_2,\ldots, y_{k-1}) \iff g\cdot m(x_1,\ldots, x_{k
 Therefore, $m$ descends to a bijection $m^G:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1}/G \rightarrow R^{B_n}/G,$ This implies $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ 
 
 Then, by Polya's Theorem ~\ref{thm:polya},  
-$$\left[Z_G\left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n\right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=\kappa(i_1,\ldots, i_k)=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
+$$\left[Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n\right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=\kappa(i_1,\ldots, i_k)=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{proof}
 
 Now we arrive at our main result of the section. The following result provides a rank generating function for $\mathcal E^{\vec r}(B_n)/G$
 
 \begin{prop}
 \label{prop:rank_gen_fn}
-Let $z_j = \sum_{l = 1}^k r_l^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}},$$ be a polynomial in $r_1.$ Then, the coefficients of $Z_G^{i_2,\ldots,i_{k-1}}(r_1)$ are the ranks of the peck poset  $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, they form a symmetric, unimodal sequence.
+Let $z_j = \sum_{j = 1}^k r_j^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}},$$ be a polynomial in $r_1.$ Then, the coefficients of $Z_G^{i_2,\ldots,i_{k-1}}(r_1)$ are the ranks of the peck poset  $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, they form a symmetric, unimodal sequence.
 \end{prop}
 \begin{proof}
 In Lemma ~\ref{lem:polya_faces_equivlence}, we saw $$[Z_G(z_1,\ldots, z_k)]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
@@ -1376,9 +1234,7 @@ Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1),$ defined in the statement of the The
 Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Corollary 7.16]{algebraic_stanley}.
 \end{rem}
 
-
-%%%%%%%%%%%%%%%%%  More Wreath Product   %%%%%%%%%%%%%%%%%%
-\section{Further Identities for the Wreath Product}
+\ssec{Further Identities for the Wreath Product}
 In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
 First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to the $t$th Bell number, using $\mathcal E^{\vec r}(B_n)/G,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
 
