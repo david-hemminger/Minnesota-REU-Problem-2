@@ -164,7 +164,6 @@
 \maketitle
 
 \todo{Relegate functoriality to a remark}
-\todo{David, I did some fancy footwork, which I don't really understand, in order to turn the theorems we repeat into theorems A and B, although I haven't changed proposition to theorem for Theorem B in case you don't like it. This allows us to repeat theorems without a problem though.}
 \section{Introduction}\label{sec:introduction}
 
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal E^r$ on the category finite graded posets with rank-preserving morphisms as follows
@@ -506,8 +505,6 @@ While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {
 
 In this section we prove Theorem \ref{thm:cover_transitive_implies_Peck}, which we recall here:
 
-\todo{if there's a better way of fixing the numbering for this theorem I'd love to know}
-
 \cctpeck*
 
 The proof is largely motivated by the following Lemma.
@@ -529,7 +526,7 @@ By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjecti
 Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, for all $r,n,$ we define a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck. Furthermore, there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
 
-\todo{are we obligated to check whether $\mathcal E^r(B_n)$ is unitary Peck? Maybe we should at least put it as a question.}
+\todo{Put as a question whether $\mathcal E^r(B_n)$ is unitary Peck?}
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
@@ -749,6 +746,10 @@ Once again, the proof of the above three statements is analogous to those of ~\r
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
 In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{dihedral001} that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+
+\begin{rem}
+Before continuing with the description of cover transitive, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E^r$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ common cover transitive agrees with our definition of common cover transitive. Furthermore, it is also simple to see that an action is $\vec r$ common cover transitive if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ common cover transitive.
+\end{rem}
 
 \begin{eg}
 \label{eg:trivial_edgequot}
@@ -984,9 +985,9 @@ It is well know that the group of linear automorphisms of the n-octahedron is th
 Later in Lemma ~\ref{lem:dihedral_prime}, we shall also see that the action of the dihedral group on a regular $n$-gon, for $n = p,2p,$ is cover transitive. This is the group of linear automorphisms of the regular $n$-gon. Hence, gives yet another example of automorphisms of the linear automorphism group of  polytopes being CCT.
 \end{rem}
 
-\sssec{Regular Cover Transitive Actions of $\BZ_2^k$}
+\sssec{Cover Transitive Actions of $\BZ_2^k$}
 
-In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defines an action on $B_n$ is CCT. In particular, this implies that the regular action of $\BBZ_2^k,$ that is the action of $\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h$ is a CCT action. However, it turns out that this is the only class of groups for which the regular action is CCT.
+In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defines an action on $B_n$ is CCT. In particular, this implies that the left multiplication action of $\BBZ_2^k,$ that is the action of $\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h$ is a CCT action. However, it turns out that this is the only class of groups for which the left multiplication action is CCT.
 
 \begin{lem}
 \label{lem:order_2_CCT}
@@ -1000,7 +1001,7 @@ Let $a$ be the unique element such that $a \in y, a \notin x.$ In order to show 
 
 \begin{cor}
 \label{cor:regular_order_2_CCT}
-Let $\BBZ_2^k$ act on itself by the regular action $\psi:\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h.$ By identifying $\BBZ_2^k \cong [2^k]$ as sets, we obtain an induced action $\phi:\BBZ_2^k \times B_{2^k} \rightarrow B_{2^k}$ which is cover transitive.
+Let $\BBZ_2^k$ act on itself by left multiplication $\psi:\BBZ_2^k \times \BBZ_2^k \rightarrow \BBZ_2^k,(g,h) \mapsto g\cdot h.$ By identifying $\BBZ_2^k \cong [2^k]$ as sets, we obtain an induced action $\phi:\BBZ_2^k \times B_{2^k} \rightarrow B_{2^k}$ which is cover transitive.
 \end{cor}
 \begin{proof}
 By Lemma ~\ref{lem:order_2_CCT}, any embedding of $\BBZ_2^k \rightarrow S_n$ defines a CCT action on $B_n.$ So, this particular embedding defines a CCT action.
@@ -1008,7 +1009,7 @@ By Lemma ~\ref{lem:order_2_CCT}, any embedding of $\BBZ_2^k \rightarrow S_n$ def
 
 \begin{prop}
 \label{prop:regular_action_CCT}
-Let $G$ be a finite group, acting on itself by the left regular action, $\psi:G\times G \rightarrow G,(g,h)\mapsto g\cdot h$, with $|G| = n.$ By identifying $G \cong [n]$ as sets, $\psi$ this induces an action $\phi:G\times B_n \rightarrow B_n.$ Then, $\phi$ is cover transitive if and only if $G \cong \BBZ_2^k$ for some $k.$
+Let $G$ be a finite group, acting on itself by left multiplication, $\psi:G\times G \rightarrow G,(g,h)\mapsto g\cdot h$, with $|G| = n.$ By identifying $G \cong [n]$ as sets, $\psi$ this induces an action $\phi:G\times B_n \rightarrow B_n.$ Then, $\phi$ is cover transitive if and only if $G \cong \BBZ_2^k$ for some $k.$
 \end{prop}
 \begin{proof}
 First, if $G\cong \BBZ_2^k,$ then by Corollary ~\ref{cor:regular_order_2_CCT}, we know the action $\phi:G\times B_{2^k} \rightarrow B_{2^k}$ is indeed CCT.
@@ -1017,11 +1018,11 @@ Note that $G \cong \BBZ_2^k \iff \forall g \in G,g^2 = e.$ The forward implicati
 
 To see the converse, first note that if $\forall g \in G, g^2 = e,$ then $G$ is abelian because $aba^{-1}b^{-1} = abab = (ab)^2 = e.$ Then, if $G$ is an abelian group, all of whose elements have order two, the structure theorem of finite abelian groups tells us $G \cong \BBZ_2^k.$
 
-So, Suppose $G \not \cong \BBZ_2^k.$ Then, there exists $g \in G,g^2 \neq e.$ Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}.$ So, to show the induced action $\phi: G \times B_n \rightarrow B_n$ is not cover transitive, it suffices to show there is no $h \in G,h \in Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}.$  If $h \in Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g.$ Since the regular action is simply transitive, either $h = e$ or $h = g.$ If $h = e,$ then we would have $h\{e\} = g,$ which would imply $g = e,$ contradicting the assumption that $g^2 \neq e.$ On the other hand, if $h = g,$ since $h \in Stab(\{e \cup g\})$ it must be that $h\cdot g = e.$ Then, $g^2 = g\cdot g = h\cdot g = e,$ contradicting the assumption $g^2 \neq e.$ Therefore, there does not exist such an $h$ and the regular action is not CCT.
+So, Suppose $G \not \cong \BBZ_2^k.$ Then, there exists $g \in G,g^2 \neq e.$ Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}.$ So, to show the induced action $\phi: G \times B_n \rightarrow B_n$ is not cover transitive, it suffices to show there is no $h \in G,h \in Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}.$  If $h \in Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g.$ Since left multiplication is simply transitive, either $h = e$ or $h = g.$ If $h = e,$ then we would have $h\{e\} = g,$ which would imply $g = e,$ contradicting the assumption that $g^2 \neq e.$ On the other hand, if $h = g,$ since $h \in Stab(\{e \cup g\})$ it must be that $h\cdot g = e.$ Then, $g^2 = g\cdot g = h\cdot g = e,$ contradicting the assumption $g^2 \neq e.$ Therefore, there does not exist such an $h$ and left multiplication is not CCT.
 \end{proof}
 
 \begin{rem}
-One nice way of restating the above results is that for $G$ an abstract group, there exists some $n$ and some embedding $G \subset S_n$ such that the induced action of $G$ on $B_n$ is not CCT if and only if $G \not \cong Z_2^k$ for some $k.$ If $G\cong Z_2^k,$ we have seen this holds in Lemma ~\ref{lem:order_2_CCT}. If $G \not \cong Z_2^k,$ then by Proposition ~\ref{prop:regular_action_CCT}, the regular action of $G$ on $B_{|G|}$ defines an action which is not CCT.
+One nice way of restating the above results is that for $G$ an abstract group, there exists some $n$ and some embedding $G \subset S_n$ such that the induced action of $G$ on $B_n$ is not CCT if and only if $G \not \cong Z_2^k$ for some $k.$ If $G\cong Z_2^k,$ we have seen this holds in Lemma ~\ref{lem:order_2_CCT}. If $G \not \cong Z_2^k,$ then by Proposition ~\ref{prop:regular_action_CCT}, the left multiplication action of $G$ on $B_{|G|}$ defines an action which is not CCT.
 \end{rem}
 \iffalse
 \begin{prop}
@@ -1256,9 +1257,9 @@ The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the ran
 First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E^1(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E^1(B_{l\cdot m})/G$, hence symmetric and unimodal.
 \end{proof}
 
-\section{An Application to Polya Theory}
+\section{Relations to Polya Theory}
 \label{sec:polya}
-In this section, we use the generalized notion of $\mathcal H^{\vec r}(B_n)$ to obtain the unimodality of the coefficients a certain class of polynomials from Polya Theory, which will turn out to be the rank generating function of $\mathcal H^{\vec r}(B_n)/G.$ The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
+In this section, we use the generalized notion of $\mathcal E^{\vec r}(B_n)$ to obtain the unimodality of the coefficients a certain class of polynomials from Polya Theory, which will turn out to be the rank generating function of $\mathcal E^{\vec r}(B_n)/G.$ The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
 
 \ssec{A Brief Review of Polya Theory}
 
@@ -1294,7 +1295,7 @@ The above notation may seem extremely cumbersome. It is simply a formal way of s
 \label{thm:polya}
 (Polya's Theorem)
 Let $G \subset S_n$ act on $B_n.$ With $F_G,Z_G$ as defined above, the following equality holds.
-$$F_G(r_1,\ldots, r_k) = Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n).$$
+$$\mathcal E_G(r_1,\ldots, r_k) = Z_G\left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n\right).$$
 \end{thm}
 
 
@@ -1309,7 +1310,7 @@ Let $[f(x_1,\ldots, x_k)]_{x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}}$ denote the coeffi
 \label{lem:polya_faces_equivlence}
 The number $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ Consequently, 
 
-$$[Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
+$$\left[Z_G \left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n \right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{lem}
 \begin{proof}
 Define a map $m:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1} \rightarrow \{f \in R^{B_n}|color(f) =(i_1,\ldots, i_k)\}$ as follows. For $(x_2,\ldots, x_{k}) \in \mathcal E^{r_2,\ldots, r_{k-1}}(B_n),$ let $m(x_2,\ldots, x_{k}) = f,$ where 
@@ -1323,7 +1324,7 @@ $$g(x_1,\ldots, x_{k-1}) = g(y_2,\ldots, y_{k-1}) \iff g\cdot m(x_1,\ldots, x_{k
 Therefore, $m$ descends to a bijection $m^G:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1}/G \rightarrow R^{B_n}/G,$ This implies $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ 
 
 Then, by Polya's Theorem ~\ref{thm:polya},  
-$$[Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1^{i_1} \cdots r_k^{i_k}}=\kappa(i_1,\ldots, i_k)=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
+$$\left[Z_G\left(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n\right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=\kappa(i_1,\ldots, i_k)=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{proof}
 
 Now we arrive at our main result of the section. The following result provides a rank generating function for $\mathcal E^{\vec r}(B_n)/G$
@@ -1343,15 +1344,15 @@ Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1),$ defined in the statement of the The
 Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Corollary 7.16]{algebraic_stanley}.
 \end{rem}
 
-\section{Further Identities for the Wreath Product}
-In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
+\ssec{Further Identities for the Wreath Product}
+In this subsection, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
 First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to the $t$th Bell number, using $\mathcal E^{\vec r}(B_n)/G,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
 
 \begin{note}
 For this section only, firx $m,l \in \BN$ and fix $G = S_m \wr S_l.$ Additionally, fix $n = m \cdot l.$
 \end{note}
 
-\ssec{A Generating Function for $p_i(l,m,1).$}
+\sssec{A Generating Function for $p_i(l,m,1)$}
 
 \begin{prop}
 Let $c_i$ be the number of $i$ cycles in $\pi$ and define $$W_\pi(z_1,\ldots, z_n) = \begin{cases}\frac {Z_\pi(z_1,\ldots,z_n)}{z_1} &\text{ if } c_1 > 0 \\
@@ -1377,7 +1378,7 @@ Indeed, this is easy to see, because for $r_3$ to have a nonzero coefficient in 
 $$c_1 \cdot W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n) = |\Fix(\pi)|W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n)$$ because $c_1$ is the number of 1-cycles in $\pi,$ which is by definition the number of fixed points of $\pi.$ This is exactly what we wanted to show.
 \end{proof}
 
-\ssec{Bounded Partition Sizes}
+\sssec{Bounded Partition Sizes}
 This section is an application of Polya theory, and is moderately tangential to the rest of the paper. However, it relates to the functor $\mathcal E^{\vec r},$ in that it counts the $|(\mathcal E^{\vec r}(B_n)/G)_0| =  |(\mathcal E^{\vec s}(B_n)/G)_1|,$ as described in Remark ~\ref{rem:box_partitions_relation_to_f}.
 
 \begin{note}
@@ -1389,7 +1390,6 @@ It is fairly simple to see that $p_{[t]}[l,m],p[l,m]$ satisfy the recursive form
 $$p_{[t]}[l,m] = \sum_{k=1}^l p_{[t-k]}[l-1,m].$$
 $$p[l,m] = \sum_{k=1}^l p[l-1,m].$$
 These can be reached by considering the number of elements in the first row.
-It is also straightforward to relate these statistics to the number set partitions of $[m\cdot l]$ that fit inside a $m$ times $l$ box, but just multiplying by an appropriate binomial coefficient.
 \todo{make this more precise}
 \end{rem}
 
@@ -1403,7 +1403,7 @@ $$\mathcal E_G(r_1,\ldots, r_k) = \frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k
 $$[\mathcal E_G(r_1,\ldots, r_k)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l-t}} = [\frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}}.$$
 
 Of course, by definition of $F_G,$ we know 
-$$[mathcal E_G(r_1,\ldots, r_k)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l-t}} = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0)$$
+$$[\mathcal E_G(r_1,\ldots, r_k)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l-t}} = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0)$$
 where there are $t$ 1's in the above expression. By definition $\kappa$ is just the number of inequivalent ways to distinctly color $t$ numbers in an $l \times m$ rectangle, up to the action of $G = S_m \wr S_l.$ For any such coloring, let square $a_i$ be colored with color $r_i.$ Each $G$ orbit of colorings has a unique representative where along each row the colors are sorted in increasing order, and additionallly, going down the first column, the colors are sorted in increasing order. Here, we are basically ignoring color $t+1,$ just viewing it as a placeholder to color the remaining squares of the grid. Then, the colorings defined above are in bijection with partitions of $[t]$ so that this partition has at most $l$ sets, and each set in this partition has at most $m$ elements. The set of such partitions is exactly  $P_{[t]}[l,m].$ Therefore, the number of such partitions is $p_{[t]}[l,m].$ Then, it follows that
 $$p_{[t]}[l,m] = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0) = [\frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}}.$$
 
@@ -1440,11 +1440,9 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 &= \frac {1}{l!(m!)^l}\sum_{\pi \in G}\sum_{t = 0}^{l\cdot m} f(|\Fix(\pi)|).
 \end{align*}
 \end{proof}
-\todo{Perhaps also put in the recursive relations which the $P[l,m]$ satisfy}
-
 \section{Groups of order $n.$}
 
-In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $|\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}$ Any such action can be described by identifying $[n] \cong G,$ and then having $G$ act on itself by the left multiplication. We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $|\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}.$ The most important example of such an action is the left multiplication action $\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$ Then, by identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
@@ -1891,9 +1889,9 @@ We have $u_s = \sum_{x\subset s,y\supset x}^{}(x, y).$ In particular, $\sum_{x\s
 By ~\ref{w_equivalence} and ~\ref{z_equivalence} we have
 \begin{align*}
 	u_s &= \frac{w_s - (n - |s|)\beta \binom {|s|-i-1}{n-2i-2} z_s}{\binom {|s|-i}{n-2i-1}} + z_s\\
-	&= \frac{\sum_{t\notin s}^{} \left(\beta \binom {|s|-i-1}{n-2i-2}\sum_{y \subset s}^{}(x, y) + \binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right) - (n - |s|)\beta \binom {|s|-i-1}{n-2i-2} \sum_{y \subset s}^{}(x, y)}{\binom {|s|-i}{n-2i-1}} 
+	&= \frac{\sum_{t\notin s}^{} \left(\beta \binom {|s|-i-1}{n-2i-2}\sum_{y \subset s}^{}(x, y) + \binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right)}{\binom {|s|-i}{n-2i-1}} 
 	\\
-	& \hspace{1 cm}+ \sum_{y \subset s}^{}(x, y) \\
+	& \hspace{1 cm}- \frac{(n - |s|)\beta \binom {|s|-i-1}{n-2i-2} \sum_{y \subset s}^{}(x, y)}{\binom {|s|-i}{n-2i-1}}+ \sum_{y \subset s}^{}(x, y) \\
 	&=  \frac{\sum_{t\notin s}^{} \left(\binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right)}{\binom {|s|-i}{n-2i-1}} + \sum_{y \subset s}^{}(x, y) \\
 	&= \sum_{t\notin s}^{} \left(\binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right) + \sum_{y \subset s}^{}(x, y) \\
 	&=  \sum_{x\subset s,y\supset x}^{}(x, y)
