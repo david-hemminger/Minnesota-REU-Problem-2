@@ -174,12 +174,7 @@ Let $P$ be a finite graded poset of rank $n$.  It is natural to study the struct
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}$, i.e. $(x, y) \le_{\mathcal E} (x^\prime, y^\prime)$ if there exists a chain
-
-$$(x, y)\lessdot_{\mathcal E} (x_1, y_1)\lessdot_{\mathcal E}\ldots\lessdot_{\mathcal E} (x_{r-1}, y_{r-1})\lessdot_{\mathcal E} (x^\prime, y^\prime)$$
-
-\todo{Since people know what the transitive closure is, are we sure we want to use the valuable space in the introduction explicitly defining it?}
-
+For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
 Let $Q$ be a finited graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E^r(f)\colon \mathcal E^r(P)\rightarrow \mathcal E^r(Q)$ by $\mathcal E^r(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
@@ -323,7 +318,7 @@ A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whene
 If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
 \end{restatable}
 
-A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$ \todo{David, there is an inconsistency in notation here: using ``:'' for ``such that'' versus $``|''$ (for ``such that''. I propose the convention $``|''$ since I think it is slightly more standard, but I'm ok with using ``:'' though if you feel strongly.}  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
+A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
 \todo{Rephrase so that it has two assertions (in two sentences):  first, that $S_n$ acts cover-transitively for all n, and second, that for p prime, $D_{2p} and D_{4p}$ are cover-transitive inside $S_{2p}, S_{4p}$.}
 \begin{prop}\label{prop:cover_transitive_building_blocks}
@@ -369,7 +364,7 @@ $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Spern
 \end{defn}
 
 
-Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x |x\in P\}$ and $\{x |x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ when our meaning is clear.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
+Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ when our meaning is clear.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
 
 \begin{defn}
 A map $U\colon V(P)\rightarrow V(P)$ is an \textit{order-raising operator} if $U(V(P_n)) = 0$ and for all $0\le i\le n-1$, $x\in P_i$ we have
@@ -871,11 +866,11 @@ For the rest of this section only, fix a rooted tree $P$ and denote by $G$ the g
 \end{convention}
 
 \begin{note}
-For $x \in P,$ denote $D(x) = \{y \in P| y \leq x\}.$
+For $x \in P,$ denote $D(x) = \{y \in P: y \leq x\}.$
 \end{note}
 \begin{prop}
 \label{prop:automorphism_trees}
-Let $P$ be a rooted tree with root vertex labeled $r$. Then, if let $\{A_1,\ldots,A_m\}$ denote the set of isomorphism classes of $\{D(x)|x\lessdot r\}.$ For $T \in A_j,$ denote $G_j = Aut(T).$ Then, 
+Let $P$ be a rooted tree with root vertex labeled $r$. Then, if let $\{A_1,\ldots,A_m\}$ denote the set of isomorphism classes of $\{D(x):x\lessdot r\}.$ For $T \in A_j,$ denote $G_j = Aut(T).$ Then, 
 \begin{equation}
 \label{eq:level_expansion}
 Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr S_{i_m}),
