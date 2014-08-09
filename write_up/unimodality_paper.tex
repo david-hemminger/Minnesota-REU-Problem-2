@@ -880,7 +880,7 @@ In particular, $Aut(P)$ can be expressed as a sequence of direct products and wr
 
 \begin{proof}
 It is clear that if $P$ is rank 1, with $|P_0| = n,$ then the automorphism group is $S_n.$ So, let us proceed by induction. That is, label the vertices of $P$ by $\{0,1,\ldots, s\}$ such that the root is labeled $0$ and the vertices just below the root are labeled $1, \ldots, k.$ Let $A_1,\ldots, A_m$ denote the distinct isomorphism classes of trees in the set $\{D(1),\ldots, D(k)\}.$ For $T \in A_j,$ denote $G_j = Aut(T).$ 
-Let $T_j = \{t|t\lessdot 0,t \in A_j\}.$ Then, letting $Q_j$ be the subtree of $P$ whose elements lie in the set $0 \cup (\cup_{t \in T_j} D(t)),$ it follows $Aut(Q_j) \cong G_j \wr S_{i_j},$ because after choosing a permutation of the elements of $T_j,$ we are free to choose any element of $G_j$ to permute each $D(t),t \in T_j$. If $t_1 \lessdot 0,t_2 \lessdot 0,g \cdot t_1 = t_2,$ then it must be that $D(t_1) = D(t_2).$ Therefore, $Aut(P)$ must permute these isomorphism classes of trees, and the full automorphism groups is simply the direct product, 
+Let $T_j = \{t:t\lessdot 0,t \in A_j\}.$ Then, letting $Q_j$ be the subtree of $P$ whose elements lie in the set $0 \cup (\cup_{t \in T_j} D(t)),$ it follows $Aut(Q_j) \cong G_j \wr S_{i_j},$ because after choosing a permutation of the elements of $T_j,$ we are free to choose any element of $G_j$ to permute each $D(t),t \in T_j$. If $t_1 \lessdot 0,t_2 \lessdot 0,g \cdot t_1 = t_2,$ then it must be that $D(t_1) = D(t_2).$ Therefore, $Aut(P)$ must permute these isomorphism classes of trees, and the full automorphism groups is simply the direct product, 
 \begin{equation}
 \label{eq:level_expansion}
 Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr S_{i_m}),
@@ -901,7 +901,7 @@ First, the action of $S_n$ on $[n]$ by all permutations induces $\phi:S_n \times
 We describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism group of simplices, and octahedrons are common cover transitive, although both of these are fairly straightforward.
 
 \begin{defn}
-Let $M$ be a polytope, with a particular embedding in $R^n.$ The {\it group of linear automorphisms of M} is the subgroup of $GL_n$ whose elements are $\{g \in GL_n|g \cdot M = M\}.$
+Let $M$ be a polytope, with a particular embedding in $R^n.$ The {\it group of linear automorphisms of M} is the subgroup of $GL_n$ whose elements are $\{g \in GL_n:g \cdot M = M\}.$
 \end{defn}
 
 \begin{prop}
@@ -1016,7 +1016,7 @@ For $x \subset [l \cdot m]$ we shall say $x$ is {\it left justified} if whenever
 \end{defn}
 
 \begin{defn}
-For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x|i\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
+For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x:i\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
 \end{defn}
 
 \begin{lem}
@@ -1165,7 +1165,7 @@ A {\it coloring} of a set $S$ by the colors $R = \{r_1,\ldots, r_k\}$ is a map $
 \begin{note}
 For $A,B$ sets, let $A^B = Hom_{\text{sets}}(B,A).$ Let $G \subset S_n$ act on $B_n.$ Then, $G$ acts on $R^{B_n} = Hom_{\text{sets}}(B_n,R)$ by $g \cdot f(S) = f(g\cdot S)$ where $g \in G,S \in B_n, f \in R^{B_n}.$ Then, let $R^{B_n}/G$ denote the quotient of $R^{B_n}$ by the action of $G$ defined above.
 
-Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S|f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
+Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S:f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
 
 Define $\kappa(i_1,\ldots, i_k) = |\{Gf \in R^{B_n}/G \text{ such that } c(f) = (i_1,\ldots, i_k) \}|.$
 
@@ -1198,7 +1198,7 @@ The number $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k
 $$\left[Z_G \left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{lem}
 \begin{proof}
-Define a map $m:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1} \rightarrow \{f \in R^{B_n}|c(f) =(i_1,\ldots, i_k)\}$ as follows. For $(x_2,\ldots, x_{k}) \in \mathcal E^{r_2,\ldots, r_{k-1}}(B_n),$ let $m(x_2,\ldots, x_{k}) = f,$ where 
+Define a map $m:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1} \rightarrow \{f \in R^{B_n}:c(f) =(i_1,\ldots, i_k)\}$ as follows. For $(x_2,\ldots, x_{k}) \in \mathcal E^{r_2,\ldots, r_{k-1}}(B_n),$ let $m(x_2,\ldots, x_{k}) = f,$ where 
 $$f(t) = \begin{cases} r_1 &\text{ if } t\in x_2\\
 r_j &\text{ if } t \in x_{j+1}\setminus x_j\\
 r_k &\text{ if } t \notin x_k
