@@ -166,6 +166,8 @@
 \todo{Relegate functoriality to a remark}
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
 \todo{Include a section for generalizations of E and include redfield polya generalization}
+\todo{Make the following comments/questions about the functor of edges: 1. Does it have a one sided inverse or adjoint? 2. It is not injective (square minus one edge and square minus 2 edges) 3. Is it surjective? (I think so, can look for edge posets of boolean 2 subalgebras) 4. Does it have a one sided inverse functor, or an adjoint?} 
+
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}\label{sec:introduction}
@@ -326,14 +328,14 @@ Let $p$ be prime.  The actions of $S_n, D_{2p},$ and $D_{4p}$ on $B_n$, $B_p$ an
 \end{prop}
 
 \begin{restatable}{prop}{semidirect}
-\label{thm:cover_transitive_implies_Peck}
+\label{prop:semidirect_product_preservation}
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
 
 \todo[inline]{Please note:  This paragraph does NOT currently reflect reality.  I thought for a while about how we should structure the paper, and this is roughly how I think it should look.}
 The paper is organized as follows.  In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E^r$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E^r$.  Section \ref
-{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_cover_transitive_actions} as well as some examples of families of group actions shown to be CCT by these propositions.  In Section \todo{consolidate this section} we prove that $\mathcal E^r(B_n/G)$ is rank-unimodal for certain group actions that are not CCT.  Section \todo{consolidate this section} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results.
+{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions.  In Section \todo{consolidate this section} we prove that $\mathcal E^r(B_n/G)$ is rank-unimodal for certain group actions that are not CCT.  Section \todo{consolidate this section} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results.
 \todo{Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}
 
 
@@ -757,7 +759,7 @@ Once again, the proof of the above three statements is analogous to those of ~\r
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
-In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{dihedral001} that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{lem:dihedral_prime}, that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
 
 \begin{rem}
 Before continuing with the description of cover transitive, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E^r$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ common cover transitive agrees with our definition of common cover transitive. Furthermore, it is also simple to see that an action is $\vec r$ common cover transitive if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ common cover transitive.
@@ -766,8 +768,6 @@ Before continuing with the description of cover transitive, it is worth noting t
 \begin{eg}
 \label{eg:trivial_edgequot}
 Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B_n,\psi:G\times B_n\rightarrow B_n$ where $G$ is arbitrary, $\phi$ is the action induced by $S_n$ permuting the elements of $[n]$, and $\psi$ is the trivial action. In the former case, $\mathcal E^1(B_n/S_l)$ is simply a chain with $n-1$ points, and so is $\mathcal E^1(B_n)/S_l,$ since all $(x, y)$ are identified under the $S_l$ action. In the latter case, since $G$ acts trivially by $\phi,$ both  $\mathcal E^1(B_n/G) \cong \mathcal E^1(B_n)$ and $\mathcal E^1(B_n)/G \cong \mathcal E^1(B_n).$ So again, $\psi$ is CCT.
-
-Developing less trivial examples will take a bit more work, but it will be shown in Lemma ~\ref{dihedral001} that Dihedral groups of order $2p$ and $4p$, for $p$ prime, are CCT.
 \end{eg}
 
 \begin{thm}
@@ -780,9 +780,7 @@ By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection
 
 \ssec{Preservation Under Semidirect Products}
 \label{ssec:semidirect_product_preservation}
-Recall Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We shall use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
-
-Recall ~\ref{prop:semidirect_product_cover_transitive_actions}:
+Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We shall use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
 
 \semidirect*
 
@@ -791,17 +789,17 @@ Recall ~\ref{prop:semidirect_product_cover_transitive_actions}:
 
 \end{proof}
 
-\begin{thm}
-\label{thm:direct_product_preservation}
+\begin{prop}
+\label{prop:direct_product_preservation}
 For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
-\end{thm}
+\end{prop}
 \begin{proof}
-First, by definition of CCT, if either $G$ or $H$ acts trivially, it is clear the action of $G\times H$ is CCT. To see this, suppose $G$ acts trivially, the case of $H$ acting trivially is similar. Then, if $(x,y) \lessdot (a,b),(r,s)\lessdot (a,b),(x,y) \in G\times H(r,s),$ then $x \in Gr$ so $x = r.$ If $b = y = s,$ then $(e,e) \in Stab(x,y)$ and $(e,e)(x,y) = (r,s).$ Otherwise, it must be that $x = r = a,$ and then $y \lessdot b,s \lessdot b,y \in Hs,$ and so by cover transitivity of $G,$ there exists $g \in G$ so that $(e,g)(x,y) = (r,s)$ and $(e,g) \in Stab(a,b).$
+First, by definition of CCT, if either $G$ or $H$ acts trivially, it is clear the action of $G\times H$ is CCT. To see this, suppose $G$ acts trivially, the case of $H$ acting trivially is similar. Then, if $(x,y) \lessdot (a,b),(r,s)\lessdot (a,b),(x,y) \in (G\times H)(r,s),$ then $x \in Gr$ so $x = r.$ There are now two cases, either $b = y = s$ or $x = r = a.$ First, if $b = y = s,$ then $(e,e) \in Stab(x,y)$ and $(e,e)(x,y) = (r,s).$ Second, if $x = r = a,$ and then $y \lessdot b,s \lessdot b,y \in Hs,$ and so by cover transitivity of $G,$ there exists $g \in G$ so that $(e,g)(x,y) = (r,s)$ and $(e,g) \in Stab(a,b).$
 
-Next, Observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H).$ Since the action of $G$ on $P$ is CCT, by the above paragraph, the action of $G\times \{e\}$ on $P \times Q$ is CCT. Also, since the action of $H$ on $Q$ is CCT, it follows that the action of $\{e\}\times H$ on $(P/G) \times Q$ is CCT. Therefore, the actions of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} and so the action of $G\times H$ is CCT.
+Next, Observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H).$ Since the action of $G$ on $P$ is CCT, by the above paragraph, the action of $G\times \{e\}$ on $P \times Q$ is CCT. Also, since the action of $H$ on $Q$ is CCT, it follows that the action of $\{e\}\times H$ on $(P/G) \times Q$ is CCT. Therefore, the action of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so the action of $G\times H$ is CCT.
 \end{proof}
 
-Next, we use Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} to prove in Theorem ~\ref{thm:wreath_preservation} that the CCT property is preserved under wreath products with the symmetric group. First, we need some definitions of wreath product.
+Next, we use Proposition ~\ref{prop:semidirect_product_preservation} to prove in Proposition ~\ref{prop:wreath_preservation} that the CCT property is preserved under wreath products with the symmetric group. First, we need some definitions of wreath product.
 
 \begin{defn}
 For $G, H$ groups, with $H \subset S_l,$ the {\it wreath product}, notated $G \wr H,$ is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
@@ -828,15 +826,15 @@ Heuristically, one may think of the above action as obtained by first having $G$
 For $P$ a poset, the action $\phi:S_l \times P^l \rightarrow P^l,\sigma \cdot(x_1,\ldots, x_l) = (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT.
 \end{lem}
 \begin{proof}
-For $a \in P^l$ notate $a = (a_1,\ldots, a_l).$ Suppose $x,y,z \in P^l$ with $x\lessdot z,y\lessdot z,$ and $x \in S_ly.$ This means there is a unique $i$ such that $x_i \lessdot z_i,x_k = z_k$ for $k \neq i.$ Additionally, there is a unique $j$ for which $y_j \lessdot z_j,y_k =z_k$ for $k \neq j.$ Since $x \in S_ly,$ we obtain the equality of multisets $\{x_1,\ldots, x_l\}=\{y_1,\ldots,y_l\}.$ But for $k \neq i,j,x_k = z_k = y_k$, we also obtain equality of sets $\{x_i,x_j\} = \{y_i,y_j\}.$ Since $rk(y_j) \lessdot rk(x_j),$ we obtain $y_j = x_i,y_i = x_j.$ Then, taking the transposition. $\sigma \in S_l = (ij),$ it follows $\sigma \in Stab(z)$ and $\sigma \cdot x = y.$
+For $a \in P^l$ notate $a = (a_1,\ldots, a_l).$ Suppose $x,y,z \in P^l$ with $x\lessdot z,y\lessdot z,$ and $x \in S_ly.$ This means there is a unique $i$ such that $x_i \lessdot z_i,x_k = z_k$ for $k \neq i.$ Additionally, there is a unique $j$ for which $y_j \lessdot z_j,y_k =z_k$ for $k \neq j.$ Since $x \in S_ly,$ we obtain the equality of multisets $\{x_1,\ldots, x_l\}=\{y_1,\ldots,y_l\}.$ But for $k \neq i,j,x_k = z_k = y_k$, we also obtain equality of sets $\{x_i,x_j\} = \{y_i,y_j\}.$ Since $rk(y_j) \lessdot rk(x_j),$ we obtain $y_j = x_i,y_i = x_j.$ Then, taking the transposition $\sigma  = (ij) \in S_l,$ it follows that $\sigma \in Stab(z)$ and $\sigma \cdot x = y.$
 \end{proof}
 
-\begin{thm}
-\label{thm:wreath_preservation}
+\begin{prop}
+\label{prop:wreath_preservation}
 If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action defined in Notation ~\ref{note:wreath_action} is also CCT.
-\end{thm}
+\end{prop}
 \begin{proof}
-First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since the action of $G$ on $P$ is CCT, using Theorem ~\ref{thm:direct_product_preservation}, we obtain the action of $G^l$ on $P^l$ is CCT, by the action $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action of $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_cover_transitive_actions} and so $\phi$ is CCT.
+First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since the action of $G$ on $P$ is CCT, using Proposition ~\ref{prop:direct_product_preservation}, we obtain the action of $G^l$ on $P^l$ is CCT. Explicitly, this action is $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so $\phi$ is CCT.
 \end{proof}
 
 \ssec{Examples of Cover Transitive Actions}
@@ -845,7 +843,7 @@ In this subsection, we describe several classes of cover transitive actions. Fir
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
-In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Theorem ~\ref{thm:wreath_preservation} and Theorem ~\ref{thm:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
+In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
 
 \begin{defn}
 A graded poset $P$ is a {\it rooted tree} if there is a unique element $x \in P$ of maximal rank, called the {\it root}, and for all $x \in P,$ other than the root, there exists a unique $y \in P$ with $y \gtrdot x.$
@@ -896,7 +894,7 @@ Since each $G_j$ is a sequence of direct products and wreath products with symme
 For $P$ the automorphism group of a rooted tree, $Aut(P)$ is CCT.
 \end{cor}
 \begin{proof}
-By Theorem ~\ref{thm:wreath_preservation}, wreath products with symmetric groups preserve the CCT property, and by Theorem ~\ref{thm:direct_product_preservation} the direct product of two CCT groups is again CCT. Therefore, by Proposition ~\ref{prop:automorphism_trees}, all groups of the form $Aut(P)$ are built up from these operations, and so $Aut(P)$ is also CCT.
+By Proposition ~\ref{prop:wreath_preservation}, wreath products with symmetric groups preserve the CCT property, and by Proposition ~\ref{prop:direct_product_preservation} the direct product of two CCT groups is again CCT. Therefore, by Proposition ~\ref{prop:automorphism_trees}, all groups of the form $Aut(P)$ are built up from these operations, and so $Aut(P)$ is also CCT.
 \end{proof}
 
 \sssec{Automorphisms of Polytopes}
@@ -918,7 +916,7 @@ The group of linear automorphisms in this case induces the usual action of $S_n$
 Let $G$ be the group of linear automorphisms of the n-octahedron, embedded inside $\BR^n,$ whose vertices are located at $\pm e_i,$ where $e_1,\ldots e_n$ are the standard basis vectors of $\BR^n.$ Then, the action of $G$ on the octahedron induces an action of $G$ on the $2n$ vertices of the octahedron, and hence on $B_{2n}.$ This induced action on $B_{2n}$ is common cover transitive. 
 \end{prop}
 \begin{proof}
-It is simple to see that the group of linear automorphisms of the n-octahedron with vertices at $\pm e_i,$ where $e_1,\ldots e_n$ is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k.$ (The hyperoctahedral group is commonly notated $B_n,$ since it is the type $B$ Coexeter group, but we do not use this here to avoid confusing with the boolean algebra.) It is well know that they hyperoctahedral group can be written as $S_2 \wr S_n.$ Then, by Theorem ~\ref{thm:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
+It is simple to see that the group of linear automorphisms of the n-octahedron with vertices at $\pm e_i,$ where $e_1,\ldots e_n$ is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k.$ (The hyperoctahedral group is commonly notated $B_n,$ since it is the type $B$ Coexeter group, but we do not use this here to avoid confusing with the boolean algebra.) It is well know that they hyperoctahedral group can be written as $S_2 \wr S_n.$ Then, by Proposition ~\ref{prop:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
 \end{proof}
 
 \sssec{Cover Transitive Actions of $\BZ_2^k$}
@@ -963,7 +961,7 @@ One nice way of restating the above results is that for $G$ an abstract group, t
 Let $G$ be the group of linear automorphisms of the cube, embedded in $\BR^n,$ whose vertices are located at the points $(\pm 1, \ldots, \pm 1).$ Then, the action of $G$ on the cube induces an action of $G$ on the $2^n$ vertices of the octahedron, and hence on $B_{2^n}.$ This induced action on $B_{2^n}$ is CCT. 
 \end{prop}
 \begin{proof}
-It is easy to see that the group of linear automorphisms of the cube can be written as the semidirect product $\BZ^n_2 \rtimes S_n.$ The generator of the $i^{th}$ copy of $\BZ_2$ in $\BZ^n_2,$ acts by changing the sign of the $i^{th}$ coordinate, while $S_n$ acts by permuting the coordinates. Using Proposition ~\ref{prop:semidirect_product_cover_transitive_actions}, it suffices to show that the action of $\BZ_2^n$ on $B_{2^n}$ is CCT and the action of $S_n$ on $B_{2^n}/(\BZ_2^n)$ is CCT.
+It is easy to see that the group of linear automorphisms of the cube can be written as the semidirect product $\BZ^n_2 \rtimes S_n.$ The generator of the $i^{th}$ copy of $\BZ_2$ in $\BZ^n_2,$ acts by changing the sign of the $i^{th}$ coordinate, while $S_n$ acts by permuting the coordinates. Using Proposition ~\ref{prop:semidirect_product_preservation}, it suffices to show that the action of $\BZ_2^n$ on $B_{2^n}$ is CCT and the action of $S_n$ on $B_{2^n}/(\BZ_2^n)$ is CCT.
 
 First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2^n}$ is CCT. Second, we wish to examine the action of $S_n$ on the quotient poset $B_{2^n}/(\BZ_2^n).$ 
 \end{proof}
