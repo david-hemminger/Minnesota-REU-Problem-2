@@ -109,24 +109,9 @@
 \renewcommand{\v}{\mathbf}
 \newcommand{\gr}[1]{\langle {#1} \rangle}
 \newcommand{\dstyle}{\displaystyle}
-\nc{\bd}{\mathbf{d}}
-\nc{\Hom}{\on{Hom}}
-\nc{\End}{\on{End}}
-\nc{\Spec}{\on{Spec}}
-\nc{\Reg}{\on{Reg}}
-\nc{\Specm}{\on{Specm}}
-\nc\ol{\overline}
-\nc\wt{\widetilde}
-\nc{\one}{{\mathbf{1}}}
 \renc{\mod}{\on{-mod}}
 \newcommand{\id}{\mathrm{id}}
 \nc{\ul}{\underline}
-\nc{\uHom}{\ul\Hom}
-\nc{\tHom}{\ul\uHom}
-\nc{\wh}{\widehat}
-\nc{\Vect}{\on{Vect}}
-\nc{\Res}{\on{Res}}
-\nc{\Ind}{\on{Ind}}
 
 
 
@@ -165,8 +150,7 @@
 
 \todo{Relegate functoriality to a remark}
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
-\todo{Include a section for generalizations of E and include redfield polya generalization}
-\todo{Make the following comments/questions about the functor of edges: 1. Does it have a one sided inverse or adjoint? 2. It is not injective (square minus one edge and square minus 2 edges) 3. Is it surjective? (I think so, can look for edge posets of boolean 2 subalgebras) 4. Does it have a one sided inverse functor, or an adjoint?} 
+\todo{Include a section for generalizations of E and include redfield polya generalization} 
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 
@@ -1911,10 +1895,19 @@ Using ~\ref{t_equivalence}
 \end{proof}
 
 \begin{thm}
+\label{thm:invertibility_lefschetz}
 For $n >2,$ the matrix $M^{n-2i-1}$ is invertible.
 \end{thm}
 \begin{proof}
 We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Theorem ~\ref{explicit_gbn_lefchetz}. Using Theorem ~\ref{gbn_decomposition}, we know $\fbn^1(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
+\end{proof}
+
+\begin{cor}
+\label{cor:unitary_peck_edge_bn}
+The poset $\mathcal E(B_n)$ is unitary Peck.
+\end{cor}
+\begin{proof}
+By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefschetz map $L:P \rightarrow P,x \mapsto \sum_{y \gtrdot x} y,$ satisfies $L^{t-2i}:P_i \rightarrow P_{t-i}$ is an isomorphism. In the case $P = \mathcal E(B_n),\rk(P) = n-1,$ we have that $M$ is the Lefschetz map and by Theorem ~\ref{thm:invertibility_lefschetz}, $M^{n-1-2i}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-1-i}$ is indeed an isomorphism. Hence, $\mathcal E(B_n)$ is unitary Peck.
 \end{proof}
 
 \section{Odds, Ends, and Failed Attempts}
@@ -2135,29 +2128,61 @@ We have tried several variations on these exact maps, but were never quite able 
 
 \ssec{Further Questions}
 
+\ssec{Questions and Observations about $\mathcal E.$}
+
+\sssec{Category Theoretic Properties}
+
+First, it is worth noting that the functor $\mathcal E:\mathcal P \rightarrow \mathcal P$ is neither essentially surjective nor fully faithful. Let $P$ be the poset with points $a,b,c,d$ and relations $a \lessdot c, b \lessdot c, a \lessdot d.$ It is easy to see there is no poset $A$ with $\mathcal E(A) = P.$ This shows $\mathcal E$ is not essentially surjective. Next, let $Q$ be the poset whose elements are $e,f,g$ with $e \lessdot f, e \lessdot g,$ and let $R$ be the poset whose elements are $h,i,j,k$ with $h \lessdot i, j \lessdot k.$ It is clear that $\mathcal E(Q) \cong \mathcal E(R)$ are both a disjoint union of two points, but $Q \not \cong R.$ So, $\mathcal E$ is also not fully faithful.
+
+However, there are many aspects of the functor $\mathcal E,$ and indeed $\mathcal E^{\vec r}$ which are still unexplored. First, note that it is worth noting that $\mathcal E$ also determines a endofunctor on the category of (ungraded) posets, which we shall now notate $\mathcal Q,$ as well as an endofunctor on the category of graded posets $\mathcal P.$ In general, the points of a poset $P$ can be identified with the set $Hom_{\mathcal Q}(B_0,P),$ and the edges of $P$ can be identified with the set $Hom_{\mathcal Q}(B_1,P).$ It is simple to see additionally that the points of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_0,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_1,P).$ Additionally, the edges of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_1,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_2,P).$ These relations may be a reasonable alternate way to think of the functor of points, and are further suggestive of the existence of an adjoint functor.
+
+\begin{question}
+Does the functor $\mathcal E$ have a left or right adjoint?
+\end{question}
+
+\sssec{Unitary Peck Generalizations}
+
+Additionally, there are several posets which we would like to be unitary  
+Peck, as this would allow us to apply much of the theory developed in this paper. They would also make several of the generalizations of $\mathcal E$ potentially more interesting. Two posets we are particularly interested in are $\mathcal E^{\vec r}(B_n)$ and its q-analog, $\mathcal E^{\vec r}(B_n(q)).$
+
 \begin{question}
 Is $\mathcal E^{\vec r}(B_n)$ unitary Peck?
 \end{question}
 
+As mentioned in the introduction, a natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect that a proof similar to that of Corollary ~\ref{cor:unitary_peck_edge_bn} may also prove Question ~\ref{question:unitary_peck_q_edge}.
+
 \begin{question}
+\label{question:unitary_peck_q_edge}
 Is $\mathcal E(B_n(q))$ unitary peck? What about $\mathcal E^{\vec r}(B_n(q))?$
 \end{question}
 
+\sssec{A $q$-analog of Conjecture ~\ref{conj:F_of_BnG_Peck}}
+
+In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the followin question: 
+
 \begin{question}
-For $G$ a group with a cover transitive action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
+For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
 \end{question}
+
+Even more generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG_Peck} holds.
+
+\begin{question}
+For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck?
+\end{question}
+
+\ssec{Additional CCT Actions}
+
+We also found several additional interesting examples of CCT actions, and we are curious whether they generalize. Once such action is the linear automorphism of the $n$-cube. Using computers, we found that for $n \leq 3,$ the linear automorphisms of the $n$-cube is CCT. We wonder if this generalizes.
 
 \begin{question}
 Does the group of linear automorphism of an $n$-cube in $\BR^n$, whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a common cover transitive action on $\BR^n$?
 \end{question}
 
+Also, we found using computers that the group of invertible linear maps on $\BF_2^3$ acting on the the seven nonzero points of $\BF_2^3$ induce an action on $B_7$ which is CCT. We wonder if this generalizes to other groups of invertible linear maps on finite fields.
+
 \begin{question}
 Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
 \end{question}
-
-Computers show that the action of $GL_3(\BF_2)$ on $B_7$ is CCT.
-
-
 
 \bibliography{References}
 \bibliographystyle{alpha}
