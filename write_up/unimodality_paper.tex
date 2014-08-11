@@ -284,8 +284,7 @@ Here, it is clear that $\mathcal E^1(P)$ is a graded poset, with $rk(x,y) = rk(x
 We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E^1(P).$  
 We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
 In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  
-It is well-know than if $G$ is a group of rank-preserving \todo{Perhaps consider saying either (both order preserving and rank preserving) or (neither of them). 
-I prefer omitting both, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+It is well-know than if $G$ is a group of automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
@@ -512,7 +511,6 @@ By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjecti
 
 Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, for all $r,n,$ we define a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck. Furthermore, there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
-\todo{Put as a question whether $\mathcal E^r(B_n)$ is unitary Peck?}
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
@@ -1633,15 +1631,6 @@ Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E^1
 Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
 \end{proof}
 
-In general, for $G \in Gl_n(\BF_q)$ acting on $B_n(q)$, we want to ask the following questions:
-
-\begin{enumerate}
-\item Is $\mathcal E^1 \big(B_n(q)\big)$ unitary Peck? 
-\item Is $\mathcal E^1 \big(B_n(q) /G\big)$ Peck? or more weakly, is it rank unimodal?
-\end{enumerate}
-
-
-
 
 
 
@@ -2175,7 +2164,7 @@ For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
 Even more generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG_Peck} holds.
 
 \begin{question}
-For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck?
+For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank unimodal?
 \end{question}
 
 \ssec{Additional CCT Actions}
