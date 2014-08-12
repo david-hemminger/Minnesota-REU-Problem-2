@@ -1411,7 +1411,7 @@ We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathca
 Let $G = C_n$ where $n$ is a prime, then $q_i - p_i = (n-1)/2$ for $ 1 \le i \le n-2$. 
 \end{lem}
 
-\begin{proof} \todo{Elise: very minor note, but if you are setting $G=C_n$, try to be consistent and only use $G$ throughout the proof.  It's clearer}
+\begin{proof} \todo{Fixed issue in my version, hasn't pushed yet}
 Let $G = C_n$ where $n$ is a prime. We consider the action of $G$ on $B_n$. 
  Note that $n$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $n$-cycle in its cycle decomposition. Now suppose $(x, y) \in A_i$ \todo{what is $A_i.$ I think you may mean $\mathcal E^1(B_n)_i?$}  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_n$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Let $(Gx, Gy)$  be an element in $[\mathcal E^1(B_n/G)]_i$\todo{again, consider changing brackets to parentheses, although I'll stop pointing this out}, i.e., an edge class in the necklace poset, with representative $(x, y)$. We abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n) \subset \mathcal E^1(B_n)$. We view $G(x , y)$ as a subset of $\mathcal E^1 (B_n)$, namely $G(x, y) = \{(gx, g y) : g \in G \}$. Clearly $G(x , y) \subset (Gx,Gy)$ as subsets of $\mathcal E^1 (B_n)$. It is also clear that the number of distinct $\sigma \in G$ such that $\sigma x < y$ is precisely the number of $G$-orbits in $(Gx, Gy)$. In particular, if the only $\sigma $ such that $\sigma x < y$ is identity, then $(Gx, Gy)=G(x, y)$ as subsets of $\mathcal E^1 (B_n)$. 
 
