@@ -21,7 +21,6 @@
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
 \usepackage{thmtools}
 \usepackage{thm-restate}
-%\usepackage{cleveref}
 \usetikzlibrary{matrix,calc, arrows,decorations.pathmorphing}
 
 \addtolength{\oddsidemargin}{.5 in}
@@ -109,24 +108,9 @@
 \renewcommand{\v}{\mathbf}
 \newcommand{\gr}[1]{\langle {#1} \rangle}
 \newcommand{\dstyle}{\displaystyle}
-\nc{\bd}{\mathbf{d}}
-\nc{\Hom}{\on{Hom}}
-\nc{\End}{\on{End}}
-\nc{\Spec}{\on{Spec}}
-\nc{\Reg}{\on{Reg}}
-\nc{\Specm}{\on{Specm}}
-\nc\ol{\overline}
-\nc\wt{\widetilde}
-\nc{\one}{{\mathbf{1}}}
 \renc{\mod}{\on{-mod}}
 \newcommand{\id}{\mathrm{id}}
 \nc{\ul}{\underline}
-\nc{\uHom}{\ul\Hom}
-\nc{\tHom}{\ul\uHom}
-\nc{\wh}{\widehat}
-\nc{\Vect}{\on{Vect}}
-\nc{\Res}{\on{Res}}
-\nc{\Ind}{\on{Ind}}
 
 
 
@@ -163,13 +147,13 @@
 
 \maketitle
 
+\tableofcontents
+
 \todo{Relegate functoriality to a remark}
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
-\todo{Include a section for generalizations of E and include redfield polya generalization}
-\todo{Make the following comments/questions about the functor of edges: 1. Does it have a one sided inverse or adjoint? 2. It is not injective (square minus one edge and square minus 2 edges) 3. Is it surjective? (I think so, can look for edge posets of boolean 2 subalgebras) 4. Does it have a one sided inverse functor, or an adjoint?} 
+\todo{Include a section for generalizations of E and include redfield polya generalization} 
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
-
 \section{Introduction}\label{sec:introduction}
 
 Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal E^r$ on the category finite graded posets with rank-preserving morphisms as follows
@@ -300,8 +284,7 @@ Here, it is clear that $\mathcal E^1(P)$ is a graded poset, with $rk(x,y) = rk(x
 We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E^1(P).$  
 We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
 In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  
-It is well-know than if $G$ is a group of rank-preserving \todo{Perhaps consider saying either (both order preserving and rank preserving) or (neither of them). 
-I prefer omitting both, since we later define automorphisms as satisfying both of these properties. The same should be done in ~\ref{conj:F_of_BnG_Peck}} automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+It is well-know than if $G$ is a group of automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
@@ -528,7 +511,6 @@ By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjecti
 
 Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, for all $r,n,$ we define a poset $\mathcal{H}^r(B_n)$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck. Furthermore, there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$.  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
-\todo{Put as a question whether $\mathcal E^r(B_n)$ is unitary Peck?}
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
@@ -1198,26 +1180,26 @@ $$f(t) = \begin{cases} r_1 &\text{ if } t\in x_2\\
 r_j &\text{ if } t \in x_{j+1}\setminus x_j\\
 r_k &\text{ if } t \notin x_k
 \end{cases}.$$
-Observe that $m$ is in fact a bijection, as we can easily define an inverse map by sending a coloring $f$ to $(x_2,\ldots, x_{k}),$ where $x_j$ is the set of all elements $t \in [n]$ for which $f(t) = r_l,l<j,$ for all $j \in [k-1].$ 
-Next, the two group actions were precisely defined so that so that, 
-$$g(x_1,\ldots, x_{k-1}) = g(y_2,\ldots, y_{k-1}) \iff g\cdot m(x_1,\ldots, x_{k-1})) = g\cdot m(y_2, \cdots, y_{k-1})$$
+Observe that $m$ is in fact a bijection, as we can easily define an inverse map by sending a coloring $f$ to $(x_2,\ldots, x_{k}),$ where $x_j$ is the set of all elements $t \in [n]$ for which there exists $l < j$ with $f(t) = r_l.$
+Next, the two group actions were defined so that so that, 
+$$g(x_1,\ldots, x_{k-1}) = (y_2,\ldots, y_{k-1}) \iff g\cdot m(x_1,\ldots, x_{k-1}) = m(y_2, \cdots, y_{k-1})$$
 Therefore, $m$ descends to a bijection $m^G:(\mathcal E^{r_2,\ldots, r_{k-1}}(B_n))_{i_1}/G \rightarrow R^{B_n}/G,$ This implies $\kappa(i_1,\ldots, i_k)$ is equal to $|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ 
 
 Then, by Polya's Theorem ~\ref{thm:polya},  
 $$\left[Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n\right)\right]_{r_1^{i_1} \cdots r_k^{i_k}}=\kappa(i_1,\ldots, i_k)=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 \end{proof}
 
-Now we arrive at our main result of the section. The following result provides a rank generating function for $\mathcal E^{\vec r}(B_n)/G$
+Now we arrive at our main result of the section. The following result provides a rank generating function for $\mathcal E^{\vec r}(B_n)/G.$
 
 \begin{prop}
 \label{prop:rank_gen_fn}
-Let $z_j = \sum_{j = 1}^k r_j^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}},$$ be a polynomial in $r_1.$ Then, the coefficients of $Z_G^{i_2,\ldots,i_{k-1}}(r_1)$ are the ranks of the peck poset  $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, they form a symmetric, unimodal sequence.
+Let $z_j = \sum_{j = 1}^k r_j^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}}= \sum_{t}^{}c_tr_1^t,$$ be a polynomial in $r_1.$ Then, the coefficients $c_t$  are the ranks of the Peck poset $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, the coefficients form a symmetric, unimodal sequence.
 \end{prop}
 \begin{proof}
 In Lemma ~\ref{lem:polya_faces_equivlence}, we saw $$[Z_G(z_1,\ldots, z_k)]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
 However, since $\sum_{j = 1}^k i_j = n,$ it follows that $i_k$ is determined by the numbers $i_1,\ldots, i_{k-1},$ and so 
 $$[Z_G(z_1,\ldots, 1)]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
-Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1),$ defined in the statement of the Theorem, as $\sum_{t} c_t (r_1)^t.$ We have just shown that $c_t = |(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ Since $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G$ is a Peck poset by Lemma ~\ref{lem:peck_quotients_vector_f}, its rank sizes form a symmetric and unimodal sequence. Therefore, the coefficients of $Z_G^{i_2,\ldots,i_{k-1}}(r_1)$ form a symmetric, unimodal sequence.
+Next, write $Z_G^{i_2,\ldots,i_{k-1}}(r_1) = \sum_{t} c_t (r_1)^t.$ We have just shown that $c_t = |(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$ Since $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G$ is a Peck poset by Lemma ~\ref{lem:peck_quotients_vector_f}, its rank sizes form a symmetric and unimodal sequence. Therefore, the coefficients of $Z_G^{i_2,\ldots,i_{k-1}}(r_1)$ form a symmetric, unimodal sequence.
 \end{proof}
 
 \begin{rem}
@@ -1226,7 +1208,7 @@ Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Cor
 
 \ssec{Further Identities for the Wreath Product}
 In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
-First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to the $t$th Bell number, using $\mathcal E^{\vec r}(B_n)/G,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
+First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to counting certain types of set partitions, which also count $|(\mathcal E^{\vec r}(B_n)/G)_0|,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
 
 \begin{note}
 For this section only, fix $m,l \in \BN$ and fix $G = S_m \wr S_l.$ Additionally, fix $n = m \cdot l.$
@@ -1240,37 +1222,35 @@ Let $c_i$ be the number of $i$ cycles in $\pi$ and define $$W_\pi(z_1,\ldots, z_
 \end{cases}.$$
 
 Then, there is an equality
-$$\sum_{i=0}^n p_i(l,m,1) r_1^ir_2^{n-i-1} = \sum_{\pi \in G} |\Fix(g)|W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n).$$
+$$\sum_{i=0}^n p_i(l,m,1) r_1^ir_3^{n-i-1} = \sum_{\pi \in G} |\Fix(g)|W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n).$$
 \end{prop}
 \begin{proof}
-Recall from Corollary ~\ref{cor:rank_gen_fn_wreath_1} that $p_i(l,m,1)$ was the rank generating function of $\mathcal E^1(B_{l\cdot m})/G$. 
+Recall from Corollary ~\ref{cor:rank_gen_fn_wreath_1} that $p_i(l,m,1)$ is the rank generating function of $\mathcal E^1(B_{l\cdot m})/G$. 
 
-As was seen in Proposition ~\ref{prop:rank_gen_fn}, it is also the case that $$[Z_G(r_1+r_2+r_3,\ldots, (r_1)^n+(r_2)^n+(r_3)^n)]_{(r_3)^1}$$ is also the rank generating function of $|(\mathcal E^{1}(B_n)/G)_{i_1}|.$
+As was seen in Proposition ~\ref{prop:rank_gen_fn}, it is also the case that $$[Z_G(r_1+r_2+r_3,\ldots, r_1^n+r_2^n+r_3^n)]_{r_2}$$ is the rank generating function of $|\mathcal E^{1}(B_n)/G|.$
 Therefore, 
-$$p_i(l,m,1)=[Z_G(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_3}.$$
-So, to complete the proof, it suffices to show 
-$$[Z_G(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_3} = \sum_{\pi \in G} |\Fix(g)|W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n).$$
+$$p_i(l,m,1)=[Z_G(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_2}.$$
+So, to complete the proof, it suffices to show
+$$[Z_G(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_2} = \sum_{\pi \in G} |\Fix(g)|W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n).$$
 
 To show this, it further suffices to show that for all $\pi \in G,$
-$$Z_\pi(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_3} =  |\Fix(\pi)|W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n).$$
+$$Z_\pi(r_1+r_2 + r_3,\ldots, r_1^n+ r_2^n + r_3^n)]_{r_2} =  |\Fix(\pi)|W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n).$$
 
-Indeed, this is easy to see, because for $r_3$ to have a nonzero coefficient in the expansion of $r_3$ in $Z_\pi,$ first, $\pi$ must have some 1-cycle, as otherwise, no variable could appear in the expansion of $Z_\pi$ raised only to the first power. Second, if $\pi$ has some 1-cycle, then the coefficient of $r_3$ in $$Z_\pi(r_1 + r_2+r_3,r_1^2+r_2^2+r_3^2,\ldots,r_1^n + r_2^n+r_3^n) = \prod_{i=1}^n (r_1^i+r_2^i+r_3^i)^{c_i}$$ is precisely 
-$$c_1 \cdot W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n) = |\Fix(\pi)|W_\pi(r_1 + r_2,r_1^2+r_2^2,\ldots,r_1^n + r_2^n)$$ because $c_1$ is the number of 1-cycles in $\pi,$ which is by definition the number of fixed points of $\pi.$ This is exactly what we wanted to show.
+To see, we may note that $r_2$ must have a nonzero coefficient in the expansion of $r_2$ in $Z_\pi.$ First, if $r_2$ has a nonzero coefficient, $\pi$ must have some 1-cycle, as otherwise, no variable could appear in the expansion of $Z_\pi$ raised only to the first power. Second, if $\pi$ has some 1-cycle, then the coefficient of $r_2$ in $$Z_\pi(r_1 + r_2+r_3,r_1^2+r_2^2+r_3^2,\ldots,r_1^n + r_2^n+r_3^n) = \prod_{i=1}^n (r_1^i+r_2^i+r_3^i)^{c_i}$$ is precisely 
+$$c_1 \cdot W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n) = |\Fix(\pi)|W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n)$$ because $c_1$ is the number of 1-cycles in $\pi,$ which is by definition the number of fixed points of $\pi.$ This is exactly what we wanted to show.
 \end{proof}
 
 \sssec{Bounded Partition Sizes}
-This section is an application of Polya theory, and is moderately tangential to the rest of the paper. However, it relates to the functor $\mathcal E^{\vec r},$ in that it counts the $|(\mathcal E^{\vec r}(B_n)/G)_0| =  |(\mathcal E^{\vec s}(B_n)/G)_1|,$ as described in Remark ~\ref{rem:box_partitions_relation_to_f}.
+This subsubsection is an application of Polya theory, and is moderately tangential to the rest of the paper. However, it relates to the functor $\mathcal E^{\vec r},$ in that it counts the $|(\mathcal E^{\vec r}(B_n)/G)_0| =  |(\mathcal E^{\vec s}(B_n)/G)_1|,$ as described in Remark ~\ref{rem:box_partitions_relation_to_f}.
 
 \begin{note}
-Let $P_{[t]}[l,m]$ denote the set of partitions of the set $[t]$ into at most $l$ sets, such that each set in the partition has size at most $m.$ Let $P[l,m] = \cup_{t \in \BN} P_{[t]}[l,m]$ be the set of all partitions into at most $l$ sets such that each set in the partition has size at most $m.$ Denote $p_{[t]}[l,m] = |P_{[t]}[l,m]|,$ and $p[l,m] = |P[l,m]|.$
+Let $P_{[t]}[l,m]$ denote the set of partitions of the set $[t]$ into at most $l$ blocks, such that each block has size at most $m.$ Let $P[l,m] = \cup_{t \in \BN} P_{[t]}[l,m].$ Denote $p_{[t]}[l,m] = |P_{[t]}[l,m]|,$ and $p[l,m] = |P[l,m]|.$
 \end{note}
 
 \begin{rem}
-It is fairly simple to see that $p_{[t]}[l,m],p[l,m]$ satisfy the recursive formulas
-$$p_{[t]}[l,m] = \sum_{k=1}^l p_{[t-k]}[l-1,m].$$
-$$p[l,m] = \sum_{k=1}^l p[l-1,m].$$
-These can be reached by considering the number of elements in the first row.
-\todo{make this more precise}
+The numbers $p_{[t]}[l,m]$ satisfy the recursive formula
+$$p_{[t]}[l,m] = \sum_{k=1}^l \binom {t-1} {k-1} p_{[t-k]}[l-1,m].$$
+This formula can be shown by splitting up the set $P_{[t]}[l,m]$ based on how many elements appear in the first row. The reason for including $t-1$ instead of $t$ is that $1$ must always appear in the first row.
 \end{rem}
 
 \begin{prop}
@@ -1279,29 +1259,36 @@ There is an equality $p_{[t]}[l,m] = \frac {t!}{l!(m!)^l}\sum_{\pi \in G} \binom
 \end{prop}
 \begin{proof}
 Using Polya's Theorem ~\ref{thm:polya}, we know 
-$$\mathcal E_G(r_1,\ldots, r_k) = \frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n).$$ In particular, 
-$$[\mathcal E_G(r_1,\ldots, r_k)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l-t}} = [\frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}}.$$
+$$F_G(r_1,\ldots, r_k) = \frac 1 {|G|}Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right).$$ In particular, 
+$$
+\left[F_G\left(r_1,\ldots, r_k \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l-t}} = \left[\frac 1 {|G|}Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l - t}}.$$
 
 Of course, by definition of $F_G,$ we know 
-$$[\mathcal E_G(r_1,\ldots, r_k)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l-t}} = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0)$$
-where there are $t$ 1's in the above expression. By definition $\kappa$ is just the number of inequivalent ways to distinctly color $t$ numbers in an $l \times m$ rectangle, up to the action of $G = S_m \wr S_l.$ For any such coloring, let square $a_i$ be colored with color $r_i.$ Each $G$ orbit of colorings has a unique representative where along each row the colors are sorted in increasing order, and additionally, going down the first column, the colors are sorted in increasing order. Here, we are basically ignoring color $t+1,$ just viewing it as a placeholder to color the remaining squares of the grid. Then, the colorings defined above are in bijection with partitions of $[t]$ so that this partition has at most $l$ sets, and each set in this partition has at most $m$ elements. The set of such partitions is exactly  $P_{[t]}[l,m].$ Therefore, the number of such partitions is $p_{[t]}[l,m].$ Then, it follows that
-$$p_{[t]}[l,m] = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0) = [\frac 1 {|G|}Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}}.$$
+$$[F_G(r_1,\ldots, r_k)]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l-t}} = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0)$$
+where there are $t$ 1's in the above expression. By definition, $\kappa$ is just the number of inequivalent ways to distinctly color $t$ numbers in an $l \times m$ rectangle, up to the action of $G = S_m \wr S_l.$ For any such coloring, let square $a_i$ be colored with color $r_i.$ Each $G$ orbit of colorings has a unique representative such that the colors are sorted in increasing order along each row, and in increasing order down the first column. Then, the colorings defined above are in bijection with partitions of $[t]$ so that this partition has at most $l$ blocks, and each block has at most $m$ elements. The set of such partitions is exactly  $P_{[t]}[l,m].$ Therefore, the number of such partitions is $p_{[t]}[l,m].$ Then, it follows that
+$$p_{[t]}[l,m] = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0) = \left[\frac 1 {|G|}Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l - t}}.$$
 
 Of course, $\frac 1 {|G|} = \frac 1 {l!(m!)^l}$ when $G = S_m \wr S_l.$ So, to complete the proof, we just need to show that 
-$$[Z_G(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}} =  t!\sum_{\pi \in G} \binom {\Fix(\pi)} t.$$
+\begin{equation}
+\label{eqn:cycle_fix_sum}
+\left[Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l - t}} =  t!\sum_{\pi \in G} \binom {\Fix(\pi)} t.
+\end{equation}
+We reduce this problem to showing $Z_G$ it is the sum over all the cycle indicators $\sum_{\pi \in G}Z_\pi(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n).$ So, to show Equation \eqref{eqn:cycle_fix_sum} holds, it suffices to show that
+\begin{equation}
+\label{eqn:single_cycle_fix_sum}
+\left[Z_\pi\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l - t}} =  t! \binom {\Fix(\pi)} t
+\end{equation}
 
-This follows from the definition of $Z_G.$ That is, it is the sum over all the cycle indicators $\sum_{\pi \in G}Z_\pi(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n).$ So, to show the above holds, it suffices to show that
-$$[Z_\pi(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}} =  t! \binom {\Fix(\pi)} t$$
-This is now apparent, because $Z_\pi = \prod_{i < m \cdot l} (\sum_j r_j^i)^{c_i},$ where $c_i$ is the number of $i$ cycles in $\pi.$ The only way we can obtain a monomial of the form $r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}$ is if $c_1 > t.$ Then, the coefficient of such a term will exactly be the number of ways to choose an ordered set of $t$ elements from $c_1$ terms. That is, it is precisely $t!\binom {c_1} t.$ However, $c_1$ is the number of 1-cycles, that is $c_1 = \Fix(\pi).$ Hence, $[Z_\pi(\sum_{i=1}^k r_i,\sum_{i=1}^k r_i^2,\ldots, \sum_{i=1}^k r_i^n)]_{r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}} =  t!\binom {\Fix(\pi)} t$ as desired.
+This is now apparent, because $Z_\pi = \prod_{i < m \cdot l} (\sum_j r_j^i)^{c_i},$ where $c_i$ is the number of $i$ cycles in $\pi.$ The only way we can obtain a monomial of the form $r_1 r_2 \cdots r_t r_{t+1}^{m\cdot l - t}$ is if $c_1 \geq t.$ Then, the coefficient of such a term will exactly be the number of ways to choose an ordered set of $t$ elements from $c_1$ terms. That is, it is precisely $t!\binom {c_1} t.$ However, $c_1$ is the number of 1-cycles, that is $c_1 = |\Fix(\pi)|.$ Hence, \eqref{eqn:single_cycle_fix_sum} holds.
 \end{proof}
 
 \begin{rem}
 \label{rem:box_partitions_relation_to_f}
-Thanks to Proposition ~\ref{prop:rank_gen_fn}, an equivalent way to state the above result is that $\sum_{\pi \in G} \binom {\Fix(\pi)} t = |(\mathcal E^{\vec r}(B_n)/G)_0|,$ if $\vec r$ is the vector consisting of $t$ ones. Also, letting $\vec s$ be the vector with $t-1$ ones, we may note $ |(\mathcal E^{\vec r}(B_n)/G)_0| =  |(\mathcal E^{\vec s}(B_n)/G)_1|,$ since one may think of elements of 
+Thanks to Proposition ~\ref{prop:rank_gen_fn}, an equivalent way to state the above Proposition ~\ref{prop:box_partition_by_size} is that $\sum_{\pi \in G} \binom {\Fix(\pi)} t = |(\mathcal E^{\vec r}(B_n)/G)_0|,$ if $\vec r$ is the vector consisting of $t$ ones. Also, letting $\vec s$ be the vector with $t-1$ ones, we may note $ |(\mathcal E^{\vec r}(B_n)/G)_0| =  |(\mathcal E^{\vec s}(B_n)/G)_1|,$ since one may think of elements of 
 $\mathcal E^{\vec s}(B_n)/G$ as tuples of $t-1$ elements, each contained in the next, whose lowest element is of rank 1, and one may think of elements of $(\mathcal E^{\vec r}(B_n)/G)_0$ as tuples of $t$ elements, each contained in the next, whose lowest element is of rank 0. There is an obvious bijection between these two sets, given by adding or removing the element $\emptyset$ or rank 0 in $B_n.$ Therefore, we also obtain $\sum_{\pi \in G} \binom {\Fix(\pi)} t = |(\mathcal E^{\vec s}(B_n)/G)_1|.$
 \end{rem}
 
-We can also get a formula for the size of the whole set $p[l,m]:$
+We can also obtain a formula for the size of the whole set $p[l,m],$ by simply summing over all possible values of $t.$
 
 \begin{prop}
 \label{prop:all_box_partitions}
@@ -1309,7 +1296,7 @@ Define the function $f:\BN \cup 0 \rightarrow \BN,$ by $$f(x) = \begin{cases} \l
 Then, $$p[l,m] = \frac 1 {l!(m!)^l}\sum_{\pi \in G} f(|\Fix(\pi)|).$$
 \end{prop}
 \begin{proof}
-First, note that $\sum_{i=1}^k i! \binom k i = f(k).$ This can be seen fairly easily, because $\sum_{i=1}^k i! \binom k i = k!\sum_{i=0}^k \frac 1 {i!},$ while $k! \cdot e = k!\sum_{i=0}^\infty \frac 1 {i!},$ and for $k > 1,$ it is easy to bound the difference $\sum_{i=k+1}^\infty \frac 1 {i!} < \frac 1 {k!},$ which implies   $\sum_{i=1}^k i! \binom k i  = \lfloor k! \cdot e \rfloor = f(k)$ for $k > 1.$
+First, note that $\sum_{i=1}^k i! \binom k i = f(k).$ This can be seen fairly easily, because $\sum_{i=1}^k i! \binom k i = k!\sum_{i=0}^k \frac 1 {i!},$ while $k! \cdot e = k!\sum_{i=0}^\infty \frac 1 {i!}.$ For $k > 1,$ it is easy to bound the difference $\sum_{i=k+1}^\infty \frac 1 {i!} < \frac 1 {k!},$ which implies   $\sum_{i=1}^k i! \binom k i  = \lfloor k! \cdot e \rfloor = f(k)$ for $k > 1.$
 
 By definition, $p[l,m] = \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)$. Therefore, by Proposition ~\ref{prop:box_partition_by_size},
 \begin{align*}
@@ -1317,9 +1304,12 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 &=\sum_{t = 0}^{l\cdot m}\frac {t!}{l!(m!)^l}\sum_{\pi \in G} \binom {\Fix(\pi)} t\\
 &= \frac {1}{l!(m!)^l}\sum_{t = 0}^{l\cdot m}\sum_{\pi \in G} t!\binom {\Fix(\pi)} t\\
 &=  \frac {1}{l!(m!)^l}\sum_{\pi \in G}\sum_{t = 0}^{l\cdot m} t!\binom {\Fix(\pi)} t\\
-&= \frac {1}{l!(m!)^l}\sum_{\pi \in G}\sum_{t = 0}^{l\cdot m} f(|\Fix(\pi)|).
+&= \frac {1}{l!(m!)^l}\sum_{\pi \in G} f(|\Fix(\pi)|).
 \end{align*}
 \end{proof}
+
+
+
 
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Groups of order $n.$}
@@ -1641,15 +1631,6 @@ Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E^1
 Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
 \end{proof}
 
-In general, for $G \in Gl_n(\BF_q)$ acting on $B_n(q)$, we want to ask the following questions:
-
-\begin{enumerate}
-\item Is $\mathcal E^1 \big(B_n(q)\big)$ unitary Peck? 
-\item Is $\mathcal E^1 \big(B_n(q) /G\big)$ Peck? or more weakly, is it rank unimodal?
-\end{enumerate}
-
-
-
 
 
 
@@ -1911,10 +1892,19 @@ Using ~\ref{t_equivalence}
 \end{proof}
 
 \begin{thm}
+\label{thm:invertibility_lefschetz}
 For $n >2,$ the matrix $M^{n-2i-1}$ is invertible.
 \end{thm}
 \begin{proof}
 We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Theorem ~\ref{explicit_gbn_lefchetz}. Using Theorem ~\ref{gbn_decomposition}, we know $\fbn^1(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
+\end{proof}
+
+\begin{cor}
+\label{cor:unitary_peck_edge_bn}
+The poset $\mathcal E(B_n)$ is unitary Peck.
+\end{cor}
+\begin{proof}
+By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefschetz map $L:P \rightarrow P,x \mapsto \sum_{y \gtrdot x} y,$ satisfies $L^{t-2i}:P_i \rightarrow P_{t-i}$ is an isomorphism. In the case $P = \mathcal E(B_n),\rk(P) = n-1,$ we have that $M$ is the Lefschetz map and by Theorem ~\ref{thm:invertibility_lefschetz}, $M^{n-1-2i}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-1-i}$ is indeed an isomorphism. Hence, $\mathcal E(B_n)$ is unitary Peck.
 \end{proof}
 
 \section{Odds, Ends, and Failed Attempts}
@@ -2135,29 +2125,61 @@ We have tried several variations on these exact maps, but were never quite able 
 
 \ssec{Further Questions}
 
+\ssec{Questions and Observations about $\mathcal E.$}
+
+\sssec{Category Theoretic Properties}
+
+First, it is worth noting that the functor $\mathcal E:\mathcal P \rightarrow \mathcal P$ is neither essentially surjective nor fully faithful. Let $P$ be the poset with points $a,b,c,d$ and relations $a \lessdot c, b \lessdot c, a \lessdot d.$ It is easy to see there is no poset $A$ with $\mathcal E(A) = P.$ This shows $\mathcal E$ is not essentially surjective. Next, let $Q$ be the poset whose elements are $e,f,g$ with $e \lessdot f, e \lessdot g,$ and let $R$ be the poset whose elements are $h,i,j,k$ with $h \lessdot i, j \lessdot k.$ It is clear that $\mathcal E(Q) \cong \mathcal E(R)$ are both a disjoint union of two points, but $Q \not \cong R.$ So, $\mathcal E$ is also not fully faithful.
+
+However, there are many aspects of the functor $\mathcal E,$ and indeed $\mathcal E^{\vec r}$ which are still unexplored. First, note that it is worth noting that $\mathcal E$ also determines a endofunctor on the category of (ungraded) posets, which we shall now notate $\mathcal Q,$ as well as an endofunctor on the category of graded posets $\mathcal P.$ In general, the points of a poset $P$ can be identified with the set $Hom_{\mathcal Q}(B_0,P),$ and the edges of $P$ can be identified with the set $Hom_{\mathcal Q}(B_1,P).$ It is simple to see additionally that the points of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_0,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_1,P).$ Additionally, the edges of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_1,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_2,P).$ These relations may be a reasonable alternate way to think of the functor of points, and are further suggestive of the existence of an adjoint functor.
+
+\begin{question}
+Does the functor $\mathcal E$ have a left or right adjoint?
+\end{question}
+
+\sssec{Unitary Peck Generalizations}
+
+Additionally, there are several posets which we would like to be unitary  
+Peck, as this would allow us to apply much of the theory developed in this paper. They would also make several of the generalizations of $\mathcal E$ potentially more interesting. Two posets we are particularly interested in are $\mathcal E^{\vec r}(B_n)$ and its q-analog, $\mathcal E^{\vec r}(B_n(q)).$
+
 \begin{question}
 Is $\mathcal E^{\vec r}(B_n)$ unitary Peck?
 \end{question}
 
+As mentioned in the introduction, a natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect that a proof similar to that of Corollary ~\ref{cor:unitary_peck_edge_bn} may also prove Question ~\ref{question:unitary_peck_q_edge}.
+
 \begin{question}
+\label{question:unitary_peck_q_edge}
 Is $\mathcal E(B_n(q))$ unitary peck? What about $\mathcal E^{\vec r}(B_n(q))?$
 \end{question}
 
+\sssec{A $q$-analog of Conjecture ~\ref{conj:F_of_BnG_Peck}}
+
+In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the followin question: 
+
 \begin{question}
-For $G$ a group with a cover transitive action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
+For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
 \end{question}
+
+Even more generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG_Peck} holds.
+
+\begin{question}
+For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank unimodal?
+\end{question}
+
+\ssec{Additional CCT Actions}
+
+We also found several additional interesting examples of CCT actions, and we are curious whether they generalize. Once such action is the linear automorphism of the $n$-cube. Using computers, we found that for $n \leq 3,$ the linear automorphisms of the $n$-cube is CCT. We wonder if this generalizes.
 
 \begin{question}
 Does the group of linear automorphism of an $n$-cube in $\BR^n$, whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a common cover transitive action on $\BR^n$?
 \end{question}
 
+Also, we found using computers that the group of invertible linear maps on $\BF_2^3$ acting on the the seven nonzero points of $\BF_2^3$ induce an action on $B_7$ which is CCT. We wonder if this generalizes to other groups of invertible linear maps on finite fields.
+
 \begin{question}
 Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
 \end{question}
-
-Computers show that the action of $GL_3(\BF_2)$ on $B_7$ is CCT.
-
-
 
 \bibliography{References}
 \bibliographystyle{alpha}
