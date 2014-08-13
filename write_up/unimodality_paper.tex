@@ -329,9 +329,14 @@ In this section we review morphisms of graded posets, Peck posets, and a useful 
 
 Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$. When the poset is clear we will omit the $P$ and simply write $x\le y$.
 
-Let $P$ be a finite {\it graded} poset of rank $n$, that is the elements of $P$ are a disjoint union of $P_0,P_1,\ldots,P_n$, called the \textit{ranks} of $P$, such that if $x\in P_i$ and $x\lessdot y$, then $y\in P_{i+1}$.  Define $\rk(x) = k$, where $x\in P_k$.
+A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfing the following conditions.
+\begin{enumerate}
+	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
+	\item If $x < y$ then $\rk(x) < rk(y)$ 
+\end{enumerate}
+Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P|\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$\}.
 
-Denote the category of finite graded posets by $\mathcal{P}$, and let $Q$ be a finite graded poset of rank $n$.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
+Denote the category of finite graded posets by $\mathcal{P}$, and let $P,Q$ be finite graded posets of rank $n$.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
 \begin{rem}\label{rem:bijective_morphism_not_isomorphism}
 Note that we do not require the implication $f(x)\le_Q f(y) \Rightarrow x\le_P y$ in order for $f$ to be a morphism.  In particular this means a bijective morphism $f$ need not be an isomorphism, since it will not necessarily have a two-sided inverse.  
