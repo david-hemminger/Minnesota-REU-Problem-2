@@ -147,11 +147,16 @@
 
 \maketitle
 
+\begin{abstract}
+For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove this conjecture holds for ``common cover transitive'' actions. We show common cover transitive actions are a fairly large class of actions and are closed under semidirect products. We also prove $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
+\end{abstract}
+
 \tableofcontents
 
 \todo{Relegate functoriality to a remark}
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
-\todo{Include a section for generalizations of E and include redfield polya generalization} 
+\todo{Include a section for generalizations of E and include redfield polya generalization}
+\todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
@@ -286,8 +291,9 @@ Here, it is clear that $\mathcal E^1(P)$ is a graded poset, with $rk(x,y) = rk(x
 
 We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E^1(P).$  
 We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
-In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.  
-It is well-know than if $G$ is a group of automorphism of $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+
+In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, we assume that any action of a group $G$ on $B_n,$ notated $\phi:G \times B_n \rightarrow B_n,$ is induced by an action on $[n].$ That is, $\phi$ can always be written in the form $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}$ for $\psi:G\times [n] \rightarrow [n]$ a $G$ action on $[n]$.
+It is well-know that if $\phi$ is any such $G$ action on $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
@@ -337,7 +343,7 @@ A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \righ
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
 	\item If $x < y$ then $\rk(x) < rk(y)$ 
 \end{enumerate}
-Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P|\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$\}.
+Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P|\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$}.
 
 Denote the category of finite graded posets by $\mathcal{P}$, and let $P,Q$ be finite graded posets of rank $n$.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
