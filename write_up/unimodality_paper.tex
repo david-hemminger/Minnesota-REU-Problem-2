@@ -170,7 +170,8 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
 
 %On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E^1(P)$ and on the right hand side is the poset obtained from the relation 
 
-\begin{figure}\label{fig:EP_definition_example}
+\begin{figure}
+\begin{center}
 \[
 \raisebox{1mm}{
 \begin{tikzpicture}[scale=.7] at (0,0)
@@ -193,7 +194,7 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (6)--(7);
   \node (8) at (0,-2) {$P$};
 \end{tikzpicture}
-}
+} \qquad
 \begin{tikzpicture}[scale = .7]
   \node (0) at (0,1) {$(0,1)$};
   \node (1) at (2,1) {$(0,2)$};
@@ -238,7 +239,7 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (3)--(8);
   \draw (0)--(3);
   \draw (1)--(2);
-  \node (9) at (2,-2) {$\mathcal E^1(P)$ with relation $\le_{\mathcal{E^\prime}}$ is not graded};
+  \node (9) at (2,-2) {$\mathcal E^1(P)$ with relation $\le_{\mathcal{E^\prime}}$(not graded)};
 \end{tikzpicture}
 \]
 
@@ -275,6 +276,8 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (zero) -- (a) -- (b) -- (c)--(d)--(one) -- (zero);
 \end{tikzpicture}
 \fi
+\caption{\label{fig:EP_definition_example}The correct definition of $\mathcal E^1$}
+\end{center}
 \end{figure}
 Here, it is clear that $\mathcal E^1(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
@@ -541,19 +544,20 @@ For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Le
 While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal P \rightarrow \mathcal Q,$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost below) to a chain of length three $Q$ (second leftmost) Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects. 
 
 \begin{figure}
+\begin{center}
 \begin{tikzpicture}[scale=.7]
   \node (b) at (0:2cm) {$3$};
   \node (a) at (90:2cm) {$4$};
   \node (c) at (180:2cm) {$2$};
   \node (d) at (270:2cm) {$1$};
   \draw (a) -- (b) -- (d) -- (c)--(a);
-\end{tikzpicture}
+\end{tikzpicture} \quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (90:2cm) {$3$};
   \node (a) at (270:2cm) {$1$};
   \node (c) at (0:0cm) {$2$};
   \draw (a) -- (c) -- (b);
-\end{tikzpicture}
+\end{tikzpicture}\quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (45:1.414cm) {$4$};
   \node (a) at (135:1.414cm) {$3$};
@@ -561,20 +565,24 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
   \node (d) at (315:1.414cm) {$2$};
   \draw (a) -- (d) ;
   \draw (c) -- (b);
-\end{tikzpicture}
+\end{tikzpicture} \quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (90:1cm) {$2$};
   \node (a) at (270:1cm) {$1$};
 \end{tikzpicture}
+\end{center}
+\caption{}
 \end{figure}
-\todo{Put all pictures in figures, and make them look nicer}
+
 However, it is still true that $\mathcal H^r(P)$ can be viewed as a graded poset with $rk_{\mathcal H^r(P)}(x, y) = rk_P(x).$
 \end{rem}
 
 
 \begin{eg}
-Below is an example of the poset $\mathcal H^1(B_3).$
+We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}.
+\end{eg}
 
+\begin{figure}
 \begin{tikzpicture}[scale = 1.5]
   \node (0) at (0,0) {$\emptyset$};
   \node (1) at (-1,1) {$\{1\}$};
@@ -596,8 +604,9 @@ Below is an example of the poset $\mathcal H^1(B_3).$
   \draw (4)--(7);
   \draw (5)--(7);
   \draw (6)--(7);
-  \node (9) at (0,-.5) {$B_3$};
-\end{tikzpicture}
+\end{tikzpicture} 
+
+\vspace*{0.2in}
 
 \begin{tikzpicture}[scale = 1]
   \node (0) at (0,0) {$(\emptyset,\{1\})$};
@@ -615,9 +624,9 @@ Below is an example of the poset $\mathcal H^1(B_3).$
   \draw (0)--(5)--(11)--(7)--(0);
   \draw (1)--(3)--(10)--(8)--(1);
   \draw (2)--(4)--(9)--(6)--(2);
-  \node (9) at (4,-1) {$\mathcal H^1(B_3)$};
 \end{tikzpicture}
-\end{eg}
+\caption{\label{fig:3boolean} $B_3$ and $\mathcal H^1 (B_3)$}
+\end{figure}
 
 
 
@@ -1931,6 +1940,7 @@ In this section, we include various remarks, as well as failed attempts, which d
 
 In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
 
+\begin{figure}
 \begin{tikzpicture}[scale=.7]
   \node (0) at (-4,0) {$0$};
   \node (1) at (-3,0) {$1$};
@@ -1962,6 +1972,11 @@ In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups
   \draw (12)--(14);
   \draw (13)--(14);
 \end{tikzpicture}
+\caption{}
+\end{figure}
+
+
+\begin{figure}
 \begin{tikzpicture}[scale=.7]
   \node (0) at (0,-2) {$G\emptyset$};
   
@@ -2032,6 +2047,8 @@ In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups
   \draw (18) -- (19);
   \draw (19) -- (20);
 \end{tikzpicture}
+\caption{}
+\end{figure}
 
 \ssec{A Failed Attempt for Showing $\mathcal E^1(B_n/G)$ is unimodal}
 
