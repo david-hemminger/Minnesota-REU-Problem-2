@@ -1314,7 +1314,7 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Groups of order $n.$}
 
-In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $|\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}.$ The most important example of such an action is the left multiplication action $\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$ Then, by identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
@@ -1338,7 +1338,7 @@ From Lemma ~\ref{lem:stabilizer_one} for any $x \in B_n$ with $|x| = 1,$ we have
 
 \begin{lem}
 \label{lem:q_counts}
-The number $|(\mathcal E^1(B_n)/G)_i| = \binom{n-1}{i}.$
+The number $\displaystyle |(\mathcal E^1(B_n)/G)_i| = \binom{n-1}{i}.$
 \end{lem}
 \begin{proof}
 Since there are $\binom{n}{i}$ elements $x\in(B_n)_i,$ each with $n-i$ elements $y \in (B_n)_{i+1}$ with $x \subset y,$ there are a total of $\binom{n}{i}\cdot (n-i)$ elements $(x, y) \in \mathcal E^r(B_n)_i.$ By Proposition ~\ref{prop:stabilizer_edge}, we have $|\Stab(x, y)| = 1.$ Therefore, by the Orbit Stabilizer Theorem, it follows $|G(x, y)| = n.$ So, all orbits have the same size. From this,
@@ -1367,13 +1367,12 @@ This is a well known, easy to prove, result. See for instance \cite{stack}
 
 \begin{cor}
 \label{cor:transitive_abelian_ranks}
-Any abelian group $A$ which acts transitively on $[n]$ has $|\mathcal E (B_n)/A|_i= \binom{n-1}{i}.$
+Any abelian group $A$ which acts transitively on $[n]$ has $$|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$$
 \end{cor}
 \begin{proof}
 By Lemma ~\ref{lem:faithful_action}, we can assume $A$ acts faithfully as well.
-By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_counts}, $|\mathcal E (B_n)/A|_i = \binom{n-1}{i}.$
+By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_counts}, $ \displaystyle |(\mathcal E (B_n)/A)_i| = \binom{n-1}{i}.$
 \end{proof}
-
 
 
 
