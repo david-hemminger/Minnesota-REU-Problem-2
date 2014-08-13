@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  12 AUG 2014 20:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  12 AUG 2014 21:54
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
 aper.tex
@@ -974,7 +974,7 @@ per.out)
 
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.tdo
-LaTeX Font Info:    Try loading font information for U+eus on input line 15.
+LaTeX Font Info:    Try loading font information for U+eus on input line 17.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
@@ -1141,14 +1141,14 @@ $[][][][] \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ![] =$
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1315.
+(hyperref)                removing `math shift' on input line 1317.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1315.
+(hyperref)                removing `math shift' on input line 1317.
 
 [22]
-Overfull \hbox (22.59373pt too wide) in paragraph at lines 1357--1358
+Overfull \hbox (22.59373pt too wide) in paragraph at lines 1359--1360
 [][][]\OT1/cmr/m/n/10 Then, ob-serve $[][]\OML/cmm/m/it/10 Gx \OT1/cmr/m/n/10 =
  (\OML/cmm/m/it/10 G=H\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x$ \OT1/cmr/m/n/10 be-c
 ause $[][]\OML/cmm/m/it/10 H$ \OT1/cmr/m/n/10 acts triv-ially. There-fore, $[][
@@ -1159,21 +1159,9 @@ m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G=H\OT1/cmr/m/n/10
  []
 
 
-LaTeX Warning: Citation `stack' on page 23 undefined on input line 1365.
+LaTeX Warning: Citation `stack' on page 23 undefined on input line 1367.
 
 [23]
-
-LaTeX Warning: Marginpar on page 24 moved.
-
-
-LaTeX Warning: Marginpar on page 24 moved.
-
-
-LaTeX Warning: Marginpar on page 24 moved.
-
-
-LaTeX Warning: Marginpar on page 24 moved.
-
 
 LaTeX Warning: Marginpar on page 24 moved.
 
@@ -1231,40 +1219,40 @@ LaTeX Warning: Marginpar on page 27 moved.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1511.
+(amsmath)                 on input line 1516.
 
 [27]
 
 LaTeX Warning: Reference `cor:equivalent_edge_quotient_commuting' on page 28 un
-defined on input line 1550.
+defined on input line 1558.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1593.
+(hyperref)                removing `math shift' on input line 1601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1593.
+(hyperref)                removing `math shift' on input line 1601.
 
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1640.
+(hyperref)                removing `math shift' on input line 1648.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1640.
+(hyperref)                removing `superscript' on input line 1648.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1640.
+(hyperref)                removing `subscript' on input line 1648.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1640.
+(hyperref)                removing `math shift' on input line 1648.
 
 
-Overfull \hbox (32.1904pt too wide) in paragraph at lines 1642--1643
+Overfull \hbox (32.1904pt too wide) in paragraph at lines 1650--1651
 [][][]\OT1/cmr/m/n/10 In this sec-tion, we ex-plic-itly com-pute the rais-ing o
 p-er-a-tors cor-re-spond-ing to both $[][]\U/eus/m/n/10 H[]\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \U/eus/m/n/10 E[]\OT1/cmr/
@@ -1272,21 +1260,21 @@ m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )$
  []
 
 
-LaTeX Warning: Reference `defn:lefchetz' on page 29 undefined on input line 164
-5.
+LaTeX Warning: Reference `defn:lefchetz' on page 29 undefined on input line 165
+3.
 
 [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1694.
+(hyperref)                removing `math shift' on input line 1702.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1694.
+(hyperref)                removing `subscript' on input line 1702.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1694.
+(hyperref)                removing `math shift' on input line 1702.
 
 [30] [31] [32] [33]
 Underfull \vbox (badness 1137) has occurred while \output is active []
@@ -1294,10 +1282,10 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
  [34]
 
 LaTeX Warning: Reference `gbn_decomposition' on page 35 undefined on input line
- 1898.
+ 1906.
 
 
-Overfull \hbox (64.6847pt too wide) in paragraph at lines 1947--2018
+Overfull \hbox (64.6847pt too wide) in paragraph at lines 1955--2026
 [][][][] [] 
  []
 
@@ -1307,36 +1295,36 @@ Underfull \vbox (badness 3364) has occurred while \output is active []
  [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2021.
+(hyperref)                removing `math shift' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2021.
+(hyperref)                removing `superscript' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2021.
+(hyperref)                removing `subscript' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2021.
+(hyperref)                removing `math shift' on input line 2029.
 
 [36]
-Overfull \hbox (9.46776pt too wide) in paragraph at lines 2112--2113
+Overfull \hbox (9.46776pt too wide) in paragraph at lines 2120--2121
 [][][][] 
  []
 
 [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2129.
+(hyperref)                removing `math shift' on input line 2137.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2129.
+(hyperref)                removing `math shift' on input line 2137.
 
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 2136.
+ut line 2144.
 [38]
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.bbl
@@ -1344,17 +1332,17 @@ per.bbl
 per.brf)
 \tf@brf=\write9
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2187.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2195.
  [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2187.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2195.
 
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2187.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2187.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2195.
 
 Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
-(rerunfilecheck)             Checksum: C1D689FD6D8EFBBDE4248211E5CF6FBA;2373.
+(rerunfilecheck)             Checksum: A12A5E6BF1913E638B926E8459A64289;2373.
 Package rerunfilecheck Info: File `unimodality_paper.brf' has not changed.
 (rerunfilecheck)             Checksum: 617DE054DF4CD735B045E65B36698D40;639.
 
@@ -1364,13 +1352,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2187.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2195.
  ) 
 Here is how much of TeX's memory you used:
- 21423 strings out of 493921
- 378130 string characters out of 3147285
- 574371 words of memory out of 3000000
- 23623 multiletter control sequences out of 15000+200000
+ 21399 strings out of 493921
+ 377506 string characters out of 3147285
+ 566217 words of memory out of 3000000
+ 23603 multiletter control sequences out of 15000+200000
  14204 words of font info for 63 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  56i,30n,80p,3313b,1144s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1397,9 +1385,9 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (39 pages, 654978 bytes).
+Output written on unimodality_paper.pdf (39 pages, 644475 bytes).
 PDF statistics:
- 1183 PDF objects out of 1200 (max. 8388607)
- 475 named destinations out of 1000 (max. 500000)
+ 1156 PDF objects out of 1200 (max. 8388607)
+ 471 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

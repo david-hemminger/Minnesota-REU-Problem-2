@@ -1311,6 +1311,8 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 
 
 
+
+
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Groups of order $n.$}
 
@@ -1385,22 +1387,27 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \section{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
-In this section, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E^1 (B_n)/C_n$ is $$|\mathcal E^1 (B_n)/C_n|_{i} = \binom{n-1}{i}.$$
-We will bound $|\mathcal E^1(B_n/C_n)|_{i}$ by  $|\mathcal E^1 (B_n)/C_n|_{i}$ to obtain the unimodality. 
+In this section, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E^1 (B_n)/C_n$ is $$|(\mathcal E^1 (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+We will bound $|(\mathcal E^1(B_n/C_n))_i|$ by  $|(\mathcal E^1 (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
-\begin{note} Throughout the section, we fix an arbitrary $n$ to start with, and set $$q_i = |\mathcal E^1 (B_n)/C_n|_{i}, \quad p_i = |\mathcal E^1(B_n/C_n)|_{i}. $$
-\todo{ $ |\mathcal E^1(B_n/C_n)|_{i}$ should probably be notated as $ |\mathcal E^1(B_n/C_n)_{i}|$, since it is the size of the $i$th rank of the poset. You should check to make sure you did not do this anywhere else (it is also done in the q-analog case, currently in ~\ref{q:number_subspaces}, for instance) }
-\todo{It might be clearer to say: fix $P(n) = \mathcal E^1(B_n)/C_n,Q(n) = \mathcal E^1(B_n/C_n),$ and notate $p(i,n) = |P(n)_i|,q(i,n) = |Q(n)_i|.$ When the $n$ is clear, we shall write $p_i,q_i$ for $p(i,n),q(i,n).$}  
+
+\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) = \mathcal E^1 (B_n)/C_{n}, \quad P(n) = \mathcal E^1(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are refering to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
 \end{note}
 
 
-The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in [\mathcal E^1(B_n)/C_n]_{i}$ \todo{Perhaps consider writing $(P)_i$ instead of $[P]_i$ for the $i$th rank of $P.$ Above I used the notation $[f(x,y)]_x^a$ for the coefficient of $x^a$ in $f(x,y),$ and we have also been using parentheses above for this. Again, this is something that appears several times in this and the next section, and if you agree, you should make sure to change it everywhere.} where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
 
+
+The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in \big(\mathcal E^1(B_n)/C_n\big)_{i}$ where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
+ 
 
 \begin{note}
-We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ and call $\sigma_0$ the {\it $1$-click rotation,} which generates the group $C_n$.\todo{Perhaps the word ``1-click'' isn't really necessary, (although I agree it's important to fix $\sigma_0$ since you only use ``1-click'' rotation one or two times, and it might be clearer to say something about $\sigma_0^dy$ rather than something about the $d$-click rotation of y. Additionally, you don't define $d$-click rotation anywhere, but again, I don't think you should use this work ``click'' at all, even though I know you like thinking in these terms.}
+We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ the generator of the group $C_n$.
 \end{note}
+
+%%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%
+
+
 \begin{note}
 We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap \mathcal E^1(B_n)\subset \mathcal E^1(B_n)$.
 \todo{maybe we should make different notation for this, something like $(G\times G)(x, y),$ instead of abusing notation. I put this as a notation because it is used later in lemma 11.0.14 as well}
@@ -1418,8 +1425,6 @@ Note that $q_i$ is the number of the disjoint subsets $G(x, y)$ in $\mathcal E^1
 
 
 First consider $\sigma = \sigma_0$ and $(x,y)$ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. \todo{I think (i.e...) actually makes things more confusing, rather than clearer. Consider removing the clause after i.e.?} It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, i.e., $y = \{1, 2, ..., i+1\}$ and $x = \{1, 2, ..., i \}$ (up to rotational equivalence by actions of $G$). 
-
-%Similarly we consider $\sigma = \sigma_0^2$ and $x \otimes y $ where $x \lessdot y$ and $\sigma x \lessdot y$,  i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $2$-click rotation, then the remaining $i$ filled beads are in $\sigma y$. Now we again trace back from an arbitrarily assigned ``last'' filled bead in $y$, say at position $P$, then at position $P - 2, P -4, ... $ (reduce mod $n$ whenever necessary) there need to be a filled bead by assumption. In this case, there is again only one possibility of $G (x \otimes y)$, namely the $G$-orbits of $y = \{1, 3, ... 2i +1\}$  and $x = \{1, 3, ..., 2i -1\}$.
 
   
 In general, for any $\sigma = \sigma_0^{j}$, $j < n/2$, there is a precisely one orbit $G(x,y)$ such that $x \lessdot y$ and $\sigma x < y$.  Notice that the necklace $\{1, j+1,2j+1, ...  \}$ and $\{1, (n-j)+1, 2(n-j)+1, ... \}$ are the same necklaces, so it suffices to count the number of $(x, y)$ with $x \lessdot y,\sigma_0^jx \lessdot y,$ with $j < n/2$. It is also easy to show that, for all distinct $j < n/2$, the necklaces represented by $\{1, j+1, 2j+1, ..., i\cdot j+1\}$ are all distinct, since $n$ is a prime number. 
@@ -1545,6 +1550,9 @@ Let $G = D_{2p}$ or $G = D_{4p}$ where $p$ is prime , and $p_i, q_i$ as defined 
 The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E^1(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
 \todo{Currently working on this section} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%% Section needs work %%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{rem}
 Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Corollary ~\ref{cor:equivalent_edge_quotient_commuting} implies that the poset $\mathcal E^1(B_n/G)$ is Peck.
