@@ -1407,24 +1407,22 @@ We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ the generator of the group $C_n$.
 
 %%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%
 
-
 \begin{note}
 We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap \mathcal E^1(B_n)\subset \mathcal E^1(B_n)$.
-\todo{maybe we should make different notation for this, something like $(G\times G)(x, y),$ instead of abusing notation. I put this as a notation because it is used later in lemma 11.0.14 as well}
 \end{note}
 
 \begin{lem}{\label{lem:cyclicprime}}
 Let $G = C_n$ where $n$ is a prime, then $q_i - p_i = (n-1)/2$ for $ 1 \le i \le n-2$. 
 \end{lem}
 
-\begin{proof} \todo{Fixed issue in my version, hasn't pushed yet}
-Let $G = C_n$ where $n$ is a prime. We consider the action of $G$ on $B_n$. 
- Note that $n$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $n$-cycle in its cycle decomposition. Now suppose $(x, y) \in A_i$ \todo{what is $A_i.$ I think you may mean $\mathcal E^1(B_n)_i?$}  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_n$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Let $(Gx, Gy)$  be an element in $[\mathcal E^1(B_n/G)]_i$\todo{again, consider changing brackets to parentheses, although I'll stop pointing this out}, i.e., an edge class in the necklace poset, with representative $(x, y)$. We abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n) \subset \mathcal E^1(B_n)$. We view $G(x , y)$ as a subset of $\mathcal E^1 (B_n)$, namely $G(x, y) = \{(gx, g y) : g \in G \}$. Clearly $G(x , y) \subset (Gx,Gy)$ as subsets of $\mathcal E^1 (B_n)$. It is also clear that the number of distinct $\sigma \in G$ such that $\sigma x < y$ is precisely the number of $G$-orbits in $(Gx, Gy)$. In particular, if the only $\sigma $ such that $\sigma x < y$ is identity, then $(Gx, Gy)=G(x, y)$ as subsets of $\mathcal E^1 (B_n)$. 
+\begin{proof}  We consider the action of $G$ on $B_n$. 
+ Note that $n$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $n$-cycle in its cycle decomposition. Now suppose $(x, y) \in \mathcal E^1(B_n)_i$  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_n$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Let $(Gx, Gy)$  be an element in $(\mathcal E^1(B_n/G))_i$, i.e., an edge class in the necklace poset, with representative $(x, y)$. We abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n) \subset \mathcal E^1(B_n)$. We view $G(x , y)$ as a subset of $\mathcal E^1 (B_n)$, namely $G(x, y) = \{(gx, g y) : g \in G \}$. Clearly $G(x , y) \subset (Gx,Gy)$ as subsets of $\mathcal E^1 (B_n)$. It is also clear that the number of distinct $\sigma \in G$ such that $\sigma x < y$ is precisely the number of $G$-orbits in $(Gx, Gy)$. In particular, if the only $\sigma $ such that $\sigma x < y$ is identity, then $(Gx, Gy)=G(x, y)$ as subsets of $\mathcal E^1 (B_n)$. 
 
 Note that $q_i$ is the number of the disjoint subsets $G(x, y)$ in $\mathcal E^1 (B_n)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x , y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$, and we claim that for $i\neq 1,n-1$, this number is $(n-1)/2$. \todo{Probably it would be best to put the lemma later saying there are at most two $G(x,y)$ in the same $(Gx, Gy).$ If you don't want to do this, you might have to say that there are at most 2 $G$ orbits in the same $G\times G$ orbit (which is non-obvious, and very special to the cyclic group.) I think you really need to put this paragraph after the next paragraph.}
 
 
 First consider $\sigma = \sigma_0$ and $(x,y)$ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. \todo{I think (i.e...) actually makes things more confusing, rather than clearer. Consider removing the clause after i.e.?} It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, i.e., $y = \{1, 2, ..., i+1\}$ and $x = \{1, 2, ..., i \}$ (up to rotational equivalence by actions of $G$). 
+
 
   
 In general, for any $\sigma = \sigma_0^{j}$, $j < n/2$, there is a precisely one orbit $G(x,y)$ such that $x \lessdot y$ and $\sigma x < y$.  Notice that the necklace $\{1, j+1,2j+1, ...  \}$ and $\{1, (n-j)+1, 2(n-j)+1, ... \}$ are the same necklaces, so it suffices to count the number of $(x, y)$ with $x \lessdot y,\sigma_0^jx \lessdot y,$ with $j < n/2$. It is also easy to show that, for all distinct $j < n/2$, the necklaces represented by $\{1, j+1, 2j+1, ..., i\cdot j+1\}$ are all distinct, since $n$ is a prime number. 
@@ -1437,18 +1435,10 @@ In general, for any $\sigma = \sigma_0^{j}$, $j < n/2$, there is a precisely one
 By the Proposition and the symmetry of $p_i$, we only need to show $p_0 \le p_1$, but $p_0 = 1$, so the claim holds.
 \end{proof}
 
-A similar method can be used to bound $q_i - p_i$ for $n$ not necessarily prime.  Our next goal in the section is to show that:
-\todo{It seems like there is never a proof of this lemma, although presumably you mean to put it right above ~\ref{cor:cyclic_unimodal}. It might also be a little confusing to state this lemma in its precise form here, and why it implies unimodality, since it seems to be the same as ~\ref{cor:cyclic_unimodal}. Consider removing this lemma here, and saying the goal in this section is to prove ~\ref{cor:cyclic_unimodal}.}
+A similar method can be used to bound $q_i - p_i$ for $n$ not necessarily prime. Let $\lambda_i = q_i - p_i$, our next goal in the section is to show that ,  for sufficiently large $n$, the difference $\lambda_{i+1} - \lambda_{i}$ is bounded above by  $q_{i+1} - q_i$. 
 
-\begin{lem}{\label{lem:cyclicgeneral}}
+Note that this suffices to show that the $p_i$ are unimodal, since $$p_{i+1} - p_{i} = (q_{i+1} - \lambda_{i+1}) - (q_i - \lambda_i) = (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0.$$ 
 
-Let $G = C_n$, and $p_i, q_i$ be defined as above. Let $\lambda_i = q_i - p_i$, then for sufficiently large $n$, the difference $\lambda_{i+1} - \lambda_{i}$ is bounded above by  $q_{i+1} - q_i$. \end{lem}
-
-Note that this suffices to show that the $p_i$ are unimodal, since the Lemma implies that
-$$p_{i+1} - p_{i} = (q_{i+1} - \lambda_{i+1}) - (q_i - \lambda_i) = (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0.$$ 
-
-\begin{note} Let $B_m/C_m$ be the necklace quotient poset, and let $q (i, m) = |\mathcal E^1 (B_m)/C_m|_{i}$ and similarly let $p (i, m) = |\mathcal E^1 (B_m/C_m)|_{i}$. \todo{Perhaps define this together with $p_i$ above, since $p_i$ really depend on $n$ as well? See the comment on your definition of $p_i,q_i.$}
-\end{note}
 
 \begin{defn}
 Let  $\sigma \in G.$ we call each subset $s \subset x \in B_n$ that is fixed by $\sigma$ a \textit{full cycle} (under the action of $\sigma$), and $x \setminus \left(\cup_{\text{full cycles } s} s\right)$ is called a \textit{tail cycle} (under the action of $\sigma$).  
@@ -1462,12 +1452,13 @@ Let $G = C_n$, $n$ not necessarily prime. Assume that $\sigma_0^r x \lessdot y$ 
 
 By assumption, $x$ has a tail cycle under the action of $\sigma_0^{r}$, for otherwise $x$ is fixed by $\sigma_0^r,$ because then $g = id$ satisfies $gx = \sigma_0^rx,gy = y.$ Additionally, $y$ must have some tail cycle under the action of $\sigma_0^r$, for otherwise $y$ is fixed under $\sigma_0^r$  and we can take $g = \sigma_0^r$.  Call $\gamma$ the tail cycle of $y$, so $\gamma$ consists of some filled beads in the necklace, one of which is the element $z = y \minus x$. Let $\sigma$ be any rotation such that $\sigma x \lessdot y$. then $\sigma$ has to take a full cycle of $x$ (under $\sigma_0^r$) to another full cycle (under $\sigma_0^r$), so $\sigma (\gamma \minus z) \lessdot \gamma$. Recall that $\sigma_0^r (\gamma \minus z) \lessdot \gamma$ by assumption, so the elements in $\gamma$ are $r$-positions away from each other, namely $\gamma = \{ z, z-r, z-2r, ... z -l r\}$, but $z+r \notin \gamma,$ since $\gamma$ a tail cycle. Since $\sigma (\gamma \minus z) \lessdot \gamma$, there is some $m$ for which $\sigma(z - m r) = z$. But then, $z-(m-1)r \in x,$ and $\sigma(z - (m-1)r) = z+r \notin y$, a contradiction. 
 \end{proof}
+
+
 \begin{lem}{\label{lem:cyclic_counting_difference}} 
-Let $G= C_n$, $q_i$ and $p_i$ be defined as usual, 
-\todo{I don't think you need to say let $q_i,p_i$ be defined as usual}
-then $$q_i - p_i = \#\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^r x, g y = y \}.$$
-\todo{inconsistent notation for size of a set, change $\#$ to $|*|.$}
+Let $G= C_n$, and $q_i = q(i, n), p_i = p(i, n)$ as usual, 
+then $$q_i - p_i = |\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^r x, g y = y \}|.$$
 \end{lem}
+
 
 \begin{proof}
 
@@ -1497,14 +1488,14 @@ This holds regardless of $i$.
 
 Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes elements of the form $\{s, s+r, s+2r, ..., \}$ for any starting point $s$, which are proper subsets of $[n]$. For $y \in B_n,$ one may write $y$ as the union of full cycles and at most one tail cycle under the action of $\sigma_0^r$. Now, if $y \in B_n$ has no tail cycles under the action of $\sigma_0^r$ then $(\sigma_0^rx , \sigma_0^ry)= (\sigma_0^rx , y) \in G(x, y).$ This means that if $G(x, y)\in q_i - p_i =|\{G{(x, y)} : \exists \: \, \sigma_0^t x \lessdot y \text{ where } t < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^t x, g y = y \}|,$ then it must be $\sigma_0^s x \lessdot y$ with $s \neq r, s < n/2.$
 
-So, $p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$. \todo{I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?} Note that the difference only occurs \todo{Elise: does this mean $\lambda_{i+1} - \lambda_{i}\neq 0$?} when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also a special orbit, thus does contribute $1$ when we count $\lambda_{i+1}$. \todo{what does ``contribute'' mean? Are you are trying to say it lies in a certain set?} In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such special orbit does not contribute to $\lambda_{i+1} - \lambda_{i}$. \todo{Again, I don't understand} Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be a special orbit anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. \todo{What does this mean? It sounds like you're thinking of $\lambda_i$ as a variable, which changes size as you look at different $G$ orbits.} If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$. \todo{How can you choose to ignore a scenario? What does that mean?}
+So, $p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$. \todo{I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?} Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also a special orbit, thus does contribute $1$ when we count $\lambda_{i+1}$. \todo{what does ``contribute'' mean? Are you are trying to say it lies in a certain set?} In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such special orbit does not contribute to $\lambda_{i+1} - \lambda_{i}$. \todo{Again, I don't understand} Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be a special orbit anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. \todo{What does this mean? It sounds like you're thinking of $\lambda_i$ as a variable, which changes size as you look at different $G$ orbits.} If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$. \todo{How can you choose to ignore a scenario? What does that mean?}
 
 Now return to the situation where $G{(x , y)}$ is not a special orbit, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is a special orbit, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such special orbits, since the $x$ part will be $d$-rotationally symmetric. \todo{Can you make this sentence more precise? I don't understand what the ``x'' part is, what a ``family'' of such special orbits is, etc.} We claim that, this \todo{what is this? can you write it precisely as a set?} is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{what index is this sum over?} This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. \todo{what does it mean to insert a tail cycle, and what is a block of elements?}
 
 We can introduce $k = n/d$  and rewrite the sum as 
 $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$ \todo{with respect to which group element?} has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
  
-Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can potentially obtain a better bound  \todo{Elise: of what?  Be precise.} if we need to. \todo{Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}
+Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can potentially obtain a better bound if we need to. \todo{Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}
 \end{proof}
 \todo{Maybe call this a proposition or theorem instead of corollary? It doesn't really follow immediately from other things, and it's the main result we're showing}
 \begin{cor}{\label{cor:cyclic_unimodal}} 
@@ -1548,11 +1539,8 @@ Let $G = D_{2p}$ or $G = D_{4p}$ where $p$ is prime , and $p_i, q_i$ as defined 
 
 \begin{proof}
 The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E^1(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
-\todo{Currently working on this section} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
+\todo{This proof needs more work (self)} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
-
-%%%%%%%%%%%%%%%%%%%%% Section needs work %%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{rem}
 Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Corollary ~\ref{cor:equivalent_edge_quotient_commuting} implies that the poset $\mathcal E^1(B_n/G)$ is Peck.
@@ -1589,8 +1577,6 @@ The poset $\mathcal E^1(B_n/D_{2n})$ is rank symmetric and rank unimodal.
 \begin{proof}
 The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and Corollary \ref{cor:cyclic_unimodal}. In fact, we can bound the difference of $\lambda_{i+1} - \lambda_i$ by precisely the same bound used in Lemma \ref{lem:cyclic_bounding_lambda}, since the difference we get here (where $G = D_{2n}$) is smaller than the previous difference (where $G= C_n$). Then, a similar proof shows that the difference of $q_{i+1} - q_i$ obtained  in Lemma \ref{lem:dihedral_prime} is significantly larger than the upper bound.
 \end{proof}
-
-
 
 
 
