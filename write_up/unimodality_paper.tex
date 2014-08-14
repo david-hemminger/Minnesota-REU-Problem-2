@@ -145,13 +145,15 @@
 \listoftodos
 \newpage
 
-\maketitle
-
 \begin{abstract}
 For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove this conjecture holds for ``common cover transitive'' actions. We show common cover transitive actions are a fairly large class of actions and are closed under semidirect products. We also prove $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
 \end{abstract}
 
+\maketitle
+
 \tableofcontents
+
+
 
 \todo{Relegate functoriality to a remark}
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
@@ -366,6 +368,7 @@ $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Spern
 Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ when our meaning is clear.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
 
 \begin{defn}
+\label{defn:lefschetz}
 A map $U\colon V(P)\rightarrow V(P)$ is an \textit{order-raising operator} if $U(V(P_n)) = 0$ and for all $0\le i\le n-1$, $x\in P_i$ we have
 
 $$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
@@ -1335,9 +1338,13 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 
 
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
-\section{Groups of order $n.$}
+\section{Unimodal Quotients}
 
-In this section, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i-1}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this section, show that several important posets $\mathcal E^1(B_n/G)$ are rank symmetric and rank unimodal. First, we examine left multiplication actions, showing that for $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the left multiplication action of the cyclic group, $C_n$ on itself, which can also be thought of as $C_n$ acting on the vertices of an $n$-gon by rotation, induces an action on $B_n$ such that $\mathcal E^1(B_n/C_n)$ is rank unimodal and symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E^1(B_n/D_{2n})$ is rank unimodal and symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT. Finally, we develop a $q$-analog the cyclic group $C_n(q)$ acting on the $q$-analog of the boolean algebra, $B_n(q)$ and show $|(B_n(q)/C_n(q))_i| = \binom {n-1} i _q.$
+
+\ssec{Groups of order $n.$}
+
+In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
@@ -1404,10 +1411,10 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 
 
 %%%%%%%%%%%%%%%%%  Cyclic  %%%%%%%%%%%%%%%%%%
-\section{Quotient by the Cyclic Group}
-\label{sec:cyclic}
+\ssec{Quotient by the Cyclic Group}
+\label{ssec:cyclic}
 
-In this section, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E^1 (B_n)/C_n$ is $$|(\mathcal E^1 (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+In this subsection, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E^1 (B_n)/C_n$ is $$|(\mathcal E^1 (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|(\mathcal E^1(B_n/C_n))_i|$ by  $|(\mathcal E^1 (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
@@ -1545,10 +1552,10 @@ Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =
 
 
 %%%%%%%%%%%%%%%%% Dihedral  %%%%%%%%%%%%%%%%%%
-\section{Quotient by the Dihedral Group}
-\label{sec:dihedral}
+\ssec{Quotient by the Dihedral Group}
+\label{ssec:dihedral}
 
-In this section, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal.
+In this subsection, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal.
 
 
 \begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E^1 (B_n)/D_{2n}, \quad P = \mathcal E^1(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E^1 (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E^1(B_n/D_{2n}) \big)_i|. $$ 
@@ -1565,7 +1572,7 @@ The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. F
 \end{proof}
 
 \begin{rem}
-Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Corollary ~\ref{cor:equivalent_edge_quotient_commuting} implies that the poset $\mathcal E^1(B_n/G)$ is Peck.
+Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E^1(B_n/G)$ is Peck.
 \end{rem}
 
 
@@ -1606,10 +1613,10 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 
 
 %%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
-\section{A $q$-analog}
-\label{sec:q_analog}
+\ssec{A $q$-analog}
+\label{ssec:q_analog}
 
-In this section we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
+In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
 
 Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
 
@@ -1658,7 +1665,7 @@ Now we can calculate the number $q_i$, which is the total number of elements in 
 In this section, we explicitly compute the raising operators corresponding to both \linebreak $\mathcal H^1(B_n),\mathcal E^1(B_n)$ and explicitly show that $\mathcal E^1(B_n)$ is unitary Peck by showing certain raising maps are invertible.
 
 \begin{note}
-For this section, we will use $M^{n-2i-1} = \mathcal E^1(U)^{n-2i-1},$ where $\mathcal E^1(U)^{n-2i-1}:\mathcal E^1(B_n)_i \rightarrow \mathcal E^1(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefchetz}.
+For this section, we will use $M^{n-2i-1} = \mathcal E^1(U)^{n-2i-1},$ where $\mathcal E^1(U)^{n-2i-1}:\mathcal E^1(B_n)_i \rightarrow \mathcal E^1(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
 \end{note}
 \begin{note}
 For the remainder of this section, we shall take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
@@ -1911,7 +1918,7 @@ Using ~\ref{t_equivalence}
 For $n >2,$ the matrix $M^{n-2i-1}$ is invertible.
 \end{thm}
 \begin{proof}
-We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Theorem ~\ref{explicit_gbn_lefchetz}. Using Theorem ~\ref{gbn_decomposition}, we know $\fbn^1(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
+We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Corollary ~\ref{cor:HBn_unitary_peck}. Using Theorem ~\ref{gbn_decomposition}, we know $\fbn^1(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
 \end{proof}
 
 \begin{cor}
