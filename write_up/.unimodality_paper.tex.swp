@@ -537,7 +537,7 @@ Fortunately there is a simpler -- albeit less direct -- route.  In order to avoi
 For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
 \end{defn}
 
-\begin{eg}
+\begin{eg}\label{eg:3boolean}
 We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}.  Note that $\mathcal H^1(B_3)$ is isomorphic to the disjoint union of three copies of $B_2$.  We generalize this phenomenon to $\mathcal{H}^r(B_n)$ for all $r,n$ in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
@@ -590,7 +590,7 @@ We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}
 
 
 \begin{rem}\label{rem:order_containment}
-Note that by definition $(x,y)\lessdot_{\mathcal{H}} (x^\prime,y^\prime)$ precisely when $(x,y)\lessdot_{\mathcal{E}} (x^\prime,y^\prime)$ and $x^\prime\not\le y$, hence $(x, y)\lessdot_{\mathcal{H}} (a, b) \Rightarrow (x, y)\lessdot_{\mathcal E} (a, b)$.
+Note that by definition $(x,y)\lessdot_{\mathcal{H}} (x^\prime,y^\prime)$ precisely when $(x,y)\lessdot_{\mathcal{E}} (x^\prime,y^\prime)$ and $x^\prime\not\le y$, hence $(x, y)\lessdot_{\mathcal{H}} (x^\prime, y^\prime) \Rightarrow (x, y)\lessdot_{\mathcal E} (x^\prime, y^\prime)$.  In other words, $\mathcal{H}^r(P)$ has the same elements as $\mathcal{E}^r(P)$ but with a weaker partial order.
 \end{rem}
 
 
@@ -646,7 +646,7 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
 
 
 
-Given an action of a group $G$ on $P$, we can define an action of $G$ on $\mathcal{H}^r(P)$ as we did for $\mathcal{E}^r(P)$ by again defining $g\cdot (x,y) = (gx,gy)$ for all $(x,y)\in P$.  We will then have a well-defined quotient poset $\mathcal{H}^r(P)/G$ with the same elements as $\mathcal{E}^r(P)/G$.
+Given an action of a group $G$ on $P$, we define an action of $G$ on $\mathcal{H}^r(P)$ as we did for $\mathcal{E}^r(P)$ by again defining $g\cdot (x,y) = (gx,gy)$ for all $(x,y)\in P$.  We will then have a well-defined quotient poset $\mathcal{H}^r(P)/G$ with the same elements as $\mathcal{E}^r(P)/G$.
 
 
 \begin{lem}
@@ -656,12 +656,15 @@ The function defined by $g\cdot (x, y)= (gx, gy)$ for all $g\in G$, $(x, y)\in \
 
 \begin{proof}
 Let $g\in G$.  Since $\le_{\mathcal{H}}$ is the transitive closure of $\lessdot_{\mathcal{H}}$ it suffices to show that for all $(x,y),(x^\prime,y^\prime)\in \mathcal{H}^r(P)$ we have $(x, y) \lessdot_{\mathcal H} (x^\prime,y^\prime) \iff g(x, y) \lessdot_{\mathcal H} g(x^\prime, y^\prime)$.  Since $g$ is an automorphism of $P$, we have $x\le_P x^\prime \iff gx\le_P gx^\prime$, $y\le_P y^\prime \iff gy\le_P gy^\prime$, and $y\not\le x^\prime \iff gy\not\le gx^\prime$, so the result follows from the definition of $\le_{\mathcal{H}}$.
-
-
+\end{proof}
 %It is rank preserving because $$rk_{\mathcal H^r(P)}(g\cdot(x, y)) = rk_{\mathcal H^r(P)}(gx, gy)) = rk_P(gx)=rk_P(x) = rk_{\mathcal H^r(P)}(x, y).$$
 
 %The fact that the $G$-action is rank-preserving on $\mathcal{H}^r(P)$ follows from the fact that $G$-action is rank-preserving on $\mathcal{E}^r(P)$.  In order to show the action is order preserving, it suffices to show that if $(x, y) \lessdot_{\mathcal H} (a, b)$ then $g(x, y) \lessdot_{\mathcal H} g(a, b),$ because $\leq_{\mathcal H}$ is the transitive closure of $\lessdot_{\mathcal H}.$ By definition of $\lessdot_{\mathcal H},$ we have $x \lessdot_P a,y\lessdot_P b,y \not \leq b$.  Since $g$ is an automorphism of $P$ for all $g\in G$, it follows that $gx \lessdot_P ga,gy \lessdot_P gb, gy \not \leq_P gb$, hence $g(x, y) \lessdot_{\mathcal H} g(a , b).$
-\end{proof}
+
+
+
+
+
 
 \begin{lem}
 \label{lem:bijection_h_f}
@@ -674,7 +677,7 @@ The map $f:\mathcal H^r(P)/G \rightarrow \mathcal E^r(P)/G$ defined by $G(x,y) \
 The elements of $\mathcal H^r(P)/G,\mathcal E^r(P)/G$ are the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank preserving, to show $f$ is a morphism, it suffices to show $f$ is order preserving. This is immediate from Remark ~\ref{rem:order_containment}.
 \end{proof}
 
-
+The remaining ingredient to the proof of Theorem \ref{thm:cover_transitive_implies_Peck} is to show that $\mathcal{H}^r(B_n)$ is unitary Peck, which we do by generalizing Example \ref{eg:3boolean} and showing that $\mathcal{H}^r(B_n)$ is isomorphic to the disjoint union of boolean algebras.
 
 \begin{prop}\label{prop:computing_HBn}
 $\mathcal{H}^r(B_n)$ is isomorphic to $\binom{n}{r}$ disjoint copies of $B_{n-r}$.
@@ -718,51 +721,23 @@ By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By
 By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n$.  Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
 \end{proof}
 
-%%%%%%%%%%%%%%%%% The H poset   %%%%%%%%%%%%%%%%%%
-\section{The Poset $\mathcal{H}^r(P)$}
-%In this discussion we discuss a modified version of $\mathcal E^r(P)$, which we will denote $\mathcal{H}^r(P)$. The main point of introducing this object is to give a simple, non-computational proof that $\mathcal E^r(B_n)/G$ is Peck. 
-
-
-
-%We now define the object $\mathcal H^r(P),$ whose elements are the same as those of $\mathcal{H}^r(P),$ but we define a different partial order on $\mathcal{H}^r(P)$.
-
-
-
-
-
-
-
-
-
-
-
-Similarly to $\mathcal E^r(P)$, the action of $G$ on $P$ induces an order-preserving action of $G$ on $\mathcal{H}^r(P)$.
-
-
-
-
-
-
-
-The primary advantage of Proposition \ref{prop:computing_HBn} is it allows us to easily see that $\mathcal{H}^r(B_n)$ is unitary Peck, which then implies that $\mathcal{H}^r(B_n)/G$ is Peck for any subgroup $G\subseteq S_n$.
-
-
-
 
 \subsection{A Generalization of $\mathcal H^r,\mathcal E^r$}
+
 Although for the most part, we shall investigate \linebreak
 $\mathcal E^1(P/G),\mathcal E^1(P)/G,$ there is a natural further generalization of $\mathcal H^r,$ to what we shall call $\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal H^r,$ for $r \in \BBZ$.
 
 \begin{defn}
-Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1}$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots, y_{k+1})$ if $x_i \lessdot_P y_i,y_{i} \not \leq_P x_{i+1}$ for all $i \in [k+1].$ Then, define a relation $<_{\mathcal H^{\vec r}}$ on $\mathcal H^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal H^{\vec r}}.$ Finally, define $rk_{\mathcal H^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
+Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots, y_{k+1})$ if $x_i \lessdot_P y_i,y_{i} \not \leq_P x_{i+1}$ for all $i \in [k+1].$ Then, define a relation $<_{\mathcal H^{\vec r}}$ on $\mathcal H^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal H^{\vec r}}.$ Finally, define $rk_{\mathcal H^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
 \end{defn}
 
 \begin{defn}
-Let $\vec r = r_1,\ldots,r_k,$ with $r_i \in \BN\forall i \in [k].$ Let $\mathcal P$ be the category of graded posets. Define the functor $\mathcal E^{\vec r}:\mathcal P \rightarrow \mathcal P,$ also notated $\mathcal E^{r_1,\ldots, r_k}.$ For a graded poset $P,$ define the graded poset $\mathcal E^{r_1,\ldots, r_k}(P),$ also notated whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say 
+Let $\vec r = r_1,\ldots,r_k,$ with $r_i \in \BN$ for all $i \in [k].$ Let $\mathcal P$ be the category of graded posets. Define the functor $\mathcal E^{\vec r}:\mathcal P \rightarrow \mathcal P,$ also notated $\mathcal E^{r_1,\ldots, r_k}.$ For a graded poset $P,$ define the graded poset $\mathcal E^{r_1,\ldots, r_k}(P),$ also notated whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say 
 $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y_{k+1})$ if $x_i \lessdot_P y_i$ for all $i \in [k+1]$. Then, define a relation $\leq_{\mathcal E^{\vec r}}$ on $\mathcal E^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal E^{\vec r}}.$ Finally, define $rk_{\mathcal E^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
 \end{defn}
 
-\begin{rem}
+
+\begin{rem}\todo{$\mathcal H^r$ is not a functor}
 Both $\mathcal E^{\vec r},\mathcal H^{\vec r}$ are functors, for the same reasons that $\mathcal E^r, \mathcal H^r$ are functors. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are different in many crucial ways.
 \end{rem}
 
@@ -783,7 +758,6 @@ The poset $\mathcal H^{r_1,\ldots, r_k}(B_n)$ is isomorphic to the multinomial c
 \begin{proof}
 Once again, the proof of the above three statements is analogous to those of ~\ref{prop:computing_HBn}, Corollary ~\ref{cor:HBn_unitary_peck}, and Corollary ~\ref{cor:quotients_of_HBn_peck}. The reason there are multinomial coefficients here instead of binomial coefficients, is that an element $(x_1, x_2, \cdots, x_{k+1})$ lies in the copy of $B_{n -\sum_{i=1}^k r_i}$ determined by the ordered tuple of subsets $(x_2 \setminus x_1,x_3 \setminus x_2, \ldots, x_{k+1} \setminus x_k).$ The first consists of $r_1$ elements, the next of $r_2$ elements, up through the last which consists of $r_k$ elements. Since the total number of ways to choose $r_1,\ldots, r_k$ in $k$ distinct groups is $\binom n {r_1,r_2,\ldots, r_k},$ there are exactly this many disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$
 \end{proof}
-
 
 
 
