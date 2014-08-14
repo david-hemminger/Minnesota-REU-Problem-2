@@ -59,14 +59,15 @@
   \newtheorem{conjecture}[thm]{Conjecture}
 \theoremstyle{definition}
   \newtheorem{defn}[thm]{Definition}
+  \newtheorem{rem}[thm]{Remark}
   \newtheorem{eg}[thm]{Example}
   \newtheorem{ex}[thm]{Exercise}
   \newtheorem{question}[thm]{Question}
   \newtheorem{counterexample}[thm]{Counterexample}
-  \newtheorem{note}[thm]{Notation}
   \newtheorem{convention}[thm]{Convention}
 \theoremstyle{remark}
-  \newtheorem{rem}[thm]{Remark}
+  \newtheorem{note}[thm]{Notation}
+  \newtheorem*{note*}{Notation}
 
 \numberwithin{equation}{section}
 
@@ -410,9 +411,9 @@ In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E^r
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
 First we prove Proposition \ref{prop:F_well_defined}, which states that $\mathcal E^r$ is a well-defined functor.  We break the proof of Proposition \ref{prop:F_well_defined} into Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} which follow below.  After showing that $\mathcal E^r$ is well-defined we then define a natural $G$ action on $\mathcal E^r(P)$ and define a surjection $\mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
 
-\begin{note}
+\begin{note*}
 When the poset $P$ and the value $r$ are clear, we shall simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E^r(P)},\lessdot_{\mathcal E^r(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H^r(B_n),$ and shall use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H^r(P)},\lessdot_{\mathcal H^r(P)}.$
-\end{note}
+\end{note*}
 
 \begin{lem}\label{lem:f_partial_order}
 The relation $\le_{\mathcal E}$ defines a partial order on $\mathcal E^r(P)$.
@@ -456,11 +457,11 @@ By Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_
 
 Given a group action of $G$ on $P$, we can easily define a natural group action of $G$ on $\mathcal E^r(P)$ using Proposition \ref{prop:F_well_defined}.  For all $g\in G$ we have that multiplication by $g$ is an automorphism of $P$, so it follows that $\mathcal E^r(g)$ is an automorphism of $\mathcal E^r(P)$.  Since $\mathcal E^r$ is a functor this gives a well-defined group action.
 
-\begin{note}\label{note:G_action_on_FP}
-Define a group action of $G$ on $\mathcal E^r(P)$ by defining $g\cdot (x, y) = \mathcal E^r(g)(x,y) = (g\cdot x\, g\cdot y)$.
-\end{note}
+\begin{defn}\label{note:G_action_on_FP}
+Given a $G$-action on $P$, define a $G$-action on $\mathcal E^r(P)$ by $g\cdot (x,y) = \mathcal{E}^r(g)(x,y) = (gx,gy)$.
+\end{defn}
 
-Using Notation \ref{note:G_action_on_FP}, we have a well-defined quotient poset $\mathcal E^r(P)/G$.  It is then natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E^r$, that is, whether $\mathcal E^r(P/G) \cong \mathcal E^r(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT.
+Using Definition \ref{note:G_action_on_FP}, we have a well-defined quotient poset $\mathcal E^r(P)/G$.  It is then natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E^r$, that is, whether $\mathcal E^r(P/G) \cong \mathcal E^r(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT.
 
 
 \begin{prop}\label{prop:surjection_between_F_quotients}
@@ -537,7 +538,7 @@ For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Le
 \end{defn}
 
 \begin{eg}
-We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}.
+We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}.  Note that $\mathcal H^1(B_3)$ is isomorphic to the disjoint union of three copies of $B_2$.  We generalize this phenomenon to $\mathcal{H}^r(B_n)$ for all $r,n$ in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
 \todo{improve figure}
@@ -607,20 +608,8 @@ This follows immediately from Remark \ref{rem:order_containment} and the fact th
 %Second, if $x\otimes y \lessdot_{\mathcal H} a \otimes b$ then $x \lessdot_P a,$ so $rk(x)+1 = rk(a)$ and then $$rk_{\mathcal H^r(P)}(x\otimes y)+1 = rk_P(x) +1=rk_P(a)= rk_{\mathcal H^r(P)}(a\otimes b).$$
 \end{proof}
 
-\begin{lem}
-\label{lem:bijection_h_f}
-The map $f:\mathcal H^r(P) \rightarrow \mathcal E^r(P)$ defined by $G(x, y) \mapsto G(x, y)$ is a bijection.
-%Took part below out because it's not true and because I'm not sure how helpful the true version is - David
-%(but never an isomorphism for $n-r > 1$)
-\end{lem}
-\begin{proof}
-The elements of $\mathcal H^r(P),\mathcal E^r(P)$ are the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank preserving, to show $f$ is a morphism, it suffices to show $f$ is order preserving. This is immediate from Remark ~\ref{rem:order_containment}.
-\end{proof}
-
-
-
 \begin{rem}
-While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal P \rightarrow \mathcal Q,$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost below) to a chain of length three $Q$ (second leftmost) Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects.  However, it is still true that $\mathcal H^r(P)$ is a graded poset with rank function $rk_{\mathcal H}(x, y) = rk_P(x).$
+While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal P \rightarrow \mathcal Q,$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost below) to a chain of length three $Q$ (second leftmost) Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects.
 
 \todo{improve figure}
 \begin{figure}[h]
@@ -656,6 +645,10 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
 \end{rem}
 
 
+
+Given an action of a group $G$ on $P$, we can define an action of $G$ on $\mathcal{H}^r(P)$ as we did for $\mathcal{E}^r(P)$ by again defining $g\cdot (x,y) = (gx,gy)$ for all $(x,y)\in P$.  We will then have a well-defined quotient poset $\mathcal{H}^r(P)/G$ with the same elements as $\mathcal{E}^r(P)/G$.
+
+
 \begin{lem}
 \label{lem:G_action_on_HP}
 The function defined by $g\cdot (x, y)= (gx, gy)$ for all $g\in G$, $(x, y)\in \mathcal{H}^r(P)$ is a well-defined group action of $G$ on $\mathcal{H}^r(P)$.
@@ -668,6 +661,61 @@ Let $g\in G$.  Since $\le_{\mathcal{H}}$ is the transitive closure of $\lessdot_
 %It is rank preserving because $$rk_{\mathcal H^r(P)}(g\cdot(x, y)) = rk_{\mathcal H^r(P)}(gx, gy)) = rk_P(gx)=rk_P(x) = rk_{\mathcal H^r(P)}(x, y).$$
 
 %The fact that the $G$-action is rank-preserving on $\mathcal{H}^r(P)$ follows from the fact that $G$-action is rank-preserving on $\mathcal{E}^r(P)$.  In order to show the action is order preserving, it suffices to show that if $(x, y) \lessdot_{\mathcal H} (a, b)$ then $g(x, y) \lessdot_{\mathcal H} g(a, b),$ because $\leq_{\mathcal H}$ is the transitive closure of $\lessdot_{\mathcal H}.$ By definition of $\lessdot_{\mathcal H},$ we have $x \lessdot_P a,y\lessdot_P b,y \not \leq b$.  Since $g$ is an automorphism of $P$ for all $g\in G$, it follows that $gx \lessdot_P ga,gy \lessdot_P gb, gy \not \leq_P gb$, hence $g(x, y) \lessdot_{\mathcal H} g(a , b).$
+\end{proof}
+
+\begin{lem}
+\label{lem:bijection_h_f}
+The map $f:\mathcal H^r(P)/G \rightarrow \mathcal E^r(P)/G$ defined by $G(x,y) \mapsto G(x,y)$ is a bijection for any group action of $G$ on $P$.
+%Took part below out because it's not true and because I'm not sure how helpful the true version is - David
+%(but never an isomorphism for $n-r > 1$)
+\end{lem}
+
+\begin{proof}
+The elements of $\mathcal H^r(P)/G,\mathcal E^r(P)/G$ are the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank preserving, to show $f$ is a morphism, it suffices to show $f$ is order preserving. This is immediate from Remark ~\ref{rem:order_containment}.
+\end{proof}
+
+
+
+\begin{prop}\label{prop:computing_HBn}
+$\mathcal{H}^r(B_n)$ is isomorphic to $\binom{n}{r}$ disjoint copies of $B_{n-r}$.
+\end{prop}
+
+\begin{proof}
+
+Suppose we have $(x, y),(x', y') \in \mathcal H^r(B_n)$ with $(x, y) \lessdot (x', y').$ Let $j\in [n]$ such that $y^\prime = y\cup\{j\}$, and let $i\in [n]$ such that $x^\prime = x\cup \{i\}$. If $i \ne j,$ then $x' \leq y,$ contradicting the assumption that $(x, y) \lessdot_{\mathcal H} (x', y').$ Thus $x^\prime = x\cup\{i\}$ and $y^\prime = y\cup\{i\}$ for some $i\in [n]$.
+
+Conversely we can easily check that if $i\not\in y$, then $(x, y)\lessdot_{\mathcal{H}} (x\cup\{i\}, y\cup\{i\})$.  It follows that for all subsets $w\subset [n]$ such that $|w| = r$, there is an isomorphism from the subposet of elements $\{(x, y)\colon y\setminus x = w\}$ to $B_{n-r}$ defined by $(x,y)\mapsto (x\setminus w,y\setminus w)$.  Furthermore if $y\setminus x \ne y^\prime \setminus x^\prime$, then $(x, y)$ and $(x^\prime, y^\prime)$ are incomparable, so these subposets indexed by $w$ are pairwise disjoint, and $\mathcal{H}^r(B_n)$ is isomorphic to $\binom{n}{r}$ copies of $B_{n-r}$.
+\end{proof}
+
+\begin{cor}\label{cor:HBn_unitary_peck}
+$\mathcal{H}^r(B_n)$ is unitary Peck for all $n\ge r$.
+\end{cor}
+
+\begin{proof}
+This follows immediately from Proposition \ref{prop:computing_HBn} and the fact that $B_{n-r}$ is unitary Peck.  The latter is shown, for instance in \cite[Theorem 2a]{quotients_stanley} by noting that $B_k = (B_1)^k$ and that $B_1$ is clearly unitary Peck.
+\end{proof}
+
+\begin{cor}\label{cor:quotients_of_HBn_peck}
+$\mathcal{H}^r(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
+\end{cor}
+
+\begin{proof}
+This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quotients_of_unitary_peck_posets}.
+\end{proof}
+
+
+
+
+\begin{cor}
+\label{cor:quotiented_edge_peck}
+$\mathcal E^r(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
+\end{cor}
+\begin{proof}
+By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By Lemma ~\ref{lem:bijection_h_f}, the map $f:\mathcal H^r(P) \rightarrow \mathcal E^r(P),G(x, y) \mapsto G(x, y)$ is a bijection. Then, by Lemma ~\ref{lem:bijection_peck_implication}, it follows that $\mathcal E^r(B_n)/G$ is Peck.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:cover_transitive_implies_Peck}]
+By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n$.  Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
 \end{proof}
 
 %%%%%%%%%%%%%%%%% The H poset   %%%%%%%%%%%%%%%%%%
@@ -692,48 +740,14 @@ Similarly to $\mathcal E^r(P)$, the action of $G$ on $P$ induces an order-preser
 
 
 
-\begin{prop}\label{prop:computing_HBn}
-$\mathcal{H}^r(B_n)$ is isomorphic to $\binom{n}{r}$ disjoint copies of $B_{n-r}$.
-\end{prop}
 
-\begin{proof}
-
-Suppose we have $(x, y),(x', y') \in \mathcal H^r(B_n)$ with $(x, y) \lessdot (x', y').$ Let $j\in [n]$ such that $y^\prime = y\cup\{j\}$, and let $i\in [n]$ such that $x^\prime = x\cup \{i\}$. If $i \ne j,$ then $x' \leq y,$ contradicting the assumption that $(x, y) \lessdot_{\mathcal H} (x', y').$ Thus $x^\prime = x\cup\{i\}$ and $y^\prime = y\cup\{i\}$ for some $i\in [n]$.
-
-Conversely we can easily check that if $i\not\in y$, then $(x, y)\lessdot_{\mathcal{H}} (x\cup\{i\}, y\cup\{i\})$.  It follows that for all subsets $w\subset [n]$ such that $|w| = r$, there is an isomorphism from the subposet of elements $\{(x, y)\colon y\setminus x = w\}$ to $B_{n-r}$ defined by $(x,y)\mapsto (x\setminus w,y\setminus w)$.  Furthermore if $y\setminus x \ne y^\prime \setminus x^\prime$, then $(x, y)$ and $(x^\prime, y^\prime)$ are incomparable, so these subposets indexed by $w$ are pairwise disjoint, and $\mathcal{H}^r(B_n)$ is isomorphic to $\binom{n}{r}$ copies of $B_{n-r}$.
-\end{proof}
 
 
 
 The primary advantage of Proposition \ref{prop:computing_HBn} is it allows us to easily see that $\mathcal{H}^r(B_n)$ is unitary Peck, which then implies that $\mathcal{H}^r(B_n)/G$ is Peck for any subgroup $G\subseteq S_n$.
 
 
-\begin{cor}\label{cor:HBn_unitary_peck}
-$\mathcal{H}^r(B_n)$ is unitary Peck for all $n\ge r$.
-\end{cor}
 
-\begin{proof}
-This follows immediately from Proposition \ref{prop:computing_HBn} and the fact that $B_{n-r}$ is unitary Peck, as shown, for instance in \cite[Theorem 2a]{quotients_stanley} because $B_k = (B_1)^k$ and $B_1$ is clearly unitary Peck.
-\end{proof}
-
-\begin{cor}\label{cor:quotients_of_HBn_peck}
-$\mathcal{H}^r(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
-\end{cor}
-
-\begin{proof}
-This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quotients_of_unitary_peck_posets}
-\end{proof}
-
-
-
-
-\begin{cor}
-\label{cor:quotiented_edge_peck}
-$\mathcal E^r(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
-\end{cor}
-\begin{proof}
-By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By Lemma ~\ref{lem:bijection_h_f}, the map $f:\mathcal H^r(P) \rightarrow \mathcal E^r(P),G(x, y) \mapsto G(x, y)$ is a bijection. Then, by Lemma ~\ref{lem:bijection_peck_implication}, it follows that $\mathcal E^r(B_n)/G$ is Peck.
-\end{proof}
 
 \subsection{A Generalization of $\mathcal H^r,\mathcal E^r$}
 Although for the most part, we shall investigate \linebreak
