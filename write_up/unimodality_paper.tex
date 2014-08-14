@@ -172,11 +172,17 @@ For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the
 Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E^r(f)\colon \mathcal E^r(P)\rightarrow \mathcal E^r(Q)$ by $\mathcal E^r(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
+\begin{note}
+In the case $r = 1,$ for brevity, we shall use $\mathcal E$ to denote $\mathcal E^1.$
+\end{note}
+
+
+
 \begin{eg}
 
 It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.
 
-%On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E^1(P)$ and on the right hand side is the poset obtained from the relation 
+%On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E(P)$ and on the right hand side is the poset obtained from the relation 
 
 \begin{figure}
 \begin{center}
@@ -223,7 +229,7 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (6)--(8);
   \draw (0)--(3);
   \draw (1)--(2);
-  \node (9) at (2,-2) {$\mathcal E^1(P)$};
+  \node (9) at (2,-2) {$\mathcal E(P)$};
 \end{tikzpicture}
 \begin{tikzpicture}[scale = .7]
   \node (0) at (0,1) {$(0,1)$};
@@ -247,7 +253,7 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (3)--(8);
   \draw (0)--(3);
   \draw (1)--(2);
-  \node (9) at (2,-2) {$\mathcal E^1(P)$ with relation $\le_{\mathcal{E^\prime}}$(not graded)};
+  \node (9) at (2,-2) {$\mathcal E(P)$ with relation $\le_{\mathcal{E^\prime}}$(not graded)};
 \end{tikzpicture}
 \]
 
@@ -284,15 +290,15 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
   \draw (zero) -- (a) -- (b) -- (c)--(d)--(one) -- (zero);
 \end{tikzpicture}
 \fi
-\caption{\label{fig:EP_definition_example}The definition of $\mathcal E^1$}
+\caption{\label{fig:EP_definition_example}The definition of $\mathcal E$}
 \end{center}
 \end{figure}
-Here, it is clear that $\mathcal E^1(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
+Here, it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
 
 
 
-We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E^1(P).$  
+We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P).$  
 We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
 
 In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, we assume that any action of a group $G$ on $B_n,$ notated $\phi:G \times B_n \rightarrow B_n,$ is induced by an action on $[n].$ That is, $\phi$ can always be written in the form $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}$ for $\psi:G\times [n] \rightarrow [n]$ a $G$ action on $[n]$.
@@ -303,7 +309,7 @@ Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal E^
 \end{conjecture}
 
 We prove this conjecture holds in the case $r=1$ whenever the group action of $G$ on $B_n$ has the following property.
-\todo{Weren't we going to include a question about q-analogs?}
+\todo{Include a question about q analogs, it is currently at the end, but it should probably be weaved in here somewhere.}
 
 \begin{defn}
 \label{defn:cover_transitive}
@@ -312,7 +318,7 @@ A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whene
 
 \begin{restatable}{thm}{cctpeck}
 \label{thm:cover_transitive_implies_Peck}
-If a group action of $G$ on $B_n$ is CCT, then $\mathcal E^1(B_n/G)$ is Peck.
+If a group action of $G$ on $B_n$ is CCT, then $\mathcal E(B_n/G)$ is Peck.
 \end{restatable}
 
 A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
@@ -471,7 +477,7 @@ The map $q\colon \mathcal E^r(P)/G\rightarrow \mathcal E^r(P/G)$ defined by $q(G
 \begin{proof}
 %Let $Gx\otimes Gy\in \mathcal E^r(P/G)$.  Since the orbits between $Gx$ and $Gy$ form a boolean algebra of size $r$, it is possible to pick a set of representatives from the orbits in $Gx\otimes Gy$ such that the representatives form a boolean subalgebra $x\otimes y$ of size $r$ in $P$.  Then $x\otimes y\in \mathcal E^r(P)$ and the orbit $G(x\otimes y)$ is in $\mathcal E^r(P)/G$.  Furthermore, if $Gy^\prime\otimes Gx^\prime \ne Gy\otimes Gx$, then any boolean subalgebra $x^\prime\otimes y^\prime$ given by representatives from orbits lying between $Gx^\prime$ and $Gy^\prime$ will not be an element of $G(x\otimes y)$, since $(Gx,Gy)\ne (Gx^\prime,Gy^\prime)$.  Thus a choice of representatives from each boolean subalgebra of size $r$ in $\mathcal E^r(P/G)$ gives a rank-preserving injection $\mathcal E^r(P/G)\rightarrow \mathcal E^r(P)/G$ and hence $|\mathcal E^r(P/G)|_i \le |\mathcal E^r(P)/G|_i$.
 
-%Now consider the case when $r = 1$.  A boolean subalgebra of size 1 simply corresponds to an edge between adjacent ranks defined by a covering relation $x\lessdot y$ for some $x,y\in P$.  Then for every edge $x\otimes y\in \mathcal E^1(P)$, the orbit $Gx\otimes Gy$ is an element of $\mathcal E(P/G)$, so we get a map $q\colon \mathcal E^r(P)/G \rightarrow \mathcal E^1(P/G)$ by defining $q(G(x\otimes y)) = Gx\otimes Gy$. 
+%Now consider the case when $r = 1$.  A boolean subalgebra of size 1 simply corresponds to an edge between adjacent ranks defined by a covering relation $x\lessdot y$ for some $x,y\in P$.  Then for every edge $x\otimes y\in \mathcal E(P)$, the orbit $Gx\otimes Gy$ is an element of $\mathcal E(P/G)$, so we get a map $q\colon \mathcal E^r(P)/G \rightarrow \mathcal E(P/G)$ by defining $q(G(x\otimes y)) = Gx\otimes Gy$. 
 
 
 Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cdot x, g\cdot y)$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Clearly $q$ is rank-preserving and surjective, so it suffices to show that $q$ is order-preserving.  Suppose that $G(x, y) \le G(w, z)$.  Then there exist some $(x_0, y_0)\in G(x, y)$, $(w_0, z_0)\in G(w, z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  We then have that $(Gx, Gy) \le (Gw, Gz)$ by definition, hence $q$ is order-preserving.
@@ -483,25 +489,25 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \begin{enumerate}
 	\item The action of $G$ on $P$ is CCT.
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
-	\item The map $q\colon \mathcal E^1(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
-%	\item The map $q\colon \mathcal E^1(P)/G\rightarrow \mathcal E^1(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
-%	\item For all $i$ there is an equality $|(\mathcal E^1(P)/G)_i|=| (\mathcal E^1(P/G))_i|$
+	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+%	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
+%	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
 \end{enumerate}
 \end{lem}
 \begin{proof}
-First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E^1(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
+First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
 
 Next, we shall show $(2) \iff (3)$. It is quite analogous to the proof of $(1) \iff (3)$, but we shall include the argument for completeness. 
-First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x', y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E^1(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ So, $g' \in Stab(x),g'y = (gy'),$ which is what was claimed in property $(2)$.
+First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x', y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ So, $g' \in Stab(x),g'y = (gy'),$ which is what was claimed in property $(2)$.
 
 %Next, we check $(3) \iff (4)$by Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since an injective map is a bijection if and only if it is a surjection, it follows that $(3) \iff (4).$
 
-%Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E^1(P)/G)_i$ surjectively onto $(\mathcal E^1(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
+%Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
 \end{proof}
 
 
 \begin{rem}
-While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{lem:dihedral_prime} that this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E^1(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
+While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{lem:dihedral_prime} that this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
 \end{rem}
 
 
@@ -524,10 +530,10 @@ Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising oper
 %Let $rk(P) = rk(Q) = n.$ Since $P$ is Peck, there exists an order raising map $U_i:P_i\rightarrow P_{i+1}$ such that $U_{n-i-1} \cdots U_i:P_i \rightarrow P_{n-i}$ is an isomorphism. Then, define $f(U)_i:P_i\rightarrow P_{i+1}$ by $f(U)_i(x) = f(U_i(f^{-1}(x))).$ This map is well defined because $f$ is a bijection. This map is order raising because $y > x \implies f(y) > f(x),$ by definition of morphisms of posets. It follows that since $U_{n-i-1} \cdots U_i$ is an isomorphism, $f(U)_{n-i-1} \cdots f(U)_i$ is as well, because the vector spaces $V(P_i) \cong V(Q_i)$ since $f$ is a bijection. Therefore, $Q$ is Peck.
 \end{proof}
 
-By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E^r(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E^r(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_unitary_peck_posets}.  While this would be the most direct path, we do not have a proof that $\mathcal E^r(B_n)$ is unitary Peck for $r>1$.  We prove that $\mathcal E^1(B_n)$ is unitary Peck in Section \ref{sec:unitary_peck_f}, but unfortunately the proof is messy and computational.
+By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E^r(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E^r(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_unitary_peck_posets}.  While this would be the most direct path, we do not have a proof that $\mathcal E^r(B_n)$ is unitary Peck for $r>1$.  We prove that $\mathcal E(B_n)$ is unitary Peck in Section \ref{sec:unitary_peck_f}, but unfortunately the proof is messy and computational.
 
 
-%At least for the case $r=1$ there is an alternative proof of this fact. It is actually shown in Section ~\ref{sec:unitary_peck_f} that $\mathcal E^1(B_n)$ is unitary Peck, for $n>2,$ so, by Theorem \ref{thm:quotients_of_unitary_peck_posets}, $\mathcal E^1(B_n)/G$ is Peck. However, the proof of this is extremely messy and computational.
+%At least for the case $r=1$ there is an alternative proof of this fact. It is actually shown in Section ~\ref{sec:unitary_peck_f} that $\mathcal E(B_n)$ is unitary Peck, for $n>2,$ so, by Theorem \ref{thm:quotients_of_unitary_peck_posets}, $\mathcal E(B_n)/G$ is Peck. However, the proof of this is extremely messy and computational.
 
 Fortunately there is a simpler -- albeit less direct -- route.  In order to avoid showing that $\mathcal E^r(B_n)$ is unitary Peck, we define a graded poset $\mathcal{H}^r(B_n)$ for all $r,n$ such that $\mathcal{H}^r(B_n)$ is easily seen to be unitary Peck in Corollary \ref{cor:HBn_unitary_peck}. Furthermore, we define $\mathcal{H}^r(B_n)$ such that a group action of $G$ on $B_n$ induces a group action on $\mathcal{H}^r(B_n)$ (Lemma \ref{lem:G_action_on_HP}) and there is always a bijective morphism $f\colon \mathcal{H}^r(B_n)/G\rightarrow \mathcal E^r(B_n)/G$ (Lemma \ref{lem:bijection_h_f}).  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
@@ -537,7 +543,7 @@ For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Le
 \end{defn}
 
 \begin{eg}
-We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}.
+We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}. Observe that $\mathcal H^1(B_3)$ can be written as a disjoint union of three copies of $B_2.$ This is a single case of the more general phenomenon proven in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
 \todo{improve figure}
@@ -737,7 +743,7 @@ By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By
 
 \subsection{A Generalization of $\mathcal H^r,\mathcal E^r$}
 Although for the most part, we shall investigate \linebreak
-$\mathcal E^1(P/G),\mathcal E^1(P)/G,$ there is a natural further generalization of $\mathcal H^r,$ to what we shall call $\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal H^r,$ for $r \in \BBZ$.
+$\mathcal E(P/G),\mathcal E(P)/G,$ there is a natural further generalization of $\mathcal H^r,$ to what we shall call $\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal H^r,$ for $r \in \BBZ$.
 
 \begin{defn}
 Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1}$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots, y_{k+1})$ if $x_i \lessdot_P y_i,y_{i} \not \leq_P x_{i+1}$ for all $i \in [k+1].$ Then, define a relation $<_{\mathcal H^{\vec r}}$ on $\mathcal H^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal H^{\vec r}}.$ Finally, define $rk_{\mathcal H^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
@@ -778,7 +784,7 @@ Once again, the proof of the above three statements is analogous to those of ~\r
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
-In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E^1(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{lem:dihedral_prime}, that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{lem:dihedral_prime}, that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
 
 \begin{rem}
 Before continuing with the description of cover transitive, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E^r$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ common cover transitive agrees with our definition of common cover transitive. Furthermore, it is also simple to see that an action is $\vec r$ common cover transitive if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ common cover transitive.
@@ -786,14 +792,14 @@ Before continuing with the description of cover transitive, it is worth noting t
 
 \begin{eg}
 \label{eg:trivial_edgequot}
-Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B_n,\psi:G\times B_n\rightarrow B_n$ where $G$ is arbitrary, $\phi$ is the action induced by $S_n$ permuting the elements of $[n]$, and $\psi$ is the trivial action. In the former case, $\mathcal E^1(B_n/S_l)$ is simply a chain with $n-1$ points, and so is $\mathcal E^1(B_n)/S_l,$ since all $(x, y)$ are identified under the $S_l$ action. In the latter case, since $G$ acts trivially by $\phi,$ both  $\mathcal E^1(B_n/G) \cong \mathcal E^1(B_n)$ and $\mathcal E^1(B_n)/G \cong \mathcal E^1(B_n).$ So again, $\psi$ is CCT.
+Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B_n,\psi:G\times B_n\rightarrow B_n$ where $G$ is arbitrary, $\phi$ is the action induced by $S_n$ permuting the elements of $[n]$, and $\psi$ is the trivial action. In the former case, $\mathcal E(B_n/S_l)$ is simply a chain with $n-1$ points, and so is $\mathcal E(B_n)/S_l,$ since all $(x, y)$ are identified under the $S_l$ action. In the latter case, since $G$ acts trivially by $\phi,$ both  $\mathcal E(B_n/G) \cong \mathcal E(B_n)$ and $\mathcal E(B_n)/G \cong \mathcal E(B_n).$ So again, $\psi$ is CCT.
 \end{eg}
 
 \begin{thm}
-If an action $\phi:G \times P \rightarrow P$ is CCT, and $\mathcal E^1(P)$ is Peck, then $\mathcal E^1(P/G)$ is Peck.
+If an action $\phi:G \times P \rightarrow P$ is CCT, and $\mathcal E(P)$ is Peck, then $\mathcal E(P/G)$ is Peck.
 \end{thm}
 \begin{proof}
-By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G).$ Additionally, by Lemma ~\ref{prop:surjection_between_F_quotients}, if $\phi$ is CCT, $q$ is a bijection. Finally, by Lemma ~\ref{lem:bijection_peck_implication}, since $q:\mathcal E^1(P)/G \rightarrow \mathcal E^1(P/G)$ is a bijection and $\mathcal E^1(P)/G$ is Peck, it follows that $\mathcal E^1(P/G)$ is Peck.
+By Proposition ~\ref{prop:surjection_between_F_quotients}, there is a surjection $q:\mathcal E(P)/G \rightarrow \mathcal E(P/G).$ Additionally, by Lemma ~\ref{prop:surjection_between_F_quotients}, if $\phi$ is CCT, $q$ is a bijection. Finally, by Lemma ~\ref{lem:bijection_peck_implication}, since $q:\mathcal E(P)/G \rightarrow \mathcal E(P/G)$ is a bijection and $\mathcal E(P)/G$ is Peck, it follows that $\mathcal E(P/G)$ is Peck.
 \end{proof}
 
 
@@ -1022,7 +1028,7 @@ The sequence $p_r(l,m,r), p_{r+1}(l,m,r),\ldots, p_{l\cdot m}(l,m,r)$ is unimoda
 \end{thm}
 
 \ssec{The Poset $\mathcal E^r(B_n)/G$}
-Now that we have managed to state Pak and Panova's Theorem, we will begin the trek toward showing how the $p_1(l,m,1)$ are actually ranks of $\mathcal E^1(B_n/G).$ The first step is to describe the Peck poset $\mathcal E^1(B_n)/G.$ In particular, we shall obtain an explicit formula for the sizes of its ranks in Theorem ~\ref{thm:quotiented_edge_wreath}. To do this, we will first describe representatives for the vertices of $B_n/G$ and then analogous representatives for vertices of $\mathcal E^1(B_n)/G.$
+Now that we have managed to state Pak and Panova's Theorem, we will begin the trek toward showing how the $p_1(l,m,1)$ are actually ranks of $\mathcal E(B_n/G).$ The first step is to describe the Peck poset $\mathcal E(B_n)/G.$ In particular, we shall obtain an explicit formula for the sizes of its ranks in Theorem ~\ref{thm:quotiented_edge_wreath}. To do this, we will first describe representatives for the vertices of $B_n/G$ and then analogous representatives for vertices of $\mathcal E(B_n)/G.$
 
 \begin{defn}
 For $x \subset [l \cdot m]$ we shall say $x$ is {\it left justified} if whenever $a \in x,$ such that $a \neq 1 \pmod l,$ then $a -1 \in x.$ In other words, when we pick out the boxes of the $l\times m$ rectangle which lie in $x$ the resulting diagram is left justified.
@@ -1142,10 +1148,10 @@ We now obtain an easy proof of Theorem ~\ref{thm:pak_thm} for the case $r = 1.$ 
 
 \begin{cor}
 \label{cor:rank_gen_fn_wreath_1}
-The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the rank generating function of $\mathcal E^1(B_{l\cdot m})/G.$ In particular, the sequence is unimodal and symmetric.
+The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the rank generating function of $\mathcal E(B_{l\cdot m})/G.$ In particular, the sequence is unimodal and symmetric.
 \end{cor}
 \begin{proof}
-First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E^1(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E^1(B_{l\cdot m})/G$, hence symmetric and unimodal.
+First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E(B_{l\cdot m})/G$, hence symmetric and unimodal.
 \end{proof}
 
 
@@ -1262,7 +1268,7 @@ Then, there is an equality
 $$\sum_{i=0}^n p_i(l,m,1) r_1^ir_3^{n-i-1} = \sum_{\pi \in G} |\Fix(g)|W_\pi(r_1 + r_3,r_1^2+r_3^2,\ldots,r_1^n + r_3^n).$$
 \end{prop}
 \begin{proof}
-Recall from Corollary ~\ref{cor:rank_gen_fn_wreath_1} that $p_i(l,m,1)$ is the rank generating function of \linebreak $\mathcal E^1(B_{l\cdot m})/G$. 
+Recall from Corollary ~\ref{cor:rank_gen_fn_wreath_1} that $p_i(l,m,1)$ is the rank generating function of \linebreak $\mathcal E(B_{l\cdot m})/G$. 
 
 As was seen in Proposition ~\ref{prop:rank_gen_fn}, it is also the case that $$[Z_G(r_1+r_2+r_3,\ldots, r_1^n+r_2^n+r_3^n)]_{r_2}$$ is the rank generating function of $|\mathcal E^{1}(B_n)/G|.$
 Therefore, 
@@ -1353,11 +1359,11 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Unimodal Quotients}
 
-In this section, show that several important posets $\mathcal E^1(B_n/G)$ are rank symmetric and rank unimodal. First, we examine left multiplication actions, showing that for $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the left multiplication action of the cyclic group, $C_n$ on itself, which can also be thought of as $C_n$ acting on the vertices of an $n$-gon by rotation, induces an action on $B_n$ such that $\mathcal E^1(B_n/C_n)$ is rank unimodal and symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E^1(B_n/D_{2n})$ is rank unimodal and symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT. Finally, we develop a $q$-analog the cyclic group $C_n(q)$ acting on the $q$-analog of the boolean algebra, $B_n(q)$ and show $|(B_n(q)/C_n(q))_i| = \binom {n-1} i _q.$
+In this section, show that several important posets $\mathcal E(B_n/G)$ are rank symmetric and rank unimodal. First, we examine left multiplication actions, showing that for $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the left multiplication action of the cyclic group, $C_n$ on itself, which can also be thought of as $C_n$ acting on the vertices of an $n$-gon by rotation, induces an action on $B_n$ such that $\mathcal E(B_n/C_n)$ is rank unimodal and symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E(B_n/D_{2n})$ is rank unimodal and symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT. Finally, we develop a $q$-analog the cyclic group $C_n(q)$ acting on the $q$-analog of the boolean algebra, $B_n(q)$ and show $|(B_n(q)/C_n(q))_i| = \binom {n-1} i _q.$
 
 \ssec{Groups of order $n.$}
 
-In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E^1(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E^1(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
@@ -1373,31 +1379,31 @@ Then, the above string of inequalities tells us that we must have $|\Stab(x)| = 
 
 \begin{prop}
 \label{prop:stabilizer_edge}
-For any element $(x , y) \in \mathcal E^1(B_n),$ then $\Stab(x, y) = e.$
+For any element $(x , y) \in \mathcal E(B_n),$ then $\Stab(x, y) = e.$
 \end{prop}
 \begin{proof}
-From Lemma ~\ref{lem:stabilizer_one} for any $x \in B_n$ with $|x| = 1,$ we have $\Stab(x) = \{e\}.$ Then, by definition $\Stab(x, y) = \Stab(x) \cap \Stab(y) = \Stab(x) \cap \Stab(y \setminus x).$ However, $\Stab(y \setminus x)$ is by assumption a 1 element set, because $|y| = |x| +1,x \subset y.$ This implies that $\Stab(x, y)=\Stab(x) \cap \Stab(y \setminus x) = \Stab(x) \cap \{e\} = \{e\},$ for all $(x, y) \in \mathcal E^1(B_n),$ as claimed.
+From Lemma ~\ref{lem:stabilizer_one} for any $x \in B_n$ with $|x| = 1,$ we have $\Stab(x) = \{e\}.$ Then, by definition $\Stab(x, y) = \Stab(x) \cap \Stab(y) = \Stab(x) \cap \Stab(y \setminus x).$ However, $\Stab(y \setminus x)$ is by assumption a 1 element set, because $|y| = |x| +1,x \subset y.$ This implies that $\Stab(x, y)=\Stab(x) \cap \Stab(y \setminus x) = \Stab(x) \cap \{e\} = \{e\},$ for all $(x, y) \in \mathcal E(B_n),$ as claimed.
 \end{proof}
 
 \begin{lem}
 \label{lem:q_counts}
-The number $\displaystyle |(\mathcal E^1(B_n)/G)_i| = \binom{n-1}{i}.$
+The number $\displaystyle |(\mathcal E(B_n)/G)_i| = \binom{n-1}{i}.$
 \end{lem}
 \begin{proof}
 Since there are $\binom{n}{i}$ elements $x\in(B_n)_i,$ each with $n-i$ elements $y \in (B_n)_{i+1}$ with $x \subset y,$ there are a total of $\binom{n}{i}\cdot (n-i)$ elements $(x, y) \in \mathcal E^r(B_n)_i.$ By Proposition ~\ref{prop:stabilizer_edge}, we have $|\Stab(x, y)| = 1.$ Therefore, by the Orbit Stabilizer Theorem, it follows $|G(x, y)| = n.$ So, all orbits have the same size. From this,
 \begin{align*}
-|\mathcal E^1(B_n)_i/G| = |\mathcal E^1(B_n)_i|/|G| = \frac{\binom{n}{i}\cdot (n-i)}{n} = \binom {n-1}{i}.
+|\mathcal E(B_n)_i/G| = |\mathcal E(B_n)_i|/|G| = \frac{\binom{n}{i}\cdot (n-i)}{n} = \binom {n-1}{i}.
 \end{align*}
 \end{proof}
 
 \begin{lem}
 \label{lem:faithful_action}
-For $G$ a group let $H \subset G$ be the subgroup such that $hx = x$ for all $x \in X,h \in H.$ Then, $H$ is a normal subgroup of $G$ and if $|G/H| = n,$ then $\mathcal E^1(B_n)/G =\mathcal E^1(B_n)/(G/H).$
+For $G$ a group let $H \subset G$ be the subgroup such that $hx = x$ for all $x \in X,h \in H.$ Then, $H$ is a normal subgroup of $G$ and if $|G/H| = n,$ then $\mathcal E(B_n)/G =\mathcal E(B_n)/(G/H).$
 \end{lem}
 \begin{proof}
 First, we check $H$ is normal. For any $g \in G,x \in x$ it follows $ghg^{-1}x = gh(g^{-1}x) = g(g^{-1}x) = (gg^{-1})x = x$, and so $ghg^{-1} \in H.$ Hence, $G/H$ is a group.
 
-Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E^1(B_n)/G \cong \mathcal E^1(B_n)/(G/H),$ since $G,G/H$ have exactly the same orbits.
+Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B_n)/G \cong \mathcal E(B_n)/(G/H),$ since $G,G/H$ have exactly the same orbits.
 \end{proof}
 
 \begin{lem}
@@ -1427,14 +1433,14 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \ssec{Quotient by the Cyclic Group}
 \label{ssec:cyclic}
 
-In this subsection, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E^1 (B_n)/C_n$ is $$|(\mathcal E^1 (B_n)/C_n)_i| = \binom{n-1}{i}.$$
-We will bound $|(\mathcal E^1(B_n/C_n))_i|$ by  $|(\mathcal E^1 (B_n)/C_n)_i|$ to obtain the unimodality. 
+In this subsection, we show that for $G = C_n$ the cyclic group of order $n$, the poset $\mathcal E(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $\mathcal E (B_n)/C_n$ is $$|(\mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+We will bound $|(\mathcal E(B_n/C_n))_i|$ by  $|(\mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
-\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) = \mathcal E^1 (B_n)/C_{n}, \quad P(n) = \mathcal E^1(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are refering to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
+\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) = \mathcal E (B_n)/C_{n}, \quad P(n) = \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are refering to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
 \end{note}
 
-The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in \big(\mathcal E^1(B_n)/C_n\big)_{i}$ where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
+The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in \big(\mathcal E(B_n)/C_n\big)_{i}$ where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
  
 \begin{note}
 We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ the generator of the group $C_n$.
@@ -1442,7 +1448,7 @@ We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ the generator of the group $C_n$.
 
 
 \begin{note}
-We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E^1(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap \mathcal E^1(B_n)\subset \mathcal E^1(B_n).$ Namely, $$(Gx, Gy) = \left\{ (\sigma x, \tau y) \in \mathcal E^1 (B_n) : \sigma, \tau \in G; \, \, \sigma x \lessdot \tau y  \right\}.$$ Similarly, we view $$G(x, y) = \left\{ (gx , g y) \in \mathcal E^1 (B_n) : g \in G \right\} $$
+We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap \mathcal E(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap \mathcal E(B_n)\subset \mathcal E(B_n).$ Namely, $$(Gx, Gy) = \left\{ (\sigma x, \tau y) \in \mathcal E (B_n) : \sigma, \tau \in G; \, \, \sigma x \lessdot \tau y  \right\}.$$ Similarly, we view $$G(x, y) = \left\{ (gx , g y) \in \mathcal E (B_n) : g \in G \right\} $$
 \end{note}
 
 \begin{defn}
@@ -1465,10 +1471,10 @@ then $$q_i - p_i = |\left\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \te
 
 
 \begin{proof}
-From definition, $q_i$ counts  number of the disjoint subsets $G(x, y)$ in $\mathcal E^1 (B_n)$ and $p_i$ counts the number of disjoint subsets $(Gx, Gy)$. Hence difference of $q_i - p_i$ is counting the difference of the number of $G$-orbits $G (x ,y)$ and the number of $(Gx,Gy) \in \mathcal E^1(B_n/C_n)$.  Note that as subsets of $\mathcal E^1 (B_n)$, $G(x, y) \subset (Gx, Gy)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x , y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$. 
+From definition, $q_i$ counts  number of the disjoint subsets $G(x, y)$ in $\mathcal E (B_n)$ and $p_i$ counts the number of disjoint subsets $(Gx, Gy)$. Hence difference of $q_i - p_i$ is counting the difference of the number of $G$-orbits $G (x ,y)$ and the number of $(Gx,Gy) \in \mathcal E(B_n/C_n)$.  Note that as subsets of $\mathcal E (B_n)$, $G(x, y) \subset (Gx, Gy)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x , y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$. 
 
 
-It is clear that the $G$-orbits correspond to the (rotational equivalence classes of) fillings of the necklaces, where we fill $i+1$ elements with $1$ of them being marked as the distinct element. Lemma \ref{lem:cyclic_bound_r} tells us that each subset $(Gx, Gy) \subset \mathcal E^1 (B_n)$, contains at most two $G$-orbits (also regarded as subsets of $\mathcal E^1 (B_n)$). The number of $(Gx, Gy)$ containing exactly two $G$ orbits is precisely the number of pairs of $G$-orbits $(G (x, y),G(\sigma x, y ))$ (where $ x \lessdot y$ and $\sigma x \lessdot y$) with $G(x, y) \neq G(\sigma x, y).$ The number of such pairs is then the number of $G(x, y)$ such that $ \exists r,r<\frac n 2, G(\sigma_0^r x, y)\neq G(x, y),\sigma_0^r x \lessdot y.$ We restrict $r < n/2$ to avoid double counting pairs. This proves the Lemma.
+It is clear that the $G$-orbits correspond to the (rotational equivalence classes of) fillings of the necklaces, where we fill $i+1$ elements with $1$ of them being marked as the distinct element. Lemma \ref{lem:cyclic_bound_r} tells us that each subset $(Gx, Gy) \subset \mathcal E (B_n)$, contains at most two $G$-orbits (also regarded as subsets of $\mathcal E (B_n)$). The number of $(Gx, Gy)$ containing exactly two $G$ orbits is precisely the number of pairs of $G$-orbits $(G (x, y),G(\sigma x, y ))$ (where $ x \lessdot y$ and $\sigma x \lessdot y$) with $G(x, y) \neq G(\sigma x, y).$ The number of such pairs is then the number of $G(x, y)$ such that $ \exists r,r<\frac n 2, G(\sigma_0^r x, y)\neq G(x, y),\sigma_0^r x \lessdot y.$ We restrict $r < n/2$ to avoid double counting pairs. This proves the Lemma.
 \end{proof}
 
 For the unimodality of $p_i$, we first consider a special case where $n = p$ is a prime, for which we have a simple formula for $p_i$ based on the formula for $q_i$.
@@ -1480,14 +1486,14 @@ Let $G = C_p$ where $p$ is a prime, then $q_i - p_i = (p-1)/2$ for $ 1 \le i \le
 \begin{proof}  By Lemma \ref{lem:cyclic_counting_difference}, we need to prove that the number of $G$-orbits $G(x,y)$ such that there is some $r < n/2$ with $\sigma_0^r x \lessdot y$ but there does not exist $g \in \text{stab}(y)$ such that $gx = \sigma_0^r x$ is $(p-1)/2.$ 
 
  We consider the action of $G$ on $B_p$. 
- Note that $p$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $p$-cycle in its cycle decomposition. Now suppose $(x, y) \in \mathcal E^1(B_p)_i$  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_p$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Therefore, in the case where $p$ is a prime,  we have: 
+ Note that $p$ being a prime guarantees that the action of any nontrivial $\sigma \in G$ has no fixed points, since $\sigma$ is always an $p$-cycle in its cycle decomposition. Now suppose $(x, y) \in \mathcal E(B_p)_i$  is an element such that $\sigma x =y$ for some $\sigma \neq e$. Then, there is no $g \in C_p$ such that $gx = \sigma x$ and $g y = y$, since $gx = \sigma x \so g = \sigma $ and $g y = y \so g = e$. Therefore, in the case where $p$ is a prime,  we have: 
  $$q_i - p_i = |\left\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } 1 \le r < n/2 \right\}|.$$
 
-%Let $(Gx, Gy)$  be an element in $(\mathcal E^1(B_p/G))_i$, in other words, an edge class in the necklace poset with representative $(x, y)$. Note that we view $G(x , y)$ as a subset of $\mathcal E^1 (B_p)$, namely $G(x, y) = \{(gx, g y) : g \in G \}$. Clearly $G(x , y) \subset (Gx,Gy)$ as subsets of $\mathcal E^1 (B_p)$. It is clear that the number of distinct $\sigma \in G$ such that $\sigma x \lessdot y$ is precisely the number of $G$-orbits in $(Gx, Gy)$. In particular, if the only $\sigma $ such that $\sigma x \lessdot y$ is identity, then $(Gx, Gy)=G(x, y)$ as subsets of $\mathcal E^1 (B_p)$. 
+%Let $(Gx, Gy)$  be an element in $(\mathcal E(B_p/G))_i$, in other words, an edge class in the necklace poset with representative $(x, y)$. Note that we view $G(x , y)$ as a subset of $\mathcal E (B_p)$, namely $G(x, y) = \{(gx, g y) : g \in G \}$. Clearly $G(x , y) \subset (Gx,Gy)$ as subsets of $\mathcal E (B_p)$. It is clear that the number of distinct $\sigma \in G$ such that $\sigma x \lessdot y$ is precisely the number of $G$-orbits in $(Gx, Gy)$. In particular, if the only $\sigma $ such that $\sigma x \lessdot y$ is identity, then $(Gx, Gy)=G(x, y)$ as subsets of $\mathcal E (B_p)$. 
 
 We claim that for each $r$ such that $1 \le r < p/2$, there is precisely one $G$ orbit $G(x, y)$ such that $\sigma_0^r x \lessdot y$. 
 
-First consider $r = 1$, so $\sigma = \sigma_0$. Suppose there is $(x,y) \in \mathcal E^1(B_n)$ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, which gives the same $G$-orbit as $G(x, y)$.
+First consider $r = 1$, so $\sigma = \sigma_0$. Suppose there is $(x,y) \in \mathcal E(B_n)$ such that $x \lessdot y$ and $\sigma x \lessdot y$, i.e., we take out the distinct filled bead from $y$ in the necklace, and rotate $y$ by a $1$-click rotation, then the remaining $i$ filled beads remain in $\sigma y$. It is clear that the only possibility for this to occur is if we have $i+1$ consecutive filled beads, which gives the same $G$-orbit as $G(x, y)$.
 
 The same construction apply to all cases where $1 \le r < p/2$, so for each $r = 1, 2, ..., (p-1)/2$, there is a precisely one orbit $G(x_r,y_r)$ such that $x_r \lessdot y_r$ and $\sigma_0^r  x < y$. This proves the lemma.
 \end{proof}
@@ -1520,7 +1526,7 @@ Let $G =C_n$ and let $\lambda_i$, $q(i,m)$ be as defined above,  then $$\lambda_
 
 Recall from Lemma \ref{lem:cyclic_counting_difference} that 
  $$q_i - p_i =|\{G{(x , y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^r x, g y = y \}|.$$ 
-Hence, to count $q_i - p_i = \lambda_i $, we only need to count the number of distinct subset $G(x, y) \subset \mathcal E^1(B_n)$ for which there exists $r < \frac n 2$ so that $G(x, y)$ is special with respect to $\sigma_0^r.$
+Hence, to count $q_i - p_i = \lambda_i $, we only need to count the number of distinct subset $G(x, y) \subset \mathcal E(B_n)$ for which there exists $r < \frac n 2$ so that $G(x, y)$ is special with respect to $\sigma_0^r.$
 
 Note that, for each $r < n/2$ such that $(r, n) = 1$, there is precisely one such $G$-orbit, since in this case $\sigma_0^r$ is a full $n$-cycle [See proof of Lemma \ref{lem:cyclicprime}]. 
 This holds regardless of $i$. 
@@ -1539,7 +1545,7 @@ Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can
 
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
-The poset $\mathcal E^1(B_n/C_n)$ is rank symmetric and rank unimodal.
+The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{thm}
 
 \begin{proof}
@@ -1568,10 +1574,10 @@ Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =
 \ssec{Quotient by the Dihedral Group}
 \label{ssec:dihedral}
 
-In this subsection, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E^1(B_n/G)$ is rank symmetric and rank unimodal.
+In this subsection, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E(B_n/G)$ is rank symmetric and rank unimodal.
 
 
-\begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E^1 (B_n)/D_{2n}, \quad P = \mathcal E^1(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E^1 (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E^1(B_n/D_{2n}) \big)_i|. $$ 
+\begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E (B_n)/D_{2n}, \quad P = \mathcal E(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E(B_n/D_{2n}) \big)_i|. $$ 
 \end{note}
 
 
@@ -1580,22 +1586,22 @@ Let $G = D_{2p}$ or $G = D_{4p}$ where $p$ is prime , and $p_i, q_i$ as defined 
 \end{lem}
 
 \begin{proof}
-The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E^1(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
+The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
 \todo{This proof needs more work (self)} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
 
 \begin{rem}
-Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E^1(B_n/G)$ is Peck.
+Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E(B_n/G)$ is Peck.
 \end{rem}
 
 
 \begin{lem}{\label{dihedral002}}
- We have an explicit formula for $q_i = |\big(\mathcal E^1 (B_n)/D_{2n} \big)_i|$:
+ We have an explicit formula for $q_i = |\big(\mathcal E (B_n)/D_{2n} \big)_i|$:
  $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
 \end{lem}
 
 \begin{proof}
-Consider an element $(x , y( \in \mathcal E^1(B_n)$ where $x \lessdot y$. Note that any element $\tau $ that fixes both $x$ and $y$ has to fix the difference $y\minus x$, which is a one-element set. Since $G = D_{2n}$, 
+Consider an element $(x , y( \in \mathcal E(B_n)$ where $x \lessdot y$. Note that any element $\tau $ that fixes both $x$ and $y$ has to fix the difference $y\minus x$, which is a one-element set. Since $G = D_{2n}$, 
 we know that $1\leq |\Stab (x , y)| \leq 2$.   
 Let $\mu_1$ be the number of $G$-orbits with the trivial stabilizer and $\mu_2$ be the number of $G$-orbits with the stabilizer of size $2$, which contains the identity and a reflection. By the Orbit-Stabilizer Theorem, each orbit with the trivial stabilizer is of size $|D_{2n}| /1 = 2n $, while all other orbit is of size $|D_{2n}|/2 = n$.  Therefore $$\mu_1 \cdot 2n + \mu_2 \cdot n = |\{(x, y)\}| = {n \choose {i+1}}  \cdot {{i+1} \choose 1} = n {n-1 \choose i }.$$
 
@@ -1613,7 +1619,7 @@ An alternate proof of Lemma ~\ref{dihedral002} follows directly from Polya's The
 \end{rem}
 
 \begin{cor}{\label{dihedral003}} 
-The poset $\mathcal E^1(B_n/D_{2n})$ is rank symmetric and rank unimodal.
+The poset $\mathcal E(B_n/D_{2n})$ is rank symmetric and rank unimodal.
 \end{cor}
 
 \begin{proof}
@@ -1643,12 +1649,12 @@ The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace 
 \end{lem}
 
 \begin{note}
-Define the graded poset $T = \mathcal E^1 \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
+Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
 \end{note}
 
 \begin{lem}
 \label{lem:q_stabilizer}
-For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E^1 \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
+For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
 \end{lem}
 \begin{proof}
 We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
@@ -1656,12 +1662,12 @@ We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_
 
 \begin{lem} 
 \label{lem:cyclic_q_analog_ranks}
-Let $q$ be a prime,  then $$ |\big( \mathcal E^1 \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
+Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
 \end{lem}
 
 \begin{proof}
 
-Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E^1 (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E^1 ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
+Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
 
 Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
 \end{proof}
@@ -1673,12 +1679,12 @@ Now we can calculate the number $q_i$, which is the total number of elements in 
 
 
 %%%%%%%%%%%%%%%%% Unitary Peckness of E^1(B_n) %%%%%%%%%%%%%%%%%%
-\section{The object $\mathcal E^1(B_n).$}
+\section{The object $\mathcal E(B_n).$}
 \label{sec:unitary_peck_f}
-In this section, we explicitly compute the raising operators corresponding to both \linebreak $\mathcal H^1(B_n),\mathcal E^1(B_n)$ and explicitly show that $\mathcal E^1(B_n)$ is unitary Peck by showing certain raising maps are invertible.
+In this section, we explicitly compute the raising operators corresponding to both \linebreak $\mathcal H^1(B_n),\mathcal E(B_n)$ and explicitly show that $\mathcal E(B_n)$ is unitary Peck by showing certain raising maps are invertible.
 
 \begin{note}
-For this section, we will use $M^{n-2i-1} = \mathcal E^1(U)^{n-2i-1},$ where $\mathcal E^1(U)^{n-2i-1}:\mathcal E^1(B_n)_i \rightarrow \mathcal E^1(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
+For this section, we will use $M^{n-2i-1} = \mathcal E(U)^{n-2i-1},$ where $\mathcal E(U)^{n-2i-1}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
 \end{note}
 \begin{note}
 For the remainder of this section, we shall take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
@@ -1705,19 +1711,19 @@ The map $M$ satisfies
 
 For a particular $(x, y),(a , b)$, if either $y \subset a$ or $y \not \subset a, x\subset a, y\subset b,$ then $(a, b) \not >_{\mathcal H^1(B_n)} (x, y),$ and so the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is 0.
 
-Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\subset b,$ hold at the same time. So, suppose  $y \not \subset a, x\subset a, y\subset b.$ This implies that $b\setminus a = y\setminus x.$ Then, the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is precisely the number of sequences $(x, y) = (x_0, y_0) \lessdot_{\mathcal E^1(B_n)} (x_1, y_1) \lessdot_{\mathcal E^1(B_n)}  \cdots \lessdot_{\mathcal E^1(B_n)}  (x_k, y_k) = (a, b).$ However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Theorem ~\ref{explicit_gbn_lefchetz}.
+Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\subset b,$ hold at the same time. So, suppose  $y \not \subset a, x\subset a, y\subset b.$ This implies that $b\setminus a = y\setminus x.$ Then, the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is precisely the number of sequences $(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$ However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Theorem ~\ref{explicit_gbn_lefchetz}.
 
 To complete the proof, we need to show that if $y \subset a$ then the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is $(2^k - 1)(k-1)!$. Equivalently, we need to show that the number of sequences 
 \begin{equation}
 \label{eqn:f_seq}
-(x, y) = (x_0, y_0) \lessdot_{\mathcal E^1(B_n)} (x_1, y_1) \lessdot_{\mathcal E^1(B_n)}  \cdots \lessdot_{\mathcal E^1(B_n)}  (x_k, y_k) = (a, b)
+(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b)
 \end{equation}
 is $(2^k - 1)(k-1)!.$
 
 For the moment, fix $j$ and consider the set of all sequences of the form in Equation ~\eqref{eqn:f_seq} such that $(a\setminus b) \cup y_{j-1} = y_j$ First, let us show the number of such with this $j$ fixed is $(k-1)!2^j.$ To do this, start by considering the number of sequence $y_0,\ldots, y_k$ such that $y=y_0 \lessdot_{B_n} y_1 \lessdot_{B_n} \cdots \lessdot_{B_n} y_k = b.$ Since we enforce $y_j = y_{j-1} \cup (a \setminus b),$ the number of such sequences is precisely the number of ways to order the elements $a \setminus y.$ Since $|y| - |a| = k-1,$ there are $(k-1)!$ such ways. Additionally, for $l <j$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l)$ or $x_{l+1} = x_l \cup (y_l \setminus x_l).$ 
 Either of these is possible at every step. Additionally, for $l \geq j,$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l).$ So for any fixed sequence of $y_k$ with so that $j$ is minimal with $(a\setminus b) \in y_j,$ 
 there are precisely $2^{j-1}$ possible sequences $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$
-so that $(x, y) = (x_0, y_0) \lessdot_{\mathcal E^1(B_n)} (x_1, y_1) \lessdot_{\mathcal E^1(B_n)}  \cdots \lessdot_{\mathcal E^1(B_n)}  (x_k, y_k) = (a, b).$
+so that $(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$
 
 So, in total, there are $2^j(k-1)!$ sequences of the form in ~\eqref{eqn:f_seq} with $(a\setminus b) \cup y_{j-1} = y_j$. Now, there clearly must be some such $j,1 \leq j \leq k.$ Therefore, the coefficient we are looking for is $\sum_{j = 1}^k 2^{j-1}(k-1)! = (2^k - 1)(k-1)!,$ as claimed.
 
@@ -2060,9 +2066,9 @@ In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups
 \caption{}
 \end{figure}
 
-\ssec{A Failed Attempt for Showing $\mathcal E^1(B_n/G)$ is unimodal}
+\ssec{A Failed Attempt for Showing $\mathcal E(B_n/G)$ is unimodal}
 
-In this section, we describe one path we were pursuing in order to show $\mathcal E^1(B_n/G)$ is unimodal. We were attempting to do this by trying to show there were injective order raising maps $U_i:\mathcal E^1(B_n/G)_i \rightarrow \mathcal E^1(B_n/G)_{i+1}.$
+In this section, we describe one path we were pursuing in order to show $\mathcal E(B_n/G)$ is unimodal. We were attempting to do this by trying to show there were injective order raising maps $U_i:\mathcal E(B_n/G)_i \rightarrow \mathcal E(B_n/G)_{i+1}.$
 
 We shall now define several maps, so that we can draw a certain commuting diagram in Remark ~\ref{failed_commuting_diagram}
 
@@ -2075,9 +2081,9 @@ Let $U_i:P_i \rightarrow P_{i+1}$ be the raising operator for the poset $P.$ The
 
 We also have the natural inclusions
 \begin{align*}
-	k_i:\mathcal E^1(P)_i &\rightarrow P_i \otimes P_{i+1},\\
+	k_i:\mathcal E(P)_i &\rightarrow P_i \otimes P_{i+1},\\
 	(x, y) &\mapsto (x, y)\\
-	k_i^{G\times G}:\mathcal E^1(P/G)_i &\rightarrow (P/G)_i \otimes (P/G)_{i+1},\\
+	k_i^{G\times G}:\mathcal E(P/G)_i &\rightarrow (P/G)_i \otimes (P/G)_{i+1},\\
 	(Gx, Gy) &\mapsto (Gx, Gy),
 \end{align*}
 where we have $x \lessdot y$ and $Gx \lessdot Gy.$ The maps above are defined on a basis, and are extended by linearity.
@@ -2103,12 +2109,12 @@ Further, define the map
 
 We also have the projections inclusions
 \begin{align*}
-	\pi_i:P_i \otimes P_{i+1} & \rightarrow \mathcal E^1(P)_{i},\\
+	\pi_i:P_i \otimes P_{i+1} & \rightarrow \mathcal E(P)_{i},\\
 	(x, y) &\mapsto  \begin{cases}
 	(x, y), &\text{ if }x\lessdot y\\
 	0 &\text { otherwise}
 \end{cases}\\
-	\pi_i^{G\times G}: (P/G)_i \otimes (P/G)_{i+1} &\rightarrow\mathcal E^1(P/G)_i,\\
+	\pi_i^{G\times G}: (P/G)_i \otimes (P/G)_{i+1} &\rightarrow\mathcal E(P/G)_i,\\
 	(Gx, Gy) &\mapsto \begin{cases}
 	(Gx, Gy), &\text{ if }Gx\lessdot Gy\\
 	0 &\text { otherwise}
@@ -2118,9 +2124,9 @@ where we have $x \lessdot y$ and $Gx \lessdot Gy.$ The maps above are defined on
 
 Finally, denote
 \begin{align*}
-	\mathcal E^1(U)_i:\mathcal E^1(P)_i &\rightarrow \mathcal E^1(P)_{i+1}\\
+	\mathcal E(U)_i:\mathcal E(P)_i &\rightarrow \mathcal E(P)_{i+1}\\
 	(x, y) &\mapsto k_i \circ (U \otimes U) \circ \pi_{i+1}(x, y)\\
-\mathcal E^1(U)^{G\times G}_i:\mathcal E^1(P/G)_i & \rightarrow \mathcal E^1(P/G)_{i+1}\\
+\mathcal E(U)^{G\times G}_i:\mathcal E(P/G)_i & \rightarrow \mathcal E(P/G)_{i+1}\\
 	(Gx, Gy) &\mapsto k^{G\times G}_i \circ (U \otimes U)^{G\times G} \circ \pi^{G\times G}_{i+1}(Gx, Gy)
 \end{align*}
 where it is defined above on a basis and we extend to the whole space by linearity.
@@ -2131,22 +2137,22 @@ where it is defined above on a basis and we extend to the whole space by lineari
 For $i < \frac{n}{2}$ we obtain the following (almost commuting, but $j_{i+1}\circ p_{i+1} \neq \id.$) diagram
 
 \begin{tikzpicture}[baseline=(current  bounding  box.center)]
-\node (a) at (0,0) {$\mathcal E^1(P)_i$};
+\node (a) at (0,0) {$\mathcal E(P)_i$};
 \node (b) at (3.5,0) {$P_i \otimes P_{i+1}$};
 \node (c) at (8,0) {$P_{i+1} \otimes P_{i+2} $};
-\node (d) at (12,0) {$\mathcal E^1(P)_{i+1}$};
-\node (e) at (0,-2) {$\mathcal E^1(P/G)_i$};
+\node (d) at (12,0) {$\mathcal E(P)_{i+1}$};
+\node (e) at (0,-2) {$\mathcal E(P/G)_i$};
 \node (f) at (3.5,-2) {$(P/G)_i \otimes (P/G)_{i+1}$};
 \node (g) at (8,-2) {$(P/G)_{i+1} \otimes (P/G)_{i+2} $};
-\node (h) at (12,-2) {$\mathcal E^1(P/G)_{i+1}$};
+\node (h) at (12,-2) {$\mathcal E(P/G)_{i+1}$};
 \path[right hook->,font=\scriptsize,>=angle 90] ([xshift= 4pt]g.north) edge node[right] {$j_{i+1}$} ([xshift= 4pt]c.south)
 (a) edge node[above]{$k_i$} (b)
 (b) edge node[above]{$U_i\otimes U_{i+1}$} (c)
 (e) edge node[above]{$k_i^{G\times G}$}(f)
 (f) edge node[above] {$(U_i \otimes U_{i+1})^{G\times G}$} (g)
 (f) edge node[right] {$j_{i}$} (b)
-(a) edge [bend left] node[above] {$\mathcal E^1(U)_i$} (d)
-(e) edge [bend right] node[above] {$\mathcal E^1(U)^{G\times G}_i$} (h)
+(a) edge [bend left] node[above] {$\mathcal E(U)_i$} (d)
+(e) edge [bend right] node[above] {$\mathcal E(U)^{G\times G}_i$} (h)
 ;
 \path[->>,font=\scriptsize,>=angle 90]
 ([xshift= -4pt]c.south) edge node[left] {$p_{i+1}$} ([xshift= -4pt]g.north)
@@ -2162,7 +2168,7 @@ $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\cir
 However, if we did have 
 $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)
 \subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i),$$
-using the fact that $\mathcal E^1(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E^1(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E^1(B_n/G)_i$ is symmetric, unimodal, and sperner.
+using the fact that $\mathcal E(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E(B_n/G)_i$ is symmetric, unimodal, and sperner.
 We have tried several variations on these exact maps, but were never quite able to obtain the desired $\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)\subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i).$
 \end{rem}
 
