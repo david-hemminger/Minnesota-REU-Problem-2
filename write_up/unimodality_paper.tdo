@@ -1,29 +1,27 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Relegate functoriality to a remark}{2}{section*.2}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Define group action to be order preserving and rank preserving, and remove statements of these from the document.}{2}{section*.3}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Include a section for generalizations of E and include redfield polya generalization}{2}{section*.4}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add reference}{2}{section*.5}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Weren't we going to include a question about q-analogs?}{3}{section*.6}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Rephrase so that it has two assertions (in two sentences): first, that $S_n$ acts cover-transitively for all n, and second, that for p prime, $D_{2p} and D_{4p}$ are cover-transitive inside $S_{2p}, S_{4p}$.}{3}{section*.7}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Please note: This paragraph does NOT currently reflect reality. I thought for a while about how we should structure the paper, and this is roughly how I think it should look.}{3}{section*.8}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ consolidate this section}{3}{section*.9}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Include the proposition that if a poset is self dual, then the edge poset is also self dual}{2}{section*.5}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add reference}{3}{section*.6}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Weren't we going to include a question about q-analogs?}{3}{section*.7}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Rephrase so that it has two assertions (in two sentences): first, that $S_n$ acts cover-transitively for all n, and second, that for p prime, $D_{2p} and D_{4p}$ are cover-transitive inside $S_{2p}, S_{4p}$.}{3}{section*.8}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Please note: This paragraph does NOT currently reflect reality. I thought for a while about how we should structure the paper, and this is roughly how I think it should look.}{4}{section*.9}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ consolidate this section}{4}{section*.10}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}{4}{section*.11}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add reference}{4}{section*.12}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I don't think the details of the proof need to be included here, but I've left them here commented out in case we change our minds. Aaron: I agree it is fine to leave them out.}{5}{section*.13}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ David, can you fill this in please?}{10}{section*.14}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I think (i.e...) actually makes things more confusing, rather than clearer. Consider removing the clause after i.e.?}{24}{section*.15}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Consider using a word other than special? Maybe you could say a double orbit, or something like that?}{24}{section*.16}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Perhaps consider breaking this proof into a couple lemmas. First I might say that $\lambda _{i+1} - \lambda _i$ is bounded by the number of elements $y$ with tail cycles with respect to some $\sigma _0^r$ so that $y \lessdot y'$ with $y' \in Stab(\sigma _0^r).$ Then, I would give the bound in the statement of this lemma regarding the size of this set.}{24}{section*.17}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?}{25}{section*.18}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what does ``contribute'' mean? Are you are trying to say it lies in a certain set?}{25}{section*.19}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Again, I don't understand}{25}{section*.20}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What does this mean? It sounds like you're thinking of $\lambda _i$ as a variable, which changes size as you look at different $G$ orbits.}{25}{section*.21}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ How can you choose to ignore a scenario? What does that mean?}{25}{section*.22}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Can you make this sentence more precise? I don't understand what the ``x'' part is, what a ``family'' of such special orbits is, etc.}{25}{section*.23}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what is this? can you write it precisely as a set?}{25}{section*.24}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what index is this sum over?}{25}{section*.25}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what does it mean to insert a tail cycle, and what is a block of elements?}{25}{section*.26}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ with respect to which group element?}{25}{section*.27}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}{26}{section*.28}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Maybe call this a proposition or theorem instead of corollary? It doesn't really follow immediately from other things, and it's the main result we're showing}{26}{section*.29}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This proof needs more work (self)}{26}{section*.30}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ consolidate this section}{4}{section*.11}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}{4}{section*.12}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add reference}{5}{section*.13}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I don't think the details of the proof need to be included here, but I've left them here commented out in case we change our minds. Aaron: I agree it is fine to leave them out.}{5}{section*.14}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ David, can you fill this in please?}{10}{section*.15}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ consider breaking this proof into a couple lemmas.}{25}{section*.16}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?}{25}{section*.17}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what does ``contribute'' mean? Are you are trying to say it lies in a certain set?}{25}{section*.18}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Again, I don't understand}{25}{section*.19}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What does this mean? It sounds like you're thinking of $\lambda _i$ as a variable, which changes size as you look at different $G$ orbits.}{25}{section*.20}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ How can you choose to ignore a scenario? What does that mean?}{25}{section*.21}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Can you make this sentence more precise? I don't understand what the ``x'' part is, what a ``family'' of such isolated pairs is, etc.}{25}{section*.22}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what is this? can you write it precisely as a set?}{25}{section*.23}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what index is this sum over?}{25}{section*.24}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what does it mean to insert a tail cycle, and what is a block of elements?}{25}{section*.25}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ with respect to which group element?}{26}{section*.26}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}{26}{section*.27}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This proof needs more work (self)}{27}{section*.28}
