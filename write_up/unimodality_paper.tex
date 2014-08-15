@@ -161,7 +161,7 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
 \todo{Include a section for generalizations of E and include redfield polya generalization}
 \todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
-
+\todo{Make sure that when we are talking about group actions of $G$ on $B_n$ we are only talking about those induced by an action on $[n].$ I noted this in the introduction, but it seems to be a little unclear in other places.}
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
@@ -540,11 +540,12 @@ Fortunately there is a simpler -- albeit less direct -- route.  In order to avoi
 
 \begin{defn}
 \label{defn:h_map}
-For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y),$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
+For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Let the elements $(x, y) \in \mathcal H^r(P)$ to be pairs $(x,y) \in P\times P$ such that $x <y$ and $rk_P(x) + r = rk_P(y)$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \not \leq y.$ Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}.$ and define $rk_{\mathcal H}(x, y) = rk_P(x).$
 \end{defn}
 
 
 \begin{eg}
+\label{eg:3boolean}
 We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}. Observe that $\mathcal H^1(B_3)$ can be written as a disjoint union of three copies of $B_2.$ This is a single case of the more general phenomenon proven in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
@@ -616,10 +617,11 @@ This follows immediately from Remark \ref{rem:order_containment} and the fact th
 \end{proof}
 
 \begin{rem}
-While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal P \rightarrow \mathcal Q,$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost below) to a chain of length three $Q$ (second leftmost) Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects.
+While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal H^r(P) \rightarrow \mathcal H^r(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost in Figure \ref{fig:h_morphism}) to a chain of length three $Q$ (second leftmost). Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects.
 
 \todo{improve figure}
 \begin{figure}[h]
+\label{fig:h_morphism}
 \begin{center}
 \begin{tikzpicture}[scale=.7]
   \node (b) at (0:2cm) {$3$};
@@ -725,7 +727,7 @@ By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{thm:cover_transitive_implies_Peck}]
-By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n$.  Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
+By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n,$ induced by an action of $G$ on $[n]$.  Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
 \end{proof}
 
 
@@ -744,8 +746,8 @@ $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y
 \end{defn}
 
 
-\begin{rem}\todo{$\mathcal H^r$ is not a functor}
-Both $\mathcal E^{\vec r},\mathcal H^{\vec r}$ are functors, for the same reasons that $\mathcal E^r, \mathcal H^r$ are functors. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are different in many crucial ways.
+\begin{rem}
+Both $\mathcal E^{\vec r}$ is a functor, for the same reasons that $\mathcal E^r$ is a functor. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are different in many crucial ways.
 \end{rem}
 
 In the next Lemmas, we cite analogous results which hold for $\mathcal H^{\vec r}.$ The proofs are almost identical to those for $\mathcal H^r.$
