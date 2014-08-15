@@ -158,10 +158,10 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \newpage
 
 \todo{Relegate functoriality to a remark}
-\todo{Define group action to be order preserving and rank preserving, and remove statements of these from the document.}
 \todo{Include a section for generalizations of E and include redfield polya generalization}
 \todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
 \todo{Make sure that when we are talking about group actions of $G$ on $B_n$ we are only talking about those induced by an action on $[n].$ I noted this in the introduction, but it seems to be a little unclear in other places.}
+
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
@@ -306,7 +306,7 @@ In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be t
 It is well-know that if $\phi$ is any such $G$ action on $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
-Let $G$ be a group of rank-preserving automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
+Let $G$ be a group of automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
 \end{conjecture}
 
 We prove this conjecture holds in the case $r=1$ whenever the group action of $G$ on $B_n$ has the following property.
@@ -390,7 +390,7 @@ $$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
 
 \noindent We then have the following well-known characterization of Peck posets.
 
-\begin{lem}\label{lem:Peck_poset_characterization}\todo{add reference}
+\begin{lem}[\ref{weyl_groups_stanley}, Lemma 1.1]\label{lem:Peck_poset_characterization}
 $P$ is Peck if and only if there exists an order-raising operator $U$ such that for all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
 \end{lem}
 
@@ -399,9 +399,9 @@ If the Lefschetz map satisfies the condition for $U$ in Lemma \ref{lem:Peck_pose
 \end{defn}
 
 
-Let $G\subseteq \operatorname{Aut}(P)$, and define the \textit{quotient poset} $P/G$ to be the poset whose elements are the orbits of $G$, with the relation $\mathcal{O}\le \mathcal{O}^\prime$ if there exist $x\in \mathcal{O}$, $x^\prime\in \mathcal{O}^\prime$ such that $x\le x^\prime$.  We will use of the following result later in the paper.
+We say that a group $G$ acts on $P$ if the action defines and embedding $G\hookrightarrow \operatorname{Aut}(P)$, and define the \textit{quotient poset} $P/G$ to be the poset whose elements are the orbits of $G$, with the relation $\mathcal{O}\le \mathcal{O}^\prime$ if there exist $x\in \mathcal{O}$, $x^\prime\in \mathcal{O}^\prime$ such that $x\le x^\prime$.  We will use the following result later in the paper.
 
-\begin{thm}
+\begin{thm}[\ref{quotients_stanley}, Theorem 1]
 \label{thm:quotients_of_unitary_peck_posets}
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
@@ -448,7 +448,7 @@ If $f\colon P\rightarrow Q$ is morphism of finite ordered posets, then $\mathcal
 \begin{proof}
 First, $\mathcal E^r(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E^r(P)$ we have 
 $$\rk_{\mathcal E}(x, y) = \rk_P(x) = \rk_P(f(x)) = \rk_{\mathcal E}(\mathcal E^r(f)(x, y)).$$
-Suppose $(x, y)\le_{\mathcal E} (x^\prime, y^\prime)$.  Then $x\le_P x^\prime$, $y\le_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\le_P f(x^\prime)$, $f(y)\le_P f(y^\prime)$. Hence $\mathcal E^r(f)(x,y) \le_{\mathcal E} \mathcal E^r(f)(x^\prime , y^\prime)$.  Thus $\mathcal E^r(f)$ is order preserving and hence a morphism of finite ordered posets.
+Suppose $(x, y)\le_{\mathcal E} (x^\prime, y^\prime)$.  Then $x\le_P x^\prime$, $y\le_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\le_P f(x^\prime)$, $f(y)\le_P f(y^\prime)$. Hence $\mathcal E^r(f)(x,y) \le_{\mathcal E} \mathcal E^r(f)(x^\prime , y^\prime)$.  Thus $\mathcal E^r(f)$ is order-preserving and hence a morphism of finite ordered posets.
 \end{proof}
 
 \begin{prop}\label{prop:F_well_defined}
@@ -549,7 +549,6 @@ For $P$ a graded poset, define the graded poset $\mathcal H^r(P)$ as follows. Le
 We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}. Observe that $\mathcal H^1(B_3)$ can be written as a disjoint union of three copies of $B_2.$ This is a single case of the more general phenomenon proven in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
-\todo{improve figure}
 \begin{figure}[h]
 \begin{tikzpicture}[scale = 1.5]
   \node (0) at (0,0) {$\emptyset$};
@@ -572,9 +571,10 @@ We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}
   \draw (4)--(7);
   \draw (5)--(7);
   \draw (6)--(7);
+  \node (8) at (0,-.5) {$B_3$};
 \end{tikzpicture} 
 
-\vspace*{0.2in}
+\vspace*{0.3in}
 
 \begin{tikzpicture}[scale = 1]
   \node (0) at (0,0) {$(\emptyset,\{1\})$};
@@ -592,6 +592,7 @@ We give an example of the poset $\mathcal H^1(B_3)$ in Figure \ref{fig:3boolean}
   \draw (0)--(5)--(11)--(7)--(0);
   \draw (1)--(3)--(10)--(8)--(1);
   \draw (2)--(4)--(9)--(6)--(2);
+  \node (12) at (4,-1) {$\mathcal{H}^1(B_3)$};
 \end{tikzpicture}
 \caption{\label{fig:3boolean} $B_3$ and $\mathcal H^1 (B_3)$}
 \end{figure}
@@ -617,9 +618,9 @@ This follows immediately from Remark \ref{rem:order_containment} and the fact th
 \end{proof}
 
 \begin{rem}
-While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal H^r(P) \rightarrow \mathcal H^r(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (leftmost in Figure \ref{fig:h_morphism}) to a chain of length three $Q$ (second leftmost). Then, $\mathcal H^1(P)$ (second rightmost) has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ (rightmost) has two disconnected points. It is clear that there can be no order preserving mapping between these two objects.
+While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H^r$ is not a functor. In particular, we have not specified how $\mathcal H^r$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H^r(f):\mathcal H^r(P) \rightarrow \mathcal H^r(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (see Figure \ref{fig:h_morphism}) to a chain of length three $Q$. Then, $\mathcal H^1(P)$ has four points, with two pairs of edges, whereas $\mathcal H^1(Q)$ has two disconnected points. It is clear that there can be no order-preserving mapping between these two objects.
 
-\todo{improve figure}
+\todo{anyone know how to align these evenly?}
 \begin{figure}[h]
 \label{fig:h_morphism}
 \begin{center}
@@ -629,12 +630,14 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
   \node (c) at (180:2cm) {$2$};
   \node (d) at (270:2cm) {$1$};
   \draw (a) -- (b) -- (d) -- (c)--(a);
+  \node (e) at (270:3cm) {$P$};
 \end{tikzpicture} \quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (90:2cm) {$3$};
   \node (a) at (270:2cm) {$1$};
   \node (c) at (0:0cm) {$2$};
   \draw (a) -- (c) -- (b);
+  \node (e) at (270:3cm) {$Q$};
 \end{tikzpicture}\quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (45:1.414cm) {$4$};
@@ -643,10 +646,12 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
   \node (d) at (315:1.414cm) {$2$};
   \draw (a) -- (d) ;
   \draw (c) -- (b);
+  \node (e) at (270:3cm) {$\mathcal{H}^1(P)$};
 \end{tikzpicture} \quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (90:1cm) {$2$};
   \node (a) at (270:1cm) {$1$};
+  \node (e) at (270:3cm) {$\mathcal{H}^1(Q)$};
 \end{tikzpicture}
 \end{center}
 \caption{}
@@ -683,7 +688,7 @@ The map $f:\mathcal H^r(P)/G \rightarrow \mathcal E^r(P)/G$ defined by $G(x,y) \
 \end{lem}
 
 \begin{proof}
-The elements of $\mathcal H^r(P)/G,\mathcal E^r(P)/G$ are the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank preserving, to show $f$ is a morphism, it suffices to show $f$ is order preserving. This is immediate from Remark ~\ref{rem:order_containment}.
+The elements of $\mathcal H^r(P)/G,\mathcal E^r(P)/G$ are the same by definition. Therefore, as long as $f$ is a morphism, it is automatically a bijection. Since $f$ is clearly rank-preserving, to show $f$ is a morphism, it suffices to show $f$ is order-preserving. This is immediate from Remark ~\ref{rem:order_containment}.
 \end{proof}
 
 The remaining ingredient to the proof of Theorem \ref{thm:cover_transitive_implies_Peck} is to show that $\mathcal{H}^r(B_n)$ is unitary Peck, which we do by generalizing Example \ref{eg:3boolean} and showing that $\mathcal{H}^r(B_n)$ is isomorphic to the disjoint union of boolean algebras.
@@ -801,8 +806,11 @@ Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the
 \semidirect*
 
 \begin{proof}
-\todo{David, can you fill this in please?}
+Since $G = H\rtimes K$, every element $g\in G$ can be written uniquely as a product $hk$ for some $h\in H$, $k\in K$.  Let $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$ and such that there exists some $h_0k_0\in G$ such that $h_0k_0\cdot x = y$.  It suffices to show that there exists some $g\in \Stab(z)$ such that $g\cdot x = y$.
 
+The orbits $Hx, Hy, Hz\in P/H$ satisfy $Hx\lessdot Hz$, $Hy\lessdot Hz$ such that $k_0\cdot Hx = Hy$, so since the action of $K$ on $P/H$ is CCT there exists some $k_1\in K$ such that $k_1\in \Stab(Hz)$ and $k_1\cdot Hx = Hy$.  It follows that there exists some $h_1\in H$ such that $h_1k_1h_0\in \Stab(z)$ and $h_1k_1h_0\cdot x\in Hy$.
+
+Write $x^\prime = h_1k_1h_0\cdot x$.  Since the group action of $G$ must be order-preserving by definition, we have that $x^\prime \lessdot z$.  We already had that $y\lessdot z$ and $x^\prime\in Hy$, hence there exists some $h_2\in \Stab(z)$ such that $h_2\cdot x^\prime = y$ by the fact that the action of $H$ on $P$ is CCT.  Then we have that $h_2h_1k_1h_0\cdot x = h_2\cdot x^\prime = y$ and $h_2h_1k_1h_0\cdot z = h_2\cdot z = z$, as desired.
 \end{proof}
 
 \begin{prop}
@@ -941,7 +949,7 @@ In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defin
 
 \begin{lem}
 \label{lem:order_2_CCT}
-Let $n,k$ be arbitrary. Let $G = \BBZ_2^k$ and pick any order preserving, rank preserving action $\phi:G\times [n] \rightarrow [n].$ Then the induced action $\phi:G \times B_n \rightarrow B_n$ is CCT.
+Let $n,k$ be arbitrary. Let $G = \BBZ_2^k$ and pick any group action $\phi:G\times [n] \rightarrow [n].$ Then the induced action $\phi:G \times B_n \rightarrow B_n$ is CCT.
 \end{lem}
 \begin{proof}
 First, observe that all elements $g \in G$ have order 2. Suppose $x \lessdot z, y \lessdot z, x = gy.$ We will show $g \in Stab(z).$ By definition, this would imply that $\phi$ is common cover transitive. 
@@ -1354,7 +1362,7 @@ In this section, show that several important posets $\mathcal E(B_n/G)$ are rank
 
 \ssec{Groups of order $n.$}
 
-In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with an order-preserving, rank preserving, transitive action on $B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with a transitive action on $B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
@@ -1630,7 +1638,7 @@ In this subsection we consider a $q$-analog of the Boolean algebra and prove Lem
 
 Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
 
-Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces an order preserving and rank preserving action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
+Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces a group action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
 
 The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
 
