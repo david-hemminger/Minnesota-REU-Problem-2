@@ -332,9 +332,7 @@ Let $p$ be prime.  The following actions are CCT.
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
-The paper is organized as follows.  In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$.  Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions.  In Section we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT.  Section discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results.
-
-\todo{Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}
+The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Section \todo{include section name for q analog here, or if it is moved to the questions section, edit this sentence} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
 
 
 
@@ -1424,6 +1422,7 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Unimodal Quotients}
+\label{sec:unimodal}
 
 In this section, show that several important posets $\mathcal E(B_n/G)$ are rank symmetric and rank unimodal. First, we examine left multiplication actions, showing that for $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the left multiplication action of the cyclic group, $C_n$ on itself, which can also be thought of as $C_n$ acting on the vertices of an $n$-gon by rotation, induces an action on $B_n$ such that $\mathcal E(B_n/C_n)$ is rank unimodal and symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E(B_n/D_{2n})$ is rank unimodal and symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT. Finally, we develop a $q$-analog the cyclic group $C_n(q)$ acting on the $q$-analog of the boolean algebra, $B_n(q)$ and show $|(B_n(q)/C_n(q))_i| = \binom {n-1} i _q.$
 
@@ -1472,8 +1471,8 @@ First, we check $H$ is normal. For any $g \in G,x \in x$ it follows $ghg^{-1}x =
 Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B_n)/G \cong \mathcal E(B_n)/(G/H),$ since $G,G/H$ have exactly the same orbits.
 \end{proof}
 
-\begin{lem}
-\label{lem:transitive_abelian}[\cite{stack}]
+\begin{lem}[\cite{stack}]
+\label{lem:transitive_abelian}
 All faithful transitive abelian groups $A$ acting on the set $[n]$ have $|A| = n.$
 \end{lem}
 
@@ -1495,7 +1494,7 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \ssec{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
-In this subsection, we show that for $G = C_n$ the cyclic group of order $n$, the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we shall prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we shall prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
@@ -2031,6 +2030,7 @@ By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefsch
 \end{proof}
 
 \section{Odds, Ends, and Failed Attempts}
+\label{sec:additional_stuff}
 
 In this section, we include various remarks, as well as failed attempts, which don't particularly belong in other sections.
 
