@@ -2,7 +2,7 @@
 \contentsline {section}{\tocsection {}{1}{Introduction}}{3}{section.1}
 \contentsline {section}{\tocsection {}{2}{Background}}{4}{section.2}
 \contentsline {section}{\tocsection {}{3}{The Edge Poset Construction}}{5}{section.3}
-\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{6}{subsection.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{5}{subsection.3.1}
 \contentsline {subsection}{\tocsubsection {}{3.2}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{7}{subsection.3.2}
 \contentsline {subsection}{\tocsubsection {}{3.3}{A Generalization of $\EuScript H,\EuScript E$}}{10}{subsection.3.3}
 \contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{10}{section.4}
@@ -36,5 +36,5 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{9.3.2}{Unitary Peck Generalizations}}{38}{subsubsection.9.3.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{39}{subsubsection.9.3.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.3.4}{Additional CCT Actions}}{39}{subsubsection.9.3.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgement}}{39}{section*.10}
-\contentsline {section}{\tocsection {}{}{References}}{39}{section*.11}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{39}{section*.8}
+\contentsline {section}{\tocsection {}{}{References}}{39}{section*.9}
