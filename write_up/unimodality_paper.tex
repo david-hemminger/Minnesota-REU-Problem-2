@@ -179,7 +179,7 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
 
 %On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E(P)$ and on the right hand side is the poset obtained from the relation 
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
 \[
 \raisebox{1mm}{
@@ -304,7 +304,7 @@ If $G \subset Aut(B_n),$ then $\mathcal E(B_n/G)$ is Peck.
 
 We prove this conjecture holds whenever the group action of $G$ on $B_n$ has the following property.
 \todo{Include a question about q analogs, it is currently at the end, but it should probably be weaved in here somewhere.}
-
+d
 \begin{defn}
 \label{defn:cover_transitive}
 A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in Stab(z)$ such that $g\cdot x = y.$
@@ -565,7 +565,7 @@ For $P$ a graded poset, define the graded poset $\mathcal H(P)$ as follows. Let 
 We give an example of the poset $\mathcal H(B_3)$ in Figure \ref{fig:3boolean}. Observe that $\mathcal H(B_3)$ can be written as a disjoint union of three copies of $B_2.$ This is a single case of the more general phenomenon proven in Proposition \ref{prop:computing_HBn}.
 \end{eg}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \begin{tikzpicture}[scale = 1.5]
   \node (0) at (0,0) {$\emptyset$};
   \node (1) at (-1,1) {$\{1\}$};
@@ -636,7 +636,7 @@ This follows immediately from Remark \ref{rem:order_containment} and the fact th
 While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ is not a functor. In particular, we have not specified how $\mathcal H$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H(f):\mathcal H(P) \rightarrow \mathcal H(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (see Figure \ref{fig:h_morphism}) to a chain of length three $Q$. Then, $\mathcal H(P)$ has four points, with two pairs of edges, whereas $\mathcal H(Q)$ has two disconnected points. It is clear that there can be no order-preserving mapping between these two objects.
 
 \todo{anyone know how to align these evenly?}
-\begin{figure}[h]
+\begin{figure}[h!]
 \label{fig:h_morphism}
 \begin{center}
 \begin{tikzpicture}[scale=.7]
@@ -893,7 +893,7 @@ A graded poset $P$ is a {\it rooted tree} if there is a unique element $x \in P$
 In Figure \ref{fig:tree1} and Figure \ref{fig:tree2}, we give two examples of rooted trees.
 \end{eg}
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{tikzpicture}[scale=.7]
   \node (0) at (-4,0) {$0$};
   \node (1) at (-3,0) {$1$};
@@ -929,7 +929,7 @@ In Figure \ref{fig:tree1} and Figure \ref{fig:tree2}, we give two examples of ro
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h!]
 Add picture
 \caption{\label{fig:tree2}}
 \end{figure}
@@ -2039,9 +2039,9 @@ In this section, we include various remarks, as well as failed attempts, which d
 In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
 
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{tikzpicture}[scale=.7]
-  \node (0) at (0,-2) {$G\emptyset$};
+  \node (0) at (0,-2) {$G\cdot\emptyset$};
   
   \node (1) at (0,0) {$G\{7\}$};
   
