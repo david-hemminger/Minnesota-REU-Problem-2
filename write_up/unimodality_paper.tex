@@ -146,7 +146,7 @@
 
 
 \begin{abstract}
-For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products. We also prove that $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
+For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products. We also prove that $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihedral group.
 \end{abstract}
 
 \maketitle
@@ -330,7 +330,7 @@ We then show that cover transitivity is preserved under semidirect products, all
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
-The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Section \todo{include section name for q analog here, or if it is moved to the questions section, edit this sentence} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
+The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use Polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
 
 
 
@@ -340,7 +340,7 @@ In this section we review morphisms of graded posets, Peck posets, and a useful 
 
 Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$. When the poset is clear we will omit the $P$ and simply write $x\le y$.
 
-A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfing the following conditions.
+A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
 	\item If $x < y$ then $\rk(x) < rk(y)$ 
@@ -1016,7 +1016,7 @@ Since each $G_j$ is a sequence of direct products and wreath products with symme
 \end{proof}
 
 \begin{eg}
-Let $P_1$ be the rooted tree  in Figure \ref{fig:tree1} and $P_2$ be the rooted in Figure \ref{fig:tree2}, the porposition says that $Aut (P_1) = (S_2 \wr S_2)\wr S_2;$ and $Aut(P_2) = $ %%%% Finish . 
+Let $P_1$ be the rooted tree  in Figure \ref{fig:tree1} and $P_2$ be the rooted in Figure \ref{fig:tree2}, the proposition says that $Aut (P_1) = (S_2 \wr S_2)\wr S_2;$ and $Aut(P_2) = $ %%%% Finish . 
 \end{eg}
 
 \begin{cor}
@@ -1538,7 +1538,7 @@ In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
-\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) =  \mathcal E (B_n)/C_{n}, \quad P(n) =  \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are refering to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
+\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) =  \mathcal E (B_n)/C_{n}, \quad P(n) =  \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are referring to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
 \end{note}
 
 The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in \big( \mathcal E(B_n)/C_n\big)_{i}$ where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
@@ -1615,7 +1615,7 @@ Note that this suffices to show that the $p_i$ are unimodal, since $$p_{i+1} - p
 Fix $r < n/2$ to be an integer and let $ G(x, y)$ be an $G$-orbit of edges. We call $G(x , y)$ an {\it isolated pair} if  $ \sigma_0^r x \lessdot y, \, \, \text{ but  there does not exist } g \in C_n \text{ such that } g x = \sigma_0 ^r x,  \text{ and }g y = y$. 
 \end{defn}
 
-First we prove several sublemmas. 
+First we prove several sub-lemmas. 
 
 \begin{lem} \label{lem:bounding_sublemma1}
 $\lambda_i = p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r < n/2$ with $\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$.
@@ -1761,47 +1761,6 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 
 
 
-
-%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
-\ssec{A $q$-analog}
-\label{ssec:q_analog}
-
-In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
-
-Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
-
-Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces a group action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
-
-The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
-
-\begin{lem}
-\label{q:number_subspaces}
-The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace in $V_n(q)$, is ${n \choose i}_q$
-\end{lem}
-
-\begin{note}
-Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
-\end{note}
-
-\begin{lem}
-\label{lem:q_stabilizer}
-For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
-\end{lem}
-\begin{proof}
-We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
-\end{proof}
-
-\begin{lem} 
-\label{lem:cyclic_q_analog_ranks}
-Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
-\end{lem}
-
-\begin{proof}
-
-Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
-
-Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
-\end{proof}
 
 
 
@@ -2084,6 +2043,49 @@ By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefsch
 
 In this section, we include various remarks, as well as failed attempts, which don't particularly belong in other sections.
 
+
+%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
+\ssec{A $q$-analog}
+\label{ssec:q_analog}
+
+In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}. This subsection is a start toward developing a q-analog of the unimodality of the necklace poset.
+
+Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
+
+Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces a group action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
+
+The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
+
+\begin{lem}
+\label{q:number_subspaces}
+The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace in $V_n(q)$, is ${n \choose i}_q$
+\end{lem}
+
+\begin{note}
+Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
+\end{note}
+
+\begin{lem}
+\label{lem:q_stabilizer}
+For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
+\end{lem}
+\begin{proof}
+We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
+\end{proof}
+
+\begin{lem} 
+\label{lem:cyclic_q_analog_ranks}
+Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
+\end{lem}
+
+\begin{proof}
+
+Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
+
+Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
+\end{proof}
+
+
 \ssec{Quotients by Automorphism Groups of Rooted Trees}
 
 In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
@@ -2265,7 +2267,7 @@ $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\cir
 However, if we did have 
 $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)
 \subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i),$$
-using the fact that $\mathcal E(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E(B_n/G)_i$ is symmetric, unimodal, and sperner.
+using the fact that $\mathcal E(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E(B_n/G)_i$ is symmetric, unimodal, and Sperner.
 We have tried several variations on these exact maps, but were never quite able to obtain the desired $\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)\subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i).$
 \end{rem}
 
@@ -2299,7 +2301,7 @@ Is $\mathcal E(B_n(q))$ unitary peck? What about $\mathcal E^{\vec r}(B_n(q))?$
 
 \sssec{A $q$-analog of Conjecture ~\ref{conj:F_of_BnG_Peck}}
 
-In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the followin question: 
+In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the following question: 
 
 \begin{question}
 For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
