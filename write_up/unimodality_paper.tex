@@ -172,6 +172,8 @@ For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the
 Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E^r(f)\colon \mathcal E^r(P)\rightarrow \mathcal E^r(Q)$ by $\mathcal E^r(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
+We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P)$.
+
 \begin{note}
 In the case $r = 1,$ for brevity, we shall use $\mathcal E$ to denote $\mathcal E^1.$
 \end{note}
@@ -180,7 +182,7 @@ In the case $r = 1,$ for brevity, we shall use $\mathcal E$ to denote $\mathcal 
 
 \begin{eg}
 
-It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.
+It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.  In the figure it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 
 %On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E(P)$ and on the right hand side is the poset obtained from the relation 
 
@@ -293,15 +295,16 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
 \caption{\label{fig:EP_definition_example}The definition of $\mathcal E$}
 \end{center}
 \end{figure}
-Here, it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
 
 
 
-We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P).$  
-We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
+We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck (which follows from \cite[Theorem 2a]{quotients_stanley} by noting that $B_k = (B_1)^k,$) if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
+
+For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ 
+
+Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck (which follows from \cite[Theorem 2a]{quotients_stanley} by noting that $B_k = (B_1)^k$), if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
@@ -357,7 +360,7 @@ A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \righ
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
 	\item If $x < y$ then $\rk(x) < rk(y)$ 
 \end{enumerate}
-Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P|\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$}.
+Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P\colon\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$}.
 
 Denote the category of finite graded posets by $\mathcal{P}$, and let $P,Q$ be finite graded posets of rank $n$.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
@@ -622,7 +625,7 @@ While $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H
 
 \todo{anyone know how to align these evenly?}
 \begin{figure}[h]
-\label{fig:h_morphism}
+\label{fig:h_morphism}1
 \begin{center}
 \begin{tikzpicture}[scale=.7]
   \node (b) at (0:2cm) {$3$};
@@ -867,6 +870,7 @@ In this subsection, we describe several classes of cover transitive actions. Fir
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
+\todo{Reference Mo's paper (title is "On Volumes of Permutation Polytopes", and it has the label "permutation polytopes" in References.bib)}
 In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
 
 \begin{defn}
@@ -1034,7 +1038,7 @@ For $x \subset [l \cdot m]$ we shall say $x$ is {\it left justified} if whenever
 \end{defn}
 
 \begin{defn}
-For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x:i\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
+For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x\colon\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
 \end{defn}
 
 \begin{lem}
@@ -1183,7 +1187,7 @@ A {\it coloring} of a set $S$ by the colors $R = \{r_1,\ldots, r_k\}$ is a map $
 \begin{note}
 For $A,B$ sets, let $A^B = Hom_{\text{sets}}(B,A).$ Let $G \subset S_n$ act on $B_n.$ Then, $G$ acts on $R^{B_n} = Hom_{\text{sets}}(B_n,R)$ by $g \cdot f(S) = f(g\cdot S)$ where $g \in G,S \in B_n, f \in R^{B_n}.$ Then, let $R^{B_n}/G$ denote the quotient of $R^{B_n}$ by the action of $G$ defined above.
 
-Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S:f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
+Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S\colon f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
 
 Define $$\kappa(i_1,\ldots, i_k) = |\{Gf \in R^{B_n}/G \text{ such that } c(f) = (i_1,\ldots, i_k) \}|.$$
 
@@ -1863,7 +1867,7 @@ Let $I$ be fixed. If $l_J$ lies in the span of $v_{(a, b)}$ for $J \subset I,$ t
 
 \end{lem}
 \begin{proof}
-Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x | i_k \in x\}.$ Then, $\cap_{k=1}^s A_k = \{x | I \subset x\}.$ Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{k=1}^s A_k} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{k=1}^s A_k} (x, y)$ does as well.
+Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x \colon i_k \in x\}.$ Then, $\cap_{k=1}^s A_k = \{x \colon I \subset x\}.$ Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{k=1}^s A_k} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{k=1}^s A_k} (x, y)$ does as well.
 
 \end{proof}
 
