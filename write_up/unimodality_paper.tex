@@ -160,7 +160,6 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \todo{Relegate functoriality to a remark}
 \todo{Include a section for generalizations of E and include redfield polya generalization}
 \todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
-\todo{Make sure that when we are talking about group actions of $G$ on $B_n$ we are only talking about those induced by an action on $[n].$ I noted this in the introduction, but it seems to be a little unclear in other places.}
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
@@ -302,8 +301,7 @@ Here, it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),
 We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P).$  
 We observe that when $P$ has a nice structure, $\mathcal E^r(P)$ commonly has a nice structure as well.  
 
-In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, we assume that any action of a group $G$ on $B_n,$ notated $\phi:G \times B_n \rightarrow B_n,$ is induced by an action on $[n].$ That is, $\phi$ can always be written in the form $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}$ for $\psi:G\times [n] \rightarrow [n]$ a $G$ action on $[n]$.
-It is well-know that if $\phi$ is any such $G$ action on $B_n$, then $B_n/G$ is Peck \todo{add reference}.  We conjecture the following.
+In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck (which follows from \cite[Theorem 2a]{quotients_stanley} by noting that $B_k = (B_1)^k,$) if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 Let $G$ be a group of automorphisms of $B_n$.  Then $\mathcal E^r(B_n/G)$ is Peck.
@@ -324,14 +322,16 @@ If a group action of $G$ on $B_n$ is CCT, then $\mathcal E(B_n/G)$ is Peck.
 
 A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
-\begin{prop}\label{prop:cover_transitive_building_blocks}
+\begin{restatable}{prop}{building}
+\label{prop:cover_transitive_building_blocks}
 Let $p$ be prime.  The following actions are CCT.
 
 \begin{enumerate}
 \item The action of $S_n$ on $B_n$.
 \item The actions of $D_{2p}$ and $D_{4p}$ on $B_p$ and $B_{2p}$, respectively.
 \end{enumerate}
-\end{prop}
+\end{restatable}
+\todo{restate this at the appropriate place in the dihedral group subsection}
 
 \begin{restatable}{prop}{semidirect}
 \label{prop:semidirect_product_preservation}
@@ -732,7 +732,7 @@ By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H^r(B_n)/G$ is Peck. By
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{thm:cover_transitive_implies_Peck}]
-By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n,$ induced by an action of $G$ on $[n]$.  Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
+By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}^r(B_n)/G$ is Peck for any group action of $G$ on $B_n.$ Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}^r(B_n)/G$ to $\mathcal{E}^r(B_n/G)$, hence $\mathcal{E}^r(B_n/G)$ is Peck by Lemma \ref{lem:bijection_h_f}.
 \end{proof}
 
 
@@ -1162,7 +1162,7 @@ First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unit
 
 \section{Relations to Polya Theory}
 \label{sec:polya}
-In this section, we obtain summation formulas for the ranks of $\mathcal E^{\vec r}(B_n)/G.$ These formulas are given by certain polynomials in Polya theory. In particular, we obtain polynomials from Polya theory which are the rank generating functions of $\mathcal E^{\vec r}(B_n)/G,$ which implies that these polynomials have symmetric, unimodal coefficients. The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
+In this section, we obtain summation formulas for the ranks of $\mathcal E^{\vec r}(B_n)/G,$ in the case that the action of $G$ on $\mathcal E^{\vec r}$ is induced by some action of $G$ on $[n].$ These formulas are given by certain polynomials in Polya theory. In particular, we obtain polynomials from Polya theory which are the rank generating functions of $\mathcal E^{\vec r}(B_n)/G,$ which implies that these polynomials have symmetric, unimodal coefficients. The result we prove is a generalization of \cite[Corollary 7.16]{algebraic_stanley}. 
 
 \ssec{A Brief Review of Polya Theory}
 
@@ -2244,7 +2244,7 @@ Does the group of linear automorphism of an $n$-cube in $\BR^n$, whose vertices 
 Also, we found using computers that the group of invertible linear maps on $\BF_2^3$ acting on the the seven nonzero points of $\BF_2^3$ induce an action on $B_7$ which is CCT. We wonder if this generalizes to other groups of invertible linear maps on finite fields.
 
 \begin{question}
-Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
+Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)^*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
 \end{question}
 
 \bibliography{References}
