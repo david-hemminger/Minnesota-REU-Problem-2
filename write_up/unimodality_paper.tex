@@ -507,7 +507,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
 	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a bijective morphism (but not necessarily an isomorphism).
 %	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
-	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
+%	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -518,7 +518,7 @@ First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x
 
 %Next, we check $(3) \iff (4)$by Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since an injective map is a bijection if and only if it is a surjection, it follows that $(3) \iff (4).$
 
-Finally, we check $(3)\iff (4).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
+%Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
 \end{proof}
 
 
@@ -1602,7 +1602,7 @@ Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes 
 
 
 \begin{lem} \label{lem:bounding_sublemma2}
-$$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\}|.$$
+$$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail cycle in } y \text{ has only } 2 \text{ element}\right\}|.$$
 \end{lem}
 
 \begin{proof}
@@ -1610,7 +1610,7 @@ $$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail
 By the previous lemma, $\lambda_i = q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$ where $r < n/2$, in other words, $\lambda_i = |S_2(i)|.$ Therefore, $\lambda_{i+1} - \lambda_i = |S_2(i+1)| - |S_2(i)|$. 
 
 Now for each $i$ we define two subsets $S_3(i) \subset S_2(i)$ and $S_4(i) \subset S_2(i)$ as follows: 
-$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 2\text{ elements}\right\}.$$  
+$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 2 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 3\text{ elements}\right\}.$$  
 
 It is clear that $S_3$ and $S_4$ are disjoint subsets of $S_2$ and that $S_2 = s_3 \cup S_4$. In particular, we know that $|S_2(i+1)| = |S_3(i+1)| +|S_4(i+1)|.$ Thus $$\lambda_{i+1} - \lambda_i = |S_3(i+1)| + |S_4(i+1)| - |S_2(i)|.$$
 
@@ -1623,18 +1623,28 @@ We create an injective map $\phi$ from $S_4(i+1)$ to $S_2(i)$. For each orbit $G
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
-Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q \left(\frac{(i+1)}{k},\frac{n}{k}\right) $$ 
+Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right) .$$ 
 \end{lem}
 
 \begin{proof} 
-Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
- We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Being edited.} 
- This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
 
-We can introduce $k = n/d$  and rewrite the sum as 
-$$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
+By Lemma \ref{lem:bounding_sublemma2} we need to show that $\displaystyle |S_3(i+1)| \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right)  .$ 
+
+For any $G(x, y) \in S_3(i+1)$, $y$ consists of several full cycles with $2$ addition element being its tail cycle. The full cycles in $y$ are $d$ rotationally symmetric for some $d | n$ and $d | i$ since $|y| = i+2$. We count the number of such $G(x,y)$ according to the number $d$. For each $d| (i, n)$, we define $$V_d = \left\{G(x, y) \in S_3(i+1) : \text{ the full cycles in $y$ is $d$-rotationally symmetric} \right\}.$$ Note that $V_2 = \O$, for otherwise for any $G(x, y) \in V_2$, $y$ would have only full cycles where each cycle consists of $2$ elements. Therefore, $|S_3(i+1)| \le \displaystyle \sum_{\substack{d| (i, n) \\ 3 \le d}} |V_d|$, since $S_3(i+1) = \bigcup_{\substack{d| (i, n) \\ 3 \le d}} V_d$ though the union of the right hand side is in general not disjoint. 
+
+Now we give an upper bound for $|V_d|$ for each $d | (n, i)$. Namely, we show that $|V_d| \le d \cdot q (i/d, n/d)$. 
+
+Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r x \lessdot y$, and from construction we know that $d | r$. \todo{Finish this argument and correct next theorem}
+
+
+
+%Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
+ %We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
+
+%We can introduce $k = n/d$  and rewrite the sum as  $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
  
 \end{proof}
+
 
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
@@ -1675,7 +1685,7 @@ In this subsection, we show a similar result for the Dihedral groups that act na
 \building*
 
 \begin{proof}
-We have already seen that the first part holds trivially. The proof of the second part is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Then, by part 4 of Lemma \ref{lem:cover_transitive_equivalence}, the action of $C_{2n}$ is CCT. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
+We have already seen that the first part holds trivially. The proof of the second part is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Then, by part 4 of Lemma \ref{lem:cover_transitive_equivalence}, the action of $C_{2n}$ is CCT. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$.
 \todo{This proof needs more work (self)} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
 

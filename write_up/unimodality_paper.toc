@@ -8,9 +8,9 @@
 \contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{10}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{11}{subsection.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.2}{Examples of Cover Transitive Actions}}{12}{subsection.4.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{13}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{12}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Automorphisms of Polytopes}}{14}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Cover Transitive Actions of ${\mathbb Z}_2^k$}}{15}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Cover Transitive Actions of ${\mathbb Z}_2^k$}}{14}{subsubsection.4.2.3}
 \contentsline {section}{\tocsection {}{5}{Wreath Product of two Symmetric Groups}}{15}{section.5}
 \contentsline {subsection}{\tocsubsection {}{5.1}{Recalling Pak and Panova's Result}}{15}{subsection.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.2}{The Poset $\EuScript E^r(B_n)/G$}}{16}{subsection.5.2}
