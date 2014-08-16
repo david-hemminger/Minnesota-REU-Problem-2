@@ -1,9 +1,7 @@
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Relegate functoriality to a remark}{3}{section*.3}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Include the proposition that if a poset is self dual, then the edge poset is also self dual}{3}{section*.4}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Include a question about q analogs, it is currently at the end, but it should probably be weaved in here somewhere.}{4}{section*.5}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ restate this at the appropriate place in the dihedral group subsection}{4}{section*.6}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}{4}{section*.7}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ anyone know how to align these evenly?}{8}{section*.8}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Reference Mo's paper (title is "On Volumes of Permutation Polytopes", and it has the label "permutation polytopes" in References.bib)}{12}{section*.9}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Being edited.}{27}{section*.10}
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This proof needs more work (self)}{28}{section*.11}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ Relegate functoriality to a remark}{3}{section*.3}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ Include the proposition that if a poset is self dual, then the edge poset is also self dual}{3}{section*.4}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ Include a question about q analogs, it is currently at the end, but it should probably be weaved in here somewhere.}{4}{section*.5}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ include section name for q analog here, or if it is moved to the questions section, edit this sentence}{4}{section*.6}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ anyone know how to align these evenly?}{8}{section*.7}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ Being edited.}{27}{section*.8}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ This proof needs more work (self)}{28}{section*.9}
