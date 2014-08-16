@@ -158,7 +158,6 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \newpage
 
 \todo{Relegate functoriality to a remark}
-\todo{Include a section for generalizations of E and include redfield polya generalization}
 \todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
@@ -173,8 +172,6 @@ Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\right
 \end{defn}
 
 We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P)$.
-
-
 
 \begin{eg}
 
@@ -1404,12 +1401,9 @@ Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B
 \end{proof}
 
 \begin{lem}
-\label{lem:transitive_abelian}
+\label{lem:transitive_abelian}[\cite{stack}]
 All faithful transitive abelian groups $A$ acting on the set $[n]$ have $|A| = n.$
 \end{lem}
-\begin{proof}
-This is a well known, easy to prove, result. See for instance \cite{stack}
-\end{proof}
 
 \begin{cor}
 \label{cor:transitive_abelian_ranks}
@@ -1431,7 +1425,7 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \ssec{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
-In this section, we show that for $G = C_n$ the cyclic group of order $n$, the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. The rank symmetric part is obvious. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+In this subsection, we show that for $G = C_n$ the cyclic group of order $n$, the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we shall prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
@@ -2003,7 +1997,6 @@ In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups
 \end{tikzpicture}
 \caption{}
 \end{figure}
-
 
 \begin{figure}
 \begin{tikzpicture}[scale=.7]
