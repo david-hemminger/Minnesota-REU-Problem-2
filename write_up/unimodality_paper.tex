@@ -172,11 +172,13 @@ For $\mathcal P$ the category of graded posets and define the {\it Edge Poset Co
 Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal E(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
+We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P)$.
+
 
 
 \begin{eg}
 
-It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.
+It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.  In the figure it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 
 %On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E(P)$ and on the right hand side is the poset obtained from the relation 
 
@@ -289,15 +291,15 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
 \caption{\label{fig:EP_definition_example}The definition of $\mathcal E$}
 \end{center}
 \end{figure}
-Here, it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 \end{eg}
 
 
+We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-We will show that $\mathcal E$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P).$  
-We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  
 
-In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$. For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary Peck if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
+For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ 
+
+Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subset Aut(B_n),$ then $\mathcal E(B_n/G)$ is Peck.
@@ -334,10 +336,8 @@ Let $p$ be prime.  The following actions are CCT.
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
+The paper is organized as follows.  In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$.  Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions.  In Section we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT.  Section discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results.
 
-\todo[inline]{Please note:  This paragraph does NOT currently reflect reality.  I thought for a while about how we should structure the paper, and this is roughly how I think it should look.}
-The paper is organized as follows.  In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$.  Section \ref
-{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions.  In Section \todo{consolidate this section} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT.  Section \todo{consolidate this section} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results.
 \todo{Obviously come back to this at the end, but since this is the introduction for the REU report, not a journal paper, we should also include descriptions of the sections we don't think will go in the journal paper.}
 
 
@@ -353,7 +353,7 @@ A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \righ
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
 	\item If $x < y$ then $\rk(x) < rk(y)$ 
 \end{enumerate}
-Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P|\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$}.
+Then, define the $i$th rank of $P$ to be  $P_i = \{x \in P\colon\rk(x) = i\}.$ Additionally, if for all $x\in P,0 \leq \rk(x) \leq n,$ and there exists $x,y$ with $\rk(x) = 0, rk(y) = n,$ we say $P$ is a graded poset of {\it rank $n$}.
 
 Denote the category of finite graded posets by $\mathcal{P}$, and let $P,Q$ be finite graded posets of rank $n$.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
@@ -864,6 +864,7 @@ In this subsection, we describe several classes of cover transitive actions. Fir
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
+\todo{Reference Mo's paper (title is "On Volumes of Permutation Polytopes", and it has the label "permutation polytopes" in References.bib)}
 In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
 
 \begin{defn}
@@ -994,7 +995,7 @@ First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2
 
 
 %%%%%%%%%%%%%%%%% Wreath Product  S_m with S_l %%%%%%%%%%%%%%%%%%
-\section{Wreath Product of two Symmetric Groups}
+\section{Wreath Product of two Symmetric Groups}\label{sec:wreath_product}
 
 In this section,we prove a result similar to that of \cite[Theorem 1.1]{pak}. We shall construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. It shall give an alternate proof of Theorem 1.1 in the case that $r = 1.$
 
@@ -1031,7 +1032,7 @@ For $x \subset [l \cdot m]$ we shall say $x$ is {\it left justified} if whenever
 \end{defn}
 
 \begin{defn}
-For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x:i\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
+For $x \subset [l\cdot m],$ define the {\it composition of $x,$} denoted $comp(x) = \lambda_1 ,\ldots, \lambda_l$ where $\lambda_i = |\{a \in x\colon\cdot (m-1)< a \leq i \cdot m\}|.$ That is, if we pick out the boxes of the $l \times m$ rectangle which lie in $x,$ the composition is just the sequence of the number of boxes in each row. Similarly, define the {\it partition of $x$,} notated $part(x)$ as follows. Let $\pi \in S_l$ be a permutation such that $\pi(i) \geq \pi(i+1)$ for all $i,1\leq i \leq l-1.$ Then  $part(x) = (\lambda_{\pi(1)},\ldots, \lambda_{\pi(l)}).$ That is, $part(x)$ is the $comp(x)$, written in decreasing order.
 \end{defn}
 
 \begin{lem}
@@ -1180,7 +1181,7 @@ A {\it coloring} of a set $S$ by the colors $R = \{r_1,\ldots, r_k\}$ is a map $
 \begin{note}
 For $A,B$ sets, let $A^B = Hom_{\text{sets}}(B,A).$ Let $G \subset S_n$ act on $B_n.$ Then, $G$ acts on $R^{B_n} = Hom_{\text{sets}}(B_n,R)$ by $g \cdot f(S) = f(g\cdot S)$ where $g \in G,S \in B_n, f \in R^{B_n}.$ Then, let $R^{B_n}/G$ denote the quotient of $R^{B_n}$ by the action of $G$ defined above.
 
-Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S:f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
+Suppose $R = \{r_1,\ldots, r_k\},$ and define the map $c:R^{S}\rightarrow \BBZ^k,$ by sending $f \in R^S$ to $c(f) = (i_1,\ldots, i_k)$ if $|\{s \in S\colon f(s) = r_j\}| = i_j$ for $1 \leq j \leq k.$ Observe that if $f \in Gh$ then $c(f) = c(h),$ so the map $color$ descends to a map on $G$ orbits.
 
 Define $$\kappa(i_1,\ldots, i_k) = |\{Gf \in R^{B_n}/G \text{ such that } c(f) = (i_1,\ldots, i_k) \}|.$$
 
@@ -1351,7 +1352,7 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 
 
 
-
+\todo[inline]{merge sections 7 and 8}
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Unimodal Quotients}
 
@@ -1532,11 +1533,15 @@ Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem} \label{lem:bounding_sublemma2}
+$$\lambda_{i+1} - \lambda_i \le |\left \{ G(x, y) : |y| = i+1, \text{and } y \text{ does not contain a tail cycle} \right\}|$$
 
 \end{lem}
 
 \begin{proof}
-\todo{This and next lemma is still being edited}
+
+So, $q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$.  Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$.  In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. 
+ Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$.
+
 \end{proof}
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
@@ -1544,13 +1549,9 @@ Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i
 \end{lem}
 
 \begin{proof} 
-
-
-So, $p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$.  Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$.  In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. 
- Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$.
-
 Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
- We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{what index is this sum over?} This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
+ We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Currently Editing} %%%% Edit!
+ This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
 
 We can introduce $k = n/d$  and rewrite the sum as 
 $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
@@ -1575,10 +1576,6 @@ This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
 
 \end{proof}
-
-
-
-
 
 
 
@@ -1860,7 +1857,7 @@ Let $I$ be fixed. If $l_J$ lies in the span of $v_{(a, b)}$ for $J \subset I,$ t
 
 \end{lem}
 \begin{proof}
-Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x | i_k \in x\}.$ Then, $\cap_{k=1}^s A_k = \{x | I \subset x\}.$ Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{k=1}^s A_k} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{k=1}^s A_k} (x, y)$ does as well.
+Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x \colon i_k \in x\}.$ Then, $\cap_{k=1}^s A_k = \{x \colon I \subset x\}.$ Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{k=1}^s A_k} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{k=1}^s A_k} (x, y)$ does as well.
 
 \end{proof}
 
