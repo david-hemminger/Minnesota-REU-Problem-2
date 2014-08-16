@@ -893,6 +893,51 @@ In this subsubsection, we prove that the automorphism group of rooted trees is a
 A graded poset $P$ is a {\it rooted tree} if there is a unique element $x \in P$ of maximal rank, called the {\it root}, and for all $x \in P,$ other than the root, there exists a unique $y \in P$ with $y \gtrdot x.$
 \end{defn}
 
+\begin{eg}
+In Figure \ref{fig:tree1} and Figure \ref{fig:tree2}, we give two examples of rooted trees.
+\end{eg}
+
+\begin{figure}
+\begin{tikzpicture}[scale=.7]
+  \node (0) at (-4,0) {$0$};
+  \node (1) at (-3,0) {$1$};
+  \node (2) at (-2,0) {$2$};
+  \node (3) at (-1,0) {$3$};
+    \node (4) at (0,0) {$4$};
+  \node (5) at (1,0) {$5$};
+  \node (6) at (2,0) {$6$};
+  \node (7) at (3,0) {$7$};
+  \node (8) at (-3.5,1) {$8$};
+  \node (9) at (-1.5,1) {$9$};
+  \node (10) at (.5,1) {$10$};
+  \node (11) at (2.5,1) {$11$};
+    \node (12) at (-2.5,2) {$12$};
+  \node (13) at (1.5,2) {$13$};
+  \node (14) at (-.5,3) {$14$};
+  \draw (0)--(8);
+  \draw (1)--(8);
+  \draw (2)--(9);
+  \draw (3)--(9);
+  \draw (4)--(10);
+  \draw (5)--(10);
+  \draw (6)--(11);
+  \draw (7)--(11);
+  \draw (8)--(12);
+  \draw (9)--(12);
+  \draw (10)--(13);
+  \draw (11)--(13);
+  \draw (12)--(14);
+  \draw (13)--(14);
+\end{tikzpicture}
+\caption{\label{fig:tree1}}
+\end{figure}
+
+
+\begin{figure}
+Add picture
+\caption{\label{fig:tree2}}
+\end{figure}
+
 \begin{defn}
 For $P$ a rooted tree, an element $x \in P$ is a {\it leaf} if there is no $z \in P$ with $x > z.$ Denote the set of all leaves of $P$ by $L(P).$
 \end{defn}
@@ -933,6 +978,10 @@ Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr
 \end{equation}
 Since each $G_j$ is a sequence of direct products and wreath products with symmetric groups by the inductive assumption, it follows from ~\eqref{eq:level_expansion} that so is $Aut(P).$
 \end{proof}
+
+\begin{eg}
+Let $P_1$ be the rooted tree  in Figure \ref{fig:tree1} and $P_2$ be the rooted in Figure \ref{fig:tree2}, the porposition says that $Aut (P_1) = (S_2 \wr S_2)\wr S_2;$ and $Aut(P_2) = $ %%%% Finish . 
+\end{eg}
 
 \begin{cor}
 For $P$ the automorphism group of a rooted tree, $Aut(P)$ is CCT.
@@ -1373,8 +1422,6 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 
 
 
-
-\todo[inline]{merge sections 7 and 8}
 %%%%%%%%%%%%%%%%% regular actions %%%%%%%%%%%%%%%%%%
 \section{Unimodal Quotients}
 
@@ -1444,8 +1491,6 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 
 
 
-
-\section{Rank unimodality for Non-CCT actions}
 %%%%%%%%%%%%%%%%%  Cyclic  %%%%%%%%%%%%%%%%%%
 \ssec{Quotient by the Cyclic Group}
 \label{sec:cyclic}
@@ -1548,20 +1593,27 @@ For each $r < n/2$ such that $(r, n) = 1$, there is precisely one such $G$-orbit
 Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes elements of the form $\{s, s+r, s+2r, ..., \}$ for any starting point $s$, which are proper subsets of $[n]$. For $y \in B_n,$ one may write $y$ as the union of full cycles and at most one tail cycle under the action of $\sigma_0^r$. Now, if $y \in B_n$ has no tail cycles under the action of $\sigma_0^r$ then $(\sigma_0^rx , \sigma_0^ry)= (\sigma_0^rx , y) \in G(x, y).$ Hence $G(x, y) \notin S_1$, and this proves the lemma. 
 \end{proof}
 
-%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem} \label{lem:bounding_sublemma2}
-$$\lambda_{i+1} - \lambda_i \le |\left \{ G(x, y) : |y| = i+1, \text{and } y \text{ does not contain a tail cycle} \right\}|$$
-
+$$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\}|.$$
 \end{lem}
 
 \begin{proof}
 
-So, $q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$.  Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$.  In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. 
- Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$.
+By the previous lemma, $\lambda_i = q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$ where $r < n/2$, in other words, $\lambda_i = |S_2(i)|.$ Therefore, $\lambda_{i+1} - \lambda_i = |S_2(i+1)| - |S_2(i)|$. 
 
+Now for each $i$ we define two subsets $S_3(i) \subset S_2(i)$ and $S_4(i) \subset S_2(i)$ as follows: 
+$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 2\text{ elements}\right\}.$$  
+
+It is clear that $S_3$ and $S_4$ are disjoint subsets of $S_2$ and that $S_2 = s_3 \cup S_4$. In particular, we know that $|S_2(i+1)| = |S_3(i+1)| +|S_4(i+1)|.$ Thus $$\lambda_{i+1} - \lambda_i = |S_3(i+1)| + |S_4(i+1)| - |S_2(i)|.$$
+
+Our goal is to show that $|S_4(i+1) | - |S_2(i)| \le 0$ and then the lemma follows.
+
+We create an injective map $\phi$ from $S_4(i+1)$ to $S_2(i)$. For each orbit $G(x, y) \in S_4(i+1)$ with $\sigma_0^r x \lessdot y $ for some $r < n/2$, by construction we know that there is a tail cycle in $y$ which consists of at least two elements in $[n]$. Let the tail cycle be $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l \ge 1$, and $x = y \minus \{s+lr\} $. We define $\phi(G(x, y)) = G(x', y')$ where $x' = x \minus \{s\}$ and $y' = y \minus \{s\}$. It is clear that $x' \lessdot y'$ and $\sigma_0^r x' \lessdot y'$, and that $y'$ has a tail cycle, namely $w' = \{s+r, ..., s+lr\}$. This shows that $\phi: S_4(i+1) \rightarrow S_2(i)$ is a well defined map. The map is easily seen to be injective, since on the image $\phi(S_4(i+1))$ there is a well defined right sided inverse $\phi^{-1}$, by adding an element in a similar fashion to both $x', y'$ where $G(x', y') \in \im \phi$. We remark that the map $\phi$ is not necessarily surjective. 
 \end{proof}
+
+%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
 Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q \left(\frac{(i+1)}{k},\frac{n}{k}\right) $$ 
@@ -1569,7 +1621,7 @@ Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i
 
 \begin{proof} 
 Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
- We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Currently Editing} %%%% Edit!
+ We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Being edited.} 
  This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
 
 We can introduce $k = n/d$  and rewrite the sum as 
@@ -1579,7 +1631,7 @@ $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}
 
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
-The poset $ \mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
+The poset $\mathcal E^1(B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{thm}
 
 \begin{proof}
@@ -1595,6 +1647,7 @@ This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
 
 \end{proof}
+
 
 
 
@@ -1664,7 +1717,7 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 
 
 %%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
-\section{A $q$-analog}
+\ssec{A $q$-analog}
 \label{ssec:q_analog}
 
 In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
@@ -1988,40 +2041,6 @@ In this section, we include various remarks, as well as failed attempts, which d
 
 In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
 
-\begin{figure}
-\begin{tikzpicture}[scale=.7]
-  \node (0) at (-4,0) {$0$};
-  \node (1) at (-3,0) {$1$};
-  \node (2) at (-2,0) {$2$};
-  \node (3) at (-1,0) {$3$};
-    \node (4) at (0,0) {$4$};
-  \node (5) at (1,0) {$5$};
-  \node (6) at (2,0) {$6$};
-  \node (7) at (3,0) {$7$};
-  \node (8) at (-3.5,1) {$8$};
-  \node (9) at (-1.5,1) {$9$};
-  \node (10) at (.5,1) {$10$};
-  \node (11) at (2.5,1) {$11$};
-    \node (12) at (-2.5,2) {$12$};
-  \node (13) at (1.5,2) {$13$};
-  \node (14) at (-.5,3) {$14$};
-  \draw (0)--(8);
-  \draw (1)--(8);
-  \draw (2)--(9);
-  \draw (3)--(9);
-  \draw (4)--(10);
-  \draw (5)--(10);
-  \draw (6)--(11);
-  \draw (7)--(11);
-  \draw (8)--(12);
-  \draw (9)--(12);
-  \draw (10)--(13);
-  \draw (11)--(13);
-  \draw (12)--(14);
-  \draw (13)--(14);
-\end{tikzpicture}
-\caption{}
-\end{figure}
 
 \begin{figure}
 \begin{tikzpicture}[scale=.7]
