@@ -1511,11 +1511,11 @@ Note that this suffices to show that the $p_i$ are unimodal, since $$p_{i+1} - p
 
 %%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
 
+
 \begin{defn}
 Fix $r < n/2$ to be an integer and let $ G(x, y)$ be an $G$-orbit of edges. We call $G(x , y)$ an {\it isolated pair} if  $ \sigma_0^r x \lessdot y, \, \, \text{ but  there does not exist } g \in C_n \text{ such that } g x = \sigma_0 ^r x,  \text{ and }g y = y$. 
 \end{defn}
 
-\todo{consider breaking this proof into a couple lemmas.}
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
 Let $G =C_n$ and let $\lambda_i$, $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q \left(\frac{(i+1)}{k},\frac{n}{k}\right) $$ 
@@ -1523,14 +1523,11 @@ Let $G =C_n$ and let $\lambda_i$, $q(i,m)$ be as defined above,  then $$\lambda_
 
 \begin{proof} 
 
-Recall from Lemma \ref{lem:cyclic_counting_difference} that 
- $$q_i - p_i =|\{G{(x , y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^r x, g y = y \}|.$$ 
-Hence, to count $q_i - p_i = \lambda_i $, we only need to count the number of distinct subset $G(x, y) \subset \mathcal E(B_n)$ for which there exists $r < \frac n 2$ so that $G(x, y)$ is special with respect to $\sigma_0^r.$
+From Lemma \ref{lem:cyclic_counting_difference} we know that, to count $q_i - p_i = \lambda_i $, we only need to count the number of distinct subset $G(x, y) \subset \mathcal E^1(B_n)$ for which there exists $r < \frac n 2$ so that $G(x, y)$ is isolated with respect to $\sigma_0^r.$
 
-Note that, for each $r < n/2$ such that $(r, n) = 1$, there is precisely one such $G$-orbit, since in this case $\sigma_0^r$ is a full $n$-cycle [See proof of Lemma \ref{lem:cyclicprime}]. 
-This holds regardless of $i$. 
+For each $r < n/2$ such that $(r, n) = 1$, there is precisely one such $G$-orbit for each $i$, since in this case $\sigma_0^r$ is a full $n$-cycle and the argument in Lemma \ref{lem:cyclicprime} applies. 
 
-Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes elements of the form $\{s, s+r, s+2r, ..., \}$ for any starting point $s$, which are proper subsets of $[n]$. For $y \in B_n,$ one may write $y$ as the union of full cycles and at most one tail cycle under the action of $\sigma_0^r$. Now, if $y \in B_n$ has no tail cycles under the action of $\sigma_0^r$ then $(\sigma_0^rx , \sigma_0^ry)= (\sigma_0^rx , y) \in G(x, y).$ This means that if $G(x, y)\in q_i - p_i =|\{G{(x, y)} : \exists \: \, \sigma_0^t x \lessdot y \text{ where } t < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^t x, g y = y \}|,$ then it must be $\sigma_0^s x \lessdot y$ with $s \neq r, s < n/2.$
+Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes elements of the form $\{s, s+r, s+2r, ..., \}$ for any starting point $s$, which are proper subsets of $[n]$. For $y \in B_n,$ one may write $y$ as the union of full cycles and at most one tail cycle under the action of $\sigma_0^r$. Now, if $y \in B_n$ has no tail cycles under the action of $\sigma_0^r$ then $(\sigma_0^rx , \sigma_0^ry)= (\sigma_0^rx , y) \in G(x, y).$ This means that if $G(x, y)\in q_i - p_i =|\{G{(x, y)} : \exists \: \, \sigma_0^t x \lessdot y \text{ where } t < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^t x, g y = y \}|,$ then there must be $\sigma_0^s x \lessdot y$ with $s \neq r, s < n/2.$
 
 So, $p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$. \todo{I don't understand what it means by an orbit ``contributes to the difference.'' What you really want to say is that an orbit is in a certain set, and the difference is the size of that set. I have edited the previous paragraphs to make this clearer, can you fix the rest of the proof please?} Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$. \todo{what does ``contribute'' mean? Are you are trying to say it lies in a certain set?} In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. \todo{Again, I don't understand} Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. \todo{What does this mean? It sounds like you're thinking of $\lambda_i$ as a variable, which changes size as you look at different $G$ orbits.} If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$. \todo{How can you choose to ignore a scenario? What does that mean?}
 
@@ -1539,12 +1536,11 @@ Now return to the situation where $G{(x , y)}$ is not an isolated pair, but ther
 We can introduce $k = n/d$  and rewrite the sum as 
 $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$ \todo{with respect to which group element?} has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
  
-Note that, from the process of calculating $\lambda_{i+1} - \lambda_{i}$, we can potentially obtain a better bound if we need to. \todo{Aaron: Consider removing this sentence, or at the very least inserted after the proof as a remark}
 \end{proof}
 
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
-The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
+The poset $\mathcal E^1(B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{thm}
 
 \begin{proof}
@@ -1560,6 +1556,7 @@ This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
 
 \end{proof}
+
 
 
 
