@@ -168,7 +168,7 @@ Let $P$ be a finite graded poset of rank $n$.  It is natural to study the struct
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
+For $\mathcal P$ the category of graded posets and define the {\it Functor of Edges} $\mathcal E:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
 Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E^r(f)\colon \mathcal E^r(P)\rightarrow \mathcal E^r(Q)$ by $\mathcal E^r(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
@@ -753,9 +753,10 @@ Let $\vec r = r_1,\ldots,r_k,$ with $r_i \in \BN$ for all $i \in [k].$ Let $\mat
 $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y_{k+1})$ if $x_i \lessdot_P y_i$ for all $i \in [k+1]$. Then, define a relation $\leq_{\mathcal E^{\vec r}}$ on $\mathcal E^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal E^{\vec r}}.$ Finally, define $rk_{\mathcal E^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
 \end{defn}
 
+Observe that under this notation, $\mathcal E^1 = \mathcal E, \mathcal H^1 = \mathcal H.$
 
 \begin{rem}
-Both $\mathcal E^{\vec r}$ is a functor, for the same reasons that $\mathcal E^r$ is a functor. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are different in many crucial ways.
+For all $\vec r,\mathcal E^{\vec r}$ is a functor, for the same reasons that $\mathcal E^r$ is a functor. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are not completely analogous.
 \end{rem}
 
 In the next Lemmas, we cite analogous results which hold for $\mathcal H^{\vec r}.$ The proofs are almost identical to those for $\mathcal H^r.$
@@ -1539,11 +1540,15 @@ Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem} \label{lem:bounding_sublemma2}
+$$\lambda_{i+1} - \lambda_i \le |\left \{ G(x, y) : |y| = i+1, \text{and } y \text{ does not contain a tail cycle} \right\}|$$
 
 \end{lem}
 
 \begin{proof}
-\todo{This and next lemma is still being edited}
+
+So, $q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$.  Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$.  In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. 
+ Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$.
+
 \end{proof}
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
@@ -1551,13 +1556,9 @@ Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i
 \end{lem}
 
 \begin{proof} 
-
-
-So, $p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$. Now let us focus on the difference of $\lambda_{i+1} - \lambda_{i}$.  Note that the difference only occurs when we count $r \le n/2$ and $(r, n) > 1$. Let $G{(x , y)}$ be a $G$-orbit where $x \lessdot \, y$ such that $|y| = i+1$, and let $\sigma_0^{r} (x) \lessdot  y.$ Suppose that there is no $g$ such that $g x = \sigma_0 ^r (x)$ and $gy = y$. From the discussion above, we know that there a tail cycle of $y$, written $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l $, and $x = y \minus \{l\} $. Suppose that $y \cup \{s-r\}$ (mod $n$ whenever necessary) still has a tail cycle $w \cup \{(s - r)\}$, with respect to $\sigma_0^r.$ Then, if we let  $y' = y \cup \{(s - r) \} $ and $x' = x \cup \{(s -r)\}$, the orbit $G{(x, y')}$ where $|y'| = i+2$ is also an isolated pair, thus does contribute $1$ when we count $\lambda_{i+1}$.  In this case, our counting process for $\lambda_{i+1}$ and $\lambda_{i}$ both increase by $1$, so such isolated pair does not contribute to $\lambda_{i+1} - \lambda_{i}$. 
- Now suppose that adding $s -r$ completes the sequence $z$ into a tail cycle, namely $\{s,s+r,\ldots,s-r, s\}$. Now $y'$ will not be an isolated pair anymore, since $\sigma_0^r $ fixes $y'$. In this situation,  we increase  $1$ for $\lambda_i$ only. If we choose to ignore this scenario, we will get an upper bound for $\lambda_{i+1} - \lambda_i$.
-
 Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
- We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{what index is this sum over?} This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
+ We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Currently Editing} %%%% Edit!
+ This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
 
 We can introduce $k = n/d$  and rewrite the sum as 
 $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
@@ -1582,10 +1583,6 @@ This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
 
 \end{proof}
-
-
-
-
 
 
 

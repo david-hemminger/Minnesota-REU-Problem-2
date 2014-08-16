@@ -19,7 +19,7 @@
 \contentsline {subsection}{\tocsubsection {}{6.1}{A Brief Review of Polya Theory}}{18}{subsection.6.1}
 \contentsline {subsection}{\tocsubsection {}{6.2}{A Rank Generating Function}}{19}{subsection.6.2}
 \contentsline {subsection}{\tocsubsection {}{6.3}{Further Identities for the Wreath Product}}{20}{subsection.6.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{20}{thmt@dummyctr.dummy.102}
+\contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{20}{thmt@dummyctr.dummy.103}
 \contentsline {subsubsection}{\tocsubsubsection {}{6.3.2}{Bounded Partition Sizes}}{21}{subsubsection.6.3.2}
 \contentsline {section}{\tocsection {}{7}{Unimodal Quotients}}{23}{section.7}
 \contentsline {subsection}{\tocsubsection {}{7.1}{Groups of order $n.$}}{23}{subsection.7.1}
@@ -30,11 +30,11 @@
 \contentsline {section}{\tocsection {}{10}{The object $\EuScript E(B_n).$}}{30}{section.10}
 \contentsline {subsection}{\tocsubsection {}{10.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{31}{subsection.10.1}
 \contentsline {section}{\tocsection {}{11}{Odds, Ends, and Failed Attempts}}{35}{section.11}
-\contentsline {subsection}{\tocsubsection {}{11.1}{Quotients by Automorphism Groups of Rooted Trees}}{35}{subsection.11.1}
+\contentsline {subsection}{\tocsubsection {}{11.1}{Quotients by Automorphism Groups of Rooted Trees}}{36}{subsection.11.1}
 \contentsline {subsection}{\tocsubsection {}{11.2}{A Failed Attempt for Showing $\EuScript E(B_n/G)$ is unimodal}}{36}{subsection.11.2}
 \contentsline {subsection}{\tocsubsection {}{11.3}{Further Questions}}{38}{subsection.11.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{11.3.1}{Category Theoretic Properties}}{38}{subsubsection.11.3.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{11.3.2}{Unitary Peck Generalizations}}{38}{subsubsection.11.3.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{11.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{38}{subsubsection.11.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{11.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{39}{subsubsection.11.3.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{11.3.4}{Additional CCT Actions}}{39}{subsubsection.11.3.4}
-\contentsline {section}{\tocsection {}{}{References}}{39}{section*.17}
+\contentsline {section}{\tocsection {}{}{References}}{39}{section*.15}
