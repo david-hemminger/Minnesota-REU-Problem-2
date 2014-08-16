@@ -326,7 +326,6 @@ Let $p$ be prime.  The following actions are CCT.
 \item The actions of $D_{2p}$ and $D_{4p}$ on $B_p$ and $B_{2p}$, respectively.
 \end{enumerate}
 \end{restatable}
-\todo{restate this at the appropriate place in the dihedral group subsection}
 
 \begin{restatable}{prop}{semidirect}
 \label{prop:semidirect_product_preservation}
@@ -501,7 +500,7 @@ First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x
 
 
 \begin{rem}
-While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ We shall see in Lemma ~\ref{lem:dihedral_prime} that this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
+While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ From Proposition ~\ref{prop:cover_transitive_building_blocks}, this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
 \end{rem}
 
 
@@ -774,7 +773,7 @@ Once again, the proof of the above three statements is analogous to those of ~\r
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
-In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. It is obvious that the action of $S_k$ on $B_k$ is CCT, and we shall also see in Lemma ~\ref{lem:dihedral_prime}, that the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y.$ For CCT actions $\phi:G\times P \rightarrow P,$ we shall show that, $\mathcal E(P/G)$ is Peck. Additionally, we shall show the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which shall be proven in subsection \ref{ssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
 
 \begin{rem}
 Before continuing with the description of cover transitive, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ common cover transitive agrees with our definition of common cover transitive. Furthermore, it is also simple to see that an action is $\vec r$ common cover transitive if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ common cover transitive.
@@ -861,8 +860,7 @@ In this subsection, we describe several classes of cover transitive actions. Fir
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
-\todo{Reference Mo's paper (title is "On Volumes of Permutation Polytopes", and it has the label "permutation polytopes" in References.bib)}
-In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
+In this subsubsection, we prove that the automorphism group of rooted trees is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, since the automorphism group of rooted trees is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT. Our examination of of rooted trees automorphisms here, together with the examination of polytopes in subsubsection \ref{sssec:polytopes} was somewhat motivated by \cite[Section 5]{permutation_polytopes}.
 
 \begin{defn}
 A graded poset $P$ is a {\it rooted tree} if there is a unique element $x \in P$ of maximal rank, called the {\it root}, and for all $x \in P,$ other than the root, there exists a unique $y \in P$ with $y \gtrdot x.$
@@ -966,8 +964,10 @@ By Proposition ~\ref{prop:wreath_preservation}, wreath products with symmetric g
 \end{proof}
 
 \sssec{Automorphisms of Polytopes}
+\label{sssec:polytopes}
+
 As another class of CCT actions, we describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism group of simplices, and octahedra are common cover transitive, although both of these are fairly straightforward.
-Later in Lemma ~\ref{lem:dihedral_prime}, we shall also see that the action of the dihedral group on a regular $n$-gon, for $n = p,2p,$ is cover transitive. This is the group of linear automorphisms of the regular $n$-gon. This action gives yet another example of automorphisms of the linear automorphism group of polytopes being CCT.
+Later in Proposition ~\ref{prop:cover_transitive_building_blocks}, we shall also see that the action of the dihedral group on a regular $n$-gon, for $n = p,2p,$ is cover transitive. This is the group of linear automorphisms of the regular $n$-gon. This action gives yet another example of automorphisms of the linear automorphism group of polytopes being CCT.
 
 \begin{defn}
 Let $M$ be a polytope, with a particular embedding in $\BR^n.$ The {\it group of linear automorphisms of M} is the subgroup of $GL_n$ whose elements are $\{g \in GL_n:g \cdot M = M\}.$
@@ -1640,18 +1640,15 @@ In this subsection, we show a similar result for the Dihedral groups that act na
 \begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E (B_n)/D_{2n}, \quad P = \mathcal E(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E(B_n/D_{2n}) \big)_i|. $$ 
 \end{note}
 
-
-\begin{lem}{\label{lem:dihedral_prime}}
-Let $G = D_{2p}$ or $G = D_{4p}$ where $p$ is prime , and $p_i, q_i$ as defined above. Then $p_i = q_i$. In other words, the action of $D_{2p}$ (respectively $D_{4p}$) on $B_p$ (respectively $B_{2p} $) is CCT. 
-\end{lem}
+\building*
 
 \begin{proof}
-The proof of the Lemma is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
+We have already seen that the first part holds trivially. The proof of the second part is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
 \todo{This proof needs more work (self)} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
 
 \begin{rem}
-Let $G$ be as in Lemma \ref{lem:dihedral_prime}. We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E(B_n/G)$ is Peck.
+Let $G$ be as in point 2 of Proposition \ref{prop:cover_transitive_building_blocks} We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E(B_n/G)$ is Peck.
 \end{rem}
 
 
@@ -1683,7 +1680,7 @@ The poset $\mathcal E(B_n/D_{2n})$ is rank symmetric and rank unimodal.
 \end{cor}
 
 \begin{proof}
-The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and Corollary \ref{cor:cyclic_unimodal}. In fact, we can bound the difference of $\lambda_{i+1} - \lambda_i$ by precisely the same bound used in Lemma \ref{lem:cyclic_bounding_lambda}, since the difference we get here (where $G = D_{2n}$) is smaller than the previous difference (where $G= C_n$). Then, a similar proof shows that the difference of $q_{i+1} - q_i$ obtained  in Lemma \ref{lem:dihedral_prime} is significantly larger than the upper bound.
+The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and Corollary \ref{cor:cyclic_unimodal}. In fact, we can bound the difference of $\lambda_{i+1} - \lambda_i$ by precisely the same bound used in Lemma \ref{lem:cyclic_bounding_lambda}, since the difference we get here (where $G = D_{2n}$) is smaller than the previous difference (where $G= C_n$). Then, a similar proof shows that the difference of $q_{i+1} - q_i$ obtained in Lemma \ref{dihedral002}is significantly larger than the upper bound.
 \end{proof}
 
 
