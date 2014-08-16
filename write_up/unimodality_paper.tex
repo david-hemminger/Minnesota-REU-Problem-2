@@ -157,8 +157,7 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \listoftodos
 \newpage
 
-\todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
-
+\todo[inline]{include remark that $\mathcal{E}(B_n/G)$ is rank-symmetric}
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
@@ -527,7 +526,11 @@ While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {
 \end{rem}
 
 
-Let $P$ have rank $n$.  We say that a map $f\colon P\rightarrow P$ is an \textit{anti-automorphism} of $P$ if for all $x,y\in P$ we have $x\le y\iff f(x)\ge f(y)$ and $\rk(f(x)) = n-\rk(x)$.  We say that $P$ is \textit{self-dual} if there exists an anti-automorphism of $P$.
+Let $P$ have rank $n$.  We say that a map $f\colon P\rightarrow P$ is an \textit{anti-automorphism} of $P$ if for all $x,y\in P$ we have $x\le y\iff f(x)\ge f(y)$ and $\rk(f(x)) = n-\rk(x)$.
+
+\begin{defn}
+$P$ is \textit{self-dual} if there exists an anti-automorphism of $P$.
+\end{defn}
 
 \begin{prop}
 If $P$ is self-dual, then $\mathcal{E}(P)$ is self-dual.
@@ -536,6 +539,35 @@ If $P$ is self-dual, then $\mathcal{E}(P)$ is self-dual.
 \begin{proof}
 Let $f$ be an anti-automorphism of $P$.  Define a map $F\colon \mathcal{E}(P)\rightarrow \mathcal{E}(P)$ by $F(x,y) = (f(y),f(x))$.  By the definition of $\mathcal{E}(P)$ we then have for all $(x,y),(x^\prime,y^\prime)\in \mathcal{E}(P)$ that $(x,y)\le (x^\prime,y^\prime)\iff F(x,y)\ge F(x^\prime,y^\prime)$ and $\rk(F(x,y)) = n-1-\rk(x,y)$, so $F$ is an anti-automorphism of $\mathcal{E}(P)$.
 \end{proof}
+
+Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, it will not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In figure \ref{}\todo{add figure} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
+
+\begin{figure}[h]
+\begin{tikzpicture}[scale = .75]
+  \node (0) at (0,0) {0};
+  \node (1) at (2,0) {1};
+  \node (2) at (0,2) {2};
+  \node (3) at (2,2) {3};
+  \node (4) at (0,4) {4};
+  \node (5) at (2,4) {5};
+  \node (6) at (0,6) {6};
+  \node (7) at (2,6) {7};
+  \draw (0)--(2);
+  \draw (0)--(3);
+  \draw (1)--(3);
+  \draw (2)--(4);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (4)--(7);
+  \draw (5)--(7);
+  \node (8) at (1,-1) {$P$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+
+\end{tikzpicture}
+\caption{$P$ is self-dual and unitary Peck, but $\mathcal{E}(P)$ is not Peck}
+\end{figure}
 
 
 \ssec{Proof of Theorem \ref{thm:cover_transitive_implies_Peck}}\label{ssec:proof_of_cover_transitive_implies_Peck}
