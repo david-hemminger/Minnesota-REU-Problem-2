@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.5)  16 AUG 2014 15:39
 entering extended mode
  restricted \write18 enabled.
@@ -1424,6 +1425,8 @@ PDF statistics:
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
 =======
+=======
+>>>>>>> 99c319a937f963314da5d6d008f7deb2ccf0983d
 This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  16 AUG 2014 16:39
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
@@ -2765,4 +2768,7 @@ PDF statistics:
  451 named destinations out of 1000 (max. 500000)
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+<<<<<<< HEAD
+>>>>>>> 99c319a937f963314da5d6d008f7deb2ccf0983d
+=======
 >>>>>>> 99c319a937f963314da5d6d008f7deb2ccf0983d
