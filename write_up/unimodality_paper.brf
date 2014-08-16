@@ -1,4 +1,3 @@
-\backcite {quotients_stanley}{{4}{1}{figure.1}}
 \backcite {quotients_stanley}{{9}{3.2}{cor.3.18}}
 \backcite {babson}{{10}{3.23}{rem.3.23}}
 \backcite {pak}{{15}{5}{section.5}}
@@ -11,5 +10,5 @@
 \backcite {algebraic_stanley}{{18}{6.1}{subsection.6.1}}
 \backcite {algebraic_stanley}{{19}{6.5}{rem.6.5}}
 \backcite {algebraic_stanley}{{20}{6.10}{rem.6.10}}
-\backcite {stack}{{24}{7.1}{lem.7.5}}
-\backcite {enumerative_comb}{{29}{9}{section.9}}
+\backcite {stack}{{24}{7.5}{lem.7.5}}
+\backcite {enumerative_comb}{{29}{8}{section.8}}

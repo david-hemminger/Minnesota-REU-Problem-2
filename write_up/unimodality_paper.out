@@ -1,10 +1,10 @@
 \BOOKMARK [1][]{section*.2}{List of Todos}{}% 1
 \BOOKMARK [1][]{section.1}{1. Introduction}{}% 2
 \BOOKMARK [1][]{section.2}{2. Background}{}% 3
-\BOOKMARK [1][]{section.3}{3. The Functor of Edges}{}% 4
+\BOOKMARK [1][]{section.3}{3. The Edge Poset Construction}{}% 4
 \BOOKMARK [2][]{subsection.3.1}{3.1. Definition and Basic Properties}{section.3}% 5
-\BOOKMARK [2][]{subsection.3.2}{3.2. Proof of Theorem 1.6}{section.3}% 6
-\BOOKMARK [2][]{subsection.3.3}{3.3. A Generalization of Hr,Er}{section.3}% 7
+\BOOKMARK [2][]{subsection.3.2}{3.2. Proof of Theorem 1.5}{section.3}% 6
+\BOOKMARK [2][]{subsection.3.3}{3.3. A Generalization of H,E}{section.3}% 7
 \BOOKMARK [1][]{section.4}{4. Common Cover Transitive Actions}{}% 8
 \BOOKMARK [2][]{subsection.4.1}{4.1. Preservation Under Semidirect Products}{section.4}% 9
 \BOOKMARK [2][]{subsection.4.2}{4.2. Examples of Cover Transitive Actions}{section.4}% 10
@@ -18,14 +18,13 @@
 \BOOKMARK [2][]{subsection.6.3}{6.3. Further Identities for the Wreath Product}{section.6}% 18
 \BOOKMARK [1][]{section.7}{7. Unimodal Quotients}{}% 19
 \BOOKMARK [2][]{subsection.7.1}{7.1. Groups of order n.}{section.7}% 20
-\BOOKMARK [1][]{section.8}{8. Rank unimodality for Non-CCT actions}{}% 21
-\BOOKMARK [2][]{subsection.8.1}{8.1. Quotient by the Cyclic Group}{section.8}% 22
-\BOOKMARK [2][]{subsection.8.2}{8.2. Quotient by the Dihedral Group}{section.8}% 23
-\BOOKMARK [1][]{section.9}{9. A q-analog}{}% 24
-\BOOKMARK [1][]{section.10}{10. The object E\(Bn\).}{}% 25
-\BOOKMARK [2][]{subsection.10.1}{10.1. Proof that E\(Bn\) is unitary Peck}{section.10}% 26
-\BOOKMARK [1][]{section.11}{11. Odds, Ends, and Failed Attempts}{}% 27
-\BOOKMARK [2][]{subsection.11.1}{11.1. Quotients by Automorphism Groups of Rooted Trees}{section.11}% 28
-\BOOKMARK [2][]{subsection.11.2}{11.2. A Failed Attempt for Showing E\(Bn/G\) is unimodal}{section.11}% 29
-\BOOKMARK [2][]{subsection.11.3}{11.3. Further Questions}{section.11}% 30
-\BOOKMARK [1][]{section*.15}{References}{}% 31
+\BOOKMARK [2][]{subsection.7.2}{7.2. Quotient by the Cyclic Group}{section.7}% 21
+\BOOKMARK [2][]{subsection.7.3}{7.3. Quotient by the Dihedral Group}{section.7}% 22
+\BOOKMARK [1][]{section.8}{8. A q-analog}{}% 23
+\BOOKMARK [1][]{section.9}{9. The object E\(Bn\).}{}% 24
+\BOOKMARK [2][]{subsection.9.1}{9.1. Proof that E\(Bn\) is unitary Peck}{section.9}% 25
+\BOOKMARK [1][]{section.10}{10. Odds, Ends, and Failed Attempts}{}% 26
+\BOOKMARK [2][]{subsection.10.1}{10.1. Quotients by Automorphism Groups of Rooted Trees}{section.10}% 27
+\BOOKMARK [2][]{subsection.10.2}{10.2. A Failed Attempt for Showing E\(Bn/G\) is unimodal}{section.10}% 28
+\BOOKMARK [2][]{subsection.10.3}{10.3. Further Questions}{section.10}% 29
+\BOOKMARK [1][]{section*.12}{References}{}% 30

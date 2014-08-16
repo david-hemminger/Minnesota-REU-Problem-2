@@ -1,14 +1,14 @@
 \contentsline {section}{List of Todos}{2}{section*.2}
 \contentsline {section}{\tocsection {}{1}{Introduction}}{3}{section.1}
 \contentsline {section}{\tocsection {}{2}{Background}}{4}{section.2}
-\contentsline {section}{\tocsection {}{3}{The Functor of Edges}}{5}{section.3}
-\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{6}{subsection.3.1}
+\contentsline {section}{\tocsection {}{3}{The Edge Poset Construction}}{5}{section.3}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{5}{subsection.3.1}
 \contentsline {subsection}{\tocsubsection {}{3.2}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{7}{subsection.3.2}
-\contentsline {subsection}{\tocsubsection {}{3.3}{A Generalization of $\EuScript H^r,\EuScript E^r$}}{10}{subsection.3.3}
-\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{11}{section.4}
+\contentsline {subsection}{\tocsubsection {}{3.3}{A Generalization of $\EuScript H,\EuScript E$}}{10}{subsection.3.3}
+\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{10}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{11}{subsection.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of Cover Transitive Actions}}{13}{subsection.4.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{13}{subsubsection.4.2.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of Cover Transitive Actions}}{12}{subsection.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{12}{section*.9}
 \contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Automorphisms of Polytopes}}{14}{subsubsection.4.2.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Cover Transitive Actions of ${\mathbb Z}_2^k$}}{14}{subsubsection.4.2.3}
 \contentsline {section}{\tocsection {}{5}{Wreath Product of two Symmetric Groups}}{15}{section.5}
@@ -19,22 +19,21 @@
 \contentsline {subsection}{\tocsubsection {}{6.1}{A Brief Review of Polya Theory}}{18}{subsection.6.1}
 \contentsline {subsection}{\tocsubsection {}{6.2}{A Rank Generating Function}}{19}{subsection.6.2}
 \contentsline {subsection}{\tocsubsection {}{6.3}{Further Identities for the Wreath Product}}{20}{subsection.6.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{20}{thmt@dummyctr.dummy.103}
+\contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{20}{thmt@dummyctr.dummy.102}
 \contentsline {subsubsection}{\tocsubsubsection {}{6.3.2}{Bounded Partition Sizes}}{21}{subsubsection.6.3.2}
 \contentsline {section}{\tocsection {}{7}{Unimodal Quotients}}{23}{section.7}
 \contentsline {subsection}{\tocsubsection {}{7.1}{Groups of order $n.$}}{23}{subsection.7.1}
-\contentsline {section}{\tocsection {}{8}{Rank unimodality for Non-CCT actions}}{24}{section.8}
-\contentsline {subsection}{\tocsubsection {}{8.1}{Quotient by the Cyclic Group}}{24}{subsection.8.1}
-\contentsline {subsection}{\tocsubsection {}{8.2}{Quotient by the Dihedral Group}}{28}{subsection.8.2}
-\contentsline {section}{\tocsection {}{9}{A $q$-analog}}{29}{section.9}
-\contentsline {section}{\tocsection {}{10}{The object $\EuScript E(B_n).$}}{30}{section.10}
-\contentsline {subsection}{\tocsubsection {}{10.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{31}{subsection.10.1}
-\contentsline {section}{\tocsection {}{11}{Odds, Ends, and Failed Attempts}}{35}{section.11}
-\contentsline {subsection}{\tocsubsection {}{11.1}{Quotients by Automorphism Groups of Rooted Trees}}{36}{subsection.11.1}
-\contentsline {subsection}{\tocsubsection {}{11.2}{A Failed Attempt for Showing $\EuScript E(B_n/G)$ is unimodal}}{36}{subsection.11.2}
-\contentsline {subsection}{\tocsubsection {}{11.3}{Further Questions}}{38}{subsection.11.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{11.3.1}{Category Theoretic Properties}}{38}{subsubsection.11.3.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{11.3.2}{Unitary Peck Generalizations}}{38}{subsubsection.11.3.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{11.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{39}{subsubsection.11.3.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{11.3.4}{Additional CCT Actions}}{39}{subsubsection.11.3.4}
-\contentsline {section}{\tocsection {}{}{References}}{39}{section*.15}
+\contentsline {subsection}{\tocsubsection {}{7.2}{Quotient by the Cyclic Group}}{24}{subsection.7.2}
+\contentsline {subsection}{\tocsubsection {}{7.3}{Quotient by the Dihedral Group}}{28}{subsection.7.3}
+\contentsline {section}{\tocsection {}{8}{A $q$-analog}}{29}{section.8}
+\contentsline {section}{\tocsection {}{9}{The object $\EuScript E(B_n).$}}{30}{section.9}
+\contentsline {subsection}{\tocsubsection {}{9.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{31}{subsection.9.1}
+\contentsline {section}{\tocsection {}{10}{Odds, Ends, and Failed Attempts}}{35}{section.10}
+\contentsline {subsection}{\tocsubsection {}{10.1}{Quotients by Automorphism Groups of Rooted Trees}}{35}{subsection.10.1}
+\contentsline {subsection}{\tocsubsection {}{10.2}{A Failed Attempt for Showing $\EuScript E(B_n/G)$ is unimodal}}{36}{subsection.10.2}
+\contentsline {subsection}{\tocsubsection {}{10.3}{Further Questions}}{38}{subsection.10.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{10.3.1}{Category Theoretic Properties}}{38}{subsubsection.10.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{10.3.2}{Unitary Peck Generalizations}}{38}{subsubsection.10.3.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{10.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{38}{subsubsection.10.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{10.3.4}{Additional CCT Actions}}{39}{subsubsection.10.3.4}
+\contentsline {section}{\tocsection {}{}{References}}{39}{section*.12}
