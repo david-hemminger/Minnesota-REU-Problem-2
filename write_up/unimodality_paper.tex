@@ -146,7 +146,7 @@
 
 
 \begin{abstract}
-For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove this conjecture holds for ``common cover transitive'' actions. We show common cover transitive actions are a fairly large class of actions and are closed under semidirect products. We also prove $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
+For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products. We also prove that $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
 \end{abstract}
 
 \maketitle
@@ -157,27 +157,27 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \listoftodos
 \newpage
 
-\todo{Relegate functoriality to a remark}
 \todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
-Let $P$ be a finite graded poset of rank $n$.  It is natural to study the structure of the edges in the Hasse diagram of $P$.  To this end, define an endofunctor $\mathcal E$ on the category finite graded posets with rank-preserving morphisms as follows
+Let $P$ be a finite graded poset of rank $n$.  In this paper we study the structure of the edges in the Hasse diagram of $P$.  To this end we define the \textit{edge poset construction} $\mathcal{E}$ as follows.
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets and define the {\it Edge Poset Construction} $\mathcal E:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + 1$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
-Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal E(f)(x,y) = (f(x), f(y))$.
+For $P$ a finite graded poset, define its graded \textit{edge poset} $\mathcal{E}(P)$ as follows.  The elements of $\mathcal E(P)$ are pairs $(x,y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + 1$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$, and define the relation $\le_{\mathcal E}$ on $\mathcal E(P)$ to be the transitive closure of $\lessdot_{\mathcal E}$.  Finally define a rank function on $\mathcal{E}(P)$ by $\rk_{\mathcal{E}(P)}(x,y) = \rk_P(x)$.
 \end{defn}
+%Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal E(f)(x,y) = (f(x), f(y))$.
 
-We will show that $\mathcal E^r$ is well-defined in Section \ref{sec:functor_of_edges}. Note that an edge in the Hasse diagram of $P$ can be written as $(x,y)\in P\times P$ such that $x\lessdot y$. Such edges are in bijection with elements $(x, y)\in \mathcal E(P)$.
+
+Note that since an edge in the Hasse diagram of $P$ can be identified with a pair $(x,y)\in P\times P$ such that $x\lessdot y$, the edges are in bijection with elements $(x,y)\in \mathcal E(P)$ via this identification.  We will show that $\mathcal{E}(P)$ is a well-defined graded poset in Section \ref{sec:functor_of_edges}. 
 
 \begin{eg}
-
-It is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.  In the figure it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
+We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  Note that it is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.  In the figure it is clear that $\mathcal E(P)$ is a graded poset, with $rk(x,y) = rk(x),$ but the Hasse diagram on the right represents a poset which does not have a grading.
 
 %On the left hand side is the Hasse diagram of a poset $P$ in the middle is the poset $\mathcal E(P)$ and on the right hand side is the poset obtained from the relation 
+
 
 \begin{figure}[h!]
 \begin{center}
@@ -291,23 +291,19 @@ It is important we declare the relation $\leq_\mathcal E$ to be the transitive c
 \end{eg}
 
 
-We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular, let the \textit{boolean algebra of rank $n$}, denoted $B_n$, be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
+We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-
-For the remainder of this paper, all group actions on posets $\phi:G \times P \rightarrow P$ are assumed to be order preserving and rank preserving, meaning for all $g \in G,x \leq y \iff gx \leq gy,\rk(gx) = rk(x).$ 
-
-Using Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
+Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, i.e. for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} (\cite{quotients_stanley}, Theorem 1) and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subset Aut(B_n),$ then $\mathcal E(B_n/G)$ is Peck.
 \end{conjecture}
 
 We prove this conjecture holds whenever the group action of $G$ on $B_n$ has the following property.
-\todo{Include a question about q analogs, it is currently at the end, but it should probably be weaved in here somewhere.}
-d
+
 \begin{defn}
 \label{defn:cover_transitive}
-A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$, there exists some $g\in Stab(z)$ such that $g\cdot x = y.$
+A group action of $G$ on $P$ is \textit{common cover transitive} (CCT) if whenever $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$, and $y\in Gx$ there exists some $g\in Stab(z)$ such that $g\cdot x = y.$
 \end{defn}
 
 \begin{restatable}{thm}{cctpeck}
@@ -315,7 +311,7 @@ A group action of $G$ on $P$ is \textit{common cover transitive}, (CCT) if whene
 If a group action of $G$ on $B_n$ is CCT, then $\mathcal E(B_n/G)$ is Peck.
 \end{restatable}
 
-A large number of group actions on $B_n$ have the CCT property.  In order to construct a family of such actions we first prove that some basic group actions on $B_n$ are CCT, then show that cover transitivity is preserved under semidirect products.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
+A large number of group actions on $B_n$ have the CCT property.  We first prove that some basic group actions on $B_n$ are CCT.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act on the vertices of an $n$-gon.
 
 \begin{restatable}{prop}{building}
 \label{prop:cover_transitive_building_blocks}
@@ -323,9 +319,12 @@ Let $p$ be prime.  The following actions are CCT.
 
 \begin{enumerate}
 \item The action of $S_n$ on $B_n$.
-\item The actions of $D_{2p}$ and $D_{4p}$ on $B_p$ and $B_{2p}$, respectively.
+\item The action of $D_{2p}$ on $B_p$.
+\item The action of $D_{4p}$ on $B_{2p}$.
 \end{enumerate}
 \end{restatable}
+
+We then show that cover transitivity is preserved under semidirect products, allowing us to describe several large families of CCT actions in Section \ref{ssec:CCT_examples}.
 
 \begin{restatable}{prop}{semidirect}
 \label{prop:semidirect_product_preservation}
@@ -380,7 +379,7 @@ $$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
 
 \noindent We then have the following well-known characterization of Peck posets.
 
-\begin{lem}[\ref{weyl_groups_stanley}, Lemma 1.1]\label{lem:Peck_poset_characterization}
+\begin{lem}[\cite{weyl_groups_stanley}, Lemma 1.1]\label{lem:Peck_poset_characterization}
 $P$ is Peck if and only if there exists an order-raising operator $U$ such that for all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
 \end{lem}
 
@@ -391,7 +390,7 @@ If the Lefschetz map satisfies the condition for $U$ in Lemma \ref{lem:Peck_pose
 
 We say that a group $G$ acts on $P$ if the action defines and embedding $G\hookrightarrow \operatorname{Aut}(P)$, and define the \textit{quotient poset} $P/G$ to be the poset whose elements are the orbits of $G$, with the relation $\mathcal{O}\le \mathcal{O}^\prime$ if there exist $x\in \mathcal{O}$, $x^\prime\in \mathcal{O}^\prime$ such that $x\le x^\prime$.  We will use the following result later in the paper.
 
-\begin{thm}[\ref{quotients_stanley}, Theorem 1]
+\begin{thm}[\cite{quotients_stanley}, Theorem 1]
 \label{thm:quotients_of_unitary_peck_posets}
 If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck.
 \end{thm}
@@ -433,7 +432,7 @@ To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal 
 
 
 
-In order to define a group action 
+In order to define a group action, we will define more generally a way for morphisms of posets to induce morphisms of their edge posets.
 
 \begin{lem}\label{lem:Ff_poset_morphism}
 Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
@@ -477,7 +476,7 @@ By Lemma \ref{lem:Ff_poset_morphism}, the edge poset construction $\mathcal{E}$ 
 
 
 
-Given a group action of $G$ on $P$, we can easily define a natural group action of $G$ on $\mathcal E(P)$ using Lemma \ref{lem:Ff_poset_morphism}.  For all $g\in G$ we have that multiplication by $g$ is an automorphism of $P$, so it follows that $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$ and furthermore that this gives a well-defined group action by Lemma \ref{lem:Ff_poset_morphism}.
+Given a group action of $G$ on $P$, we can now easily define a natural group action of $G$ on $\mathcal E(P)$ using Lemma \ref{lem:Ff_poset_morphism}.  For all $g\in G$ we have that multiplication by $g$ is an automorphism of $P$, so it follows that $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$ and furthermore that this gives a well-defined group action by Lemma \ref{lem:Ff_poset_morphism}.
 
 \begin{defn}\label{note:G_action_on_FP}
 Given a $G$-action on $P$, define a $G$-action on $\mathcal E(P)$ by $g\cdot (x,y) = \mathcal{E}(g)(x,y) = (gx,gy)$.
@@ -506,7 +505,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \begin{enumerate}
 	\item The action of $G$ on $P$ is CCT.
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
-	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an bijective morphism (but not necessarily an isomorphism).
+	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a bijective morphism (but not necessarily an isomorphism).
 %	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
 	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
 \end{enumerate}
@@ -778,7 +777,7 @@ Given a group action $\phi:G \times P \rightarrow P$ there are well defined grou
 both given by $g \cdot (x_1, \cdots, x_{k+1}) =(g\cdot x_1, \cdots, g \cdot x_{k+1}).$
 \end{lem}
 \begin{proof}
-The proof is analogous to Lemma ~\ref{lem:G_action_on_HP}, Lemma ~\ref{lem:G_action_on_HP}.
+The proof is analogous to that of Lemma ~\ref{lem:G_action_on_HP}.
 \end{proof}
 
 \begin{lem}
@@ -877,7 +876,7 @@ If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \righta
 First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since the action of $G$ on $P$ is CCT, using Proposition ~\ref{prop:direct_product_preservation}, we obtain the action of $G^l$ on $P^l$ is CCT. Explicitly, this action is $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so $\phi$ is CCT.
 \end{proof}
 
-\ssec{Examples of Cover Transitive Actions}
+\ssec{Examples of Cover Transitive Actions}\label{ssec:CCT_examples}
 
 In this subsection, we describe several classes of cover transitive actions. First, we show that the automorphism group of any rooted tree is cover transitive. Second, we show linear automorphisms of simplices and octahedra are cover transitive. Third, we show that the left multiplication action is cover transitive if and only if the group is $\BZ_2^k,$ and that any action of $\BZ_2^k$ on $[n]$ induces a cover transitive action on $B_n.$
 
@@ -1594,7 +1593,7 @@ Now consider $r < n/2$ such that $(r, n) > 1$. In this case, $\sigma_0^r$ fixes 
 
 
 \begin{lem} \label{lem:bounding_sublemma2}
-$$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\}|.$$
+$$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail cycle in } y \text{ has only } 2 \text{ element}\right\}|.$$
 \end{lem}
 
 \begin{proof}
@@ -1602,7 +1601,7 @@ $$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail
 By the previous lemma, $\lambda_i = q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$ where $r < n/2$, in other words, $\lambda_i = |S_2(i)|.$ Therefore, $\lambda_{i+1} - \lambda_i = |S_2(i+1)| - |S_2(i)|$. 
 
 Now for each $i$ we define two subsets $S_3(i) \subset S_2(i)$ and $S_4(i) \subset S_2(i)$ as follows: 
-$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 1 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 2\text{ elements}\right\}.$$  
+$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 2 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 3\text{ elements}\right\}.$$  
 
 It is clear that $S_3$ and $S_4$ are disjoint subsets of $S_2$ and that $S_2 = s_3 \cup S_4$. In particular, we know that $|S_2(i+1)| = |S_3(i+1)| +|S_4(i+1)|.$ Thus $$\lambda_{i+1} - \lambda_i = |S_3(i+1)| + |S_4(i+1)| - |S_2(i)|.$$
 
@@ -1615,22 +1614,32 @@ We create an injective map $\phi$ from $S_4(i+1)$ to $S_2(i)$. For each orbit $G
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
-Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q \left(\frac{(i+1)}{k},\frac{n}{k}\right) $$ 
+Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right) .$$ 
 \end{lem}
 
 \begin{proof} 
-Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
- We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. \todo{Being edited.} 
- This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
 
-We can introduce $k = n/d$  and rewrite the sum as 
-$$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
+By Lemma \ref{lem:bounding_sublemma2} we need to show that $\displaystyle |S_3(i+1)| \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right)  .$ 
+
+For any $G(x, y) \in S_3(i+1)$, $y$ consists of several full cycles with $2$ addition element being its tail cycle. The full cycles in $y$ are $d$ rotationally symmetric for some $d | n$ and $d | i$ since $|y| = i+2$. We count the number of such $G(x,y)$ according to the number $d$. For each $d| (i, n)$, we define $$V_d = \left\{G(x, y) \in S_3(i+1) : \text{ the full cycles in $y$ is $d$-rotationally symmetric} \right\}.$$ Note that $V_2 = \O$, for otherwise for any $G(x, y) \in V_2$, $y$ would have only full cycles where each cycle consists of $2$ elements. Therefore, $|S_3(i+1)| \le \displaystyle \sum_{\substack{d| (i, n) \\ 3 \le d}} |V_d|$, since $S_3(i+1) = \bigcup_{\substack{d| (i, n) \\ 3 \le d}} V_d$ though the union of the right hand side is in general not disjoint. 
+
+Now we give an upper bound for $|V_d|$ for each $d | (n, i)$. Namely, we show that $|V_d| \le d \cdot q (i/d, n/d)$. 
+
+Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r x \lessdot y$, and from construction we know that $d | r$. \todo{Finish this argument and correct next theorem}
+
+
+
+%Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
+ %We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
+
+%We can introduce $k = n/d$  and rewrite the sum as  $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
  
 \end{proof}
 
 
+
 \begin{thm}{\label{cor:cyclic_unimodal}} 
-The poset $\mathcal E^1(B_n/C_n)$ is rank symmetric and rank unimodal.
+The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{thm}
 
 \begin{proof}
@@ -2275,9 +2284,9 @@ Also, we found using computers that the group of invertible linear maps on $\BF_
 Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)^*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
 \end{question}
 
-\section*{Acknowledgement}
+\section*{Acknowledgements}
 This research was carried out in the 2014 combinatorics REU program at the University of Minnesota, Twin Cities, and was supported by RTG grant NSF/DMS-1148634.
-The authors want to thank our mentor Victor Reiner for his consistent help and guidance throughout the project. We would like to thank Ka Yu Tam for helpful comments and Elise DelMas for editing the paper. In addition, we want to thank the math department of university of Minnesota, twin cities, for its hospitality and Gregg Musiker for organizing the program.
+The authors would like to thank their mentor Victor Reiner for his consistent help and guidance throughout the project and their TA Elise DelMas for her helpful feedback on the paper. They would also like to thank Ka Yu Tam for helpful comments.  In addition, they thank the math department of University of Minnesota, Twin Cities, for its hospitality and Gregg Musiker for organizing the program.
 
 \bibliography{References}
 \bibliographystyle{alpha}
