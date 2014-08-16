@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  15 AUG 2014 22:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  15 AUG 2014 22:29
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
 aper.tex
@@ -1140,11 +1140,11 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1657.
+(hyperref)                removing `math shift' on input line 1654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1657.
+(hyperref)                removing `math shift' on input line 1654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1219,9 +1219,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2254.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2254.
 
 Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
-(rerunfilecheck)             Checksum: 06F6C42BC859FAEA9C3FD665A75E0FE3;2238.
+(rerunfilecheck)             Checksum: DA3802318788FD493C2C187DDBE97819;2318.
 Package rerunfilecheck Info: File `unimodality_paper.brf' has not changed.
-(rerunfilecheck)             Checksum: 25AD3003D2BC1CF93D303E3368F48F48;649.
+(rerunfilecheck)             Checksum: FEB08845688A74F2391A52C614306976;642.
 
 
 LaTeX Warning: There were undefined references.
@@ -1232,10 +1232,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2254.
  ) 
 Here is how much of TeX's memory you used:
- 21266 strings out of 493921
- 373796 string characters out of 3147285
- 525843 words of memory out of 3000000
- 23485 multiletter control sequences out of 15000+200000
+ 21268 strings out of 493921
+ 373844 string characters out of 3147285
+ 525865 words of memory out of 3000000
+ 23486 multiletter control sequences out of 15000+200000
  14204 words of font info for 63 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  56i,30n,80p,3313b,1051s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1262,9 +1262,9 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (39 pages, 624886 bytes).
+Output written on unimodality_paper.pdf (39 pages, 625934 bytes).
 PDF statistics:
- 1102 PDF objects out of 1200 (max. 8388607)
- 453 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1107 PDF objects out of 1200 (max. 8388607)
+ 454 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
