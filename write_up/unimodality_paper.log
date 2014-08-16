@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.5)  16 AUG 2014 17:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.5)  16 AUG 2014 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,15 +1306,15 @@ Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1728.
+(hyperref)                removing `math shift' on input line 1731.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1728.
+(hyperref)                removing `subscript' on input line 1731.
 
 
-LaTeX Warning: Citation `enumerative_comb' on page 29 undefined on input line 1
-734.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1731.
 
 
 Overfull \hbox (36.135pt too wide) has occurred while \output is active
@@ -1324,15 +1324,15 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
 [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1772.
+(hyperref)                removing `math shift' on input line 1785.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1772.
+(hyperref)                removing `subscript' on input line 1785.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1772.
+(hyperref)                removing `math shift' on input line 1785.
 
 
 Overfull \hbox (28.90755pt too wide) has occurred while \output is active
@@ -1340,17 +1340,7 @@ Overfull \hbox (28.90755pt too wide) has occurred while \output is active
  []
 
 [30]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1826.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1826.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1826.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (36.135pt too wide) has occurred while \output is active
@@ -1368,6 +1358,9 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
  []
 
 [33]
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+
 Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 [][][][][][] 
  []
@@ -1375,7 +1368,19 @@ Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 [34]
 
 LaTeX Warning: Reference `gbn_decomposition' on page 35 undefined on input line
- 2030.
+ 1989.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2010.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2010.
+
+
+LaTeX Warning: Citation `enumerative_comb' on page 35 undefined on input line 2
+016.
 
 
 Overfull \hbox (36.135pt too wide) has occurred while \output is active
@@ -1384,16 +1389,19 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
 
 [35]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2127.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2127.
+(hyperref)                removing `math shift' on input line 2129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2127.
+(hyperref)                removing `subscript' on input line 2129.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2129.
 
 
 Overfull \hbox (28.90755pt too wide) has occurred while \output is active
@@ -1401,9 +1409,7 @@ Overfull \hbox (28.90755pt too wide) has occurred while \output is active
  []
 
 [36]
-Overfull \hbox (4.98163pt too wide) in paragraph at lines 2218--2219
-[][][][] 
- []
+Underfull \vbox (badness 1701) has occurred while \output is active []
 
 
 Overfull \hbox (36.135pt too wide) has occurred while \output is active
@@ -1411,14 +1417,24 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
  []
 
 [37]
-Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 2240.
+Overfull \hbox (4.98163pt too wide) in paragraph at lines 2220--2221
+[][][][] 
+ []
+
 
 Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 [][][][][][] 
  []
 
-[38] (./unimodality_paper.bbl (./unimodality_paper.brf)
+[38]
+Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
+ut line 2242.
+
+Overfull \hbox (36.135pt too wide) has occurred while \output is active
+[][][][][][] 
+ []
+
+[39] (./unimodality_paper.bbl (./unimodality_paper.brf)
 \tf@brf=\write10
 \openout10 = `unimodality_paper.brf'.
 
@@ -1427,68 +1443,97 @@ Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2297.
 
-Overfull \hbox (36.135pt too wide) has occurred while \output is active
+Overfull \hbox (28.90755pt too wide) has occurred while \output is active
 [][][][][][] 
  []
 
-[39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2295.
+[40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2297.
  (./unimodality_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2297.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2297.
 
-Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
-(rerunfilecheck)             Checksum: C0EB47E8F30F1C1C651E1C3748A2695E;2269.
-Package rerunfilecheck Info: File `unimodality_paper.brf' has not changed.
-(rerunfilecheck)             Checksum: CCF41C2726AB1AAB625797B1ED39FFE8;885.
 
+
+Package rerunfilecheck Warning: File `unimodality_paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `unimodality_paper.out':
+(rerunfilecheck)             Before: C0EB47E8F30F1C1C651E1C3748A2695E;2269
+(rerunfilecheck)             After:  B4131753DFDA1EFFFD8AF824445CCF30;2269.
+
+Package rerunfilecheck Warning: File `unimodality_paper.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `unimodality_paper.brf':
+(rerunfilecheck)             Before: CCF41C2726AB1AAB625797B1ED39FFE8;885
+(rerunfilecheck)             After:  8436EB1A16FA61454145599223A5D81F;885.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2295.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2297.
  ) 
 Here is how much of TeX's memory you used:
- 21067 strings out of 495059
- 363421 string characters out of 3182031
- 515623 words of memory out of 3000000
- 23173 multiletter control sequences out of 15000+200000
+ 21075 strings out of 495059
+ 363533 string characters out of 3182031
+ 513492 words of memory out of 3000000
+ 23175 multiletter control sequences out of 15000+200000
  14509 words of font info for 64 fonts, out of 3000000 for 9000
  175 hyphenation exceptions out of 8191
- 56i,30n,74p,3249b,1051s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
-uler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm7.pfb>
-Output written on unimodality_paper.pdf (39 pages, 503547 bytes).
+ 56i,30n,74p,3249b,1048s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{question.9.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{rem.9.2} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{lem.7.27} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{lem.7.28} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{section*.9} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eul
+er/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm7.pfb>
+Output written on unimodality_paper.pdf (40 pages, 503298 bytes).
 PDF statistics:
- 1092 PDF objects out of 1200 (max. 8388607)
- 1014 compressed objects within 11 object streams
- 450 named destinations out of 1000 (max. 500000)
+ 1101 PDF objects out of 1200 (max. 8388607)
+ 1022 compressed objects within 11 object streams
+ 456 named destinations out of 1000 (max. 500000)
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

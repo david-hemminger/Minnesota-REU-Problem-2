@@ -25,16 +25,16 @@
 \contentsline {subsection}{\tocsubsection {}{7.1}{Groups of order $n.$}}{23}{subsection.7.1}
 \contentsline {subsection}{\tocsubsection {}{7.2}{Quotient by the Cyclic Group}}{24}{subsection.7.2}
 \contentsline {subsection}{\tocsubsection {}{7.3}{Quotient by the Dihedral Group}}{28}{subsection.7.3}
-\contentsline {subsection}{\tocsubsection {}{7.4}{A $q$-analog}}{29}{subsection.7.4}
-\contentsline {section}{\tocsection {}{8}{The object $\EuScript E(B_n).$}}{30}{section.8}
-\contentsline {subsection}{\tocsubsection {}{8.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{31}{subsection.8.1}
+\contentsline {section}{\tocsection {}{8}{The object $\EuScript E(B_n).$}}{29}{section.8}
+\contentsline {subsection}{\tocsubsection {}{8.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{30}{subsection.8.1}
 \contentsline {section}{\tocsection {}{9}{Odds, Ends, and Failed Attempts}}{35}{section.9}
-\contentsline {subsection}{\tocsubsection {}{9.1}{Quotients by Automorphism Groups of Rooted Trees}}{36}{subsection.9.1}
-\contentsline {subsection}{\tocsubsection {}{9.2}{A Failed Attempt for Showing $\EuScript E(B_n/G)$ is unimodal}}{36}{subsection.9.2}
-\contentsline {subsection}{\tocsubsection {}{9.3}{Further Questions}}{38}{subsection.9.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{9.3.1}{Category Theoretic Properties}}{38}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{9.3.2}{Unitary Peck Generalizations}}{38}{subsubsection.9.3.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{9.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{39}{subsubsection.9.3.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{9.3.4}{Additional CCT Actions}}{39}{subsubsection.9.3.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{39}{section*.8}
-\contentsline {section}{\tocsection {}{}{References}}{39}{section*.9}
+\contentsline {subsection}{\tocsubsection {}{9.1}{A $q$-analog}}{35}{subsection.9.1}
+\contentsline {subsection}{\tocsubsection {}{9.2}{Quotients by Automorphism Groups of Rooted Trees}}{36}{subsection.9.2}
+\contentsline {subsection}{\tocsubsection {}{9.3}{A Failed Attempt for Showing $\EuScript E(B_n/G)$ is unimodal}}{36}{subsection.9.3}
+\contentsline {subsection}{\tocsubsection {}{9.4}{Further Questions}}{38}{subsection.9.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.1}{Category Theoretic Properties}}{39}{subsubsection.9.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.2}{Unitary Peck Generalizations}}{39}{subsubsection.9.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{39}{subsubsection.9.4.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.4}{Additional CCT Actions}}{39}{subsubsection.9.4.4}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{40}{section*.7}
+\contentsline {section}{\tocsection {}{}{References}}{40}{section*.8}
