@@ -5,18 +5,18 @@
 \contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{5}{subsection.3.1}
 \contentsline {subsection}{\tocsubsection {}{3.2}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{7}{subsection.3.2}
 \contentsline {subsection}{\tocsubsection {}{3.3}{A Generalization of $\EuScript H,\EuScript E$}}{10}{subsection.3.3}
-\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{11}{section.4}
+\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{10}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{11}{subsection.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of Cover Transitive Actions}}{13}{subsection.4.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{13}{subsubsection.4.2.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of Cover Transitive Actions}}{12}{subsection.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{12}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Automorphisms of Polytopes}}{14}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Cover Transitive Actions of ${\mathbb Z}_2^k$}}{15}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Cover Transitive Actions of ${\mathbb Z}_2^k$}}{14}{subsubsection.4.2.3}
 \contentsline {section}{\tocsection {}{5}{Wreath Product of two Symmetric Groups}}{15}{section.5}
-\contentsline {subsection}{\tocsubsection {}{5.1}{Recalling Pak and Panova's Result}}{16}{subsection.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.1}{Recalling Pak and Panova's Result}}{15}{subsection.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.2}{The Poset $\EuScript E^r(B_n)/G$}}{16}{subsection.5.2}
 \contentsline {subsection}{\tocsubsection {}{5.3}{Ensuing Conclusions}}{18}{subsection.5.3}
 \contentsline {section}{\tocsection {}{6}{Relations to Polya Theory}}{18}{section.6}
-\contentsline {subsection}{\tocsubsection {}{6.1}{A Brief Review of Polya Theory}}{19}{subsection.6.1}
+\contentsline {subsection}{\tocsubsection {}{6.1}{A Brief Review of Polya Theory}}{18}{subsection.6.1}
 \contentsline {subsection}{\tocsubsection {}{6.2}{A Rank Generating Function}}{19}{subsection.6.2}
 \contentsline {subsection}{\tocsubsection {}{6.3}{Further Identities for the Wreath Product}}{20}{subsection.6.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{20}{thmt@dummyctr.dummy.104}
