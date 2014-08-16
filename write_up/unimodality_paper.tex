@@ -168,7 +168,7 @@ Let $P$ be a finite graded poset of rank $n$.  It is natural to study the struct
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, for each $r \in \BN$, define the {\it Functor of Edges} $\mathcal E^r:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E^r(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
+For $\mathcal P$ the category of graded posets and define the {\it Functor of Edges} $\mathcal E:\mathcal P \rightarrow \mathcal P$ as follows. The elements of the graded poset $\mathcal E(P)$ are $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + r$. Define the covering relation $\lessdot_{\mathcal E}$ on $\mathcal E^r(P)$ by $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$.  Then define the relation $\le_{\mathcal E}$ on $\mathcal E^r(P)$ to be the transitive closure of $\lessdot_{\mathcal E}.$
 Let $Q$ be a finite graded poset of rank $n$.  Given a morphism $f\colon P\rightarrow Q$, define $\mathcal E^r(f)\colon \mathcal E^r(P)\rightarrow \mathcal E^r(Q)$ by $\mathcal E^r(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
@@ -750,9 +750,10 @@ Let $\vec r = r_1,\ldots,r_k,$ with $r_i \in \BN$ for all $i \in [k].$ Let $\mat
 $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y_{k+1})$ if $x_i \lessdot_P y_i$ for all $i \in [k+1]$. Then, define a relation $\leq_{\mathcal E^{\vec r}}$ on $\mathcal E^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal E^{\vec r}}.$ Finally, define $rk_{\mathcal E^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
 \end{defn}
 
+Observe that under this notation, $\mathcal E^1 = \mathcal E, \mathcal H^1 = \mathcal H.$
 
 \begin{rem}
-Both $\mathcal E^{\vec r}$ is a functor, for the same reasons that $\mathcal E^r$ is a functor. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are different in many crucial ways.
+For all $\vec r,\mathcal E^{\vec r}$ is a functor, for the same reasons that $\mathcal E^r$ is a functor. This generalization is essentially taking the nerves of the poset $P.$ See \cite{babson} for some related constructions, although their constructions are not completely analogous.
 \end{rem}
 
 In the next Lemmas, we cite analogous results which hold for $\mathcal H^{\vec r}.$ The proofs are almost identical to those for $\mathcal H^r.$
