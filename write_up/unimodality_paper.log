@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  16 AUG 2014 12:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  16 AUG 2014 12:27
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
 aper.tex
@@ -1111,7 +1111,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1358.
 
-
+[23]
 Overfull \hbox (13.62148pt too wide) in paragraph at lines 1398--1399
 [][][]\OT1/cmr/m/n/10 Then, ob-serve $[][]\OML/cmm/m/it/10 Gx \OT1/cmr/m/n/10 =
  (\OML/cmm/m/it/10 G=H\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x$ \OT1/cmr/m/n/10 be-c
@@ -1122,7 +1122,6 @@ m/it/10 =G [] \U/eus/m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/
 L/cmm/m/it/10 ;$
  []
 
-[23]
 
 LaTeX Warning: Citation `stack' on page 24 undefined on input line 1402.
 
@@ -1135,11 +1134,11 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1646.
+(hyperref)                removing `math shift' on input line 1649.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1646.
+(hyperref)                removing `math shift' on input line 1649.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1214,9 +1213,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2245.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2245.
 
 Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
-(rerunfilecheck)             Checksum: F7175DFFC0B8EA800912A8EB47123499;2243.
+(rerunfilecheck)             Checksum: C89B378B9792A9A24CB5B340E296D8AA;2248.
 Package rerunfilecheck Info: File `unimodality_paper.brf' has not changed.
-(rerunfilecheck)             Checksum: EDD69C8C315AE2A4E55775AD3A151988;642.
+(rerunfilecheck)             Checksum: 2263B92E664D6EE607CBE94F71A8EB93;649.
 
 
 LaTeX Warning: There were undefined references.
@@ -1228,8 +1227,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2245.
  ) 
 Here is how much of TeX's memory you used:
  21240 strings out of 493921
- 373113 string characters out of 3147285
- 508669 words of memory out of 3000000
+ 373106 string characters out of 3147285
+ 508678 words of memory out of 3000000
  23466 multiletter control sequences out of 15000+200000
  14204 words of font info for 63 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
@@ -1257,7 +1256,7 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (39 pages, 618471 bytes).
+Output written on unimodality_paper.pdf (39 pages, 618550 bytes).
 PDF statistics:
  1087 PDF objects out of 1200 (max. 8388607)
  446 named destinations out of 1000 (max. 500000)
