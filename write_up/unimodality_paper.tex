@@ -71,8 +71,8 @@
 
 \numberwithin{equation}{section}
 
-
 \newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{acknowledgement}{ACKNOWLEDGEMENT}
 
 \newcommand\nc{\newcommand}
 \nc\on{\operatorname}
@@ -128,7 +128,7 @@
 \def\listoftodos{\@starttoc{tdo}\listtodoname}
 \makeatother
 
-\title{Peck Edge Posets}
+\title{Peckness of Edge Posets}
 \author{David Hemminger, Aaron Landesman, Zijian Yao}
 
 \address{David Hemminger, Duke University}
@@ -404,10 +404,10 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 \section{The Edge Poset Construction}
 \label{sec:functor_of_edges}
 
-In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is a well-defined functor and prove some useful properties of $\mathcal E$.  Section \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  Section \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.  In Section \ref{ssec:E_generalization} we discuss a possible generalization for $\mathcal{E}$.
 
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
-First we prove Proposition \ref{prop:F_well_defined}, which states that $\mathcal E$ is a well-defined functor.  We break the proof of Proposition \ref{prop:F_well_defined} into Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} which follow below.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
 
 \begin{note*}
 When the poset $P$ is clear, we shall simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and shall use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
@@ -426,40 +426,66 @@ For $P$ a graded poset, the object $\mathcal E(P)$ is a graded poset.
 \end{lem}
 
 \begin{proof}
-To show $\mathcal E(P)$ is graded, we must show $(x, y) <_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)<\rk(x^\prime, y^\prime)$ and $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)+1 = \rk(x^\prime , y^\prime)$.  Both of these facts follow immediately from the definition of $\lessdot_{\mathcal E}$ and the definition $\rk_{\mathcal E}(x, y) = \rk_P(x)$.
+To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)+1 = \rk(x^\prime , y^\prime)$.  This fact follows immediately from the definition of $\lessdot_{\mathcal E}$ and the definition $\rk_{\mathcal E}(x, y) = \rk_P(x)$.
+\end{proof}
 
 %First, if $x\otimes y <_{\mathcal E} a \otimes b$ then by definition of $<_{\mathcal E}$, we must have $x < x^\prime,$ and hence 
 %$$rk_{\mathcal E}(x\otimes y) = rk_P(x)<rk_P(x^\prime) = rk_{\mathcal E}(x^\prime\otimes y^\prime).$$
 %Second, if $x\otimes y \lessdot_{\mathcal H} x^\prime \otimes y^\prime$ then $x \lessdot_P x^\prime,$ so $rk(x)+1 = rk(x^\prime)$ and then $$rk_{\mathcal E}(x\otimes y)+1 = rk_P(x) +1=rk_P(x^\prime)= rk_{\mathcal E}(x^\prime\otimes y^\prime).$$
-\end{proof}
+
+
+
+In order to define a group action 
 
 \begin{lem}\label{lem:Ff_poset_morphism}
-If $f\colon P\rightarrow Q$ is morphism of finite ordered posets, then $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ is a morphism of finite ordered posets.
+Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
+
+\begin{enumerate}
+\item $\mathcal{E}(f)$ is a morphism of finite graded posets
+\item $\mathcal{E}(\id_P) = \id_{\mathcal{E}(P)}$
+\item If $g\colon Q\rightarrow R$ is a morphism of finite graded posets, then $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.
+\end{enumerate}
 \end{lem}
 
 \begin{proof}
+
+\vskip.1in
+\noindent
+{\sf Part (1)}.
 First, $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
 $$\rk_{\mathcal E}(x, y) = \rk_P(x) = \rk_P(f(x)) = \rk_{\mathcal E}(\mathcal E(f)(x, y)).$$
 Suppose $(x, y)\le_{\mathcal E} (x^\prime, y^\prime)$.  Then $x\le_P x^\prime$, $y\le_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\le_P f(x^\prime)$, $f(y)\le_P f(y^\prime)$. Hence $\mathcal E(f)(x,y) \le_{\mathcal E} \mathcal E(f)(x^\prime , y^\prime)$.  Thus $\mathcal E(f)$ is order-preserving and hence a morphism of finite ordered posets.
+
+\vskip.1in
+\noindent
+{\sf Part (2)} is trivial.
+
+\vskip.1in
+\noindent
+{\sf Part (3)}.  For all $(x, y)\in \mathcal E(P)$ we have $\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y)$.
 \end{proof}
 
-\begin{prop}\label{prop:F_well_defined}
-The map $\mathcal E(P)$ is an endofunctor on the category of finite graded posets $\mathcal{P}$.
-\end{prop}
+%\begin{prop}\label{prop:F_well_defined}
+%The map $\mathcal E(P)$ is an endofunctor on the category of finite graded posets $\mathcal{P}$.
+%\end{prop}
+%
+%\begin{proof}
+%By Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} we have that $\mathcal E$ takes objects in $\mathcal{P}$ to objects in $\mathcal{P}$ and morphisms of $\mathcal{P}$ to morphisms of $\mathcal{P}$.  Furthermore it is clear that $\mathcal E(\id_P) = \id_{\mathcal E(P)}$, so it remains to be shown that for finite graded posets $P, Q,$ and $R$ with morphisms $f\colon P\rightarrow Q$ and $g\colon Q\rightarrow R$ that $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.  This is clear, however, as for all $(x, y)\in \mathcal E(P)$ we have $\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y)$.
+%\end{proof}
 
-\begin{proof}
-By Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism} we have that $\mathcal E$ takes objects in $\mathcal{P}$ to objects in $\mathcal{P}$ and morphisms of $\mathcal{P}$ to morphisms of $\mathcal{P}$.  Furthermore it is clear that $\mathcal E(\id_P) = \id_{\mathcal E(P)}$, so it remains to be shown that for finite graded posets $P, Q,$ and $R$ with morphisms $f\colon P\rightarrow Q$ and $g\colon Q\rightarrow R$ that $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.  This is clear, however, as for all $(x, y)\in \mathcal E(P)$ we have $\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y)$.
-\end{proof}
+\begin{rem}
+By Lemma \ref{lem:Ff_poset_morphism}, the edge poset construction $\mathcal{E}$ defines an endofunctor on the category finite graded posets with rank-preserving morphisms.
+\end{rem}
 
 
 
-Given a group action of $G$ on $P$, we can easily define a natural group action of $G$ on $\mathcal E(P)$ using Proposition \ref{prop:F_well_defined}.  For all $g\in G$ we have that multiplication by $g$ is an automorphism of $P$, so it follows that $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$.  Since $\mathcal E$ is a functor this gives a well-defined group action.
+Given a group action of $G$ on $P$, we can easily define a natural group action of $G$ on $\mathcal E(P)$ using Lemma \ref{lem:Ff_poset_morphism}.  For all $g\in G$ we have that multiplication by $g$ is an automorphism of $P$, so it follows that $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$ and furthermore that this gives a well-defined group action by Lemma \ref{lem:Ff_poset_morphism}.
 
 \begin{defn}\label{note:G_action_on_FP}
 Given a $G$-action on $P$, define a $G$-action on $\mathcal E(P)$ by $g\cdot (x,y) = \mathcal{E}(g)(x,y) = (gx,gy)$.
 \end{defn}
 
-Using Definition \ref{note:G_action_on_FP}, we have a well-defined quotient poset $\mathcal E(P)/G$.  It is then natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E$, that is, whether $\mathcal E(P/G) \cong \mathcal E(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT.
+We then have a well-defined quotient poset $\mathcal E(P)/G$.  It is natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E$, that is, whether $\mathcal E(P/G) \cong \mathcal E(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT.
 
 
 \begin{prop}\label{prop:surjection_between_F_quotients}
@@ -601,13 +627,12 @@ For $P$ a graded poset, the object $\mathcal{H}(P)$, as defined in Definition ~\
 
 \begin{proof}
 This follows immediately from Remark \ref{rem:order_containment} and the fact that $\mathcal E(P)$ is graded.
-
+\end{proof}
 %To show $\mathcal H(P)$ is graded, we must show $x\otimes y <_{\mathcal H} a \otimes b \implies rk(x\otimes y)<rk(a \otimes b)$ and $x\otimes y \lessdot_{\mathcal H} a \otimes b \implies rk(x\otimes y)+1 = rk(a \otimes b).$ 
 
 %First, if $x\otimes y <_{\mathcal H} a \otimes b$ then by definition of $<_{\mathcal H},$ in Definition ~\ref{defn:h_map}, we must have $x < a,$ and hence 
 %$$rk_{\mathcal H(P)}(x\otimes y) = rk_P(x)<rk_P(a) = rk_{\mathcal H(P)}(a\otimes b).$$
 %Second, if $x\otimes y \lessdot_{\mathcal H} a \otimes b$ then $x \lessdot_P a,$ so $rk(x)+1 = rk(a)$ and then $$rk_{\mathcal H(P)}(x\otimes y)+1 = rk_P(x) +1=rk_P(a)= rk_{\mathcal H(P)}(a\otimes b).$$
-\end{proof}
 
 \begin{rem}
 While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ is not a functor. In particular, we have not specified how $\mathcal H$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H(f):\mathcal H(P) \rightarrow \mathcal H(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (see Figure \ref{fig:h_morphism}) to a chain of length three $Q$. Then, $\mathcal H(P)$ has four points, with two pairs of edges, whereas $\mathcal H(Q)$ has two disconnected points. It is clear that there can be no order-preserving mapping between these two objects.
@@ -728,7 +753,7 @@ By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}(B_n)/G$ is Peck for an
 \end{proof}
 
 
-\subsection{A Generalization of $\mathcal H,\mathcal E$}
+\subsection{A Generalization of $\mathcal H,\mathcal E$}\label{ssec:E_generalization}
 
 Although for the most part, we shall investigate \linebreak
 $\mathcal E(P/G),\mathcal E(P)/G,$ there is a natural generalization of $\mathcal E,\mathcal H,$ to what we shall call $\mathcal E^{\vec r},\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal E.$
@@ -2249,6 +2274,10 @@ Also, we found using computers that the group of invertible linear maps on $\BF_
 \begin{question}
 Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)^*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
 \end{question}
+
+\section*{Acknowledgement}
+This research was carried out in the 2014 combinatorics REU program at the University of Minnesota, Twin Cities, and was supported by RTG grant NSF/DMS-1148634.
+The authors want to thank our mentor Victor Reiner for his consistent help and guidance throughout the project. We would like to thank Ka Yu Tam for helpful comments and Elise DelMas for editing the paper. In addition, we want to thank the math department of university of Minnesota, twin cities, for its hospitality and Gregg Musiker for organizing the program.
 
 \bibliography{References}
 \bibliographystyle{alpha}
