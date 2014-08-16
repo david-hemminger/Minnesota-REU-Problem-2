@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  16 AUG 2014 12:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  16 AUG 2014 12:23
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
 aper.tex
@@ -1130,41 +1130,41 @@ LaTeX Warning: Citation `stack' on page 24 undefined on input line 1402.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1558.
+(amsmath)                 on input line 1565.
 
 [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1638.
+(hyperref)                removing `math shift' on input line 1646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1638.
+(hyperref)                removing `math shift' on input line 1646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1685.
+(hyperref)                removing `math shift' on input line 1693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1685.
+(hyperref)                removing `subscript' on input line 1693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1685.
+(hyperref)                removing `math shift' on input line 1693.
 
 [29] [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1739.
+(hyperref)                removing `math shift' on input line 1747.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1739.
+(hyperref)                removing `subscript' on input line 1747.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1739.
+(hyperref)                removing `math shift' on input line 1747.
 
 [31] [32] [33]
 Underfull \vbox (badness 1137) has occurred while \output is active []
@@ -1172,31 +1172,31 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
  [34]
 
 LaTeX Warning: Reference `gbn_decomposition' on page 35 undefined on input line
- 1943.
+ 1951.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2073.
+(hyperref)                removing `math shift' on input line 2081.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2073.
+(hyperref)                removing `subscript' on input line 2081.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2073.
+(hyperref)                removing `math shift' on input line 2081.
 
 [35]
 Underfull \vbox (badness 1286) has occurred while \output is active []
 
  [36]
-Overfull \hbox (4.98163pt too wide) in paragraph at lines 2164--2165
+Overfull \hbox (4.98163pt too wide) in paragraph at lines 2172--2173
 [][][][] 
  []
 
 [37]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 2186.
+ut line 2194.
  [38]
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.bbl
@@ -1204,14 +1204,14 @@ per.bbl
 per.brf)
 \tf@brf=\write10
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2237.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2245.
  [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2245.
 
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2237.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2237.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2245.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2245.
 
 Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
 (rerunfilecheck)             Checksum: F7175DFFC0B8EA800912A8EB47123499;2243.
@@ -1224,7 +1224,7 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2237.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2245.
  ) 
 Here is how much of TeX's memory you used:
  21240 strings out of 493921
@@ -1257,7 +1257,7 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (39 pages, 618217 bytes).
+Output written on unimodality_paper.pdf (39 pages, 618471 bytes).
 PDF statistics:
  1087 PDF objects out of 1200 (max. 8388607)
  446 named destinations out of 1000 (max. 500000)
