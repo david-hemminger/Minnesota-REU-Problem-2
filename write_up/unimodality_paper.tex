@@ -526,7 +526,7 @@ While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {
 
 Finally, we will prove that $\mathcal E(P)$ is self-dual if $P$ is, and deduce that $\mathcal E(B_n/G)$ is always self-dual. 
 \begin{defn}
-For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are the same as those of $P,$ but $x \leq_{P^{op}} y \iff x \geq_P y.$ A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
+For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are the same as those of $P$ with order relation $\le_{P^{op}}$ defined by $x \leq_{P^{op}} y \iff x \geq_P y.$ A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
 \end{defn}
 
 \begin{prop}
@@ -534,25 +534,8 @@ For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are t
 If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
 \end{prop}
 \begin{proof}
-Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op},$ with inverse $h:P^{op}\rightarrow P.$ Using Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism, with inverse $\mathcal E(h).$ Furthermore, $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ Then, the composition $\mathcal E(f) \circ H:\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
+Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op},$ with inverse $h:P^{op}\rightarrow P.$ Using Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism, with inverse $\mathcal E(h).$ Furthermore, $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op}$ defined by $(x,y) \mapsto (x,y).$ Then, the composition $F\circ \mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
 \end{proof}
-
-\iffalse
-David's alternate exposition:
-Let $P$ have rank $n$.  We say that a map $f\colon P\rightarrow P$ is an \textit{anti-automorphism} of $P$ if for all $x,y\in P$ we have $x\le y\iff f(x)\ge f(y)$ and $\rk(f(x)) = n-\rk(x)$.
-
-\begin{defn}
-$P$ is \textit{self-dual} if there exists an anti-automorphism of $P$.
-\end{defn}
-
-\begin{prop}
-If $P$ is self-dual, then $\mathcal{E}(P)$ is self-dual.
-\end{prop}
-
-\begin{proof}
-Let $f$ be an anti-automorphism of $P$.  Define a map $F\colon \mathcal{E}(P)\rightarrow \mathcal{E}(P)$ by $F(x,y) = (f(y),f(x))$.  By the definition of $\mathcal{E}(P)$ we then have for all $(x,y),(x^\prime,y^\prime)\in \mathcal{E}(P)$ that $(x,y)\le (x^\prime,y^\prime)\iff F(x,y)\ge F(x^\prime,y^\prime)$ and $\rk(F(x,y)) = n-1-\rk(x,y)$, so $F$ is an anti-automorphism of $\mathcal{E}(P)$.
-\end{proof}
-\fi
 
 \begin{eg}
 Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ will not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In Figure \ref{fig:dual_not_unimodal} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
@@ -602,7 +585,7 @@ Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(
 
 \begin{rem}
 \label{rem:induced_action_bn}
-Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an induced action $\phi: G \times B_n \rightarrow B_n,\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ It is well known and easy to see that in fact any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ Whenever an action $\psi$ of $G$ on $[n]$ is given, we shall refer to the action $\phi$ defined above as the induced action on $B_n.$
+Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an induced action $\phi: G \times B_n \rightarrow B_n$ defined by $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ It is well known and easy to see that in fact any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ Whenever an action $\psi$ of $G$ on $[n]$ is given, we shall refer to the action $\phi$ defined above as the induced action on $B_n.$
 \end{rem}
 
 
