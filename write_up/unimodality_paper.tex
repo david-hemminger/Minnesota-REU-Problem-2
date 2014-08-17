@@ -1739,29 +1739,19 @@ Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r
 \end{proof}
 
 
-%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{thm}{\label{cor:cyclic_unimodal}} 
 The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
 \end{thm}
 
 \begin{proof}
-\todo{Change labels}
-We need to show that for $G= C_n$, the $p_i$ are unimodal. So, we only need to bound $ \dstyle \sum_{\substack{k | (n , i+1)\\ 3 \le k < n/2 }} q (\frac{i+1}{k}, \frac{n}{k}) $. It is clear that for sufficiently large $n$, say for $n \ge 9$, $$q\left(\frac{i+1}k, \frac n k\right) = {\frac n k - 1 \choose \frac{i+1} k -1} \le {\lceil \frac n 3-1 \rceil \choose \lceil \frac{i+1} 3 -1 \rceil }.$$ Since $k \leq i,$ and $ i+1 \ge n/2$, we coarsely bound the sum by $$\frac{n}{2} \cdot {\lceil \frac n 3-1 \rceil \choose \lceil \frac {i+1} 3 -1 \rceil }.$$
-We want to show that this is smaller than the difference of $$q_i - q_{i-1} = \frac{(n-1)!}{(i)! (n-i)!} - \frac{(n-1)!}{(i-1)!(n-i+1)!}= {n \choose i } \frac{n-2i}{n} \ge  {n \choose i } \frac{2}{n} .$$
-
+We need to show that for $G= C_n$, the $p_i$ are unimodal. So, we only need to bound $ \dstyle \sum_{\substack{k | (n , i)\\ 3 \le k < n/2 }} k \cdot q (\frac{i}{k}, \frac{n}{k}) $. It is clear that for sufficiently large $n$, say for $n \ge 9$, $$q((i)/k, n/k) = {n/k - 1 \choose i/k -1} \le {\lceil n/3-1 \rceil \choose \lceil i/3 -1 \rceil }.$$ Since $k \leq i,$ and $ i < n/2$, we coarsely bound the sum by $$\sum_{\substack{k | (n , i)\\ 3 \le k < n/2 }} k  \cdot {\lceil n/3-1 \rceil \choose \lceil i/3 -1 \rceil } \le (\frac{n}{2})^2  {\lceil n/3-1 \rceil \choose \lceil i/3 -1 \rceil }. $$ We want to show that this is smaller than the difference of $$q_i - q_{i-1} = \frac{(n-1)!}{(i)! (n-i)!} - \frac{(n-1)!}{(i-1)!(n-i+1)!}= {n \choose i } \frac{n-2i}{n} \ge  {n \choose i } \frac{2}{n} .$$
 Namely, we want to show that, for sufficiently large $n$, 
+$$ \left(\frac{n}{2}\right)^3 \cdot {\lceil n/3-1 \rceil \choose \lceil i/3 -1 \rceil }  \le   {n \choose i}.$$
 
-$$ \left(\frac{n}{2}\right)^2 \cdot {\lceil \frac n 3-1 \rceil \choose \lceil \frac {i+1} 3 -1 \rceil }  \le   {n \choose i}.$$
-
-This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked.
+This bound works for $n$ sufficiently large. For smaller $n$ the claim can be easily checked. 
 
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
-
 \end{proof}
-
-
 
 
 
