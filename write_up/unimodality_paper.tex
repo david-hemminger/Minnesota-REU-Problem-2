@@ -1828,6 +1828,10 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 \label{sec:unitary_peck_f}
 In this section, we explicitly compute the raising operators corresponding to both \linebreak $\mathcal H(B_n),\mathcal E(B_n)$ and explicitly show that $\mathcal E(B_n)$ is unitary Peck by showing certain raising maps are invertible.
 
+\ssec{Computation of Order Raising Maps}
+
+In this subsection, we give explicit formulas for compositions of the order raising maps on $\mathcal H(B_n)$ and $\mathcal E(B_n)$
+
 \begin{note}
 For this section, we will use $M^{n-2i-1} = \mathcal E(U)^{n-2i-1},$ where $\mathcal E(U)^{n-2i-1}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
 \end{note}
@@ -1835,13 +1839,13 @@ For this section, we will use $M^{n-2i-1} = \mathcal E(U)^{n-2i-1},$ where $\mat
 For the remainder of this section, we shall take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
 \end{note}
 
-\begin{thm}
-\label{explicit_gbn_lefchetz}
+\begin{prop}
+\label{prop:explicit_gbn_lefchetz}
 Defining $L$ to be the Lefschetz map $\mathcal H(B_n) \rightarrow \mathcal H(B_n),$ we have $L^{n-2i-1}:\fbn^1(B_n)_i \rightarrow \fbn^1(B_n)_{n-i-1},$ and explicitly 
 \begin{align*}
 	L^{n-2i-1}(x, y)= k!\sum_{\substack{{y \not \subset a,}\\{x\subset a,}\\{y \subset b}}}^{}(a, b).
 \end{align*}
-\end{thm}
+\end{prop}
 \begin{proof}
 Note that the conditions $y \not \subset a, x\subset a, y\subset b$ are equivalent to $(a, b) >_{ \mathcal H(B_n)} (x, y).$ Clearly, if $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is 0. So, to complete the proof, it suffices to show that if  $(a, b) >_{ \mathcal H(B_n)} (x, y)$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$. However, this coefficient is precisely the number of sequences 
 $$(x, y) = (x_0, y_0) \lessdot_{ \mathcal H(B_n)} (x_1, y_1) \lessdot_{ \mathcal H(B_n)}  \cdots \lessdot_{ \mathcal H(B_n)}  (x_k, y_k) = (a, b).$$
@@ -1852,12 +1856,12 @@ $$x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$$
 is determined uniquely by the singletons $x_{i+1} \setminus x_i, 1 \leq i \leq k.$ Since in total we are adding $k$ elements to $x$ in order to obtain $a,$ there are $k!$ ways to do this. Therefore, coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$
 \end{proof}
 
-\begin{thm}
+\begin{prop}
 The map $M$ satisfies 
 \begin{align*}
 	M^{n-2i-1}(x, y) = (2^k - 1)(k-1)!\sum_{y \subset a}^{}(a, b) +k! \sum_{\substack{{y \not \subset a,}\\{x\subset a,}\\{y \subset b}}}^{}(a, b)
 \end{align*}
-\end{thm}
+\end{prop}
 \begin{proof}
 
 For a particular $(x, y),(a , b)$, if either $y \subset a$ or $y \not \subset a, x\subset a, y\subset b,$ then $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ and so the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is 0.
@@ -1867,7 +1871,7 @@ Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\
 \label{eqn:f_seq}
 (x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b)
 \end{equation}
- However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Theorem ~\ref{explicit_gbn_lefchetz}.
+ However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Proposition ~\ref{prop:explicit_gbn_lefchetz}.
 
 To complete the proof, we need to show that if $y \subset a$ then the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is $(2^k - 1)(k-1)!$. Equivalently, we need to show that the number of sequences as in \eqref{eqn:f_seq}
 is $(2^k - 1)(k-1)!.$
@@ -2093,7 +2097,7 @@ Using ~\ref{t_equivalence}
 For $n >2,$ the matrix $M^{n-2i-1}$ is invertible.
 \end{thm}
 \begin{proof}
-We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Theorem \ref{explicit_gbn_lefchetz}. Using Corollary ~\ref{cor:HBn_unitary_peck}, we know $\mathcal H(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
+We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Proposition \ref{prop:explicit_gbn_lefchetz}. Using Corollary ~\ref{cor:HBn_unitary_peck}, we know $\mathcal H(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
 \end{proof}
 
 \begin{cor}
