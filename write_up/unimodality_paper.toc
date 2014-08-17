@@ -26,7 +26,8 @@
 \contentsline {subsection}{\tocsubsection {}{7.2}{Quotient by the Cyclic Group}}{26}{subsection.7.2}
 \contentsline {subsection}{\tocsubsection {}{7.3}{Quotient by the Dihedral Group}}{30}{subsection.7.3}
 \contentsline {section}{\tocsection {}{8}{The object $\EuScript E(B_n).$}}{31}{section.8}
-\contentsline {subsection}{\tocsubsection {}{8.1}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{32}{subsection.8.1}
+\contentsline {subsection}{\tocsubsection {}{8.1}{Computation of Order Raising Maps}}{31}{subsection.8.1}
+\contentsline {subsection}{\tocsubsection {}{8.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{32}{subsection.8.2}
 \contentsline {section}{\tocsection {}{9}{Odds, Ends, and Failed Attempts}}{36}{section.9}
 \contentsline {subsection}{\tocsubsection {}{9.1}{A $q$-analog}}{37}{subsection.9.1}
 \contentsline {subsection}{\tocsubsection {}{9.2}{Quotients by Automorphism Groups of Rooted Trees}}{37}{subsection.9.2}
