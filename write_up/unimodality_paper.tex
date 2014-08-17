@@ -402,7 +402,7 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  Section \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.  In Section \ref{ssec:E_generalization} we discuss a possible generalization for $\mathcal{E}$.
 
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
-First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Finally, we prove the simple result that $\mathcal E$ sends self dual posets to self dual posets.
+First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Finally, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets.
 
 \begin{note*}
 When the poset $P$ is clear, we shall simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and shall use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
@@ -524,18 +524,81 @@ First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x
 While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ From Proposition ~\ref{prop:cover_transitive_building_blocks}, this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
 \end{rem}
 
-Finally, we will prove that $\mathcal E(P)$ is self dual if $P$ is, and deduce that $\mathcal E(B_n/G)$ is always self dual. 
+Finally, we will prove that $\mathcal E(P)$ is self-dual if $P$ is, and deduce that $\mathcal E(B_n/G)$ is always self-dual. 
 \begin{defn}
-For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are the same as those of $P,$ but $x \leq_{P^{op}} y \iff x \geq_P y.$ A poset $P$ is {\it self dual} if there is an isomorphism of posets $P \cong P^{op}.$
+For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are the same as those of $P,$ but $x \leq_{P^{op}} y \iff x \geq_P y.$ A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
 \end{defn}
 
 \begin{prop}
 \label{prop:self_dual_preservation}
-If $P$ is a self dual poset, then $\mathcal E(P)$ is also self dual.
+If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
 \end{prop}
 \begin{proof}
-Since $P$ is self dual, there is an isomorphism $f:P \rightarrow P^{op},$ with inverse $h:P^{op}\rightarrow P.$ Using Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f)$ and $\mathcal E(g)$ are two sided inverses, and hence $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism. Furthermore, $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ It follows directly from the definitions that $F$ is an isomorphism, as it has the obvious inverse $H: \mathcal E(P)^{op} \rightarrow \mathcal E(P^{op}),(x,y) \mapsto (x,y).$ Then, the composition $\mathcal E(f) \circ H:\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self dual.
+Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op},$ with inverse $h:P^{op}\rightarrow P.$ Using Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism, with inverse $\mathcal E(h).$ Furthermore, $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ Then, the composition $\mathcal E(f) \circ H:\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
 \end{proof}
+
+\iffalse
+David's alternate exposition:
+Let $P$ have rank $n$.  We say that a map $f\colon P\rightarrow P$ is an \textit{anti-automorphism} of $P$ if for all $x,y\in P$ we have $x\le y\iff f(x)\ge f(y)$ and $\rk(f(x)) = n-\rk(x)$.
+
+\begin{defn}
+$P$ is \textit{self-dual} if there exists an anti-automorphism of $P$.
+\end{defn}
+
+\begin{prop}
+If $P$ is self-dual, then $\mathcal{E}(P)$ is self-dual.
+\end{prop}
+
+\begin{proof}
+Let $f$ be an anti-automorphism of $P$.  Define a map $F\colon \mathcal{E}(P)\rightarrow \mathcal{E}(P)$ by $F(x,y) = (f(y),f(x))$.  By the definition of $\mathcal{E}(P)$ we then have for all $(x,y),(x^\prime,y^\prime)\in \mathcal{E}(P)$ that $(x,y)\le (x^\prime,y^\prime)\iff F(x,y)\ge F(x^\prime,y^\prime)$ and $\rk(F(x,y)) = n-1-\rk(x,y)$, so $F$ is an anti-automorphism of $\mathcal{E}(P)$.
+\end{proof}
+\fi
+
+\begin{eg}
+Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ will not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In Figure \ref{fig:dual_not_unimodal} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
+\end{eg}
+
+\begin{figure}[h]
+\label{fig:dual_not_unimodal}
+\begin{tikzpicture}[scale = .75]
+  \node (0) at (0,0) {0};
+  \node (1) at (2,0) {1};
+  \node (2) at (0,2) {2};
+  \node (3) at (2,2) {3};
+  \node (4) at (0,4) {4};
+  \node (5) at (2,4) {5};
+  \node (6) at (0,6) {6};
+  \node (7) at (2,6) {7};
+  \draw (0)--(2);
+  \draw (0)--(3);
+  \draw (1)--(3);
+  \draw (2)--(4);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(6);
+  \draw (5)--(7);
+  \node (8) at (1,-1) {$P$};
+\end{tikzpicture}\qquad
+\begin{tikzpicture}
+  \node (02) at (0,0) {(0,2)};
+  \node (03) at (2,0) {(0,3)};
+  \node (13) at (4,0) {(1,3)};
+  \node (24) at (1,2) {(2,4)};
+  \node (35) at (3,2) {(3,5)};
+  \node (46) at (0,4) {(4,6)};
+  \node (56) at (2,4) {(5,6)};
+  \node (57) at (4,4) {(5,7)};
+  \draw (02)--(24);
+  \draw (03)--(35);
+  \draw (13)--(35);
+  \draw (24)--(46);
+  \draw (35)--(56);
+  \draw (35)--(57);
+  \node (0) at (2,-1) {$\mathcal{E}(P)$};
+\end{tikzpicture}
+\caption{$P$ is self-dual and unitary Peck, but $\mathcal{E}(P)$ is not Peck}
+\end{figure}
+
 
 \begin{rem}
 \label{rem:induced_action_bn}
@@ -545,12 +608,12 @@ Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an in
 
 
 \begin{cor}
-For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self dual. In particular, they are both symmetric. 
+For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self-dual. In particular, they are both symmetric. 
 \end{cor}
 \begin{proof}
-By Remark \ref{rem:induced_action_bn}, any action of $\phi$ of $G$ on $B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any group action $G,$ the poset $B_n/G$ is self dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation} it follows $\mathcal E(B_n/G)$ is self dual, and in particular $\mathcal E(B_n)$ is self dual.
+By Remark \ref{rem:induced_action_bn}, any action of $\phi$ of $G$ on $B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any group action $G,$ the poset $B_n/G$ is self-dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation} it follows $\mathcal E(B_n/G)$ is self-dual, and in particular $\mathcal E(B_n)$ is self-dual.
 
-It only remains to prove that $\mathcal E(B_n)/G$ is self dual. However, we just saw $\mathcal E(B_n)$ is self dual, with the isomorphism given by $\mathcal E(f),$ that is, the map sending a pair of elements to the pair of their complements. Once again, since the action on $B_n$ is induced by an action on $[n],$ this isomorphism descends to an isomorphism $\mathcal E(f)^G:\mathcal E(B_n)/G \rightarrow \mathcal (E(B_n)/G)^{op},$ and so $\mathcal E(B_n)/G$ is self dual.
+It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, we just saw $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f):\mathcal E(B_n) \rightarrow \mathcal E(B_n^{op})\cong \mathcal E(B_n)^{op},$ that is, the map sending a pair of elements to the pair of their complements. Once again, since the action on $B_n$ is induced by an action on $[n],$ this isomorphism descends to an isomorphism $\mathcal E(f)^G:\mathcal E(B_n)/G \rightarrow \mathcal (E(B_n)/G)^{op},$ and so $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
 
