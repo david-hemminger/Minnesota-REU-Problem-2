@@ -1610,33 +1610,26 @@ Our goal is to show that $|S_4(i+1) | - |S_2(i)| \le 0$ and then the lemma follo
 We create an injective map $\phi$ from $S_4(i+1)$ to $S_2(i)$. For each orbit $G(x, y) \in S_4(i+1)$ with $\sigma_0^r x \lessdot y $ for some $r < n/2$, by construction we know that there is a tail cycle in $y$ which consists of at least two elements in $[n]$. Let the tail cycle be $w := \{s,s+r,s+2r,\ldots,s+lr\}$  for some $l \ge 1$, and $x = y \minus \{s+lr\} $. We define $\phi(G(x, y)) = G(x', y')$ where $x' = x \minus \{s\}$ and $y' = y \minus \{s\}$. It is clear that $x' \lessdot y'$ and $\sigma_0^r x' \lessdot y'$, and that $y'$ has a tail cycle, namely $w' = \{s+r, ..., s+lr\}$. This shows that $\phi: S_4(i+1) \rightarrow S_2(i)$ is a well defined map. The map is easily seen to be injective, since on the image $\phi(S_4(i+1))$ there is a well defined right sided inverse $\phi^{-1}$, by adding an element in a similar fashion to both $x', y'$ where $G(x', y') \in \im \phi$. We remark that the map $\phi$ is not necessarily surjective. 
 \end{proof}
 
-%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{lem}{\label{lem:cyclic_bounding_lambda}} 
 Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right) .$$ 
 \end{lem}
 
 \begin{proof} 
 
-By Lemma \ref{lem:bounding_sublemma2} we need to show that $\displaystyle |S_3(i+1)| \le \sum_{\substack{k | (n , i) \\ 3 \le k }} k \cdot q \left(\frac{i}{k},\frac{n}{k}\right)  .$ 
+By Lemma \ref{lem:bounding_sublemma2} we need to show that $\displaystyle |S_3(i+1)| \le \sum_{\substack{d | (n , i) \\ 3 \le d }} d \cdot q \left(\frac{i}{d},\frac{n}{d}\right)  .$ 
 
-For any $G(x, y) \in S_3(i+1)$, $y$ consists of several full cycles with $2$ addition element being its tail cycle. The full cycles in $y$ are $d$ rotationally symmetric for some $d | n$ and $d | i$ since $|y| = i+2$. We count the number of such $G(x,y)$ according to the number $d$. For each $d| (i, n)$, we define $$V_d = \left\{G(x, y) \in S_3(i+1) : \text{ the full cycles in $y$ is $d$-rotationally symmetric} \right\}.$$ Note that $V_2 = \O$, for otherwise for any $G(x, y) \in V_2$, $y$ would have only full cycles where each cycle consists of $2$ elements. Therefore, $|S_3(i+1)| \le \displaystyle \sum_{\substack{d| (i, n) \\ 3 \le d}} |V_d|$, since $S_3(i+1) = \bigcup_{\substack{d| (i, n) \\ 3 \le d}} V_d$ though the union of the right hand side is in general not disjoint. 
+For any $G(x, y) \in S_3(i+1)$, $y$ consists of several full cycles with $2$ addition element being its tail cycle. The full cycles in $y$ are $d$ rotationally symmetric for some $d | n$ and $d | i$ since $|y| = i+2$. We count the number of such $G(x,y)$ according to the number $d$. For each $d| (i, n)$, we define $$V_d = \left\{G(x, y) \in S_3(i+1) : \text{ the full cycles in $y$ is $d$-rotationally symmetric} \right\}.$$ Note that $V_2 = \O$, for otherwise for any $G(x, y) \in V_2$, $y$ would have only full cycles where each cycle consists of $2$ elements. Therefore, $$|S_3(i+1)| \le \displaystyle \sum_{\substack{d| (i, n) \\ 3 \le d}} |V_d|,$$ since $S_3(i+1) = \bigcup_{\substack{d| (i, n) \\ 3 \le d}} V_d$ though the union of the right hand side is in general not disjoint. 
 
-Now we give an upper bound for $|V_d|$ for each $d | (n, i)$. Namely, we show that $|V_d| \le d \cdot q (i/d, n/d)$. 
+Now we give an upper bound for $|V_d|$ for each $d | (n, i)$. Namely, we show that $|V_d| \le d \cdot q (i/d, n/d)$. It is clear that this suffices to prove the lemma.
 
-Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r x \lessdot y$, and from construction we know that $d | r$. \todo{Finish this argument and correct next theorem}
-
-
-
+Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r x \lessdot y$, and from construction we know that $d | r$. For a given $d | (i, n)$, we consider the number of possible $G$-orbits $Gx$ such that there is some $y$ with $G(x, y) \in V_d$. By definition we know that such $x$ consists of full cycles and a tail cycle of $1$ element under $\sigma_0^r$ for any $r$ such that $d |r$, and each full cycle has $d$ elements. Let $\{s, s+d, ..., s+(n-d)\}$ be a full cycle in $x$, the number of $Gx$ is then the number of the possible ways to choose $i/d -1$ elements between $s$ and $s+d$ to form the starting points of other full cycles and $1$ additional element to form the unique tail cycle. This is precisely count the number of $G(a,b) \in \mathcal E (B_{n/d})_{i/d}$, which is $q(i/d, n/d)$ by definition. For any such $x$ as described, there is at most $d-1$ different $y$ such that $G(x,y) \in V_d$, since the rotation $r$ has to be a multiple of $d$. This finishes the proof of the lemma.
+\end{proof}
 %Now return to the situation where $G{(x , y)}$ is not an isolated pair, but there exists $s \in [n]$ so that $G{(y , y \cup s)}$ is an isolated pair, where $y' = y \cup \{s'\}$ for any $s' \notin y$. We need to count how many times this happens.  First we note that this happens when $d | n$, and $(n/d) | (i+1)$ where $d = (r, n)$. Note that, for different $r$ such that $(r, n)$ remains the same, there is only family of such isolated pairs, since the $x$ part will be $d$-rotationally symmetric.
  %We claim that, this  is at most counting,  over all $d | n$, where $1 < d < n$ and $(n/d) | i+1 $, the sum $\dstyle \sum q \left(\frac{(i+1)d}{n}, d\right)$. This is because we have at most $q(\frac{(i+1)d}{n}, d)$ ways to insert the tail cycle (with precisely $1$ distinct bead) in the block of $d$ elements. 
-
 %We can introduce $k = n/d$  and rewrite the sum as  $$\sum_{\substack{k | (i+1, n), \\ 1 < k < n}} q\left(\frac{i+1}{k}, \frac{n}{k}\right).$$ Note that in our sum, $k$ can never be $2$, since otherwise the tail cycle of $x$  has precisely $1$ element, and then $y$ is fixed (consisting of full cycles). So this proves the assertion that $$\lambda_{i+1} - \lambda_i \le \sum_{\substack{k | (n , i+1) \\ 3 \le k }} q (\frac{i+1}{k}, \frac{n}{k}). $$ 
- 
-\end{proof}
 
-
+%%%%%%%%%%%%%%% Edit until here %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
 The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
