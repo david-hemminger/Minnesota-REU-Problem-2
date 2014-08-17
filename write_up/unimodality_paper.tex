@@ -146,7 +146,7 @@
 
 
 \begin{abstract}
-For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products. We also prove that $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihidral group.
+For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose elements are the edges in the Hasse diagram of P. For any group, $G,$ acting on the boolean algebra, $B_n,$ we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products. We also prove that $\mathcal E(B_n/G)$ is unimodal and symmetric in the case that $G$ is the cyclic group or dihedral group.
 \end{abstract}
 
 \maketitle
@@ -156,8 +156,6 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 
 \listoftodos
 \newpage
-
-\todo{Include the proposition that if a poset is self dual, then the edge poset is also self dual}
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
@@ -293,7 +291,7 @@ We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  
 
 We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, i.e. for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} (\cite{quotients_stanley}, Theorem 1) and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
+Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, i.e. for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n,$ then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subset Aut(B_n),$ then $\mathcal E(B_n/G)$ is Peck.
@@ -331,7 +329,7 @@ We then show that cover transitivity is preserved under semidirect products, all
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
-The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Section \todo{include section name for q analog here, or if it is moved to the questions section, edit this sentence} discusses a $q$-analog to Conjecture \ref{conj:F_of_BnG_Peck}, including some partial results. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
+The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use Polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{sec:additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
 
 
 
@@ -341,7 +339,7 @@ In this section we review morphisms of graded posets, Peck posets, and a useful 
 
 Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$. When the poset is clear we will omit the $P$ and simply write $x\le y$.
 
-A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfing the following conditions.
+A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
 	\item If $x < y$ then $\rk(x) < rk(y)$ 
@@ -404,7 +402,7 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  Section \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.  In Section \ref{ssec:E_generalization} we discuss a possible generalization for $\mathcal{E}$.
 
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
-First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Finally, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets.
 
 \begin{note*}
 When the poset $P$ is clear, we shall simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and shall use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
@@ -448,18 +446,19 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 
 \vskip.1in
 \noindent
-{\sf Part (1)}.
+{\sf Part (1)}
 First, $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
 $$\rk_{\mathcal E}(x, y) = \rk_P(x) = \rk_P(f(x)) = \rk_{\mathcal E}(\mathcal E(f)(x, y)).$$
 Suppose $(x, y)\le_{\mathcal E} (x^\prime, y^\prime)$.  Then $x\le_P x^\prime$, $y\le_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\le_P f(x^\prime)$, $f(y)\le_P f(y^\prime)$. Hence $\mathcal E(f)(x,y) \le_{\mathcal E} \mathcal E(f)(x^\prime , y^\prime)$.  Thus $\mathcal E(f)$ is order-preserving and hence a morphism of finite ordered posets.
 
 \vskip.1in
 \noindent
-{\sf Part (2)} is trivial.
+{\sf Part (2)} This is trivial.
 
 \vskip.1in
 \noindent
-{\sf Part (3)}.  For all $(x, y)\in \mathcal E(P)$ we have $\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y)$.
+{\sf Part (3)} For all $(x, y)\in \mathcal E(P)$ we have 
+$$\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y).$$
 \end{proof}
 
 %\begin{prop}\label{prop:F_well_defined}
@@ -507,7 +506,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
 	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a bijective morphism (but not necessarily an isomorphism).
 %	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
-	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
+%	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -518,7 +517,7 @@ First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x
 
 %Next, we check $(3) \iff (4)$by Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since an injective map is a bijection if and only if it is a surjection, it follows that $(3) \iff (4).$
 
-Finally, we check $(3)\iff (4).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
+%Finally, we check $(4)\iff (5).$ Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i.$ However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
 \end{proof}
 
 
@@ -526,7 +525,99 @@ Finally, we check $(3)\iff (4).$ Again using Proposition ~\ref{prop:surjection_b
 While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $[10]$ and hence acting on $B_{10}.$ From Proposition ~\ref{prop:cover_transitive_building_blocks}, this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\},b = \{2,4,6,7\}.$ Then we may observe $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb,$ so $(Gx, Gy) <_{\mathcal E} (Ga, Gb).$ However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.
 \end{rem}
 
+Finally, we will prove that $\mathcal E(P)$ is self-dual if $P$ is, and deduce that $\mathcal E(B_n/G)$ is always self-dual. 
+\begin{defn}
+For $P$ a poset, the {\it dual} poset $P^{op}$ is the poset whose elements are the same as those of $P,$ but $x \leq_{P^{op}} y \iff x \geq_P y.$ A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
+\end{defn}
 
+\begin{prop}
+\label{prop:self_dual_preservation}
+If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
+\end{prop}
+\begin{proof}
+Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op},$ with inverse $h:P^{op}\rightarrow P.$ Using Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism, with inverse $\mathcal E(h).$ Furthermore, $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ Then, the composition $\mathcal E(f) \circ H:\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
+\end{proof}
+
+\iffalse
+David's alternate exposition:
+Let $P$ have rank $n$.  We say that a map $f\colon P\rightarrow P$ is an \textit{anti-automorphism} of $P$ if for all $x,y\in P$ we have $x\le y\iff f(x)\ge f(y)$ and $\rk(f(x)) = n-\rk(x)$.
+
+\begin{defn}
+$P$ is \textit{self-dual} if there exists an anti-automorphism of $P$.
+\end{defn}
+
+\begin{prop}
+If $P$ is self-dual, then $\mathcal{E}(P)$ is self-dual.
+\end{prop}
+
+\begin{proof}
+Let $f$ be an anti-automorphism of $P$.  Define a map $F\colon \mathcal{E}(P)\rightarrow \mathcal{E}(P)$ by $F(x,y) = (f(y),f(x))$.  By the definition of $\mathcal{E}(P)$ we then have for all $(x,y),(x^\prime,y^\prime)\in \mathcal{E}(P)$ that $(x,y)\le (x^\prime,y^\prime)\iff F(x,y)\ge F(x^\prime,y^\prime)$ and $\rk(F(x,y)) = n-1-\rk(x,y)$, so $F$ is an anti-automorphism of $\mathcal{E}(P)$.
+\end{proof}
+\fi
+
+\begin{eg}
+Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ will not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In Figure \ref{fig:dual_not_unimodal} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
+\end{eg}
+
+\begin{figure}[h]
+\label{fig:dual_not_unimodal}
+\begin{tikzpicture}[scale = .75]
+  \node (0) at (0,0) {0};
+  \node (1) at (2,0) {1};
+  \node (2) at (0,2) {2};
+  \node (3) at (2,2) {3};
+  \node (4) at (0,4) {4};
+  \node (5) at (2,4) {5};
+  \node (6) at (0,6) {6};
+  \node (7) at (2,6) {7};
+  \draw (0)--(2);
+  \draw (0)--(3);
+  \draw (1)--(3);
+  \draw (2)--(4);
+  \draw (3)--(5);
+  \draw (4)--(6);
+  \draw (5)--(6);
+  \draw (5)--(7);
+  \node (8) at (1,-1) {$P$};
+\end{tikzpicture}\qquad
+\begin{tikzpicture}
+  \node (02) at (0,0) {(0,2)};
+  \node (03) at (2,0) {(0,3)};
+  \node (13) at (4,0) {(1,3)};
+  \node (24) at (1,2) {(2,4)};
+  \node (35) at (3,2) {(3,5)};
+  \node (46) at (0,4) {(4,6)};
+  \node (56) at (2,4) {(5,6)};
+  \node (57) at (4,4) {(5,7)};
+  \draw (02)--(24);
+  \draw (03)--(35);
+  \draw (13)--(35);
+  \draw (24)--(46);
+  \draw (35)--(56);
+  \draw (35)--(57);
+  \node (0) at (2,-1) {$\mathcal{E}(P)$};
+\end{tikzpicture}
+\caption{$P$ is self-dual and unitary Peck, but $\mathcal{E}(P)$ is not Peck}
+\end{figure}
+
+
+\begin{rem}
+\label{rem:induced_action_bn}
+Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an induced action 
+$$\phi: G \times B_n \rightarrow B_n,\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$$
+It is well known and easy to see that in fact any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ Whenever an action $\psi$ of $G$ on $[n]$ is given, we shall refer to the action $\phi$ defined above as the induced action on $B_n.$
+\end{rem}
+
+
+
+\begin{cor}
+For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self-dual. In particular, they are both symmetric. 
+\end{cor}
+\begin{proof}
+By Remark \ref{rem:induced_action_bn}, any action of $\phi$ of $G$ on $B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any group action $G,$ the poset $B_n/G$ is self-dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation} it follows $\mathcal E(B_n/G)$ is self-dual, and in particular $\mathcal E(B_n)$ is self-dual.
+
+It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, we just saw $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f):\mathcal E(B_n) \rightarrow \mathcal E(B_n^{op})\cong \mathcal E(B_n)^{op},$ that is, the map sending a pair of elements to the pair of their complements. Once again, since the action on $B_n$ is induced by an action on $[n],$ this isomorphism descends to an isomorphism $\mathcal E(f)^G:\mathcal E(B_n)/G \rightarrow \mathcal (E(B_n)/G)^{op},$ and so $\mathcal E(B_n)/G$ is self-dual.
+\end{proof}
 
 
 \ssec{Proof of Theorem \ref{thm:cover_transitive_implies_Peck}}\label{ssec:proof_of_cover_transitive_implies_Peck}
@@ -756,12 +847,16 @@ Although for the most part, we shall investigate \linebreak
 $\mathcal E(P/G),\mathcal E(P)/G,$ there is a natural generalization of $\mathcal E,\mathcal H,$ to what we shall call $\mathcal E^{\vec r},\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal E.$
 
 \begin{defn}
-Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say $(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots, y_{k+1})$ if $x_i \lessdot_P y_i,y_{i} \not \leq_P x_{i+1}$ for all $i \in [k+1].$ Then, define a relation $<_{\mathcal H^{\vec r}}$ on $\mathcal H^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal H^{\vec r}}.$ Finally, define $rk_{\mathcal H^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
+Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say 
+$$(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots, y_{k+1})$$
+if $x_i \lessdot_P y_i,y_{i} \not \leq_P x_{i+1}$ for all $i \in [k+1].$ Then, define a relation $<_{\mathcal H^{\vec r}}$ on $\mathcal H^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal H^{\vec r}}.$ Finally, define 
+$$rk_{\mathcal H^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1).$$
 \end{defn}
 
 \begin{defn}
 Let $\vec r = r_1,\ldots,r_k,$ with $r_i \in \BN$ for all $i \in [k].$ Let $\mathcal P$ be the category of graded posets. Define the functor $\mathcal E^{\vec r}:\mathcal P \rightarrow \mathcal P,$ also notated $\mathcal E^{r_1,\ldots, r_k}.$ For a graded poset $P,$ define the graded poset $\mathcal E^{r_1,\ldots, r_k}(P),$ also notated whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say 
-$(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y_{k+1})$ if $x_i \lessdot_P y_i$ for all $i \in [k+1]$. Then, define a relation $\leq_{\mathcal E^{\vec r}}$ on $\mathcal E^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal E^{\vec r}}.$ Finally, define $rk_{\mathcal E^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1)$
+$$(x_1, x_2, \cdots, x_{k+1})\lessdot_{\mathcal H^{\vec r}} (y_1, y_2, \cdots , y_{k+1})$$ if $x_i \lessdot_P y_i$ for all $i \in [k+1]$. Then, define a relation $\leq_{\mathcal E^{\vec r}}$ on $\mathcal E^{r_1,\ldots, r_k}(P),$ to be the transitive closure of $\lessdot_{\mathcal E^{\vec r}}.$ Finally, define 
+$$rk_{\mathcal E^{\vec r}(P)}(x_1,\ldots, x_{k+1}) = rk_P(x_1).$$
 \end{defn}
 
 Observe that under this notation, $\mathcal E^1 = \mathcal E, \mathcal H^1 = \mathcal H.$
@@ -773,8 +868,11 @@ For all $\vec r,\mathcal E^{\vec r}$ is a functor, for the same reasons that $\m
 In the next Lemmas, we cite analogous results which hold for $\mathcal H^{\vec r}.$ The proofs are almost identical to those for $\mathcal H.$
 
 \begin{lem}
-Given a group action $\phi:G \times P \rightarrow P$ there are well defined group actions $\phi_{\mathcal E}:G\times \mathcal E^{\vec r}(P) \rightarrow \mathcal E^{\vec r}(P),\phi_{\mathcal H}:G\times \mathcal H^{\vec r}(P) \rightarrow \mathcal H^{\vec r}(P),$ 
-both given by $g \cdot (x_1, \cdots, x_{k+1}) =(g\cdot x_1, \cdots, g \cdot x_{k+1}).$
+Given a group action $\phi:G \times P \rightarrow P$ there are well defined group actions 
+$$\phi_{\mathcal E}:G\times \mathcal E^{\vec r}(P) \rightarrow \mathcal E^{\vec r}(P),$$
+$$\phi_{\mathcal H}:G\times \mathcal H^{\vec r}(P) \rightarrow \mathcal H^{\vec r}(P),$$ 
+both given by 
+$$g \cdot (x_1, \cdots, x_{k+1}) =(g\cdot x_1, \cdots, g \cdot x_{k+1}).$$
 \end{lem}
 \begin{proof}
 The proof is analogous to that of Lemma ~\ref{lem:G_action_on_HP}.
@@ -782,7 +880,8 @@ The proof is analogous to that of Lemma ~\ref{lem:G_action_on_HP}.
 
 \begin{lem}
 \label{lem:peck_quotients_vector_f}
-The poset $\mathcal H^{r_1,\ldots, r_k}(B_n)$ is isomorphic to the multinomial coefficient \linebreak $\binom n {r_1,r_2,\ldots, r_k}$ disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$ Consequently, $\mathcal H^{\vec r}(B_n)$ is unitary Peck and $\mathcal H^{\vec r}(B_n)/G$ is Peck.
+The poset $\mathcal H^{r_1,\ldots, r_k}(B_n)$ is isomorphic to the multinomial coefficient \linebreak $\binom n {r_1,r_2,\ldots, r_k}$ disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$ Consequently, $\mathcal H^{\vec r}(B_n)$ is unitary Peck and \linebreak
+$\mathcal H^{\vec r}(B_n)/G$ is Peck.
 \end{lem}
 \begin{proof}
 Once again, the proof of the above three statements is analogous to those of ~\ref{prop:computing_HBn}, Corollary ~\ref{cor:HBn_unitary_peck}, and Corollary ~\ref{cor:quotients_of_HBn_peck}. The reason there are multinomial coefficients here instead of binomial coefficients, is that an element $(x_1, x_2, \cdots, x_{k+1})$ lies in the copy of $B_{n -\sum_{i=1}^k r_i}$ determined by the ordered tuple of subsets $(x_2 \setminus x_1,x_3 \setminus x_2, \ldots, x_{k+1} \setminus x_k).$ The first consists of $r_1$ elements, the next of $r_2$ elements, up through the last which consists of $r_k$ elements. Since the total number of ways to choose $r_1,\ldots, r_k$ in $k$ distinct groups is $\binom n {r_1,r_2,\ldots, r_k},$ there are exactly this many disjoint copies of $B_{n- \sum_{i=1}^k r_i}.$
@@ -830,7 +929,9 @@ Write $x^\prime = h_1k_1h_0\cdot x$.  Since the group action of $G$ must be orde
 
 \begin{prop}
 \label{prop:direct_product_preservation}
-For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product $\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$ is also CCT.
+For $\phi:G\times P\rightarrow P,\psi:H \times Q \rightarrow Q$ two CCT actions, then the direct product 
+$$\phi \times \psi:(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$$
+is also CCT.
 \end{prop}
 \begin{proof}
 First, by definition of CCT, if either $G$ or $H$ acts trivially, it is clear the action of $G\times H$ is CCT. To see this, suppose $G$ acts trivially, the case of $H$ acting trivially is similar. Then, if $(x,y) \lessdot (a,b),(r,s)\lessdot (a,b),(x,y) \in (G\times H)(r,s),$ then $x \in Gr$ so $x = r.$ There are now two cases, either $b = y = s$ or $x = r = a.$ First, if $b = y = s,$ then $(e,e) \in Stab(x,y)$ and $(e,e)(x,y) = (r,s).$ Second, if $x = r = a,$ and then $y \lessdot b,s \lessdot b,y \in Hs,$ and so by cover transitivity of $G,$ there exists $g \in G$ so that $(e,g)(x,y) = (r,s)$ and $(e,g) \in Stab(a,b).$
@@ -862,7 +963,9 @@ Heuristically, one may think of the above action as obtained by first having $G$
 
 \begin{lem}
 \label{lem:symmetric_group_product_action}
-For $P$ a poset, the action $\phi:S_l \times P^l \rightarrow P^l,\sigma \cdot(x_1,\ldots, x_l) = (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT.
+For $P$ a poset, the action 
+$$\phi:S_l \times P^l \rightarrow P^l,\sigma \cdot(x_1,\ldots, x_l) = (x_{\sigma(1)},\ldots, x_{\sigma(l)})$$
+is CCT.
 \end{lem}
 \begin{proof}
 For $a \in P^l$ notate $a = (a_1,\ldots, a_l).$ Suppose $x,y,z \in P^l$ with $x\lessdot z,y\lessdot z,$ and $x \in S_ly.$ This means there is a unique $i$ such that $x_i \lessdot z_i,x_k = z_k$ for $k \neq i.$ Additionally, there is a unique $j$ for which $y_j \lessdot z_j,y_k =z_k$ for $k \neq j.$ Since $x \in S_ly,$ we obtain the equality of multisets $\{x_1,\ldots, x_l\}=\{y_1,\ldots,y_l\}.$ But for $k \neq i,j,x_k = z_k = y_k$, we also obtain equality of sets $\{x_i,x_j\} = \{y_i,y_j\}.$ Since $rk(y_j) \lessdot rk(x_j),$ we obtain $y_j = x_i,y_i = x_j.$ Then, taking the transposition $\sigma  = (ij) \in S_l,$ it follows that $\sigma \in Stab(z)$ and $\sigma \cdot x = y.$
@@ -870,7 +973,7 @@ For $a \in P^l$ notate $a = (a_1,\ldots, a_l).$ Suppose $x,y,z \in P^l$ with $x\
 
 \begin{prop}
 \label{prop:wreath_preservation}
-If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action defined in Notation ~\ref{note:wreath_action} is also CCT.
+If $\psi:G\times P \rightarrow P$ is CCT, then $\phi:G\wr S_l \times P^l \rightarrow P^l$ where $\phi$ is the induced action defined in Notation \ref{note:wreath_action} is also CCT.
 \end{prop}
 \begin{proof}
 First, the wreath product $G \wr S_l$ can be viewed as the semidirect product $G^l \rtimes S_l.$ Observe that since the action of $G$ on $P$ is CCT, using Proposition ~\ref{prop:direct_product_preservation}, we obtain the action of $G^l$ on $P^l$ is CCT. Explicitly, this action is $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ Additionally, since $P^l/G^l \cong (P/G)^l.$ So, for $\sigma \in S_l,x_i \in P/G,$ the action $S_l \times (P/G)^l \rightarrow (P/G)^l,(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)},\ldots, x_{\sigma(l)})$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}. So, the action $\phi,$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so $\phi$ is CCT.
@@ -927,7 +1030,7 @@ In Figure \ref{fig:tree1} and Figure \ref{fig:tree2}, we give two examples of ro
 \caption{\label{fig:tree1}}
 \end{figure}
 
-
+\todo{Add this picture and example}
 \begin{figure}[h!]
 Add picture
 \caption{\label{fig:tree2}}
@@ -973,9 +1076,9 @@ Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr
 \end{equation}
 Since each $G_j$ is a sequence of direct products and wreath products with symmetric groups by the inductive assumption, it follows from ~\eqref{eq:level_expansion} that so is $Aut(P).$
 \end{proof}
-
+\todo{finish this example}
 \begin{eg}
-Let $P_1$ be the rooted tree  in Figure \ref{fig:tree1} and $P_2$ be the rooted in Figure \ref{fig:tree2}, the porposition says that $Aut (P_1) = (S_2 \wr S_2)\wr S_2;$ and $Aut(P_2) = $ %%%% Finish . 
+Let $P_1$ be the rooted tree  in Figure \ref{fig:tree1} and $P_2$ be the rooted in Figure \ref{fig:tree2}, the proposition says that $Aut (P_1) = (S_2 \wr S_2)\wr S_2;$ and $Aut(P_2) = $ %%%% Finish . 
 \end{eg}
 
 \begin{cor}
@@ -1203,7 +1306,9 @@ We now reap the fruits of our labor in order to draw some nice results.
 
 \begin{cor}
 \label{cor:unimodal_wreath_r_sequence}
-The sequence $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ is the sequence of ranks of the Peck poset $\mathcal E^r(B_{l\cdot m})/G.$ In particular, the sequence is symmetric and unimodal.
+The sequence 
+$$\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$$
+is the sequence of ranks of the Peck poset $\mathcal E^r(B_{l\cdot m})/G.$ In particular, the sequence is symmetric and unimodal.
 \end{cor}
 \begin{proof}
 By Theorem ~\ref{thm:quotiented_edge_wreath}, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r)$ is the size of the $i-r$th rank of the Peck poset $\mathcal E^r(B_{l\cdot m})/G.$ Since Peck posets are unimodal and symmetric, this sequence is as well.
@@ -1216,7 +1321,11 @@ We now obtain an easy proof of Theorem ~\ref{thm:pak_thm} for the case $r = 1.$ 
 The sequence $p_1(l,m,1), p_{r+1}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is the rank generating function of $\mathcal E(B_{l\cdot m})/G.$ In particular, the sequence is unimodal and symmetric.
 \end{cor}
 \begin{proof}
-First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, $\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$ However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, $\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$ are the ranks of $\mathcal E(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E(B_{l\cdot m})/G$, hence symmetric and unimodal.
+First, we know $F^1(B_{l\cdot m})/G$ is Peck, since it is the quotient of a unitary Peck poset by a group action. However, it is easy to see that $\eta(\lambda,1) = \nu(\lambda),$ since both count the number Young Diagrams of size $|\lambda|-1$ fitting inside the Young Diagram corresponding to $\lambda.$ Therefore, 
+$$\sum_{\lambda \in P_i(l,m)} \eta(\lambda,r) = \sum_{\lambda \in P_i(l,m)}\nu(\lambda) = p_i(l,m,1).$$
+However, by Corollary ~\ref{cor:unimodal_wreath_r_sequence}, 
+$$\sum_{\lambda \in P_r(l,m)} \eta(\lambda,r),\ldots,\sum_{\lambda \in P_n(l,m)} \eta(\lambda,r),$$
+are the ranks of $\mathcal E(B_{l\cdot m})/G.$ Therefore, $p_i(l,m,1)$ are also the ranks of $\mathcal E(B_{l\cdot m})/G$, hence symmetric and unimodal.
 \end{proof}
 
 
@@ -1301,7 +1410,8 @@ Now we arrive at our main result of the section. The following result provides a
 
 \begin{prop}
 \label{prop:rank_gen_fn}
-Let $z_j = \sum_{j = 1}^k r_j^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}}= \sum_{t}^{}c_tr_1^t,$$ be a polynomial in $r_1.$ Then, the coefficients $c_t$  are the ranks of the Peck poset \linebreak $\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, the coefficients form a symmetric, unimodal sequence.
+Let $z_j = \sum_{j = 1}^k r_j^j.$ Let $$Z_G^{i_2,\ldots,i_{k-1}}(r_1) =[Z_G(z_1,\ldots, z_{k-1},1)]_{r_2^{i_2}\cdots r_{k-1}^{i_{k-1}}}= \sum_{t}^{}c_tr_1^t,$$ be a polynomial in $r_1.$ Then, the coefficients $c_t$  are the ranks of the Peck poset \linebreak
+$\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G.$ In particular, the coefficients form a symmetric, unimodal sequence.
 \end{prop}
 \begin{proof}
 In Lemma ~\ref{lem:polya_faces_equivlence}, we saw $$[Z_G(z_1,\ldots, z_k)]_{r_1^{i_1} \cdots r_k^{i_k}}=|(\mathcal E^{i_2,\ldots, i_{k-1}}(B_n)/G)_{i_1}|.$$
@@ -1373,7 +1483,8 @@ $$
 
 Of course, by definition of $F_G,$ we know 
 $$[F_G(r_1,\ldots, r_k)]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l-t}} = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0)$$
-where there are $t$ 1's in the above expression. By definition, $\kappa$ is just the number of inequivalent ways to distinctly color $t$ numbers in an $l \times m$ rectangle, up to the action of $G = S_m \wr S_l.$ For any such coloring, let square $a_i$ be colored with color $r_i.$ Each $G$ orbit of colorings has a unique representative such that the colors are sorted in increasing order along each row, and in increasing order down the first column. Then, the colorings defined above are in bijection with partitions of $[t]$ so that this partition has at most $l$ blocks, and each block has at most $m$ elements. The set of such partitions is exactly  $P_{[t]}[l,m].$ Therefore, the number of such partitions is $p_{[t]}[l,m].$ Then, it follows that
+where there are $t$ 1's in the above expression. By definition, $\kappa$ is just the number of inequivalent ways to distinctly color $t$ numbers in an $l \times m$ rectangle, up to the action of $G = S_m \wr S_l.$
+For any such coloring, let square $a_i$ be colored with color $r_i.$ Each $G$ orbit of colorings has a unique representative such that the colors are sorted in increasing order along each row, and in increasing order down the first column. Then, the colorings defined above are in bijection with partitions of $[t]$ so that this partition has at most $l$ blocks, and each block has at most $m$ elements. The set of such partitions is exactly  $P_{[t]}[l,m].$ Therefore, the number of such partitions is $p_{[t]}[l,m].$ Then, it follows that
 $$p_{[t]}[l,m] = \kappa(1,1,\ldots, 1,m \cdot l - t,0,\ldots, 0) = \left[\frac 1 {|G|}Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \sum_{j=1}^k r_j^n \right)\right]_{i_1 i_2 \cdots i_t i_{t+1}^{m\cdot l - t}}.$$
 
 Of course, $\frac 1 {|G|} = \frac 1 {l!(m!)^l}$ when $G = S_m \wr S_l.$ So, to complete the proof, we just need to show that 
@@ -1470,7 +1581,7 @@ First, we check $H$ is normal. For any $g \in G,x \in x$ it follows $ghg^{-1}x =
 Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B_n)/G \cong \mathcal E(B_n)/(G/H),$ since $G,G/H$ have exactly the same orbits.
 \end{proof}
 
-\begin{lem}[\cite{stack}]
+\begin{lem}
 \label{lem:transitive_abelian}
 All faithful transitive abelian groups $A$ acting on the set $[n]$ have $|A| = n.$
 \end{lem}
@@ -1497,7 +1608,7 @@ In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 
-\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) =  \mathcal E (B_n)/C_{n}, \quad P(n) =  \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are refering to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
+\begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) =  \mathcal E (B_n)/C_{n}, \quad P(n) =  \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are referring to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
 \end{note}
 
 The quotient $B_n /C_n$ is the well-studied necklace poset. The elements in the poset are represented by $n$ filled or empty beads ordered cyclically. Label the positions of the beads in the necklace by $1, 2, ..., n$. More specifically, since each element $x \in B_n$ is represented by a sequence of empty or filled beads, an element $G(x) \in B_n/C_n$ is represented by such a sequence up to rotational equivalence.  Similarly, an element $(Gx, Gy) \in \big( \mathcal E(B_n)/C_n\big)_{i}$ where $x \lessdot y$ can be regarded as a necklace where $i+1$ beads out of $n$ are filled (which represent $y$), and $1$ of the filled bead is distinct from all others (so the other $i$ beads represent $x$).
@@ -1574,7 +1685,7 @@ Note that this suffices to show that the $p_i$ are unimodal, since $$p_{i+1} - p
 Fix $r < n/2$ to be an integer and let $ G(x, y)$ be an $G$-orbit of edges. We call $G(x , y)$ an {\it isolated pair} if  $ \sigma_0^r x \lessdot y, \, \, \text{ but  there does not exist } g \in C_n \text{ such that } g x = \sigma_0 ^r x,  \text{ and }g y = y$. 
 \end{defn}
 
-First we prove several sublemmas. 
+First we prove several sub-lemmas. 
 
 \begin{lem} \label{lem:bounding_sublemma1}
 $\lambda_i = p_i - q_i$ is equal to the number of $G(x, y)$ such that there exists $r < n/2$ with $\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$.
@@ -1601,7 +1712,7 @@ $$\lambda_{i+1} - \lambda_i \le | \left\{ G(x, y) \in S_2(i+1) : \text{ the tail
 By the previous lemma, $\lambda_i = q_i - p_i$ is equal to the number of $G(x, y)$ such that there exists $r$ with $x\lessdot y,\sigma_0^r x \lessdot y$ and $y$ has a tail cycle under the action of $\sigma_0^r$ where $r < n/2$, in other words, $\lambda_i = |S_2(i)|.$ Therefore, $\lambda_{i+1} - \lambda_i = |S_2(i+1)| - |S_2(i)|$. 
 
 Now for each $i$ we define two subsets $S_3(i) \subset S_2(i)$ and $S_4(i) \subset S_2(i)$ as follows: 
-$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 2 \text{ element}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 3\text{ elements}\right\}.$$  
+$$S_3 (i) = \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has only } 2 \text{ elements}\right\};$$ and $$S_4(i)= \left\{ G(x, y) \in S_2(i) : \text{ the tail cycle in } y \text{ has at least } 3\text{ elements}\right\}.$$  
 
 It is clear that $S_3$ and $S_4$ are disjoint subsets of $S_2$ and that $S_2 = s_3 \cup S_4$. In particular, we know that $|S_2(i+1)| = |S_3(i+1)| +|S_4(i+1)|.$ Thus $$\lambda_{i+1} - \lambda_i = |S_3(i+1)| + |S_4(i+1)| - |S_2(i)|.$$
 
@@ -1616,7 +1727,9 @@ Let $G =C_n$ and $q(i,m)$ be as defined above,  then $$\lambda_{i+1} - \lambda_i
 
 \begin{proof} 
 
+
 By Lemma \ref{lem:bounding_sublemma2} we need to show that $\displaystyle |S_3(i+1)| \le \sum_{\substack{d | (n , i) \\ 3 \le d }} d \cdot q \left(\frac{i}{d},\frac{n}{d}\right)  .$ 
+
 
 For any $G(x, y) \in S_3(i+1)$, $y$ consists of several full cycles with $2$ addition element being its tail cycle. The full cycles in $y$ are $d$ rotationally symmetric for some $d | n$ and $d | i$ since $|y| = i+2$. We count the number of such $G(x,y)$ according to the number $d$. For each $d| (i, n)$, we define $$V_d = \left\{G(x, y) \in S_3(i+1) : \text{ the full cycles in $y$ is $d$-rotationally symmetric} \right\}.$$ Note that $V_2 = \O$, for otherwise for any $G(x, y) \in V_2$, $y$ would have only full cycles where each cycle consists of $2$ elements. Therefore, $$|S_3(i+1)| \le \displaystyle \sum_{\substack{d| (i, n) \\ 3 \le d}} |V_d|,$$ since $S_3(i+1) = \bigcup_{\substack{d| (i, n) \\ 3 \le d}} V_d$ though the union of the right hand side is in general not disjoint. 
 
@@ -1637,13 +1750,14 @@ The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
 
 \begin{proof}
 
-We need to show that for $G= C_n$, the $p_i$ are unimodal. So, we only need to bound $ \dstyle \sum_{\substack{k | (n , i+1)\\ 3 \le k < n/2 }} q (\frac{i+1}{k}, \frac{n}{k}) $. It is clear that for sufficiently large $n$, say for $n \ge 9$, $$q((i+1)/k, n/k) = {n/k - 1 \choose (i+1)/k -1} \le {\lceil n/3-1 \rceil \choose \lceil (i+1)/3 -1 \rceil }.$$ Since $k \leq i,$ and $ i+1 \ge n/2$, we coarsely bound the sum by $$\frac{n}{2} \cdot {\lceil n/3-1 \rceil \choose \lceil (i+1)/3 -1 \rceil }. $$ We want to show that this is smaller than the difference of $$q_i - q_{i-1} = \frac{(n-1)!}{(i)! (n-i)!} - \frac{(n-1)!}{(i-1)!(n-i+1)!}= {n \choose i } \frac{n-2i}{n} \ge  {n \choose i } \frac{2}{n} .$$
+We need to show that for $G= C_n$, the $p_i$ are unimodal. So, we only need to bound $ \dstyle \sum_{\substack{k | (n , i+1)\\ 3 \le k < n/2 }} q (\frac{i+1}{k}, \frac{n}{k}) $. It is clear that for sufficiently large $n$, say for $n \ge 9$, $$q\left(\frac{i+1}k, \frac n k\right) = {\frac n k - 1 \choose \frac{i+1} k -1} \le {\lceil \frac n 3-1 \rceil \choose \lceil \frac{i+1} 3 -1 \rceil }.$$ Since $k \leq i,$ and $ i+1 \ge n/2$, we coarsely bound the sum by $$\frac{n}{2} \cdot {\lceil \frac n 3-1 \rceil \choose \lceil \frac {i+1} 3 -1 \rceil }.$$
+We want to show that this is smaller than the difference of $$q_i - q_{i-1} = \frac{(n-1)!}{(i)! (n-i)!} - \frac{(n-1)!}{(i-1)!(n-i+1)!}= {n \choose i } \frac{n-2i}{n} \ge  {n \choose i } \frac{2}{n} .$$
 
 Namely, we want to show that, for sufficiently large $n$, 
 
-$$ \left(\frac{n}{2}\right)^2 \cdot {\lceil n/3-1 \rceil \choose \lceil (i+1)/3 -1 \rceil }  \le   {n \choose i}.$$
+$$ \left(\frac{n}{2}\right)^2 \cdot {\lceil \frac n 3-1 \rceil \choose \lceil \frac {i+1} 3 -1 \rceil }  \le   {n \choose i}.$$
 
-This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked. 
+This bound works for $n \ge 12$. For smaller $n$ the claim can be easily checked.
 
 Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =  (q_{i+1} - q_i) - (\lambda_{i+1}- \lambda_i) \ge 0,$$  which proves that the $p_i$ are increasing for $i < n/2$. By symmetry, the $p_i$ are unimodal.
 
@@ -1669,7 +1783,7 @@ In this subsection, we show a similar result for the Dihedral groups that act na
 \building*
 
 \begin{proof}
-We have already seen that the first part holds trivially. The proof of the second part is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Then, by part 4 of Lemma \ref{lem:cover_transitive_equivalence}, the action of $C_{2n}$ is CCT. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$. 
+We have already seen that the first part holds trivially. The proof of the second part is similar to the proof of Lemma \ref{lem:cyclicprime}. For example, the group $G = D_{2n}$ contains $C_n$ as a subgroup and is generated by $C_n$ with arbitrary reflections. The additional reflections guarantee that there are no special orbits $G(x , y)$ for any $r < n/2$, which implies $p_i = q_i$. Then, by part 4 of Lemma \ref{lem:cover_transitive_equivalence}, the action of $C_{2n}$ is CCT. Similarly, $D_{4n}$ is generated by the rotational subgroup $C_{2n}$ and reflections, and it is not hard to see that for any pair of elements $(x, z), (y, z) \in \mathcal E(B_n)$ such that $x$ and $y$ differ by a rotation, which does not fix $z$, then there always exists a reflection $\tau$ such that $\tau x = y$ and $\tau$ fixes $z$.
 \todo{This proof needs more work (self)} Following the proof of \ref{lem:cyclicprime}, we know that the action of $D_{4n}$ on $B_n$ is CCT.
 \end{proof}
 
@@ -1680,7 +1794,7 @@ Let $G$ be as in point 2 of Proposition \ref{prop:cover_transitive_building_bloc
 
 \begin{lem}{\label{dihedral002}}
  We have an explicit formula for $q_i = |\big(\mathcal E (B_n)/D_{2n} \big)_i|$:
- $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}  \Big)$$
+ $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+1)}+1] \cdot { \lceil \frac n 2\rceil -1  \choose \lceil \frac{i+1} 2 \rceil - 1}  \Big)$$
 \end{lem}
 
 \begin{proof}
@@ -1692,10 +1806,10 @@ Our goal is to calculate $q_i = \mu_1 + \mu_2$, so it remains to calculate $\mu_
 We break into cases:
 \begin{enumerate}
 \item If $n$ is odd and $i+1$ is even, then it is clear that no reflections fix $x$ for any $x$, so $\mu_2=0$. 
-\item For all other cases, there are precisely $\lceil n/2 -1\rceil$ places to insert $\lceil (i+1)/2 - 1 \rceil$ elements of $[n]$ to form $x$. 
+\item For all other cases, there are precisely $\lceil \frac n 2 -1\rceil$ places to insert $\lceil \frac {i+1} 2 - 1 \rceil$ elements of $[n]$ to form $x$. 
 \end{enumerate}
-This gives the desired formula $\dstyle \mu_2 =  \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}   $. Therefore, 
-$$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil n/2\rceil -1  \choose \lceil (i+1)/2 \rceil - 1}    \Big)$$
+This gives the desired formula $\dstyle \mu_2 =  \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil \frac n 2\rceil -1  \choose \lceil \frac{i+1} 2 \rceil - 1}   $. Therefore, 
+$$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil \frac n 2\rceil -1  \choose \lceil \frac{i+1} 2 \rceil - 1}    \Big)$$
 \end{proof}
 \begin{rem}
 An alternate proof of Lemma ~\ref{dihedral002} follows directly from Polya's Theorem ~\ref{thm:polya}, by counting the number of ways to color $n$ elements with three colors, so that there are $i$ of the first color, $1$ of the second color, and $n-i-1$ of the third color.
@@ -1713,47 +1827,6 @@ The proof is similar to the proof of Lemma \ref{lem:cyclic_bounding_lambda} and 
 
 
 
-
-%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
-\ssec{A $q$-analog}
-\label{ssec:q_analog}
-
-In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}.
-
-Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
-
-Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces a group action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
-
-The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
-
-\begin{lem}
-\label{q:number_subspaces}
-The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace in $V_n(q)$, is ${n \choose i}_q$
-\end{lem}
-
-\begin{note}
-Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
-\end{note}
-
-\begin{lem}
-\label{lem:q_stabilizer}
-For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
-\end{lem}
-\begin{proof}
-We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
-\end{proof}
-
-\begin{lem} 
-\label{lem:cyclic_q_analog_ranks}
-Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
-\end{lem}
-
-\begin{proof}
-
-Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
-
-Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
-\end{proof}
 
 
 
@@ -1781,7 +1854,13 @@ Defining $L$ to be the Lefschetz map $\mathcal H(B_n) \rightarrow \mathcal H(B_n
 \end{align*}
 \end{thm}
 \begin{proof}
-Note that the conditions $y \not \subset a, x\subset a, y\subset b$ are equivalent to $(a, b) >_{ \mathcal H(B_n)} (x, y).$ Clearly, if $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is 0. So, to complete the proof, it suffices to show that if  $(a, b) >_{ \mathcal H(B_n)} (x, y)$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$. However, this coefficient is precisely the number of sequences $(x, y) = (x_0, y_0) \lessdot_{ \mathcal H(B_n)} (x_1, y_1) \lessdot_{ \mathcal H(B_n)}  \cdots \lessdot_{ \mathcal H(B_n)}  (x_k, y_k) = (a, b).$ By definition of $ \mathcal H,$ we must have that $y_k \setminus x_k = y\setminus x$ for all $k.$ Therefore, the number of such sequences is equal to the number of sequences $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a,$ since choosing the $x_i$ determine $y_i$ because $y_i = x_i \cup (y \setminus x).$ Finally, the number of such sequences  $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a,$ is equivalent to the number of ways to add the elements in $a \setminus x$ to $x$. This is because each sequence $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$ is determined uniquely by the singletons $x_{i+1} \setminus x_i, 1 \leq i \leq k.$ Since in total we are adding $k$ elements to $x$ in order to obtain $a,$ there are $k!$ ways to do this. Therefore, coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$
+Note that the conditions $y \not \subset a, x\subset a, y\subset b$ are equivalent to $(a, b) >_{ \mathcal H(B_n)} (x, y).$ Clearly, if $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is 0. So, to complete the proof, it suffices to show that if  $(a, b) >_{ \mathcal H(B_n)} (x, y)$ then the coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$. However, this coefficient is precisely the number of sequences 
+$$(x, y) = (x_0, y_0) \lessdot_{ \mathcal H(B_n)} (x_1, y_1) \lessdot_{ \mathcal H(B_n)}  \cdots \lessdot_{ \mathcal H(B_n)}  (x_k, y_k) = (a, b).$$
+By definition of $ \mathcal H,$ we must have that $y_k \setminus x_k = y\setminus x$ for all $k.$ Therefore, the number of such sequences is equal to the number of sequences $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a,$ since choosing the $x_i$ determine $y_i$ because $y_i = x_i \cup (y \setminus x).$ Finally, the number of such sequences  
+$$x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a,$$
+is equivalent to the number of ways to add the elements in $a \setminus x$ to $x$. This is because each sequence 
+$$x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$$
+is determined uniquely by the singletons $x_{i+1} \setminus x_i, 1 \leq i \leq k.$ Since in total we are adding $k$ elements to $x$ in order to obtain $a,$ there are $k!$ ways to do this. Therefore, coefficient of $(a, b)$ in $	L^{n-2i-1}(x, y)$ is $k!$
 \end{proof}
 
 \begin{thm}
@@ -1794,21 +1873,26 @@ The map $M$ satisfies
 
 For a particular $(x, y),(a , b)$, if either $y \subset a$ or $y \not \subset a, x\subset a, y\subset b,$ then $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ and so the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is 0.
 
-Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\subset b,$ hold at the same time. So, suppose  $y \not \subset a, x\subset a, y\subset b.$ This implies that $b\setminus a = y\setminus x.$ Then, the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is precisely the number of sequences $(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$ However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Theorem ~\ref{explicit_gbn_lefchetz}.
-
-To complete the proof, we need to show that if $y \subset a$ then the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is $(2^k - 1)(k-1)!$. Equivalently, we need to show that the number of sequences 
+Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\subset b,$ hold at the same time. So, suppose  $y \not \subset a, x\subset a, y\subset b.$ This implies that $b\setminus a = y\setminus x.$ Then, the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is precisely the number of sequences 
 \begin{equation}
 \label{eqn:f_seq}
 (x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b)
 \end{equation}
+ However, since $y \setminus x = b\setminus a,$ it must be that $y_k \setminus x_k = y\setminus x$ as well. Therefore, the number of such sequences is equal to $k!,$ as was shown in the proof of Theorem ~\ref{explicit_gbn_lefchetz}.
+
+To complete the proof, we need to show that if $y \subset a$ then the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is $(2^k - 1)(k-1)!$. Equivalently, we need to show that the number of sequences as in \eqref{eqn:f_seq}
 is $(2^k - 1)(k-1)!.$
 
 For the moment, fix $j$ and consider the set of all sequences of the form in Equation ~\eqref{eqn:f_seq} such that $(a\setminus b) \cup y_{j-1} = y_j$ First, let us show the number of such with this $j$ fixed is $(k-1)!2^j.$ To do this, start by considering the number of sequence $y_0,\ldots, y_k$ such that $y=y_0 \lessdot_{B_n} y_1 \lessdot_{B_n} \cdots \lessdot_{B_n} y_k = b.$ Since we enforce $y_j = y_{j-1} \cup (a \setminus b),$ the number of such sequences is precisely the number of ways to order the elements $a \setminus y.$ Since $|y| - |a| = k-1,$ there are $(k-1)!$ such ways. Additionally, for $l <j$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l)$ or $x_{l+1} = x_l \cup (y_l \setminus x_l).$ 
 Either of these is possible at every step. Additionally, for $l \geq j,$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l).$ So for any fixed sequence of $y_k$ with so that $j$ is minimal with $(a\setminus b) \in y_j,$ 
-there are precisely $2^{j-1}$ possible sequences $x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$
-so that $(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$
+there are precisely $2^{j-1}$ possible sequences 
+$$x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$$
+so that 
+$$(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$$
 
-So, in total, there are $2^j(k-1)!$ sequences of the form in ~\eqref{eqn:f_seq} with $(a\setminus b) \cup y_{j-1} = y_j$. Now, there clearly must be some such $j,1 \leq j \leq k.$ Therefore, the coefficient we are looking for is $\sum_{j = 1}^k 2^{j-1}(k-1)! = (2^k - 1)(k-1)!,$ as claimed.
+So, in total, there are $2^j(k-1)!$ sequences of the form in ~\eqref{eqn:f_seq} with $(a\setminus b) \cup y_{j-1} = y_j$. Now, there clearly must be some such $j,1 \leq j \leq k.$ Therefore, the coefficient we are looking for is 
+$$\sum_{j = 1}^k 2^{j-1}(k-1)! = (2^k - 1)(k-1)!,$$
+as claimed.
 
 \end{proof}
 
@@ -2020,7 +2104,7 @@ Using ~\ref{t_equivalence}
 For $n >2,$ the matrix $M^{n-2i-1}$ is invertible.
 \end{thm}
 \begin{proof}
-We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Corollary ~\ref{cor:HBn_unitary_peck}. Using Theorem ~\ref{gbn_decomposition}, we know $\fbn^1(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
+We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\subset b,}\\{x \subset a,}\\{y\not\subset a}}}^{}(x, y)$ lie in the span of $v_{(a, b)}.$ It is always the case that $\beta \geq 1,i \geq 0.$ The only time in which $\beta = 1,i=0$ is when $n = 2.$ Therefore, $q_{a,b}$ are always defined for $n > 2.$ However, $q_{a,b}$ are exactly the rows of $L^{n-2i-1}$ as defined in Theorem \ref{explicit_gbn_lefchetz}. Using Corollary ~\ref{cor:HBn_unitary_peck}, we know $\mathcal H(B_n)$ is unitary Peck, and therefore the rows of $L^{n-2i-1}$ are independent. Therefore, the rows of $M^{n-2i-1}$ span an independent set in a vector space of the same dimension. So, the rows of $M^{n-2i-1}$ are independent. Hence, $M^{n-2i-1}$ is indeed an isomorphism, when $n > 2.$
 \end{proof}
 
 \begin{cor}
@@ -2035,6 +2119,49 @@ By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefsch
 \label{sec:additional_stuff}
 
 In this section, we include various remarks, as well as failed attempts, which don't particularly belong in other sections.
+
+
+%%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
+\ssec{A $q$-analog}
+\label{ssec:q_analog}
+
+In this subsection we consider a $q$-analog of the Boolean algebra and prove Lemma ~\ref{lem:cyclic_q_analog_ranks}, which is a $q$-analog to Lemma \ref{lem:q_counts}. This subsection is a start toward developing a q-analog of the unimodality of the necklace poset.
+
+Let $q$ be a prime and $B_n(q)$ be the poset of all $\BF_q$-subspaces of $V_n(q) := (\BF_q)^n$,  graded naturally by dimensions. 
+
+Let $C_n(q)$ be the multiplicative subgroup of the finite field $\BF_{q^n}$, so $C_n(q)$ acts $\BF_q$-linearly on $\BF_{q^n}$ by multiplication, which is isomorphic to $V_n(q)$ as an $\BF_q$ vector space. The action of $C_n(q)$ on $V_n(q)$ induces a group action on the poset $B_n(q)$. The poset $B_n(q)/C_n(q)$ is the $q$-analog of the necklace poset. 
+
+The following Lemma is a standard result. For a proof of the lemma, we refer the reader to, for example, \cite{enumerative_comb}.
+
+\begin{lem}
+\label{q:number_subspaces}
+The number $|B_n(q)_i|$, that is to say, the number of $i$ dimensional subspace in $V_n(q)$, is ${n \choose i}_q$
+\end{lem}
+
+\begin{note}
+Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = |T_i|.$
+\end{note}
+
+\begin{lem}
+\label{lem:q_stabilizer}
+For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
+\end{lem}
+\begin{proof}
+We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. 
+\end{proof}
+
+\begin{lem} 
+\label{lem:cyclic_q_analog_ranks}
+Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| = {n-1 \choose i}_q.$$
+\end{lem}
+
+\begin{proof}
+
+Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
+
+Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
+\end{proof}
+
 
 \ssec{Quotients by Automorphism Groups of Rooted Trees}
 
@@ -2217,7 +2344,7 @@ $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\cir
 However, if we did have 
 $$\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)
 \subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i),$$
-using the fact that $\mathcal E(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E(B_n/G)_i$ is symmetric, unimodal, and sperner.
+using the fact that $\mathcal E(U)_i,U_i,U_{i+1}$ are all injective, a fairly simple diagram chase would reveal $\mathcal E(U)_i^{G\times G}$ is injective. This, in turn, would imply $\mathcal E(B_n/G)_i$ is symmetric, unimodal, and Sperner.
 We have tried several variations on these exact maps, but were never quite able to obtain the desired $\ker \left(\pi^{G\times G}_{i+1}\circ p_{i+1}\right) \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i)\subset \ker \pi_{i+1} \cap \im((U\otimes U)\circ j_i\circ k^{G\times G}_i).$
 \end{rem}
 
@@ -2251,7 +2378,7 @@ Is $\mathcal E(B_n(q))$ unitary peck? What about $\mathcal E^{\vec r}(B_n(q))?$
 
 \sssec{A $q$-analog of Conjecture ~\ref{conj:F_of_BnG_Peck}}
 
-In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the followin question: 
+In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the following question: 
 
 \begin{question}
 For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
