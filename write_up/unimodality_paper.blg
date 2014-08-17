@@ -12,6 +12,7 @@ Too many commas in name 1 of "Katherine, Burggraf, Jes{\'u}s de Loera, Mohamed O
 while executing---line 1185 of file alpha.bst
 Too many commas in name 1 of "Katherine, Burggraf, Jes{\'u}s de Loera, Mohamed Omar" for entry permutation_polytopes
 while executing---line 1250 of file alpha.bst
+<<<<<<< HEAD
 You've used 7 entries,
             2543 wiz_defined-function locations,
             594 strings with 5109 characters,
@@ -53,4 +54,6 @@ warning$ -- 0
 while$ -- 18
 width$ -- 9
 write$ -- 91
+=======
+>>>>>>> f73ab5a5d412df1b58612b6f3c2004be33c23dd6
 (There were 4 error messages)
