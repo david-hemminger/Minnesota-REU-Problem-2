@@ -1591,6 +1591,10 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we shall prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
+\begin{rem}
+Since he action of $G$ on $[n]$ by rotation of the vertices of an $n$-gon can also be viewed as the action of $G$ on itself by left multiplication, by Proposition \ref{prop:regular_action_CCT}, we know this action of $G$ on $B_n$ is not CCT for $n > 2.$
+\end{rem}
+
 
 \begin{note} We fix an arbitrary $n$ to start with,  set $$Q(n) =  \mathcal E (B_n)/C_{n}, \quad P(n) =  \mathcal E(B_n/C_{n})$$ and let $$q (i, n) =|Q(n)_i|, \quad p (i, n) =|P(n)_i|. $$  When there is no ambiguity of which $n$ we are referring to, we denote $Q(n), P(n)$ respectively by $Q, P$, and write $q_i = q(i, n), p_i = p (i, n)$.
 \end{note}
@@ -1763,6 +1767,9 @@ We have already seen that the first part holds trivially. The proof of the secon
 Let $G$ be as in point 2 of Proposition \ref{prop:cover_transitive_building_blocks} We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E(B_n/G)$ is Peck.
 \end{rem}
 
+\begin{rem}
+It is easy to see that if $n \neq p,n \neq 2p, n >1$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ then $p_i<q_i$, and so the action is not CCT.
+\end{rem}
 
 \begin{lem}{\label{dihedral002}}
  We have an explicit formula for $q_i = |\big(\mathcal E (B_n)/D_{2n} \big)_i|$:
