@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  10 AUG 2014 22:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  17 AUG 2014 21:05
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/Presentation/Presentat
 ion.tex
@@ -738,9 +738,6 @@ Package: beamercolorthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 (C:\Users\zyao\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\themes\inner\be
 amerinnerthemedefault.sty
 Package: beamerinnerthemedefault 2012/05/01  (rcs-revision 67c48b3b652d)
-
-! I can't write on file `Presentation.pdf'.
-Please type another file name for output: Presentation1
 \beamer@dima=\dimen183
 \beamer@dimb=\dimen184
 )
@@ -997,7 +994,8 @@ Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
 amercolorthemeseahorse.sty
 Package: beamercolorthemeseahorse 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
-No file Presentation.aux.
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
 LaTeX Font Info:    ... okay on input line 120.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
@@ -1012,6 +1010,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
 LaTeX Font Info:    ... okay on input line 120.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
 LaTeX Font Info:    ... okay on input line 120.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1074,6 +1073,11 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 120.
 LaTeX Info: Redefining \pageref on input line 120.
 LaTeX Info: Redefining \nameref on input line 120.
+
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.out)
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.out)
 \@outlinefile=\write6
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 120.
@@ -1156,9 +1160,10 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 120.
 
-No file Presentation.nav.
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.nav)
 LaTeX Font Info:    Try loading font information for U+msa on input line 125.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 125.
@@ -1183,11 +1188,11 @@ thkerncmss.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 125.
 
-[1
+[1{C:/Users/zyao/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-{C:/Users/zyao/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-No file Presentation.toc.
-[2
+]
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [2
 
 ] [3
 
@@ -1198,8 +1203,8 @@ No file Presentation.toc.
 ] [6
 
 ]
-No file Presentation.toc.
-[7
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [7
 
 ]
 LaTeX Font Info:    Try loading font information for U+eus on input line 243.
@@ -1215,13 +1220,14 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
- [9
+
+[9
 
 ] [10
 
 ]
-No file Presentation.toc.
-[11
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [11
 
 ] [12
 
@@ -1245,8 +1251,8 @@ Overfull \hbox (3.35342pt too wide) in paragraph at lines 471--471
 ] [19
 
 ]
-No file Presentation.toc.
-[20
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [20
 
 ] [21
 
@@ -1272,13 +1278,14 @@ No file Presentation.toc.
 
 ] [32
 
-] [33
+]
+[33
 
 ] [34
 
 ]
-No file Presentation.toc.
-[35
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [35
 
 ] [36
 
@@ -1313,8 +1320,8 @@ n/10.95  \OT1/cmss/m/n/10.95 1)[] + 1] \OMS/cmsy/m/n/10.95  [][]
 [40
 
 ]
-No file Presentation.toc.
-[41
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.toc) [41
 
 ] [42
 
@@ -1327,19 +1334,11 @@ No file Presentation.toc.
 ] [46
 
 ]
+(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\Presentation\Presentati
+on.bbl) [47
 
-LaTeX Warning: Citation `quotients_stanley' undefined on input line 703.
-
-
-LaTeX Warning: Citation `algebraic_stanley' undefined on input line 703.
-
-
-LaTeX Warning: Citation `pak' undefined on input line 703.
-
-No file Presentation.bbl.
-[47
-
-] [48
+ <C:/Users/zyao/AppData/Roaming/MiKTeX/2.9/tex/latex/beamer/base/art/beamericon
+article.pdf>] [48
 
 ]
 \tf@nav=\write7
@@ -1352,35 +1351,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 746.
 on.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 746.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 746.
+Package rerunfilecheck Info: File `Presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 567416227C14B76E0E6252905A3E2146;299.
 
-
-Package rerunfilecheck Warning: File `Presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Presentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  567416227C14B76E0E6252905A3E2146;299.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 746.
  ) 
 Here is how much of TeX's memory you used:
- 21149 strings out of 493921
- 425077 string characters out of 3147285
- 543298 words of memory out of 3000000
- 23798 multiletter control sequences out of 15000+200000
+ 21373 strings out of 493921
+ 431122 string characters out of 3147285
+ 574917 words of memory out of 3000000
+ 23998 multiletter control sequences out of 15000+200000
  22349 words of font info for 88 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,16n,60p,490b,874s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,64p,490b,874s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
@@ -1397,9 +1384,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on Presentation1.pdf (48 pages, 466474 bytes).
+Output written on Presentation.pdf (48 pages, 814356 bytes).
 PDF statistics:
- 1354 PDF objects out of 1440 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3090 PDF objects out of 3580 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

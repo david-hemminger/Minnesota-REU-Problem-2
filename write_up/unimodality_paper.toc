@@ -21,7 +21,7 @@
 \contentsline {subsection}{\tocsubsection {}{6.3}{Further Identities for the Wreath Product}}{22}{subsection.6.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{6.3.1}{A Generating Function for $p_i(l,m,1)$}}{22}{thmt@dummyctr.dummy.109}
 \contentsline {subsubsection}{\tocsubsubsection {}{6.3.2}{Bounded Partition Sizes}}{23}{subsubsection.6.3.2}
-\contentsline {section}{\tocsection {}{7}{Unimodal Quotients}}{24}{section.7}
+\contentsline {section}{\tocsection {}{7}{Unimodal Quotients}}{25}{section.7}
 \contentsline {subsection}{\tocsubsection {}{7.1}{Groups of order $n.$}}{25}{subsection.7.1}
 \contentsline {subsection}{\tocsubsection {}{7.2}{Quotient by the Cyclic Group}}{26}{subsection.7.2}
 \contentsline {subsection}{\tocsubsection {}{7.3}{Quotient by the Dihedral Group}}{30}{subsection.7.3}
@@ -37,5 +37,5 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.2}{Unitary Peck Generalizations}}{41}{subsubsection.9.4.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{41}{subsubsection.9.4.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.4}{Additional CCT Actions}}{41}{subsubsection.9.4.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.6}
-\contentsline {section}{\tocsection {}{}{References}}{42}{section*.7}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.4}
+\contentsline {section}{\tocsection {}{}{References}}{42}{section*.5}
