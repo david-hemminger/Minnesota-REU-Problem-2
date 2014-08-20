@@ -1,0 +1,212 @@
+Hi all,
+
+  Thanks for sending it along.  Let me first address your list of questions, and then below that I'll add further comments.
+
+Best,
+Vic
+---------------
+Your questions:
+
+1) In figure 2, the label P for the first poset is slightly lower than the E(P) for the second poset.  Do you know how to move the poset labeled P up, while keeping E(P) at the same height? (there's a similar problem in Figure 4, but with four posets).
+
+V:  I don't know how to fix that, but I also wouldn't worry about it-- it is barely noticeable.
+
+good
+
+2) If you look at pages 6 - 8 of the paper, especially the last page regarding the self duality section and part about group actions, we're beginning to find some uses for applying the functor to morphisms, and we're tip-toeing around functoriality of E. All three of us are now agreed that if we were just writing this for ourselves, we would want to call it a functor. Do you think this merits calling it a functor, or is it still too objectionable?
+
+V:  If you guys all agree now, then it's not too objectionable, and I don't think it will really seriously annoy anyone.  So go for it!
+
+todo David
+
+3)  Is it ok to say that the hyperoctahedral group is the group of symmetries of the n-octahedron, and that it is isomorphic to S_2 \wr S_n without any references or proofs?
+
+V:  Yes, these facts are all well-known.  Once you point out that the vertices of the n-octahedron are the vectors +/-e_i, and that you can identify them with the squares in an n-by-2 rectangle, then that pretty much gives the whole idea of the proof(s) anyway.
+
+good
+
+4) Should we cite the fact that any abelian group of order n acting on [n] must act by left multiplication?
+
+V:  I don't even see where this arose in the paper-- where are you referring to? Is it somewhere in Section 7.1? 
+Actually, I'm a little confused anyway about what you just asserted, and also some of the assertions in Section 7.1, starting around Lemma 7.1.
+
+For example, on page 25, why does it say "The most important example of such an action is the left-multiplication action" when _every_ transitive action of a finite group G on a set X of size |X|=|G| must be isomorphic to the left-translation action of G on itself?  
+
+Who is x in Lemma 7.1?
+
+Lemma 7.1 doesn't need Burnside-- it is just obvious  from the "orbit-stabilizer theorem", i.e. the size of a G-orbit times the size of the stabilizer for any element in that orbit gives you |G|.  In fact, it probably makes sense to remind the reader where orbit-stabilizer comes from:  when G acts transitively on a set X, then this action is isomorphic to the left-translation action of G on the coset G/H, where H is the stabilizer of any particular choice of some x in X (and it doesn't matter which x you choose, since all their stabilizers are conjugate within G, so they give isomorphic coset actions).  So |X|=|G|/|H|.
+
+Lemma 7.4 has weirdly phrased hypotheses.  Make clear what the assumptions are on the group G acting on the set X at the beginning, and then define H={h in G: h(x) = x for all x in X}, that is, H is the kernel of the G-action.  
+
+Why does Lemma 7.5 have no proof?  What were you deducing it from?
+
+I think this subsection should be cleaned up a bit generally, as it is not making clear which hypotheses apply where.  Probably best to just repeatthe  hypotheses in each result, like "Let G be a finite group with n elements acting by left-translation on itself", as this clarifies the whole issue, and it doesn't take long to say.
+
+Aaron, go through and fix this.
+
+Vic, whether we had to cite 7.5 was the question, sorry for the confusing. Based on your response, it seems like we should. Unfortunately, I could only find a post on stack exchange citing this. Is this ok?
+
+5) Should we cite the fact that if an irreducible polynomial divides q^i-q, then its degree divides i?
+
+V:  You probably mean if the irreducible polynomial f(x) over F_q divides x^{q^i}-x, not what you wrote. I would probably just quickly remind the reader why it's true:  such a polynomial f(x) is the minimal polynomial for some element a of F_{q^i}, and hence F(a) is a subfield of F_{q^i}, so of the form F_{q^d} with d dividing i, but then d is the degree of f(x).
+  Another (nearly equivalent) way to phrase the proof of Lemma 9.3 goes like this.  If V is a k-dimensional F_q-subspace of F_{q^n} which is stabilized by an element a in F_{q^n}^x, then V is actually an F(a)-subspace.  Hence if d is the unique positive integer for which F(a) = F_{q^d}, then d divides k (because d is the dimension of F(a) over F_q while k is the dimension of V over F_q).  But then in the setting of Lemma 9.3, one has d dividing both i and i+1, so d=1, i.e. the element a actually lies in F_q.
+  
+Zijian, can you edit this?.
+
+6) Should we cite the fact that all actions on B_n are induced by an action on [n]?
+
+V:  Again, I would just quickly explain it.  For example. one could point out that more generally, in any lattice L which is atomic (meaning that there is a bottom element 0 in L and every element x in L is the join of the atoms below it, where an atom is an element covering 0), any poset automorphism f permutes the atoms, but then the rest of f is determined by its action on the atoms.
+
+good
+
+7) Should we cite the fact that B_n has a symmetric chain decomposition?
+
+V:  Yes, this is probably worth citing, and I think there are a lot of sources for it-- one good one is
+
+Greene, Curtis; Kleitman, Daniel J.
+Proof techniques in the theory of finite sets. Studies in combinatorics, pp. 22–79,
+MAA Stud. Math., 17, Math. Assoc. America, Washington, D.C., 1978.  
+
+David/Zijian, I put something temporary in the bibliography, but I don't really understand how to cite it. I think it's a book, but I'm not really sure.
+
+------------------------
+Further comments
+-----------------------
+(1) Why is the abbreviation for Pak-Panova [IP] and not [PP]?
+
+Similarly the abbreviation for Kozlov-Babson should be [BK], and you should put their names in alphabetical order (unless they put them out of order on their own paper, which they didn't in this case).  
+
+Similarly [Kat11] should be something like [BLO], with the three authors' initials of their last names in order, and the reference itself should list their names in order (and fix the weird comma problems).
+
+David, can you fix these bibtex things?
+
+-----
+(2) In Section 2, is the definition of graded poset really the one you want?  For example, it allows the poset a<b<c, a<d to be considered graded, and even a graded poset of rank 2 by your definition.  Is that OK with you?
+
+Maybe you should use a stricter definition of graded poset, like every maximal chain is of the same length
+(and call that length n if it is graded of rank n)?
+
+Vic, I suppose we might be able to use a stricter definition of graded poset, but I don't understand the reason for doing this, since everything we have shown holds in greater generality for graded posets as we have defined them in the paper. What is the reason for restricting the category of graded posets to the smaller full subcategory as you are suggesting?
+
+-----
+(3) If you introduced the dual poset a little earlier, I think you could some of Section 3 more elegant.  
+
+For example, doesn't the endofunctor P -> P^{op} commute with P -> E(P),  which really says something stronger than Prop 3.10 ?  
+
+Also, in the proof of Lemma 3.7, once you have shown (1)<=>(3), then you can say the equivalence (2)<=>(3) follows via duality, since condition (3) is invariant under P -> P^{op}.
+
+Aaron, come back to editing these sections, Vic makes a good point.
+
+----
+(4) The conclusion of Cor 3.13 probably wants to say "rank-symmetric" not "symmetric".
+
+good
+----
+(5) I still don't like the lack of clarity in the hypotheses of Lemma 3.14.  I'd prefer the more explicit phrasing "If f: P ->Q is a morphism of graded posets and a bijection (but not necessarily ....)"
+
+good
+----
+(6) Thm 3.15 should use "CCT" not "cover transitively".  
+There are also some other places I noticed in the paper where it still says "cover transitive" and it really means "common cover transitive" (e.g. Remark 4.1), so I would search for more of these.
+
+good
+----
+(7) Why are there superscript 1's on the H's in the caption of Figure 4?
+
+Vic, these were residual from our old notation. I have removed them.
+----
+(8) I don't like the way the proof of Prop 3.23 just dives right into the middle of it.  When you are claiming two objects A,B are isomorphic, and you even have a simple explicit isomorphism f:A --> B in mind, then it is best to start by saying exactly what that putative isomorphism f is, and even better, have a displayed equations with an aligned diagram that shows A --> B and underneath the map a |--> f(a) .  
+ 
+In this particular case, I would start by saying that you are going to label the n disjoint copies of B_{n-1} labelled B_{n-1}^{(i)} for i=1,2,...,n, so that you could say that the target of your isomorphism is
+
+B_{n-1}^{(1)} \sqplus B_{n-1}^{(2)} \sqplus \cdots \sqplus B_{n-1}^{(n)}
+
+Then your putative isomorphism is going send the element (x,y) in E(B_n) having y = x union {i} to the element labelled x within B^{(i)}_{n-1}.  Then show it is a poset isomorphism.
+
+David, can you edit this?
+
+-----
+(9) In the first few lines of Section 4, the recalled definition of CCT has a typo that states the definition incorrectly (it says x is covered by y).
+
+good
+-----
+(10) Before restating Prop 1.7 in Section 4, you should explain why starting from a G-action on P one obtains a well-defined K-action on P/H, using the normality of H. 
+In other words, given k in K, and Hx in P/H, who exactly is k(Hx), and why is it well-defined, independent of the choice of representative x for Hx (making it explicit how one is using the normality of H).
+
+David, can you include this?
+-----
+(11) In Lemma 4.7, shouldn't you assume P is a _graded_ poset?
+
+good
+-----
+(12) Props 4.19 and 420 should not have all the definitions inside the statement of the proposition.  Move the definition of the action on the vertices to before the proposition in each case.  
+
+Also, the parenthetical inside the proof of Prop 4.20 about the terminology "B_n" should probably be a footnote instead-- it is too distracting.
+
+good
+
+-----
+(13) Shouldn't Section 4.2.2. end with some brief remark about when automorphism groups other regular polytopes give CCT actions on their vertices?  
+
+E.g. you know it fails already for D_{2n} when n isn't 2p or 4p because you say so in Remark 7.23 
+(which really should have more of a proof, by the way).  
+
+I think you should add such a remark.  Also, you should say something about Question 9.12 here, and mention that you also haven't checked CCT-ness for the remaining 5 exceptional regular polytopes 
+(the dodecahedron, icosahedron in R^3; the 24-cell, the 120-cell, and the 600-cell in R^4).  
+Actually, you could probably check the case of the dodecahedron by computer, since it only has 12 vertices.
+
+Zijian/Aaron, can you repsond to these comments
+
+Vic, I believe 12 is far too big for the current program I have written to handle. I don't think the computer can even handle 11.
+-----
+(14) Section 4.2.3 feels a bit repetitive.  What about just making the whole subsection a single result that has two parts and makes clear the whole point:
+
+PROPOSITION:
+
+(i) For G an elementary abelian 2-group, that is, G \cong (Z/2Z)^k, every G-action is CCT. 
+
+(ii) For every finite group G which is _not_ an elementary abelian 2-group, there exists at least one G-action which _not_ CCT, namely the left-regular action of G on itself.
+
+Aaron, edit this.
+----
+(15) In Section 5, page 16, "It shall" doesn't sound right.  I think "shall" is generally used only in the first person (and to me, it even sounds mildly pretentious when Americans use it at all!  For Brits, I guess I think it's OK.)
+
+Vic, ok, we removed the words "shall" throughout the paper.
+----
+(16) I think it is worth mentioning way back in the Intro that the r=1 case of Theorem 5.4 by Pak and Panova was one of your original motivations for this whole work.
+
+David, include this in the intro?
+----
+(17) I don't understand the point of the "trek" in Section 5.1 for r=1. 
+
+You already showed in Corollary 4.17 that the automorphism group G of a rooted tree has a CCT action on the vertices of a tree, and you've shown in Prop 4.15 that when the tree has two levels, that G is the wreath product S_m \wreath S_l.  It is well-known (see e.g. Stanley's papers that B_{ml}/G is the poset of Ferrers diagrams in a rectangle when G = S_m \wreath S_l, so there is nothing more to say for r=1.
+
+If the point of the trek is so that you can say something about higher r, then you should probably say so early on.  In particular, I would _not_ come back and state and prove Corollary 5.21, since it already follows from the above discussion, with no treks needed.
+
+Aaron, edit this.
+----
+(18)  Remark 7.7. 
+"Since he action ..." --> "Since the action ..."
+
+good 
+----
+(19) Proof of Lemma 7.13
+"Hence di fference of ..."--> "Hence the di fference of ..."
+
+good
+----
+(20)  Section 9.2 could refer to the Figure 5, which draws the relevant tree.  Also, was it supposed to be referring somewhere to Figure 7?
+
+Vic, yes there was, this is fixed.
+----
+(21)  Wasn't Section 9 going to also record your example that shows the action of G=S_n embedded into S_{(n choose 2)} by permuting the edges of a complete graph is not CCT?
+
+Zijian, can you add this?
+----
+(22) In Question 9.13, why is there a dual space (F_q^n)^* inside the parenthesis, as opposed to just F_q^n itself?  Also, shouldn't the action of PGL_n(F_q) be on B_n(q), not on B_{q^n-1}, else it is not well-defined?
+By the way, I suspect that Question 9.13 is probably resolvable with further thought or experimentation, and if I had to bet, I would bet that they are all _not_ CCT.
+
+Vic, I agree there are some problems with this question. The ^* was meant to denote the multiplicative subgroup (i.e. all elements other than 0). The reason I'm excluding 0 is that all automorphisms preserve 0. I agree it should abe an action on B_n(q). I would also guess that the answer is no. Do you think it would be reasonable to remove this question?
+
+
+--------------------------------------------

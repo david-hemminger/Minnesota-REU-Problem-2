@@ -157,6 +157,8 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \listoftodos
 \newpage
 
+\todo{David, switch back to functor of edges}
+
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
@@ -405,7 +407,7 @@ In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ 
 First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Finally, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets.
 
 \begin{note*}
-When the poset $P$ is clear, we shall simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and shall use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
+When the poset $P$ is clear, we will simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and will use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
 \end{note*}
 
 \begin{lem}\label{lem:f_partial_order}
@@ -510,9 +512,9 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \end{enumerate}
 \end{lem}
 \begin{proof}
-First, we shall show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
-
-Next, we shall show $(2) \iff (3)$. It is quite analogous to the proof of $(1) \iff (3)$, but we shall include the argument for completeness. 
+First, we show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
+\todo{Aaron/David, rewrite to use $P^{op}$}
+Next, we show $(2) \iff (3)$. It is quite analogous to the proof of $(1) \iff (3)$, but we include the argument for completeness. 
 First, $q$ is a bijection if and only if there do not exist distinct orbits $G(x, y) \neq G(x', y')$ with $x' \in Gx,y'\in Gy.$ Fix $(x, y),(x', y') \in \mathcal E(P)$ such that $x' \in Gx,y'\in Gy$. Choose $g \in G$ with $gx' = x.$ Then, $(x', g\cdot y) \in G(x', y').$ Since $g y' \in Gy,$ and $q$ is a bijection, the statement $(x' , g\cdot y) \in G(x', y')$ is equivalent to $G(x', y') = G(x, y).$ This, in turn is equivalent to the existence of $g' \in G$ with $g'x = x,g'y = gy'.$ So, $g' \in Stab(x),g'y = (gy'),$ which is what was claimed in property $(2)$.
 
 %Next, we check $(3) \iff (4)$by Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since an injective map is a bijection if and only if it is a surjection, it follows that $(3) \iff (4).$
@@ -589,13 +591,13 @@ Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(
 \label{rem:induced_action_bn}
 Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an induced action $\phi: G \times B_n \rightarrow B_n$ defined by
 $$\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$$
-It is well known and easy to see that in fact any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ Whenever an action $\psi$ of $G$ on $[n]$ is given, we shall refer to the action $\phi$ defined above as the induced action on $B_n.$
+It is easy to see that any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ That all actions on $B_n$ are induced by actions on $[n]$ follows from the more general fact that whenever $L$ is an atomic lattice, (meaning there exists a minimum element of $L$ and any element of $L$ can be expressed as a join of atoms,) then any poset automorphism $f:L \rightarrow L$ restricts to an automorphism of the atoms of $L$, and $f$ is uniquely determined by this restriction to atoms. In the case of $B_n,$ the atoms are precisely the singletons, and hence can be identified with $[n]$.  Whenever an action $\psi$ of $G$ on $[n]$ is given, we refer to the action $\phi$ defined above as the induced action on $B_n.$
 \end{rem}
 
 
 
 \begin{cor}
-For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self-dual. In particular, they are both symmetric. 
+For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self-dual. In particular, they are both rank-symmetric. 
 \end{cor}
 \begin{proof}
 By Remark \ref{rem:induced_action_bn}, any action of $\phi$ of $G$ on $B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any group action $G,$ the poset $B_n/G$ is self-dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation} it follows $\mathcal E(B_n/G)$ is self-dual, and in particular $\mathcal E(B_n)$ is self-dual.
@@ -613,7 +615,7 @@ In this section we prove Theorem \ref{thm:cover_transitive_implies_Peck}, which 
 The proof is largely motivated by the following Lemma.
 
 \begin{lem}\label{lem:bijection_peck_implication}
-If $f:P\rightarrow Q$ is a bijection (but not necessarily an isomorphism) and $P$ is Peck then $Q$ is Peck.
+Let $P,Q$ two graded posets with a morphism $f:P\rightarrow Q$ that is a bijection (but not necessarily an isomorphism). If $P$ is Peck, then $Q$ is Peck.
 \end{lem}
 \begin{proof}
 Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism.  Since $f$ is a poset morphism, it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon Q_i\rightarrow Q_{n-i}$ is an isomorphism since $U^{n-2i}\colon P_i\rightarrow P_{n-i}$ is an isomorphism and $f$ is a bijection.
@@ -624,7 +626,7 @@ Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising oper
 By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_unitary_peck_posets}.  In fact, this approach generalizes to an arbitrary poset $P$.
 
 \begin{thm}
-If $G$ acts cover transitively on $P$ and $\mathcal E(P)$ is unitary Peck, then $\mathcal E(P/G)$ is Peck.
+If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\mathcal E(P/G)$ is Peck.
 \end{thm}
 \begin{proof}
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{prop:surjection_between_F_quotients}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
@@ -744,12 +746,12 @@ While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ 
   \node (d) at (315:1.414cm) {$2$};
   \draw (a) -- (d) ;
   \draw (c) -- (b);
-  \node (e) at (270:3cm) {$\mathcal{H}^1(P)$};
+  \node (e) at (270:3cm) {$\mathcal{H}(P)$};
 \end{tikzpicture} \quad
 \begin{tikzpicture}[scale=.7]
   \node (b) at (90:1cm) {$2$};
   \node (a) at (270:1cm) {$1$};
-  \node (e) at (270:3cm) {$\mathcal{H}^1(Q)$};
+  \node (e) at (270:3cm) {$\mathcal{H}(Q)$};
 \end{tikzpicture}
 \end{center}
 \caption{}
@@ -823,7 +825,7 @@ $\mathcal{E}(B_n)$ has a symmetric chain decomposition (SCD).
 \end{cor}
 
 \begin{proof}
-$\mathcal{H}(B_n)$ has an SCD by Proposition ~\ref{prop:computing_HBn} and the fact that $B_{n-1}$ has an SCD.  By Lemma ~\ref{lem:bijection_h_f} there is a bijective morphism $f\colon\mathcal{H}(B_n)\rightarrow\mathcal{E}(B_n)$, and since a bijective morphism takes an SCD to an SCD it follows that $\mathcal{E}(B_n)$ has an SCD.
+$\mathcal{H}(B_n)$ has an SCD by Proposition ~\ref{prop:computing_HBn} and the fact that $B_{n-1}$ has an SCD, as shown in \cite{greene}.  By Lemma ~\ref{lem:bijection_h_f} there is a bijective morphism $f\colon\mathcal{H}(B_n)\rightarrow\mathcal{E}(B_n)$, and since a bijective morphism takes an SCD to an SCD it follows that $\mathcal{E}(B_n)$ has an SCD.
 \end{proof}
 
 
@@ -842,8 +844,8 @@ By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}(B_n)/G$ is Peck for an
 
 \subsection{A Generalization of $\mathcal H,\mathcal E$}\label{ssec:E_generalization}
 
-Although for the most part, we shall investigate \linebreak
-$\mathcal E(P/G),\mathcal E(P)/G,$ there is a natural generalization of $\mathcal E,\mathcal H,$ to what we shall call $\mathcal E^{\vec r},\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal E.$
+Although for the most part, we investigate \linebreak
+$\mathcal E(P/G),\mathcal E(P)/G,$ there is a natural generalization of $\mathcal E,\mathcal H,$ to what we call $\mathcal E^{\vec r},\mathcal H^{\vec r},$ where $\vec r = r_1,r_2,\ldots, r_k$ is an integer valued sequence. The results holding for these generalizations are analogous to those developed above. The purpose of developing these generalizations notion will be to give a more general application to Polya theory than could be given with $\mathcal E.$
 
 \begin{defn}
 Let $\vec r = r_1,\ldots,r_k.$ For a graded poset $P,$ define the graded poset $\mathcal H^{r_1,\ldots, r_k}(P),$ also notated $\mathcal H^{\vec r}(P),$ whose elements are formal symbols $(x_1, x_2, \cdots, x_{k+1})$ such that $rk(x_i)+r_i = rk(x_{i+1}),$ for all $i \in [k].$ Say 
@@ -893,10 +895,10 @@ Once again, the proof of the above three statements is analogous to those of ~\r
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
-In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot y,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y$.  We show that the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which shall be proven in subsection \ref{ssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot z,y\lessdot z,x \in Gy$ then there exists $g \in Stab(z)$ with $gx = y$.  We show that the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which will be proven in subsection \ref{ssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
 
 \begin{rem}
-Before continuing with the description of cover transitive, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ common cover transitive agrees with our definition of common cover transitive. Furthermore, it is also simple to see that an action is $\vec r$ common cover transitive if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ common cover transitive.
+Before continuing with the description of CCT actions, it is worth noting that the notion of cover transitivity generalizes to $\mathcal E$ and even $\mathcal E^{\vec r}.$ Letting $\vec r = r_1,\ldots, r_k,$ one would call a group action $\phi:G\times P \rightarrow P,$ {\it $\vec r$ common cover transitive (CCT)} if for any chains $(x_0,\ldots, x_k),(y_0,\ldots, y_k),$ such that there exists $g_i \in G$ with $x_i = g_i y_i,$ for all $i,0\leq i \leq k,$ then there exists a single $g \in G$ with $x_i = g y_i.$ It is trivial to see that $1$ CCT agrees with our definition of CCT. Furthermore, it is also simple to see that an action is $\vec r$ CCT if and only if the natural surjection $q:\mathcal E^{\vec r}(P)/G \rightarrow \mathcal E^{\vec r}(P/G)$ is a bijection. Additionally, very many of the properties developed in this section will also hold for this generalized notion of $\vec r$ CCT.
 \end{rem}
 
 \begin{eg}
@@ -906,7 +908,7 @@ Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B
 
 \ssec{Preservation Under Semidirect Products}
 \label{ssec:semidirect_product_preservation}
-Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We shall use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
+Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
 
 \semidirect*
 
@@ -956,7 +958,7 @@ Heuristically, one may think of the above action as obtained by first having $G$
 
 \begin{lem}
 \label{lem:symmetric_group_product_action}
-For $P$ a poset, the action 
+For $P$ a graded poset, the action 
 $$\phi:S_l \times P^l \rightarrow P^l,\sigma \cdot(x_1,\ldots, x_l) = (x_{\sigma(1)},\ldots, x_{\sigma(l)})$$
 is CCT.
 \end{lem}
@@ -973,9 +975,9 @@ Note that the wreath product $G \wr S_l$ can be viewed as a semidirect product $
 \end{proof}
 %Explicitly, this action is $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l).$ 
 
-\ssec{Examples of Cover Transitive Actions}\label{ssec:CCT_examples}
+\ssec{Examples of CCT Actions}\label{ssec:CCT_examples}
 
-In this subsection, we describe several classes of cover transitive actions. First, we show that the automorphism group of any rooted tree is cover transitive. Second, we show linear automorphisms of simplices and octahedra are cover transitive. Third, we show that the left multiplication action is cover transitive if and only if the group is $\BZ_2^k,$ and that any action of $\BZ_2^k$ on $[n]$ induces a cover transitive action on $B_n.$
+In this subsection, we describe several classes of CCT actions. First, we show that the automorphism group of any rooted tree is CCT. Second, we show linear automorphisms of simplices and octahedra are CCT. Third, we show that the left multiplication action is CCT if and only if the group is $\BZ_2^k,$ and that any action of $\BZ_2^k$ on $[n]$ induces a CCT action on $B_n.$
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
@@ -988,7 +990,6 @@ A graded poset $P$ is a {\it rooted tree} if there is a unique element $x \in P$
 \begin{eg}
 In Figure \ref{fig:tree1} and Figure \ref{fig:tree2}, we give two examples of rooted trees.
 \end{eg}
-
 \begin{figure}[h!]
 \begin{tikzpicture}[scale=.7]
   \node (0) at (-4,0) {$0$};
@@ -1117,28 +1118,32 @@ By Proposition ~\ref{prop:wreath_preservation}, wreath products with symmetric g
 \sssec{Automorphisms of Polytopes}
 \label{sssec:polytopes}
 
-As another class of CCT actions, we describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism groups of simplices and octahedra are common cover transitive.
-Later in Proposition ~\ref{prop:cover_transitive_building_blocks}, we shall also see that the action of the dihedral group on a regular $n$-gon is cover transitive for $n = p,2p$.  Since the dihedral group contains all linear automorphisms of the regular $n$-gon, this action gives another example of the linear automorphism group of a polytope being CCT.
+As another class of CCT actions, we describe several linear automorphism groups of polytopes whose actions are CCT. In particular, we prove that the linear automorphism groups of simplices and octahedra are CCT.
+Later in Proposition ~\ref{prop:cover_transitive_building_blocks}, we will also see that the action of the dihedral group on a regular $n$-gon is CCT for $n = p,2p$.  Since the dihedral group contains all linear automorphisms of the regular $n$-gon, this action gives another example of the linear automorphism group of a polytope being CCT.
 
 \begin{defn}
 Let $M$ be a polytope, with a particular embedding in $\BR^n.$ The {\it group of linear automorphisms of M} is the subgroup of $GL_n$ whose elements are $\{g \in GL_n:g \cdot M = M\}.$
 \end{defn}
 
+First, we look at linear automorphisms of simplices. Let $G$ be the group linear automorphisms of the $(n-1)$-simplex, whose vertices lie at the standard basis vectors in $\BR^n.$ The action of $G$ on the $(n-1)$-simplex induces an action on $[n],$ given by identifying $[n]$ with the $n$ vertices of the $(n-1)$-simplex. Hence, it induces an action on $B_n.$
+
 \begin{prop}
-Let $G$ be the group linear automorphisms of the $(n-1)$-simplex, whose vertices lie at the standard basis vectors in $\BR^n.$ The action of $G$ on the $(n-1)$-simplex induces an action on $[n],$ given by identifying $[n]$ with the $n$ vertices of the $(n-1)$-simplex. Hence, it induces an action on $B_n.$ This induced action on $B_n$ is CCT.
+The action of the group of linear automorphisms on the $n-1$-simplex on $B_n$ defined above is CCT.
 \end{prop}
 \begin{proof}
 The group of linear automorphisms in this case induces the usual action of $S_n$ on $B_n,$ because any permutation matrix defines a linear map on $\BR^n.$ However, we know the action of $S_n$ on $B_n$ is CCT from Example ~\ref{eg:trivial_edgequot}
 \end{proof}
 
+Next, we look at linear automorphisms of octahedrons. Let $G$ be the group of linear automorphisms of the n-octahedron, embedded inside $\BR^n,$ whose vertices are located at $\pm e_i,$ where $e_1,\ldots e_n$ are the standard basis vectors of $\BR^n.$ Then, the action of $G$ on the octahedron induces an action of $G$ on the $2n$ vertices of the octahedron, and hence on $B_{2n}.$
+
 \begin{prop}
-Let $G$ be the group of linear automorphisms of the n-octahedron, embedded inside $\BR^n,$ whose vertices are located at $\pm e_i,$ where $e_1,\ldots e_n$ are the standard basis vectors of $\BR^n.$ Then, the action of $G$ on the octahedron induces an action of $G$ on the $2n$ vertices of the octahedron, and hence on $B_{2n}.$ This induced action on $B_{2n}$ is common cover transitive. 
+The induced action of the group of linear automorphisms of the $n$ octahedron on $B_{2n}$ is CCT.
 \end{prop}
 \begin{proof}
-It is simple to see that the group of linear automorphisms of the n-octahedron with vertices at $\pm e_i,$ where $e_1,\ldots e_n$ is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k.$ (The hyperoctahedral group is commonly notated $B_n,$ since it is the type $B$ Coexeter group, but we do not use this here to avoid confusing with the boolean algebra.) It is well know that they hyperoctahedral group can be written as $S_2 \wr S_n.$ Then, by Proposition ~\ref{prop:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
+It is simple to see that the group of linear automorphisms of the n-octahedron with vertices at $\pm e_i,$ where $e_1,\ldots e_n$ is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k.$ \footnote{The hyperoctahedral group is commonly notated $B_n,$ since it is the type $B$ Coexeter group, but we do not use this here to avoid confusing with the boolean algebra.} It is well know that they hyperoctahedral group can be written as $S_2 \wr S_n.$ Then, by Proposition ~\ref{prop:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
 \end{proof}
 
-\sssec{Cover Transitive Actions of $\BZ_2^k$}
+\sssec{CCT Actions of $\BZ_2^k$}
 
 In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defines an action on $B_n$ which is CCT. In particular, this implies that the left multiplication action of $\BBZ_2^k$ is CCT. However, it turns out that this is the only class of groups for which the left multiplication action is CCT.
 
@@ -1165,7 +1170,7 @@ Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for som
 
 \begin{prop}
 \label{prop:regular_action_CCT}
-Let $G$ be a finite group, acting on itself by left multiplication, $\psi:G\times G \rightarrow G,(g,h)\mapsto g\cdot h$, with $|G| = n.$ By identifying $G \cong [n]$ as sets, $\psi$ this induces an action $\phi:G\times B_n \rightarrow B_n.$ Then, $\phi$ is cover transitive if and only if $G \cong \BBZ_2^k$ for some $k.$
+Let $G$ be a finite group, acting on itself by left multiplication, $\psi:G\times G \rightarrow G,(g,h)\mapsto g\cdot h$, with $|G| = n.$ By identifying $G \cong [n]$ as sets, $\psi$ this induces an action $\phi:G\times B_n \rightarrow B_n.$ Then, $\phi$ is CCT if and only if $G \cong \BBZ_2^k$ for some $k.$
 \end{prop}
 \begin{proof}
 
@@ -1175,7 +1180,7 @@ By Lemma ~\ref{lem:order_2_CCT}, any embedding of $\BBZ_2^k \rightarrow S_n$ def
 
 Next, we prove the converse. First, let us show $G \cong \BBZ_2^k \iff \forall g \in G,g^2 = e.$ The forward implication is obvious. To see the converse, first note that if $\forall g \in G, g^2 = e,$ then $G$ is abelian because $aba^{-1}b^{-1} = abab = (ab)^2 = e.$ Then, $G$ is an abelian group, all of whose elements have order two, the structure theorem of finite abelian groups tells us $G \cong \BBZ_2^k.$
 
-So, Suppose $G \not \cong \BBZ_2^k.$ Then, there exists $g \in G,g^2 \neq e.$ Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}.$ So, to show the induced action $\phi: G \times B_n \rightarrow B_n$ is not cover transitive, it suffices to show there is no $h \in G,h \in Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}.$  If $h \in Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g.$ In both cases, it is simple to see that $g^2 = e.$ Therefore, there does not exist such an $h$ and left multiplication is not CCT.
+So, Suppose $G \not \cong \BBZ_2^k.$ Then, there exists $g \in G,g^2 \neq e.$ Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}.$ So, to show the induced action $\phi: G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G,h \in Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}.$  If $h \in Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g.$ In both cases, it is simple to see that $g^2 = e.$ Therefore, there does not exist such an $h$ and left multiplication is not CCT.
 \end{proof}
 
 \begin{rem}
@@ -1200,10 +1205,9 @@ First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2
 %%%%%%%%%%%%%%%%% Wreath Product  S_m with S_l %%%%%%%%%%%%%%%%%%
 \section{Wreath Product of two Symmetric Groups}\label{sec:wreath_product}
 
-In this section,we prove a result similar to that of \cite[Theorem 1.1]{pak}. We shall construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. It shall give an alternate proof of Theorem 1.1 in the case that $r = 1.$
+In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. We construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. This construction gives an alternate proof of Theorem 1.1 in the case that $r = 1.$
 
 \begin{note}
-We shall now show 
 For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l.$ Let $S_m$ act on $B_m$ by the permutation representation, and then let $G$ act on $B_{m}^l\cong B_{m \cdot l}$ by the action defined in Notation ~\ref{note:wreath_action}.
 \end{note}
 
@@ -1228,10 +1232,10 @@ The sequence $p_r(l,m,r), p_{r+1}(l,m,r),\ldots, p_{l\cdot m}(l,m,r)$ is unimoda
 \end{thm}
 
 \ssec{The Poset $\mathcal E^r(B_n)/G$}
-Now that we have managed to state Pak and Panova's Theorem, we will begin the trek toward showing how the $p_1(l,m,1)$ are actually ranks of $\mathcal E(B_n/G).$ The first step is to describe the Peck poset $\mathcal E(B_n)/G.$ In particular, we shall obtain an explicit formula for the sizes of its ranks in Theorem ~\ref{thm:quotiented_edge_wreath}. To do this, we will first describe representatives for the vertices of $B_n/G$ and then analogous representatives for vertices of $\mathcal E(B_n)/G.$
+Now that we have managed to state Pak and Panova's Theorem, we will begin the trek toward showing how the $p_1(l,m,1)$ are actually ranks of $\mathcal E(B_n/G).$ The first step is to describe the Peck poset $\mathcal E(B_n)/G.$ In particular, we obtain an explicit formula for the sizes of its ranks in Theorem ~\ref{thm:quotiented_edge_wreath}. To do this, we will first describe representatives for the vertices of $B_n/G$ and then analogous representatives for vertices of $\mathcal E(B_n)/G.$
 
 \begin{defn}
-For $x \subset [l \cdot m]$ we shall say $x$ is {\it left justified} if whenever $a \in x,$ such that $a \neq 1 \pmod l,$ then $a -1 \in x.$ In other words, when we pick out the boxes of the $l\times m$ rectangle which lie in $x$ the resulting diagram is left justified.
+For $x \subset [l \cdot m]$ we say $x$ is {\it left justified} if whenever $a \in x,$ such that $a \neq 1 \pmod l,$ then $a -1 \in x.$ In other words, when we pick out the boxes of the $l\times m$ rectangle which lie in $x$ the resulting diagram is left justified.
 \end{defn}
 
 \begin{defn}
@@ -1262,7 +1266,7 @@ Uniqueness is clear, because for any $g \in G,$ by Claim ~\ref{lem:comp_invarian
 For $x \in B_n$ denote by $\overline{x}$ the unique element in $Gx$ such that $\overline{x}$ is a Young Diagram.
 \end{note}1
 
-Now that representatives for each $G$ orbit in $B_n$ have been described, we shall move on to describing representatives for each $G$ orbit in $\mathcal E(B_n).$
+Now that representatives for each $G$ orbit in $B_n$ have been described, we move on to describing representatives for each $G$ orbit in $\mathcal E(B_n).$
 
 \begin{note}
 For $\lambda = (\lambda_1,\ldots, \lambda_k)$ a partition, introduce the alternate notation $\lambda = a_1^{b_1} \cdots a_s^{b_s}$ if the first $b_1$ parts of $\lambda$ are equal to $a_1,$ the next $b_2$ parts of $\lambda$ are equal to $b_2$, and in general, for $1 \leq h\leq b_j$, the parts $ \lambda_{h+\sum_{i=1}^{j-1} b_i}$ are all equal to $a_j.$ Furthermore, all $a_j$ must be distinct.
@@ -1373,7 +1377,7 @@ In this section, we obtain summation formulas for the ranks of $\mathcal E^{\vec
 
 \ssec{A Brief Review of Polya Theory}
 
-We shall follow the treatment from \cite[Chapter 7]{algebraic_stanley}. First, we build up some definitions to state Polya's Theorem.
+We follow the treatment from \cite[Chapter 7]{algebraic_stanley}. First, we build up some definitions to state Polya's Theorem.
 
 \begin{defn}
 Let $G \subset S_n$ act on $[n]$ by the restriction of the action of $S_n$ on $[n]$ by all permutations. For $\pi \in G,$ the action of $\pi$ on $[n]$ can be written in cycle notation so that there are $c_i$ cycles of length $i.$ Define the {\it cycle indicator} of $\pi$ to be the monomial $Z_\pi(z_1,\ldots, z_n) = z_1^{c_1}z_2^{c_2}\cdots z_n^{c_n}.$
@@ -1411,7 +1415,7 @@ $$F_G(r_1,\ldots, r_k) = Z_G\left(\sum_{j=1}^k r_j,\sum_{j=1}^k r_j^2,\ldots, \s
 
 
 \ssec{A Rank Generating Function}
-Next, we produce rank generating functions for $\mathcal E^{i_2,\ldots,i_{k-1}}(B_n)/G.$ The reason for starting at $i_2$ and ending at $i_{k-1}$ is that we shall include additional numbers $i_1$ and $i_k$ to be colored by the first color and the $k$th color. Given an element $x_2,\ldots,x_k \in \mathcal E^{i_2,\ldots, i_{k-1}},$ the first color will be used to color the elements in $x_2$ and the $k$th color will be used to color the elements in $[n]\setminus x_k.$
+Next, we produce rank generating functions for $\mathcal E^{i_2,\ldots,i_{k-1}}(B_n)/G.$ The reason for starting at $i_2$ and ending at $i_{k-1}$ is that we will include additional numbers $i_1$ and $i_k$ to be colored by the first color and the $k$th color. Given an element $x_2,\ldots,x_k \in \mathcal E^{i_2,\ldots, i_{k-1}},$ the first color will be used to color the elements in $x_2$ and the $k$th color will be used to color the elements in $[n]\setminus x_k.$
 
 \begin{note}
 Let $[f(x_1,\ldots, x_k)]_{x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}}$ denote the coefficient of $x_{j_1}^{i_1}\cdots x_{j_l}^{i_l}$ in $f(x_1,\ldots, x_k),$ which may itself be a polynomial.
@@ -1458,7 +1462,7 @@ Note that in the case $\vec r = 0,$ the above result precisely becomes \cite[Cor
 
 \ssec{Further Identities for the Wreath Product}
 In this section, we draw on the methods developed earlier in this section to write down some interesting generating functions for the case that $G = S_m \wr S_l.$
-First, we shall use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we shall relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to counting certain types of set partitions, which also count $|(\mathcal E^{\vec r}(B_n)/G)_0|,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
+First, we will use Proposition ~\ref{prop:rank_gen_fn} to obtain an explicit generating function for $p_i(l,m,1),$ and then we will relate the sum $\sum_{\pi \in G} \binom{\Fix(\pi)}{t}$ to counting certain types of set partitions, which also count $|(\mathcal E^{\vec r}(B_n)/G)_0|,$ where $\vec r$ is of the form $\vec r = 1,\ldots, 1$.
 
 \begin{note}
 For this section only, fix $m,l \in \BN$ and fix $G = S_m \wr S_l.$ Additionally, fix $n = m \cdot l.$
@@ -1570,13 +1574,13 @@ In this section, show that several important posets $\mathcal E(B_n/G)$ are rank
 
 \ssec{Groups of order $n.$}
 
-In this subsection, we shall show that for any group $G$ such that $|G| = n,$ with a transitive action on $B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ The most important example of such an action is the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ By identifying $G \cong [n]$ as sets, this induces an action of $G$ on $B_n.$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
+In this subsection, we show that for any group $G$ such that $|G| = n,$ with a transitive action on $B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ We show that such an action can be viewed as an induced action of the left multiplication action $$\phi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
 For the rest of this section, fix a group $G$ with $|G| = n,$ and a transitive action of $G$ on $[n],$ which induces an action of $G$ on $B_n.$
 
 \begin{lem}
 \label{lem:stabilizer_one}
-For $G$ a group acting transitively on $[n],$ it follows that $\Stab(x) = \{e\}.$
+For $G$ a group acting transitively on $[n],$ it follows that for all $x \in G,\Stab(x) = \{e\}.$
 \end{lem}
 \begin{proof}
 Since $G$ acts transitively on $n$ we have the number of orbits $|[n]/G| = 1,$ Therefore, using Burnside's Lemma, together with the observation that $e \in \Stab(x)$,
@@ -1614,8 +1618,8 @@ Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B
 \end{proof}
 
 \begin{lem}
-\label{lem:transitive_abelian}
-All faithful transitive abelian groups $A$ acting on the set $[n]$ have $|A| = n.$
+\label{lem:transitive_abelian}[\cite{Stack}]
+If $A$ is an abelian group acting faithfully and transitively on the set $[n],$ then $|A| = n.$
 \end{lem}
 
 \begin{cor}
@@ -1636,11 +1640,11 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \ssec{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
-In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we shall prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 \begin{rem}
-Since he action of $G$ on $[n]$ by rotation of the vertices of an $n$-gon can also be viewed as the action of $G$ on itself by left multiplication, by Proposition \ref{prop:regular_action_CCT}, we know this action of $G$ on $B_n$ is not CCT for $n > 2.$
+Since the action of $G$ on $[n]$ by rotation of the vertices of an $n$-gon can also be viewed as the action of $G$ on itself by left multiplication, by Proposition \ref{prop:regular_action_CCT}, we know this action of $G$ on $B_n$ is not CCT for $n > 2.$
 \end{rem}
 
 
@@ -1655,7 +1659,7 @@ We fix $\sigma_0 = (1 \: 2 \: ... \: n),$ the generator of the group $C_n$.
 
 
 \begin{note}
-We shall abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap  \mathcal E(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap  \mathcal E(B_n)\subset  \mathcal E(B_n).$ Namely, $$(Gx, Gy) = \left\{ (\sigma x, \tau y) \in  \mathcal E (B_n) : \sigma, \tau \in G; \, \, \sigma x \lessdot \tau y  \right\}.$$ Similarly, we view $$G(x, y) = \left\{ (gx , g y) \in  \mathcal E (B_n) : g \in G \right\} $$
+We abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap  \mathcal E(B_n)$ as sets, and hence, viewing $(Gx, Gy) = (Gx, Gy) \cap  \mathcal E(B_n)\subset  \mathcal E(B_n).$ Namely, $$(Gx, Gy) = \left\{ (\sigma x, \tau y) \in  \mathcal E (B_n) : \sigma, \tau \in G; \, \, \sigma x \lessdot \tau y  \right\}.$$ Similarly, we view $$G(x, y) = \left\{ (gx , g y) \in  \mathcal E (B_n) : g \in G \right\} $$
 \end{note}
 
 \begin{defn}
@@ -1678,7 +1682,7 @@ then $$q_i - p_i = |\left\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \te
 
 
 \begin{proof}
-From definition, $q_i$ counts  number of the disjoint subsets $G(x, y)$ in $ \mathcal E (B_n)$ and $p_i$ counts the number of disjoint subsets $(Gx, Gy)$. Hence difference of $q_i - p_i$ is counting the difference of the number of $G$-orbits $G (x ,y)$ and the number of $(Gx,Gy) \in  \mathcal E(B_n/C_n)$.  Note that as subsets of $ \mathcal E (B_n)$, $G(x, y) \subset (Gx, Gy)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x , y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$. 
+From definition, $q_i$ counts  number of the disjoint subsets $G(x, y)$ in $ \mathcal E (B_n)$ and $p_i$ counts the number of disjoint subsets $(Gx, Gy)$. Hence the difference of $q_i - p_i$ is counting the difference of the number of $G$-orbits $G (x ,y)$ and the number of $(Gx,Gy) \in  \mathcal E(B_n/C_n)$.  Note that as subsets of $ \mathcal E (B_n)$, $G(x, y) \subset (Gx, Gy)$, so the problem of counting $q_i - p_i$ is the same as that of counting the number of distinct $G$-orbits $G(x , y)$  with non-identity $\sigma \in G$ such that $\sigma x < y$. 
 
 
 It is clear that the $G$-orbits correspond to the (rotational equivalence classes of) fillings of the necklaces, where we fill $i+1$ elements with $1$ of them being marked as the distinct element. Lemma \ref{lem:cyclic_bound_r} tells us that each subset $(Gx, Gy) \subset  \mathcal E (B_n)$, contains at most two $G$-orbits (also regarded as subsets of $ \mathcal E (B_n)$). The number of $(Gx, Gy)$ containing exactly two $G$ orbits is precisely the number of pairs of $G$-orbits $(G (x, y),G(\sigma x, y ))$ (where $ x \lessdot y$ and $\sigma x \lessdot y$) with $G(x, y) \neq G(\sigma x, y).$ The number of such pairs is then the number of $G(x, y)$ such that $ \exists r,r<\frac n 2, G(\sigma_0^r x, y)\neq G(x, y),\sigma_0^r x \lessdot y.$ We restrict $r < n/2$ to avoid double counting pairs. This proves the Lemma.
@@ -1877,7 +1881,7 @@ In this subsection, we give explicit formulas for compositions of the order rais
 For this section, we will use $M^{n-2i-1} = \mathcal E(U)^{n-2i-1},$ where $\mathcal E(U)^{n-2i-1}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
 \end{note}
 \begin{note}
-For the remainder of this section, we shall take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
+For the remainder of this section, we take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
 \end{note}
 
 \begin{prop}
@@ -2053,7 +2057,7 @@ Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x \colon i_k \in x\}.$ Then, $\cap_{
 For all $J \subset [n],$ with $|J| \leq i,$ we have $l_{J}$ lies in the span of $v_{(a , b)}.$ 
 \end{lem}
 \begin{proof}
-We shall prove this by induction on the size of $I.$ First, we know $h_{[n]}$ lies in the span of $v_{(a, b)}$ and so have completed the base case $|I| = 0$ since $h_{[n]} = l_{\emptyset}.$ So, to complete the proof, it suffices to show that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what ~\ref{l_induction_step} proves.
+We prove this by induction on the size of $I.$ First, we know $h_{[n]}$ lies in the span of $v_{(a, b)}$ and so have completed the base case $|I| = 0$ since $h_{[n]} = l_{\emptyset}.$ So, to complete the proof, it suffices to show that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what ~\ref{l_induction_step} proves.
 \end{proof}
 
 \begin{lem}
@@ -2199,7 +2203,7 @@ Now we can calculate the number $q_i$, which is the total number of elements in 
 
 \ssec{Quotients by Automorphism Groups of Rooted Trees}
 
-In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
+In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups of rooted trees are CCT. It is well known that the quotient $B_{ml}/(S_m\wr S_l)$ is a distributive lattice. Hence, we were curious whether $B_{ml}/G$ is a distributive lattice as well, where $G$ is the automorphism group of a rooted tree. The answer is a definitive no, as can be seen in the case $G = (S_2 \wr S_2) \wr S_2,$ where $G$ acts on a the binary rooted tree $P$ with $|L(P)| = 8,$ whose vertices are labeled $0,\ldots, 7$ from left to right. A picture of this tree can be seen in Figure \ref{fig:tree1}. Letting $G$ be the group of automorphisms of this tree, there is a natural action of $G$ on $B_n$ as described in Lemma \ref{lem:induced_tree_action}. The Hasse diagram of the poset $B_n/G$ is shown in Figure \ref{fig:tree_hasse}. In this case, it is easy to see that $G\{0,5,6\} \lessdot G\{0,1,5,6\},G\{0,5,6\} \lessdot G\{0,1,2,5\},G\{0,1,5\} \lessdot G\{0,1,5,6\},G\{0,1,5\} \lessdot G\{0,1,2,5\}.$ Hence, $G\{0,5,6\},G\{0,1,5\}$ do not have a well defined join, and so $B_{ml}/G$ is not a lattice.
 
 
 \begin{figure}[h!]
@@ -2273,14 +2277,15 @@ In Subsection ~\ref{ssec:rooted_trees}, we saw that the full automorphism groups
   \draw (18) -- (19);
   \draw (19) -- (20);
 \end{tikzpicture}
-\caption{}
+\label{fig:tree_hasse}
+\caption{The Hasse Diagram of $B_n/G$ where $G$ is the group of rooted tree automorphisms on the tree from Figure \ref{fig:tree1}.}
 \end{figure}
 
 \ssec{A Failed Attempt for Showing $\mathcal E(B_n/G)$ is unimodal}
 
 In this section, we describe one path we were pursuing in order to show $\mathcal E(B_n/G)$ is unimodal. We were attempting to do this by trying to show there were injective order raising maps $U_i:\mathcal E(B_n/G)_i \rightarrow \mathcal E(B_n/G)_{i+1}.$
 
-We shall now define several maps, so that we can draw a certain commuting diagram in Remark ~\ref{failed_commuting_diagram}
+We now define several maps, so that we can draw a certain commuting diagram in Remark ~\ref{failed_commuting_diagram}
 
 
 \begin{note}
@@ -2388,7 +2393,7 @@ We have tried several variations on these exact maps, but were never quite able 
 
 First, it is worth noting that the functor $\mathcal E:\mathcal P \rightarrow \mathcal P$ is neither essentially surjective nor fully faithful. Let $P$ be the poset with points $a,b,c,d$ and relations $a \lessdot c, b \lessdot c, a \lessdot d.$ It is easy to see there is no poset $A$ with $\mathcal E(A) = P.$ This shows $\mathcal E$ is not essentially surjective. Next, let $Q$ be the poset whose elements are $e,f,g$ with $e \lessdot f, e \lessdot g,$ and let $R$ be the poset whose elements are $h,i,j,k$ with $h \lessdot i, j \lessdot k.$ It is clear that $\mathcal E(Q) \cong \mathcal E(R)$ are both a disjoint union of two points, but $Q \not \cong R.$ So, $\mathcal E$ is also not fully faithful.
 
-However, there are many aspects of the functor $\mathcal E,$ and indeed $\mathcal E^{\vec r}$ which are still unexplored. First, note that it is worth noting that $\mathcal E$ also determines a endofunctor on the category of (ungraded) posets, which we shall now notate $\mathcal Q,$ as well as an endofunctor on the category of graded posets $\mathcal P.$ In general, the points of a poset $P$ can be identified with the set $Hom_{\mathcal Q}(B_0,P),$ and the edges of $P$ can be identified with the set $Hom_{\mathcal Q}(B_1,P).$ It is simple to see additionally that the points of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_0,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_1,P).$ Additionally, the edges of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_1,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_2,P).$ These relations may be a reasonable alternate way to think of the functor of points, and are further suggestive of the existence of an adjoint functor.
+However, there are many aspects of the functor $\mathcal E,$ and indeed $\mathcal E^{\vec r}$ which are still unexplored. First, note that it is worth noting that $\mathcal E$ also determines a endofunctor on the category of (ungraded) posets, which we now notate $\mathcal Q,$ as well as an endofunctor on the category of graded posets $\mathcal P.$ In general, the points of a poset $P$ can be identified with the set $Hom_{\mathcal Q}(B_0,P),$ and the edges of $P$ can be identified with the set $Hom_{\mathcal Q}(B_1,P).$ It is simple to see additionally that the points of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_0,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_1,P).$ Additionally, the edges of $\mathcal E(P)$ are $Hom_{\mathcal Q}(B_1,\mathcal E(P)) \cong Hom_{\mathcal Q}(B_2,P).$ These relations may be a reasonable alternate way to think of the functor of points, and are further suggestive of the existence of an adjoint functor.
 
 \begin{question}
 Does the functor $\mathcal E$ have a left or right adjoint?
@@ -2429,13 +2434,13 @@ For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $
 We also found several additional interesting examples of CCT actions, and we are curious whether they generalize. Once such action is the linear automorphism of the $n$-cube. Using computers, we found that for $n \leq 3,$ the linear automorphisms of the $n$-cube is CCT. We wonder if this generalizes.
 
 \begin{question}
-Does the group of linear automorphism of an $n$-cube in $\BR^n$, whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a common cover transitive action on $\BR^n$?
+Does the group of linear automorphism of an $n$-cube in $\BR^n$, whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a CCT action on $\BR^n$?
 \end{question}
 
 Also, we found using computers that the group of invertible linear maps on $\BF_2^3$ acting on the the seven nonzero points of $\BF_2^3$ induce an action on $B_7$ which is CCT. We wonder if this generalizes to other groups of invertible linear maps on finite fields.
 
 \begin{question}
-Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)^*$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_{q^n-1}?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_{2^n-1}?$ 
+Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\BF_q)$ on $(\BF_q^n)^\times$) CCT? What about the action of $PGL_n(\BF_q)$ on $B_n(q)?$ If not, what about the action of $PGL_n(\BF_2)$ on $B_n(2)?$ 
 \end{question}
 
 \section*{Acknowledgements}
