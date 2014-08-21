@@ -205,7 +205,7 @@ Zijian, can you add this?
 (22) In Question 9.13, why is there a dual space (F_q^n)^* inside the parenthesis, as opposed to just F_q^n itself?  Also, shouldn't the action of PGL_n(F_q) be on B_n(q), not on B_{q^n-1}, else it is not well-defined?
 By the way, I suspect that Question 9.13 is probably resolvable with further thought or experimentation, and if I had to bet, I would bet that they are all _not_ CCT.
 
-Vic, I agree there are some problems with this question. The ^* was meant to denote the multiplicative subgroup (i.e. all elements other than 0). The reason I'm excluding 0 is that all automorphisms preserve 0. I agree it should abe an action on B_n(q). I would also guess that the answer is no. Do you think it would be reasonable to remove this question?
+Vic, I agree there are some problems with this question. The ^* was meant to denote the multiplicative subgroup (i.e. all elements other than 0). The reason I'm excluding 0 is that all automorphisms preserve 0. I agree it should abe an action on B_n(q). I would also guess that the answer is no.
 
 
 --------------------------------------------
