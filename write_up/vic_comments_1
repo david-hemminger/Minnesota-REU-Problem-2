@@ -154,7 +154,7 @@ I think you should add such a remark.  Also, you should say something about Ques
 (the dodecahedron, icosahedron in R^3; the 24-cell, the 120-cell, and the 600-cell in R^4).  
 Actually, you could probably check the case of the dodecahedron by computer, since it only has 12 vertices.
 
-Zijian/Aaron, can you repsond to these comments
+Zijian, can you include the proof for D_{2n} not being cct?
 
 Vic, I believe 12 is far too big for the current program I have written to handle. I don't think the computer can even handle 11.
 -----
@@ -166,7 +166,7 @@ PROPOSITION:
 
 (ii) For every finite group G which is _not_ an elementary abelian 2-group, there exists at least one G-action which _not_ CCT, namely the left-regular action of G on itself.
 
-Aaron, edit this.
+good
 ----
 (15) In Section 5, page 16, "It shall" doesn't sound right.  I think "shall" is generally used only in the first person (and to me, it even sounds mildly pretentious when Americans use it at all!  For Brits, I guess I think it's OK.)
 
@@ -182,7 +182,7 @@ You already showed in Corollary 4.17 that the automorphism group G of a rooted t
 
 If the point of the trek is so that you can say something about higher r, then you should probably say so early on.  In particular, I would _not_ come back and state and prove Corollary 5.21, since it already follows from the above discussion, with no treks needed.
 
-Aaron, edit this.
+Vic, I agree it may be better to state that at the beginning. However, I still don't see how this is automatic. I wrote up a proof which is now at the beginning of Section 5.2, but it is still half a page. Is there something here that I don't need to say?
 ----
 (18)  Remark 7.7. 
 "Since he action ..." --> "Since the action ..."

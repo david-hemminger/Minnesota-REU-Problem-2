@@ -7,17 +7,17 @@
 \BOOKMARK [2][]{subsection.3.3}{3.3. A Generalization of H,E}{section.3}% 7
 \BOOKMARK [1][]{section.4}{4. Common Cover Transitive Actions}{}% 8
 \BOOKMARK [2][]{subsection.4.1}{4.1. Preservation Under Semidirect Products}{section.4}% 9
-\BOOKMARK [2][]{subsection.4.2}{4.2. Examples of Cover Transitive Actions}{section.4}% 10
+\BOOKMARK [2][]{subsection.4.2}{4.2. Examples of CCT Actions}{section.4}% 10
 \BOOKMARK [1][]{section.5}{5. Wreath Product of two Symmetric Groups}{}% 11
 \BOOKMARK [2][]{subsection.5.1}{5.1. Recalling Pak and Panova's Result}{section.5}% 12
-\BOOKMARK [2][]{subsection.5.2}{5.2. The Poset Er\(Bn\)/G}{section.5}% 13
-\BOOKMARK [2][]{subsection.5.3}{5.3. Ensuing Conclusions}{section.5}% 14
+\BOOKMARK [2][]{subsection.5.2}{5.2. A Proof of Theorem Theorem 5.4 for r = 1}{section.5}% 13
+\BOOKMARK [2][]{subsection.5.3}{5.3. The Poset Er\(Bn\)/G}{section.5}% 14
 \BOOKMARK [1][]{section.6}{6. Relations to Polya Theory}{}% 15
 \BOOKMARK [2][]{subsection.6.1}{6.1. A Brief Review of Polya Theory}{section.6}% 16
 \BOOKMARK [2][]{subsection.6.2}{6.2. A Rank Generating Function}{section.6}% 17
 \BOOKMARK [2][]{subsection.6.3}{6.3. Further Identities for the Wreath Product}{section.6}% 18
 \BOOKMARK [1][]{section.7}{7. Unimodal Quotients}{}% 19
-\BOOKMARK [2][]{subsection.7.1}{7.1. Groups of order n.}{section.7}% 20
+\BOOKMARK [2][]{subsection.7.1}{7.1. Groups of order n}{section.7}% 20
 \BOOKMARK [2][]{subsection.7.2}{7.2. Quotient by the Cyclic Group}{section.7}% 21
 \BOOKMARK [2][]{subsection.7.3}{7.3. Quotient by the Dihedral Group}{section.7}% 22
 \BOOKMARK [1][]{section.8}{8. The object E\(Bn\).}{}% 23
@@ -28,5 +28,5 @@
 \BOOKMARK [2][]{subsection.9.2}{9.2. Quotients by Automorphism Groups of Rooted Trees}{section.9}% 28
 \BOOKMARK [2][]{subsection.9.3}{9.3. A Failed Attempt for Showing E\(Bn/G\) is unimodal}{section.9}% 29
 \BOOKMARK [2][]{subsection.9.4}{9.4. Further Questions}{section.9}% 30
-\BOOKMARK [1][]{section*.4}{Acknowledgements}{}% 31
-\BOOKMARK [1][]{section*.5}{References}{}% 32
+\BOOKMARK [1][]{section*.8}{Acknowledgements}{}% 31
+\BOOKMARK [1][]{section*.9}{References}{}% 32

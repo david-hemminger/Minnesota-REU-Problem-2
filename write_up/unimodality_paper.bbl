@@ -1,5 +1,9 @@
 \begin{thebibliography}{Kat11}
 
+\bibitem[CG]{greene}
+Daniel J.~Kleitman Curtis~Greene.
+\newblock {\em Proof techniques in the theory of finite sets}.
+
 \bibitem[EB05]{babson}
 Dmitry N.~Kozlov Eric~Babson.
 \newblock Group actions on posets.
