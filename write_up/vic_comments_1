@@ -17,7 +17,7 @@ good
 
 V:  If you guys all agree now, then it's not too objectionable, and I don't think it will really seriously annoy anyone.  So go for it!
 
-todo David
+David, can you change this back?
 
 3)  Is it ok to say that the hyperoctahedral group is the group of symmetries of the n-octahedron, and that it is isomorphic to S_2 \wr S_n without any references or proofs?
 
@@ -42,9 +42,8 @@ Why does Lemma 7.5 have no proof?  What were you deducing it from?
 
 I think this subsection should be cleaned up a bit generally, as it is not making clear which hypotheses apply where.  Probably best to just repeatthe  hypotheses in each result, like "Let G be a finite group with n elements acting by left-translation on itself", as this clarifies the whole issue, and it doesn't take long to say.
 
-Aaron, go through and fix this.
+Vic, we realized that the second half of this section was fairly extraneous and not very important, so we decided to delete it. We also used your slicker argument by orbit stabilizer instead of burnside's lemma for 7.1. Also, we feel that the orbit stabilizer lemma is so well known that reminding the reader of the proof isn't really necessary, and it might distract the reader a bit from what we're trying to do. Can you explain why you think it should be added?
 
-Vic, whether we had to cite 7.5 was the question, sorry for the confusing. Based on your response, it seems like we should. Unfortunately, I could only find a post on stack exchange citing this. Is this ok?
 
 5) Should we cite the fact that if an irreducible polynomial divides q^i-q, then its degree divides i?
 
@@ -86,7 +85,7 @@ David, can you fix these bibtex things?
 Maybe you should use a stricter definition of graded poset, like every maximal chain is of the same length
 (and call that length n if it is graded of rank n)?
 
-Vic, I suppose we might be able to use a stricter definition of graded poset, but I don't understand the reason for doing this, since everything we have shown holds in greater generality for graded posets as we have defined them in the paper. What is the reason for restricting the category of graded posets to the smaller full subcategory as you are suggesting?
+Vic, we suppose we might be able to use a stricter definition of graded poset, but we don't understand the reason for doing this, since everything we have shown holds in greater generality for graded posets as we have defined them in the paper. What is the reason for restricting the category of graded posets to the smaller full subcategory as you are suggesting?
 
 -----
 (3) If you introduced the dual poset a little earlier, I think you could some of Section 3 more elegant.  
@@ -95,7 +94,7 @@ For example, doesn't the endofunctor P -> P^{op} commute with P -> E(P),  which 
 
 Also, in the proof of Lemma 3.7, once you have shown (1)<=>(3), then you can say the equivalence (2)<=>(3) follows via duality, since condition (3) is invariant under P -> P^{op}.
 
-Aaron, come back to editing these sections, Vic makes a good point.
+good
 
 ----
 (4) The conclusion of Cor 3.13 probably wants to say "rank-symmetric" not "symmetric".
