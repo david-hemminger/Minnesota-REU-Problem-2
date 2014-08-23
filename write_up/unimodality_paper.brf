@@ -2,11 +2,12 @@
 \backcite {weyl_groups_stanley}{{5}{2.4}{lem.2.4}}
 \backcite {quotients_stanley}{{5}{2.6}{thm.2.6}}
 \backcite {quotients_stanley}{{11}{3.2}{cor.3.26}}
-\backcite {greene}{{11}{3.2}{section*.5}}
+\backcite {greene}{{11}{3.2}{section*.7}}
 \backcite {babson}{{12}{3.32}{rem.3.32}}
-\backcite {permutation_polytopes}{{14}{4.2.1}{subsubsection.4.2.1}}
+\backcite {permutation_polytopes}{{15}{4.2.1}{subsubsection.4.2.1}}
 \backcite {pak}{{17}{5}{section.5}}
-\backcite {pak}{{17}{5.1}{subsection.5.1}}
+\backcite {pak}{{17}{5}{section.5}}
+\backcite {pak}{{18}{5.1}{subsection.5.1}}
 \backcite {pak}{{18}{5.2}{note.5.2}}
 \backcite {pak}{{18}{5.3}{note.5.3}}
 \backcite {pak}{{18}{5.4}{thm.5.4}}
@@ -15,4 +16,5 @@
 \backcite {algebraic_stanley}{{21}{6.1}{subsection.6.1}}
 \backcite {algebraic_stanley}{{21}{6.5}{rem.6.5}}
 \backcite {algebraic_stanley}{{23}{6.10}{rem.6.10}}
+\backcite {Stack}{{26}{7.4}{lem.7.4}}
 \backcite {enumerative_comb}{{38}{9.1}{subsection.9.1}}

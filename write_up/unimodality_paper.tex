@@ -161,10 +161,6 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
-\todo{(10) Before restating Prop 1.7 in Section 4, you should explain why starting from a G-action on P one obtains a well-defined K-action on $P/H$, using the normality of H. 
-In other words, given k in K, and Hx in $P/H$, who exactly is $k(Hx)$, and why is it well-defined, independent of the choice of representative x for Hx (making it explicit how one is using the normality of H).
-
-David, can you include this?}
 
 Let $P$ be a finite graded poset of rank $n$.  In this paper we study the structure of the edges in the Hasse diagram of $P$.  To this end we define the \textit{edge poset construction} $\mathcal{E}$ as follows.
 
@@ -345,6 +341,7 @@ In this section we review morphisms of graded posets, Peck posets, and a useful 
 
 Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$. When the poset is clear we will omit the $P$ and simply write $x\le y$.
 
+\todo{We actually say that a graded poset comes with a rank function, (not just that such a rank funcmtion exists) since this rank function is not unique}
 A poset $P$ a {\it graded} poset if it there exists a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
 	\item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = rk(y),$
@@ -409,6 +406,8 @@ In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ 
 
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
 First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Then, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets. Finally, we note several equivalent definition of CCT actions.
+
+\sssec{Functoriality of $\mathcal E$ and Group Actions}
 
 \begin{note*}
 When the poset $P$ is clear, we will simply use $\leq_{\mathcal E},\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)},\lessdot_{\mathcal E(P)}.$ Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and will use $\leq_{\mathcal H},\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)},\lessdot_{\mathcal H(P)}.$
@@ -504,22 +503,24 @@ The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, 
 Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cdot x, g\cdot y)$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Clearly $q$ is rank-preserving and surjective, so it suffices to show that $q$ is order-preserving.  Suppose that $G(x, y) \le G(w, z)$.  Then there exist some $(x_0, y_0)\in G(x, y)$, $(w_0, z_0)\in G(w, z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  We then have that $(Gx, Gy) \le (Gw, Gz)$ by definition, hence $q$ is order-preserving.
 \end{proof}
 
-Next, we introduce the notion of a dual poset, given by applying the opposite functor to a graded poset. Since $op$ commutes with $\mathcal E,$ we will be able to show that $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, implies that $\mathcal E(B_n/G)$ is always self-dual. Second, we can produce a simple proof of the equivalence of conditions $(1)$ and $(2)$ in \ref{lem:cover_transitive_equivalence}. 
+\sssec{The Opposite Functor and Self Dual Posets}
+
+Next, we introduce the notion of a dual poset, given by applying the opposite functor, op, to a graded poset. We will show $op$ commutes with $\mathcal E.$ This will imply $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
 
 \begin{defn}
-Let $\mathcal P$ be the category of graded posets, and let $op:\mathcal P \rightarrow \mathcal P$ be the opposite functor. For $P$ a poset, the elements of $P^{op}$ are the same as those of $P$ with order relation $\le_{P^{op}}$ defined by $x \leq_{P^{op}} y \iff x \geq_P y.$ In more abstract terms, if we view $P$ as a category, $P^{op}$ is the opposite category. The poset $P^{op}$ is called the {\it dual} poset of $P$. elements A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
+Let $\mathcal P$ be the category of graded posets and let $op:\mathcal P \rightarrow \mathcal P$ be the opposite functor, on posets follows. For $P$ a poset, the elements of $P^{op}$ are the same as those of $P$ with order relation $\le_{P^{op}}$ defined by $x \leq_{P^{op}} y \iff x \geq_P y.$ Induced maps on morphisms are given as follows: for $P,Q$ graded posets with $f:P \rightarrow Q,$ then $f^{op}:P^{op} \rightarrow Q^{op}$ is defined by $f^{op}(x) = f(x).$ The poset $P^{op}$ is called the {\it dual} poset of $P$. elements A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{op}.$
 \end{defn}
 
 \begin{rem}
-Note that it is easy to check $op:\mathcal P \rightarrow \mathcal P$ is indeed a covariant functor, and the induced maps on morphisms are given as follows: for $P,Q$ graded posets with $f:P \rightarrow Q,$ then $f^{op}:P^{op} \rightarrow Q^{op}$ is defined by $f^{op}(x) = f(x).$
+Note that it is easy to check $op:\mathcal P \rightarrow \mathcal P$ is indeed a covariant functor. In more abstract terms, if we view $P$ as a category, $P^{op}$ is the opposite category. Additionally, $op$ as defined in this way is actually a endofunctor on the category of all finite posets, which restricts to a functor on the subcategory of graded posets.
 \end{rem}
 
 \begin{lem}
 \label{lem:commuting_op_e}
-The functor $op:\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E:\mathcal P \rightarrow P.$ That is, $\mathcal E(P^{op}) \cong \mathcal E(\mathcal P)^{op}.$
+The functor $op:\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E:\mathcal P \rightarrow \mathcal P.$ That is, $\mathcal E(P^{op}) \cong \mathcal E(\mathcal P)^{op}.$
 \end{lem}
 \begin{proof}
-Observe that $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ The inverse to $F$ is given by $G:\mathcal E(P)^{op} \rightarrow \mathcal E(P^{op}),(x,y)\mapsto (x,y)$ and so $F$ defines an isomorphism.
+Observe that $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{op},$ as given by the map $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y).$ The inverse to $F$ is given by $G:\mathcal E(P)^{op} \rightarrow \mathcal E(P^{op}),(x,y)\mapsto (x,y).$ These maps are well defined because $\mathcal E(P)^{op}$ and $\mathcal E(P^{op})$ are the same as sets, and it follows from the definitions that these are both morphisms of graded posets, and so $F$ defines an isomorphism.
 \end{proof}
 
 \begin{prop}
@@ -527,12 +528,13 @@ Observe that $\mathcal E(P^{op})$ is canonically isomorphic to $\mathcal E(P)^{o
 If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
 \end{prop}
 \begin{proof}
-Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op},$ And so by functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{op}) \cong \mathcal E(\mathcal P)^{op}.$ Then, the composition $F\circ \mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
+Since $P$ is self-dual, there is an isomorphism $f:P \rightarrow P^{op}.$ By functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P^{op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{op}) \cong \mathcal E(\mathcal P)^{op}.$ Then, letting $F:\mathcal E(P^{op}) \rightarrow \mathcal E(P)^{op},(x,y) \mapsto (x,y)$ be the same isomorphism defined in the proof of
+\ref{lem:commuting_op_e}, the composition $F\circ \mathcal E(f):\mathcal E(P) \rightarrow \mathcal E(P)^{op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
 \end{proof}
 
 
 \begin{eg}
-Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ will not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In Figure \ref{fig:dual_not_unimodal} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
+While $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ need not be Peck in general.  Furthermore, adding the condition that $P$ be self-dual does not change this fact.  In Figure \ref{fig:dual_not_unimodal} we give an example of a poset $P$ such that $P$ is unitary Peck and self-dual, but $\mathcal{E}(P)$ is not rank-unimodal.
 \end{eg}
 
 \begin{figure}[h]
@@ -561,8 +563,8 @@ Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(
   \node (02) at (0,0) {(0,2)};
   \node (03) at (2,0) {(0,3)};
   \node (13) at (4,0) {(1,3)};
-  \node (24) at (1,2) {(2,4)};
-  \node (35) at (3,2) {(3,5)};
+  \node (24) at (0,2) {(2,4)};
+  \node (35) at (4,2) {(3,5)};
   \node (46) at (0,4) {(4,6)};
   \node (56) at (2,4) {(5,6)};
   \node (57) at (4,4) {(5,7)};
@@ -582,7 +584,7 @@ Note that while $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(
 \label{rem:induced_action_bn}
 Whenever there is an action $\psi:G \times [n] \rightarrow [n],$ we obtain an induced action $\phi: G \times B_n \rightarrow B_n$ defined by
 $$\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$$
-It is easy to see that any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ That all actions on $B_n$ are induced by actions on $[n]$ follows from the more general fact that whenever $L$ is an atomic lattice, (meaning there exists a minimum element of $L$ and any element of $L$ can be expressed as a join of atoms,) then any poset automorphism $f:L \rightarrow L$ restricts to an automorphism of the atoms of $L$, and $f$ is uniquely determined by this restriction to atoms. In the case of $B_n,$ the atoms are precisely the singletons, and hence can be identified with $[n]$.  Whenever an action $\psi$ of $G$ on $[n]$ is given, we refer to the action $\phi$ defined above as the induced action on $B_n.$
+It is easy to see that any action $\phi:G \times B_n \rightarrow B_n$ arises in this way. That is, for any action $\phi$ of $G$ on $B_n$ there exists an action $\psi$ of $G$ on $[n]$ such that $\phi(g,\{x_1,\ldots, x_k\}) = \{\psi(g,x_1),\ldots, \psi(g,x_k)\}.$ This fact, that all actions on $B_n$ are induced by actions on $[n]$ follows from the more general fact about atomic lattices. Recall, $L$ is an atomic lattice if there exists a minimum element of $L$ and any element of $L$ can be expressed as a join of a subset of the elements, calleds atoms. Then, for $L$ an atomic lattice, any poset automorphism $f:L \rightarrow L$ restricts to an automorphism of the atoms of $L$, and $f$ is uniquely determined by this restriction to atoms. In the case of $B_n,$ the atoms are precisely the singletons, and hence can be identified with $[n]$.  Whenever an action $\psi$ of $G$ on $[n]$ is given, we refer to the action $\phi$ defined above as the {\it induced action} on $B_n.$
 \end{rem}
 
 
@@ -592,12 +594,14 @@ It is easy to see that any action $\phi:G \times B_n \rightarrow B_n$ arises in 
 For any action $\phi:G \times B_n \rightarrow B_n,$ both $\mathcal E(B_n/G)$ and $\mathcal E(B_n)/G$ are self-dual. In particular, they are both rank-symmetric. 
 \end{cor}
 \begin{proof}
-By Remark \ref{rem:induced_action_bn}, any action of $\phi$ of $G$ on $B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any group action $G,$ the poset $B_n/G$ is self-dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation} it follows $\mathcal E(B_n/G)$ is self-dual, and in particular $\mathcal E(B_n)$ is self-dual.
+By Remark \ref{rem:induced_action_bn}, any action $\phi:G\times B_n \rightarrow B_n$ is induced by an action $\psi:G \times [n] \rightarrow [n].$ Using this, observe that for any $\phi,$ the poset $B_n/G$ is self-dual, as there is an isomorphism $f:B_n/G \rightarrow (B_n/G)^{op},G \cdot x \mapsto G \cdot ([n] \setminus x).$ This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n].$ Then, by Proposition \ref{prop:self_dual_preservation}, it follows that $\mathcal E(B_n/G)$ is self-dual.
 
 It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f):\mathcal E(B_n) \rightarrow \mathcal E(B_n^{op})\cong \mathcal E(B_n)^{op},$ that is, the map sending a pair of elements to the pair of their complements. Once again, since the action on $B_n$ is induced by an action on $[n],$ this isomorphism descends to an isomorphism $\mathcal E(f)^G:\mathcal E(B_n)/G \rightarrow \mathcal (E(B_n)/G)^{op},$ and so $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
-We conclude this subsection by giving four equivalent definitions for CCT actions. The equivalence of $(1)$ and $(2)$ uses the notion of dual posets, while the equivalence of $(1),(3),$ and $(4)$ use the fact that $q:\mathcal E(P)/G) \rightarrow (\mathcal E(P/G)),G(x,y)\mapsto (Gx,Gy)$ is always a surjection.
+\sssec{Equivalent Definitions of CCT Actions}
+
+We conclude this subsection by giving four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3),$ and $(4)$ use the fact that $q:\mathcal E(P)/G) \rightarrow (\mathcal E(P/G)),G(x,y)\mapsto (Gx,Gy)$ is always a surjection.
 
 \begin{lem}
 \label{lem:cover_transitive_equivalence}
@@ -611,7 +615,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 \end{enumerate}
 \end{lem}
 \begin{proof}
-First, we show $(1) \iff (2).$ There is an isomorphism $f:B_n \rightarrow B_n^{op},x \mapsto [n]\setminus x.$ This defines a bijection between triples $(x,y,z)$ with $x \lessdot z,y \lessdot z$ with $x \in Gy,$ and triples $(a,b,c)$ with $c \lessdot a, c \lessdot b$ with $a \in Gb,$ given by $(x,y,z)\mapsto (f(x),f(y),f(z)).$ Furthermore, some $g \in G$ satisfies $g \in Stab(z)$ and $gx = y,$ if and only if it also satisfies $g \in Stab(c)$ and $ga = b.$ If an action is CCT, all triples $(x,y,z)$ satisfy these properties, and condition $(2)$ says all triples $(a,b,c)$ satisfy these properties, the bijection defined above shows that $(1)$ is equivalent to $(2).$
+First, we show $(1) \iff (2).$ There is an isomorphism $f:B_n \rightarrow B_n^{op},x \mapsto [n]\setminus x.$ This defines a bijection between triples $(x,y,z)$ with $x \lessdot z,y \lessdot z$ with $x \in Gy,$ and triples $(a,b,c)$ with $c \lessdot a, c \lessdot b$ with $a \in Gb,$ given by $(x,y,z)\mapsto (f(x),f(y),f(z)).$ Furthermore, some $g \in G$ satisfies $g \in Stab(z)$ and $gx = y,$ if and only if it also satisfies $g \in Stab(f(z))$ and $g\cdot f(x) = f(y).$ If an action is CCT, all triples $(x,y,z)$ satisfy these properties, and condition $(2)$ says all triples $(a,b,c)$ satisfy these properties. So, the above shows that $(1)$ is equivalent to $(2).$
 
 Second, we show $(1) \iff (3)$. Observe that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
 
@@ -736,11 +740,11 @@ This follows immediately from Remark \ref{rem:order_containment} and the fact th
 %Second, if $x\otimes y \lessdot_{\mathcal H} a \otimes b$ then $x \lessdot_P a,$ so $rk(x)+1 = rk(a)$ and then $$rk_{\mathcal H(P)}(x\otimes y)+1 = rk_P(x) +1=rk_P(a)= rk_{\mathcal H(P)}(a\otimes b).$$
 
 \begin{rem}
-While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ is not a functor. In particular, we have not specified how $\mathcal H$ acts on morphisms. If, for $f:P \rightarrow Q,$ we attempted to define $\mathcal H(f):\mathcal H(P) \rightarrow \mathcal H(Q),$ we would quickly run into trouble. For example, suppose we took $f$ mapping a diamond $P$ (see Figure \ref{fig:h_morphism}) to a chain of length three $Q$. Then, $\mathcal H(P)$ has four points, with two pairs of edges, whereas $\mathcal H(Q)$ has two disconnected points. It is clear that there can be no order-preserving mapping between these two objects.
+While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ is not a functor. In particular, there is no possible definition of how $\mathcal H$ acts on morphisms. This is illustrated in \ref{fig:h_morphism}. For example, suppose we took $f:P \rightarrow Q$ defined by $f(1) = 1, f(2) = f(3) = 2,f(4) = 3.$ 
+It is easy to see that there is no possible morphism $\mathcal H(f):\mathcal H(P)\rightarrow \mathcal H(Q)$ because there are no morphisms at all between $\mathcal H(P) \rightarrow \mathcal H(Q).$
 
 \todo{anyone know how to align these evenly?}
 \begin{figure}[h!]
-\label{fig:h_morphism}
 \begin{center}
 \begin{tikzpicture}[scale=.7]
   \node (b) at (0:2cm) {$3$};
@@ -772,6 +776,7 @@ While $\mathcal E:\mathcal P \rightarrow \mathcal P$ is a functor, $\mathcal H$ 
   \node (e) at (270:3cm) {$\mathcal{H}(Q)$};
 \end{tikzpicture}
 \end{center}
+\label{fig:h_morphism}
 \caption{}
 \end{figure}
 \end{rem}
@@ -810,16 +815,8 @@ The elements of $\mathcal H(P)/G,\mathcal E(P)/G$ are the same by definition, so
 \end{proof}
 
 The remaining step in the proof of Theorem \ref{thm:cover_transitive_implies_Peck} is to show that $\mathcal{H}(B_n)$ is unitary Peck, which we do by generalizing Example \ref{eg:3boolean} and showing that $\mathcal{H}(B_n)$ is isomorphic to the disjoint union of boolean algebras.
-\todo{
-(8) I don't like the way the proof of Prop 3.23 just dives right into the middle of it.  When you are claiming two objects A,B are isomorphic, and you even have a simple explicit isomorphism $f:A\rightarrow B$ in mind, then it is best to start by saying exactly what that putative isomorphism f is, and even better, have a displayed equations with an aligned diagram that shows$ \rightarrow B$ and underneath the map $a \mapsto f(a) $.  
- 
-In this particular case, I would start by saying that you are going to label the n disjoint copies of $B_{n-1}$ labelled $B_{n-1}^{(i)}$ for $i=1,2,...,n,$ so that you could say that the target of your isomorphism is
+\todo{(8) I don't like the way the proof of Prop 3.23 just dives right into the middle of it.  When you are claiming two objects A,B are isomorphic, and you even have a simple explicit isomorphism $f:A\rightarrow B$ in mind, then it is best to start by saying exactly what that putative isomorphism f is, and even better, have a displayed equations with an aligned diagram that shows$ \rightarrow B$ and underneath the map $a \mapsto f(a) $.  In this particular case, I would start by saying that you are going to label the n disjoint copies of $B_{n-1}$ labelled $B_{n-1}^{(i)}$ for $i=1,2,...,n,$ so that you could say that the target of your isomorphism is $B_{n-1}^{(1)} \cup B_{n-1}^{(2)} \cup \cdots \cup B_{n-1}^{(n)}$ Then your putative isomorphism is going send the element (x,y) in $E(B_n)$ having y = x union {i} to the element labelled x within $B^{(i)}_{n-1}$.  Then show it is a poset isomorphism. David, can you edit this?}
 
-$B_{n-1}^{(1)} \cup B_{n-1}^{(2)} \cup \cdots \cup B_{n-1}^{(n)}$
-
-Then your putative isomorphism is going send the element (x,y) in $E(B_n)$ having y = x union {i} to the element labelled x within $B^{(i)}_{n-1}$.  Then show it is a poset isomorphism.
-
-David, can you edit this?}
 \begin{prop}\label{prop:computing_HBn}
 $\mathcal{H}(B_n)$ is isomorphic to $n$ disjoint copies of $B_{n-1}$.
 \end{prop}
@@ -849,15 +846,7 @@ This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quot
 
 \begin{cor}
 $\mathcal{E}(B_n)$ has a symmetric chain decomposition (SCD).
-\todo{7) Should we cite the fact that $B_n$ has a symmetric chain decomposition?
-
-V:  Yes, this is probably worth citing, and I think there are a lot of sources for it-- one good one is
-
-Greene, Curtis; Kleitman, Daniel J.
-Proof techniques in the theory of finite sets. Studies in combinatorics, pp. 22–79,
-MAA Stud. Math., 17, Math. Assoc. America, Washington, D.C., 1978.
-
-David or Zijian, I put something temporary in the bibliography, but I don't really understand how to cite it. I think it's a book, but I'm not really sure.}
+\todo{7) Should we cite the fact that $B_n$ has a symmetric chain decomposition? V:  Yes, this is probably worth citing, and I think there are a lot of sources for it-- one good one is Greene, Curtis; Kleitman, Daniel J. Proof techniques in the theory of finite sets. Studies in combinatorics, pp. 22–79, MAA Stud. Math., 17, Math. Assoc. America, Washington, D.C., 1978. David or Zijian, I put something temporary in the bibliography, but I don't really understand how to cite it. I think it's a book, but I'm not really sure.}
 
 \end{cor}
 
@@ -947,10 +936,7 @@ Two rather trivial examples of CCT actions are $\phi:S_n\times B_n \rightarrow B
 \label{ssec:semidirect_product_preservation}
 Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction. This Proposition essentially says the CCT property is preserved under semidirect products. We use this to obtain simple proofs that CCT actions are also preserved under direct products and wreath products.
 
-\todo{(10) Before restating Prop 1.7 in Section 4, you should explain why starting from a G-action on P one obtains a well-defined K-action on P/H, using the normality of H. 
-In other words, given k in K, and Hx in P/H, who exactly is k(Hx), and why is it well-defined, independent of the choice of representative x for Hx (making it explicit how one is using the normality of H).
-
-David, can you include this?}
+\todo{(10) Before restating Prop 1.7 in Section 4, you should explain why starting from a G-action on P one obtains a well-defined K-action on $P/H$, using the normality of H. In other words, given k in K, and Hx in $P/H$, who exactly is $k(Hx)$, and why is it well-defined, independent of the choice of representative x for Hx (making it explicit how one is using the normality of H). David, can you include this?}
 
 \semidirect*
 
@@ -1171,7 +1157,7 @@ Let $M$ be a polytope, with a particular embedding in $\BR^n.$ The {\it group of
 First, we look at linear automorphisms of simplices. Let $G$ be the group linear automorphisms of the $(n-1)$-simplex, whose vertices lie at the standard basis vectors in $\BR^n.$ The action of $G$ on the $(n-1)$-simplex induces an action on $[n],$ given by identifying $[n]$ with the $n$ vertices of the $(n-1)$-simplex. Hence, it induces an action on $B_n.$
 
 \begin{prop}
-The action of the group of linear automorphisms on the $n-1$-simplex on $B_n$ defined above is CCT.
+The action of the group of linear automorphisms of the $(n-1)$-simplex, acting on $B_n,$ as defined above, is CCT.
 \end{prop}
 \begin{proof}
 The group of linear automorphisms in this case induces the usual action of $S_n$ on $B_n,$ because any permutation matrix defines a linear map on $\BR^n.$ However, we know the action of $S_n$ on $B_n$ is CCT from Example ~\ref{eg:trivial_edgequot}
@@ -1187,7 +1173,7 @@ It is simple to see that the group of linear automorphisms of the n-octahedron w
 \end{proof}
 
 \begin{rem}
-Here is a recap of which linear automorphisms of polytopes are known to induce actions on $B_n$ which are CCT. First, by the above lemmas, for octahedrons and simplices the induced action is CCT. By Proposition  \ref{prop:cover_transitive_building_blocks} and Proposition \ref{prop:iff_dihedral_cct} the linear automorphism group of an $n$-gon induces a CCT action on $B_n$ if and only if one of $n=1,n = p,n = 2p,$ for $p$ a prime. Additionally, computers have verified that automorphisms of the 3-cube, with vertices at $(\pm 1,\pm 1,\pm 1)$ induces a CCT action. It is still unknown whether the linear automorphisms of $n$-cubes is CCT for $n> 3,$ and also whether the remaining five exceptional regular polytopes (namely the dodecahedron and icosahedron in $\BR^3$ as well as the $24$-cell, $120$-cell, and $600$-cell polytopes in $\BR^4$) induce CCT actions. These questions are repeated in Question \ref{question:cube_cct} and Question \ref{question:exceptional_polytopes_cct}.
+Let us give a brief recap of which linear automorphisms of polytopes are known to induce actions on $B_n$ which are CCT. First, by the above lemmas, for octahedrons and simplices the induced action is CCT. By Proposition  \ref{prop:cover_transitive_building_blocks} and Proposition \ref{prop:iff_dihedral_cct} the linear automorphism group of an $n$-gon induces a CCT action on $B_n$ if and only if one of $n=1,n = p,n = 2p,$ for $p$ a prime. Additionally, computers have verified that automorphisms of the 3-cube, with vertices at $(\pm 1,\pm 1,\pm 1)$ induces a CCT action. It is still unknown whether the linear automorphisms of $n$-cubes is CCT for $n> 3,$ and also whether the remaining five exceptional regular polytopes (namely the dodecahedron and icosahedron in $\BR^3$ as well as the $24$-cell, $120$-cell, and $600$-cell polytopes in $\BR^4$) induce CCT actions. These questions are repeated in Question \ref{question:cube_cct} and Question \ref{question:exceptional_polytopes_cct}.
 \end{rem}
 
 \sssec{CCT Actions of $\BZ_2^k$}
@@ -1196,9 +1182,9 @@ In this subsubsection, we show that any embedding of $\BBZ_2^k$ into $S_n$ defin
 
 \begin{prop}
 \label{prop:regular_action_CCT}
-$ $ %for a newline
+Recall that $G$ is an elementary abelian $2$-group if $G \cong (\BZ/2\BZ)^k$ for some $k.$
 \begin{enumerate}
-	\item For any $n \in BN,$ and $G$ an elementary abelian 2-group, that is, $G \cong (\BZ/2\BZ)^k$ for some $k$, every $G$ action on $B_n$ is CCT.
+	\item For any $n \in \BN,$ and $G$ an elementary abelian 2-group, every $G$ action on $B_n$ is CCT.
 	\item For every finite group $G$ which is not an elementary abelian 2-group, there exists at least one $G$ action which is not CCT, namely the action of $G$ on $B_n$ induced by the left-regular action of $G$ on itself.  
 \end{enumerate}
 \end{prop}
@@ -1206,7 +1192,7 @@ $ $ %for a newline
 \vskip.1in
 \noindent
 {\sf Part (1)}
-Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\BBZ_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$, hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
+Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\BBZ_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$. Hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
 
 \vskip.1in
 \noindent
@@ -1276,10 +1262,10 @@ First, by Lemma ~\ref{lem:order_2_CCT}, we know the action of $\BZ_2^n$ on $B_{2
 %%%%%%%%%%%%%%%%% Wreath Product  S_m with S_l %%%%%%%%%%%%%%%%%%
 \section{Wreath Product of two Symmetric Groups}\label{sec:wreath_product}
 
-In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. We construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. This construction gives an alternate proof of Theorem 1.1 in the case that $r = 1.$
+In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. We construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. This construction gives an alternate proof of \cite[Theorem 1.1]{pak} in the case that $r = 1.$
 
 \begin{note}
-For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l.$ Let $S_m$ act on $B_m$ by the permutation representation, and then let $G$ act on $B_{m}^l\cong B_{m \cdot l}$ by the action defined in Notation ~\ref{note:wreath_action}.
+For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l.$ Let $S_m$ act on $B_m$ by the permutation representation, and then let $G$ act on $B_{m}^l\cong B_{m \cdot l}$ by the action defined in Definition \ref{defn:wreath_action}.
 \end{note}
 
 \ssec{Recalling Pak and Panova's Result}
@@ -1302,7 +1288,7 @@ Let $p_k(l,m,r) = \sum_{\lambda \in P_k(l,m)} \binom{\nu(\lambda)}{r}.$
 The sequence $p_r(l,m,r), p_{r+1}(l,m,r),\ldots, p_{l\cdot m}(l,m,r)$ is unimodal and symmetric.
 \end{thm}
 
-\ssec{A Proof of Theorem Theorem \ref{thm:pak_thm} for $r = 1$}
+\ssec{A Proof of Theorem \ref{thm:pak_thm} for $r = 1$}
 
 Now that we have managed to state Pak and Panova's Theorem, we can now conclude that Theorem \ref{thm:pak_thm} holds in the case of $r=1.$ In fact, we can do better, by realizing $p_1(l,m,1)$ as ranks of a Peck poset.
 
@@ -1312,11 +1298,11 @@ There is an equality $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_1(l,m,
 \end{prop}
 \begin{proof}
 
-First, observe that $S_m \wr S_l$ can be described as the automorphism group of a rooted tree acting on the rooted tree of rank 2 with $l$ elements at rank $1$ and $m\cdot l$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then, by Corollary \ref{cor:tree_cct}, it follows that the action of $G$ on $B_{m \cdot l}$ is CCT and so $\mathcal E^r(B_n/G)$ is Peck.
+First, observe that $S_m \wr S_l$ can be described as the automorphism group of a rooted tree of rank 2 with $l$ elements at rank $1$ and $m\cdot l$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then, by Corollary \ref{cor:tree_cct}, it follows that the action of $G$ on $B_{m \cdot l}$ is CCT and so $\mathcal E^r(B_n/G)$ is Peck.
 
-Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. This is a well known fact, although it is also shown explicitly in Lemma \ref{lem:young_diag_reps}.
+Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. This is a well known fact, proven later in Lemma \ref{lem:young_diag_reps}.
 
-Now, let $Gx,Gy$ two $G$ orbits with $\bar x$ the Young Tableau corresponding to $x,$ and $\bar y$ the young tableau corresponding to $y.$ Suppose $Gx \lessdot Gy.$ Then, $\bar x$ must be contained in $\bar y,$ but with a single box removed. Since $\bar x,\bar y$ are both Young Tableau, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx|Gx \lessdot Gy\}| = \nu(\bar y).$ Therefore,
+Now, let $Gx,Gy$ be two $G$ orbits with $\bar x$ the Young Tableau corresponding to $x,$ and $\bar y$ the young tableau corresponding to $y.$ Suppose $Gx \lessdot Gy.$ Then, $\bar x$ must be contained in $\bar y,$ but with a single box removed. Since $\bar x,\bar y$ are both Young Tableau, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx|Gx \lessdot Gy\}| = \nu(\bar y).$ Therefore,
 \begin{align*}
 	|\mathcal E(B_n/G)_i| &= \sum_{(Gx,Gy) \in \mathcal E(B_n/G)_i} 1 
 	\\
@@ -1337,11 +1323,11 @@ $p_r(l,m,r), p_{r+1}(l,m,r),\ldots, p_{l\cdot m}(l,m,r)$ is unimodal, and hence 
 The remainder of this section is devoted to computing the ranks of the posets $\mathcal E^r(B_n)/G.$ Note that we will also obtain a different formula for the sizes of these ranks in Lemma \ref{lem:polya_faces_equivlence}, which will be used to prove an equality in Proposition \ref{prop:size_p_i}.
 
 \begin{rem}
-It is worth noting that the proof given in Proposition \ref{prop:rank_gen_fn_wreath_1} does not generalize to $r >1,$ as it is no longer true that $|\mathcal E^r(B_n/G)_i| = p_r(l,m,r).$ To see this, note that $\binom{\nu(\lambda)} r$ counts the number of corners of $\lambda$ choose $r,$ and so it only counts the number of young diagrams less than $\lambda$ such that at most one block is removed from each distinct part size, whereas $|\mathcal E^r(B_n/G)_i|$ counts something much larger, as is described in Remark \ref{rem:viewing_wreath_orbits} 
+It is worth noting that the proof given in Proposition \ref{prop:rank_gen_fn_wreath_1} does not generalize to $r >1,$ as it is no longer true that $|\mathcal E^r(B_n/G)_i| = p_r(l,m,r).$ To see this, note that $\binom{\nu(\lambda)} r$ counts the number of corners of $\lambda$ choose $r,$ and so it only counts certain Young Diagrams contained in $\lambda$ such that at most one block is removed from each distinct part size, whereas $|\mathcal E^r(B_n/G)_i|$ counts something much larger, as is described in Remark \ref{rem:viewing_wreath_orbits} 
 \end{rem}
 
 
-To give our formula for, the ranks of $\mathcal E^r(B_n)/G,$ we will first describe representatives for the vertices of $B_n/G$ and then analogous representatives for vertices of $\mathcal E(B_n)/G.$
+To give our formula for the ranks of $\mathcal E^r(B_n)/G,$ we will first describe representatives for the elements of $B_n/G$ and then analogous representatives for vertices of $\mathcal E(B_n)/G.$
 
 \begin{defn}
 For $x \subset [l \cdot m]$ we say $x$ is {\it left justified} if whenever $a \in x,$ such that $a \neq 1 \pmod l,$ then $a -1 \in x.$ In other words, when we pick out the boxes of the $l\times m$ rectangle which lie in $x$ the resulting diagram is left justified.
@@ -1368,7 +1354,7 @@ For $x \subset [l\cdot m],$ say $x$ is a {\it Young Diagram} if $x$ is left just
 For each $x \in B_{l\cdot m}$ there exists a unique representative $z \in Gx$ such that $z$ is a Young Diagram.
 \end{lem}
 \begin{proof}
-Uniqueness is clear, because for any $g \in G,$ by Claim ~\ref{lem:comp_invariance}, $part(gx) = part(x).$ So, to we only have to show there is some $g \in G$ for which $gx$ is a Young Diagram. Indeed, first, choose $h_1 \in G$ so that $h_1x$ is left justified. This can be done because every permutation of a single row in the $l\times m$ rectangle lies in the wreath product, so, we can take $h_1$ to be the product of the elements that left justify each individual row. Then, let $h_2$ be the element that swaps the rows of $h_1x$ so that they increase going down. Finally, taking $g = h_2 h_1,$ it follows that $gx$ is a Young diagram. 
+Uniqueness is clear, because for any $g \in G,$ by Claim ~\ref{lem:comp_invariance}, $part(gx) = part(x).$ So, to we only have to show there is some $g \in G$ for which $gx$ is a Young Diagram. Indeed, first, choose $h_1 \in G$ so that $h_1x$ is left justified. This can be done because every permutation of a single row in the $l\times m$ rectangle lies in the wreath product, so, we can take $h_1$ to be the product of the elements that left justify each individual row. Then, let $h_2$ be the element that swaps the rows of $h_1x$ so that they increase going down. Finally, taking $g = h_2 h_1,$ it follows that $gx$ is a Young Diagram. 
 \end{proof}
 
 \begin{note}
@@ -1383,7 +1369,7 @@ For $\lambda = (\lambda_1,\ldots, \lambda_k)$ a partition, introduce the alterna
 
 \begin{lem}
 \label{lem:young_diag_reduction}
-If $(x, y), (w, y) \in\mathcal E^r(B_n)_i$ then $(x, y) \in G(w, y)$ if and only if for all $g \in G$ such that $gy$ is a Young diagram, we have $(gx, gy) \in G(gw, gy).$ In particular, if $gy = \overline y$ then $(x, y) \in G(w, y)$ if and only if $(gx, \overline y) \in (gw, \overline y).$
+If $(x, y), (w, y) \in\mathcal E^r(B_n)_i$ then $(x, y) \in G(w, y)$ if and only if for all $g \in G$ such that $gy$ is a Young Diagram, we have $(gx, gy) \in G(gw, gy).$ In particular, if $gy = \overline y$ then $(x, y) \in G(w, y)$ if and only if $(gx, \overline y) \in (gw, \overline y).$
 \end{lem}
 \begin{proof}
 Clearly $g(x, y) \in G(g(w, y))$ if and only if $(x, y) \in G(w, y).$
@@ -1407,10 +1393,10 @@ Conversely, note that $(x, y) \in G(w, y)$ is equivalent to the existence of a $
 
 \begin{rem}
 \label{rem:viewing_wreath_orbits}
-So, one way of viewing $G$ orbits of an element $(x, y) \in \mathcal E^r(B_n)$ is as ``outer'' Young Diagrams, made up of a sequence of rectangles stacked on top of one another, each one wider than the next, which form the Young diagram $\bar y.$ Then, to each such rectangle we associate an ``inner'' Young Diagram. The inner young diagram corresponds to the elements in that rectangle in $y$ but not in $x.$ Two elements are in the same $G$ orbit if and only if their ``outer'' Young Diagram and ``inner'' Young Diagrams are all the same.
+So, one way of viewing $G$ orbits of an element $(x, y) \in \mathcal E^r(B_n)$ is as ``outer'' Young Diagrams, made up of a sequence of rectangles stacked on top of one another, each one wider than the next, which form the Young Diagram $\bar y.$ Then, to each such rectangle we associate an ``inner'' Young Diagram. The inner Young Diagram corresponds to the elements in that rectangle in $y$ but not in $x.$ The sum of the sizes of all these inner Young Diagrams is $r.$ Two elements are in the same $G$ orbit if and only if their ``outer'' Young Diagram and ``inner'' Young Diagrams are all the same.
 \end{rem}
 
-The next step is to give explicitly formulas for the ranks of $\mathcal E^r(B_n).$
+The next step is to give explicit formulas for the ranks of $\mathcal E^r(B_n).$
 
 \begin{note}
 For $p(x) = \sum_{i=0}^N c_ix^i,$ a polynomial, define the notation $[p(x)]_r = c_r.$
@@ -1651,11 +1637,11 @@ p[l,m] &= \sum_{t = 0}^{l\cdot m} p_{[t]}(l,m)\\
 \section{Unimodal Quotients}
 \label{sec:unimodal}
 
-In this section, show that several important posets $\mathcal E(B_n/G)$ are rank symmetric and rank unimodal. First, we examine left multiplication actions, showing that for $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the action of $C_n$ on the vertices of an $n$-gon by rotation, induces an action on $B_n$ such that $\mathcal E(B_n/C_n)$ is rank unimodal and symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E(B_n/D_{2n})$ is rank unimodal and symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT.
+In this section, we show that several important posets $\mathcal E(B_n/G)$ are rank-unimodal. Note, they are always rank-symmetric by Corollary \ref{cor:duality_bn_quotients}. First, we show unimodality for left multiplication actions. That is, if $|G| = n,$ the action of $G$ on itself by left multiplication induces an action of $G$ on $B_n$ such that $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i.$ Using this result, we show that the action of the cyclic group, $C_n,$ on the vertices of an $n$-gon by rotation induces an action on $B_n$ such that $\mathcal E(B_n/C_n)$ is rank-unimodal and rank-symmetric. Then, letting the dihedral group act on the vertices of an $n$-gon by rotations and reflections, we obtain an induced action on $B_n$ so that $\mathcal E(B_n/D_{2n})$ is rank-unimodal and rank-symmetric. Furthermore, in the case that $n = p,2p$ for $p$ a prime, the action of $D_{2n}$ on $B_n$ is CCT.
 
 \ssec{Groups of order $n$}
 
-In this subsection, we show that for any group $G$ with $|G| = n$ that has a transitive action $\phi: G \times B_n \rightarrow B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ 
+In this subsection, we show that for any group $G$ with $|G| = n$ and a transitive action $\phi: G \times B_n \rightarrow B_n$, then $$|(\mathcal E(B_n)/G)_i| = \binom {n-1}{i}.$$ 
 Note that by identifying $G \cong [n]$ as sets, any such action is isomorphic to the action induced by left multiplication $$\psi: G\times G \rightarrow G,(g,h)\mapsto g \cdot h.$$ 
 %We can then use a simple result in group theory to calculate the ranks of $\mathcal E(B_n)/G$ for all transitive actions $\phi:G\times P \rightarrow P,$ where $G$ is abelian.
 
@@ -1680,22 +1666,13 @@ Note that the action $\phi$ induces an action of $G$ on $B_n,$ which in turn ind
 Let $G$ be a group with $|G| = n$ and a transitive action $\psi:G \times [n] \rightarrow [n],$ inducing an action $\phi:G \times \mathcal E(B_n)\rightarrow \mathcal E(B_n).$ Then, $\displaystyle |(\mathcal E(B_n)/G)_i| = \binom{n-1}{i}.$
 \end{lem}
 \begin{proof}
-There are $\binom{n}{i}$ elements $x\in(B_n)_i.$ For each $x \in (B_n)_i$ there are $n-i$ elements $y \in (B_n)_{i+1}$ so that $x \subset y.$ Hence, there are a total of $\binom{n}{i}\cdot (n-i)$ elements $(x, y) \in \mathcal E^r(B_n)_i.$ By Proposition ~\ref{prop:stabilizer_edge}, we have $|\Stab(x, y)| = 1.$ Therefore, by the Orbit Stabilizer Theorem, it follows $|G(x, y)| = n.$ So, all orbits have the same $n$. From this,
+There are $\binom{n}{i}$ elements $x\in(B_n)_i.$ For each $x \in (B_n)_i$ there are $n-i$ elements $y \in (B_n)_{i+1}$ so that $x \subset y.$ Hence, there are a total of $\binom{n}{i}\cdot (n-i)$ elements $(x, y) \in \mathcal E^r(B_n)_i.$ By Proposition ~\ref{prop:stabilizer_edge}, we have $|\Stab(x, y)| = 1.$ Therefore, by the Orbit Stabilizer Theorem, it follows $|G(x, y)| = n.$ From this,
 \begin{align*}
 |\mathcal E(B_n)_i/G| = |\mathcal E(B_n)_i|/|G| = \frac{\binom{n}{i}\cdot (n-i)}{n} = \binom {n-1}{i}.
 \end{align*}
 \end{proof}
 
-\iffalse
-\begin{lem}
-\label{lem:faithful_action}
-For $G$ a group let $H \subset G$ be the subgroup such that $hx = x$ for all $x \in X,h \in H.$ Then, $H$ is a normal subgroup of $G$ and if $|G/H| = n,$ then $\mathcal E(B_n)/G =\mathcal E(B_n)/(G/H).$
-\end{lem}
-\begin{proof}
-First, we check $H$ is normal. For any $g \in G,x \in x$ it follows $ghg^{-1}x = gh(g^{-1}x) = g(g^{-1}x) = (gg^{-1})x = x$, and so $ghg^{-1} \in H.$ Hence, $G/H$ is a group.
-
-Then, observe $Gx = (G/H)x$ because $H$ acts trivially. Therefore, $\mathcal E(B_n)/G \cong \mathcal E(B_n)/(G/H),$ since $G,G/H$ have exactly the same orbits.
-\end{proof}
+It is worth noting that in the case a group $A$ is abelian, the stronger statement that any faithful transitive action of $A$ on $[n]$ induces an action on $B_n$ with $|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$ This follows almost immediate from the following fact.
 
 \begin{lem}
 \label{lem:transitive_abelian}[\cite{Stack}]
@@ -1704,13 +1681,12 @@ If $A$ is an abelian group acting faithfully and transitively on the set $[n],$ 
 
 \begin{cor}
 \label{cor:transitive_abelian_ranks}
-Any abelian group $A$ which acts transitively on $[n]$ has $$|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$$
+Any abelian group $A$ which acts transitively on $[n]$ has an induced action on $B_n$ with $$|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$$
 \end{cor}
 \begin{proof}
-By Lemma ~\ref{lem:faithful_action}, we can assume $A$ acts faithfully as well.
 By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_counts}, $ \displaystyle |(\mathcal E (B_n)/A)_i| = \binom{n-1}{i}.$
-\end{proof}
-\fi
+\end{proof}m
+
 
 
 
@@ -1720,7 +1696,7 @@ By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_co
 \ssec{Quotient by the Cyclic Group}
 \label{sec:cyclic}
 
-In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank symmetric and rank unimodal. In fact, for any action of $G$ on $B_n$ induced by an action of $G$ on $[n],$ $\mathcal E(B_n/G)$ is rank symmetric because one can define a bijection between ranks $i$ and $n-i-1$ by complementation, taking $(x,y)$ to $([n]\setminus y,[n]\setminus x)$. The unimodality part is much more difficult, however, and it is what we prove in this subsection. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i^{th}$ rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
+In this subsection, let $G = C_n$ and let $G$ act on $[n]$ identifying the $[n]$ with the vertices of a regular $n$-gon, and having $C_n$ act by rotating these vertices. Then, let $G$ act on $B_n$ by the induced action. We show the poset $ \mathcal E(B_n/G)$ is rank-unimodal. From Corollary ~\ref{cor:transitive_abelian_ranks}, we know that for $G = C_n$, the size of the $i$th rank of the poset $ \mathcal E (B_n)/C_n$ is $$|( \mathcal E (B_n)/C_n)_i| = \binom{n-1}{i}.$$
 We will bound $|( \mathcal E(B_n/C_n))_i|$ by  $|( \mathcal E (B_n)/C_n)_i|$ to obtain the unimodality. 
 
 \begin{rem}
@@ -1860,7 +1836,7 @@ Note that for any $G(x, y) \in V_d$, there exists some $r$ such that $\sigma_0^r
 
 
 \begin{thm}{\label{cor:cyclic_unimodal}} 
-The poset $\mathcal E(B_n/C_n)$ is rank symmetric and rank unimodal.
+The poset $\mathcal E(B_n/C_n)$ is rank-symmetric and rank-unimodal.
 \end{thm}
 
 \begin{proof}
@@ -1882,7 +1858,7 @@ Now, by Lemma \ref{lem:cyclic_bounding_lambda}, we know that $$p_{i+1} - p_{i} =
 \ssec{Quotient by the Dihedral Group}
 \label{ssec:dihedral}
 
-In this subsection, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E(B_n/G)$ is rank symmetric and rank unimodal.
+In this subsection, we show a similar result for the Dihedral groups that act naturally on $B_n$. Namely, for $G = D_{2n}$ the dihedral group of order $2n$, the poset $\mathcal E(B_n/G)$ is rank-symmetric and rank-unimodal.
 
 
 \begin{note} In this section, we fix an arbitrary $n$ again, set $$Q = \mathcal E (B_n)/D_{2n}, \quad P = \mathcal E(B_n/D_{2n})$$ and let $$q_i = |\big( \mathcal E (B_n)/D_{2n} \big)_i|, \quad p_i = |\big( \mathcal E(B_n/D_{2n}) \big)_i|. $$ 
@@ -1918,7 +1894,7 @@ It is easy to see that if $n \neq p,n \neq 2p, n >1$ for any prime $p$, then the
 \begin{proof}
 Consider an element $(x , y( \in \mathcal E(B_n)$ where $x \lessdot y$. Note that any element $\tau $ that fixes both $x$ and $y$ has to fix the difference $y\minus x$, which is a one-element set. Since $G = D_{2n}$, 
 we know that $1\leq |\Stab (x , y)| \leq 2$.   
-Let $\mu_1$ be the number of $G$-orbits with the trivial stabilizer and $\mu_2$ be the number of $G$-orbits with the stabilizer of size $2$, which contains the identity and a reflection. By the Orbit-Stabilizer Theorem, each orbit with the trivial stabilizer is of size $|D_{2n}| /1 = 2n $, while all other orbit is of size $|D_{2n}|/2 = n$.  Therefore $$\mu_1 \cdot 2n + \mu_2 \cdot n = |\{(x, y)\}| = {n \choose {i+1}}  \cdot {{i+1} \choose 1} = n {n-1 \choose i }.$$
+Let $\mu_1$ be the number of $G$-orbits with the trivial stabilizer and $\mu_2$ be the number of $G$-orbits with the stabilizer of size $2$, which contains the identity and a reflection. By the Orbit Stabilizer Theorem, each orbit with the trivial stabilizer is of size $|D_{2n}| /1 = 2n $, while all other orbit is of size $|D_{2n}|/2 = n$.  Therefore $$\mu_1 \cdot 2n + \mu_2 \cdot n = |\{(x, y)\}| = {n \choose {i+1}}  \cdot {{i+1} \choose 1} = n {n-1 \choose i }.$$
 
 Our goal is to calculate $q_i = \mu_1 + \mu_2$, so it remains to calculate $\mu_2$, which counts the number of $G$-orbits such that the reflection also fixes $x$. Without loss of generality, we may assume that $y\minus x = \{1\}$. 
 We break into cases:
@@ -1934,7 +1910,7 @@ An alternate proof of Lemma ~\ref{dihedral002} follows directly from Polya's The
 \end{rem}
 
 \begin{cor}{\label{dihedral003}} 
-The poset $\mathcal E(B_n/D_{2n})$ is rank symmetric and rank unimodal.
+The poset $\mathcal E(B_n/D_{2n})$ is rank-symmetric and rank-unimodal.
 \end{cor}
 
 \begin{proof}
@@ -2241,10 +2217,7 @@ By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefsch
 \label{sec:additional_stuff}
 
 In this section, we include various remarks, as well as failed attempts, which don't particularly belong in other sections.
-\todo{
-(21)  Wasn't Section 9 going to also record your example that shows the action of $G=S_n$ embedded into $S_{(n choose 2)}$ by permuting the edges of a complete graph is not CCT?
-
-Zijian, can you add this?}
+\todo{(21)  Wasn't Section 9 going to also record your example that shows the action of $G=S_n$ embedded into $S_{(n choose 2)}$ by permuting the edges of a complete graph is not CCT? Zijian, can you add this?}
 
 %%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
 \ssec{A $q$-analog}
@@ -2272,8 +2245,7 @@ Define the graded poset $T = \mathcal E \big(B_n(q)\big)/C_n(q)$ and let $t_i = 
 For any $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1},$ so that $(V_x, V_y) \in \mathcal E \big(B_n(q)\big)/C_n(q),$ then $Stab_{C_n(q)}(V_x , V_y) \cong \BF_q^\times.$ In particular, $|Stab_{C_n(q)}(V_x , V_y)|=q-1.$ 
 \end{lem}
 \begin{proof}
-We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. \todo{V:  You probably mean if the irreducible polynomial f(x) over $F_q$ divides $x^{q^i}-x$, not what you wrote. I would probably just quickly remind the reader why it's true:  such a polynomial f(x) is the minimal polynomial for some element a of $F_{q^i}$, and hence F(a) is a subfield of $F_{q^i}$, so of the form $F_{q^d}$ with d dividing i, but then d is the degree of f(x).
-  Another (nearly equivalent) way to phrase the proof of Lemma 9.3 goes like this.  If V is a k-dimensional $F_q$-subspace of $F_{q^n}$ which is stabilized by an element a in $F_{q^n}^x$, then V is actually an F(a)-subspace.  Hence if d is the unique positive integer for which $F(a) = F_{q^d}$, then d divides k (because d is the dimension of F(a) over $F_q$ while k is the dimension of V over $F_q$).  But then in the setting of Lemma 9.3, one has d dividing both i and i+1, so d=1, i.e. the element a actually lies in $F_q$.}
+We claim that if $\tau \in C_n(q)$ such that $\tau V_x = V_x$ and $\tau V_y = V_y$, then $\tau \in \BF_q^\times$. First, it is clear that any scalar $c \in \BF_q^\times$  fixes any $V \in B_n(q)$. Now assume $V_x \subset V_y$ and $\tau V_x = V_x, \tau V_y = V_y$ as in the claim. Then, in particular $\tau$ permutes all the elements in $V_x$, i.e., $\tau: V_x \rightarrow V_x$ is an isomorphism of $\BF_q$-vector spaces. Pick a nonzero element $a \in V_x$,  it is clear that $$\tau^{q^i} (a) = \tau^{q^i} a = \tau a.$$ The latter equation implies that $\tau^{q^i} - \tau = 0$, so $\tau$ satisfies the polynomial $X^{q^{i}} - X \in \BF_q[X]$. Similarly, since $\tau V_y = V_y$, $\tau$ is a root of the polynomial $X^{q^{i+1}} - X \in\BF_q[X].$  Let $f(X)$ be a monic irreducible polynomial of $\tau$ over $\BF_q$, then $\deg f(X) | i $ and $\deg f(X) | (i+1)$. This shows that $\deg f(X) = 1$, in another word, $\tau$ is a $\BF_q$-scalar. \todo{V:  You probably mean if the irreducible polynomial f(x) over $F_q$ divides $x^{q^i}-x$, not what you wrote. I would probably just quickly remind the reader why it's true:  such a polynomial f(x) is the minimal polynomial for some element a of $F_{q^i}$, and hence F(a) is a subfield of $F_{q^i}$, so of the form $F_{q^d}$ with d dividing i, but then d is the degree of f(x). Another (nearly equivalent) way to phrase the proof of Lemma 9.3 goes like this.  If V is a k-dimensional $F_q$-subspace of $F_{q^n}$ which is stabilized by an element a in $F_{q^n}^x$, then V is actually an F(a)-subspace.  Hence if d is the unique positive integer for which $F(a) = F_{q^d}$, then d divides k (because d is the dimension of F(a) over $F_q$ while k is the dimension of V over $F_q$).  But then in the setting of Lemma 9.3, one has d dividing both i and i+1, so d=1, i.e. the element a actually lies in $F_q$.}
 \end{proof}
 
 \begin{lem} 
@@ -2283,7 +2255,7 @@ Let $q$ be a prime,  then $$ |\big( \mathcal E \big(B_n(q)\big)/C_n(q) \big)_i| 
 
 \begin{proof}
 
-Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit-Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
+Let $V_x \in B_n(q)_i,V_y \in B_n(q)_{i+1}$ so that $(V_x, V_y) \in \mathcal E (B_n(q))$. By Lemma ~\ref{lem:q_stabilizer}, for any $(V_x, V_y) \in \mathcal E ^1 (B_n(q))_i,|Stab_{C_n(q)}(V_x, V_y)|=q-1.$  By the Orbit Stabilizer Theorem, we know that the size of each orbit in $\mathcal E ((B_n(q))_i$ under the action of $C_n(q)$ is $$|C_n(q)|/(q-1) = \frac{q^n-1}{q-1} = (n)_q.$$
 
 Now we can calculate the number $q_i$, which is the total number of elements in $(B_n(q))_i$ divided by the size of each orbit:$$q_i = \frac{{n \choose i+1}_q {i+1 \choose 1}_q}{(n)_q} = {n-1 \choose i}_q. $$
 \end{proof}
@@ -2514,7 +2486,7 @@ For $G$ a group with a CCT action on $B_n(q)$ is $\mathcal E(B_n(q)/G)$ Peck?
 Even more generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG_Peck} holds.
 
 \begin{question}
-For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank unimodal?
+For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank-unimodal?
 \end{question}
 
 \sssec{Additional CCT Actions}
@@ -2543,13 +2515,7 @@ Is the action of $GL_n(\BF_q)$ on $B_{q^n-1}$ (induced by the action of $GL_n(\B
 This research was carried out in the 2014 combinatorics REU program at the University of Minnesota, Twin Cities, and was supported by RTG grant NSF/DMS-1148634.
 The authors would like to thank their mentor Victor Reiner for his consistent help and guidance throughout the project and their TA Elise DelMas for her helpful feedback on the paper. They would also like to thank Ka Yu Tam for helpful comments.  In addition, they thank the math department of University of Minnesota, Twin Cities, for its hospitality and Gregg Musiker for organizing the program.
 
-\todo{(1) Why is the abbreviation for Pak-Panova $[IP]$ and not $[PP]$?
-
-Similarly the abbreviation for Kozlov-Babson should be $[BK]$, and you should put their names in alphabetical order (unless they put them out of order on their own paper, which they didn't in this case).  
-
-Similarly $[Kat11]$ should be something like $[BLO],$ with the three authors' initials of their last names in order, and the reference itself should list their names in order (and fix the weird comma problems).
-
-David, can you fix these bibtex things?}
+\todo{(1) Why is the abbreviation for Pak-Panova $[IP]$ and not $[PP]$? Similarly the abbreviation for Kozlov-Babson should be $[BK]$, and you should put their names in alphabetical order (unless they put them out of order on their own paper, which they didn't in this case). Similarly $[Kat11]$ should be something like $[BLO],$ with the three authors' initials of their last names in order, and the reference itself should list their names in order (and fix the weird comma problems). David, can you fix these bibtex things?}
 \bibliography{References}
 \bibliographystyle{alpha}
 
