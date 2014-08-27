@@ -68,6 +68,8 @@ MAA Stud. Math., 17, Math. Assoc. America, Washington, D.C., 1978.
 
 David/Zijian, I put something temporary in the bibliography, but I don't really understand how to cite it. I think it's a book, but I'm not really sure.
 
+I changed it to the @incollection entry type, which I think is what we want -- David
+
 ------------------------
 Further comments
 -----------------------
@@ -77,7 +79,8 @@ Similarly the abbreviation for Kozlov-Babson should be [BK], and you should put 
 
 Similarly [Kat11] should be something like [BLO], with the three authors' initials of their last names in order, and the reference itself should list their names in order (and fix the weird comma problems).
 
-David, can you fix these bibtex things?
+
+Oh, I see what the problem was.  I think I've fixed everything, except the article he was thinking should start with [BLO is [BdLO11], which is a little weird. -- David
 
 -----
 (2) In Section 2, is the definition of graded poset really the one you want?  For example, it allows the poset a<b<c, a<d to be considered graded, and even a graded poset of rank 2 by your definition.  Is that OK with you?

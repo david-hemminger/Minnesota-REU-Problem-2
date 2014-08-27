@@ -1,23 +1,25 @@
-\begin{thebibliography}{Kat11}
+\begin{thebibliography}{BdLO11}
 
-\bibitem[CG]{greene}
-Daniel J.~Kleitman Curtis~Greene.
-\newblock {\em Proof techniques in the theory of finite sets}.
+\bibitem[BdLO11]{permutation_polytopes}
+Katherine Burggraf, Jes{\'u}s de~Loera, and Mohamed Omar.
+\newblock On volumes of permutation polytopes.
+\newblock arxiv: 1103.0039, 2011.
 
-\bibitem[EB05]{babson}
-Dmitry N.~Kozlov Eric~Babson.
+\bibitem[BK05]{babson}
+Eric Babson and Dmitry~N. Kozlov.
 \newblock Group actions on posets.
 \newblock {\em J. Algebra}, 285:439--450, 2005.
 
-\bibitem[IP13]{pak}
-Greta~Panova Igor~Pak.
+\bibitem[GK78]{greene}
+Curtis Greene and Daniel~J. Kleitman.
+\newblock Proof techniques in the theory of finite sets.
+\newblock In {\em Studies in combinatorics (MAA Stud. Math.)}, volume~17, pages
+  22--79. Math. Assoc. America, Washington, D.C., 1978.
+
+\bibitem[PP13]{pak}
+Igor Pak and Greta Panova.
 \newblock Unimodality via kronecker products.
 \newblock {\em Journal of Algebraic Combinatorics}, page To appear, 2013.
-
-\bibitem[Kat11]{permutation_polytopes}
-Jes{\'u}s de Loera Mohamed~Omar Katherine, Burggraf.
-\newblock On volumes of permutation polytopes.
-\newblock arxiv: 1103.0039, 2011.
 
 \bibitem[Sta]{Stack}
 abelian transitive subgroups.
