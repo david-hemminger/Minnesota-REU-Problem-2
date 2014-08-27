@@ -613,7 +613,7 @@ Let $G$ be a group acting on a graded poset $P.$ The following are equivalent:
 	\item Whenever $x \lessdot y,x \lessdot z,$ and $y \in Gz,$ there exists some $g \in Stab(x)$ with $gx = z.$
 	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is a bijective morphism (but not necessarily an isomorphism).
 %	\item The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, y)) = (Gx,Gy)$ is an injective morphism.
-	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|$
+	\item For all $i$ there is an equality $|(\mathcal E(P)/G)_i|=| (\mathcal E(P/G))_i|.$
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -1673,21 +1673,6 @@ There are $\binom{n}{i}$ elements $x\in(B_n)_i.$ For each $x \in (B_n)_i$ there 
 |\mathcal E(B_n)_i/G| = |\mathcal E(B_n)_i|/|G| = \frac{\binom{n}{i}\cdot (n-i)}{n} = \binom {n-1}{i}.
 \end{align*}
 \end{proof}
-
-It is worth noting that in the case a group $A$ is abelian, the stronger statement that any faithful transitive action of $A$ on $[n]$ induces an action on $B_n$ with $|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$ This follows almost immediate from the following fact.
-
-\begin{lem}
-\label{lem:transitive_abelian}[\cite{Stack}]
-If $A$ is an abelian group acting faithfully and transitively on the set $[n],$ then $|A| = n.$
-\end{lem}
-
-\begin{cor}
-\label{cor:transitive_abelian_ranks}
-Any abelian group $A$ which acts transitively on $[n]$ has an induced action on $B_n$ with $$|(\mathcal E (B_n)/A)_i|= \binom{n-1}{i}.$$
-\end{cor}
-\begin{proof}
-By Lemma ~\ref{lem:transitive_abelian}, $|A| = n.$ Then, by Lemma ~\ref{lem:q_counts}, $ \displaystyle |(\mathcal E (B_n)/A)_i| = \binom{n-1}{i}.$
-\end{proof}m
 
 
 
