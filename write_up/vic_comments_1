@@ -1,4 +1,4 @@
-Hi all,
+﻿Hi all,
 
   Thanks for sending it along.  Let me first address your list of questions, and then below that I'll add further comments.
 
@@ -203,7 +203,7 @@ Vic, yes there was, this is fixed.
 ----
 (21)  Wasn't Section 9 going to also record your example that shows the action of G=S_n embedded into S_{(n choose 2)} by permuting the edges of a complete graph is not CCT?
 
-Zijian, can you add this?
+Zijian: I will add this, sure
 ----
 (22) In Question 9.13, why is there a dual space (F_q^n)^* inside the parenthesis, as opposed to just F_q^n itself?  Also, shouldn't the action of PGL_n(F_q) be on B_n(q), not on B_{q^n-1}, else it is not well-defined?
 By the way, I suspect that Question 9.13 is probably resolvable with further thought or experimentation, and if I had to bet, I would bet that they are all _not_ CCT.
