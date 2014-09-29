@@ -40,5 +40,5 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.2}{Unitary Peck Generalizations}}{41}{subsubsection.9.4.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{42}{subsubsection.9.4.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.4}{Additional CCT Actions}}{42}{subsubsection.9.4.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.7}
-\contentsline {section}{\tocsection {}{}{References}}{42}{section*.9}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.6}
+\contentsline {section}{\tocsection {}{}{References}}{42}{section*.7}

@@ -1,48 +1,42 @@
-\begin{thebibliography}{BdLO11}
+\begin{thebibliography}{1}
 
-\bibitem[BdLO11]{permutation_polytopes}
-Katherine Burggraf, Jes{\'u}s de~Loera, and Mohamed Omar.
-\newblock On volumes of permutation polytopes.
-\newblock arxiv: 1103.0039, 2011.
-
-\bibitem[BK05]{babson}
+\bibitem{babson}
 Eric Babson and Dmitry~N. Kozlov.
 \newblock Group actions on posets.
 \newblock {\em J. Algebra}, 285:439--450, 2005.
 
-\bibitem[GK78]{greene}
+\bibitem{permutation_polytopes}
+Katherine Burggraf, Jes{\'u}s de~Loera, and Mohamed Omar.
+\newblock On volumes of permutation polytopes.
+\newblock arxiv: 1103.0039, 2011.
+
+\bibitem{greene}
 Curtis Greene and Daniel~J. Kleitman.
 \newblock Proof techniques in the theory of finite sets.
 \newblock In {\em Studies in combinatorics (MAA Stud. Math.)}, volume~17, pages
   22--79. Math. Assoc. America, Washington, D.C., 1978.
 
-\bibitem[PP13]{pak}
+\bibitem{pak}
 Igor Pak and Greta Panova.
 \newblock Unimodality via kronecker products.
 \newblock {\em Journal of Algebraic Combinatorics}, page To appear, 2013.
 
-\bibitem[Sta]{Stack}
-abelian transitive subgroups.
-\newblock
-  \url{http://math.stackexchange.com/questions/128098/abelian-transitive-subgroups}.
-\newblock Accessed: 2014-08-20.
-
-\bibitem[Sta80]{weyl_groups_stanley}
+\bibitem{weyl_groups_stanley}
 Richard~P. Stanley.
 \newblock Weyl groups, the hard lefschetz theorem, and the sperner property.
 \newblock {\em SIAM J. on Algebraic and Discrete Methods}, 1:168--184, 1980.
 
-\bibitem[Sta84]{quotients_stanley}
+\bibitem{quotients_stanley}
 Richard~P. Stanley.
 \newblock Quotients of peck posets.
 \newblock {\em Order}, 1:29--34, 1984.
 
-\bibitem[Sta11]{enumerative_comb}
+\bibitem{enumerative_comb}
 Richard~P. Stanley.
 \newblock {\em Enumerative Combinatorics}, volume~1.
 \newblock Cambridge University Press, 2011.
 
-\bibitem[Sta13]{algebraic_stanley}
+\bibitem{algebraic_stanley}
 Richard~P. Stanley.
 \newblock {\em Algebraic Combinatorics}.
 \newblock Springer, 2013.
