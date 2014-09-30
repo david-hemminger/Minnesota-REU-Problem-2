@@ -42,15 +42,16 @@ Why does Lemma 7.5 have no proof?  What were you deducing it from?
 
 I think this subsection should be cleaned up a bit generally, as it is not making clear which hypotheses apply where.  Probably best to just repeatthe  hypotheses in each result, like "Let G be a finite group with n elements acting by left-translation on itself", as this clarifies the whole issue, and it doesn't take long to say.
 
-Vic, we realized that the second half of this section was fairly extraneous and not very important, so we decided to delete it. We also used your slicker argument by orbit stabilizer instead of burnside's lemma for 7.1. Also, we feel that the orbit stabilizer lemma is so well known that reminding the reader of the proof isn't really necessary, and it might distract the reader a bit from what we're trying to do. Can you explain why you think it should be added?
+Vic, we realized that the second half of this section was fairly extraneous and not very important, so we decided to delete it. We also used your slicker argument by orbit stabilizer instead of burnside's lemma for 7.1. Also, we feel that the orbit stabilizer lemma is so well known that reminding the reader of the proof isn't really necessary, and it might distract the reader a bit from what we're trying to do. Can you explain why you think it should be added? 
 
+I also think the Orbit-stabilizer theorem is too standard to cite or prove. (zijian)
 
 5) Should we cite the fact that if an irreducible polynomial divides q^i-q, then its degree divides i?
 
 V:  You probably mean if the irreducible polynomial f(x) over F_q divides x^{q^i}-x, not what you wrote. I would probably just quickly remind the reader why it's true:  such a polynomial f(x) is the minimal polynomial for some element a of F_{q^i}, and hence F(a) is a subfield of F_{q^i}, so of the form F_{q^d} with d dividing i, but then d is the degree of f(x).
   Another (nearly equivalent) way to phrase the proof of Lemma 9.3 goes like this.  If V is a k-dimensional F_q-subspace of F_{q^n} which is stabilized by an element a in F_{q^n}^x, then V is actually an F(a)-subspace.  Hence if d is the unique positive integer for which F(a) = F_{q^d}, then d divides k (because d is the dimension of F(a) over F_q while k is the dimension of V over F_q).  But then in the setting of Lemma 9.3, one has d dividing both i and i+1, so d=1, i.e. the element a actually lies in F_q.
   
-Zijian, can you edit this?.
+Sure, I changed a little bit. 
 
 6) Should we cite the fact that all actions on B_n are induced by an action on [n]?
 
@@ -70,6 +71,8 @@ David/Zijian, I put something temporary in the bibliography, but I don't really 
 
 I changed it to the @incollection entry type, which I think is what we want -- David
 
+I think it is okay. (zijian)
+
 ------------------------
 Further comments
 -----------------------
@@ -81,6 +84,7 @@ Similarly [Kat11] should be something like [BLO], with the three authors' initia
 
 
 Oh, I see what the problem was.  I think I've fixed everything, except the article he was thinking should start with [BLO is [BdLO11], which is a little weird. -- David
+
 
 -----
 (2) In Section 2, is the definition of graded poset really the one you want?  For example, it allows the poset a<b<c, a<d to be considered graded, and even a graded poset of rank 2 by your definition.  Is that OK with you?
@@ -157,7 +161,7 @@ I think you should add such a remark.  Also, you should say something about Ques
 (the dodecahedron, icosahedron in R^3; the 24-cell, the 120-cell, and the 600-cell in R^4).  
 Actually, you could probably check the case of the dodecahedron by computer, since it only has 12 vertices.
 
-Zijian, can you include the proof for D_{2n} not being cct?
+Zijian, can you include the proof for D_{2n} not being cct? -- okay now.
 
 Vic, I believe 12 is far too big for the current program I have written to handle. I don't think the computer can even handle 11.
 -----
@@ -203,7 +207,7 @@ Vic, yes there was, this is fixed.
 ----
 (21)  Wasn't Section 9 going to also record your example that shows the action of G=S_n embedded into S_{(n choose 2)} by permuting the edges of a complete graph is not CCT?
 
-Zijian: I will add this, sure
+Zijian: I will add this, sure -- but the report can go online before I draw the pictures. 
 ----
 (22) In Question 9.13, why is there a dual space (F_q^n)^* inside the parenthesis, as opposed to just F_q^n itself?  Also, shouldn't the action of PGL_n(F_q) be on B_n(q), not on B_{q^n-1}, else it is not well-defined?
 By the way, I suspect that Question 9.13 is probably resolvable with further thought or experimentation, and if I had to bet, I would bet that they are all _not_ CCT.
