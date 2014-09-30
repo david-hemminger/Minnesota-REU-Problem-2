@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  30 SEP 2014 17:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.28)  30 SEP 2014 17:49
 entering extended mode
 **C:/Users/zyao/Documents/GitHub/Minnesota-REU-Problem-2/write_up/unimodality_p
 aper.tex
@@ -979,20 +979,10 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 per.toc)
 \tf@toc=\write8
  [1{C:/Users/zyao/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
-per.tdo)
-\tf@tdo=\write9
- [2]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 162.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input l
-ine 170.
+ine 169.
 Package hyperref Info: bookmark level for unknown eg defaults to 0 on input lin
-e 187.
+e 186.
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no ( in font nullfont!
@@ -1000,58 +990,59 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
-[3]
 Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 308.
+nput line 307.
+
+[2]
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 322.
+ne 321.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 335.
- [4]
+ine 334.
 Package hyperref Info: bookmark level for unknown rem defaults to 0 on input li
-ne 364.
+ne 363.
+ [3]
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input li
-ne 393.
- [5] [6]
+ne 392.
+ [4] [5]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 601.
-[7] [8]
+ne 600.
+[6] [7]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10] [11]
+[8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 884.
+(hyperref)                removing `math shift' on input line 883.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 884.
+(hyperref)                removing `math shift' on input line 883.
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 884--886
+Underfull \hbox (badness 5036) in paragraph at lines 883--885
 [][] \OT1/cmr/m/n/10 3.3.\OT1/cmr/bx/n/10 A Gen-er-al-iza-tion of $[][]\U/eus/m
 /n/10 H\OML/cmm/m/it/10 ; \U/eus/m/n/10 E$\OT1/cmr/bx/n/10 .[][] \OT1/cmr/m/n/1
 0 Al-though for the most part, we in-ves-ti-gate
  []
 
-[12] [13] [14]
+[11] [12] [13]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 1126.
- [15] [16] [17]
+ine 1125.
+ [14] [15] [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1310.
+(hyperref)                removing `math shift' on input line 1309.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1310.
+(hyperref)                removing `math shift' on input line 1309.
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 1333--1336
+Underfull \hbox (badness 1997) in paragraph at lines 1332--1335
 [][][]\OT1/cmr/m/n/10 Therefore, $[][]\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 (\U/eus
 /m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10
  =G\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\U
@@ -1064,29 +1055,29 @@ us/m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1340.
+(hyperref)                removing `math shift' on input line 1339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1340.
+(hyperref)                removing `superscript' on input line 1339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1340.
+(hyperref)                removing `subscript' on input line 1339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1340.
+(hyperref)                removing `math shift' on input line 1339.
 
-[18] [19] [20] [21]
-Underfull \hbox (badness 1394) in paragraph at lines 1532--1534
+[17] [18] [19] [20]
+Underfull \hbox (badness 1394) in paragraph at lines 1531--1533
 \OT1/cmr/m/it/10 be a poly-no-mial in $[][]\OML/cmm/m/it/10 r[]:$ \OT1/cmr/m/it
 /10 Then, the co-ef-fi-cients $[][]\OML/cmm/m/it/10 c[]$ \OT1/cmr/m/it/10 are t
 he ranks of the Peck poset
  []
 
-[22] [23]
-Overfull \hbox (5.84885pt too wide) detected at line 1608
+[21] [22]
+Overfull \hbox (5.84885pt too wide) detected at line 1607
 \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 l; m\OT1/cmr/m/n/10 ] = \
 OML/cmm/m/it/10 \OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm
 /m/it/10 ; [] ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; m \OMS/cmsy/m/n/10  \OML/c
@@ -1094,117 +1085,117 @@ mm/m/it/10 l \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 t; \OT1/cmr/m/n/10 0\OML/cmm/m
 /it/10 ; [] ; \OT1/cmr/m/n/10 0) = [][] \OML/cmm/m/it/10 :
  []
 
-[24]
-Overfull \hbox (2.50858pt too wide) in paragraph at lines 1638--1639
+[23]
+Overfull \hbox (2.50858pt too wide) in paragraph at lines 1637--1638
 [][][]\OT1/cmr/m/n/10 First, note that $[][][][] \OML/cmm/m/it/10 i\OT1/cmr/m/n
 /10 ![] = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 
 )\OML/cmm/m/it/10 :$ \OT1/cmr/m/n/10 This can be seen fairly eas-ily, be-cause 
 $[][][][] \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ![] =$
  []
 
-[25]
+[24]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1661.
+(hyperref)                removing `math shift' on input line 1660.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1661.
+(hyperref)                removing `math shift' on input line 1660.
 
 
-LaTeX Warning: Reference `cor:transitive_abelian_ranks' on page 26 undefined on
- input line 1701.
+LaTeX Warning: Reference `cor:transitive_abelian_ranks' on page 25 undefined on
+ input line 1700.
 
-[26] [27] [28]
+[25] [26] [27]
 
-LaTeX Warning: Command \O invalid in math mode on input line 1832.
+LaTeX Warning: Command \O invalid in math mode on input line 1831.
 
-[29]
+[28]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1845.
+(amsmath)                 on input line 1844.
 
-[30] [31]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1933.
-
+[29] [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1933.
+(hyperref)                removing `math shift' on input line 1932.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1933.
-
-[32]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2002.
+(hyperref)                removing `subscript' on input line 1932.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2002.
+(hyperref)                removing `math shift' on input line 1932.
+
+[31]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2001.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2002.
-
-[33] [34] [35] [36]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2227.
+(hyperref)                removing `subscript' on input line 2001.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2227.
+(hyperref)                removing `math shift' on input line 2001.
 
-[37] [38]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2347.
-
+[32] [33] [34] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2347.
+(hyperref)                removing `math shift' on input line 2226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2347.
+(hyperref)                removing `math shift' on input line 2226.
 
-[39]
-Overfull \hbox (4.98163pt too wide) in paragraph at lines 2438--2439
+[36] [37]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2346.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 2346.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2346.
+
+[38]
+Overfull \hbox (4.98163pt too wide) in paragraph at lines 2437--2438
 [][][][] 
  []
 
 
 Underfull \vbox (badness 6859) has occurred while \output is active []
 
- [40]
+ [39]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 2460.
+ut line 2459.
 
-[41]
+[40]
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.bbl
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.brf)
-\tf@brf=\write10
- [42])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2523.
- [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2523.
+\tf@brf=\write9
+ [41])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2522.
+ [42]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2522.
 
 (C:\Users\zyao\Documents\GitHub\Minnesota-REU-Problem-2\write_up\unimodality_pa
 per.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2523.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2523.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2522.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2522.
 
 Package rerunfilecheck Info: File `unimodality_paper.out' has not changed.
-(rerunfilecheck)             Checksum: FEA9C79AF46BF3BB1E944A972F6ABF2F;2387.
+(rerunfilecheck)             Checksum: 6BA24DA0B2078B0EF9735CED9A5DB8B6;2337.
 Package rerunfilecheck Info: File `unimodality_paper.brf' has not changed.
-(rerunfilecheck)             Checksum: ECD80604A72A3239A327644A2651820D;895.
+(rerunfilecheck)             Checksum: EFF2F32F8E44CDB5B9507D9A832C6BBE;895.
 
 
 LaTeX Warning: There were undefined references.
@@ -1212,16 +1203,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2523.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2522.
  ) 
 Here is how much of TeX's memory you used:
- 21323 strings out of 493921
- 373942 string characters out of 3147285
- 501159 words of memory out of 3000000
- 23515 multiletter control sequences out of 15000+200000
+ 21269 strings out of 493921
+ 372794 string characters out of 3147285
+ 493773 words of memory out of 3000000
+ 23468 multiletter control sequences out of 15000+200000
  14509 words of font info for 64 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 56i,30n,76p,3313b,1051s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,30n,63p,3313b,1045s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiK
@@ -1232,23 +1223,22 @@ ublic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/euler/eusm7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on unimodality_paper.pdf (43 pages, 655766 bytes).
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm7.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on unimodality_paper.pdf (42 pages, 639144 bytes).
 PDF statistics:
- 1183 PDF objects out of 1200 (max. 8388607)
- 479 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1164 PDF objects out of 1200 (max. 8388607)
+ 475 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
