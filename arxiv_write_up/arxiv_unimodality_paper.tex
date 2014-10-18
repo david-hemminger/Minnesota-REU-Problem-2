@@ -157,13 +157,13 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 \newpage
 
 \listoftodos
-%\newpage
+\newpage
 
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
-Let $P$ be a finite graded poset of rank $n$.  In this paper we study the structure of the edges in the Hasse diagram of $P$.  To this end, we define an endofunctor $\mathcal{E}$ on the category finite graded posets with rank-preserving morphisms as follows
+Let $P$ be a finite graded poset of rank $n$.  In this paper we study the structure of the edges in the Hasse diagram of $P$.  To this end, we define an endofunctor $\mathcal{E}$ on the category of finite graded posets with rank-preserving morphisms as follows
 
 \begin{defn}
 \label{defn:functor_of_edges}
@@ -307,6 +307,7 @@ Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements o
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subseteq Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
 \end{conjecture}
+\todo{Not a big issue here, just to make sure: is $Aut(B_n)$ a standard notation?}
 
 We prove this conjecture holds whenever the group action of $G$ on $B_n$ has the following property.
 
@@ -340,15 +341,14 @@ We then show that cover transitivity is preserved under semidirect products, all
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
-\todo{edit the following depending on our actual sections}
-
-The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. Then, in Section \ref{sec:polya}, we use Polya theory to obtain and investigate formulas for the ranks of the generalized edge posets of $B_n/G.$ In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck. Finally, in Section \ref{sec:additional_stuff}, we describe additional aspects of this problem we examined, an approach that didn't quite pan out, and further questions.
+The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} regarding CCT actions along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we demonstrate formulas for certain generalizations of the edge poset applied to the quotient of $B_{m \cdot l}/S_m \wr S_l$ and obtain as a corollary \cite[Theorem 1.1]{pak}. In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck, and describe additional aspects of this problem as well as further questions.
 
 
 
 %%%%%%%%%%%%%%%%%  Background   %%%%%%%%%%%%%%%%%%
 \section{Background}\label{sec:background}
-In this section we review morphisms of graded posets, Peck posets, and a useful theorem about quotients of posets. 
+In this section we review necessary background for this paper. 
+%morphisms of graded posets, Peck posets, and a useful theorem about quotients of posets. 
 
 A {\it graded poset} $P$ is a poset with a rank function $\rk:P \rightarrow \BZ_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
@@ -371,14 +371,14 @@ Write $p_i = |P_i|$.  If we have
 
 $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
 
-\noindent for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}, and if $p_i = p_{n-i}$ for all $1\le i\le n,$ then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ antichains in $P$ is larger than the union of the largest $k$ ranks of $P$, and $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.  We then make the following definition.
+\noindent for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}, and if $p_i = p_{n-i}$ for all $1\le i\le n,$ then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ antichains in $P$ is larger than the union of the largest $k$ ranks of $P$, and $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.  We then state the following definition.
 
 \begin{defn}
 $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
 \end{defn}
 
 
-Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ when our meaning is clear.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
+Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ when our implications are clear.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
 
 \begin{defn}
 \label{defn:lefschetz}
@@ -456,7 +456,7 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 \end{enumerate}
 \end{lem}
 
-\begin{proof}
+\begin{proof} \indent
 
 \vskip.1in
 \noindent
@@ -1236,7 +1236,7 @@ In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. W
 For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l.$ Let $S_m$ act on $B_m$ by the permutation representation, and then let $G$ act on $B_{m}^l\cong B_{m \cdot l}$ by the action defined in Definition \ref{defn:wreath_action}.
 \end{note}
 
-\ssec{Recalling Pak and Panova's Result}
+\ssec{Pak and Panova's Result}
 We first review the necessary definitions and then state \cite[Theorem 1.1]{pak}:
 
 A {\it partition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$ such that $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k.$ If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it partition of $n$}, notated $\lambda \vdash n.$ A {\it composition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k).$ That is, it is a partition where order matters. If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it composition of $n$}. Let $P_n(l,m)$ denote the set of partitions $\lambda = (\lambda_1,\ldots, \lambda_k) \vdash n,$ such that $\lambda_1 \leq m,k \leq l.$ That is, $P_n(l,m)$ is the partitions which fit inside an $l \times m$ rectangle.
