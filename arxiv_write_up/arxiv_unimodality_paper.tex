@@ -307,7 +307,6 @@ Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements o
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subseteq Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
 \end{conjecture}
-\todo{Not a big issue here, just to make sure: is $Aut(B_n)$ a standard notation?}
 
 We prove this conjecture holds whenever the group action of $G$ on $B_n$ has the following property.
 
@@ -418,7 +417,7 @@ In Section \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ 
 \ssec{Definition and Basic Properties}\label{ssec:definition_and_basic_properties}
 First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Then, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets. Finally, we note several equivalent definitions of CCT actions.
 
-\sssec{Functoriality of $\mathcal E$ and Group Actions}
+\ssec{Functoriality of $\mathcal E$ and Group Actions}
 
 When the poset $P$ is clear, we will simply use $\leq_{\mathcal E}$ and $\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)}$ and $\lessdot_{\mathcal E(P)}$. Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define an object $\mathcal H(B_n),$ and will use $\leq_{\mathcal H}$ and $\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(P)}$ and $\lessdot_{\mathcal H(P)}$.
 
@@ -512,7 +511,7 @@ The map $q\colon \mathcal E(P)/G\rightarrow \mathcal E(P/G)$ defined by $q(G(x, 
 Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cdot x, g\cdot y)$ for some $g\in G$, then $x^\prime\in Gx$ and $y^\prime\in Gy$.  Clearly $q$ is rank-preserving and surjective, so it suffices to show that $q$ is order-preserving.  Suppose that $G(x, y) \le G(w, z)$.  Then there exist some $(x_0, y_0)\in G(x, y)$, $(w_0, z_0)\in G(w, z)$ such that $x_0\le w_0$ and $y_0\le z_0$.  We then have that $(Gx, Gy) \le (Gw, Gz)$ by definition, hence $q$ is order-preserving.
 \end{proof}
 
-\sssec{The Opposite Functor and Self Dual Posets}
+\ssec{The Opposite Functor and Self Dual Posets}
 
 Next, we introduce the notion of a dual poset, given by applying the opposite functor, op, to a graded poset. We will show $op$ commutes with $\mathcal E.$ This will imply $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
 
@@ -608,7 +607,7 @@ By Remark \ref{rem:induced_action_bn}, any action $\phi:G\times B_n \rightarrow 
 It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f):\mathcal E(B_n) \rightarrow \mathcal E(B_n^{op})\cong \mathcal E(B_n)^{op},$ that is, the map sending a pair of elements to the pair of their complements. Once again, since the action on $B_n$ is induced by an action on $[n],$ this isomorphism descends to an isomorphism $\mathcal E(f)^G:\mathcal E(B_n)/G \rightarrow \mathcal (E(B_n)/G)^{op},$ and so $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
-\sssec{Equivalent Definitions of CCT Actions}
+\ssec{Equivalent Definitions of CCT Actions}
 
 We conclude this subsection by giving four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3),$ and $(4)$ use the fact that $q:\mathcal E(P)/G) \rightarrow (\mathcal E(P/G)),G(x,y)\mapsto (Gx,Gy)$ is always a surjection.
 
@@ -1548,11 +1547,7 @@ We break into cases:
 This gives the desired formula $\dstyle \mu_2 =  \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil \frac n 2\rceil -1  \choose \lceil \frac{i+1} 2 \rceil - 1}   $. Therefore, 
 $$q_i = \frac{1}{2} \Big( {n-1 \choose i } + \frac{1}{2} [(-1)^{n(i+2)}+1] \cdot { \lceil \frac n 2\rceil -1  \choose \lceil \frac{i+1} 2 \rceil - 1}    \Big)$$
 \end{proof}
-\begin{rem}
-An alternate proof of Lemma ~\ref{dihedral002} follows directly from Polya's Theorem, by counting the number of ways to color $n$ elements with three colors, so that there are $i$ of the first color, $1$ of the second color, and $n-i-1$ of the third color.
-\end{rem}
 
-\todo{refer to our other paper here perhaps. Z: I think this remark can be dropped.}
 
 \begin{cor}{\label{dihedral003}} 
 The poset $\mathcal E(B_n/D_{2n})$ is rank-symmetric and rank-unimodal.
@@ -1770,7 +1765,7 @@ We prove this by induction on the size of $I.$ First, we know $h_{[n]}$ lies in 
 For $|x| = i,$ we have $l_{x} = \sum_{y \supset x}^{}(y, x).$
 \end{lem}
 \begin{proof}
-By definition, $l_{\bar x} = \sum_{\bar x\subset x,\bar x \cap x = \bar x,x\subset y}^{}(x, y) = \sum_{\bar x\subset y}^{}\bar (x, y).$ Replacing $\bar x$ by $x$ gives the result.
+By definition, $l_{\bar x} = \sum_{\bar x\subset x,\bar x \cap x = \bar x,x\subset y}^{}(x, y) = \sum_{\bar x\subset y}^{}(\bar x, y).$ Replacing $\bar x$ by $x$ gives the result.
 \end{proof}
 
 \begin{note}
@@ -1783,7 +1778,7 @@ With $m_a$ as defined above, we have $m_a = \sum_{x\subset a}^{}(x, y).$
 \end{lem}
 \begin{proof}
 By ~\ref{l_diag_equivalence}, we obtain
-$$m_a = \sum_{x \subset a}^{}l_{x} = \sum_{x \subset a}^{}\sum_{y \supset x}^{}(y, x)= \sum_{x\subset a}^{}(x, y)$$
+$$m_a = \sum_{x \subset a}^{}l_{x} = \sum_{x \subset a}^{}\sum_{y \supset x}^{}(x,y)= \sum_{x\subset a}^{}(x, y)$$
 \end{proof}
 
 \begin{note}

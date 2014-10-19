@@ -3,10 +3,10 @@
 \contentsline {section}{\tocsection {}{2}{Background}}{4}{section.2}
 \contentsline {section}{\tocsection {}{3}{The Edge Poset Construction}}{5}{section.3}
 \contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{5}{subsection.3.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{3.1.1}{Functoriality of $\EuScript E$ and Group Actions}}{6}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{3.1.2}{The Opposite Functor and Self Dual Posets}}{7}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{3.1.3}{Equivalent Definitions of CCT Actions}}{8}{subsubsection.3.1.3}
-\contentsline {subsection}{\tocsubsection {}{3.2}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{9}{subsection.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.2}{Functoriality of $\EuScript E$ and Group Actions}}{6}{subsection.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.3}{The Opposite Functor and Self Dual Posets}}{7}{subsection.3.3}
+\contentsline {subsection}{\tocsubsection {}{3.4}{Equivalent Definitions of CCT Actions}}{8}{subsection.3.4}
+\contentsline {subsection}{\tocsubsection {}{3.5}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{9}{subsection.3.5}
 \contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{12}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{12}{subsection.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.2}{Examples of CCT Actions}}{13}{subsection.4.2}
@@ -23,10 +23,10 @@
 \contentsline {section}{\tocsection {}{7}{The object $\EuScript E(B_n).$}}{24}{section.7}
 \contentsline {subsection}{\tocsubsection {}{7.1}{Computation of Order Raising Maps}}{24}{subsection.7.1}
 \contentsline {subsection}{\tocsubsection {}{7.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{25}{subsection.7.2}
-\contentsline {subsection}{\tocsubsection {}{7.3}{Further Questions}}{30}{subsection.7.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.1}{Category Theoretic Properties}}{30}{subsubsection.7.3.1}
+\contentsline {subsection}{\tocsubsection {}{7.3}{Further Questions}}{29}{subsection.7.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.1}{Category Theoretic Properties}}{29}{subsubsection.7.3.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{7.3.2}{Unitary Peck Generalizations}}{30}{subsubsection.7.3.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{31}{subsubsection.7.3.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.4}{Additional CCT Actions}}{31}{subsubsection.7.3.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{31}{section*.10}
-\contentsline {section}{\tocsection {}{}{References}}{31}{section*.11}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{30}{subsubsection.7.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.4}{Additional CCT Actions}}{30}{subsubsection.7.3.4}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{30}{section*.8}
+\contentsline {section}{\tocsection {}{}{References}}{31}{section*.9}
