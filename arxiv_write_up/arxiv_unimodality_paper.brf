@@ -3,6 +3,7 @@
 \backcite {quotients_stanley}{{5}{2.6}{thm.2.6}}
 \backcite {quotients_stanley}{{11}{3.5}{cor.3.26}}
 \backcite {greene}{{11}{3.5}{cor.3.28}}
+\backcite {reu_report}{{12}{3.5}{cor.3.29}}
 \backcite {permutation_polytopes}{{14}{4.2.1}{subsubsection.4.2.1}}
 \backcite {pak}{{16}{5}{section.5}}
 \backcite {pak}{{16}{5}{section.5}}
@@ -10,3 +11,6 @@
 \backcite {pak}{{17}{5.2}{note.5.2}}
 \backcite {pak}{{17}{5.3}{note.5.3}}
 \backcite {pak}{{17}{5.4}{thm.5.4}}
+\backcite {reu_report}{{17}{5.2}{prop.5.5}}
+\backcite {reu_report}{{18}{6}{section.6}}
+\backcite {reu_report}{{23}{6.3}{section*.4}}
