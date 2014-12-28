@@ -1,32 +1,31 @@
-\contentsline {section}{List of Todos}{2}{section*.2}
-\contentsline {section}{\tocsection {}{1}{Introduction}}{3}{section.1}
-\contentsline {section}{\tocsection {}{2}{Background}}{4}{section.2}
-\contentsline {section}{\tocsection {}{3}{The Edge Poset Construction}}{5}{section.3}
-\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{5}{subsection.3.1}
-\contentsline {subsection}{\tocsubsection {}{3.2}{Functoriality of $\EuScript E$ and Group Actions}}{6}{subsection.3.2}
-\contentsline {subsection}{\tocsubsection {}{3.3}{The Opposite Functor and Self Dual Posets}}{7}{subsection.3.3}
-\contentsline {subsection}{\tocsubsection {}{3.4}{Equivalent Definitions of CCT Actions}}{8}{subsection.3.4}
-\contentsline {subsection}{\tocsubsection {}{3.5}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{9}{subsection.3.5}
-\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{12}{section.4}
-\contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{12}{subsection.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of CCT Actions}}{13}{subsection.4.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{14}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Automorphisms of Polytopes}}{15}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{CCT Actions of ${\mathbb Z}_2^k$}}{16}{subsubsection.4.2.3}
-\contentsline {section}{\tocsection {}{5}{Wreath Product of two Symmetric Groups}}{16}{section.5}
-\contentsline {subsection}{\tocsubsection {}{5.1}{Pak and Panova's Result}}{17}{subsection.5.1}
-\contentsline {subsection}{\tocsubsection {}{5.2}{A Proof of Theorem \ref {thm:pak_thm} for $r = 1$}}{17}{subsection.5.2}
-\contentsline {section}{\tocsection {}{6}{Unimodal Quotients}}{17}{section.6}
-\contentsline {subsection}{\tocsubsection {}{6.1}{Groups of order $n$}}{18}{subsection.6.1}
-\contentsline {subsection}{\tocsubsection {}{6.2}{Quotient by the Cyclic Group}}{18}{subsection.6.2}
-\contentsline {subsection}{\tocsubsection {}{6.3}{Quotient by the Dihedral Group}}{22}{subsection.6.3}
-\contentsline {section}{\tocsection {}{7}{The object $\EuScript E(B_n).$}}{24}{section.7}
-\contentsline {subsection}{\tocsubsection {}{7.1}{Computation of Order Raising Maps}}{24}{subsection.7.1}
-\contentsline {subsection}{\tocsubsection {}{7.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{25}{subsection.7.2}
-\contentsline {subsection}{\tocsubsection {}{7.3}{Further Questions}}{29}{subsection.7.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.1}{Category Theoretic Properties}}{29}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.2}{Unitary Peck Generalizations}}{30}{subsubsection.7.3.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{30}{subsubsection.7.3.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{7.3.4}{Additional CCT Actions}}{30}{subsubsection.7.3.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{30}{section*.8}
-\contentsline {section}{\tocsection {}{}{References}}{31}{section*.9}
+\contentsline {section}{\tocsection {}{1}{Introduction}}{2}{section.1}
+\contentsline {section}{\tocsection {}{2}{Background}}{3}{section.2}
+\contentsline {section}{\tocsection {}{3}{The Edge Poset Construction}}{4}{section.3}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Definition and Basic Properties}}{4}{subsection.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.2}{Functoriality of $\EuScript E$ and Group Actions}}{4}{subsection.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.3}{The Opposite Functor and Self Dual Posets}}{5}{subsection.3.3}
+\contentsline {subsection}{\tocsubsection {}{3.4}{Equivalent Definitions of CCT Actions}}{7}{subsection.3.4}
+\contentsline {subsection}{\tocsubsection {}{3.5}{Proof of Theorem \ref {thm:cover_transitive_implies_Peck}}}{7}{subsection.3.5}
+\contentsline {section}{\tocsection {}{4}{Common Cover Transitive Actions}}{10}{section.4}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Preservation Under Semidirect Products}}{11}{thmt@dummyctr.dummy.49}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Examples of CCT Actions}}{12}{subsection.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{An application to rooted trees}}{12}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Automorphisms of Polytopes}}{14}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{CCT Actions of $\mathbb Z_2^k$}}{14}{subsubsection.4.2.3}
+\contentsline {section}{\tocsection {}{5}{Wreath Product of two Symmetric Groups}}{15}{section.5}
+\contentsline {subsection}{\tocsubsection {}{5.1}{Pak and Panova's Result}}{15}{subsection.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.2}{A Proof of Theorem \ref {thm:pak_thm} for $r = 1$}}{15}{subsection.5.2}
+\contentsline {section}{\tocsection {}{6}{Unimodal Quotients}}{16}{section.6}
+\contentsline {subsection}{\tocsubsection {}{6.1}{Groups of order $n$}}{16}{subsection.6.1}
+\contentsline {subsection}{\tocsubsection {}{6.2}{Quotient by the Cyclic Group}}{17}{subsection.6.2}
+\contentsline {subsection}{\tocsubsection {}{6.3}{Quotient by the Dihedral Group}}{21}{subsection.6.3}
+\contentsline {section}{\tocsection {}{7}{The object $\EuScript E(B_n).$}}{22}{section.7}
+\contentsline {subsection}{\tocsubsection {}{7.1}{Computation of Order Raising Maps}}{22}{subsection.7.1}
+\contentsline {subsection}{\tocsubsection {}{7.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{23}{subsection.7.2}
+\contentsline {subsection}{\tocsubsection {}{7.3}{Further Questions}}{28}{subsection.7.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.1}{Category Theoretic Properties}}{28}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.2}{Unitary Peck Generalizations}}{28}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{29}{subsubsection.7.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{7.3.4}{Additional CCT Actions}}{29}{subsubsection.7.3.4}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{29}{section*.2}
+\contentsline {section}{\tocsection {}{}{References}}{29}{section*.3}

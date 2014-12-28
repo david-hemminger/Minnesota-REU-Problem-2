@@ -11,6 +11,12 @@ Curtis Greene and Daniel~J. Kleitman.
 \newblock In {\em Studies in combinatorics (MAA Stud. Math.)}, volume~17, pages
   22--79. Math. Assoc. America, Washington, D.C., 1978.
 
+\bibitem{reu_report}
+David Hemminger, Aaron Landesman, and Zijian Yao.
+\newblock Peckness of edge posets.
+\newblock http://www.math.umn.edu/ reiner/REU/HemmingerLandesmanYao2014.pdf,
+  2014.
+
 \bibitem{pak}
 Igor Pak and Greta Panova.
 \newblock Unimodality via kronecker products.
