@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ cite report}{9}{section*.3}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Make a remark about a Generalization of $\EuScript H,\EuScript E$}{12}{section*.4}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ We can reference our other paper online, or perhaps find a better reference for this? In the other paper, we said: This is a well known fact, proven later in Lemma \ref {lem:young_diag_reps}. Z: Do we really need it? It depends on which journal to send to, I think once Vic mentioned that most people know what the wreath product of symmetric groups ``look like'', especially so in this field?}{17}{section*.5}
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Make some comment about Polya theory here, or elsewhere perhaps, with reference to our full paper}{18}{section*.6}
+=======
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ I don't understand the end of this proof. Why is this a contradiction? If you have made some assumption above, which you are trying to prove falce, can you please state it explicitly? -Aaron}{19}{section*.3}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ Double check it is CCT for n=8}{23}{section*.4}
+>>>>>>> efdc1dd1b3b1536043aa03b7496ec781ae91e022

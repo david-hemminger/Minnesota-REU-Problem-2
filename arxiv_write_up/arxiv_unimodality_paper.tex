@@ -317,6 +317,7 @@ Note that we do not require the implication $f(x)\le_Q f(y) \Rightarrow x\le_P y
 %There is an important distinction here between bijection and isomorphism. Another way to describe a bijection is that it is an embedding $f:P\rightarrow Q$ which is a bijection on the sets of vertices of $P,Q$. But, an isomorphism also defines a bijection between the edges of the two posets as well.
 \end{rem}
 
+
 In what follows, let $P$ be a poset of rank $n$. Write $p_i = |P_i|$.  If we have
 
 $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
@@ -365,7 +366,9 @@ If $P$ is unitary Peck and $G\subseteq\operatorname{Aut}(P)$, then $P/G$ is Peck
 
 In subsection \ref{ssec:definition_and_basic_properties} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  Subsection \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
 
+
 \ssec{Definition and Basic Properties}
+
 \label{ssec:definition_and_basic_properties}
 First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order} and \ref{lem:FP_graded_poset}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}. Then, we prove the simple result that $\mathcal E$ sends self-dual posets to self-dual posets. Finally, we note several equivalent definitions of CCT actions.
 
@@ -810,6 +813,8 @@ This follows from Corollary \ref{cor:HBn_unitary_peck} and Theorem \ref{thm:quot
 
 The next corollary will not be particularly relevant in proving Theorem \ref{thm:cover_transitive_implies_Peck}, but let us note it as an aside.
 
+The next corollary will not be particularly relevant in proving Theorem \ref{thm:cover_transitive_implies_Peck}, but let us note it as an aside.
+
 \begin{cor}
 Both $\mathcal{E}(B_n)$ and $\mathcal H(B_n)$ have symmetric chain decompositions (SCD).
 \end{cor}
@@ -827,6 +832,8 @@ $\mathcal E(B_n)/G$ is Peck for any subgroup $G\subset S_n$.
 \begin{proof}
 By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H(B_n)/G$ is Peck. By Lemma ~\ref{lem:bijection_h_f}, the map $f:\mathcal H(B_n)/G \rightarrow \mathcal E(B_n)/G,G(x, y) \mapsto G(x, y)$ is a bijection. Then, by Lemma ~\ref{lem:bijection_peck_implication}, it follows that $\mathcal E(B_n)/G$ is Peck.
 \end{proof}
+
+We are finally in a place to deduce Theorem \ref{thm:cover_transitive_implies_Peck}.
 
 We are finally in a place to deduce Theorem \ref{thm:cover_transitive_implies_Peck}.
 
@@ -854,6 +861,7 @@ Let $G\subseteq\operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such tha
 
 \end{lem}
 \begin{proof}
+
 Note that if $x,x^\prime\in Hx$ we have $x^\prime = h\cdot x$ for some $h\in H$, and since $H$ is normal in $G$ we have that for all $k \in G$ there exists $h^\prime \in H$ so that $khk^{-1} = h^\prime$, so 
 
 $$k\cdot x^\prime = kh\cdot x = k(k^{-1}h^\prime k)\cdot x = h^\prime\cdot (k\cdot x)$$
@@ -1101,6 +1109,7 @@ It is simple to see that the group of linear automorphisms of the n-octahedron w
 
 \begin{rem}
 Let us give a brief recap of which linear automorphisms of polytopes are known to induce actions on $B_n$ which are CCT. First, by the above lemmas, for octahedrons and simplices, the induced action is CCT. By Proposition  \ref{prop:cover_transitive_building_blocks} and Proposition \ref{prop:iff_dihedral_cct} the linear automorphism group of an $n$-gon induces a CCT action on $B_n$ if and only if one of $n=1,n = p,n = 2p,$ for $p$ a prime. Additionally, computers have verified that automorphisms of the 3-cube, with vertices at $(\pm 1,\pm 1,\pm 1)$ induces a CCT action. It is still unknown whether the linear automorphisms of $n$-cubes is CCT for $n> 3,$ and also whether the remaining five exceptional regular polytopes (namely the dodecahedron and icosahedron in $\mathbb R^3$ as well as the $24$-cell, $120$-cell, and $600$-cell polytopes in $\mathbb R^4$) induce CCT actions. These questions are repeated in Question \ref{question:cube_cct} and Question \ref{question:exceptional_polytopes_cct}.
+
 \end{rem}
 
 \sssec{CCT Actions of $\mathbb Z_2^k$}
@@ -1329,6 +1338,7 @@ Suppose that $\sigma_0^r x \lessdot y$ for some $(x,y)$, where $x \lessdot y$ an
 \begin{proof}
 
 By assumption, $x$ has a tail cycle under the action of $\sigma_0^{r}$, for otherwise $x$ is fixed by $\sigma_0^r,$ because then $g = \id$ satisfies $gx = \sigma_0^rx,gy = y.$ Additionally, $y$ must have some tail cycles under the action of $\sigma_0^r$, for otherwise $y$ is fixed under $\sigma_0^r$  and we can take $g = \sigma_0^r$.  Call $\gamma$ the tail cycle of $y$, so $\gamma$ consists of some filled beads in the necklace, one of which is the element $a = y \backslash x$. Let $\sigma$ be a rotation such that $\sigma x \lessdot y$. Then $\sigma$ has to take a full cycle of $x$ (under $\sigma_0^r$) to another full cycle (under $\sigma_0^r$), and it is clear that $\sigma (\gamma \backslash a) \lessdot \gamma$. Recall that $\sigma_0^r (\gamma \backslash a) \lessdot \gamma$ by assumption, so the elements in $\gamma$ are $r$-positions away from each other (in the necklace representation), in other words, we can write $\gamma = \{ a, a-r, a-2r, ... a -l r\}$, but $a+r \notin \gamma,$ since $\gamma$ is a tail cycle. Assume for contradiction that there is some other $\sigma' \ne \sigma_0^r$ such that $\sigma' (\gamma \backslash a) \lessdot \gamma$, then there exists $m > 1$ for which $\sigma'(a - m r) = a$, namely the rotation sends $a -m r \mapsto a$. But then, since $m > 1$, $a-(m-1)r \in x$ and $a - (m-1) r \ne a$. Hence $(a - (m-1)r) \mapsto a+r \in y$, a contradiction. 
+
 \end{proof}
 
 \begin{lem}{\label{lem:cyclic_counting_difference}} 
@@ -1382,6 +1392,14 @@ Fix $r < n/2$ to be an integer and let $ G(x, y)$ be a $G$-orbit of edges. We ca
 \end{defn}
 
 First we prove several sub-lemmas. 
+
+\begin{defn}
+For the next couple proofs, we will use the notation
+
+$$S_1 = \left\{G{(x, y)} : \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2, \text{ but } \nexists \:  g \text{ s.t. } g x = \sigma_0 ^r x, g y = y \right\} $$ and $$S_2= \left\{ G(x, y):  \exists \: \, \sigma_0^r x \lessdot y \text{ where } r < n/2,  \text{ and } y \text{ has a tail cycle}  \right\}.$$
+\end{defn}
+
+
 
 \begin{defn}
 For the next couple proofs, we will use the notation
@@ -1485,12 +1503,14 @@ Let $G$ be as in Proposition \ref{prop:cover_transitive_building_blocks} We rema
 
 \begin{rem}
 \label{prop:iff_dihedral_cct}
-It is easy to see that if $n \neq p,n \neq 2p, n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. We give an example of a non-CCT pair. Assume $n \ne p, 2 p$ in its factorization, then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$ where $z$ consists of a full cycle of $k$ elements and a tail of $2$ elements. For example, $z = \{1, m+1, 2m+1, ..., (k-1)m
-+1, 2, m+2\}$. Let $x = z \backslash \{m+2\}$ and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $\sigma_0^m \in D_{2n}$. It is also clear that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$, from the asymmetry of the element $z$. Therefore, the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
+It is easy to see that if $n \neq p,n \neq 2p, n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. We give an example of a non-CCT pair. Assume $n \ne p, 2 p$ in its factorization, then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$ where $z$ consists of a full cycle of $k$ elements and a tail of $2$ elements. For example, $z = \{1, m+1, 2m+1, ..., (k-1)m+1, 2, m+2\}$. Let $x = z \backslash \{m+2\}$ and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $\sigma_0^m \in D_{2n}$. It is also clear that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$, from the asymmetry of the element $z$. Therefore, the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
 
 Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n = 2p, n = 1, n = 8$ where $p$ varies over all primes.
 \end{rem}
 
+\todo{Double check it is CCT for n=8}
+
+The following lemma gives a result for the dihedral group, which is analogous to that of Lemma \ref{lem:q_counts} for the cyclic group. It is worth noting that an alternate proof of this lemma could be given by the Redfield Polya Theorem. For further discussion of the relations of $\mathcal E$ to Polya Theory, see [\cite{reu_report}, Section 6].
 
 The following lemma gives a result for the dihedral group, which is analogous to that of Lemma \ref{lem:q_counts} for the cyclic group. It is worth noting that an alternate proof of this lemma could be given by the Redfield Polya Theorem. For further discussion of the relations of $\mathcal E$ to Polya Theory, see [\cite{reu_report}, Section 6].
 
@@ -1505,6 +1525,7 @@ we know that $1\leq |\Stab (x , y)| \leq 2$.
 Let $\mu_1$ be the number of $G$-orbits with the trivial stabilizer and $\mu_2$ be the number of $G$-orbits with the stabilizer of size $2$, which contains the identity and a reflection. By the Orbit Stabilizer Theorem, each orbit with the trivial stabilizer is of size $|D_{2n}| /1 = 2n $, while all other orbits are of size $|D_{2n}|/2 = n$.  Therefore $$\mu_1 \cdot 2n + \mu_2 \cdot n = |\{(x, y)\}| = {n \choose {i+1}}  \cdot {{i+1} \choose 1} = n {n-1 \choose i }.$$
 
 Our goal is to calculate $q_i = \mu_1 + \mu_2$, so it remains to calculate $\mu_2$, which counts the number of $G$-orbits such that the reflection also fixes $x$. Without loss of generality, we may assume that $y\backslash x = \{1\}$. 
+
 There are two cases:
 \begin{enumerate}
 \item If $n$ is odd and $i+1$ is even, then it is clear that no reflections fix $x$ for any $x$, so $\mu_2=0$. 

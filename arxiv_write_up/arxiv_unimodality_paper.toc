@@ -21,11 +21,11 @@
 \contentsline {subsection}{\tocsubsection {}{6.3}{Quotient by the Dihedral Group}}{21}{subsection.6.3}
 \contentsline {section}{\tocsection {}{7}{The object $\EuScript E(B_n).$}}{22}{section.7}
 \contentsline {subsection}{\tocsubsection {}{7.1}{Computation of Order Raising Maps}}{22}{subsection.7.1}
-\contentsline {subsection}{\tocsubsection {}{7.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{23}{subsection.7.2}
+\contentsline {subsection}{\tocsubsection {}{7.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{24}{subsection.7.2}
 \contentsline {subsection}{\tocsubsection {}{7.3}{Further Questions}}{28}{subsection.7.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{7.3.1}{Category Theoretic Properties}}{28}{subsubsection.7.3.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{7.3.2}{Unitary Peck Generalizations}}{28}{subsubsection.7.3.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{7.3.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{29}{subsubsection.7.3.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{7.3.4}{Additional CCT Actions}}{29}{subsubsection.7.3.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{29}{section*.2}
-\contentsline {section}{\tocsection {}{}{References}}{29}{section*.3}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{29}{section*.3}
+\contentsline {section}{\tocsection {}{}{References}}{29}{section*.4}
