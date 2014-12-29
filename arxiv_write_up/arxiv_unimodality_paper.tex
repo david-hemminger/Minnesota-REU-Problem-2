@@ -106,11 +106,6 @@ For any graded poset $P,$ we define a new graded poset, $\mathcal E(P),$ whose e
 
 \maketitle
 
-\tableofcontents
-\newpage
-
-
-
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
@@ -291,7 +286,7 @@ We then show that cover transitivity is preserved under semidirect products, all
 Let $G\subseteq \operatorname{Aut}(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
 
-The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} regarding CCT actions along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we obtain a very different proof of \cite[Theorem 1.1]{pak}. In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck, and describe additional aspects of this problem as well as further questions.
+The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} regarding CCT actions along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we obtain a very different proof of \cite[Theorem 1.1]{pak}, in the case that $r = 1$. In Section \ref{sec:unimodal} we prove that $\mathcal E(B_n/G)$ is rank-unimodal for certain group actions that are not CCT. Then, in Section \ref{sec:unitary_peck_f}, we give a computational proof that $\mathcal E(B_n)$ is unitary Peck, and describe additional aspects of this problem as well as further questions.
 
 
 
@@ -1118,7 +1113,7 @@ In this subsubsection, we show that any embedding of $\mathbb Z_2^k$ into $S_n$ 
 
 \begin{prop}
 \label{prop:regular_action_CCT}
-Recall that $G$ with is an elementary abelian $2$-group if $G \cong (\mathbb Z/2\mathbb Z)^k$ for some $k \in \mathbb N.$
+Recall that $G$ is an elementary abelian $2$-group if $G \cong (\mathbb Z/2\mathbb Z)^k$ for some $k \in \mathbb N.$
 \begin{enumerate}
   \item For any $n \in \mathbb N,$ and $G$ an elementary abelian 2-group, every $G$ action on $B_n$ is CCT.
   \item For every finite group $G$ which is not an elementary abelian 2-group, there exists at least one $G$ action which is not CCT, namely the action of $G$ on $B_n$ induced by the left-regular action of $G$ on itself, where $n = |G|$.
@@ -1858,6 +1853,10 @@ Additionally, there are several posets which we would like to be unitary
 Peck, as this would allow us to apply much of the theory developed in this paper. They would also make several of the generalizations of $\mathcal E$ potentially more interesting.
 
 As mentioned in the introduction, a natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect that a proof similar to that of Corollary ~\ref{cor:unitary_peck_edge_bn} may also prove Question ~\ref{question:unitary_peck_q_edge}.
+
+\begin{defn}
+Let $B_n(q)$ be the graded poset whose elements are linear subspaces $V \subset \mathbb F_q^n$ with $V \leq W$ if $V \subset W.$
+\end{defn}
 
 \begin{question}
 \label{question:unitary_peck_q_edge}
