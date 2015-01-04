@@ -29,7 +29,7 @@
 \contentsline {subsection}{\tocsubsection {}{7.3}{Quotient by the Dihedral Group}}{29}{subsection.7.3}
 \contentsline {section}{\tocsection {}{8}{The object $\EuScript E(B_n).$}}{31}{section.8}
 \contentsline {subsection}{\tocsubsection {}{8.1}{Computation of Order Raising Maps}}{31}{subsection.8.1}
-\contentsline {subsection}{\tocsubsection {}{8.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{33}{subsection.8.2}
+\contentsline {subsection}{\tocsubsection {}{8.2}{Proof that $\EuScript E(B_n)$ is unitary Peck}}{32}{subsection.8.2}
 \contentsline {section}{\tocsection {}{9}{Odds, Ends, and Failed Attempts}}{37}{section.9}
 \contentsline {subsection}{\tocsubsection {}{9.1}{A $q$-analog}}{37}{subsection.9.1}
 \contentsline {subsection}{\tocsubsection {}{9.2}{Quotients by Automorphism Groups of Rooted Trees}}{38}{subsection.9.2}
@@ -39,5 +39,5 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.2}{Unitary Peck Generalizations}}{41}{subsubsection.9.4.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.3}{A $q$-analog of Conjecture \nobreakspace \ref {conj:F_of_BnG_Peck}}}{41}{subsubsection.9.4.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{9.4.4}{Additional CCT Actions}}{41}{subsubsection.9.4.4}
-\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.3}
-\contentsline {section}{\tocsection {}{}{References}}{42}{section*.4}
+\contentsline {section}{\tocsection {}{}{Acknowledgements}}{42}{section*.2}
+\contentsline {section}{\tocsection {}{}{References}}{42}{section*.3}
