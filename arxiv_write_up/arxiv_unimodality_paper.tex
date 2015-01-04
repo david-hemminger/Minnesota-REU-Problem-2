@@ -1073,9 +1073,9 @@ Let $M$ be a polytope, with a particular embedding in $\mathbb R^n$. The {\it gr
 
 First, we look at linear automorphisms of simplices. Let $G$ be the group linear automorphisms of the $(n-1)$-simplex, whose vertices lie at the standard basis vectors in $\mathbb R^n$. The action of $G$ on the $(n-1)$-simplex induces an action on $[n]$, given by identifying $[n]$ with the $n$ vertices of the $(n-1)$-simplex. Hence, it induces an action on $B_n$.
 
-\begin{prop}
+\begin{eg}
 The action of the group of linear automorphisms of the $(n-1)$-simplex, acting on $B_n$, as defined above, is CCT.
-\end{prop}
+\end{eg}
 \begin{proof}
 The group of linear automorphisms in this case induces the usual action of $S_n$ on $B_n$, because any permutation matrix defines a linear map on $\mathbb R^n$. However, we know the action of $S_n$ on $B_n$ is CCT from Example ~\ref{eg:trivial_edgequot}
 \end{proof}
@@ -1211,7 +1211,7 @@ There are several other results related to $\mathcal E(C_n),\mathcal E(D_n)$, wi
 
 
 %%%%%%%%%%%%%%%%% Pak and Panova %%%%%%%%%%%%%%%%%%
-\section{A Result of Pak and Panova}\label{sec:wreath_product}
+\section{A Unimodality Result}\label{sec:wreath_product}
 
 In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. We construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. This construction gives an alternate proof of \cite[Theorem 1.1]{pak} in the case that $r = 1$.
 
@@ -1219,10 +1219,10 @@ In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. W
 For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l$. Let $S_m$ act on $B_m$ by the permutation representation, and then let $G$ act on $B_{m}^l\cong B_{m \cdot l}$ by the action defined in Definition \ref{defn:wreath_action}.
 \end{note}
 
-\ssec{Pak and Panova's Result}
+\ssec{Restatement of the Unimodality Result}
 We first review the necessary definitions and then state \cite[Theorem 1.1]{pak}:
 
-A {\it partition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$ such that $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k$. If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it partition of $n$}, notated $\lambda \vdash n$. A {\it composition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$. That is, it is a partition where order matters. If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it composition of $n$}. Let $P_n(l,m)$ denote the set of partitions $\lambda = (\lambda_1,\ldots, \lambda_k) \vdash n$, such that $\lambda_1 \leq m,k \leq l$. That is, $P_n(l,m)$ is the partitions which fit inside an $l \times m$ rectangle.
+A {\it partition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$ such that $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k$. If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it partition of $n$}, notated $\lambda \vdash n$. Let $P_n(l,m)$ denote the set of partitions $\lambda = (\lambda_1,\ldots, \lambda_k) \vdash n$, such that $\lambda_1 \leq m,k \leq l$. That is, $P_n(l,m)$ is the partitions which fit inside an $l \times m$ rectangle.
 
 \begin{note}
 \cite[Section 1]{pak} For $\lambda$ a partition, let $\nu(\lambda)$ be the number of distinct nonzero part sizes of $\lambda$.  Let $p_k(l,m,r) = \sum_{\lambda \in P_k(l,m)} \binom{\nu(\lambda)}{r}$.
@@ -1245,7 +1245,7 @@ There is an equality $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_{1+i}(
 
 First, observe that $S_m \wr S_l$ can be described as the automorphism group of a rooted tree of rank 2 with $l$ elements at rank $1$ and $m\cdot l$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then, by Corollary \ref{cor:tree_cct}, it follows that the action of $G$ on $B_{m \cdot l}$ is CCT and so $\mathcal E(B_n/G)$ is Peck.
 
-Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. For example, see [\cite{reu_report}, Lemma 5.11] for a complete proof.
+Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. The correspondence is given by sending an equivalence class, to the representative which is left and bottom justified, when elements of $B_n = B_{l \cdot m}$ are thought of as empty or full boxes in an $l \cdot m$ rectangle. For a complete proof, see, for example, [\cite{reu_report}, Lemma 5.11].
 
 Now, let $Gx,Gy$ be two $G$ orbits with $\bar x$ the Young Tableau corresponding to $x$, and $\bar y$ the young tableau corresponding to $y$. Suppose $Gx \lessdot Gy$. Then, $\bar x$ must be contained in $\bar y$, but with a single box removed. Since $\bar x,\bar y$ are both Young Tableau, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx|Gx \lessdot Gy\}| = \nu(\bar y)$. Therefore,
 \begin{align*}
