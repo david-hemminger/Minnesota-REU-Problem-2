@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.13)  27 DEC 2014 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.4)  3 JAN 2015 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **arxiv_unimodality_paper.tex
 (./arxiv_unimodality_paper.tex
 LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 79 languages loaded.
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2009/07/02 v2.20.1
 \linespacing=\dimen102
@@ -243,14 +243,14 @@ Xy-pic pdf driver: `line' extension support
 Xy-pic pdf driver: `rotate' extension support
 (/usr/local/texlive/2014/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded)
 loaded)) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks33
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -567,7 +567,7 @@ s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
-Package: tikz-cd 2014/03/08 v0.9b Commutative diagrams with tikz
+Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
@@ -598,7 +598,7 @@ Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfysize=\dimen204
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks46
 \verbatim@line=\toks47
 \verbatim@in@stream=\read3
@@ -631,7 +631,7 @@ Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
@@ -649,7 +649,7 @@ s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count133
 \calc@Bcount=\count134
 \calc@Adimen=\dimen213
@@ -993,25 +993,15 @@ LaTeX Info: Redefining \nameref on input line 99.
 \@outlinefile=\write7
 \openout7 = `arxiv_unimodality_paper.out'.
 
-
-Overfull \hbox (10.03209pt too wide) in paragraph at lines 1--100
-[][][]\OT1/cmr/m/n/10 <<<<<<< HEAD ======= >>>>>>> efdc1dd1b3b1536043aa03b7496e
-c781ae91e022 <<<<<<< HEAD =======
- []
-
 LaTeX Font Info:    Try loading font information for U+eus on input line 104.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-(./arxiv_unimodality_paper.toc)
-\tf@toc=\write8
-\openout8 = `arxiv_unimodality_paper.toc'.
-
- [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input l
-ine 120.
+ine 115.
 Package hyperref Info: bookmark level for unknown eg defaults to 0 on input lin
-e 137.
+e 132.
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no ( in font nullfont!
@@ -1019,32 +1009,47 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 258.
- [2]
+nput line 253.
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 272.
+ne 267.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 285.
+ine 279.
+
+[2]
 Package hyperref Info: bookmark level for unknown rem defaults to 0 on input li
-ne 315.
- [3]
+ne 308.
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input li
-ne 345.
+ne 338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 377.
+(hyperref)                removing `math shift' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 377.
+(hyperref)                removing `math shift' on input line 370.
 
-[4] [5]
+[3] [4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 556.
- [6] [7] [8] [9]
-Overfull \hbox (7.74532pt too wide) in paragraph at lines 833--834
+ne 549.
+[5] [6]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7] [8]
+Overfull \hbox (7.74532pt too wide) in paragraph at lines 821--822
 [][][]\OT1/cmr/m/n/10 By Corol-lary [][]3.27[][], $[][]\U/eus/m/n/10 H\OT1/cmr/
 m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G$ \OT1/cmr/m/n/
 10 is Peck. By Lemma [][]3.24[][], the map $[][]\OML/cmm/m/it/10 f \OT1/cmr/m/n
@@ -1054,24 +1059,20 @@ t/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G; G\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
 0 x; y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7!
  []
 
-[10] [11]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12]
+[9] [10] [11]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 1044.
- [13] [14]
+ine 1033.
+ [12] [13] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1228.
+(hyperref)                removing `math shift' on input line 1250.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1228.
+(hyperref)                removing `math shift' on input line 1250.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1276
 [][][]\OT1/cmr/m/n/10 Therefore, $[][]\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 (\U/eus
 /m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10
  =G\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\U
@@ -1082,68 +1083,11 @@ us/m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/
 10 =G$ \OT1/cmr/m/n/10 is Peck,
  []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1268.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1268.
-
-[16] [17] [18] [19]
-
-LaTeX Warning: Command \O invalid in math mode on input line 1453.
-
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1466.
-
-[20]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 1511.
- [21]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1561--1562
-[][][]\OT1/cmr/m/n/10 In this sec-tion, we ex-plic-itly com-pute the rais-ing o
-p-er-a-tors cor-re-spond-ing to both
- []
-
-[22] [23]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1628.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1628.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1628.
-
-[24] [25]
-Underfull \vbox (badness 1371) has occurred while \output is active []
-
- [26]
-[27]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 1852.
- [28] (./arxiv_unimodality_paper.bbl (./arxiv_unimodality_paper.brf)
-\tf@brf=\write9
-\openout9 = `arxiv_unimodality_paper.brf'.
+ut line 1306.
+[16] (./arxiv_unimodality_paper.bbl (./arxiv_unimodality_paper.brf)
+\tf@brf=\write8
+\openout8 = `arxiv_unimodality_paper.brf'.
 
 
 Underfull \hbox (badness 1242) in paragraph at lines 19--19
@@ -1151,79 +1095,61 @@ Underfull \hbox (badness 1242) in paragraph at lines 19--19
 -ness of edge posets. http://www.math.umn.edu/
  []
 
-) [29] [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1911.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1911.
+) [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1355.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1355.
  (./arxiv_unimodality_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1911.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1911.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1355.
 
+Package rerunfilecheck Info: File `arxiv_unimodality_paper.out' has not changed
+.
+(rerunfilecheck)             Checksum: BB638A47AC1809E4C557452A00659C44;1211.
+Package rerunfilecheck Info: File `arxiv_unimodality_paper.brf' has not changed
+.
+(rerunfilecheck)             Checksum: 344C3918CF89BE006DD8E2C5B5E05B1F;777.
 
-
-Package rerunfilecheck Warning: File `arxiv_unimodality_paper.out' has changed.
-
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `arxiv_unimodality_paper.out':
-(rerunfilecheck)             Before: 5E00080F91BD4E331EA8978D1897947A;3655
-(rerunfilecheck)             After:  F55D1EA01279CE6ACB3AB494F607E31A;1768.
-
-Package rerunfilecheck Warning: File `arxiv_unimodality_paper.brf' has changed.
-
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `arxiv_unimodality_paper.brf':
-(rerunfilecheck)             Before: 11A19AD4BDFD998E25C82845959779F3;1458
-(rerunfilecheck)             After:  D6A9A86F2644CD543ED1A9E3CAB24420;741.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1911.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1355.
  ) 
 Here is how much of TeX's memory you used:
- 23550 strings out of 493108
- 440538 string characters out of 6134853
- 546963 words of memory out of 5000000
- 25999 multiletter control sequences out of 15000+600000
- 14533 words of font info for 64 fonts, out of 8000000 for 9000
+ 23356 strings out of 493109
+ 437587 string characters out of 6135010
+ 553558 words of memory out of 5000000
+ 25929 multiletter control sequences out of 15000+600000
+ 13835 words of font info for 62 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,30n,82p,3255b,999s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.6} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.5} has been referenced but does not exist,
- replaced by a fixed one
-
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on arxiv_unimodality_paper.pdf (30 pages, 444593 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on arxiv_unimodality_paper.pdf (17 pages, 360045 bytes).
 PDF statistics:
- 1024 PDF objects out of 1200 (max. 8388607)
- 957 compressed objects within 10 object streams
- 361 named destinations out of 1000 (max. 500000)
- 405 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 609 compressed objects within 7 object streams
+ 242 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
