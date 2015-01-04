@@ -1,9 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%
-%   AMS packages    %
-%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[10 pt]{amsart}
-
 \usepackage{amsmath}
 \usepackage{amsxtra}
 \usepackage{amscd}
@@ -38,7 +33,6 @@
        citecolor = mygreen, % \cite{...}
        linkcolor = myred, % \ref{...} and \pageref{...}
        pagebackref,
-%     pdfpagemode=None,
        bookmarksopen=true]{hyperref}
 \else
   \RequirePackage[hypertex]{hyperref}
@@ -101,7 +95,6 @@
 \begin{document}
 
 
-
 \begin{abstract}
 For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose elements are the edges in the Hasse diagram of P. For any group, $G$, acting on the boolean algebra, $B_n$, we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products.
 \end{abstract}
@@ -109,13 +102,14 @@ For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose e
 \maketitle
 
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
 
 Let $P$ be a finite graded poset of rank $n$.  In this paper we study the structure of the edges in the Hasse diagram of $P$.  To this end, we define an endofunctor $\mathcal{E}$ on the category of finite graded posets with rank-preserving morphisms as follows
 
 \begin{defn}
 \label{defn:functor_of_edges}
-For $\mathcal P$ the category of graded posets, define the {\it functor of edges} $\mathcal{E}\colon\mathcal{P} \rightarrow \mathcal{P}$ as follows. The elements of the graded poset $\mathcal{E}(P)$ are pairs $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + 1$. Define the covering relation $\lessdot_{\mathcal{E}}$ on $\mathcal{E}(P)$ by $(x, y) \lessdot_{\mathcal{E}} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$. Then define the relation $\le_{\mathcal{E}}$ on $\mathcal{E}(P)$ to be the transitive closure of $\lessdot_{\mathcal{E}}$.
+For $\mathcal P$ the category of graded posets, define the {\it functor of edges} $\mathcal{E}\colon\mathcal{P} \rightarrow \mathcal{P}$ as follows. Given $P \in \mathcal P$, the elements of the graded poset $\mathcal{E}(P)$ are pairs $(x, y)$ where $x,y\in P$, $x\le_P y$, and $\rk(y) = \rk(x) + 1$. Define the covering relation $\lessdot_{\mathcal{E}}$ on $\mathcal{E}(P)$ by $(x, y) \lessdot_{\mathcal{E}} (x^\prime, y^\prime)$ if $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$. Then define the relation $\le_{\mathcal{E}}$ on $\mathcal{E}(P)$ to be the transitive closure of $\lessdot_{\mathcal{E}}$.
 
 Let $Q$ be a finite graded poset of rank $n$. Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{E}(f)\colon \mathcal{E}(P)\rightarrow \mathcal{E}(Q)$ by $\mathcal{E}(f)(x,y) = (f(x), f(y))$.
 \end{defn}
@@ -204,9 +198,9 @@ We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  
 \end{eg}
 
 
-We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, i.e. for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
+We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, namely, for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, i.e. for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
+Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subseteq \Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
@@ -246,33 +240,39 @@ Let $G\subseteq \Aut(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtim
 The paper is organized as follows. In Section \ref{sec:background} we cover the necessary background for posets and Peck posets.  In Section \ref{sec:functor_of_edges} we show that $\mathcal E$ is well-defined and prove Theorem \ref{thm:cover_transitive_implies_Peck} regarding CCT actions along with various other nice properties of $\mathcal E$. Section \ref{sec:cover_transitive} contains the proofs of Propositions \ref{prop:cover_transitive_building_blocks} and \ref{prop:semidirect_product_preservation} as well as some examples of families of group actions shown to be CCT by these propositions. In Section \ref{sec:wreath_product}, we obtain a very different proof of \cite[Theorem 1.1]{pak}, in the case that $r = 1$.
 
 
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%  Background   %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}\label{sec:background}
 In this section we review necessary background for this paper. 
-%morphisms of graded posets, Peck posets, and a useful theorem about quotients of posets. 
 
 A {\it graded poset} $P$ is a poset with a rank function $\rk\colon P \rightarrow \mathbb Z_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
-  \item If $x\in P_i$ and $x\lessdot y$, then $rk(x) + 1 = \rk(y)$,
+  \item If $x\in P$ and $x\lessdot y$, then $rk(x) + 1 = \rk(y)$,
   \item If $x < y$ then $\rk(x) < \rk(y)$ 
 \end{enumerate}
 
-Define the $i$th rank of $P$ to be  $P_i = \{x \in P\colon\rk(x) = i\}$. Additionally, if for all $x\in P,0 \leq \rk(x) \leq n$, and there exists $x,y$ with $\rk(x) = 0, \rk(y) = n$, we say $P$ is a graded poset of {\it rank $n$}.
+We denote the $i$th rank of $P$ by  $P_i = \{x \in P\colon\rk(x) = i\}$. Additionally, if for all $x\in P$, we have $0 \leq \rk(x) \leq n$, and there exists $x,y$ with $\rk(x) = 0, \rk(y) = n$, we say that $P$ is a graded poset of {\it rank $n$}.
 
-Denote the category of finite graded posets by $\mathcal{P}$, and let $P,Q$ be finite graded posets.  Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$.  When the poset is clear we omit the $P$ and simply write $x\le y$.  
+Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$.  When the poset is clear we omit the $P$ and simply write $x\le y$.  
 
-A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, i.e. for all $x,y\in P$, $x\le_P y \Rightarrow f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
+Let $P, Q \in \mathcal P$ be two finite graded posets.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, in other words, for all $x,y\in P$, $x\le_P y $ implies $f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
 \begin{rem}\label{rem:bijective_morphism_not_isomorphism}
-Note that we do not require the implication $f(x)\le_Q f(y) \Rightarrow x\le_P y$ in order for $f$ to be a morphism.  In particular this means a bijective morphism $f$ need not be an isomorphism, since it will not necessarily have a two-sided inverse.  
+Note that we do not require the implication that $f(x)\le_Q f(y)$ implies $x\le_P y$ in order for $f$ to be a morphism.  In particular this means that a bijective morphism $f$ need not be an isomorphism, since it will not necessarily have a two-sided inverse.  
 \end{rem}
 
 
-In what follows, let $P$ be a poset of rank $n$. Write $p_i = |P_i|$.  If we have
+In what follows, let $P$ be a poset of rank $n$, and write $p_i = |P_i|$.  If we have
 
 $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
 
-\noindent for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
+\noindent for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say that $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
 
 \begin{defn}
 $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
@@ -300,7 +300,7 @@ $P$ is Peck if and only if there exists an order-raising operator $U$ such that 
 If the Lefschetz map satisfies the condition for $U$ in Lemma \ref{lem:Peck_poset_characterization}, then $P$ is \textit{unitary Peck}.
 \end{defn}
 
-We say that a group $G$ acts on $P$ if the action defines an embedding $G\hookrightarrow \Aut(P)$, and define the \textit{quotient poset} $P/G$ to be the poset whose elements are the orbits of $G$, with the relation $\mathcal{O}\le \mathcal{O}^\prime$ if there exist $x\in \mathcal{O}$, $x^\prime\in \mathcal{O}^\prime$ such that $x\le_{P} x^\prime$.  We will use the following result later in the paper.
+Note that a group $G$ acts on $P$ if the action defines an embedding $G\hookrightarrow \Aut(P)$. We define the \textit{quotient poset} $P/G$ to be the poset whose elements are the orbits of $G$, with the relation $\mathcal{O}\le \mathcal{O}^\prime$ if there exist $x\in \mathcal{O}$, $x^\prime\in \mathcal{O}^\prime$ such that $x\le_{P} x^\prime$.  We will use the following result in the paper.
 
 \begin{thm}[\cite{quotients_stanley}, Theorem 1]
 \label{thm:quotients_of_unitary_peck_posets}
@@ -309,6 +309,7 @@ If $P$ is unitary Peck and $G\subseteq\Aut(P)$, then $P/G$ is Peck.
 
 
 %%%%%%%%%%%%%%%%% The Edge Functor  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{The Edge Poset Construction}
 \label{sec:functor_of_edges}
@@ -349,7 +350,6 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 
 \begin{proof} \indent
 
-\vskip.1in
 \noindent
 {\sf Part (1)}
 First, $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
@@ -741,6 +741,8 @@ By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}(B_n)/G$ is Peck for an
 Note that we have also developed several generalizations of $\mathcal E$, for which many similar results hold. For more information, see [\cite{reu_report}, Subsection 3.3]
 
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
 In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P,x\lessdot z,y\lessdot z,x \in Gy$ then there exists $g \in \Stab(z)$ with $gx = y$.  We show that the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which will be proven in Subsubsection \ref{sssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
@@ -829,7 +831,8 @@ Note that the wreath product $G \wr S_l$ can be viewed as a semidirect product $
 \end{proof}
 
 
-%%%%%%%%%%%%% subsection: CCT examples
+%%%%%%%%%%%%% subsection: CCT examples %%%%%%%%%%% 
+
 \ssec{Examples of CCT Actions}\label{ssec:CCT_examples}
 
 In this subsection, we describe several classes of CCT actions. First, we show that the automorphism group of any rooted tree is CCT. Second, we show linear automorphisms of simplices and octahedra are CCT. Third, we show that the left multiplication action is CCT if and only if the group is $\mathbb Z_2^k$, and that any action of $\mathbb Z_2^k$ on $[n]$ induces a CCT action on $B_n$. In the end of this subsection, we prove Proposition \ref{prop:cover_transitive_building_blocks}, which shows certain symmetric group and dihdral group actions are CCT.
@@ -1058,14 +1061,16 @@ Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n =
 \begin{rem}
 There are several other results related to $\mathcal E(C_n),\mathcal E(D_{2n})$, with $C_n = \mathbb Z/n\mathbb Z$, which are proven in \cite[Section 7]{reu_report}. Notably,
 \begin{enumerate}
-	\item For $G$ any group of order $n$, acting transitively on $[n]$, the induced action of $G$ on $B_n$ defines a quotient poset with $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i$.
-	\item For all $n$, $\mathcal E(B_n/C_n)$ is symmetric and unimodal.
-	\item For all $n$, $\mathcal E(B_n/D_{2n})$ is symmetric and unimodal.
+  \item For $G$ any group of order $n$, acting transitively on $[n]$, the induced action of $G$ on $B_n$ defines a quotient poset with $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i$.
+  \item For all $n$, $\mathcal E(B_n/C_n)$ is symmetric and unimodal.
+  \item For all $n$, $\mathcal E(B_n/D_{2n})$ is symmetric and unimodal.
 \end{enumerate}
 \end{rem}
 
 
+
 %%%%%%%%%%%%%%%%% Pak and Panova %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A Unimodality Result}\label{sec:wreath_product}
 
 In this section, we prove a result similar to that of \cite[Theorem 1.1]{pak}. We construct a certain sequence which is not only unimodal, but can even be exhibited as the ranks of a Peck poset. This construction gives an alternate proof of \cite[Theorem 1.1]{pak} in the case that $r = 1$.
@@ -1124,6 +1129,7 @@ $p_1(l,m,1), p_{2}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is unimodal and symmetric
 
 
 %%%%%%%%%%%%%%%%% Final Remarks %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Final Remarks}
 
 In this section, we discuss several related results and list further questions. 
