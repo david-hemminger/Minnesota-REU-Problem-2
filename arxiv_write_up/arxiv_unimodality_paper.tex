@@ -667,20 +667,10 @@ The automorphism defined by $g\cdot (x, y)= (gx, gy)$ for all $g\in G$, $(x, y)\
 \begin{proof}
 Let $g\in G$.  Since $\le_{\mathcal{H}}$ is the transitive closure of $\lessdot_{\mathcal{H}}$ it suffices to show that for all $(x,y),(x^\prime,y^\prime)\in \mathcal{H}(P)$ we have $(x, y) \lessdot_{\mathcal H} (x^\prime,y^\prime) \iff g(x, y) \lessdot_{\mathcal H} g(x^\prime, y^\prime)$.  Since $g$ is an automorphism of $P$, we have $x\le_P x^\prime \iff gx\le_P gx^\prime$, $y\le_P y^\prime \iff gy\le_P gy^\prime$, and $y\neq x^\prime \iff gy\neq gx^\prime$, so the result follows from the definition of $\le_{\mathcal{H}}$.
 \end{proof}
-%It is rank preserving because $$\rk_{\mathcal H(P)}(g\cdot(x, y)) = \rk_{\mathcal H(P)}(gx, gy)) = \rk_P(gx)=rk_P(x) = \rk_{\mathcal H(P)}(x, y)$$.
-
-%The fact that the $G$-action is rank-preserving on $\mathcal{H}(P)$ follows from the fact that $G$-action is rank-preserving on $\mathcalH(P)$.  In order to show the action is order preserving, it suffices to show that if $(x, y) \lessdot_{\mathcal H} (a, b)$ then $g(x, y) \lessdot_{\mathcal H} g(a, b)$, because $\leq_{\mathcal H}$ is the transitive closure of $\lessdot_{\mathcal H}$. By definition of $\lessdot_{\mathcal H}$, we have $x \lessdot_P a,y\lessdot_P b,y \not \leq b$.  Since $g$ is an automorphism of $P$ for all $g\in G$, it follows that $gx \lessdot_P ga,gy \lessdot_P gb, gy \not \leq_P gb$, hence $g(x, y) \lessdot_{\mathcal H} g(a , b)$.
-
-
-
-
-
 
 \begin{lem}
 \label{lem:bijection_h_f}
 The map $f\colon\mathcal H(P)/G \rightarrow \mathcal E(P)/G$ defined by $G(x,y) \mapsto G(x,y)$ is a bijective morphism for any group action of $G$ on $P$.
-%Took part below out because it's not true and because I'm not sure how helpful the true version is - David
-%(but never an isomorphism for $n-r > 1$)
 \end{lem}
 
 \begin{proof}
@@ -780,8 +770,6 @@ Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the
 
 \semidirect*
 
-
-
 \begin{proof}
 Since $G = H\rtimes K$, every element $g\in G$ can be written uniquely as a product $hk$ for some $h\in H$, $k\in K$.  Let $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$ and such that there exists some $h_0k_0\in G$ such that $h_0k_0\cdot x = y$.  It suffices to show that there exists some $g\in \Stab(z)$ such that $g\cdot x = y$.
 
@@ -797,10 +785,6 @@ $$\phi \times \psi\colon(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g
 is also CCT.
 \end{prop}
 \begin{proof}
-
-%The proof here seemed problematic, but it really is obvious, so I took it out.
-%First, by definition of CCT, if either $G$ or $H$ acts trivially, it is clear the action of $G\times H$ is CCT. To see this, suppose $G$ acts trivially, the case of $H$ acting trivially is similar. Then, if $(x,y) \lessdot (a,b),(r,s)\lessdot (a,b),(x,y) \in (G\times H)(r,s)$, then $x \in Gr$ so $x = r$. There are now two cases, either $b = y = s$ or $x = r = a$. First, if $b = y = s$, then $(e,e) \in Stab(x,y)$ and $(e,e)(x,y) = (r,s)$. Second, if $x = r = a$, and then $y \lessdot b,s \lessdot b,y \in Hs$, and so by cover transitivity of $G$, there exists $g \in G$ so that $(e,g)(x,y) = (r,s)$ and $(e,g) \in Stab(a,b)$.
-
 First note that if either $G$ or $H$ acts trivially, then it can be easily checked that the action of $G\times H$ is CCT.  Next, observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H)$. Since the action of $G$ on $P$ is CCT, the action of $G\times \{e\}$ on $P \times Q$ is CCT. Also, since the action of $H$ on $Q$ is CCT, it follows that the action of $\{e\}\times H$ on $(P/G) \times Q$ is CCT. Therefore, the action of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so the action of $G\times H$ is CCT.
 \end{proof}
 
@@ -843,8 +827,6 @@ If $\psi\colon G\times P \rightarrow P$ is CCT, let $\phi\colon G\wr S_l \times 
 \begin{proof}
 Note that the wreath product $G \wr S_l$ can be viewed as a semidirect product $G^l \rtimes S_l$. Since the action of $G$ on $P$ is CCT we obtain that the action of $G^l$ on $P^l$ is CCT by Proposition ~\ref{prop:direct_product_preservation}.  Furthermore the action $S_l \times (P/G)^l \rightarrow (P/G)^l$ defined by $(\sigma ,(x_1,\ldots, x_l)) \mapsto (x_{\sigma(1)}\ldots, x_{\sigma(l)})$ for $\sigma \in S_l$ and $x_i \in P/G$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}.  Since $P^l/G^l \cong (P/G)^l$, it follows that the action $\phi$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation}, so $\phi$ is CCT.
 \end{proof}
-%Explicitly, this action is $(g_1,\ldots, g_l)(x_1,\ldots, x_l) = (g_1 \cdot x_1,\ldots, g_l \cdot x_l)$. 
-
 
 
 %%%%%%%%%%%%% subsection: CCT examples
@@ -1141,13 +1123,6 @@ $p_1(l,m,1), p_{2}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is unimodal and symmetric
 
 
 
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%% Final Remarks %%%%%%%%%%%%%%%%%%
 \section{Final Remarks}
 
@@ -1169,8 +1144,6 @@ Is $\mathcal E(B_n(q))$ unitary peck?
 \end{question}
 
 
-%\sssec{A $q$-analog of Conjecture ~\ref{conj:F_of_BnG_Peck}}
-
 In particular, if the answer to the previous Question ~\ref{question:unitary_peck_q_edge} is affirmative, it would immediately hold that $\mathcal E(B_n(q))/G$ is Peck, and if $G$ is CCT then $\mathcal E(B_n(q)/G)$ is Peck. Hence, we pose the following question: 
 
 \begin{question}
@@ -1182,8 +1155,6 @@ Even more generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG
 \begin{question}
 For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank-unimodal?
 \end{question}
-
-%\sssec{Additional CCT Actions}
 
 We found several additional interesting examples of CCT actions. Once such action is the linear automorphism of the $n$-cube. Using computers, we found that for $n \leq 3$, the linear automorphisms of the $n$-cube induces a CCT action on $B_{2^n}$. We wonder if this generalizes.
 
