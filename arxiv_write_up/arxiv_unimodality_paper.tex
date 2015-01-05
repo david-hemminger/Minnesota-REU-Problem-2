@@ -393,7 +393,7 @@ Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cd
 \ssec{The Opposite Functor and Self Dual Posets}
 \label{ssec:dual_posets}
 
-Next, we introduce the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show $\op$ commutes with $\mathcal E$. This will imply $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
+Next, we introduce the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show that $\op$ commutes with $\mathcal E$. This will imply that $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply that $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
 
 \begin{defn}
 Let $\mathcal P$ be the category of graded posets and let $\op\colon\mathcal P \rightarrow \mathcal P$ be the opposite functor, defined on posets as follows. For $P$ a poset, the elements of $P^{\op}$ are the same as those of $P$ with order relation $\le_{P^{\op}}$ defined by $x \leq_{P^{\op}} y \iff x \geq_P y$. Induced maps on morphisms are given as follows: for $P,Q$ graded posets with $f\colon P \rightarrow Q$, then $f^{\op}\colon P^{\op} \rightarrow Q^{\op}$ is defined by $f^{\op}(x) = f(x)$. The poset $P^{\op}$ is called the {\it dual} poset of $P$. A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{\op}$.
@@ -539,7 +539,7 @@ If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\m
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{lem:cover_transitive_equivalence}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
 \end{proof}
 
-We prove that $\mathcal E(B_n)$ is unitary Peck in \cite[Section 8]{reu_report}, but unfortunately the proof is messy and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded poset $\mathcal{H}(B_n)$ for all $n$ such that $\mathcal{H}(B_n)$ is easily seen to be unitary Peck in Corollary \ref{cor:HBn_unitary_peck}. Furthermore, we define $\mathcal{H}(B_n)$ such that a group action of $G$ on $B_n$ induces a group action on $\mathcal{H}(B_n)$ (Lemma \ref{lem:G_action_on_HP}) and there is always a bijective morphism $f\colon \mathcal{H}(B_n)/G\rightarrow \mathcal E(B_n)/G$ (Lemma \ref{lem:bijection_h_f}).  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
+We prove that $\mathcal E(B_n)$ is unitary Peck in \cite[Section 8]{reu_report}, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded poset $\mathcal{H}(B_n)$ for all $n$ such that $\mathcal{H}(B_n)$ is easily seen to be unitary Peck in Corollary \ref{cor:HBn_unitary_peck}. Furthermore, we define $\mathcal{H}(B_n)$ such that a group action of $G$ on $B_n$ induces a group action on $\mathcal{H}(B_n)$ (Lemma \ref{lem:G_action_on_HP}) and there is always a bijective morphism $f\colon \mathcal{H}(B_n)/G\rightarrow \mathcal E(B_n)/G$ (Lemma \ref{lem:bijection_h_f}).  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
 \begin{defn}
 \label{defn:h_map}
@@ -691,7 +691,7 @@ f\colon \mathcal{H}(B_n) &\longrightarrow \bigcup_{i=1}^n B_{n-1}^{(i)}\\
 (x,x\cup{i})&\longmapsto x^{(i)}
 \end{align*}
 
-\noindent is an isomorphism.  Suppose we have $(x, y),(x', y') \in \mathcal H(B_n)$ with $(x, y) \lessdot (x', y')$. Let $j\in [n]$ such that $y^\prime = y\cup\{j\}$, and let $i\in [n]$ such that $x^\prime = x\cup \{i\}$. If $i \ne j$, then $x' = y$, contradicting the assumption that $(x, y) \lessdot_{\mathcal H} (x', y')$. Thus $x^\prime = x\cup\{i\}$ and $y^\prime = y\cup\{i\}$ for some $i\in [n]$.
+\noindent is an isomorphism.  Suppose we have $(x, y),(x', y') \in \mathcal H(B_n)$ with $(x, y) \lessdot_{\mathcal H} (x', y')$. Let $j\in [n]$ such that $y^\prime = y\cup\{j\}$, and let $i\in [n]$ such that $x^\prime = x\cup \{i\}$. If $i \ne j$, then $x' = y$, contradicting the assumption that $(x, y) \lessdot_{\mathcal H} (x', y')$. Thus $x^\prime = x\cup\{i\}$ and $y^\prime = y\cup\{i\}$ for some $i\in [n]$.
 
 Conversely we can easily check that if $i\not\in y$, then $(x, y)\lessdot_{\mathcal{H}} (x\cup\{i\}, y\cup\{i\})$.  It follows that for all subsets $w \subset [n]$ such that $|w| = 1$, there is an isomorphism from the subposet of elements $\{(x, y)\colon y\setminus x = w\}$ to $B_{n-1}$ defined by $(x,y)\mapsto (x\setminus w,y\setminus w)$.  Furthermore if $y\setminus x \ne y^\prime \setminus x^\prime$, then $(x, y)$ and $(x^\prime, y^\prime)$ are incomparable, so these subposets indexed by $w$ are pairwise disjoint, and $\mathcal H(B_n)$ is isomorphic to $n$ copies of $B_{n}$.
 \end{proof}
@@ -793,7 +793,7 @@ First note that if either $G$ or $H$ acts trivially, then it can be easily check
 Next, we use Proposition ~\ref{prop:semidirect_product_preservation} to prove in Proposition ~\ref{prop:wreath_preservation} that the CCT property is preserved under wreath products with the symmetric group. First, we need some definitions of wreath product.
 
 \begin{defn}
-For $G, H$ groups, with $H \subset S_l$, the {\it wreath product}, notated $G \wr H$, is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
+For $G, H$ groups, with $H \subset S_l$, the {\it wreath product}, denoted by $G \wr H$, is the group whose elements are pairs $(g,h) \in G^l\times H$ with multiplication defined by
 \begin{align*}
 ((g_1',\ldots, g_l'),h') \cdot ((g_1,\ldots, g_l) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(l)}g_l),hh')
 \end{align*}
@@ -996,7 +996,7 @@ Next, we look at linear automorphisms of octahedrons. Let $G$ be the group of li
 The induced action of the group of linear automorphisms of the $n$-octahedron on $B_{2n}$ is CCT.
 \end{prop}
 \begin{proof}
-It is simple to see that the group of linear automorphisms of the n-octahedron is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k$.\footnote{The hyperoctahedral group is commonly notated $B_n$, since it is the type $B$ Coexeter group. We do not use this notation here to avoid confusing it with the boolean algebra.} It is well known that they hyperoctahedral group can be written as $S_2 \wr S_n$. Then, by Proposition ~\ref{prop:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
+It is simple to see that the group of linear automorphisms of the n-octahedron is the hyperoctahedral group, since it is generated by the permutation matrices, together with the matrix $A$ with $A_{1,1} = -1,A_{i,i} = 1,A_{j,k} = 0$ where $i \neq 1, j \neq k$.\footnote{The hyperoctahedral group is commonly denoted by $B_n$, since it is the type $B$ Coexeter group. We do not use this notation here to avoid confusing it with the boolean algebra.} It is well known that they hyperoctahedral group can be written as $S_2 \wr S_n$. Then, by Proposition ~\ref{prop:wreath_preservation}, it follows that $S_2 \wr S_n$ is CCT.
 \end{proof}
 
 \begin{rem}
@@ -1044,12 +1044,9 @@ We have already seen in \ref{eg:trivial_edgequot} that $(1)$ holds trivially. We
 
 We wish to prove that given $G(x, y) \in \mathcal E (B_p)$ such that $\sigma x \lessdot y$ where $\sigma \in D_{2p}$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. 
 
-The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$ where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon, or some rotation $\sigma_0^{d} $ where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y,$ since $r$ is of order 2. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $G(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection that sends $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction. So, by definition of CCT, the action $D_{2p}$ on $B_p$ is CCT. 
+The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$ where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon, or some rotation $\sigma_0^{d} $ where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y,$ since $r$ is of order 2. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $G(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection that sends $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.Therefore, the action $D_{2p}$ on $B_p$ is CCT. 
 \end{proof}
 
-\begin{rem}
-Let $G$ be as in Proposition \ref{prop:cover_transitive_building_blocks} We remark that, in addition to unimodality, Theorem ~\ref{thm:cover_transitive_implies_Peck} implies that the poset $\mathcal E(B_n/G)$ is Peck.
-\end{rem}
 
 \begin{rem}
 \label{prop:iff_dihedral_cct}
@@ -1061,9 +1058,9 @@ Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n =
 \begin{rem}
 There are several other results related to $\mathcal E(C_n),\mathcal E(D_{2n})$, with $C_n = \mathbb Z/n\mathbb Z$, which are proven in \cite[Section 7]{reu_report}. Notably,
 \begin{enumerate}
-  \item For $G$ any group of order $n$, acting transitively on $[n]$, the induced action of $G$ on $B_n$ defines a quotient poset with $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i$.
-  \item For all $n$, $\mathcal E(B_n/C_n)$ is symmetric and unimodal.
-  \item For all $n$, $\mathcal E(B_n/D_{2n})$ is symmetric and unimodal.
+	\item For $G$ any group of order $n$, acting transitively on $[n]$, the induced action of $G$ on $B_n$ defines a quotient poset with $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i$.
+	\item For all $n$, $\mathcal E(B_n/C_n)$ is symmetric and unimodal.
+	\item For all $n$, $\mathcal E(B_n/D_{2n})$ is symmetric and unimodal.
 \end{enumerate}
 \end{rem}
 
@@ -1082,7 +1079,7 @@ For this section, fix $l,m$ with $n = l \cdot m$ and fix $G = S_m \wr S_l$. Let 
 \ssec{Restatement of the Unimodality Result}
 We first review the necessary definitions and then state \cite[Theorem 1.1]{pak}:
 
-A {\it partition} is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$ such that $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k$. If $\sum_{i=1}^k \lambda_i = n$ then $\lambda$ is a {\it partition of $n$}, notated $\lambda \vdash n$. Let $P_n(l,m)$ denote the set of partitions $\lambda = (\lambda_1,\ldots, \lambda_k) \vdash n$, such that $\lambda_1 \leq m,k \leq l$. That is, $P_n(l,m)$ is the partitions which fit inside an $l \times m$ rectangle.
+A {\it partition} $\lambda$ of $n$ is a sequence of numbers $\lambda = (\lambda_1,\ldots, \lambda_k)$ such that $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k$ and that $\sum_{i=1}^k \lambda_i = n$, denoted by  $\lambda \vdash n$. Let $P_n(l,m)$ denote the set of partitions $\lambda = (\lambda_1,\ldots, \lambda_k) \vdash n$, such that $\lambda_1 \leq m,k \leq l$. That is, $P_n(l,m)$ is the partitions which fit inside an $l \times m$ rectangle.
 
 \begin{note}
 \cite[Section 1]{pak} For $\lambda$ a partition, let $\nu(\lambda)$ be the number of distinct nonzero part sizes of $\lambda$.  Let $p_k(l,m,r) = \sum_{\lambda \in P_k(l,m)} \binom{\nu(\lambda)}{r}$.
