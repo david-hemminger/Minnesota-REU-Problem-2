@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  4 JAN 2015 21:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  4 JAN 2015 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,10 +275,6 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen151
 \Gin@req@width=\dimen152
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write4
-
-Excluding comment 'comment')
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -315,7 +311,7 @@ ode.tex
 \pgf@yb=\dimen158
 \pgf@xc=\dimen159
 \pgf@yc=\dimen160
-\w@pgf@writea=\write5
+\w@pgf@writea=\write4
 \r@pgf@reada=\read2
 \c@pgf@counta=\count110
 \c@pgf@countb=\count111
@@ -598,52 +594,17 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen205
 \Gm@dimlist=\toks45
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks46
-\XKV@tempa@toks=\toks47
-\XKV@depth=\count132
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
-))
-(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count133
-\calc@Bcount=\count134
-\calc@Adimen=\dimen206
-\calc@Bdimen=\dimen207
-\calc@Askip=\skip51
-\calc@Bskip=\skip52
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count135
-\calc@Cskip=\skip53
-)
-\c@@todonotes@numberoftodonotes=\count136
-)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2012/05/04 v63
-\thmt@toks=\toks48
-\c@thmt@dummyctr=\count137
+\thmt@toks=\toks46
+\c@thmt@dummyctr=\count132
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2012/05/04 v63
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/thmtools/parseargs.sty
 Package: parseargs 2012/05/04 v63
-\@parsespec=\toks49
+\@parsespec=\toks47
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/thmtools/thm-kv.sty
 Package: thm-kv 2012/05/04 v63
@@ -681,7 +642,7 @@ Package: thm-restate 2012/05/04 v63
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 Package: thm-amsthm 2012/05/04 v63
-\thmt@style@headstyle=\toks50
+\thmt@style@headstyle=\toks48
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarycalc.code.tex
@@ -694,7 +655,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen208
+\arrowsize=\dimen206
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
@@ -702,14 +663,14 @@ s/tikzlibrarydecorations.pathmorphing.code.tex
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen209
-\pgfdecoratedremainingdistance=\dimen210
-\pgfdecoratedinputsegmentcompleteddistance=\dimen211
-\pgfdecoratedinputsegmentremainingdistance=\dimen212
-\pgf@decorate@distancetomove=\dimen213
-\pgf@decorate@repeatstate=\count138
-\pgfdecorationsegmentamplitude=\dimen214
-\pgfdecorationsegmentlength=\dimen215
+\pgfdecoratedcompleteddistance=\dimen207
+\pgfdecoratedremainingdistance=\dimen208
+\pgfdecoratedinputsegmentcompleteddistance=\dimen209
+\pgfdecoratedinputsegmentremainingdistance=\dimen210
+\pgf@decorate@distancetomove=\dimen211
+\pgf@decorate@repeatstate=\count133
+\pgfdecorationsegmentamplitude=\dimen212
+\pgfdecorationsegmentlength=\dimen213
 )
 \tikz@lib@dec@box=\box42
 )
@@ -765,14 +726,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen216
-\Hy@linkcounter=\count139
-\Hy@pagecounter=\count140
+\@linkdim=\dimen214
+\Hy@linkcounter=\count134
+\Hy@pagecounter=\count135
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count141
+\Hy@SavedSpaceFactor=\count136
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -795,17 +756,17 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count142
+\c@Hy@tempcnt=\count137
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen217
-\Fld@menulength=\count143
-\Field@Width=\dimen218
-\Fld@charsize=\dimen219
+\XeTeXLinkMargin=\dimen215
+\Fld@menulength=\count138
+\Field@Width=\dimen216
+\Fld@charsize=\dimen217
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -815,20 +776,20 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count144
-\c@Item=\count145
-\c@Hfootnote=\count146
+\Hy@abspage=\count139
+\c@Item=\count140
+\c@Hfootnote=\count141
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count147
-\c@bookmark@seq@number=\count148
-\Hy@SectionHShift=\skip54
+\Fld@listcount=\count142
+\c@bookmark@seq@number=\count143
+\Hy@SectionHShift=\skip51
 )
-\c@thm=\count149
+\c@thm=\count144
 
 (./arxiv_unimodality_paper.aux
 
@@ -837,49 +798,49 @@ LaTeX Warning: Label `eq:level_expansion' multiply defined.
 )
 \openout1 = `arxiv_unimodality_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Try loading font information for U+msa on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 95.
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 95.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 93.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Package xypdf Info: Line width: 0.39998pt on input line 95.
+Package xypdf Info: Line width: 0.39998pt on input line 93.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count150
-\scratchdimen=\dimen220
+\scratchcounter=\count145
+\scratchdimen=\dimen218
 \scratchbox=\box43
-\nofMPsegments=\count151
-\nofMParguments=\count152
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count153
-\MPscratchDim=\dimen221
-\MPnumerator=\count154
-\makeMPintoPDFobject=\count155
-\everyMPtoPDFconversion=\toks52
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen219
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
+\everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -931,47 +892,47 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Configuring pdfsync
-\PDFSYNC@ut=\write6
-\openout6 = `arxiv_unimodality_paper.pdfsync'.
+\PDFSYNC@ut=\write5
+\openout5 = `arxiv_unimodality_paper.pdfsync'.
 
-\PDFSYNCf@li@=\count156
-\PDFSYNC@rder=\count157
+\PDFSYNCf@li@=\count151
+\PDFSYNC@rder=\count152
 **** pdfsync.sty: Synchronizing at \everypar
-\PDFSYNCeveryp@r=\toks53
+\PDFSYNCeveryp@r=\toks51
 **** pdfsync.sty: Synchronizing at \everymath
-\PDFSYNCeverym@th=\toks54
+\PDFSYNCeverym@th=\toks52
 **** pdfsync.sty: Synchronizing at \everyhbox
-\PDFSYNCeveryhb@x=\toks55
+\PDFSYNCeveryhb@x=\toks53
 **** pdfsync.sty: Synchronizing at \everyvbox
-\PDFSYNCeveryvb@x=\toks56
+\PDFSYNCeveryvb@x=\toks54
 **** pdfsync.sty: started
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring ON on input line 95.
+Package hyperref Info: Link coloring ON on input line 93.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count158
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
 
 (./arxiv_unimodality_paper.out) (./arxiv_unimodality_paper.out)
-\@outlinefile=\write7
-\openout7 = `arxiv_unimodality_paper.out'.
+\@outlinefile=\write6
+\openout6 = `arxiv_unimodality_paper.out'.
 
-LaTeX Font Info:    Try loading font information for U+eus on input line 99.
+LaTeX Font Info:    Try loading font information for U+eus on input line 96.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input l
-ine 111.
+ine 108.
 Package hyperref Info: bookmark level for unknown eg defaults to 0 on input lin
-e 120.
+e 117.
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no ( in font nullfont!
@@ -984,30 +945,30 @@ Missing character: There is no ) in font nullfont!
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 205.
+nput line 202.
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 219.
+ne 216.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 231.
+ine 228.
 
 [2]
 Package hyperref Info: bookmark level for unknown rem defaults to 0 on input li
-ne 266.
+ne 263.
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input li
-ne 295.
+ne 292.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 321.
+(hyperref)                removing `math shift' on input line 318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 321.
+(hyperref)                removing `math shift' on input line 318.
 
 [3] [4] [5]
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 480.
+ne 477.
  [6]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1016,7 +977,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7] [8]
-Overfull \hbox (6.63423pt too wide) in paragraph at lines 732--733
+Overfull \hbox (6.63423pt too wide) in paragraph at lines 729--730
 [][][]\OT1/cmr/m/n/10 By Corol-lary [][]3.27[][], $[][]\U/eus/m/n/10 H\OT1/cmr/
 m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G$ \OT1/cmr/m/n/
 10 is Peck. By Lemma [][]3.24[][], the map $[][]\OML/cmm/m/it/10 f [] [] \U/eus
@@ -1035,18 +996,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 939.
+ine 936.
  [12] [13] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1095.
+(hyperref)                removing `math shift' on input line 1092.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1095.
+(hyperref)                removing `math shift' on input line 1092.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1121
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1118
 [][][]\OT1/cmr/m/n/10 Therefore, $[][]\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 (\U/eus
 /m/n/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10
  =G\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\U
@@ -1057,24 +1018,25 @@ cmm/m/it/10 B[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =G$ \OT1/cmr/m/n/10 is Peck,
  []
 
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 1145.
+ut line 1142.
 [16] (./arxiv_unimodality_paper.bbl (./arxiv_unimodality_paper.brf)
-\tf@brf=\write8
-\openout8 = `arxiv_unimodality_paper.brf'.
+\tf@brf=\write7
+\openout7 = `arxiv_unimodality_paper.brf'.
 
+LaTeX Font Info:    Try loading font information for U+euf on input line 36.
 
-Underfull \hbox (badness 1242) in paragraph at lines 19--19
-[][][]\OT1/cmr/m/n/8 David Hem-minger, Aaron Lan-des-man, and Zi-jian Yao. Peck
--ness of edge posets. http://www.math.umn.edu/
- []
-
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1190.
+Missing character: There is no c in font msbm10!
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1191.
  [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1190.
- (./arxiv_unimodality_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1190.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1191.
+
+(./arxiv_unimodality_paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1191.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1191.
 
 Package rerunfilecheck Info: File `arxiv_unimodality_paper.out' has not changed
 .
@@ -1086,16 +1048,16 @@ Package rerunfilecheck Info: File `arxiv_unimodality_paper.brf' has not changed
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1190.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1191.
  ) 
 Here is how much of TeX's memory you used:
- 20932 strings out of 493315
- 367112 string characters out of 6137904
- 502101 words of memory out of 5000000
- 23524 multiletter control sequences out of 15000+600000
- 13811 words of font info for 62 fonts, out of 8000000 for 9000
+ 20395 strings out of 493315
+ 356789 string characters out of 6137904
+ 491502 words of memory out of 5000000
+ 23001 multiletter control sequences out of 15000+600000
+ 14519 words of font info for 65 fonts, out of 8000000 for 9000
  1118 hyphenation exceptions out of 8191
- 56i,30n,63p,3255b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,30n,63p,3255b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1115,15 +1077,16 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on arxiv_unimodality_paper.pdf (17 pages, 358043 bytes).
+dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on arxiv_unimodality_paper.pdf (17 pages, 361345 bytes).
 PDF statistics:
- 657 PDF objects out of 1000 (max. 8388607)
- 607 compressed objects within 7 object streams
- 237 named destinations out of 1000 (max. 500000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 615 compressed objects within 7 object streams
+ 241 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

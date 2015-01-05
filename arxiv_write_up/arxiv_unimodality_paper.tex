@@ -1,4 +1,4 @@
-\documentclass[10 pt]{amsart}
+\documentclass[10pt]{amsart}
 \usepackage{amsmath}
 \usepackage{amsxtra}
 \usepackage{amscd}
@@ -8,16 +8,14 @@
 \usepackage{eucal}
 \usepackage[all]{xy}
 \usepackage{graphicx}
-\usepackage{comment}
 \usepackage{tikz}
 \usepackage{tikz-cd}
-\usepackage{latexsym,amsmath,amscd,amssymb,epsfig,verbatim}
+\usepackage{latexsym,epsfig,verbatim}
 \usepackage[margin=1.1in,letterpaper,portrait]{geometry}
-\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
+%\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usetikzlibrary{matrix,calc, arrows,decorations.pathmorphing}
-
 
 \RequirePackage{color}
 \definecolor{myred}{rgb}{0.75,0,0}
@@ -93,7 +91,6 @@
 \email{zijian$\_$yao@brown.edu}
 
 \begin{document}
-
 
 \begin{abstract}
 For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose elements are the edges in the Hasse diagram of P. For any group, $G$, acting on the boolean algebra, $B_n$, we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products.
@@ -1183,8 +1180,12 @@ Is the action of $\operatorname{GL}_n(\mathbb F_q)$ on $B_{q^n-1}$ (induced by t
 This research was carried out in the 2014 combinatorics REU program at the University of Minnesota, Twin Cities, and was supported by RTG grant NSF/DMS-1148634.
 We would like to thank our mentor Victor Reiner for his consistent help and guidance throughout the project and our TA Elise DelMas for her helpful feedback on the paper. We would also like to thank Ka Yu Tam for helpful comments.  In addition, we thank the math department of University of Minnesota, Twin Cities, for its hospitality and Gregg Musiker for organizing the program.
 
-\bibliography{References}
+\medskip 
+
+\nocite{*}
 \bibliographystyle{plain}
+\bibliography{References}
+
 
 
 \end{document}
