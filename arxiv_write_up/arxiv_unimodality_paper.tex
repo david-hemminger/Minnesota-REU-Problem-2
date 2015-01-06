@@ -88,7 +88,7 @@
 \email{aaronlandesman@gmail.com}
 
 \address{Zijian Yao, Brown University}
-\email{zijian$\_$yao@brown.edu}
+\email{yaozijian1992@gmail.com}
 
 \begin{document}
 
@@ -197,7 +197,7 @@ We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  
 
 We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, namely, for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-Throughout the paper we say a group $G$ acts on $P$ if it acts on the elements of $P$ and that action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
+Throughout the paper we say that a group $G$ acts on $P$ if it acts on the elements of $P$ and the action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conjecture}\label{conj:F_of_BnG_Peck}
 If $G \subseteq \Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
@@ -266,10 +266,8 @@ Note that we do not require the implication that $f(x)\le_Q f(y)$ implies $x\le_
 
 
 In what follows, let $P$ be a poset of rank $n$, and write $p_i = |P_i|$.  If we have
-
 $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
-
-\noindent for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say that $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
+for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ disjoint antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say that $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
 
 \begin{defn}
 $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
@@ -308,7 +306,7 @@ If $P$ is unitary Peck and $G\subseteq\Aut(P)$, then $P/G$ is Peck.
 %%%%%%%%%%%%%%%%% The Edge Functor  %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\section{The Edge Poset Construction}
+\section{The Edge Poset}
 \label{sec:functor_of_edges}
 
 In Subsection \ref{ssec:functoriality} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  In Subsection \ref{ssec:dual_posets} we prove that $\mathcal{E}$ sends self-dual posets to self-dual posets.  In Subsection \ref{ssec:equivalent_defs} we give several equivalent definitions for CCT actions, and Subsection \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
@@ -424,7 +422,7 @@ While $\mathcal{E}(P)$ is commonly Peck when $P$ is Peck, $\mathcal E(P)$ need n
 \begin{figure}[h]
 \label{fig:dual_not_unimodal}
 
-\begin{tikzpicture}[scale = .75]
+\begin{tikzpicture}[scale = .7]
   \node (0) at (0,0) {0};
   \node (1) at (2,0) {1};
   \node (2) at (0,2) {2};
