@@ -2043,7 +2043,7 @@ We have
   &= \sum_{b\subset s,a \subset b}^{} \beta \sum_{y \subset a}^{}(x, y) + \sum_{b\subset s,a \subset b}^{} \sum_{y\subset b,x \subset a,y\not\subset a}^{}(x, y).\\
   &= \beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1) \sum_{y \subset s}^{}(x ,y)+ \sum_{b\subset s,a \subset b}^{} \sum_{y\subset b,x \subset a,y\not\subset a}^{}(x, y).\\
   &= \beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1) \sum_{y \subset s}^{}(x ,y) + \binom{|s|-i-1}{n-2i-1}\sum_{y\subset s}^{}(x, y)\\
-  & =\left(\frac{1}{\beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1)+\binom{|s|-i-1}{n-2i-1}}\right) \sum_{y \subset s}^{}(x,y).
+  & =\left(\beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1)+\binom{|s|-i-1}{n-2i-1}\right) \sum_{y \subset s}^{}(x,y).
 \end{align*}
 In going between the fourth line and the fifth line, one needs to count the number of $y$ satisfying $y \subset a \subset b\subset s.$ If we fix $s,a$ there are $(|s|-n+i+1)$ choices for the element $b,$ since $b = a \cup \{s\}$ for $s \notin a.$ Then, we need to count the number of $a$ with $y \subset a \subset s.$ This is exactly $\binom {|s|-i-1}{n-2i-2}.$ Hence, the total of number of such $y$ is the product $\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1).$
 
@@ -2101,7 +2101,7 @@ For any $s \subset [n],$ with $|s| \leq n-i,$ define $h_s = z_{[n]} - u_s.$
 
 \begin{lem}
 \label{h_equivalence}
-With $h_s$ as defined above $h_s = \sum_{x\not\subset s}^{}(x, y)$
+With $h_s$ as defined above, $h_s = \sum_{x\not\subset s}^{}(x, y)$
 \end{lem}
 \begin{proof}
 Using ~\ref{z_equivalence} and ~\ref{u_equivalence}
@@ -2111,33 +2111,35 @@ Using ~\ref{z_equivalence} and ~\ref{u_equivalence}
   &= \sum_{x\not\subset s}^{}(x, y)
 \end{align*}
 \end{proof}
+
 \begin{note}
-For $I \subset[n],$ let $I^c = [n]\setminus I,$ the complement of $I$ in $[n].$
+For $I$ with $I\subset [n],$ define $l_{I}= \sum_{I \subset x}^{}(x, y).$
 \end{note}
 
 \begin{lem}
 \label{l_induction_step}
-Let $I$ be fixed. If $l_J$ lies in the span of $v_{(a, b)}$ for $J \subset I,$ then so does $l_I.$
+Let $I$ be fixed. If $l_J$ lies in the span of $v_{(a, b)}$ for all $J \subset I,$ then so does $l_I.$
 
 \end{lem}
 \begin{proof}
-Let $I = \{i_1,\ldots, i_s\}.$ Let $A_k = \{x \colon i_k \in x\}.$ Then, $\cap_{k=1}^s A_k = \{x \colon I \subset x\}.$ Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{k=1}^s A_k} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{k=1}^s A_k} (x, y)$ does as well.
+Let $I \subset [n].$ Let $A_i = \{x \colon i \in x\}.$ Then, $\cap_{i \in I} A_i = \{x \colon I \subset x\}.$ And, in general, $\cap_{k \in J} A_k = \{x: J \subset x\}$. Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{i \in I} A_i} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{i \in I} A_i} (x, y)$ does as well.
 
 \end{proof}
 
 \begin{lem}
+\label{l_in_span}
 For all $J \subset [n],$ with $|J| \leq i,$ we have $l_{J}$ lies in the span of $v_{(a , b)}.$ 
 \end{lem}
 \begin{proof}
-We prove this by induction on the size of $I.$ First, we know $h_{[n]}$ lies in the span of $v_{(a, b)}$ and so have completed the base case $|I| = 0$ since $h_{[n]} = l_{\emptyset}.$ So, to complete the proof, it suffices to show that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what ~\ref{l_induction_step} proves.
+We prove this by induction on the size of $I.$ First, we know $l_\emptyset$ lies in the span of $v_{(a, b)}$ because $z_{[n]} = l_{\emptyset},$ as $z_{[n]} = \sum_{x \subset y} (x,y) = l_\emptyset,$ from Lemma \ref{z_equivalence}. This completes the base case, $|I|=0$. So, to complete the proof, it suffices to show that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what ~\ref{l_induction_step} proves.
 \end{proof}
 
 \begin{lem}
 \label{l_diag_equivalence}
-For $|x| = i,$ we have $l_{x} = \sum_{y \supset x}^{}(y, x).$
+For $|x| = i,$ we have $l_{x} = \sum_{y \supset x}^{}(x, y),$ which lies in the span of $v_{(a,b)}$.
 \end{lem}
 \begin{proof}
-By definition, $l_{\bar x} = \sum_{\bar x\subset x,\bar x \cap x = \bar x,x\subset y}^{}(x, y) = \sum_{\bar x\subset y}^{}(\bar x, y).$ Replacing $\bar x$ by $x$ gives the result.
+This follows immediately from the definition of $l_x$, since the only element of size $i$ containing $x$ is $x$ itself. We know $l_x$ lies in the span of $v_{(a,b)}$ by Lemma \ref{l_in_span}.
 \end{proof}
 
 \begin{note}
@@ -2230,7 +2232,7 @@ By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefsch
 
 In this section, we include various remarks, as well as failed attempts, which don't particularly belong in other sections.
 
-
+	
 %%%%%%%%%%%%%%%%% q - analog  %%%%%%%%%%%%%%%%%%
 \ssec{A $q$-analog}
 \label{ssec:q_analog}
