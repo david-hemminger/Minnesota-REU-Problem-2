@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Background}{3}{0}{1}
+\beamer@sectionintoc {2}{Edge Poset Construction and Main Result}{5}{0}{2}
+\beamer@sectionintoc {3}{CCT Actions}{9}{0}{3}
+\beamer@sectionintoc {4}{Acknowledgements}{17}{0}{4}
