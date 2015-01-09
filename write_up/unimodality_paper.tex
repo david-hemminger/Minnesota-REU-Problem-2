@@ -2115,14 +2115,23 @@ Using ~\ref{z_equivalence} and ~\ref{u_equivalence}
 \begin{note}
 For $I$ with $I\subset [n],$ define $l_{I}= \sum_{I \subset x}^{}(x, y).$
 \end{note}
+\begin{note}
+For $I \subset [n]$ let the complement of $I$ be denoted by $I^c = \{i \in [n]|i \notin I\}.$
+\end{note}
+
+
 
 \begin{lem}
 \label{l_induction_step}
-Let $I$ be fixed. If $l_J$ lies in the span of $v_{(a, b)}$ for all $J \subset I,$ then so does $l_I.$
+Let $I$ be fixed, $|I| \geq 2$. If $l_J$ lies in the span of $v_{(a, b)}$ for all $J \subset I,$ then so does $l_I.$
 
 \end{lem}
 \begin{proof}
-Let $I \subset [n].$ Let $A_i = \{x \colon i \in x\}.$ Then, $\cap_{i \in I} A_i = \{x \colon I \subset x\}.$ And, in general, $\cap_{k \in J} A_k = \{x: J \subset x\}$. Using the principle of inclusion exclusion, we can write $\sum_{x \in\cap_{i \in I} A_i} (x, y)$ as a sum of terms $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ for $J \subset I.$ Since we are assuming $\pm \sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)}$ it follows that $l_I = \sum_{x \in\cap_{i \in I} A_i} (x, y)$ does as well.
+Let $I \subset [n].$ Let $A_i = \{x \colon i \in x\}.$ Then, $\cap_{i \in I} A_i = \{x \colon I \subset x\}.$ And, in general, $\cap_{k \in J} A_k = \{x: J \subset x\}$. Using the principle of inclusion exclusion, we can write 
+\begin{equation}
+\label{pie}\sum_{x \in\cap_{i \in I} A_i} (x, y)= \sum_{x \in \cup_{k \in I} A_k} (x,y) + \sum_{J \subset I, J \neq I, J \neq \emptyset} (-1)^{|I|-|J|+1}\sum_{x \in\cap_{k \in J} A_k} (x, y).
+\end{equation}
+ Our aim is to show the left hand side of Equation \eqref{pie} lies in the span of $v_{(a,b)}$ so it suffices to show all terms on the right hand of Equation \eqref{pie} side lie in the span of $v_{(a,b)}$. Observe that $\{x \in \cup_{k \in I} A_k\} = \{x \colon x \not \subset I^c\},$ and so $\sum_{x \in \cup_{k \in I} A_k} (x,y) = h_{I^c},$ by Lemma \ref{h_equivalence}. Furthermore, we are assuming $\sum_{x \in\cap_{k \in J} A_k} (x, y),$ lie in the span of $v_{(a, b)},$ for $J \subset I.$ Hence, the right hand side of Equation \eqref{pie} lies in the span of $v_{(a,b)},$ and it follows that $l_I = \sum_{x \in\cap_{i \in I} A_i} (x, y)$ does as well.
 
 \end{proof}
 
@@ -2131,7 +2140,12 @@ Let $I \subset [n].$ Let $A_i = \{x \colon i \in x\}.$ Then, $\cap_{i \in I} A_i
 For all $J \subset [n],$ with $|J| \leq i,$ we have $l_{J}$ lies in the span of $v_{(a , b)}.$ 
 \end{lem}
 \begin{proof}
-We prove this by induction on the size of $I.$ First, we know $l_\emptyset$ lies in the span of $v_{(a, b)}$ because $z_{[n]} = l_{\emptyset},$ as $z_{[n]} = \sum_{x \subset y} (x,y) = l_\emptyset,$ from Lemma \ref{z_equivalence}. This completes the base case, $|I|=0$. So, to complete the proof, it suffices to show that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what ~\ref{l_induction_step} proves.
+We prove this by induction on the size of $I.$ First, we check the two base cases: when $|I| = 0, |I| = 1$. In the case $I = \emptyset,$ we know $l_\emptyset$ lies in the span of $v_{(a, b)}$ because $z_{[n]} = l_{\emptyset},$ as $z_{[n]} = \sum_{x \subset y} (x,y) = l_\emptyset,$ from Lemma \ref{z_equivalence}. In the case $|I| = 1$, 
+we have $l_I = h_{I^c}$, 
+because if $I = \{i\}$, then $\{x \colon x \not\subset I^c\} 
+= \{x \colon i \in x\} = \{x \colon I \subset x\}$.
+
+This completes the base case. So, to complete the proof, it suffices to show the induction step: that if we know this Lemma holds for all $|s|>j$ then it holds for $|s| = j.$  This is exactly what Lemma \ref{l_induction_step} proves.
 \end{proof}
 
 \begin{lem}
