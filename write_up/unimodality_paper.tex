@@ -1951,7 +1951,7 @@ In this subsection, we give explicit formulas for compositions of the order rais
 
 \begin{note}
 For this section, we will use $M^{n-2i-1} = \mathcal E(U)^{n-2i-1},$ where $\mathcal E(U)^{n-2i-1}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-i-1}$ is the Lefschetz map, as defined in ~\ref{defn:lefschetz}.
-\end{note}
+\end{note}\todo{Looking back on it, I don't think we should use the notation $\mathcal E(U)^{n-2i-1}$.  For here, why don't we just say that $M^{n-2i-1}$ is the Lefschetz map?}
 \begin{note}
 For the remainder of this section, we take $|a| = n-i-1,|b|= n-i,|x| = i,|y| = i+1.$ Let $k = n-2i-1,$ that is, $k = |a| - |x|.$ Additionally, whenever we write an expression of the form $(x, y)$ or $(a, b),$ it is assumed that $x \lessdot y,a \lessdot b.$
 \end{note}
@@ -1981,7 +1981,9 @@ The map $M$ satisfies
 \end{prop}
 \begin{proof}
 
-For a particular $(x, y),(a , b)$, if either $y \subset a$ or $y \not \subset a, x\subset a, y\subset b,$ then $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$ and so the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is 0.
+\todo{There are a number of $(a\setminus b)$'s that I believe should be $(b\setminus a)$'s since $a\subset b$.}
+
+For a particular $(x, y),(a , b)$, if either $y \subset a$ or $y \not \subset a, x\subset a, y\subset b,$ \todo{I think quantifiers are supposed to be either ($y \subset a$) or ($y \not \subset a, x\subset a, y\subset b,$), in which case an "and" needs to be added to the list of three} then $(a, b) \not >_{ \mathcal H(B_n)} (x, y),$\todo{should this be $\not >_{ \mathcal H(B_n)}$?} and so the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is 0.
 
 Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\subset b,$ hold at the same time. So, suppose  $y \not \subset a, x\subset a, y\subset b.$ This implies that $b\setminus a = y\setminus x.$ Then, the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is precisely the number of sequences 
 \begin{equation}
@@ -1993,14 +1995,14 @@ Clearly, we cannot have both $y \subset a$ and $y \not \subset a, x\subset a, y\
 To complete the proof, we need to show that if $y \subset a$ then the coefficient of $(a, b)$ in $M^{n-2i-1}(x, y)$ is $(2^k - 1)(k-1)!$. Equivalently, we need to show that the number of sequences as in \eqref{eqn:f_seq}
 is $(2^k - 1)(k-1)!.$
 
-For the moment, fix $j$ and consider the set of all sequences of the form in Equation ~\eqref{eqn:f_seq} such that $(a\setminus b) \cup y_{j-1} = y_j$ First, let us show the number of such with this $j$ fixed is $(k-1)!2^j.$ To do this, start by considering the number of sequence $y_0,\ldots, y_k$ such that $y=y_0 \lessdot_{B_n} y_1 \lessdot_{B_n} \cdots \lessdot_{B_n} y_k = b.$ Since we enforce $y_j = y_{j-1} \cup (a \setminus b),$ the number of such sequences is precisely the number of ways to order the elements $a \setminus y.$ Since $|y| - |a| = k-1,$ there are $(k-1)!$ such ways. Additionally, for $l <j$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l)$ or $x_{l+1} = x_l \cup (y_l \setminus x_l).$ 
-Either of these is possible at every step. Additionally, for $l \geq j,$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l).$ So for any fixed sequence of $y_k$ with so that $j$ is minimal with $(a\setminus b) \in y_j,$ 
+For the moment, fix $j$ and consider the set of all sequences of the form in Equation ~\eqref{eqn:f_seq} such that $(a\setminus b) \cup y_{j-1} = y_j$ First, let us show the number of such sequences with this $j$ fixed is $(k-1)!2^j.$ To do this, start by considering the number of sequences $y_0,\ldots, y_k$ such that $y=y_0 \lessdot_{B_n} y_1 \lessdot_{B_n} \cdots \lessdot_{B_n} y_k = b.$ Since we enforce $y_j = y_{j-1} \cup (a \setminus b),$ the number of such sequences is precisely the number of ways to order the elements $a \setminus y.$ Since $|y| - |a| = k-1,$\todo{$|a| - |y|$?} there are $(k-1)!$ such ways. Additionally, for $l <j$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l)$ or $x_{l+1} = x_l \cup (y_l \setminus x_l).$ 
+Either of these is possible at every step \todo{I think they're only both possible for $l < j-1$.  In general this paragraph and the bit following mixes between $j$ and $j-1$ a lot.  It looks like they should all be $j-1$'s, but someone should check me on this.}. Additionally, for $l \geq j,$ we must have $x_{l+1} = x_l \cup (y_{l+1} \setminus y_l).$ So for any fixed sequence of $y_k$ with so that $j$ is minimal with $(a\setminus b) \in y_j,$ 
 there are precisely $2^{j-1}$ possible sequences 
 $$x=x_0 \lessdot_{B_n} x_1 \lessdot_{B_n} \cdots \lessdot_{B_n} x_k = a$$
 so that 
 $$(x, y) = (x_0, y_0) \lessdot_{\mathcal E(B_n)} (x_1, y_1) \lessdot_{\mathcal E(B_n)}  \cdots \lessdot_{\mathcal E(B_n)}  (x_k, y_k) = (a, b).$$
 
-So, in total, there are $2^j(k-1)!$ sequences of the form in ~\eqref{eqn:f_seq} with $(a\setminus b) \cup y_{j-1} = y_j$. Now, there clearly must be some such $j,1 \leq j \leq k.$ Therefore, the coefficient we are looking for is 
+So, in total, there are $2^j(k-1)!$ sequences of the form in ~\eqref{eqn:f_seq} with $(a\setminus b) \cup y_{j-1} = y_j$. Now, there clearly must be some\todo{exactly one?} such $j,1 \leq j \leq k$\todo{"...such that this is the case."}. Therefore, the coefficient we are looking for is 
 $$\sum_{j = 1}^k 2^{j-1}(k-1)! = (2^k - 1)(k-1)!,$$
 as claimed.
 
@@ -2010,7 +2012,7 @@ as claimed.
 
 \ssec{Proof that $\mathcal E(B_n)$ is unitary Peck}
 
-In this subsection, we will show the rows of $M$ form a basis by showing we can make a change of basis to a map which is takes $M^{n-2i-1}$ to $L^{n-2i-1}.$ Since we know $L^{n-2i-1}$ is an isomorphism, it will follow that $M^{n-2i-1}$ is as well.
+In this subsection, we will show the rows of $M$ form a basis by showing we can make a change of basis to a map which takes $M^{n-2i-1}$ to $L^{n-2i-1}.$ Since we know $L^{n-2i-1}$ is an isomorphism, it will follow that $M^{n-2i-1}$ is as well.
 
 \begin{note}
 
@@ -2032,7 +2034,7 @@ For any set $s$ of size at least $n-i,$
 
 \begin{lem}
 \label{z_equivalence}
-For any set $s$ of size at least $n-i,$ we have $z_s = \sum_{y \subset s}^{}(x, y).$ In particular, $\sum_{y \subset s}^{}(x, y)$ lies in the span of $v_{(a, b)}$
+For any set $s$ of size at least $n-i,$ we have $z_s = \sum_{y \subset s}^{}(x, y).$ In particular, $\sum_{y \subset s}^{}(x, y)$ lies in the span of the $v_{(a, b)}$
 \end{lem}
 \begin{proof}
 We have 
@@ -2045,6 +2047,7 @@ We have
   &= \beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1) \sum_{y \subset s}^{}(x ,y) + \binom{|s|-i-1}{n-2i-1}\sum_{y\subset s}^{}(x, y)\\
   & =\left(\beta\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1)+\binom{|s|-i-1}{n-2i-1}\right) \sum_{y \subset s}^{}(x,y).
 \end{align*}
+\todo{it doesn't look like the penultimate equality holds here.  In particular I don't think the constant next to the second sum is correct, because it does not account for the extra $x\subset a$ condition on the sum that it came from.}
 In going between the fourth line and the fifth line, one needs to count the number of $y$ satisfying $y \subset a \subset b\subset s.$ If we fix $s,a$ there are $(|s|-n+i+1)$ choices for the element $b,$ since $b = a \cup \{s\}$ for $s \notin a.$ Then, we need to count the number of $a$ with $y \subset a \subset s.$ This is exactly $\binom {|s|-i-1}{n-2i-2}.$ Hence, the total of number of such $y$ is the product $\binom {|s|-i-1}{n-2i-2}(|s|-n+i+1).$
 
 In going from the fifth line to the sixth line, for $y,s$ fixed, we count the number of $b$ with $y \subset b \subset s.$ This is exactly $\binom{|s|-i-1}{n-2i-1}$.
@@ -2057,12 +2060,13 @@ For any set $s$ of size at least $n-i,$ let $w_s = \sum_{a \subset s,t\notin s}^
 \begin{lem}
 \label{w_equivalence}
 We have 
+\todo{looks like the right hand side of the equality, the first $x\cup \{t\}$ should be a $y$.}
 \begin{align*}
   w_s = \sum_{t\notin s}^{} \left(\beta \binom {|s|-i-1}{n-2i-2}  \sum_{y \subset s}^{}(x, x \cup \{t\})  + \binom {|s|-i}{n-2i-1} \sum_{x \subset s}^{}(x ,x \cup \{t\}) \right).
 \end{align*}
 \end{lem}
 
-\begin{proof}
+\begin{proof}\todo{it looks like it should be $y\subset a\cup \{t\}$ and $y\not\subset a$ throughout}
 \begin{align*}
   w_s &= \sum_{a \subset s,t\notin s}^{}v_{(a, a \cup \{t\})}\\
   &= \sum_{a \subset s,t\notin s}^{}\left(\beta \sum_{y \subset a}^{}(x, y) + \sum_{y\subset b,x \subset a,y\not\subset a \cup \{t\}}^{}(x, y) \right)\\
@@ -2070,6 +2074,8 @@ We have
   &=\sum_{t\notin s}^{}\left(\beta \binom {|s|-i-1}{n-2i-2}\sum_{y \subset s}^{}(x, y) + \sum_{a \subset s}^{}\sum_{y\subset b,x \subset a,y\not\subset a \cup \{t\}}^{}(x, y) \right)\\
   &=\sum_{t\notin s}^{} \left(\beta \sum_{y \subset s}^{}(x, y) + \binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right)
 \end{align*}
+\todo{looks like last line is missing a constant by the second of the three sums}
+
 The equalities between lines three and four, and four and five hold for similar reasons as the equalities between lines four and five, and five and six in ~\ref{z_equivalence}
 \end{proof}
 
@@ -2081,6 +2087,7 @@ Let $u_s = \frac{w_s - (n - |s|)\beta \binom {|s|-i-1}{n-2i-2} z_s}{\binom {|s|-
 \label{u_equivalence}
 We have $u_s = \sum_{x\subset s,y\supset x}^{}(x, y).$ In particular, $\sum_{x\subset s,y\supset x}^{}(x, y)$ lies in the span of $v_{(a, b)}.$
 \end{lem}
+\todo{the $x\subset y$'s here are redundant, right?}
 \begin{proof}
 By ~\ref{w_equivalence} and ~\ref{z_equivalence} we have
 \begin{align*}
@@ -2092,12 +2099,13 @@ By ~\ref{w_equivalence} and ~\ref{z_equivalence} we have
   &= \sum_{t\notin s}^{} \left(\binom {|s|-i}{n-2i-1}\sum_{x \subset s}^{}(x, x \cup \{t\}) \right) + \sum_{y \subset s}^{}(x, y) \\
   &=  \sum_{x\subset s,y\supset x}^{}(x, y)
 \end{align*}
+\todo{I think there's an extra constant next to the second sum after the penultimate equality}
 The penultimate line is equal to the ultimate line because any element $(x, y)$ with $x \subset s$ must either have $y \subset s$ or else $y \subset s \cup \{t\}$ for $t \notin s.$ The two terms on the penultimate line cover precisely these two cases.
 \end{proof}
 
 \begin{note}
 For any $s \subset [n],$ with $|s| \leq n-i,$ define $h_s = z_{[n]} - u_s.$
-\end{note}
+\end{note}\todo{$u_s$ is not defined for $|s| < n - i$ because $w_s$ is not defined for these $s$.  Please make sure that only $u_s$ for $|s| = n-i$ are needed}
 
 \begin{lem}
 \label{h_equivalence}
@@ -2116,7 +2124,7 @@ Using ~\ref{z_equivalence} and ~\ref{u_equivalence}
 For $I$ with $I\subset [n],$ define $l_{I}= \sum_{I \subset x}^{}(x, y).$
 \end{note}
 \begin{note}
-For $I \subset [n]$ let the complement of $I$ be denoted by $I^c = \{i \in [n]|i \notin I\}.$
+For $I \subset [n]$ let the complement of $I$ be denoted by $I^c = \{i \in [n]\colon i \notin I\}.$
 \end{note}
 
 
@@ -2235,7 +2243,7 @@ We saw that if $\beta(i+1) \neq 1,$ we have that $q_{a,b} = \sum_{\substack{{y\s
 
 \begin{cor}
 \label{cor:unitary_peck_edge_bn}
-The poset $\mathcal E(B_n)$ is unitary Peck.
+The poset $\mathcal E(B_n)$ is unitary Peck.\todo{for $n > 2$?}
 \end{cor}
 \begin{proof}
 By definition, a poset $P,\rk(P) = t$  is unitary peck if and only if the Lefschetz map $L:P \rightarrow P,x \mapsto \sum_{y \gtrdot x} y,$ satisfies $L^{t-2i}:P_i \rightarrow P_{t-i}$ is an isomorphism. In the case $P = \mathcal E(B_n),\rk(P) = n-1,$ we have that $M$ is the Lefschetz map and by Theorem ~\ref{thm:invertibility_lefschetz}, $M^{n-1-2i}:\mathcal E(B_n)_i \rightarrow \mathcal E(B_n)_{n-1-i}$ is indeed an isomorphism. Hence, $\mathcal E(B_n)$ is unitary Peck.
