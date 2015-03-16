@@ -1,0 +1,125 @@
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+\iffalse
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{latexsym,epsfig,verbatim}
+\usepackage[margin=1.1in,letterpaper,portrait]{geometry}
+%\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usetikzlibrary{matrix,calc, arrows,decorations.pathmorphing}
+
+
+\theoremstyle{plain}
+  \newtheorem{thm}{Theorem}[section]
+  \newtheorem{prop}[thm]{Proposition}
+  \newtheorem{lem}[thm]{Lemma}
+  \newtheorem{cor}[thm]{Corollary}
+  \newtheorem{conjecture}[thm]{Conjecture}
+\theoremstyle{definition}
+  \newtheorem{defn}[thm]{Definition}
+  \newtheorem{rem}[thm]{Remark}
+  \newtheorem{eg}[thm]{Example}
+  \newtheorem{ex}[thm]{Exercise}
+  \newtheorem{question}[thm]{Question}
+  \newtheorem{counterexample}[thm]{Counterexample}
+  \newtheorem{convention}[thm]{Convention}
+\theoremstyle{remark}
+  \newtheorem{note}[thm]{Notation}
+  \newtheorem*{note*}{Notation}
+
+\numberwithin{equation}{section}
+
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{acknowledgement}{ACKNOWLEDGEMENT}
+
+\newcommand\nc{\newcommand}
+\nc\on{\operatorname}
+\nc\renc{\renewcommand}
+\newcommand\ssec{\subsection}
+\newcommand\sssec{\subsubsection}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\id}{\mathrm{id}}
+\newcommand\rk{\operatorname{rk}}
+\newcommand\fbn{\mathcal H}
+\newcommand \edgequot{\text{edge-quotient bijective }}
+
+\def\Stab{\operatorname{Stab}}
+\def\Fix{\operatorname{Fix}}
+\def\Aut{\operatorname{Aut}}
+\def\op{\operatorname{op}}
+\newcommand\im{\text{Im}}
+\fi
+
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Peckness of Edge Posets}
+
+\author{David Hemminger      \and
+        Aaron Landesman 		 \and
+        Zijian Yao
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{D. Hemminger \at
+              Duke University
+              \email{david.hemminger@duke.edu}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           A. Landesman \at
+             Harvard University
+              \email{aaronlandesman@gmail.com}
+           Z. Yao \at
+             Brown University
+              \email{yaozijian1992@gmail.com}
+}
+
+\date{March 16, 2015}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose elements are the edges in the Hasse diagram of P. For any group, $G$, acting on the boolean algebra, $B_n$, we conjecture that $\mathcal E(B_n/G)$ is Peck. We prove that the conjecture holds for ``common cover transitive'' actions. We give some infinite families of common cover transitive actions and show that the common cover transitive actions are closed under direct and semidirect products.
+\keywords{Peck Posets \and Boolean Algebra \and Group Actions \and Unimodality}
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}\label{sec:introduction}
+
+\end{document}
