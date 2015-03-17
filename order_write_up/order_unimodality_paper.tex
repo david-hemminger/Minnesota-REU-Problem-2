@@ -1,18 +1,9 @@
 \RequirePackage{fix-cm}
-%
-%\documentclass{svjour3}                     % onecolumn (standard format)
-%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-\documentclass[smallextended]{svjour3}       % onecolumn (second format)
-%\documentclass[twocolumn]{svjour3}          % twocolumn
-%
+\documentclass[smallextended, envcountsame, numbook]{svjour3}
 \smartqed  % flush right qed marks, e.g. at end of proof
-%
+
 \usepackage{graphicx}
-%
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
-%
-% insert here the call for the packages your document requires
-%\usepackage{latexsym}
+\usepackage{mathptmx}
 \usepackage{amsmath}
 
 \usepackage{amsxtra}
@@ -55,15 +46,8 @@
 \newcommand\op{\operatorname{op}}
 \newcommand\im{\text{Im}}
 
-
-% etc.
-%
-% please place your own definitions here and don't use \def but
-% \newcommand{}{}
-%
-% Insert the name of "your journal" with
 \journalname{Order}
-%
+
 \begin{document}
 
 \title{Peckness of Edge Posets}
@@ -72,8 +56,6 @@
         Aaron Landesman 		 \and
         Zijian Yao
 }
-
-%\authorrunning{Short form of author list} % if too long for running head
 
 \institute{D. Hemminger \at
               6300 Lakeland Dr., Raleigh, NC 27612
@@ -537,7 +519,7 @@ If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\m
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{lem:cover_transitive_equivalence}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
 \end{proof}
 
-We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report} for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded poset $\mathcal{H}(B_n)$ for all $n$ such that $\mathcal{H}(B_n)$ is easily seen to be unitary Peck in Corollary \ref{cor:HBn_unitary_peck}. Furthermore, we define $\mathcal{H}(B_n)$ such that a group action of $G$ on $B_n$ induces a group action on $\mathcal{H}(B_n)$ (Lemma \ref{lem:G_action_on_HP}) and there is always a bijective morphism $f\colon \mathcal{H}(B_n)/G\rightarrow \mathcal E(B_n)/G$ (Lemma \ref{lem:bijection_h_f}).  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
+We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded poset $\mathcal{H}(B_n)$ for all $n$ such that $\mathcal{H}(B_n)$ is easily seen to be unitary Peck in Corollary \ref{cor:HBn_unitary_peck}. Furthermore, we define $\mathcal{H}(B_n)$ such that a group action of $G$ on $B_n$ induces a group action on $\mathcal{H}(B_n)$ (Lemma \ref{lem:G_action_on_HP}) and there is always a bijective morphism $f\colon \mathcal{H}(B_n)/G\rightarrow \mathcal E(B_n)/G$ (Lemma \ref{lem:bijection_h_f}).  By the above discussion, Theorem \ref{thm:cover_transitive_implies_Peck} readily follows.
 
 \begin{definition}
 \label{defn:h_map}
@@ -736,7 +718,7 @@ We now deduce Theorem \ref{thm:cover_transitive_implies_Peck}.
 By Corollary \ref{cor:quotiented_edge_peck}, $\mathcal{E}(B_n)/G$ is Peck for any group action of $G$ on $B_n$. Since the $G$-action is CCT, there is a bijective morphism from $\mathcal{E}(B_n)/G$ to $\mathcal{E}(B_n/G)$ by Lemma \ref{lem:cover_transitive_equivalence}. Hence $\mathcal{E}(B_n/G)$ is Peck by Lemma \ref{lem:bijection_peck_implication}.
 \end{proof}
 
-Note that we have also developed several generalizations of $\mathcal E$, for which many similar results hold. For more information, see Subsection 3.3 of our REU project report.
+Note that we have also developed several generalizations of $\mathcal E$, for which many similar results hold. For more information, see Subsection 3.3 of the REU report.
 
 %%%%%%%%%%%%%%%%%  CCT actions  %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -951,9 +933,9 @@ In particular, $\Aut(P)$ can be expressed as a sequence of direct products and w
 We proceed by induction on the rank of $P$.  It is clear that if $P$ is rank 0, then $\Aut(P)$ is trivial.  If the rank of $P$ is greater than 0, label the vertices of $P$ by $\{0,1,\ldots, s\}$ such that the root is labeled $0$ and the vertices just below the root are labeled $1, \ldots, k$. Let $A_1,\ldots, A_m$ denote the distinct isomorphism classes of trees in the set $\{D(1),\ldots, D(k)\}$. For $A_k \in \{A_1,\ldots,A_m\}$ denote $G_k = \Aut(A_k)$. 
 Let $T_j = \{t\colon t\lessdot 0,D(t) \cong A_j\}$. Then, letting $Q_j$ be the subtree of $P$ whose elements lie in the set $\{0\} \cup (\cup_{t \in T_j} D(t))$, we have that $\Aut(Q_j) \cong G_j \wr S_{i_j}$, because after choosing a permutation of the elements of $T_j$, we are free to choose any element of $G_j$ to permute each $D(t),t \in T_j$. If $t_1 \lessdot 0,t_2 \lessdot 0,g \cdot t_1 = t_2$, then it must be that $g \cdot D(t_1) = D(t_2)$. Therefore, $\Aut(P)$ must permute these isomorphism classes of trees, and the full automorphism groups is simply the direct product, 
 \begin{equation}
-\label{eq:level_expansion}
 \Aut(P) = (G_1 \wr S_{i_1}) \times (G_2 \wr S_{i_2}) \times \cdots \times (G_m\wr S_{i_m}),
 \end{equation}
+
 Since each $G_j$ is a sequence of direct products and wreath products with symmetric groups by the inductive assumption, it follows from ~\eqref{eq:level_expansion} that so is $\Aut(P)$.
 \end{proof}
 
@@ -1050,7 +1032,7 @@ Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n =
 \end{remark}
 
 \begin{remark}
-There are several other results related to $\mathcal E(C_n),\mathcal E(D_{2n})$, with $C_n = \mathbb Z/n\mathbb Z$, which are proven in Section 7 of our REU project report. Notably,
+There are several other results related to $\mathcal E(C_n),\mathcal E(D_{2n})$, with $C_n = \mathbb Z/n\mathbb Z$, which are proven in Section 7 of the REU report. Notably,
 \begin{enumerate}
 	\item For $G$ any group of order $n$, acting transitively on $[n]$, the induced action of $G$ on $B_n$ defines a quotient poset with $|(\mathcal E(B_n)/G)_i| = \binom {n-1} i$.
 	\item For all $n$, $\mathcal E(B_n/C_n)$ is symmetric and unimodal.
@@ -1093,7 +1075,7 @@ There is an equality $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_{1+i}(
 
 First, observe that $S_m \wr S_l$ can be described as the automorphism group of a rooted tree of rank 2 with $l$ elements at rank $1$ and $m\cdot l$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then, by Corollary \ref{cor:tree_cct}, it follows that the action of $G$ on $B_{m \cdot l}$ is CCT and so $\mathcal E(B_n/G)$ is Peck.
 
-Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. The correspondence is given by sending an equivalence class, to the representative which is left and bottom justified, when elements of $B_n = B_{l \cdot m}$ are thought of as subsets of the $l \cdot m$ boxes in an $l \times m$ rectangle. For a complete proof, see, for example, Lemma 5.11 of our REU project report.
+Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young Tableau. The correspondence is given by sending an equivalence class, to the representative which is left and bottom justified, when elements of $B_n = B_{l \cdot m}$ are thought of as subsets of the $l \cdot m$ boxes in an $l \times m$ rectangle. For a complete proof, see, for example, Lemma 5.11 of the REU report.
 
 Now, let $Gx,Gy$ be two $G$ orbits with $\bar x$ the Young Tableau corresponding to $x$, and $\bar y$ the young tableau corresponding to $y$. Suppose $Gx \lessdot Gy$. Then, $\bar x$ must be contained in $\bar y$, but with a single box removed. Since $\bar x,\bar y$ are both Young Tableau, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx|Gx \lessdot Gy\}| = \nu(\bar y)$. Therefore,
 \begin{align*}
@@ -1123,14 +1105,14 @@ $p_1(l,m,1), p_{2}(l,m,1),\ldots, p_{l\cdot m}(l,m,1)$ is unimodal and symmetric
 In this section, we discuss several related results and list further questions. 
 
 \begin{remark}
-Observe that Theorem \ref{thm:cover_transitive_implies_Peck} trivially implies that $\mathcal E(B_n)$ is Peck. In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of our REU project report.
+Observe that Theorem \ref{thm:cover_transitive_implies_Peck} trivially implies that $\mathcal E(B_n)$ is Peck. In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report.
 \end{remark}
 
 \begin{definition}
 Let $B_n(q)$, the {\it q-analog of the boolean algebra}, be the graded poset whose elements are linear subspaces $V \subset \mathbb F_q^n$ with $V \leq W$ if $V \subset W$.
 \end{definition}
 
-As mentioned in the introduction, a natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect the method used in Section 8 of our REU project report to prove $\mathcal E(B_n)$ is unitary peck may solve Question ~\ref{question:unitary_peck_q_edge}.
+As mentioned in the introduction, a natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect the method used in Section 8 of the REU report to prove $\mathcal E(B_n)$ is unitary peck may solve Question ~\ref{question:unitary_peck_q_edge}.
 
 \begin{question}
 \label{question:unitary_peck_q_edge}
