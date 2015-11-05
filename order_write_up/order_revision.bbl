@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{babson}
+Eric Babson and Dmitry~N. Kozlov.
+\newblock Group actions on posets.
+\newblock {\em J. Algebra}, 285:439--450, 2005.
+
+\bibitem{greene}
+Curtis Greene and Daniel~J. Kleitman.
+\newblock Proof techniques in the theory of finite sets.
+\newblock In {\em Studies in combinatorics (MAA Stud. Math.)}, volume~17, pages
+  22--79. Math. Assoc. America, Washington, D.C., 1978.
+
+\bibitem{pak}
+Igor Pak and Greta Panova.
+\newblock Unimodality via kronecker products.
+\newblock {\em Journal of Algebraic Combinatorics}, 2013.
+\newblock To appear.
+
+\bibitem{proctor}
+Robert~A. Proctor.
+\newblock Representations of {$\mathfrak s \mathfrak l(2,\mathbb C)$} on posets
+  and the sperner property.
+\newblock {\em SIAM J. on Algebraic and Discrete Methods}, 3:275--280, 1982.
+
+\bibitem{weyl_groups_stanley}
+Richard~P. Stanley.
+\newblock Weyl groups, the hard lefschetz theorem, and the sperner property.
+\newblock {\em SIAM J. on Algebraic and Discrete Methods}, 1:168--184, 1980.
+
+\bibitem{quotients_stanley}
+Richard~P. Stanley.
+\newblock Quotients of peck posets.
+\newblock {\em Order}, 1:29--34, 1984.
+
+\bibitem{enumerative_comb}
+Richard~P. Stanley.
+\newblock {\em Enumerative Combinatorics}, volume~1.
+\newblock Cambridge University Press, 2011.
+
+\bibitem{stanley_alg_comb}
+Richard~P. Stanley.
+\newblock {\em Algebraic Combinatorics}.
+\newblock Undergraduate Texts in Mathematics. Springer, 2013.
+
+\end{thebibliography}
