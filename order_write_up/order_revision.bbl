@@ -13,24 +13,24 @@ Curtis Greene and Daniel~J. Kleitman.
 
 \bibitem{pak}
 Igor Pak and Greta Panova.
-\newblock Unimodality via kronecker products.
-\newblock {\em Journal of Algebraic Combinatorics}, 2013.
-\newblock To appear.
+\newblock Unimodality via {K}ronecker products.
+\newblock {\em J. Algebraic Combin.}, 40:1103--1120, 2014.
 
 \bibitem{proctor}
 Robert~A. Proctor.
 \newblock Representations of {$\mathfrak s \mathfrak l(2,\mathbb C)$} on posets
-  and the sperner property.
+  and the {S}perner property.
 \newblock {\em SIAM J. on Algebraic and Discrete Methods}, 3:275--280, 1982.
 
 \bibitem{weyl_groups_stanley}
 Richard~P. Stanley.
-\newblock Weyl groups, the hard lefschetz theorem, and the sperner property.
+\newblock Weyl groups, the hard {L}efschetz theorem, and the {S}perner
+  property.
 \newblock {\em SIAM J. on Algebraic and Discrete Methods}, 1:168--184, 1980.
 
 \bibitem{quotients_stanley}
 Richard~P. Stanley.
-\newblock Quotients of peck posets.
+\newblock Quotients of {P}eck posets.
 \newblock {\em Order}, 1:29--34, 1984.
 
 \bibitem{enumerative_comb}
