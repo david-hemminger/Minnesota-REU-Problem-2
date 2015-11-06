@@ -296,7 +296,7 @@ $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
 for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ disjoint antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say that $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
 
 \begin{definition}
-$P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
+A graded poset $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
 \end{definition}
 
 
@@ -314,7 +314,7 @@ $$U(x) = \sum_{y\gtrdot x} c_{x,y}y$$
 \noindent We then have the following well-known characterization of Peck posets.
 
 \begin{lemma}[\cite{weyl_groups_stanley}, Lemma 1.1]\label{lem:Peck_poset_characterization}
-$P$ is Peck if and only if there exists an order-raising operator $U$ such that for all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
+A graded poset $P$ is Peck if and only if there exists an order-raising operator $U$ such that for all $0\le i < \frac{n}{2}$, the map $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.
 \end{lemma}
 
 \begin{definition}
@@ -371,11 +371,9 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 \end{enumerate}
 \end{lemma}
 
-\begin{proof} \indent
-
-\noindent
+\begin{proof}
 First, we show 1.
-First, $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
+Observe that $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
 $$\rk_{\mathcal E(P)}(x, y) = \rk_P(x) = \rk_Q(f(x)) = \rk_{\mathcal E(Q)}(\mathcal E(f)(x, y)).$$
 Suppose $(x, y)\lessdot_{\mathcal E(P)} (x^\prime, y^\prime)$.  Then $x\lessdot_P x^\prime$, $y\lessdot_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\lessdot_Q f(x^\prime)$, $f(y)\lessdot_Q f(y^\prime)$. Hence $\mathcal E(f)(x,y) \lessdot_{\mathcal E(Q)} \mathcal E(f)(x^\prime , y^\prime)$. Since $\le_{\mathcal E(Q)}$ is the transitive closure of $\lessdot_{\mathcal E(Q)}$, we similarly obtain $\mathcal E(f)$ is order-preserving and hence a morphism of finite graded posets.
 
@@ -437,7 +435,12 @@ Aaron: I made these edits suggested. I'm not certain whether it is clearer. What
 If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
 \end{proposition}
 \begin{proof}
-Since $P$ is self-dual, there is an isomorphism $f\colon P \rightarrow P^{\op}$. By functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P^{\op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{\op}) \cong \mathcal E(P)^{\op}$. Then, letting $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},(x,y) \mapsto (x,y)$ be the same isomorphism defined in the proof of Lemma \ref{lem:commuting_op_e}, the composition $F\circ \mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P)^{\op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
+Since $P$ is self-dual, there is an isomorphism $f\colon P \rightarrow P^{\op}$. By functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P^{\op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{\op}) \cong \mathcal E(P)^{\op}$. Then, letting 
+\begin{align*}
+F\colon\mathcal E(P^{\op}) &\rightarrow \mathcal E(P)^{\op}\\
+(x,y) &\mapsto (x,y)
+\end{align*}
+be the same isomorphism defined in the proof of Lemma \ref{lem:commuting_op_e}, the composition $F\circ \mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P)^{\op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
 \end{proof}
 
 \todo{Example 3.11:  Figure 3.1, not 3.2. -- As far as I can tell the reference is right, so I'm not sure why we're getting the wrong figure number on compilation. - David
@@ -507,7 +510,12 @@ For any action $\phi\colon G \times B_n \rightarrow B_n$, we have that
 \end{itemize} are self-dual. In particular, they are all rank-symmetric 
 \end{corollary}
 \begin{proof}
-By Remark \ref{rem:induced_action_bn}, any action $\phi\colon G\times B_n \rightarrow B_n$ is induced by an action $\psi\colon G \times [n] \rightarrow [n]$. Using this, observe that for any $\phi$, the poset $B_n/G$ is self-dual, as there is an isomorphism $f\colon B_n/G \rightarrow (B_n/G)^{\op},G \cdot x \mapsto G \cdot ([n] \setminus x)$. This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n]$. Then, by Proposition \ref{prop:self_dual_preservation}, it follows that $\mathcal E(B_n/G)$ is self-dual.
+By Remark \ref{rem:induced_action_bn}, any action $\phi\colon G\times B_n \rightarrow B_n$ is induced by an action $\psi\colon G \times [n] \rightarrow [n]$. Using this, observe that for any $\phi$, the poset $B_n/G$ is self-dual, as there is an isomorphism 
+\begin{align*}
+	f\colon B_n/G &\rightarrow (B_n/G)^{\op} \\
+	G \cdot x &\mapsto G \cdot ([n] \setminus x).
+\end{align*}
+This map is well defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n]$. Then, by Proposition \ref{prop:self_dual_preservation}, it follows that $\mathcal E(B_n/G)$ is self-dual.
 
 It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f)\colon\mathcal E(B_n) \rightarrow \mathcal E(B_n^{\op})\cong \mathcal E(B_n)^{\op}$, that is, the map sending a $(x,y) \mapsto ([n]\setminus y,[n] \setminus x)$. Once again, since the action on $B_n$ is induced by an action on $[n]$, this isomorphism descends to an isomorphism $\mathcal E(f)^G\colon\mathcal E(B_n)/G \rightarrow  (\mathcal{E}(B_n)/G)^{\op}$, and so $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
@@ -515,7 +523,12 @@ It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Pr
 \ssec{Equivalent Definitions of CCT Actions}
 \label{ssec:equivalent_defs}
 
-We next give four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3)$, and $(4)$ use the fact that $q\colon\mathcal E(P)/G \rightarrow \mathcal E(P/G),G(x,y)\mapsto (Gx,Gy)$ is always a surjection.
+We next give four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3)$, and $(4)$ use the fact that 
+\begin{align*}
+q\colon\mathcal E(P)/G &\rightarrow \mathcal E(P/G)\\
+G(x,y) &\mapsto (Gx,Gy)
+\end{align*}
+ is always a surjection.
 
 \begin{lemma}
 \label{lem:cover_transitive_equivalence}
@@ -696,7 +709,12 @@ Let $g\in G$.  Since $\le_{\mathcal{H}}$ is the transitive closure of $\lessdot_
 
 \begin{lemma}
 \label{lem:bijection_h_f}
-The map $f\colon\mathcal H(P)/G \rightarrow \mathcal E(P)/G$ defined by $G(x,y) \mapsto G(x,y)$ is a bijective morphism for any group action of $G$ on $P$.
+The map 
+\begin{align*}
+	f\colon\mathcal H(P)/G &\rightarrow \mathcal E(P)/G \\
+	G(x,y) &\mapsto G(x,y)
+\end{align*}
+ is a bijective morphism for any group action of $G$ on $P$.
 \end{lemma}
 
 \begin{proof}
@@ -706,7 +724,7 @@ The elements of $\mathcal H(P)/G,\mathcal E(P)/G$ are the same by definition, so
 The remaining step in the proof of Theorem \ref{thm:cover_transitive_implies_Peck} is to show that $\mathcal{H}(B_n)$ is unitary Peck, which we do by generalizing Example \ref{eg:3boolean} and showing that $\mathcal{H}(B_n)$ is isomorphic to the disjoint union of boolean algebras.
 
 \begin{proposition}\label{prop:computing_HBn}
-$\mathcal{H}(B_n)$ is isomorphic to $n$ disjoint copies of $B_{n-1}$.
+The graded poset $\mathcal{H}(B_n)$ is isomorphic to $n$ disjoint copies of $B_{n-1}$.
 \end{proposition}
 
 \begin{proof}
@@ -719,10 +737,16 @@ f\colon \mathcal{H}(B_n) &\longrightarrow \bigcup_{i=1}^n B_{n-1}^{(i)}\\
 
 \noindent is an isomorphism.  Suppose we have $(x, y),(x', y') \in \mathcal H(B_n)$ with $(x, y) \lessdot_{\mathcal H} (x', y')$. Let $j\in [n]$ such that $y^\prime = y\cup\{j\}$, and let $i\in [n]$ such that $x^\prime = x\cup \{i\}$. If $i \ne j$, then $x' = y$, contradicting the assumption that $(x, y) \lessdot_{\mathcal H} (x', y')$. Thus $x^\prime = x\cup\{i\}$ and $y^\prime = y\cup\{i\}$ for some $i\in [n]$.
 
-Conversely we can easily check that if $i\not\in y$, then $(x, y)\lessdot_{\mathcal{H}} (x\cup\{i\}, y\cup\{i\})$.  It follows that for all subsets $w \subset [n]$ such that $|w| = 1$, there is an isomorphism from the subposet of elements $\{(x, y)\colon y\setminus x = w\}$ to $B_{n-1}$ defined by $(x,y)\mapsto (x\setminus w,y\setminus w)$.  Furthermore if $y\setminus x \ne y^\prime \setminus x^\prime$, then $(x, y)$ and $(x^\prime, y^\prime)$ are incomparable, so these subposets indexed by $w$ are pairwise disjoint, and $\mathcal H(B_n)$ is isomorphic to $n$ copies of $B_{n}$.
+Conversely we can easily check that if $i\not\in y$, then $(x, y)\lessdot_{\mathcal{H}} (x\cup\{i\}, y\cup\{i\})$.  It follows that for all subsets $w \subset [n]$ such that $|w| = 1$, there is an isomorphism from the subposet of elements 
+\begin{align*}
+\{(x, y)\colon y\setminus x = w\} & \rightarrow B_{n-1}\\
+(x,y) &\mapsto (x\setminus w,y\setminus w). 
+\end{align*}
+Furthermore if $y\setminus x \ne y^\prime \setminus x^\prime$, then $(x, y)$ and $(x^\prime, y^\prime)$ are incomparable, so these subposets indexed by $w$ are pairwise disjoint, and $\mathcal H(B_n)$ is isomorphic to $n$ copies of $B_{n}$.
 \end{proof}
 
 \begin{corollary}\label{cor:HBn_unitary_peck}
+The graded poset 
 $\mathcal H(B_n)$ is unitary Peck for all $n\ge 0$.
 \end{corollary}
 
@@ -732,7 +756,7 @@ Note, $\mathcal H(B_0)$ is the empty poset, and so it is vacuously unitary peck.
 \end{proof}
 
 \begin{corollary}\label{cor:quotients_of_HBn_peck}
-$\mathcal H(B_n)/G$ is Peck for any subgroup $G\subset \Aut(B_n)$.
+The graded poset $\mathcal H(B_n)/G$ is Peck for any subgroup $G\subset \Aut(B_n)$.
 \end{corollary}
 
 \begin{proof}
@@ -747,16 +771,22 @@ Both $\mathcal{E}(B_n)$ and $\mathcal H(B_n)$ have symmetric chain decomposition
 
 
 \begin{proof}
+The graded poset
 $\mathcal{H}(B_n)$ has an SCD by Proposition ~\ref{prop:computing_HBn} and the fact that $B_{n-1}$ has an SCD, as shown in \cite{greene}.  By Lemma ~\ref{lem:bijection_h_f} there is a bijective morphism $f\colon\mathcal{H}(B_n)\rightarrow\mathcal{E}(B_n)$, and since a bijective morphism takes an SCD to an SCD it follows that $\mathcal{E}(B_n)$ has an SCD.
 \end{proof}
 
 
 \begin{corollary}
 \label{cor:quotiented_edge_peck}
-$\mathcal E(B_n)/G$ is Peck for any subgroup $G\subset \Aut(B_n)$.
+The graded poset $\mathcal E(B_n)/G$ is Peck for any subgroup $G\subset \Aut(B_n)$.
 \end{corollary}
 \begin{proof}
-By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H(B_n)/G$ is Peck. By Lemma ~\ref{lem:bijection_h_f}, the map $f\colon\mathcal H(B_n)/G \rightarrow \mathcal E(B_n)/G,G(x, y) \mapsto G(x, y)$ is a bijective morphism. Then, by Lemma ~\ref{lem:bijection_peck_implication}, it follows that $\mathcal E(B_n)/G$ is Peck.
+By Corollary ~\ref{cor:quotients_of_HBn_peck}, $\mathcal H(B_n)/G$ is Peck. By Lemma ~\ref{lem:bijection_h_f}, the map 
+\begin{align*}
+f\colon\mathcal H(B_n)/G &\rightarrow \mathcal E(B_n)/G \\
+G(x, y) &\mapsto G(x, y)
+\end{align*}
+ is a bijective morphism. Then, by Lemma ~\ref{lem:bijection_peck_implication}, it follows that $\mathcal E(B_n)/G$ is Peck.
 \end{proof}
 
 We now deduce Theorem \ref{thm:cover_transitive_implies_Peck}.
@@ -783,7 +813,11 @@ Two rather trivial examples of CCT actions are $\phi\colon S_n\times B_n \righta
 \label{ssec:semidirect_product_preservation}
 
 \begin{lemma}
-Let $G\subseteq\Aut(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$. We then have a well defined group action $K \times P/H \rightarrow P/H,(k,Hx) \mapsto H(k \cdot x)$.
+Let $G\subseteq\Aut(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$. We then have a well defined group action 
+\begin{align*}
+K \times P/H &\rightarrow P/H \\
+(k,Hx) &\mapsto H(k \cdot x).
+\end{align*}
 
 \end{lemma}
 \begin{proof}
@@ -810,12 +844,15 @@ Write $x^\prime = h_1k_1h_0\cdot x$.  Since the group action of $G$ must be orde
 \begin{proposition}
 \label{prop:direct_product_preservation}
 For $\phi\colon G\times P\rightarrow P,\psi\colon H \times Q \rightarrow Q$ two CCT actions, then the direct product 
-$$\phi \times \psi\colon(G\times H)\times (P\times Q) \rightarrow (P\times Q),(g,h)\cdot (x,y) \mapsto (gx,hy)$$
+\begin{align*}	
+\phi \times \psi\colon(G\times H)\times (P\times Q) &\rightarrow (P\times Q) \\
+(g,h)\cdot (x,y) &\mapsto (gx,hy)
+\end{align*}
 is also CCT.
 \end{proposition}
 
 \begin{proof}
-	First note that if either $G$ or $H$ acts trivially, then it can be easily checked that the action of $G\times H$ is CCT.  Next, observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H)$. Since the action of $G$ on $P$ is CCT, the action of $G\times \{e\}$ on $P \times Q$ is CCT. Also, since the action of $H$ on $Q$ is CCT, it follows that the action of $\{e\}\times H$ on $P \times Q/(G \times \left\{ e \right\})$ is CCT. Therefore, the action of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so the action of $G\times H$ on $P \times Q$ is CCT.
+First note that if either $G$ or $H$ acts trivially, then it can be easily checked that the action of $G\times H$ is CCT.  Next, observe that $G \times H$ can be viewed as the semidirect product of $(G\times \{e\}) \rtimes (\{e\} \times H)$. Since the action of $G$ on $P$ is CCT, the action of $G\times \{e\}$ on $P \times Q$ is CCT. Also, since the action of $H$ on $Q$ is CCT, it follows that the action of $\{e\}\times H$ on $P \times Q/(G \times \left\{ e \right\})$ is CCT. Therefore, the action of $(G\times \{e\}) \rtimes (\{e\} \times H)$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation} and so the action of $G\times H$ on $P \times Q$ is CCT.
 \end{proof}
 
 Next, we use Proposition ~\ref{prop:semidirect_product_preservation} to prove in Proposition ~\ref{prop:wreath_preservation} that the CCT property is preserved under wreath products with the symmetric group. First, we need the definition of the wreath product.
@@ -856,7 +893,12 @@ For $a \in P^\ell$ notate $a = (a_1,\ldots, a_\ell)$. Suppose $x,y,z \in P^\ell$
 If $\psi\colon G\times P \rightarrow P$ is CCT, let $\phi\colon G\wr S_\ell \times P^\ell \rightarrow P^\ell$ where $\phi$ is the induced action defined in Definition \ref{defn:wreath_action}. Then $\phi$ is also CCT.
 \end{proposition}
 \begin{proof}
-Note that the wreath product $G \wr S_\ell$ can be viewed as a semidirect product $G^\ell \rtimes S_\ell$. Since the action of $G$ on $P$ is CCT we obtain that the action of $G^\ell$ on $P^\ell$ is CCT by Proposition ~\ref{prop:direct_product_preservation}.  Furthermore the action $S_\ell \times (P/G)^\ell \rightarrow (P/G)^\ell$ defined by $(\sigma ,(x_1,\ldots, x_\ell)) \mapsto (x_{\sigma(1)}\ldots, x_{\sigma(\ell)})$ for $\sigma \in S_\ell$ and $x_i \in P/G$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}.  Since $P^\ell/G^\ell \cong (P/G)^\ell$, it follows that the action $\phi$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation}, so $\phi$ is CCT.
+Note that the wreath product $G \wr S_\ell$ can be viewed as a semidirect product $G^\ell \rtimes S_\ell$. Since the action of $G$ on $P$ is CCT we obtain that the action of $G^\ell$ on $P^\ell$ is CCT by Proposition ~\ref{prop:direct_product_preservation}.  Furthermore the action 
+\begin{align*}
+S_\ell \times (P/G)^\ell &\rightarrow (P/G)^\ell \\
+	(\sigma ,(x_1,\ldots, x_\ell)) &\mapsto (x_{\sigma(1)}\ldots, x_{\sigma(\ell)})
+\end{align*}
+ for $\sigma \in S_\ell$ and $x_i \in P/G$ is CCT by Lemma ~\ref{lem:symmetric_group_product_action}.  Since $P^\ell/G^\ell \cong (P/G)^\ell$, it follows that the action $\phi$ satisfies the conditions of Proposition ~\ref{prop:semidirect_product_preservation}, so $\phi$ is CCT.
 \end{proof}
 
 
@@ -1040,7 +1082,6 @@ Recall that $G$ is an elementary abelian $2$-group if $G \cong (\mathbb Z/2\math
 \end{proposition}
 
 \begin{proof}
-
 First, we show 1 holds. Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\mathbb Z_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$. Hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
 
 Next, we show 2 holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G, g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
@@ -1061,7 +1102,7 @@ We have already seen in Example \ref{eg:trivial_edgequot} that $(1)$ holds trivi
 
 Let $x$, $y$ be elements of $B_n$ such that $x$ is covered by $y$.  We wish to prove that given $G(x, y) \in \mathcal E (B_p)$ such that $\sigma x \lessdot y$ where $\sigma \in D_{2p}$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. 
 
-The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$ where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon, or some rotation $\sigma_0^{d} $ where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y,$ since $r$ is of order 2. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $G(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection that sends $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.Therefore, the action $D_{2p}$ on $B_p$ is CCT. 
+The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$ where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon, or some rotation $\sigma_0^{d} $ where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y,$ since $r$ is of order 2. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $G(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.Therefore, the action $D_{2p}$ on $B_p$ is CCT. 
 \end{proof}
 
 
