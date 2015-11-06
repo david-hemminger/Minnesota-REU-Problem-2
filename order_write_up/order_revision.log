@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.21)  5 NOV 2015 14:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.21)  6 NOV 2015 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,12 +894,12 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 93.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-(./order_revision.tdo [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-[2])
+(./order_revision.tdo [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@tdo=\write5
 \openout5 = `order_revision.tdo'.
 
- [3] [4]
+
+[2] [3]
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no ( in font nullfont!
@@ -907,77 +907,70 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
- [5] [6] [7] [8]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9] [10]
+ [4] [5] [6] [7] [8] [9]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11] [12] [13] [14] [15] [16]
 
-LaTeX Warning: Marginpar on page 17 moved.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17] [18]
+[10] [11] [12] [13]
 
-LaTeX Warning: Marginpar on page 19 moved.
-
-[19]
-
-LaTeX Warning: Marginpar on page 20 moved.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1167
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1140
 []\OT1/ptm/m/n/10 Therefore, $\OMS/ztmcm/m/n/10 j\OT1/ztmcm/m/n/10 (\U/eus/m/n/
 10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it
 /10 =G\OT1/ztmcm/m/n/10 )[]\OMS/ztmcm/m/n/10 j \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m
 /n/10 j\U/eus/m/n/10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]=G\OT1/ztmcm/m/n
 /10 )[]\OMS/ztmcm/m/n/10 j \OT1/ztmcm/m/n/10 = \OML/ztmcm/m/it/10 p[]\OT1/ztmcm
-/m/n/10 (\OML/ztmcm/m/it/10 l; m; \OT1/ztmcm/m/n/10 1)$\OT1/ptm/m/n/10 . Since 
+/m/n/10 (\OML/ztmcm/m/it/10 `; m; \OT1/ztmcm/m/n/10 1)$\OT1/ptm/m/n/10 . Since 
 $\U/eus/m/n/10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OM
 L/ztmcm/m/it/10 =G$ \OT1/ptm/m/n/10 is Peck,
  []
 
-[20]
-Overfull \hbox (4.96742pt too wide) in paragraph at lines 1197--1198
+
+Overfull \hbox (4.96742pt too wide) in paragraph at lines 1171--1172
 []\OT1/ptm/m/n/10 In par-tic-u-lar, if the an-swer to the pre-vi-ous Ques-tion 
 6.3[] is af-fir-ma-tive, it would im-me-di-ately hold that $\U/eus/m/n/10 E\OT1
 /ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 q\OT
 1/ztmcm/m/n/10 ))\OML/ztmcm/m/it/10 =G$
  []
 
-(./order_revision.bbl) [21] (./order_revision.aux)
+[19] (./order_revision.bbl) [20] (./order_revision.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17201 strings out of 495028
- 310832 string characters out of 6181497
- 432725 words of memory out of 5000000
- 19935 multiletter control sequences out of 15000+600000
- 49712 words of font info for 126 fonts, out of 8000000 for 9000
+ 17095 strings out of 495028
+ 307930 string characters out of 6181497
+ 423742 words of memory out of 5000000
+ 19834 multiletter control sequences out of 15000+600000
+ 47243 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,12n,80p,3246b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,12n,80p,3246b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/euler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on order_revision.pdf (21 pages, 220850 bytes).
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/euler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/
+usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on order_revision.pdf (20 pages, 200363 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

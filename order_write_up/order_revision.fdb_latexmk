@@ -1,12 +1,13 @@
 # Fdb version 3
-["bibtex order_revision"] 1446753385 "order_revision.aux" "order_revision.bbl" "order_revision" 1446753404
+["bibtex order_revision"] 1446839273 "order_revision.aux" "order_revision.bbl" "order_revision" 1446839275
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "References.bib" 1446748622 2387 d77a2b0f75597e0054e3c73dcf93a0f1 ""
-  "order_revision.aux" 1446753404 20996 6be222d8d9f9bb7ecf84821bd3e83a2c ""
+  "order_revision.aux" 1446839275 13292 a96423cfaf0d6ca0456309ffa05143da ""
   "order_revision.bcf" 0 -1 0 ""
   (generated)
   "order_revision.bbl"
-["pdflatex"] 1446753402 "order_revision.tex" "order_revision.pdf" "order_revision" 1446753404
+  "order_revision.blg"
+["pdflatex"] 1446839273 "order_revision.tex" "order_revision.pdf" "order_revision" 1446839275
   "/etc/texmf/web2c/texmf.cnf" 1428106107 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -33,7 +34,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1136768653 520 82a3d37183f34b6eb363a161dfc002c2 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm" 1136768653 520 d082ac03a1087bc1ec2a06e24a9f68c0 ""
@@ -53,7 +53,6 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1248133631 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb" 1336858727 10538 4c913b4f5af64465058317e624ed5562 ""
@@ -225,14 +224,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1429633298 1006445 970ea026b65ec199e46fe0f390fe7296 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1429633259 722335 a4e4c46879a2d5667cbb6bf4ebbefad0 ""
-  "order_revision.aux" 1446753404 20996 6be222d8d9f9bb7ecf84821bd3e83a2c ""
-  "order_revision.bbl" 1446753385 1441 5ad308fff602aa25e564e3cdf8619462 "bibtex order_revision"
-  "order_revision.tdo" 1446753404 9929 695a0c8af37375b46f4449e0e0f01225 ""
-  "order_revision.tex" 1446753401 88028 bf986834e848407a417b521ecf28b814 ""
+  "order_revision.aux" 1446839275 13292 a96423cfaf0d6ca0456309ffa05143da ""
+  "order_revision.bbl" 1446839273 1441 5ad308fff602aa25e564e3cdf8619462 "bibtex order_revision"
+  "order_revision.tdo" 1446839275 5299 9b3ec77ba8ca23293dc7b493e07a937d ""
+  "order_revision.tex" 1446839271 83964 426fd8047947b571ac323feb3e834439 ""
   "svglov3.clo" 1446662911 3809 f8e29af71acd1bd1b2a58b6166058c66 ""
   "svjour3.cls" 1446662911 47679 e70406260d62f66f2e7794a095f721ff ""
   (generated)
   "order_revision.pdf"
-  "order_revision.tdo"
-  "order_revision.aux"
   "order_revision.log"
+  "order_revision.aux"
+  "order_revision.tdo"
