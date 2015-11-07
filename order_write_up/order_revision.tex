@@ -114,7 +114,6 @@ For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose e
 
 \newpage
 
-\todo[inline]{Presently nothing is said about the Peck property in the introduction.  The authors should briefly say something about one or more of the following background aspects:  history, motivation, earlier methods, earlier results, and/or a sampling of references.  Approximately three to ten short sentences should suffice.}
 \todo[inline]{Following the example of Theorem 1.5 on p. 7, Proposition 4.3 on p. 10 should be renumbered as Proposition 1.7 and Proposition 4.22 on p. 14 should be renumbered as Proposition 1.6
 It appears that theorem tools allows us to renumber the theorems but not the propositions, or at least I haven't figured out how. I'd suggest just calling the repeated propositions ``Theorems'', or else one of you can take a try at figuring out how to repeat the number of the first proposition.
 -Aaron}
@@ -227,7 +226,15 @@ We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  
 
 We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a nice structure as well.  In particular we examine the \textit{boolean algebra of rank $n$}, denoted $B_n$, which is defined to be the poset whose elements are subsets of $\{1,\ldots,n\}$ with the relation given by containment, namely, for all $x,y\in B_n$, $x\le y$ if $x$ is a subset of $y$.
 
-Throughout the paper we say that a group $G$ acts on $P$ if it acts on the elements of $P$ and the action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$.  By Theorem \ref{thm:quotients_of_unitary_peck_posets} (due to Stanley) and the fact that $B_n$ is unitary peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
+In this paper, we study the property of Peckness, as defined below
+in Definition ~\ref{defn:peck}. The name 
+``Peck'' was coined in Stanley's paper ~\cite{quotients_stanley}. However, Peck posets were studied prior to this article, ~\cite{quotients_stanley} such as in
+~\cite{weyl_groups_stanley}. The property of being Peck is particularly nice
+as it has many equivalent definitions, such as those in
+~\cite[Lemma 1.1]{weyl_groups_stanley} and ~\cite{proctor}.
+
+Throughout the paper we say that a group $G$ acts on $P$ if it acts on the elements of $P$ and the action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$. 
+By Theorem \ref{thm:quotients_of_unitary_peck_posets} (due to Stanley) and the fact that $B_n$ is unitary Peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conj}\label{conj:F_of_BnG_Peck}
 If $G \subseteq \Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
@@ -311,6 +318,7 @@ $$p_0\le p_1\le \ldots \le p_k \ge p_{k+1} \ge\ldots \ge p_n$$
 for some $0\le k\le n$, then $P$ is \textit{rank-unimodal}. If $p_i = p_{n-i}$ for all $1\le i\le n$, then $P$ is \textit{rank-symmetric}.  An \textit{antichain} in $P$ is a set of elements in $P$ that are pairwise incomparable.  If no antichain in $P$ is larger than the largest rank of $P$, then $P$ is \textit{Sperner}.  More generally, $P$ is \textit{$k$-Sperner} if no union of $k$ disjoint antichains in $P$ is larger than the union of the largest $k$ ranks of $P$. We say that $P$ is \textit{strongly Sperner} if it is $k$-Sperner for all $1\le k\le n$.
 
 \begin{defn}
+	\label{defn:peck}
 A graded poset $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and strongly Sperner.
 \end{defn}
 
@@ -590,7 +598,7 @@ If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\m
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{lem:cover_transitive_equivalence}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
 \end{proof}
 
-We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
+We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded Peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H(P)$ as follows.  Let the elements $(x, y) \in \mathcal H(P)$ be pairs $(x,y) \in P\times P$ such that $x \lessdot y$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \neq y$.  Then, define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$, and define $\rk_{\mathcal H}(x, y) = \rk_P(x)$.
@@ -763,7 +771,7 @@ $\mathcal H(B_n)$ is unitary Peck for all $n\ge 0$.
 
 \begin{proof}
 This follows immediately from Proposition \ref{prop:computing_HBn} and the fact that $B_{n-1}$ is unitary Peck.  Indeed, $B_n$ is shown to be unitary Peck, in \cite[Theorem 2a]{quotients_stanley} by noting that $B_k = (B_1)^k$ and that $B_1$ is clearly unitary Peck.
-Note, $\mathcal H(B_0)$ is the empty poset, and so it is vacuously unitary peck.
+Note, $\mathcal H(B_0)$ is the empty poset, and so it is vacuously unitary Peck.
 \end{proof}
 
 \begin{cor}\label{cor:quotients_of_HBn_peck}
@@ -1212,11 +1220,11 @@ Observe that Theorem \ref{thm:cover_transitive_implies_Peck} trivially implies t
 Let $B_n(q)$, the {\it q-analog of the boolean algebra}, be the graded poset whose elements are linear subspaces $V \subset \mathbb F_q^n$ with $V \leq W$ if $V \subset W$.
 \end{defn}
 
-A natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect the method used in Section 8 of the REU report to prove $\mathcal E(B_n)$ is unitary peck may solve Question ~\ref{question:unitary_peck_q_edge}.
+A natural extension of Conjecture ~\ref{conj:F_of_BnG_Peck} would be an analogous result for q-analogs. We suspect the method used in Section 8 of the REU report to prove $\mathcal E(B_n)$ is unitary Peck may solve Question ~\ref{question:unitary_peck_q_edge}.
 
 \begin{que}
 \label{question:unitary_peck_q_edge}
-Is $\mathcal E(B_n(q))$ unitary peck?
+Is $\mathcal E(B_n(q))$ unitary Peck?
 \end{que}
 
 
