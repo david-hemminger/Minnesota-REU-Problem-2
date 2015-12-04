@@ -140,10 +140,10 @@ For $\mathcal P$ the category of graded posets, define the {\it functor of edges
 Let $Q$ be a finite graded poset of rank $n$. Given a morphism $f\colon P\rightarrow Q$, define $\mathcal{E}(f)\colon \mathcal{E}(P)\rightarrow \mathcal{E}(Q)$ by $\mathcal{E}(f)(x,y) = (f(x), f(y))$.
 \end{defn}
 
-We will show that $\mathcal{E}(P)$ is a well-defined graded poset in Section \ref{sec:functor_of_edges}.  Note that an edge in the Hasse diagram of $P$ can be identified with a pair $(x,y)\in P\times P$ such that $x\lessdot y$, and the edges in the Hasse diagram are in bijection with elements $(x,y)\in \mathcal E(P)$ via this identification.  With this in mind, we will frequently refer to $\mathcal{E}(P)$ as the {\it edge poset} of $P$. 
+We show that $\mathcal{E}(P)$ is a well-defined graded poset in Section \ref{sec:functor_of_edges}.  Note that an edge in the Hasse diagram of $P$ can be identified with a pair $(x,y)\in P\times P$ such that $x\lessdot y$, and the edges in the Hasse diagram are in bijection with elements $(x,y)\in \mathcal E(P)$ via this identification.  With this in mind, we will frequently refer to $\mathcal{E}(P)$ as the {\it edge poset} of $P$. 
 
 \begin{eg}
-We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  Note that it is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} we give an example of a poset $P$ for which $\mathcal{E}(P)$ is not graded with the relation $\le_{\mathcal{E^\prime}}$.  In Figure \ref{fig:EP_definition_example} it is clear that $\mathcal E(P)$ is a graded poset, with $\rk(x,y) = \rk(x)$, but the Hasse diagram on the right represents a poset which does not have a grading.
+We give an example of an edge poset in Figure \ref{fig:EP_definition_example}.  Note that it is important we declare the relation $\leq_\mathcal E$ to be the transitive closure of $\lessdot_{\mathcal E}$.  If instead we defined a relation $\le_{\mathcal{E^\prime}}$ on $\mathcal{E}(P)$ by $(x, y) \leq (a, b)$ if $x \leq a, y \leq b$, then $\mathcal{E}(P)$ would not necessarily be a graded poset.  In Figure \ref{fig:EP_definition_example} it is clear that $\mathcal E(P)$ is a graded poset under relation $\le_{\mathcal{E}}$, with $\rk(x,y) = \rk(x)$, but the Hasse diagram on the right represents a poset which does not have a grading under the relation $\le_{\mathcal{E^\prime}}$.
 
 \begin{figure}[h!]
 \begin{center}
@@ -228,9 +228,9 @@ We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a ni
 
 In this paper, we study the property of Peckness, as defined below
 in Definition ~\ref{defn:peck}. The name 
-``Peck'' was coined in Stanley's paper ~\cite{quotients_stanley}. However, Peck posets were studied prior to this article, ~\cite{quotients_stanley} such as in
-~\cite{weyl_groups_stanley}. The property of being Peck is particularly nice
-as it has many equivalent definitions, such as those in
+``Peck'' was coined in Stanley's paper ~\cite{quotients_stanley}. However, Peck posets were studied prior to Stanley's article, for example, in
+~\cite{weyl_groups_stanley}. Peckness is a nice property
+as it enjoys several equivalent definitions, for example, see
 ~\cite[Lemma 1.1]{weyl_groups_stanley} and ~\cite{proctor}.
 
 Throughout the paper we say that a group $G$ acts on $P$ if it acts on the elements of $P$ and the action is order-preserving and rank-preserving, that is, for all $g \in G$ we have $x \leq y \iff gx \leq gy$ and $\rk(gx) = \rk(x)$. 
@@ -240,7 +240,7 @@ By Theorem \ref{thm:quotients_of_unitary_peck_posets} (due to Stanley) and the f
 If $G \subseteq \Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
 \end{conj}
 
-We prove this conjecture holds whenever the group action of $G$ on $B_n$ has the \emph{common cover transitive} property, which we introduce in the following definition.
+In the rest of the paper we give theoretical evidence of the conjecture. More precisely, we prove that the conjecture holds whenever the group action of $G$ on $B_n$ has the \emph{common cover transitive} property, which we introduce in the following definition.
 
 \begin{defn}
 \label{defn:cover_transitive}
@@ -290,22 +290,21 @@ As references for this material, see
 \cite[Chapter 4]{stanley_alg_comb} and \cite{quotients_stanley}.
 
 
-\todo{"Condition 2 in the definition of "graded poset" does not seem to be needed when one is assuming that P is finite." -- We're actually defining a general graded poset here, not a finite one.  I also don't think there's anything wrong with this approach, so I'm happy keeping it the same.  We can also change it though. - David
-I also like keeping it the same, but I added a remark noting that
-the second condition is extraneous for finite posets, just to please
-the referee. -Aaron}
 A {\it graded poset} $P$ is a poset with a rank function $\rk\colon P \rightarrow \mathbb Z_{\geq 0}$ satisfying the following conditions.
 \begin{enumerate}
   \item If $x\in P$ and $x\lessdot y$, then $rk(x) + 1 = \rk(y)$,
   \item If $x < y$ then $\rk(x) < \rk(y)$ 
 \end{enumerate}
 
+\begin{rmk}
 Note that the second condition follows from the first in the case that the poset $P$ is finite.
+\end{rmk}
 
 We denote the $i$th rank of $P$ by  $P_i = \{x \in P\colon\rk(x) = i\}$. Additionally, if for all $x\in P$, we have $0 \leq \rk(x) \leq n$, and there exists $x,y$ with $\rk(x) = 0, \rk(y) = n$, we say that $P$ is a graded poset of {\it rank $n$}.
 
+\begin{rmk}
 Throughout the paper we write $x\le_P y$ to denote that $x$ is less than or equal to $y$ under the relation defined on the poset $P$.  When the poset is clear we omit the $P$ and simply write $x\le y$.  
-
+\end{rmk}
 Let $P, Q \in \mathcal P$ be two finite graded posets.  A map $f\colon P\rightarrow Q$ is a \textit{morphism} from $P$ to $Q$ if it is rank-preserving and order preserving, in other words, for all $x,y\in P$, $x\le_P y $ implies $f(x)\le_Q f(y)$ and $\rk(x) = \rk(f(x))$.  We say that $f$ is \textit{injective/surjective/bijective} if it is an injection/surjection/bijection from $P$ to $Q$ as sets.
 
 \begin{rmk}\label{rem:bijective_morphism_not_isomorphism}
@@ -359,12 +358,18 @@ If $P$ is unitary Peck and $G\subseteq\Aut(P)$, then $P/G$ is Peck.
 \label{sec:functor_of_edges}
 
 In Subsection \ref{ssec:functoriality} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  In Subsection \ref{ssec:dual_posets} we prove that $\mathcal{E}$ sends self-dual posets to self-dual posets.  In Subsection \ref{ssec:equivalent_defs} we give several equivalent definitions for CCT actions, and Subsection \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+%%%%%%%%%%%%  TO DO !!!
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+\todo{This "sub-outline" seems unnecessary for me -- is there any objection of getting rid of this? -- Zijian}
 
 \ssec{Functoriality of $\mathcal E$ and Group Actions}
 \label{ssec:functoriality}
-First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism}.  After showing that $\mathcal E$ is well-defined we then define a natural $G$ action on $\mathcal E(P)$ and define a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$ that will be important for the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
+First we show that $\mathcal{E}$ is well-defined in Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_poset_morphism}.  We then define a natural $G$ action on $\mathcal E(P)$ and obtain a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$, which are key ingredients of the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
 
+\begin{rmk}
 When the poset $P$ is clear, we will use $\leq_{\mathcal E}$ and $\lessdot_{\mathcal E}$ to refer to $\leq_{\mathcal E(P)}$ and $\lessdot_{\mathcal E(P)}$. Similarly, in Subsection ~\ref{ssec:proof_of_cover_transitive_implies_Peck}, we define posets $\mathcal H(B_n)$, and will use $\leq_{\mathcal H}$ and $\lessdot_{\mathcal H}$ in place of $\leq_{\mathcal H(B_n)}$ and $\lessdot_{\mathcal H(B_n)}$.
+\end{rmk}
 
 \begin{lem}\label{lem:f_partial_order}
 The relation $\le_{\mathcal E}$ defines a partial order on $\mathcal E(P)$.
@@ -382,8 +387,12 @@ For $P$ a graded poset, the object $\mathcal E(P)$ is a graded poset.
 To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)+1 = \rk(x^\prime , y^\prime)$.  This fact follows immediately from the definition of $\lessdot_{\mathcal E}$ and the definition $\rk_{\mathcal E}(x, y) = \rk_P(x)$.
 \end{proof}
 
+%%%%%%%%%%%%  TO DO !!!
+%%%%%%%%%%%%
+%%%%%%%%%%%%
 \todo{Proof of Lemma 3.3:  Insert 'rank-' after 'order' and before 'preserving'.  The E subscripts in Part 1 should be written as E(P) or E(Q).  Here there are two '<\_P's that should be '<\_Q's.
-Aaron: I made all the edits here, except the one about inserting 'rank-'. Do either of you understand what this means? does he want us to call it ``order-rank-preserving''?}
+Aaron: I made all the edits here, except the one about inserting 'rank-'. Do either of you understand what this means? does he want us to call it ``order-rank-preserving''?
+Zijian: I think what we have here is clear, no change is needed.}
 \begin{lem}\label{lem:Ff_poset_morphism}
 Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
 
@@ -412,13 +421,14 @@ By Lemmas \ref{lem:f_partial_order}, \ref{lem:FP_graded_poset}, and \ref{lem:Ff_
 
 
 
-Given a group action of $G$ on $P$, we can now easily define a natural group action of $G$ on $\mathcal E(P)$ using Lemma \ref{lem:Ff_poset_morphism}.  For all $g\in G$ we have that application of $g$ is an automorphism of $P$, so it follows that $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$ and furthermore that this gives a well-defined group action by Lemma \ref{lem:Ff_poset_morphism}.
+An action of $G$ on $P$ naturally induces an action of $G$ on $\mathcal E(P).$ Each element $g \in G$ is an automorphism of $P$, so $\mathcal E(g)$ is an automorphism of $\mathcal E(P)$. Lemma \ref{lem:Ff_poset_morphism} guarantees that this is a well defined group action. 
+
 
 \begin{defn}\label{note:G_action_on_FP}
 Given a $G$-action on $P$, define a $G$-action on $\mathcal E(P)$ by $g\cdot (x,y) = \mathcal{E}(g)(x,y) = (gx,gy)$.
 \end{defn}
 
-We then have a well-defined quotient poset $\mathcal E(P)/G$.  It is natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E$, that is, whether $\mathcal E(P/G) \cong \mathcal E(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT, as will be shown in Lemma \ref{lem:cover_transitive_equivalence}.
+We then obtain a quotient poset $\mathcal E(P)/G$.  It is natural to ask whether the operation of quotienting out by $G$ commutes with $\mathcal E$, that is, whether $\mathcal E(P/G) \cong \mathcal E(P)/G$.  Unfortunately the two posets are rarely isomorphic, but there is always a surjection $\mathcal E(P)/G\rightarrow \mathcal E(P/G)$, and this surjection is also an injection precisely when the $G$-action on $P$ is CCT, as will be shown in Lemma \ref{lem:cover_transitive_equivalence}.
 
 
 \begin{prop}\label{prop:surjection_between_F_quotients}
@@ -447,11 +457,17 @@ Note that it is easy to check $\op\colon\mathcal P \rightarrow \mathcal P$ is in
 \label{lem:commuting_op_e}
 The functor $\op\colon\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E\colon\mathcal P \rightarrow \mathcal P$. That is, $\mathcal E(P^{\op}) \cong \mathcal E(\mathcal P)^{\op}$.
 \end{lem}
+%%%%%%%% To Do
+%%%%%%%%
+%%%%%%%%
 \todo{Proof of Lemma 3.9 - your notation (x,y) -> (x,y) is a bit confusing (and runs into the margin). Perhaps explain in words that you are mapping edges to edges.
-Aaron: I made these edits suggested. I'm not certain whether it is clearer. What do you think?}
+Aaron: I made these edits suggested. I'm not certain whether it is clearer. What do you think? I think the previous version is already clear. This proof seems unnecessarily long, I put the longer version in comment format, namely it is not deleted, could some one just finalize this part?-- Zijian }
 \begin{proof}
-	Observe that $\mathcal E(P^{\op})$ is canonically isomorphic to $\mathcal E(P)^{\op}$, as given by the morphism $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ which sends an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. These maps are well defined because $\mathcal E(P)^{\op}$ and $\mathcal E(P^{\op})$ are the same as sets, and it follows from the definitions that these are both morphisms of graded posets, and so $F$ defines an isomorphism.
+Define morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ by sending an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. 
 \end{proof}
+%% 	Observe that $\mathcal E(P^{\op})$ is canonically isomorphic to $\mathcal E(P)^{\op}$, as given by the morphism $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ which sends an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. These maps are well defined because $\mathcal E(P)^{\op}$ and $\mathcal E(P^{\op})$ are the same as sets, and it follows from the definitions that these are both morphisms of graded posets, and so $F$ defines an isomorphism.
+
+
 
 \begin{prop}
 \label{prop:self_dual_preservation}
@@ -564,7 +580,10 @@ Let $G$ be a group acting on a graded poset $P$. The following are equivalent:
 First, we show $(1) \iff (3)$. By Proposition \ref{prop:surjection_between_F_quotients} we know that $q$ is a bijection exactly when there do not exist distinct orbits $G(x, y) \ne G(x^\prime, y^\prime)$ with $x^\prime\in Gx$, $y^\prime\in Gy$.  Fix $(x, y), (x^\prime, y^\prime)\in \mathcal E(P)$ such that $x^\prime\in Gx$ and $y^\prime\in Gy$.  Pick a $g\in G$ such that $g\cdot y^\prime = y$.  Then $(g\cdot x^\prime, y)\in G(x^\prime, y^\prime)$, so $G(x, y) = G(x^\prime, y^\prime)$ if and only if there exists some $g^\prime\in G$ such that $g^\prime\cdot x = g\cdot x^\prime$ and $g^\prime\cdot y = y$. Hence $q$ is a bijection if and only if the $G$ action is CCT.
 
 Second, $(2) \iff (3)$ by an analogous argument to $(1) \iff (3)$.
-\todo{Aaron: Is this sufficient detail, or should we spell it out}
+%%%%%%%% To Do
+%%%%%%%%
+%%%%%%%%
+\todo{Aaron: Is this sufficient detail, or should we spell it out. Zijian: Sufficient! in fact I would like to shorten it a bit.}
 Finally, we check $(3)\iff (4)$. Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i$. However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
 \end{proof}
 
