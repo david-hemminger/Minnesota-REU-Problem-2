@@ -114,17 +114,13 @@ For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose e
 
 \newpage
 
-\todo[inline]{Following the example of Theorem 1.5 on p. 7, Proposition 4.3 on p. 10 should be renumbered as Proposition 1.7 and Proposition 4.22 on p. 14 should be renumbered as Proposition 1.6
-It appears that theorem tools allows us to renumber the theorems but not the propositions, or at least I haven't figured out how. I'd suggest just calling the repeated propositions ``Theorems'', or else one of you can take a try at figuring out how to repeat the number of the first proposition.
--Aaron}
-\todo[inline]{Proposition 4.4:  Replace the comma in the displayed line with a colon and insert some whitespace after this colon.  When you write definitions of group actions in your compact form, the agglomeration of symbols is nearly unreadable .  (It would also be helpful if you avoided beginning sentences or dependent clauses with mathematical symbols.) -- Placed at the top because I think there's likely multiple places in the paper where this is done - David 
-	Is proposition 4.4 readable now? -- Zijian}
 \todo[inline]{p. 7 line 43 - It would be helpful to put the REU report in the references and cite it throughout the paper, so that in other parts of the paper, the reader doesn't have to know about the footnote in order to be able to find the url. You can still say 'the REU report' throughout the paper, but put the citation after it. -- Wasn't there a reason why we didn't do this in the first place?  Was it because Order doesn't want us to cite things that aren't peer-reviewed? - David
 It says in the instructions:
 The list of references should only include works that are cited in the text and that have been published or accepted for publication. Personal communications and unpublished works should only be mentioned in the text. Do not use footnotes or endnotes as a substitute for a reference list.
 What should we do?
 -Aaron
 I would follow the advice of citing the REU report, but mention that it is not published to the reviewers/editor -- if they are not happy with that, we change it back. -- if we agree then this could be done in next editing - Z
+Ok, I am happy to follow their advice then. I think we should make a comment in our responses about why we did this, though}
 }
 
 \newpage
@@ -280,8 +276,7 @@ We have found many group actions on $B_n$ that have the CCT property.  We first 
 
 We further show that cover transitivity is preserved under semidirect products, allowing us to describe several large families of CCT actions in Subsection \ref{ssec:CCT_examples}.
 
-\todo{Proposition 4.3 - should call it Proposition 1.7}
-\begin{restatable}{prop}{semi direct}
+\begin{restatable}{prop}{semidirect}
 \label{prop:semidirect_product_preservation}
 Let $G\subseteq \Aut(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
@@ -590,7 +585,6 @@ Second, $(2) \iff (3)$ by an analogous argument to $(1) \iff (3)$.
 %%%%%%%% To Do
 %%%%%%%%
 %%%%%%%%
-\todo{Aaron: Is this sufficient detail, or should we spell it out. Zijian: Sufficient! in fact I would like to shorten it a bit.}
 Finally, we check $(3)\iff (4)$. Again using Proposition ~\ref{prop:surjection_between_F_quotients}, the morphism $q$ is always surjective. Since a morphism is always rank preserving, it must map $(\mathcal E(P)/G)_i$ surjectively onto $(\mathcal E(P/G))_i$. However, since the posets are finite, this surjection is a bijection if and only if the sets have the same cardinality.
 \end{proof}
 
@@ -876,7 +870,7 @@ Hence $k\cdot x$ and $k\cdot x^\prime$ are in the same $H$-orbit, so we have a w
 
 Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction, which says that the CCT property is preserved under semidirect products.  We will use Proposition ~\ref{prop:semidirect_product_preservation} to construct more examples of CCT group actions, in particular using it to give a simple proofs that CCT actions are preserved under direct products and wreath products.
 
-
+\semidirect*
 \begin{proof}
 Since $G = H\rtimes K$, every element $g\in G$ can be written uniquely as a product $hk$ for some $h\in H$, $k\in K$.  Let $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$ and such that there exists some $h_0k_0\in G$ such that $h_0k_0\cdot x = y$.  It suffices to show that there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
 
@@ -902,7 +896,7 @@ First note that if either $G$ or $H$ acts trivially, then it can be easily check
 Next, we use Proposition ~\ref{prop:semidirect_product_preservation} to prove in Proposition ~\ref{prop:wreath_preservation} that the CCT property is preserved under wreath products with the symmetric group. First, we need the definition of the wreath product.
 
 \begin{defn}
-For $G, H$ groups, with $H \subset S_\ell$, the {\it wreath product}, denoted by $G \wr H$, is the group whose elements are pairs $(g,h) \in G^\ell\times H$ with multiplication defined by
+For $G$ and $H$ groups, with $H \subset S_\ell$, the {\it wreath product}, denoted by $G \wr H$, is the group whose elements are pairs $(g,h) \in G^\ell\times H$ with multiplication defined by
 \begin{align*}
 ((g_1',\ldots, g_\ell'),h') \cdot ((g_1,\ldots, g_\ell) ,h) =((g'_{h'(1)}g_1,\ldots, g'_{h'(\ell)}g_\ell),hh')
 \end{align*}
