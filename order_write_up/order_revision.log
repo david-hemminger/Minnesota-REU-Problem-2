@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.29)  4 DEC 2015 01:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.29)  23 JAN 2016 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,14 +890,12 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 109.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-(./order_revision.tdo
-Underfull \vbox (badness 2922) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+(./order_revision.tdo)
 \tf@tdo=\write5
 \openout5 = `order_revision.tdo'.
 
- [2] [3]
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3]
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no ( in font nullfont!
@@ -905,16 +903,22 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
- [4] [5] [6] [7] [8]
-[9]
+ [4] [5] [6] [7] [8] [9]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1219
+[10] [11] [12] [13]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1224
 []\OT1/ptm/m/n/10 Therefore, $\OMS/ztmcm/m/n/10 j\OT1/ztmcm/m/n/10 (\U/eus/m/n/
 10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it
 /10 =G\OT1/ztmcm/m/n/10 )[]\OMS/ztmcm/m/n/10 j \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m
@@ -926,19 +930,19 @@ L/ztmcm/m/it/10 =G$ \OT1/ptm/m/n/10 is Peck,
  []
 
 
-Overfull \hbox (4.96864pt too wide) in paragraph at lines 1250--1251
+Overfull \hbox (4.96864pt too wide) in paragraph at lines 1249--1250
 []\OT1/ptm/m/n/10 In par-tic-u-lar, if the an-swer to the pre-vi-ous Ques-tion 
-6.3[] is af-fir-ma-tive, it would im-me-di-ately hold that $\U/eus/m/n/10 E\OT1
+6.2[] is af-fir-ma-tive, it would im-me-di-ately hold that $\U/eus/m/n/10 E\OT1
 /ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 q\OT
 1/ztmcm/m/n/10 ))\OML/ztmcm/m/it/10 =G$
  []
 
 [19] (./order_revision.bbl) [20] (./order_revision.aux) ) 
 Here is how much of TeX's memory you used:
- 17266 strings out of 494985
- 309879 string characters out of 6180356
- 427646 words of memory out of 5000000
- 20012 multiletter control sequences out of 15000+600000
+ 17245 strings out of 494985
+ 309305 string characters out of 6180356
+ 416602 words of memory out of 5000000
+ 19991 multiletter control sequences out of 15000+600000
  47243 words of font info for 121 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  56i,12n,80p,3246b,820s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -956,7 +960,7 @@ live/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on order_revision.pdf (20 pages, 198945 bytes).
+Output written on order_revision.pdf (20 pages, 193571 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream

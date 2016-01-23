@@ -91,9 +91,9 @@
              Harvard University, 323 Eliot Mail Center, Cambridge, MA 02138
               \email{aaronlandesman@gmail.com} \and
            Z. Yao \at
-           Brown University
-             7285 Brown University, 69 Brown Street, Providence, RI 02912
-              \email{yaozijian1992@gmail.com}			%  \\
+           Brown University,
+             7285 Brown University, Providence, RI 02912
+              \email{zijian.yao.math@gmail.com}			%  \\
 %             \emph{Present address:} of F. Author  %  if needed
 }
 
@@ -117,12 +117,14 @@ For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose e
 \todo[inline]{Following the example of Theorem 1.5 on p. 7, Proposition 4.3 on p. 10 should be renumbered as Proposition 1.7 and Proposition 4.22 on p. 14 should be renumbered as Proposition 1.6
 It appears that theorem tools allows us to renumber the theorems but not the propositions, or at least I haven't figured out how. I'd suggest just calling the repeated propositions ``Theorems'', or else one of you can take a try at figuring out how to repeat the number of the first proposition.
 -Aaron}
-\todo[inline]{Proposition 4.4:  Replace the comma in the displayed line with a colon and insert some whitespace after this colon.  When you write definitions of group actions in your compact form, the agglomeration of symbols is nearly unreadable .  (It would also be helpful if you avoided beginning sentences or dependent clauses with mathematical symbols.) -- Placed at the top because I think there's likely multiple places in the paper where this is done - David}
+\todo[inline]{Proposition 4.4:  Replace the comma in the displayed line with a colon and insert some whitespace after this colon.  When you write definitions of group actions in your compact form, the agglomeration of symbols is nearly unreadable .  (It would also be helpful if you avoided beginning sentences or dependent clauses with mathematical symbols.) -- Placed at the top because I think there's likely multiple places in the paper where this is done - David 
+	Is proposition 4.4 readable now? -- Zijian}
 \todo[inline]{p. 7 line 43 - It would be helpful to put the REU report in the references and cite it throughout the paper, so that in other parts of the paper, the reader doesn't have to know about the footnote in order to be able to find the url. You can still say 'the REU report' throughout the paper, but put the citation after it. -- Wasn't there a reason why we didn't do this in the first place?  Was it because Order doesn't want us to cite things that aren't peer-reviewed? - David
 It says in the instructions:
 The list of references should only include works that are cited in the text and that have been published or accepted for publication. Personal communications and unpublished works should only be mentioned in the text. Do not use footnotes or endnotes as a substitute for a reference list.
 What should we do?
 -Aaron
+I would follow the advice of citing the REU report, but mention that it is not published to the reviewers/editor -- if they are not happy with that, we change it back. -- if we agree then this could be done in next editing - Z
 }
 
 \newpage
@@ -252,6 +254,18 @@ A group action of $G$ on $P$ is \textit{common cover transitive} (CCT) if whenev
 If a group action of $G$ on $B_n$ is CCT, then $\mathcal E(B_n/G)$ is Peck.
 \end{restatable}
 
+
+The theorem trivially implies the following
+\begin{cor}
+	$\mathcal E(B_n)$ is Peck
+\end{cor}
+
+\begin{rmk}
+	 In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report. %%%%%%%% Citation edit needed for "the REU report"
+\end{rmk}
+
+
+
 We have found many group actions on $B_n$ that have the CCT property.  We first prove that some basic group actions on $B_n$ are CCT.  Throughout the paper we let a subgroup $G\subseteq S_n$ act on $B_n$ by letting it act on the elements within subsets of $[n]:= \{1,\ldots, n\}$, i.e. $g\cdot x = \{g\cdot i\colon i\in x\}$  for all $g\in G$, $x\in B_n$.  We also embed the dihedral group $D_{2n}$ into $S_n$ by letting it act as rotations and reflections on the vertices of an $n$-gon.
 
 \begin{restatable}{prop}{building}
@@ -267,7 +281,7 @@ We have found many group actions on $B_n$ that have the CCT property.  We first 
 We further show that cover transitivity is preserved under semidirect products, allowing us to describe several large families of CCT actions in Subsection \ref{ssec:CCT_examples}.
 
 \todo{Proposition 4.3 - should call it Proposition 1.7}
-\begin{restatable}{prop}{semidirect}
+\begin{restatable}{prop}{semi direct}
 \label{prop:semidirect_product_preservation}
 Let $G\subseteq \Aut(P)$, $H\triangleleft G$, $K\subset G$ such that $G = H\rtimes K$.  Suppose that the action of $H$ is on $P$ is CCT and the action of $K$ on $P/H$ is CCT. Then the action of $G$ on $P$ is CCT.
 \end{restatable}
@@ -387,12 +401,7 @@ For $P$ a graded poset, the object $\mathcal E(P)$ is a graded poset.
 To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)+1 = \rk(x^\prime , y^\prime)$.  This fact follows immediately from the definition of $\lessdot_{\mathcal E}$ and the definition $\rk_{\mathcal E}(x, y) = \rk_P(x)$.
 \end{proof}
 
-%%%%%%%%%%%%  TO DO !!!
-%%%%%%%%%%%%
-%%%%%%%%%%%%
-\todo{Proof of Lemma 3.3:  Insert 'rank-' after 'order' and before 'preserving'.  The E subscripts in Part 1 should be written as E(P) or E(Q).  Here there are two '<\_P's that should be '<\_Q's.
-Aaron: I made all the edits here, except the one about inserting 'rank-'. Do either of you understand what this means? does he want us to call it ``order-rank-preserving''?
-Zijian: I think what we have here is clear, no change is needed.}
+
 \begin{lem}\label{lem:Ff_poset_morphism}
 Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
 
@@ -457,11 +466,8 @@ Note that it is easy to check $\op\colon\mathcal P \rightarrow \mathcal P$ is in
 \label{lem:commuting_op_e}
 The functor $\op\colon\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E\colon\mathcal P \rightarrow \mathcal P$. That is, $\mathcal E(P^{\op}) \cong \mathcal E(\mathcal P)^{\op}$.
 \end{lem}
-%%%%%%%% To Do
-%%%%%%%%
-%%%%%%%%
-\todo{Proof of Lemma 3.9 - your notation (x,y) -> (x,y) is a bit confusing (and runs into the margin). Perhaps explain in words that you are mapping edges to edges.
-Aaron: I made these edits suggested. I'm not certain whether it is clearer. What do you think? I think the previous version is already clear. This proof seems unnecessarily long, I put the longer version in comment format, namely it is not deleted, could some one just finalize this part?-- Zijian }
+
+
 \begin{proof}
 Define morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ by sending an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. 
 \end{proof}
@@ -869,7 +875,6 @@ Hence $k\cdot x$ and $k\cdot x^\prime$ are in the same $H$-orbit, so we have a w
 
 Recall Proposition ~\ref{prop:semidirect_product_preservation}, as stated in the introduction, which says that the CCT property is preserved under semidirect products.  We will use Proposition ~\ref{prop:semidirect_product_preservation} to construct more examples of CCT group actions, in particular using it to give a simple proofs that CCT actions are preserved under direct products and wreath products.
 
-\semidirect*
 
 \begin{proof}
 Since $G = H\rtimes K$, every element $g\in G$ can be written uniquely as a product $hk$ for some $h\in H$, $k\in K$.  Let $x,y,z\in P$ such that $x\lessdot z$, $y\lessdot z$ and such that there exists some $h_0k_0\in G$ such that $h_0k_0\cdot x = y$.  It suffices to show that there exists some $g\in \Stab_G(z)$ such that $g\cdot x = y$.
@@ -1229,12 +1234,6 @@ $p_1(\ell,m,1), p_{2}(\ell,m,1),\ldots, p_{\ell\cdot m}(\ell,m,1)$ is unimodal a
 
 In this section, we discuss several related results and list further questions. 
 
-\todo{Remark 6.1 should be converted to a corollary and should be moved to the introduction, to immediately follow Theorem 1.5.
-Aaron: I'm fine with moving this to the introduction, but I don't think we should call it a corollary. Should we perhaps make this a separate theorem or proposition, and just refer people to the REU report?}
-\begin{rmk}
-Observe that Theorem \ref{thm:cover_transitive_implies_Peck} trivially implies that $\mathcal E(B_n)$ is Peck. In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report.
-\end{rmk}
-
 \begin{defn}
 Let $B_n(q)$, the {\it q-analog of the boolean algebra}, be the graded poset whose elements are linear subspaces $V \subset \mathbb F_q^n$ with $V \leq W$ if $V \subset W$.
 \end{defn}
@@ -1289,10 +1288,6 @@ Conflict of Interest: The authors declare that they have no conflict of interest
 \medskip 
 
 \nocite{*}
-
-\todo{ References - check if the Pak and Panova article has appeared. Also, several words should be capitalized in the bibliography - Sperner (twice), Lefschetz, Volume. -- I fixed everything except for capitalizing "Volume", which is up to Bibtex's bibliographystyle.  I think this style is the one Order asks for, so we shouldn't change anything? - David
-Aaron: I think it's fine not to change anything else, just mention what we don't change in the additional document.
-}
 \bibliographystyle{plain}
 \bibliography{References}
 
