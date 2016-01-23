@@ -857,4 +857,166 @@ Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-Package grfext Info: Graphic
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 77
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 77
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 77
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 77
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
+Package xypdf Info: Line width: 0.3999pt on input line 77.
+
+ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(79.49744pt, 455.30013pt, 79.49744pt)
+* v-part:(T,H,B)=(79.49744pt, 635.97511pt, 79.49744pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=455.30013pt
+* \textheight=635.97511pt
+* \oddsidemargin=7.22745pt
+* \evensidemargin=7.22745pt
+* \topmargin=-20.28767pt
+* \headheight=12.0pt
+* \headsep=15.51512pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=48.0pt
+* \marginparsep=10.0pt
+* \columnsep=19.26015pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+
+Package mathptmx Warning: There are no bold math fonts on input line 104.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+LaTeX Font Info:    Try loading font information for U+eus on input line 109.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+(./order_revision.tdo)
+\tf@tdo=\write5
+\openout5 = `order_revision.tdo'.
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+! Too many }'s.
+l.124 }
+       
+? 
+[2]
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+ [3] [4] [5] [6] [7] [8]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10] [11] [12] [13] [14] [15] [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1219
+[]\OT1/ptm/m/n/10 Therefore, $\OMS/ztmcm/m/n/10 j\OT1/ztmcm/m/n/10 (\U/eus/m/n/
+10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it
+/10 =G\OT1/ztmcm/m/n/10 )[]\OMS/ztmcm/m/n/10 j \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m
+/n/10 j\U/eus/m/n/10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]=G\OT1/ztmcm/m/n
+/10 )[]\OMS/ztmcm/m/n/10 j \OT1/ztmcm/m/n/10 = \OML/ztmcm/m/it/10 p[]\OT1/ztmcm
+/m/n/10 (\OML/ztmcm/m/it/10 `; m; \OT1/ztmcm/m/n/10 1)$\OT1/ptm/m/n/10 . Since 
+$\U/eus/m/n/10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OM
+L/ztmcm/m/it/10 =G$ \OT1/ptm/m/n/10 is Peck,
+ []
+
+
+Overfull \hbox (4.96864pt too wide) in paragraph at lines 1244--1245
+[]\OT1/ptm/m/n/10 In par-tic-u-lar, if the an-swer to the pre-vi-ous Ques-tion 
+6.2[] is af-fir-ma-tive, it would im-me-di-ately hold that $\U/eus/m/n/10 E\OT1
+/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 q\OT
+1/ztmcm/m/n/10 ))\OML/ztmcm/m/it/10 =G$
+ []
+
+[18] (./order_revision.bbl) [19] (./order_revision.aux) ) 
+Here is how much of TeX's memory you used:
+ 19662 strings out of 495020
+ 381223 string characters out of 6181324
+ 464325 words of memory out of 5000000
+ 22379 multiletter control sequences out of 15000+600000
+ 47243 words of font info for 121 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 56i,12n,84p,3246b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eu
+fm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on order_revision.pdf (19 pages, 191718 bytes).
+PDF statistics:
+ 122 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
