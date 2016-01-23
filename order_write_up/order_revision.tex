@@ -230,7 +230,7 @@ We observe that when $P$ has a nice structure, $\mathcal E(P)$ commonly has a ni
 
 In this paper, we study the property of Peckness, as defined below
 in Definition ~\ref{defn:peck}. The name 
-``Peck'' was coined in Stanley's paper ~\cite{quotients_stanley}. However, Peck posets were studied prior to Stanley's article, for example, in
+``Peck'' was coined in Stanley's paper ~\cite{quotients_stanley}. However, Peck posets were studied prior to Stanley's article ~\cite{quotients_stanley}, for example, in
 ~\cite{weyl_groups_stanley}. Peckness is a nice property
 as it enjoys several equivalent definitions, for example, see
 ~\cite[Lemma 1.1]{weyl_groups_stanley} and ~\cite{proctor}.
@@ -375,7 +375,7 @@ In Subsection \ref{ssec:functoriality} we show that $\mathcal E$ as described in
 %%%%%%%%%%%%  TO DO !!!
 %%%%%%%%%%%%
 %%%%%%%%%%%%
-\todo{This "sub-outline" seems unnecessary for me -- is there any objection of getting rid of this? -- Zijian}
+\todo{This "sub-outline" seems unnecessary for me -- is there any objection of getting rid of this? -- Zijian Aaron: I usually like these outlines, as they help me find my place in the article, and it's only three lines. But, if you feel strongly, feel free to delete it.}
 
 \ssec{Functoriality of $\mathcal E$ and Group Actions}
 \label{ssec:functoriality}
@@ -400,7 +400,6 @@ For $P$ a graded poset, the object $\mathcal E(P)$ is a graded poset.
 \begin{proof}
 To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal E} (x^\prime, y^\prime) \implies \rk(x, y)+1 = \rk(x^\prime , y^\prime)$.  This fact follows immediately from the definition of $\lessdot_{\mathcal E}$ and the definition $\rk_{\mathcal E}(x, y) = \rk_P(x)$.
 \end{proof}
-
 
 \begin{lem}\label{lem:Ff_poset_morphism}
 Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
@@ -467,9 +466,11 @@ Note that it is easy to check $\op\colon\mathcal P \rightarrow \mathcal P$ is in
 The functor $\op\colon\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E\colon\mathcal P \rightarrow \mathcal P$. That is, $\mathcal E(P^{\op}) \cong \mathcal E(\mathcal P)^{\op}$.
 \end{lem}
 
-
+%%%%%%%% To Do
+%%%%%%%%
+%%%%%%%%
 \begin{proof}
-Define morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ by sending an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. 
+Define the morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ by sending an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. 
 \end{proof}
 %% 	Observe that $\mathcal E(P^{\op})$ is canonically isomorphic to $\mathcal E(P)^{\op}$, as given by the morphism $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ which sends an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. These maps are well defined because $\mathcal E(P)^{\op}$ and $\mathcal E(P^{\op})$ are the same as sets, and it follows from the definitions that these are both morphisms of graded posets, and so $F$ defines an isomorphism.
 
