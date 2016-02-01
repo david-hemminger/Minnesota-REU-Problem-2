@@ -407,14 +407,14 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 \end{lem}
 
 \begin{proof}
-First, we show 1.
+First, we show (1).
 Observe that $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
 $$\rk_{\mathcal E(P)}(x, y) = \rk_P(x) = \rk_Q(f(x)) = \rk_{\mathcal E(Q)}(\mathcal E(f)(x, y)).$$
 Suppose $(x, y)\lessdot_{\mathcal E(P)} (x^\prime, y^\prime)$.  Then $x\lessdot_P x^\prime$ and $y\lessdot_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\lessdot_Q f(x^\prime)$ and $f(y)\lessdot_Q f(y^\prime)$. Hence $\mathcal E(f)(x,y) \lessdot_{\mathcal E(Q)} \mathcal E(f)(x^\prime , y^\prime)$. Since $\le_{\mathcal E(Q)}$ is the transitive closure of $\lessdot_{\mathcal E(Q)}$, we similarly obtain that $\mathcal E(f)$ is order-preserving and hence a morphism of finite graded posets.
 
-Next, 2 is trivial.
+Next, (2) is trivial.
 
-Finally, we show 3. For all $(x, y)\in \mathcal E(P)$ we have 
+Finally, we show (3). For all $(x, y)\in \mathcal E(P)$ we have 
 $$\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y).$$
 \end{proof}
 
