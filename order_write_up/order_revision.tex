@@ -841,7 +841,7 @@ Note that we have also developed several generalizations of $\mathcal E$, for wh
 
 \section{Common Cover Transitive Actions}
 \label{sec:cover_transitive}
-In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P$ such that $x\lessdot z,y\lessdot z$, and $x \in Gy$, then there exists $g \in \Stab(z)$ with $gx = y$.  We show that the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which will be proven in Subsubsection \ref{sssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
+In this section, we develop the theory of CCT actions $\phi$ where $G$ is a group, $P$ is a poset, and $\phi:G\times P \rightarrow P$ is an action. Recall Definition ~\ref{defn:cover_transitive}, that $\phi$ is CCT if whenever $x,y,z \in P$ such that $x\lessdot z,y\lessdot z$, and $x \in Gy$, then there exists $g \in \Stab(z)$ with $gx = y$.  We show that the CCT property is closed under semidirect products, in the appropriate sense. From Proposition ~\ref{prop:cover_transitive_building_blocks}, which will be proven in Subsection \ref{sssec:dihedral}, the action of $S_n$ on $B_n$ and the action of certain dihedral groups are CCT. We can then use these as building blocks to construct other CCT groups. In particular, we shall show in this section that automorphism groups of rooted trees are CCT.
 
 \begin{eg}
 \label{eg:trivial_edgequot}
@@ -951,7 +951,7 @@ In this subsection, we describe several classes of CCT actions. First, we show t
 
 \sssec{An application to rooted trees}
 \label{ssec:rooted_trees}
-In this subsubsection, we prove that the automorphism group of a rooted tree is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, using that the automorphism group of a  rooted tree is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
+In this subsection, we prove that the automorphism group of a rooted tree is always CCT. To do this we will apply Proposition ~\ref{prop:wreath_preservation} and Proposition ~\ref{prop:direct_product_preservation}, using that the automorphism group of a  rooted tree is essentially built from direct products and wreath products with a symmetric group. To this aim, we first give definitions relating to rooted trees, then characterize their automorphisms, and finally show that such automorphism groups are always CCT.
 
 \begin{defn}
 A graded poset $P$ is a {\it rooted tree} if there is a unique element $z \in P$ of maximal rank, called the {\it root}, and for all $x \in P$ other than the root there exists a unique $y \in P$ with $y \gtrdot x$.
@@ -1083,7 +1083,7 @@ Let the rank of $P$ be $n$. By Proposition ~\ref{prop:wreath_preservation}, wrea
 \label{sssec:polytopes}
 
 As another class of CCT actions, we describe several linear automorphism groups of polytopes whose induced actions on $B_n$ are CCT. In particular, we prove that the linear automorphism groups of simplices and octahedra are CCT.
-Once we prove Proposition ~\ref{prop:cover_transitive_building_blocks} in Subsubsection \ref{sssec:dihedral}, we will also see that the action of the dihedral group on a regular $n$-gon is CCT for $n = p,2p$.  Since the dihedral group is the group of all linear automorphisms of the regular $n$-gon, this action gives another example of the linear automorphism group of a polytope being CCT.
+Once we prove Proposition ~\ref{prop:cover_transitive_building_blocks} in Subsection \ref{sssec:dihedral}, we will also see that the action of the dihedral group on a regular $n$-gon is CCT for $n = p,2p$.  Since the dihedral group is the group of all linear automorphisms of the regular $n$-gon, this action gives another example of the linear automorphism group of a polytope being CCT.
 
 \begin{defn}
 Let $M$ be a polytope with a particular embedding in $\mathbb R^n$. The {\it group of linear automorphisms of M} is the subgroup of $\operatorname{GL}_n$ whose elements are $\{g \in \operatorname{GL}_n\colon g \cdot M = M\}$.
@@ -1111,7 +1111,7 @@ Let us give a brief recap of which linear automorphisms of polytopes are known t
 
 \sssec{CCT Actions of $\mathbb Z_2^k$}
 
-In this subsubsection, we show that any embedding of $\mathbb Z_2^k$ into $S_n$ defines an action on $B_n$ which is CCT.  This implies that every action of $\mathbb Z_2^k$ on $B_n$ is CCT. However, it turns out that this is the only class of groups for which every action on $B_n$ is CCT.
+In this subsection, we show that any embedding of $\mathbb Z_2^k$ into $S_n$ defines an action on $B_n$ which is CCT.  This implies that every action of $\mathbb Z_2^k$ on $B_n$ is CCT. However, it turns out that this is the only class of groups for which every action on $B_n$ is CCT.
 
 \begin{prop}
 \label{prop:regular_action_CCT}
@@ -1200,7 +1200,7 @@ There is an equality $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_{1+i}(
 
 \begin{proof}
 
-First, observe that $S_m \wr S_\ell$ can be described as the automorphism group of a rooted tree of rank 2 with $\ell$ elements at rank $1$ and $m\cdot \ell$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then it follows by Corollary \ref{cor:tree_cct} that the action of $G$ on $B_{m \cdot \ell}$ is CCT and hence $\mathcal E(B_n/G)$ is Peck.
+First, observe that $S_m \wr S_\ell$ can be described as the automorphism group of a rooted tree of rank 2 with $\ell$ elements at rank $1$ and $m\cdot \ell$ elements at rank 2, such that each element at rank $1$ is above $m$ elements at rank 2. Then it follows from Corollary \ref{cor:tree_cct} that the action of $G$ on $B_{m \cdot \ell}$ is CCT and hence $\mathcal E(B_n/G)$ is Peck.
 
 Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young diagram.  Here, we think of $B_n = B_{\ell \cdot m}$ as subsets of the $\ell \cdot m$ boxes in an $\ell \times m$ rectangle. The correspondence is then given by sending an equivalence class to the representative which is left-justified and bottom-justified.
  For a complete proof, see, for example, Lemma 5.11 of the REU report.
@@ -1263,7 +1263,7 @@ We found several additional interesting examples of CCT actions. Once such actio
 Does the group of linear automorphisms of an $n$-cube in $\mathbb R^n$ whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a CCT action on $B^{2^n}$?
 \end{que}
 
-There is also the question of which regular polytopes induce CCT actions. We have shown that it holds for the octahedron and the simplex (tetrahedron) in Subsubsection \ref{sssec:polytopes}. We also checked using python code we wrote that it holds for the $n$-cube for $n \leq 3$. We wonder whether it holds for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
+There is also the question of which regular polytopes induce CCT actions. We have shown that it holds for the octahedron and the simplex (tetrahedron) in Subsection \ref{sssec:polytopes}. We also checked using python code we wrote that it holds for the $n$-cube for $n \leq 3$. We wonder whether it holds for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
 
 \begin{que}
 \label{question:exceptional_polytopes_cct}
