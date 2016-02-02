@@ -114,16 +114,7 @@ For any graded poset $P$, we define a new graded poset, $\mathcal E(P)$, whose e
 
 \newpage
 
-\todo[inline]{p. 7 line 43 - It would be helpful to put the REU report in the references and cite it throughout the paper, so that in other parts of the paper, the reader doesn't have to know about the footnote in order to be able to find the url. You can still say 'the REU report' throughout the paper, but put the citation after it. -- Wasn't there a reason why we didn't do this in the first place?  Was it because Order doesn't want us to cite things that aren't peer-reviewed? - David
-It says in the instructions:
-The list of references should only include works that are cited in the text and that have been published or accepted for publication. Personal communications and unpublished works should only be mentioned in the text. Do not use footnotes or endnotes as a substitute for a reference list.
-What should we do?
--Aaron
-I would follow the advice of citing the REU report, but mention that it is not published to the reviewers/editor -- if they are not happy with that, we change it back. -- if we agree then this could be done in next editing - Z
-Ok, I am happy to follow their advice then. I think we should make a comment in our responses about why we did this, though}
 
-
-\newpage
 %%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{sec:introduction}
@@ -257,8 +248,7 @@ The theorem trivially implies the following
 \end{cor}
 
 \begin{rmk}
-	 In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report. \todo{Citation edit needed for "the REU report"}
- \end{rmk}
+	 In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report.\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} \end{rmk}
 
 
 
@@ -331,7 +321,7 @@ A graded poset $P$ is \textit{Peck} if $P$ is rank-symmetric, rank-unimodal, and
 \end{defn}
 
 
-Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively.  Note that we will frequently abuse notation and write $P$ and $P_i$ for $V(P)$ and $V(P_i)$ \todo{do we every actually do this?  If not, this line should be removed. --David} when what we mean is clear from context.  In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
+Let $V(P)$ and $V(P_i)$ be the complex vector spaces with bases $\{x :x\in P\}$ and $\{x :x\in P_i\}$ respectively. In determining whether $P$ is Peck, it is often useful to consider certain linear transformations on $V(P)$.
 
 \begin{defn}
 \label{defn:lefschetz}
@@ -546,26 +536,27 @@ For any action $\phi\colon G \times B_n \rightarrow B_n$, we have that
 	\item $\mathcal E(B_n)/G$
 \end{itemize} are self-dual. In particular, they are all rank-symmetric 
 \end{cor}
-\begin{proof}\todo{rewrite this}
-By Remark \ref{rem:induced_action_bn}, any action $\phi\colon G\times B_n \rightarrow B_n$ is induced by an action $\psi\colon G \times [n] \rightarrow [n]$. Using this, observe that for any $\phi$, the poset $B_n/G$ is self-dual, as there is an isomorphism 
+\begin{proof}
+	By Remark \ref{rem:induced_action_bn}, any action $\phi\colon G\times B_n \rightarrow B_n$ is induced by an action $\psi\colon G \times [n] \rightarrow [n]$. Using this, observe that for any $\phi$, the poset $B_n/G$ is self-dual, as there is an isomorphism 
 \begin{align*}
 	f\colon B_n/G &\rightarrow (B_n/G)^{\op} \\
 	G \cdot x &\mapsto G \cdot ([n] \setminus x).
 \end{align*}
 This map is well-defined on $G$ orbits because every action on $B_n$ is induced by an action on $[n]$. Then, by Proposition \ref{prop:self_dual_preservation}, it follows that $\mathcal E(B_n/G)$ is self-dual.
 
-It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f)\colon\mathcal E(B_n) \rightarrow \mathcal E(B_n^{\op})\cong \mathcal E(B_n)^{\op}$, that is, the map sending $(x,y) \mapsto ([n]\setminus y,[n] \setminus x)$. Once again, since the action on $B_n$ is induced by an action on $[n]$, this isomorphism descends to an isomorphism $\mathcal E(f)^G\colon\mathcal E(B_n)/G \rightarrow  (\mathcal{E}(B_n)/G)^{\op}$, and so $\mathcal E(B_n)/G$ is self-dual.
+It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by
+\begin{align*}
+	\mathcal E(f)\colon\mathcal E(B_n) & \rightarrow \mathcal E(B_n^{\op}) \cong \mathcal E(B_n)^{\op}\\
+	(x,y) & \mapsto ([n]\setminus y,[n] \setminus x) 
+\end{align*}
+\noindent
+Once again, since the action on $B_n$ is induced by an action on $[n]$, this isomorphism descends to an isomorphism $\mathcal E(f)^G\colon\mathcal E(B_n)/G \rightarrow  (\mathcal{E}(B_n)/G)^{\op}$. Thus, $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
 \ssec{Equivalent Definitions of CCT Actions}
 \label{ssec:equivalent_defs}
 
-We next give four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3)$, and $(4)$ uses the fact that 
-\begin{align*}
-q\colon\mathcal E(P)/G &\rightarrow \mathcal E(P/G)\\
-G(x,y) &\mapsto (Gx,Gy)
-\end{align*}
- is always a surjection.\todo{I think we should remove this sentence.  Since the proof of Lemma 3.15 is already pretty short, we nearly have the problem of a map as large as the territory it is mapping.}
+We next give four equivalent definitions of CCT actions. 
 
 \begin{lem}
 \label{lem:cover_transitive_equivalence}
@@ -588,8 +579,7 @@ Finally, we check $(3)\iff (4)$. Again using Proposition ~\ref{prop:surjection_b
 \end{proof}
 
 \begin{rmk}
-While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $\{1,2,\ldots,10\}$, and consider the induced action on $B_{10}$. By Proposition ~\ref{prop:cover_transitive_building_blocks}, this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\}$, and $b = \{2,4,6,7\}$. We may observe that $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb$, so $(Gx, Gy) <_{\mathcal E} (Ga, Gb)$. However, it is not true that $G(x, y)<_{\mathcal E} G(a,b)$.  \todo{The two $\mathcal{E}$'s in the subscripts of the less than signs here refer to two different posets.  Should we change this? -- David}
-\end{rmk}
+While $q$ is a bijection if and only if the action of $G$ on $P$ is CCT, it is {\it not} true that if the action of $G$ on $P$ is CCT, then $q$ is an isomorphism.  For example, take $G=D_{20} \subset S_{10}$ acting by reflections and rotations on $\{1,2,\ldots,10\}$, and consider the induced action on $B_{10}$. By Proposition ~\ref{prop:cover_transitive_building_blocks}, this action is CCT. However, consider $x = \{2,4\},y = \{1,2,4\},a = \{2,4,7\}$, and $b = \{2,4,6,7\}$. We may observe that $(x , y),(a, b) \in \mathcal E(B_{10})$ and $Gx < Ga, Gy < Gb$, so $(Gx, Gy) <_{\mathcal E(P/G)} (Ga, Gb)$. However, it is not true that $G(x, y)<_{\mathcal E(P)/G} G(a,b)$. \end{rmk}
 
 \ssec{Proof of Theorem \ref{thm:cover_transitive_implies_Peck}}\label{ssec:proof_of_cover_transitive_implies_Peck}
 
@@ -617,7 +607,7 @@ If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\m
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{lem:cover_transitive_equivalence}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
 \end{proof}
 
-We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''}\todo{either move this or remove it} for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded Peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
+We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded Peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H(P)$ as follows.  Let the elements $(x, y) \in \mathcal H(P)$ be pairs $(x,y) \in P\times P$ such that $x \lessdot y$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \neq y$.  Then define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$, and define $\rk_{\mathcal H}(x, y) = \rk_P(x)$.
@@ -1126,23 +1116,21 @@ First, we show 1 holds. Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z
 
 Next, we show 2 holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G, g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
 
-Suppose $G \not \cong \mathbb Z_2^k$. Then there exists $g \in G$ such that $g^2 \neq e$. Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\}$, and $\{g\} \in G\{e\}$. So in order to show that the induced action $\phi\colon G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G$ such that $h \in \Stab(\{e \cup g\})$ and $h\cdot \{e\} =\{g\}$.  If $h \in \Stab(\{e \cup g\})$ and $h \cdot \{e\} = \{g\}$, then $h = g$, and it follows that $g^2 = e$.  Thus there does not exist such an $h$, and the action induced by left multiplication is not CCT.\todo{check this paragraph for correctness please!}
+Suppose $G \not \cong \mathbb Z_2^k$. Then there exists $g \in G$ such that $g^2 \neq e$. Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\}$, and $\{g\} \in G\{e\}$. So in order to show that the induced action $\phi\colon G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G$ such that $h \in \Stab(\{e \cup g\})$ and $h\cdot \{e\} =\{g\}$.  If $h \in \Stab(\{e \cup g\})$ and $h \cdot \{e\} = \{g\}$, then $h = g$, and it follows that $g^2 = e$.  Thus there does not exist such an $h$, and the action induced by left multiplication is not CCT.
 \end{proof}
 
 \sssec{The proof of \ref{prop:cover_transitive_building_blocks}}
 \label{sssec:dihedral}\indent 
 
-Let $x, y \in B_n$, and let $G$ act on $B_n$. \todo{As far as I can tell, I have removed every abuse of notation of this type.  I propose we remove everything from here up to Proposition 1.8. -- David}For the remainder of this section, rather then using $(Gx, Gy)$ to properly denote $\left\{ (a,b): a \in Gx, b \in Gy \right\}$,
-we abuse notation by writing $(Gx, Gy)$ in place of $(Gx, Gy) \cap  \mathcal E(B_n)$.  That is, we view $(Gx, Gy) = (Gx, Gy) \cap  \mathcal E(B_n)\subset  \mathcal E(B_n)$. Namely, $$(Gx, Gy) = \left\{ (\sigma x, \tau y) \in  \mathcal E (B_n) : \sigma, \tau \in G; \, \, \sigma x \lessdot \tau y  \right\}.$$ Similarly, we denote $$G(x, y) = \left\{ (gx , g y) \in  \mathcal E (B_n) \colon g \in G \right\}.$$
-
+Let $x, y \in B_n$, and let $G$ act on $B_n$. 
 \building*
 
 \begin{proof}
 We have already seen in Example \ref{eg:trivial_edgequot} that $(1)$ holds trivially. We prove part $(2)$. The proof of part $(3)$ is similar. 
 
-Let $x$, $y$ be elements of $B_n$ such that $x$ is covered by $y$.  We wish to prove that given $\sigma \in D_{2p}$ such that $\sigma x \lessdot y$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. 
+Let $x$, $y$ be elements of $B_n$ such that $x$ is covered by $y$.  We wish to prove that given $\sigma \in D_{2p}$ such that $\sigma x \lessdot y$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. Of course, we may assume $\sigma x \neq x$, as we could then take $\tau = \id$.
 
-The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$\todo{This doesn't seem true.  Take x = \{12\}, y = \{123\}, and r the reflection swapping 1 and 2. -- David}, since $r$ is of order 2. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action $D_{2p}$ on $B_p$ is CCT. 
+The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$, since $r$ is of order 2, and we are assuming $\sigma x \neq x$. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action $D_{2p}$ on $B_p$ is CCT. 
 \end{proof}
 
 
