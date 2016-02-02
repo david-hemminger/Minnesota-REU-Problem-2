@@ -98,7 +98,6 @@
 \newcommand\sco{\mathscr O}
 \newcommand\scp{\mathscr P}
 \newcommand\scq{\mathscr Q}
-\newcommand\scr{\mathscr R}
 \newcommand\scs{\mathscr S}
 \newcommand\sct{\mathscr T}
 \newcommand\scu{\mathscr U}
@@ -147,26 +146,28 @@ Note that if we do not respond to a comment here explicitly, then
 that comment was fairly straghtforward to fix, and we have
 fixed it in our paper.
 
+We start each response by stating the current location of the edit.
+
 \begin{enumerate}
-	\item "Condition 2 in the definition of "graded poset" does not seem to be needed when one is assuming that P is finite."
+	\item (Beginning of section 2) "Condition 2 in the definition of "graded poset" does not seem to be needed when one is assuming that P is finite."
 We have included a sentence
 		following the definition which mentions this.
 		We include the second condition because the definition of graded poset applies to arbitrary
 		posets, not just finite ones. 
-	\item  ``Proof of Proposition 4.3:  Replace 'Stab(z) and' with 'Stab(z). Here'.  Rewrite 'Stab(Hz)' as '$Stab_K(Hz)$' and 'Stab(z)' as '$Stab_H(z)$'.''
+	\item  (Proof of Proposition 1.9) ``Proof of Proposition 4.3:  Replace 'Stab(z) and' with 'Stab(z). Here'.  Rewrite 'Stab(Hz)' as '$Stab_K(Hz)$' and 'Stab(z)' as '$Stab_H(z)$'.''
 		Here, we added group subscripts for all stabilizers.
 		However, we did not change ``$Stab(z)$ and'' to ``$Stab(z)$. Here`` because we want to express that there exists $h_1 \in H$ so that both
 		$h_1 k_1 h_0 \in Stab_G(z)$ and $h_1k_1h_0 \cdot x \in Hy$.
 		If we changed ''and`` to ''Here`` it would suggest
 		that the second condition followed from the first.
-	\item ''Proof of Lemma 4.8:  I could not make sense of '$rk(y_j) < rk(x_j)$'.`` Good catch, it should have been $y_j < x_j$.
-	\item We added a definition of Young diagram right after that of partition.
-	\item ''Proof of Lemma 3.14:  The proof that (2) is equivalent to CCT assumes that P = B-n.  Since the proof for (3) is valid, it seems that you should be able to give a general proof of this nature for (2).``
+	\item (Lemma 4.7) ''Proof of Lemma 4.8:  I could not make sense of '$rk(y_j) < rk(x_j)$'.`` Good catch, it should have been $y_j < x_j$.
+	\item (Beginning of 5.1) We added a definition of Young diagram right after that of partition.
+	\item (Lemma 3.15) ''Proof of Lemma 3.14:  The proof that (2) is equivalent to CCT assumes that P = B-n.  Since the proof for (3) is valid, it seems that you should be able to give a general proof of this nature for (2).``
 		Indeed, this proof is still valid. In fact, the argument that (2) is equivalent to (3) essentially the same as that for (1) is equivalent to (3), because (3) makes no distinction between the two and bottom of an edge. We have removed the proof that (1) is equivalent to (2), and replaced it by stating that (2) is equivalent to (3).
-	\item When we define a group action, instead of doing it inline, which makes it generally difficult to read, we have done so on two aligned lines, putting the domain and codomain on the first line, and the action definition on the second line.
-	\item We have included a paragraph in the introduction on Peckness, following the definition of the boolean algebra.
-	\item ''Proof of Lemma 3.9 - your notation (x,y) -> (x,y) is a bit confusing (and runs into the margin). Perhaps explain in words that you are mapping edges to edges.`` We tried rewriting this, but found our original version to be clearer, so we'd like to stick with that.
-	\item ''Proof of Lemma 3.3:  Insert 'rank-' after 'order' and before 'preserving'.  The E subscripts in Part 1 should be written as E(P) or E(Q).  Here there are two '<\_P's that should be '<\_Q's.``
+	\item (Throughout the paper) When we define a group action, instead of doing it inline, which makes it generally difficult to read, we have done so on two aligned lines, putting the domain and codomain on the first line, and the action definition on the second line.
+	\item (Second to last paragraph on page 2) We have included a paragraph in the introduction on Peckness, following the definition of the boolean algebra.
+	\item (Lemma 3.10) ''Proof of Lemma 3.9 - your notation (x,y) -> (x,y) is a bit confusing (and runs into the margin). Perhaps explain in words that you are mapping edges to edges.`` We tried rewriting this, but found our original version to be clearer, so we'd like to stick with that.
+	\item (Lemma 3.4) ''Proof of Lemma 3.3:  Insert 'rank-' after 'order' and before 'preserving'.  The E subscripts in Part 1 should be written as E(P) or E(Q).  Here there are two '$<_P$'s that should be '$<_Q$'s.``
 We made all the edits here, except the one about inserting 'rank-', as we did not understand what suggesting. We thought the referee might be suggesting to call it ``order-rank-preserving'' instead of ``order-preserving,'' but we have been calling the actions order preserving throughout the paper.
 \end{enumerate}
 
