@@ -248,7 +248,7 @@ The theorem trivially implies the following
 \end{cor}
 
 \begin{rmk}
-	 In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of the REU report.\footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} \end{rmk}
+	 In fact, it is true that $\mathcal E(B_n)$ is unitary Peck. For a proof, see Section 8 of our project report for the University of Minnesota at Twin Cities REU. \footnote{See http://www.math.umn.edu/reiner/REU/HemmingerLandesmanYao2014.pdf for the full report. This will be referred to throughout the paper as ``the REU report.''} \end{rmk}
 
 
 
@@ -607,7 +607,7 @@ If the action of $G$ on $P$ is CCT and $\mathcal E(P)$ is unitary Peck, then $\m
 Since the $G$-action is CCT, there is a bijection $q\colon\mathcal{E}(P)/G \rightarrow \mathcal{E}(P/G)$ by Lemma ~\ref{lem:cover_transitive_equivalence}.  Since $\mathcal{E}(P)$ is unitary Peck we have that $\mathcal{E}(P)/G$ is Peck by Theorem ~\ref{thm:quotients_of_unitary_peck_posets}, hence $\mathcal{E}(P/G)$ is Peck by Lemma ~\ref{lem:bijection_peck_implication}.
 \end{proof}
 
-We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of our project report for the University of Minnesota at Twin Cities REU, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded Peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
+We prove that $\mathcal E(B_n)$ is unitary Peck for $n > 2$ in Section 8 of the REU report, but unfortunately the proof is technical and computational. Note that by Theorem \ref{edge_unitary_peck_quotient}, this immediately implies Theorem \ref{thm:cover_transitive_implies_Peck}. Fortunately there is a cleaner -- albeit less direct -- route to proving Theorem \ref{thm:cover_transitive_implies_Peck}. In order to avoid showing that $\mathcal E(B_n)$ is unitary Peck, we define a graded Peck poset $\mathcal{H}(B_n)$ which injects into $\mathcal E(B_n)$. 
 \begin{defn}
 \label{defn:h_map}
 For $P$ a graded poset, define the graded poset $\mathcal H(P)$ as follows.  Let the elements $(x, y) \in \mathcal H(P)$ be pairs $(x,y) \in P\times P$ such that $x \lessdot y$.  Define $(x, y) \lessdot_{\mathcal H} (x^\prime, y^\prime)$ if $x \lessdot x^\prime,y\lessdot y^\prime$ and $x^\prime \neq y$.  Then define $\leq_{\mathcal H}$ to be the transitive closure of $\lessdot_{\mathcal H}$, and define $\rk_{\mathcal H}(x, y) = \rk_P(x)$.
