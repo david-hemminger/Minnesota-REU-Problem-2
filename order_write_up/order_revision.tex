@@ -223,7 +223,7 @@ as it enjoys several equivalent definitions.  For example, see
 ~\cite[Lemma 1.1]{weyl_groups_stanley} and ~\cite{proctor}.
 
 Throughout the paper we say that a group $G$ acts on $P$ if it acts on the elements of $P$ and the action is rank-preserving and order-preserving.  That is, for all $g \in G$ we have $\rk(gx) = \rk(x)$ and $x \leq y \iff gx \leq gy$. 
-By Theorem \ref{thm:quotients_of_unitary_peck_posets} (due to Stanley) and the fact that $B_n$ is unitary Peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
+By a result of Stanley [Theorem \ref{thm:quotients_of_unitary_peck_posets}]{\tiny } and the fact that $B_n$ is unitary Peck, if $G$ is any action on $B_n$, then $B_n/G$ is Peck.  We conjecture the following.
 
 \begin{conj}\label{conj:F_of_BnG_Peck}
 If $G \subseteq \Aut(B_n)$, then $\mathcal E(B_n/G)$ is Peck.
@@ -357,9 +357,7 @@ If $P$ is unitary Peck and $G\subseteq\Aut(P)$, then $P/G$ is Peck.
 \label{sec:functor_of_edges}
 
 In Subsection \ref{ssec:functoriality} we show that $\mathcal E$ as described in Definition \ref{defn:functor_of_edges} is well-defined and prove some useful properties of $\mathcal E$.  In Subsection \ref{ssec:dual_posets} we prove that $\mathcal{E}$ sends self-dual posets to self-dual posets.  In Subsection \ref{ssec:equivalent_defs} we give several equivalent definitions for CCT actions, and Subsection \ref{ssec:proof_of_cover_transitive_implies_Peck} is devoted to the proof of Theorem \ref{thm:cover_transitive_implies_Peck}.
-%%%%%%%%%%%%  TO DO !!!
-%%%%%%%%%%%%
-%%%%%%%%%%%%
+
 
 \ssec{Functoriality of $\mathcal E$ and Group Actions}
 \label{ssec:functoriality}
@@ -450,14 +448,10 @@ Note that it is easy to check $\op\colon\mathcal P \rightarrow \mathcal P$ is in
 The functor $\op\colon\mathcal P \rightarrow \mathcal P$ commutes with the functor $\mathcal E\colon\mathcal P \rightarrow \mathcal P$. That is, $\mathcal E(P^{\op}) \cong \mathcal E(P)^{\op}$.
 \end{lem}
 
-%%%%%%%% To Do
-%%%%%%%%
-%%%%%%%%
+
 \begin{proof}
 Define the morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op}$ by sending an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. 
 \end{proof}
-%% 	Observe that $\mathcal E(P^{\op})$ is canonically isomorphic to $\mathcal E(P)^{\op}$, as given by the morphism $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op},$ which sends an edge between two vertices $x$ and $y$ of $P^{\op}$ to the edge between same two vertices $x$ and $y$ of $P$. The inverse to $F$ is given by $G\colon\mathcal E(P)^{\op} \rightarrow \mathcal E(P^{\op})$ sending an edge between two vertices $x$ and $y$ of $P$ to the edge between the same two vertices $x$ and $y$ of $P^{\op}$. These maps are well defined because $\mathcal E(P)^{\op}$ and $\mathcal E(P^{\op})$ are the same as sets, and it follows from the definitions that these are both morphisms of graded posets, and so $F$ defines an isomorphism.
-
 
 
 \begin{prop}
@@ -465,11 +459,10 @@ Define the morphism  $F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op}
 If $P$ is a self-dual poset, then $\mathcal E(P)$ is also self-dual.
 \end{prop}
 \begin{proof}
-Since $P$ is self-dual, there is an isomorphism $f\colon P \rightarrow P^{\op}$. By the  functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P^{\op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{\op}) \cong \mathcal E(P)^{\op}$. Then, letting 
-\begin{align*}
-F\colon\mathcal E(P^{\op}) &\rightarrow \mathcal E(P)^{\op}\\
-(x,y) &\mapsto (x,y)
-\end{align*}
+Since $P$ is self-dual, there is an isomorphism $f\colon P \rightarrow P^{\op}$. By the  functoriality of $\mathcal E$, as shown in Lemma \ref{lem:Ff_poset_morphism}, we obtain that $\mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P^{\op})$ is an isomorphism. By Lemma \ref{lem:commuting_op_e}, there is an isomorphism $\mathcal E(P^{\op}) \cong \mathcal E(P)^{\op}$. Then, let 
+$
+F\colon\mathcal E(P^{\op}) \rightarrow \mathcal E(P)^{\op}
+$
 be the same isomorphism defined in the proof of Lemma \ref{lem:commuting_op_e}, the composition $F\circ \mathcal E(f)\colon\mathcal E(P) \rightarrow \mathcal E(P)^{\op}$ defines an isomorphism, so $\mathcal E(P)$ is self-dual.
 \end{proof}
 
@@ -1130,13 +1123,13 @@ We have already seen in Example \ref{eg:trivial_edgequot} that $(1)$ holds trivi
 
 Let $x$, $y$ be elements of $B_n$ such that $x$ is covered by $y$.  We wish to prove that given $\sigma \in D_{2p}$ such that $\sigma x \lessdot y$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. Of course, we may assume $\sigma x \neq x$, as we could then take $\tau = \id$.
 
-The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$, since $r$ is of order 2, and we are assuming $\sigma x \neq x$. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$.  It is fairly straightforward to see that $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action $D_{2p}$ on $B_p$ is CCT. 
+The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$, since $r$ is of order 2, and we are assuming $\sigma x \neq x$. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$.  $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action $D_{2p}$ on $B_p$ is CCT. 
 \end{proof}
 
 
 \begin{rmk}
 \label{rem:iff_dihedral_cct}
-It is easy to see that if $n \neq p,n \neq 2p$, and $n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. To see this, we give an example of a non-CCT pair. Assume $n \ne p, 2 p$.  Then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$, where $z = \{1, m+1, 2m+1, ..., (k-1)m+1, 2, m+2\}$, $x = z \backslash \{m+2\}$, and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $(12\cdots n)^m \in D_{2n}$. It is also clear from the asymmetry of the element $z$ that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$. Therefore, the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
+We claim that if $n \neq p,n \neq 2p$, and $n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. To see this, we give an example of a non-CCT pair. Assume $n \ne p, 2 p$.  Then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$, where $z = \{1, m+1, 2m+1, ..., (k-1)m+1, 2, m+2\}$, $x = z \backslash \{m+2\}$, and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $(12\cdots n)^m \in D_{2n}$. It is also clear from the asymmetry of the element $z$ that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$. Therefore, the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
 
 Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n = 2p, n = 1$, and $n = 8$, where $p$ varies over all primes.
 \end{rmk}
@@ -1242,6 +1235,12 @@ More generally, we wonder if the q-analog of Conjecture ~\ref{conj:F_of_BnG_Peck
 \begin{que}
 For $G$ a group acting on $B_n(q)$, is $\mathcal E(B_n(q)/G)$ Peck? If not, is $\mathcal E(B_n(q)/G)$ rank-unimodal?
 \end{que}
+
+We remark that Stanley was able to answer the rank unimodality question for many cases using hard Lefschetz type theorems, by realizing the ranks of the poset as ranks of cohomology groups coming from algebraic geometry. 
+\begin{que}
+Can we realize the ranks of $\mathcal E(B_n(q)/G)$, or even the edge poset itself, geometrically? 
+\end{que}
+
 
 We found several additional interesting examples of CCT actions. Once such action is the linear automorphism of the $n$-cube. Using python code we wrote, we found that for $n \leq 3$, the linear automorphisms of the $n$-cube induces a CCT action on $B_{2^n}$. We wonder if this generalizes.
 
