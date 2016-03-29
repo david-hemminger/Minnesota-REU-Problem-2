@@ -387,9 +387,9 @@ To show $\mathcal E(P)$ is graded, we must show that $(x, y) \lessdot_{\mathcal 
 Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a map $\mathcal E(f)\colon \mathcal E(P)\rightarrow \mathcal E(Q)$ by $\mathcal{E}(f)(x,y) = (f(x),f(y))$ for all $(x,y)\in \mathcal{E}(P)$.  Then
 
 \begin{enumerate}
-\item $\mathcal{E}(f)$ is a morphism of finite graded posets
-\item $\mathcal{E}(\id_P) = \id_{\mathcal{E}(P)}$
-\item If $g\colon Q\rightarrow R$ is a morphism of finite graded posets, then $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.
+\item $\mathcal{E}(f)$ is a morphism of finite graded posets,
+\item $\mathcal{E}(\id_P) = \id_{\mathcal{E}(P)}$, and
+\item if $g\colon Q\rightarrow R$ is a morphism of finite graded posets, then $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.
 \end{enumerate}
 \end{lem}
 
@@ -508,7 +508,7 @@ While $\mathcal{E}(P)$ is often Peck for known Peck posets $P$, $\mathcal E(P)$ 
   \draw (35)--(57);
   \node (0) at (2,-1) {$\mathcal{E}(P)$};
 \end{tikzpicture}\]
-\caption{\label{fig:dual_not_unimodal}$P$ is self-dual and unitary Peck, but $\mathcal{E}(P)$ is not Peck}
+\caption{\label{fig:dual_not_unimodal}$P$ is self-dual and unitary Peck, but $\mathcal{E}(P)$ is not Peck.}
 \end{figure}
 
 
@@ -1109,7 +1109,7 @@ Recall that $G$ is an elementary abelian $2$-group if $G \cong (\mathbb Z/2\math
 \begin{proof}
 First, we show 1 holds. Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\mathbb Z_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$. Hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
 
-Next, we show 2 holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G, g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
+Next, we show 2 holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G$, $g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
 
 Suppose $G \not \cong \mathbb Z_2^k$. Then there exists $g \in G$ such that $g^2 \neq e$. Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\}$, and $\{g\} \in G\{e\}$. So in order to show that the induced action $\phi\colon G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G$ such that $h \in \Stab(\{e \cup g\})$ and $h\cdot \{e\} =\{g\}$.  If $h \in \Stab(\{e \cup g\})$ and $h \cdot \{e\} = \{g\}$, then $h = g$, and it follows that $g^2 = e$.  Thus there does not exist such an $h$, and the action induced by left multiplication is not CCT.
 \end{proof}
@@ -1125,15 +1125,15 @@ We have already seen in Example \ref{eg:trivial_edgequot} that $(1)$ holds trivi
 
 Let $x$, $y$ be elements of $B_n$ such that $x$ is covered by $y$.  We wish to prove that given $\sigma \in D_{2p}$ such that $\sigma x \lessdot y$, there exists some $\tau \in D_{2p}$ such that $\tau x = \sigma x$ and $\tau y = y$. Of course, we may assume $\sigma x \neq x$, as we could then take $\tau = \id$.
 
-The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$, since $r$ is of order 2, and we are assuming $\sigma x \neq x$. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$. Then, $(x, y)$ is of form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action $D_{2p}$ on $B_p$ is CCT. 
+The action of $D_{2p}$ on $B_p$ is induced by the action of $D_{2p}$ on $[p]$, where $[p]$ is identified with vertices of the regular $p$-gon. Note that any element in $D_{2p}$ is either some reflection $r$ by one of the lines of symmetry of the polygon or some rotation $\sigma_0^{d}$, where $\sigma_0$ is the generator $\sigma_0 = (12 \cdots p)$ and $d$ is some integer. Hence we only need to show the claim when $\sigma = r$ or $\sigma = \sigma_0^d$. It is clear that the claim holds for $\sigma = r$: if $x \lessdot y$ and $r \cdot x \lessdot y$, then $r \cdot y = y$, since $r$ is of order 2, and we are assuming $\sigma x \neq x$. Now suppose $\sigma_0^d \cdot x \lessdot y$ for some $(x,y) \in \mathcal E(B_p)_i$. Then $(x, y)$ is of the form $x = \{s, s+d, ..., s+(i-1)\cdot d\}$ for some starting point $s \in [n]$ and $y = \{s, s+d, ..., s+(i-1)d, s + i \cdot d\}$. Now let $r_0$ be the reflection given by $x \mapsto (2s+ i \cdot d)-x$ for all $x \in [n]$, reducing mod $n$ whenever necessary. Then $r_0 x = \sigma_0^d x$ and $r_0$ fixes $y$ by construction.  Therefore the action of $D_{2p}$ on $B_p$ is CCT. 
 \end{proof}
 
 
 \begin{rmk}
 \label{rem:iff_dihedral_cct}
-We claim that if $n \neq p,n \neq 2p$, and $n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. To see this, we give an example of a non-CCT pair. Assume $n \ne p, 2 p$.  Then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$, where $z = \{1, m+1, 2m+1, ..., (k-1)m+1, 2, m+2\}$, $x = z \backslash \{m+2\}$, and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $(12\cdots n)^m \in D_{2n}$. It is also clear from the asymmetry of the element $z$ that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$. Therefore, the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
+We claim that if $n \neq p,n \neq 2p$, and $n >8$ for any prime $p$, then the action of $D_{2n}$ on $B_n$ is not CCT. To see this, we give an example of a non-CCT pair. Assume $n \ne p, 2 p$.  Then $n = mk$ for some $m \ge k \ge 3$. Let us consider elements $x, y, z$, where $z = \{1, m+1, 2m+1, ..., (k-1)m+1, 2, m+2\}$, $x = z \backslash \{m+2\}$, and $y = z \backslash \{2\}$. We immediately have that $x, y \lessdot z$, and $x \in D_{2n} y$ since $x$ is sent to $y$ by the permutation $(12\cdots n)^m \in D_{2n}$. It is also clear from the asymmetry of the element $z$ that there is no $g \in D_{2n}$ translating $x$ to $y$ while fixing $z$. Therefore the action of $D_{2n}$ on $B_n$ as described is CCT if and only if $n =p$ or $n = 2p$ for some prime $p$.
 
-Hence, a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n = 2p, n = 1$, and $n = 8$, where $p$ varies over all primes.
+Hence a complete list of $n$ for which $D_{2n}$ is $CCT$ is given by $n = p,n = 2p, n = 1$, and $n = 8$, where $p$ varies over all primes.
 \end{rmk}
 
 \begin{rmk}
@@ -1187,7 +1187,7 @@ First, observe that $S_m \wr S_\ell$ can be described as the automorphism group 
 Next, note that each equivalence class in $B_n/G$ has a unique representative which is a Young diagram.  Here, we think of $B_n = B_{\ell \cdot m}$ as subsets of the $\ell \cdot m$ boxes in an $\ell \times m$ rectangle. The correspondence is then given by sending an equivalence class to the representative which is left-justified and bottom-justified.
  For a complete proof, see, for example, Lemma 5.11 of the REU report.
 
-Now, let $Gx$ and $Gy$ be two $G$ orbits with $\bar x$ the Young diagram corresponding to $x$, and $\bar y$ the Young diagram corresponding to $y$. Suppose $Gx \lessdot Gy$. Then $\bar x$ must be a subdiagram of $\bar y$ with a single box removed. Since $\bar x$ and $\bar y$ are both Young diagrams, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx\colon Gx \lessdot Gy\}| = \nu(\bar y)$. Therefore,
+Now let $Gx$ and $Gy$ be two $G$ orbits with $\bar x$ the Young diagram corresponding to $x$ and $\bar y$ the Young diagram corresponding to $y$. Suppose $Gx \lessdot Gy$. Then $\bar x$ must be a subdiagram of $\bar y$ with a single box removed. Since $\bar x$ and $\bar y$ are both Young diagrams, the removed box must be one of the corners of $\bar y$. Observe that the number of corners of a partition is precisely the number of distinct part sizes, and so $|\{Gx\colon Gx \lessdot Gy\}| = \nu(\bar y)$. Thus,
 \begin{align*}
   |\mathcal E(B_n/G)_i| &= \sum_{(Gx,Gy) \in \mathcal E(B_n/G)_i} 1 
   \\
@@ -1198,7 +1198,7 @@ Now, let $Gx$ and $Gy$ be two $G$ orbits with $\bar x$ the Young diagram corresp
   &=  \sum_{\lambda \in P_{i+1}(\ell,m)} \nu(\lambda).
 \end{align*}
 
-Therefore, $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_{1+i}(\ell,m,1)$. Since $\mathcal E(B_n)/G$ is Peck,
+Therefore $|(\mathcal E(B_n)/G)_i| = |\mathcal E(B_n/G)_i| = p_{1+i}(\ell,m,1)$. Since $\mathcal E(B_n)/G$ is Peck,
 \linebreak
 $p_1(\ell,m,1), p_{2}(\ell,m,1),\ldots, p_{\ell\cdot m}(\ell,m,1)$ is unimodal and symmetric, and hence Theorem \ref{thm:pak_thm} holds in the case $r = 1$.
 \end{proof}
