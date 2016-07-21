@@ -328,23 +328,21 @@ Let $f\colon P\rightarrow Q$ be a morphism of finite graded posets, and define a
 \item If $g\colon Q\rightarrow R$ is a morphism of finite graded posets, then $\mathcal E(g\circ f) = \mathcal E(g)\circ\mathcal E(f)$.
 \end{enumerate}
 \end{lemma}
-
 \begin{proof} \indent
-
 \noindent
 {\sf Part (1)}
 First, $\mathcal E(f)$ is rank-preserving, since for all $(x, y)\in \mathcal E(P)$ we have 
 $$\rk_{\mathcal E}(x, y) = \rk_P(x) = \rk_P(f(x)) = \rk_{\mathcal E}(\mathcal E(f)(x, y)).$$
 Suppose $(x, y)\lessdot_{\mathcal E} (x^\prime, y^\prime)$.  Then $x\lessdot_P x^\prime$, $y\lessdot_P y^\prime$, and since $f$ is order-preserving, it follows that $f(x)\lessdot_P f(x^\prime)$, $f(y)\lessdot_P f(y^\prime)$. Hence $\mathcal E(f)(x,y) \lessdot_{\mathcal E} \mathcal E(f)(x^\prime , y^\prime)$. Since $\le_{\mathcal E}$ is the transitive closure of $\lessdot_{\mathcal E}$, we similarly obtain $\mathcal E(f)$ is order-preserving and hence a morphism of finite graded posets.
-
 \vskip.1in
 \noindent
 {\sf Part (2)} This is trivial.
-
 \vskip.1in
 \noindent
 {\sf Part (3)} For all $(x, y)\in \mathcal E(P)$ we have 
-$$\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y).$$
+\begin{align*}
+	\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y). &\qedhere
+\end{align*}
 \end{proof}
 
 \begin{remark}
@@ -374,7 +372,7 @@ Note that $q$ is well defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cd
 \ssec{The Opposite Functor and Self Dual Posets}
 \label{ssec:dual_posets}
 
-Next, we introduce the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show that $\op$ commutes with $\mathcal E$. This will imply that $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply that $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
+Next, we discuss the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show that $\op$ commutes with $\mathcal E$. This will imply that $\mathcal E(P)$ is self-dual if $P$ is, which, in turn, will imply that $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
 
 \begin{definition}
 Let $\mathcal P$ be the category of graded posets and let $\op\colon\mathcal P \rightarrow \mathcal P$ be the opposite functor, defined on posets as follows. For $P$ a poset, the elements of $P^{\op}$ are the same as those of $P$ with order relation $\le_{P^{\op}}$ defined by $x \leq_{P^{\op}} y \iff x \geq_P y$. Induced maps on morphisms are given as follows: for $P,Q$ graded posets with $f\colon P \rightarrow Q$, then $f^{\op}\colon P^{\op} \rightarrow Q^{\op}$ is defined by $f^{\op}(x) = f(x)$. The poset $P^{\op}$ is called the {\it dual} poset of $P$. A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{\op}$.
@@ -467,7 +465,7 @@ By Remark \ref{rem:induced_action_bn}, any action $\phi\colon G\times B_n \right
 It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Proposition \ref{prop:self_dual_preservation}, $\mathcal E(B_n)$ is self-dual, with the isomorphism given by $\mathcal E(f)\colon\mathcal E(B_n) \rightarrow \mathcal E(B_n^{\op})\cong \mathcal E(B_n)^{\op}$, that is, the map sending a $(x,y) \mapsto ([n]\setminus y,[n] \setminus x)$. Once again, since the action on $B_n$ is induced by an action on $[n]$, this isomorphism descends to an isomorphism $\mathcal E(f)^G\colon\mathcal E(B_n)/G \rightarrow  (\mathcal{E}(B_n)/G)^{\op}$, and so $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
-\ssec{Equivalent Definitions of CCT Actions}
+\ssec{Equivalent Definitions of Common Cover Transitive Actions}
 \label{ssec:equivalent_defs}
 
 We next give four equivalent definitions of CCT actions. The equivalence of $(1)$ and $(2)$ in the following Lemma \ref{lem:cover_transitive_equivalence} uses the notion of dual posets, while the equivalence of $(1),(3)$, and $(4)$ use the fact that $q\colon\mathcal E(P)/G \rightarrow \mathcal E(P/G),G(x,y)\mapsto (Gx,Gy)$ is always a surjection.
@@ -507,7 +505,6 @@ Let $P,Q$ two graded posets with a morphism $f\colon P\rightarrow Q$ that is a b
 \end{lemma}
 \begin{proof}
 Let $\rk(P) = \rk(Q) = n$.  Since $P$ is Peck there exists an order-raising operator $U$ such that $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism.  Since $f$ is a poset morphism, it follows that the map $f\circ U\circ f^{-1}$ is an order-raising operator on $Q$.  We then have that $f\circ U^{n-2i}\circ f^{-1} = \left(f\circ U\circ f^{-1}\right)^{n-2i}\colon V(Q_i)\rightarrow V(Q_{n-i})$ is an isomorphism since $U^{n-2i}\colon V(P_i)\rightarrow V(P_{n-i})$ is an isomorphism and $f$ is a bijection.
-
 \end{proof}
 
 By Lemma \ref{lem:bijection_peck_implication} and Proposition \ref{prop:surjection_between_F_quotients}, in order to prove Theorem \ref{thm:cover_transitive_implies_Peck} it suffices to prove that $\mathcal E(B_n)/G$ is Peck.  One way to do this is to prove that $\mathcal E(B_n)$ is unitary Peck and then apply Theorem \ref{thm:quotients_of_unitary_peck_posets}.  In fact, this approach generalizes to an arbitrary poset $P$.
@@ -1008,7 +1005,7 @@ First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The for
 So, Suppose $G \not \cong \mathbb Z_2^k$. Then, there exists $g \in G,g^2 \neq e$. Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\},\{g\} \in G\{e\}$. So, to show the induced action $\phi\colon G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G,h \in \Stab(\{e \cup g\}),h\cdot \{e\} =\{g\}$.  If $h \in \Stab(\{e \cup g\})$ then $h \cdot e = e$ or $h \cdot e = g$. In both cases, it is simple to see that $g^2 = e$. Therefore, there does not exist such an $h$ and left multiplication is not CCT.
 \end{proof}
 
-\sssec{The proof of \ref{prop:cover_transitive_building_blocks}}
+\sssec{The proof of Proposition~\ref{prop:cover_transitive_building_blocks}}
 \label{sssec:dihedral}\indent 
 
 
@@ -1140,7 +1137,7 @@ We found several additional interesting examples of CCT actions. Once such actio
 Does the group of linear automorphism of an $n$-cube in $\mathbb R^n$, whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a CCT action on $B^{2^n}$?
 \end{question}
 
-There is also the question of which regular polytopes induce CCT actions. We have shown it holds for the octahedron and the simplex (tetrahedron) in Subsubsection \ref{sssec:polytopes}. We also checked using the computer that it holds for the $n$-cube for $n \leq 3$. We wonder whether it holds for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
+There is also the question of which regular polytopes induce CCT actions. We have shown that the $n$-octahedron (respectively the $n$-simplex) induce CCT actions on $B_{2n}$ (respectively $B_{n+1}$) in Subsubsection \ref{sssec:polytopes}. We also checked using the computer that the $n$-cube induces a CCT action on $B^{2^n}$ for $n \leq 3$. We wonder whether the induced action is CCT for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
 
 \begin{question}
 \label{question:exceptional_polytopes_cct}
