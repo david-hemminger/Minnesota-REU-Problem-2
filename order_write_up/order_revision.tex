@@ -403,7 +403,10 @@ Suppose $(x, y)\lessdot_{\mathcal E(P)} (x^\prime, y^\prime)$.  Then $x\lessdot_
 Next, (2) is trivial.
 
 Finally, we show (3). For all $(x, y)\in \mathcal E(P)$ we have 
-$$\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y).$$
+\[
+	\pushQED{\qed}
+	\mathcal E(g\circ f)(x, y) = (g(f(x)), g(f(y))) = \left(\mathcal E(g)\circ\mathcal E(f)\right)(x, y).\hfill \qedhere
+\]
 \end{proof}
 
 \begin{rmk}
@@ -434,7 +437,7 @@ Note that $q$ is well-defined because if $(x^\prime, y^\prime) = g(x, y) = (g\cd
 \ssec{The Opposite Functor and Self-Dual Posets}
 \label{ssec:dual_posets}
 
-Next, we introduce the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show that $\op$ commutes with $\mathcal E$. This will imply that $\mathcal E(P)$ is self-dual if $P$ is, which in turn will imply that $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
+Next, we discuss the notion of a dual poset, given by applying the opposite functor, $\op$, to a graded poset. We will show that $\op$ commutes with $\mathcal E$. This will imply that $\mathcal E(P)$ is self-dual if $P$ is, which in turn will imply that $\mathcal E(B_n/G)$ is self-dual for any group action of $G$ on $B_n$.
 
 \begin{defn}
 Let $\mathcal P$ be the category of graded posets and let $\op\colon\mathcal P \rightarrow \mathcal P$ be the opposite functor, defined on posets as follows. For $P$ a poset, the elements of $P^{\op}$ are the same as those of $P$ with order relation $\le_{P^{\op}}$ defined by $x \leq_{P^{\op}} y \iff x \geq_P y$. Induced maps on morphisms are given as follows: for $P,Q$ graded posets with $f\colon P \rightarrow Q$, then $f^{\op}\colon P^{\op} \rightarrow Q^{\op}$ is defined by $f^{\op}(x) = f(x)$. The poset $P^{\op}$ is called the {\it dual} poset of $P$. A poset $P$ is {\it self-dual} if there is an isomorphism of posets $P \cong P^{\op}$.
@@ -549,7 +552,7 @@ It only remains to prove that $\mathcal E(B_n)/G$ is self-dual. However, from Pr
 Once again, since the action on $B_n$ is induced by an action on $[n]$, this isomorphism descends to an isomorphism $\mathcal E(f)^G\colon\mathcal E(B_n)/G \rightarrow  (\mathcal{E}(B_n)/G)^{\op}$. Thus, $\mathcal E(B_n)/G$ is self-dual.
 \end{proof}
 
-\ssec{Equivalent Definitions of CCT Actions}
+\ssec{Equivalent Definitions of Common Cover Transitive Actions}
 \label{ssec:equivalent_defs}
 
 We next give four equivalent definitions of CCT actions. 
@@ -1108,14 +1111,14 @@ Recall that $G$ is an elementary abelian $2$-group if $G \cong (\mathbb Z/2\math
 \end{prop}
 
 \begin{proof}
-First, we show 1 holds. Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\mathbb Z_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$. Hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
+First, we show $(1)$ holds. Let $x,y,z\in B_n$ such that $x \lessdot z, y \lessdot z$, and  $x = gy$ for some $g\in G$.  Since $x\ne y$ we have $z=x\cup y$.  Furthermore, since every element in $\mathbb Z_2^k$ has order 2 we have that $gy = g^2x = x$ and thus $gz = gx\cup gy = y\cup x = z$. Hence $g\in\Stab(z)$ and thus $\phi$ is CCT.
 
-Next, we show 2 holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G$, $g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
+Next, we show $(2)$ holds. First, let us show $G \cong \mathbb Z_2^k \iff \forall g \in G,g^2 = e$. The forward implication is obvious. To see the converse, first note that if $\forall g \in G$, $g^2 = e$, then $G$ is abelian because $aba^{-1}b^{-1} = abba = a^2 = e$.  Then, $G$ is an abelian group, all of whose elements have order two. The structure theorem of finite abelian groups tells us $G \cong \mathbb Z_2^k$.
 
 Suppose $G \not \cong \mathbb Z_2^k$. Then there exists $g \in G$ such that $g^2 \neq e$. Clearly $\{e\}\lessdot \{e \cup g\},\{g\} \lessdot \{e \cup g\}$, and $\{g\} \in G\{e\}$. So in order to show that the induced action $\phi\colon G \times B_n \rightarrow B_n$ is not CCT, it suffices to show there is no $h \in G$ such that $h \in \Stab(\{e \cup g\})$ and $h\cdot \{e\} =\{g\}$.  If $h \in \Stab(\{e \cup g\})$ and $h \cdot \{e\} = \{g\}$, then $h = g$, and it follows that $g^2 = e$.  Thus there does not exist such an $h$, and the action induced by left multiplication is not CCT.
 \end{proof}
 
-\sssec{The proof of \ref{prop:cover_transitive_building_blocks}}
+\sssec{The proof of Proposition~\ref{prop:cover_transitive_building_blocks}}
 \label{sssec:dihedral}\indent 
 
 Let $x, y \in B_n$, and let $G$ act on $B_n$. 
@@ -1252,7 +1255,7 @@ We found several additional interesting examples of CCT actions. Once such actio
 Does the group of linear automorphisms of an $n$-cube in $\mathbb R^n$ whose vertices lie at $(\pm 1, \ldots, \pm 1)$ induce a CCT action on $B^{2^n}$?
 \end{que}
 
-There is also the question of which regular polytopes induce CCT actions. We have shown that it holds for the octahedron and the simplex (tetrahedron) in Subsection \ref{sssec:polytopes}. We also checked using python code we wrote that it holds for the $n$-cube for $n \leq 3$. We wonder whether it holds for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
+There is also the question of which regular polytopes induce CCT actions. We have shown that the $n$-octahedron (respectively the $n$-simplex) induce CCT actions on $B_{2n}$ (respectively $B_{n+1}$) in Subsection~\ref{sssec:polytopes}. We also checked using python code that the $n$-cube induces a CCT action on $B^{2^n}$ for $n \leq 3$. We wonder whether the induced action is CCT for the five exceptional regular polytopes, which are the only regular polytopes other than simplices, octahedra, and cubes.
 
 \begin{que}
 \label{question:exceptional_polytopes_cct}
