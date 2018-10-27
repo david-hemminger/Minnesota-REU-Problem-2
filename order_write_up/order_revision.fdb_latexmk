@@ -1,12 +1,13 @@
 # Fdb version 3
-["bibtex order_revision"] 1540615329 "order_revision.aux" "order_revision.bbl" "order_revision" 1540615329
+["bibtex order_revision"] 1540615962 "order_revision.aux" "order_revision.bbl" "order_revision" 1540616002
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "References.bib" 1540614905 2873 2620299d4775cff84cedf57b0f95a93e ""
-  "order_revision.aux" 1540615327 16680 b6fe2e124a928c6e68209cde24210bc4 ""
+  "References.bib" 1540615956 2683 5093d648fa2d9e98683ae34ce0d28f60 ""
+  "order_revision.aux" 1540615993 16680 b6fe2e124a928c6e68209cde24210bc4 ""
   "order_revision.bcf" 0 -1 0 ""
   (generated)
+  "order_revision.blg"
   "order_revision.bbl"
-["pdflatex"] 1540615325 "order_revision.tex" "order_revision.pdf" "order_revision" 1540615329
+["pdflatex"] 1540615325 "order_revision.tex" "order_revision.pdf" "order_revision" 1540616002
   "/etc/texmf/web2c/texmf.cnf" 1537633519 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -233,15 +234,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1537633521 1522025 712255bf90b3ac3b1340c49a49587b87 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1539351866 718488 5c10386eb0fb0ba27b46dff088fe1843 ""
-  "order_revision.aux" 1540615327 16680 b6fe2e124a928c6e68209cde24210bc4 ""
-  "order_revision.bbl" 1540614905 1763 ee0dd95815deb74a93185c09b21cefb1 "bibtex order_revision"
-  "order_revision.out" 1540615327 310 a101eabff0af34246b41d91dd91cfbba ""
+  "order_revision.aux" 1540615993 16680 b6fe2e124a928c6e68209cde24210bc4 ""
+  "order_revision.bbl" 1540615966 1763 ee0dd95815deb74a93185c09b21cefb1 "bibtex order_revision"
+  "order_revision.out" 1540615993 310 a101eabff0af34246b41d91dd91cfbba ""
   "order_revision.tex" 1540615316 79149 5f9e7403734a0367ae59f303994d2f58 ""
   "svglov3.clo" 1540614905 3809 f8e29af71acd1bd1b2a58b6166058c66 ""
   "svjour3.cls" 1540614905 47679 e70406260d62f66f2e7794a095f721ff ""
   (generated)
   "order_revision.log"
-  "order_revision.tdo"
-  "order_revision.aux"
   "order_revision.out"
+  "order_revision.aux"
   "order_revision.pdf"
+  "order_revision.tdo"

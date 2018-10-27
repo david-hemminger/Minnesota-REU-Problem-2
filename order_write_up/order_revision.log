@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 OCT 2018 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 OCT 2018 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -853,14 +853,6 @@ e.tex
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathmorphing.code.tex)) (./order_revision.aux)
-Runaway argument?
-{\contentsline {thm}{\numberline {2.8}Theorem\thmtformatoptarg {\cite \ETC.
-! File ended while scanning use of \@writefile.
-<inserted text> 
-                \par 
-l.69 \begin{document}
-                     
-? 
 \openout1 = `order_revision.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -880,6 +872,7 @@ LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 69.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -1012,11 +1005,6 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input l
 ine 118.
-
-
-LaTeX Warning: Reference `sec:functor_of_edges' on page 2 undefined on input li
-ne 124.
-
 Package hyperref Info: bookmark level for unknown eg defaults to 0 on input lin
 e 127.
 Missing character: There is no a in font nullfont!
@@ -1026,30 +1014,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
-
-LaTeX Warning: Citation `quotients_stanley' on page 2 undefined on input line 2
-12.
-
-
-LaTeX Warning: Citation `quotients_stanley' on page 2 undefined on input line 2
-12.
-
-
-LaTeX Warning: Citation `weyl_groups_stanley' on page 2 undefined on input line
- 213.
-
-
-LaTeX Warning: Citation `weyl_groups_stanley' on page 2 undefined on input line
- 215.
-
-
-LaTeX Warning: Citation `proctor' on page 2 undefined on input line 215.
-
-
-LaTeX Warning: Reference `thm:quotients_of_unitary_peck_posets' on page 2 undef
-ined on input line 218.
-
-[2]
+ [2]
 Package hyperref Info: bookmark level for unknown conj defaults to 0 on input l
 ine 220.
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
@@ -1060,293 +1025,23 @@ Package hyperref Info: bookmark level for unknown rmk defaults to 0 on input li
 ne 243.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
 ine 257.
-
-
-LaTeX Warning: Reference `ssec:CCT_examples' on page 3 undefined on input line 
-259.
-
-
-LaTeX Warning: Reference `sec:functor_of_edges' on page 3 undefined on input li
-ne 266.
-
-
-LaTeX Warning: Reference `sec:cover_transitive' on page 3 undefined on input li
-ne 266.
-
-
-LaTeX Warning: Reference `sec:wreath_product' on page 3 undefined on input line
- 266.
-
-
-LaTeX Warning: Citation `pak' on page 3 undefined on input line 266.
-
-
-LaTeX Warning: Citation `stanley_alg_comb' on page 3 undefined on input line 28
-1.
-
-
-LaTeX Warning: Citation `quotients_stanley' on page 3 undefined on input line 2
-81.
-
-[3]
-
-LaTeX Warning: Citation `weyl_groups_stanley' on page 4 undefined on input line
- 329.
-
+ [3]
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input li
 ne 329.
-
-LaTeX Warning: Citation `quotients_stanley' on page 4 undefined on input line 3
-39.
-
-
-LaTeX Warning: Reference `ssec:functoriality' on page 4 undefined on input line
- 351.
-
-
-LaTeX Warning: Reference `ssec:dual_posets' on page 4 undefined on input line 3
-51.
-
-
-LaTeX Warning: Reference `ssec:equivalent_defs' on page 4 undefined on input li
-ne 351.
-
-
-LaTeX Warning: Reference `ssec:proof_of_cover_transitive_implies_Peck' on page 
-4 undefined on input line 351.
-
-
-LaTeX Warning: Reference `lem:f_partial_order' on page 4 undefined on input lin
-e 356.
-
-
-LaTeX Warning: Reference `lem:FP_graded_poset' on page 4 undefined on input lin
-e 356.
-
-
-LaTeX Warning: Reference `lem:Ff_poset_morphism' on page 4 undefined on input l
-ine 356.
-
-
-LaTeX Warning: Reference `ssec:proof_of_cover_transitive_implies_Peck' on page 
-4 undefined on input line 359.
-
-[4]
-
-LaTeX Warning: Reference `lem:f_partial_order' on page 5 undefined on input lin
-e 404.
-
-
-LaTeX Warning: Reference `lem:FP_graded_poset' on page 5 undefined on input lin
-e 404.
-
-
-LaTeX Warning: Reference `lem:Ff_poset_morphism' on page 5 undefined on input l
-ine 404.
-
-
-LaTeX Warning: Reference `lem:Ff_poset_morphism' on page 5 undefined on input l
-ine 409.
-
-
-LaTeX Warning: Reference `lem:cover_transitive_equivalence' on page 5 undefined
- on input line 416.
-
-[5]
-
-LaTeX Warning: Reference `lem:Ff_poset_morphism' on page 6 undefined on input l
-ine 457.
-
-
-LaTeX Warning: Reference `lem:commuting_op_e' on page 6 undefined on input line
- 457.
-
-
-LaTeX Warning: Reference `lem:commuting_op_e' on page 6 undefined on input line
- 461.
-
-
-LaTeX Warning: Reference `fig:dual_not_unimodal' on page 6 undefined on input l
-ine 465.
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
+ [4] [5]pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.506 ... Peck, but $\mathcal{E}(P)$ is not Peck.}
-                                                  
-
-LaTeX Warning: Reference `rem:induced_action_bn' on page 6 undefined on input l
-ine 528.
-
-[6]
-
-LaTeX Warning: Reference `prop:self_dual_preservation' on page 7 undefined on i
-nput line 535.
-
-
-LaTeX Warning: Reference `prop:self_dual_preservation' on page 7 undefined on i
-nput line 537.
-
-
-LaTeX Warning: Reference `prop:surjection_between_F_quotients' on page 7 undefi
-ned on input line 562.
-
-
-LaTeX Warning: Reference `prop:surjection_between_F_quotients' on page 7 undefi
-ned on input line 568.
-
-[7]
-
-LaTeX Warning: Reference `lem:cover_transitive_equivalence' on page 8 undefined
- on input line 590.
-
-
-LaTeX Warning: Reference `lem:bijection_peck_implication' on page 8 undefined o
-n input line 590.
-
-
-LaTeX Warning: Reference `thm:quotients_of_unitary_peck_posets' on page 8 undef
-ined on input line 590.
-
-
-LaTeX Warning: Reference `lem:cover_transitive_equivalence' on page 8 undefined
- on input line 597.
-
-
-LaTeX Warning: Reference `thm:quotients_of_unitary_peck_posets' on page 8 undef
-ined on input line 597.
-
-
-LaTeX Warning: Reference `lem:bijection_peck_implication' on page 8 undefined o
-n input line 597.
-
-
-LaTeX Warning: Reference `edge_unitary_peck_quotient' on page 8 undefined on in
-put line 600.
-
-
-LaTeX Warning: Reference `fig:3boolean' on page 8 undefined on input line 609.
-
-
-LaTeX Warning: Reference `prop:computing_HBn' on page 8 undefined on input line
- 609.
-
+                                                   [6] [7]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `defn:h_map' on page 8 undefined on input line 667.
-
-
-LaTeX Warning: Reference `rem:order_containment' on page 8 undefined on input l
-ine 671.
-
-
-LaTeX Warning: Reference `fig:h_morphism' on page 8 undefined on input line 675
-.
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `rem:order_containment' on page 8 undefined on input l
-ine 739.
-
-
-LaTeX Warning: Reference `eg:3boolean' on page 8 undefined on input line 742.
-
-[8] [9]
-
-LaTeX Warning: Reference `prop:computing_HBn' on page 10 undefined on input lin
-e 772.
-
-
-LaTeX Warning: Citation `quotients_stanley' on page 10 undefined on input line 
-772.
-
-
-LaTeX Warning: Reference `cor:HBn_unitary_peck' on page 10 undefined on input l
-ine 781.
-
-
-LaTeX Warning: Reference `thm:quotients_of_unitary_peck_posets' on page 10 unde
-fined on input line 781.
-
-
-LaTeX Warning: Reference `prop:computing_HBn' on page 10 undefined on input lin
-e 793.
-
-
-LaTeX Warning: Citation `greene' on page 10 undefined on input line 793.
-
-
-LaTeX Warning: Reference `lem:bijection_h_f' on page 10 undefined on input line
- 793.
-
-
-LaTeX Warning: Reference `cor:quotients_of_HBn_peck' on page 10 undefined on in
-put line 802.
-
-
-LaTeX Warning: Reference `lem:bijection_h_f' on page 10 undefined on input line
- 802.
-
-
-LaTeX Warning: Reference `lem:bijection_peck_implication' on page 10 undefined 
-on input line 807.
-
-
-LaTeX Warning: Reference `cor:quotiented_edge_peck' on page 10 undefined on inp
-ut line 813.
-
-
-LaTeX Warning: Reference `lem:cover_transitive_equivalence' on page 10 undefine
-d on input line 813.
-
-
-LaTeX Warning: Reference `lem:bijection_peck_implication' on page 10 undefined 
-on input line 813.
-
-
-LaTeX Warning: Reference `sssec:dihedral' on page 10 undefined on input line 82
-3.
-
-[10]
-
-LaTeX Warning: Reference `prop:wreath_preservation' on page 11 undefined on inp
-ut line 875.
-
-[11]
-
-LaTeX Warning: Reference `defn:wreath_action' on page 12 undefined on input lin
-e 913.
-
-
-LaTeX Warning: Reference `prop:direct_product_preservation' on page 12 undefine
-d on input line 916.
-
-
-LaTeX Warning: Reference `lem:symmetric_group_product_action' on page 12 undefi
-ned on input line 921.
-
-
-LaTeX Warning: Reference `prop:wreath_preservation' on page 12 undefined on inp
-ut line 933.
-
-
-LaTeX Warning: Reference `prop:direct_product_preservation' on page 12 undefine
-d on input line 933.
-
-[12]
-
-LaTeX Warning: Reference `fig:tree1' on page 13 undefined on input line 940.
-
-
-LaTeX Warning: Reference `fig:tree2' on page 13 undefined on input line 940.
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
+[8] [9] [10] [11] [12]pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.974 ...example of a rooted tree with $8$ leaves}
@@ -1356,116 +1051,7 @@ e ignored
 <to be read again> 
                    \relax 
 l.1012 ...xample of a rooted tree with 10  leaves}
-                                                  
-
-LaTeX Warning: Reference `lem:induced_tree_action' on page 13 undefined on inpu
-t line 1026.
-
-[13]
-
-LaTeX Warning: Reference `eq:level_expansion' on page 14 undefined on input lin
-e 1046.
-
-
-LaTeX Warning: Reference `fig:tree1' on page 14 undefined on input line 1050.
-
-
-LaTeX Warning: Reference `fig:tree2' on page 14 undefined on input line 1050.
-
-
-LaTeX Warning: Reference `prop:automorphism_trees' on page 14 undefined on inpu
-t line 1050.
-
-
-LaTeX Warning: Reference `prop:wreath_preservation' on page 14 undefined on inp
-ut line 1058.
-
-
-LaTeX Warning: Reference `prop:direct_product_preservation' on page 14 undefine
-d on input line 1058.
-
-
-LaTeX Warning: Reference `prop:automorphism_trees' on page 14 undefined on inpu
-t line 1058.
-
-
-LaTeX Warning: Reference `sssec:dihedral' on page 14 undefined on input line 10
-65.
-
-
-LaTeX Warning: Reference `eg:trivial_edgequot' on page 14 undefined on input li
-ne 1074.
-
-
-LaTeX Warning: Reference `prop:wreath_preservation' on page 14 undefined on inp
-ut line 1083.
-
-
-LaTeX Warning: Reference `rem:iff_dihedral_cct' on page 14 undefined on input l
-ine 1087.
-
-
-LaTeX Warning: Reference `question:cube_cct' on page 14 undefined on input line
- 1087.
-
-
-LaTeX Warning: Reference `question:exceptional_polytopes_cct' on page 14 undefi
-ned on input line 1087.
-
-[14]
-
-LaTeX Warning: Reference `eg:trivial_edgequot' on page 15 undefined on input li
-ne 1119.
-
-[15]
-
-LaTeX Warning: Reference `cor:tree_cct' on page 16 undefined on input line 1149
-.
-
-
-LaTeX Warning: Citation `pak' on page 16 undefined on input line 1149.
-
-
-LaTeX Warning: Citation `pak' on page 16 undefined on input line 1149.
-
-
-LaTeX Warning: Reference `defn:wreath_action' on page 16 undefined on input lin
-e 1151.
-
-
-LaTeX Warning: Citation `pak' on page 16 undefined on input line 1154.
-
-
-LaTeX Warning: Citation `pak' on page 16 undefined on input line 1158.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1166.
-
-
-LaTeX Warning: Citation `pak' on page 16 undefined on input line 1166.
-
-
-LaTeX Warning: Reference `thm:pak_thm' on page 16 undefined on input line 1170.
-
-
-
-LaTeX Warning: Reference `thm:pak_thm' on page 16 undefined on input line 1171.
-
-
-
-LaTeX Warning: Reference `thm:pak_thm' on page 16 undefined on input line 1175.
-
-
-
-LaTeX Warning: Reference `cor:tree_cct' on page 16 undefined on input line 1180
-.
-
-[16]
-
-LaTeX Warning: Reference `thm:pak_thm' on page 17 undefined on input line 1198.
-
-
-
+                                                   [13] [14] [15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 1196--1199
 []\OT1/ptm/m/n/10 Therefore $\OMS/ztmcm/m/n/10 j\OT1/ztmcm/m/n/10 (\U/eus/m/n/1
 0 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 B[]\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it/
@@ -1477,24 +1063,8 @@ m/n/10 (\OML/ztmcm/m/it/10 `; m; \OT1/ztmcm/m/n/10 1)$\OT1/ptm/m/n/10 . Since $
 /ztmcm/m/it/10 =G$ \OT1/ptm/m/n/10 is Peck,
  []
 
-
-LaTeX Warning: Reference `question:unitary_peck_q_edge' on page 17 undefined on
- input line 1216.
-
 Package hyperref Info: bookmark level for unknown que defaults to 0 on input li
 ne 1219.
-
-LaTeX Warning: Reference `question:unitary_peck_q_edge' on page 17 undefined on
- input line 1224.
-
-
-LaTeX Warning: Citation `stanley:combinatorial-applications-of-the-hard-lefsche
-tz-theorem' on page 17 undefined on input line 1236.
-
-
-LaTeX Warning: Reference `sssec:polytopes' on page 17 undefined on input line 1
-249.
-
 [17] (./order_revision.bbl) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1276.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1276.
@@ -1502,29 +1072,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1276.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1276.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1276.
 
-
-
-Package rerunfilecheck Warning: File `order_revision.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `order_revision.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  A101EABFF0AF34246B41D91DD91CFBBA;310.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `order_revision.out' has not changed.
+(rerunfilecheck)             Checksum: A101EABFF0AF34246B41D91DD91CFBBA;310.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1276.
  ) 
 Here is how much of TeX's memory you used:
- 22792 strings out of 494953
- 427029 string characters out of 6180976
- 528416 words of memory out of 5000000
- 25346 multiletter control sequences out of 15000+600000
- 49040 words of font info for 124 fonts, out of 8000000 for 9000
+ 22795 strings out of 494953
+ 427052 string characters out of 6180976
+ 530922 words of memory out of 5000000
+ 25351 multiletter control sequences out of 15000+600000
+ 47411 words of font info for 122 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,14n,84p,3246b,851s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1539,13 +1096,12 @@ ts/euler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on order_revision.pdf (18 pages, 206683 bytes).
+t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on order_revision.pdf (18 pages, 207530 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
+ 596 PDF objects out of 1000 (max. 8388607)
+ 538 compressed objects within 6 object streams
  238 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
